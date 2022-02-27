@@ -1,13 +1,16 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { Navbar } from "../components/navigation/Navbar";
+import React from 'react';
+import Document, {
+  Head,
+  Html, Main, NextScript,
+} from 'next/document';
+import { ServerStyleSheets } from '@mui/styles';
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
   render() {
-    // Add fonts and styles below
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          <link
+        <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
@@ -17,7 +20,6 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-          <Navbar />
           <Main />
           <NextScript />
         </body>
@@ -26,4 +28,18 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+MyDocument.getInitialProps = async (ctx) => {
+  const sheets = new ServerStyleSheets();
+  const originalRenderPage = ctx.renderPage;
+
+  ctx.renderPage = () => originalRenderPage({
+    enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+  });
+
+  const initialProps = await Document.getInitialProps(ctx);
+
+  return {
+    ...initialProps,
+    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
+  };
+};
