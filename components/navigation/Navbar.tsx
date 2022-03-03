@@ -19,23 +19,21 @@ export const Navbar = (props: any) => {
         value={tab}
         onChange={handleChange}
         aria-label="icon label tabs example"
-        sx={{
-          color: "success.main",
-        }}
+        sx={{ backgroundColor: "grey.900" }}
       >
         <Tab label="FRANKLIN V MOON" />
         <Tab icon={<PersonOutlineIcon />} label="SKILLS" />
         <Tab icon={<PersonOutlineIcon />} label="TUTORIALS" />
         <Tab icon={<PersonOutlineIcon />} label="PROJECTS" />
-      </Tabs>
 
-      <IconButton size="large" onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? (
-          <Brightness3Icon fontSize="inherit" />
-        ) : (
-          <Brightness6Icon fontSize="inherit" />
-        )}
-      </IconButton>
+        <IconButton size="large" onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? (
+            <Brightness6Icon fontSize="inherit" />
+          ) : (
+            <Brightness3Icon fontSize="inherit" />
+          )}
+        </IconButton>
+      </Tabs>
     </nav>
   );
 };
