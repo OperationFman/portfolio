@@ -1,4 +1,4 @@
-import { navBarGlobal } from "./../components/navigation/NavbarStyle";
+import { navBarGlobal } from "../components/navigation/NavbarStyles";
 import { createTheme } from "@mui/material/styles";
 
 export const darkTheme = createTheme({
