@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-export const Projects: NextPage = () => {
+const Projects: NextPage = () => {
   return (
     <div>
       <Head>
@@ -15,3 +15,5 @@ export const Projects: NextPage = () => {
     </div>
   );
 };
+
+export default Projects;

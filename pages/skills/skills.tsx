@@ -15,3 +15,5 @@ export const Skills: NextPage = () => {
     </div>
   );
 };
+
+export default Skills;

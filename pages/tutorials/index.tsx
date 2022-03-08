@@ -1,3 +1,3 @@
-import { Tutorials } from "./tutorials";
+import Tutorials from "./tutorials";
 
 export default Tutorials;
