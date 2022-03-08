@@ -23,6 +23,7 @@ export const mobileHome = (): SxProps<Theme> => {
     minWidth: "30px",
     paddingLeft: "20px",
     marginRight: "10px",
+    marginLeft: "10px",
   };
 };
 

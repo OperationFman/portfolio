@@ -6,26 +6,32 @@ import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import { IconButton, Tab, Tabs, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import {
   container,
-  mobileHome,
-  desktopHome,
-  onHover,
   darkModeIcon,
+  desktopHome,
+  mobileHome,
+  onHover,
 } from "./NavbarStyles";
 
 export const Navbar = (props: any) => {
   const { darkMode, setDarkMode } = props;
   const { isMobile } = useDeviceDetect();
+  const router = useRouter();
   const [tab, setTab] = useState(0);
+
+  // Order is important
+  const links: string[] = ["/", "/skills", "tutorials", "projects"];
+  const setIndicator: string[] = ["#90caf9", "#66bb6a", "#ce93d8", "#f44336"];
 
   const handleChange = (event: React.SyntheticEvent, newTab: number) => {
     setTab(newTab);
+    event.preventDefault();
+    router.push(links[newTab]);
   };
-
-  const setIndicator: string[] = ["#90caf9", "#66bb6a", "#ce93d8", "#f44336"];
 
   return (
     <nav>
@@ -62,7 +68,6 @@ export const Navbar = (props: any) => {
             sx={desktopHome()}
           />
         )}
-
         <Tab
           label="SKILLS"
           icon={
