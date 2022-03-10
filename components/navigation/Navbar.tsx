@@ -30,7 +30,8 @@ export const Navbar = (props: any) => {
   const handleChange = (event: React.SyntheticEvent, newTab: number) => {
     setTab(newTab);
     event.preventDefault();
-    router.push(links[newTab]);
+    // router.push(links[newTab]);
+    router.replace(links[newTab]);
   };
 
   return (
