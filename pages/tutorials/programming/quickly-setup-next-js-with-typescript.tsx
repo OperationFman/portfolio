@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import { TutorialMetaData, Languages, Tags, Topic } from "../tutorialDirectory";
+import { TutorialMetaData, Languages, Tags, Topic } from "../../../src/tutorials/tutorialDirectory";
 
 const SetupNextJS: NextPage = () => {
   return (
