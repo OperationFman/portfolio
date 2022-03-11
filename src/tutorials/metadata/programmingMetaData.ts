@@ -8,7 +8,7 @@ export const programmingMetaData: TutorialMetaData[] = [
     thumbnail: "TBD",
     subTitle:
       "Get up-and-running with a cleaned up but ready to go repo using nextJs. Includes setting up TS properly, clearing boilerplate, structuring components, routing, setting up an API and SEO consideration",
-    topic: [Topic.Programming],
+    topic: Topic.Programming,
     languages: [Languages.Typescript],
     tags: [Tags.StepByStep],
   },
@@ -19,7 +19,7 @@ export const programmingMetaData: TutorialMetaData[] = [
     thumbnail: "TBD",
     subTitle:
       "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
-    topic: [Topic.Programming],
+    topic: Topic.Programming,
     languages: [Languages.Typescript],
     tags: [Tags.StepByStep],
   },

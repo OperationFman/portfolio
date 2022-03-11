@@ -1,22 +1,23 @@
-export const Topic = {
-  Programming: "programming",
-  Agile: "agile",
-  Infrastructure: "infrastructure",
-};
+export enum Topic {
+  Programming = "programming",
+  Agile = "agile",
+  Infrastructure = "infrastructure",
+}
 
-export const Languages = {
-  Javascript: "javascript",
-  Typescript: "typescript",
-  Docker: "docker",
-  Terraform: "terraform",
-  AWS: "aws",
-};
+export enum Languages {
+  Javascript = "javascript",
+  Typescript = "typescript",
+  Docker = "docker",
+  Terraform = "terraform",
+  AWS = "aws",
+}
 
-export const Tags = {
-  StepByStep: "howTo",
-  CodeBlock: "rawCode",
-  Essay: "essay",
-};
+export enum Tags {
+  StepByStep = "howTo",
+  CodeBlock = "rawCode",
+  Essay = "essay",
+  Story = "story",
+}
 
 export type TutorialMetaData = {
   title: string;
@@ -24,7 +25,7 @@ export type TutorialMetaData = {
   created: number;
   thumbnail: string;
   subTitle: string;
-  topic: string[];
-  languages?: string[];
-  tags?: string[];
+  topic: Topic;
+  languages?: Languages[];
+  tags?: Tags[];
 };

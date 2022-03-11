@@ -8,7 +8,7 @@ export const agileMetaData: TutorialMetaData[] = [
     thumbnail: "TBD",
     subTitle:
       "Using a visualization tool like Miro keep your team in the loop, quickly share information and bring creativity back",
-    topic: [Topic.Agile],
+    topic: Topic.Agile,
     tags: [Tags.Essay],
   },
 ];

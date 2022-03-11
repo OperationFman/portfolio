@@ -1,8 +1,53 @@
 import { Button, Link } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useEffect, useState } from "react";
+import {
+  orderByNewest,
+  tutorialMetaData,
+  filterForTopic,
+  filterForLanguages,
+  filterForTags,
+  orderByAlphabetical,
+} from "../../src/tutorials/tutorialsDataService";
+import { Languages, Topic, Tags } from "../../src/tutorials/types";
 
 const Tutorials: NextPage = () => {
+  // TODO: add a three way toggle for setOrder
+  // TODO: add temp buttons the user can click to toggle filters, these add to the setFilters (take current, add new, setNew)
+  // TODO: Clear Up Console Errors
+
+  const [order, setOrder] = useState(orderByNewest(tutorialMetaData));
+
+  const [enabledTopicFilter, setEnabledTopicFilter] = useState();
+  const [enabledLanguageFilters, setEnabledLanguageFilters] = useState([]);
+  const [enabledTagFilters, setEnabledTagsFilters] = useState([]);
+
+  const [filteredSortedData, setFilteredSortedData] =
+    useState(tutorialMetaData);
+
+  useEffect(() => {
+    let filteredData = order;
+
+    filteredData = enabledTopicFilter
+      ? filterForTopic(filteredData, enabledTopicFilter)
+      : filteredData;
+
+    filteredData = enabledLanguageFilters.length
+      ? filterForLanguages(filteredData, enabledLanguageFilters)
+      : filteredData;
+
+    filteredData = enabledTagFilters.length
+      ? filterForTags(filteredData, enabledTagFilters)
+      : filteredData;
+
+    setFilteredSortedData(filteredData);
+  }, [order, enabledTopicFilter, enabledLanguageFilters, enabledTagFilters]);
+
+  // Refactor
+  const listItems = filteredSortedData.map((link) => (
+    <li key={link.title}>{link.title}</li>
+  ));
   return (
     <div>
       <Head>
@@ -11,18 +56,15 @@ const Tutorials: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Tutorials page</h1>
       <Link
         href={`/tutorials/programming/quickly-setup-next-js-with-typescript`}
       >
         <a>Quickly Setup NextJs</a>
       </Link>
+
+      <ul>{listItems}</ul>
     </div>
   );
 };
 
 export default Tutorials;
-
-// TODO: Simply get the list of TutorialMetaData[] and make it look nice,
-//    tutorialsDataService will handle ordering. Filters will simply update a callback
-//    or something

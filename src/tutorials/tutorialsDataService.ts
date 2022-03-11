@@ -1,13 +1,66 @@
 import { programmingMetaData } from "./metadata/programmingMetaData";
 import { agileMetaData } from "./metadata/agileMetaData";
-import { infraMetaData } from "./metadata/infrastructureMetaData";
-import { TutorialMetaData } from "./types";
+import { infrastructureMetaData } from "./metadata/infrastructureMetaData";
+import { Tags, Topic, TutorialMetaData } from "./types";
+import { Languages } from "./types";
 
-const tutorialMetaData: TutorialMetaData[] = [
+export const tutorialMetaData: TutorialMetaData[] = [
   ...programmingMetaData,
   ...agileMetaData,
-  ...infraMetaData,
+  ...infrastructureMetaData,
 ];
 
-// Functions that return the above but in
-//   a specific order for the tutorials page to show
+export const orderByNewest = (
+  metaData: TutorialMetaData[]
+): TutorialMetaData[] => {
+  return metaData.sort((a, b) => b.created - a.created);
+};
+
+export const orderByOldest = (
+  metaData: TutorialMetaData[]
+): TutorialMetaData[] => {
+  return metaData.sort((a, b) => a.created - b.created);
+};
+
+export const orderByAlphabetical = (
+  metaData: TutorialMetaData[]
+): TutorialMetaData[] => {
+  return metaData.sort((a, b) =>
+    a.title.toLowerCase().localeCompare(b.title.toLowerCase())
+  );
+};
+
+export const filterForTopic = (
+  metaData: TutorialMetaData[],
+  topic: Topic
+): TutorialMetaData[] => {
+  return metaData.filter((data) => {
+    return data.topic === topic;
+  });
+};
+
+export const filterForLanguages = (
+  metaData: TutorialMetaData[],
+  languages: Languages[]
+): TutorialMetaData[] => {
+  return metaData.filter((data) => {
+    if (!data.languages) {
+      return false;
+    }
+
+    return data.languages.some((lang) => languages.indexOf(lang) >= 0);
+  });
+};
+
+export const filterForTags = (
+  metaData: TutorialMetaData[],
+  tags: Tags[]
+): TutorialMetaData[] => {
+  return metaData.filter((data) => {
+    if (!data.tags) {
+      return false;
+    }
+
+    return data.tags.some((tag) => tags.indexOf(tag) >= 0);
+  });
+};
