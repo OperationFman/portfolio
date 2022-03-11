@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-const Tutorials: NextPage = () => {
+export const Tutorials: NextPage = () => {
   return (
     <div>
       <Head>
@@ -16,4 +16,3 @@ const Tutorials: NextPage = () => {
   );
 };
 
-export default Tutorials;
