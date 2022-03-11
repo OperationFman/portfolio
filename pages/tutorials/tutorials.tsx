@@ -1,8 +1,8 @@
-import { Button } from "@mui/material";
+import { Button, Link } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-export const Tutorials: NextPage = () => {
+const Tutorials: NextPage = () => {
   return (
     <div>
       <Head>
@@ -12,7 +12,13 @@ export const Tutorials: NextPage = () => {
       </Head>
 
       <h1>Tutorials page</h1>
+      <Link
+        href={`/tutorials/programming/quickly-setup-next-js-with-typescript`}
+      >
+        <a>Quickly Setup NextJs</a>
+      </Link>
     </div>
   );
 };
 
+export default Tutorials;

@@ -7,7 +7,7 @@ import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import { IconButton, Tab, Tabs, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import {
   container,
@@ -21,17 +21,32 @@ export const Navbar = (props: any) => {
   const { darkMode, setDarkMode } = props;
   const { isMobile } = useDeviceDetect();
   const router = useRouter();
-  const [tab, setTab] = useState(0);
+  const [tab, setTab] = useState(-1);
 
   // Order is important
-  const links: string[] = ["/", "/skills", "tutorials", "projects"];
+  const navTabs: string[] = ["/", "/skills", "/tutorials", "/projects"];
   const setIndicator: string[] = ["#90caf9", "#66bb6a", "#ce93d8", "#f44336"];
+
+  // TODO: Maintains tab on render, replace with useLayout()
+  useEffect(() => {
+    const route = router.pathname;
+
+    if (route === navTabs[0]) {
+      setTab(0);
+      return;
+    }
+
+    for (let i = 1; i < navTabs.length; i++) {
+      if (route.startsWith(navTabs[i])) {
+        setTab(i);
+        break;
+      }
+    }
+  });
 
   const handleChange = (event: React.SyntheticEvent, newTab: number) => {
     setTab(newTab);
-    event.preventDefault();
-    // router.push(links[newTab]);
-    router.replace(links[newTab]);
+    router.replace(navTabs[newTab]);
   };
 
   return (
