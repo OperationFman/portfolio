@@ -22,3 +22,7 @@ const Tutorials: NextPage = () => {
 };
 
 export default Tutorials;
+
+// TODO: Simply get the list of TutorialMetaData[] and make it look nice,
+//    tutorialsDataService will handle ordering. Filters will simply update a callback
+//    or something

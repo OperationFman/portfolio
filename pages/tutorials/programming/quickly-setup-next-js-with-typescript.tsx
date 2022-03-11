@@ -5,7 +5,7 @@ import {
   Languages,
   Tags,
   Topic,
-} from "../../../src/tutorials/tutorialDirectory";
+} from "../../../src/tutorials/types";
 
 const SetupNextJS: NextPage = () => {
   return (

@@ -1,4 +1,4 @@
-import { Languages, Tags, Topic, TutorialMetaData } from "./tutorialDirectory";
+import { Languages, Tags, Topic, TutorialMetaData } from "../types";
 
 export const infraMetaData: TutorialMetaData[] = [
   {

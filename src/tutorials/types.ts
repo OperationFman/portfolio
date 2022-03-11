@@ -1,7 +1,3 @@
-import { programmingMetaData } from "./progMetaData";
-import { agileMetaData } from "./agileMetaData";
-import { infraMetaData } from "./infraMetaData";
-
 export const Topic = {
   Programming: "programming",
   Agile: "agile",
@@ -32,9 +28,3 @@ export type TutorialMetaData = {
   languages?: string[];
   tags?: string[];
 };
-
-export const tutorialMetaData: TutorialMetaData[] = [
-  ...programmingMetaData,
-  ...agileMetaData,
-  ...infraMetaData,
-];

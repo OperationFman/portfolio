@@ -1,4 +1,4 @@
-import { Tags, Topic, TutorialMetaData } from "./tutorialDirectory";
+import { Tags, Topic, TutorialMetaData } from "../types";
 
 export const agileMetaData: TutorialMetaData[] = [
   {
