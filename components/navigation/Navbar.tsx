@@ -17,7 +17,12 @@ import {
   onHover,
 } from "./NavbarStyles";
 
-export const Navbar = (props: any) => {
+type NavbarProps = {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const Navbar = (props: NavbarProps) => {
   const { darkMode, setDarkMode } = props;
   const { isMobile } = useDeviceDetect();
   const router = useRouter();

@@ -4,6 +4,12 @@ import { infrastructureMetaData } from "./metadata/infrastructureMetaData";
 import { Tags, Topic, TutorialMetaData } from "./types";
 import { Languages } from "./types";
 
+export enum SortOptions {
+  Newest = "newest",
+  Oldest = "oldest",
+  Alphabetical = "alphabetical",
+}
+
 export const tutorialMetaData: TutorialMetaData[] = [
   ...programmingMetaData,
   ...agileMetaData,

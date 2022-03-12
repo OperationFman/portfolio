@@ -4,7 +4,12 @@ import React from "react";
 import { lightTheme } from "./lightMode";
 import { darkTheme } from "./darkMode";
 
-export const GlobalTheme = (props: any) => {
+type GlobalTheme = {
+  children: React.ReactNode;
+  darkMode: boolean;
+};
+
+export const GlobalTheme = (props: GlobalTheme) => {
   const { children, darkMode } = props;
 
   React.useEffect(() => {
