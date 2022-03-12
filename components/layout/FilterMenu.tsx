@@ -107,7 +107,7 @@ export const FilterMenu = (props: FilterMenuProps) => {
               {...TransitionProps}
               style={{
                 transformOrigin:
-                  placement === "bottom-start" ? "left top" : "left bottom",
+                  placement === "bottom-start" ? "right bottom" : "right top",
               }}
             >
               <Paper>
