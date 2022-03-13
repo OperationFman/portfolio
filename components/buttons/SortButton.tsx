@@ -1,6 +1,7 @@
-import React, { Dispatch, SetStateAction } from "react";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import FilterListIcon from "@mui/icons-material/FilterList";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
+import SortByAlphaIcon from "@mui/icons-material/SortByAlpha";
 import {
   Button,
   ClickAwayListener,
@@ -10,20 +11,16 @@ import {
   Paper,
   Popper,
   Stack,
-  SvgIconTypeMap,
 } from "@mui/material";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import SortByAlphaIcon from "@mui/icons-material/SortByAlpha";
-import { TutorialMetaData } from "../../src/tutorials/types";
+import React, { Dispatch, SetStateAction } from "react";
 import { SortOptions } from "../../src/tutorials/tutorialsDataService";
 
-type FilterMenuProps = {
-  setSortOption: Dispatch<SetStateAction<SortOptions>>;
+type SortButtonProps = {
+  setSortMetaDataBy: Dispatch<SetStateAction<SortOptions>>;
 };
 
-export const FilterMenu = (props: FilterMenuProps) => {
-  const { setSortOption } = props;
+export const SortButton = (props: SortButtonProps) => {
+  const { setSortMetaDataBy: setSortOption } = props;
 
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLButtonElement>(null);

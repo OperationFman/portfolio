@@ -14,63 +14,55 @@ import {
 } from "../../src/tutorials/tutorialsDataService";
 import { Languages, Topic, Tags } from "../../src/tutorials/types";
 import { PageContainer } from "../../components/layout/PageContainer";
-import { FilterMenu } from "../../components/layout/FilterMenu";
+import { SortButton } from "../../components/buttons/SortButton";
+import { FilterTopicButton } from "../../components/buttons/FilterTopicButton";
 
 const Tutorials: NextPage = () => {
+  // Shrink useEffect below into smaller ones
   // TODO: add temp buttons the user can click to toggle filters, these add to the setFilters (take current, add new, setNew)
   // TODO: Clear Up Console Errors
 
-  const [sortOption, setSortOption] = useState(SortOptions.Newest);
-  const [order, setOrder] = useState(tutorialMetaData);
+  const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
+  const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
 
-  const [enabledTopicFilter, setEnabledTopicFilter] = useState();
-  const [enabledLanguageFilters, setEnabledLanguageFilters] = useState([]);
-  const [enabledTagFilters, setEnabledTagsFilters] = useState([]);
+  const [topicFilter, setTopicFilter] = useState<Topic | undefined>();
+  const [languagesFilter, setLanguagesFilter] = useState([]);
+  const [tagsFilter, setTagsFilter] = useState([]);
 
-  const [filteredSortedData, setFilteredSortedData] =
-    useState(tutorialMetaData);
+  const [filteredMetaData, setFilteredData] = useState(sortedMetaData);
 
   useEffect(() => {
-    switch (sortOption) {
-      //Flakey
-      case SortOptions.Alphabetical:
-        setOrder(orderByAlphabetical(tutorialMetaData));
-        break;
+    switch (sortMetaDataBy) {
       case SortOptions.Newest:
-        setOrder(orderByNewest(tutorialMetaData));
+        setSortedMetaData(orderByNewest(tutorialMetaData));
         break;
       case SortOptions.Oldest:
-        setOrder(orderByOldest(tutorialMetaData));
+        setSortedMetaData(orderByOldest(tutorialMetaData));
+        break;
+      case SortOptions.Alphabetical:
+        setSortedMetaData(orderByAlphabetical(tutorialMetaData));
         break;
     }
+  }, [sortMetaDataBy]);
 
-    let filteredData = order;
+  useEffect(() => {
+    let filteredData = sortedMetaData;
 
-    filteredData = enabledTopicFilter
-      ? filterForTopic(filteredData, enabledTopicFilter)
-      : filteredData;
+    if (topicFilter) {
+      filteredData = filterForTopic(filteredData, topicFilter);
+    }
 
-    filteredData = enabledLanguageFilters.length
-      ? filterForLanguages(filteredData, enabledLanguageFilters)
-      : filteredData;
+    if (languagesFilter.length) {
+      filteredData = filterForLanguages(filteredData, languagesFilter);
+    }
 
-    filteredData = enabledTagFilters.length
-      ? filterForTags(filteredData, enabledTagFilters)
-      : filteredData;
+    if (tagsFilter.length) {
+      filteredData = filterForTags(filteredData, tagsFilter);
+    }
 
-    setFilteredSortedData(filteredData);
-  }, [
-    order,
-    sortOption,
-    enabledTopicFilter,
-    enabledLanguageFilters,
-    enabledTagFilters,
-  ]);
+    setFilteredData(filteredData);
+  }, [sortedMetaData, topicFilter, languagesFilter, tagsFilter]);
 
-  // Refactor
-  const listItems = filteredSortedData.map((link) => (
-    <li key={link.title}>{link.title}</li>
-  ));
   return (
     <div>
       <Head>
@@ -79,7 +71,8 @@ const Tutorials: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageContainer>
-        <FilterMenu setSortOption={setSortOption} />
+        <SortButton setSortMetaDataBy={setSortMetaDataBy} />
+        <FilterTopicButton setTopicFilter={setTopicFilter} />
 
         <Link
           href={`/tutorials/programming/quickly-setup-next-js-with-typescript`}
@@ -87,7 +80,11 @@ const Tutorials: NextPage = () => {
           <a>Quickly Setup NextJs</a>
         </Link>
 
-        <ul>{listItems}</ul>
+        <ol>
+          {filteredMetaData.map((link) => (
+            <li key={link.title}>{link.title}</li>
+          ))}
+        </ol>
       </PageContainer>
     </div>
   );

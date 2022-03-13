@@ -9,7 +9,7 @@ export const infrastructureMetaData: TutorialMetaData[] = [
     subTitle:
       "Step-by-step instructions to dockerize your repo and use terraform to spin up AWS and host your project from scratch",
     topic: Topic.Infrastructure,
-    languages: [Languages.AWS, Languages.Docker, Languages.Terraform],
+    languages: [Languages.Docker, Languages.Terraform],
     tags: [Tags.StepByStep],
   },
 ];

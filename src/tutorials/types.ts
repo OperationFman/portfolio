@@ -1,22 +1,21 @@
 export enum Topic {
-  Programming = "programming",
-  Agile = "agile",
-  Infrastructure = "infrastructure",
+  Programming = "Programming",
+  Agile = "Agile",
+  Infrastructure = "Infrastructure",
 }
 
 export enum Languages {
-  Javascript = "javascript",
-  Typescript = "typescript",
-  Docker = "docker",
-  Terraform = "terraform",
-  AWS = "aws",
+  Javascript = "Javascript",
+  Typescript = "Typescript",
+  Docker = "Docker",
+  Terraform = "Terraform",
 }
 
 export enum Tags {
-  StepByStep = "howTo",
-  CodeBlock = "rawCode",
-  Essay = "essay",
-  Story = "story",
+  StepByStep = "How To",
+  CodeBlock = "Code Block",
+  Essay = "Essay",
+  Story = "Story",
 }
 
 export type TutorialMetaData = {
