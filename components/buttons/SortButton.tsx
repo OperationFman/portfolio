@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
 import { SortOptions } from "../../src/tutorials/tutorialsDataService";
+import { closeMenu, keyboardNavigation } from "../../utils/dropDownMenuLogic";
 
 type SortButtonProps = {
   setSortMetaDataBy: Dispatch<SetStateAction<SortOptions>>;
@@ -29,39 +30,12 @@ export const SortButton = (props: SortButtonProps) => {
     setOpen((prevOpen) => !prevOpen);
   };
 
-  const handleSelectNewest = (event: Event | React.SyntheticEvent) => {
-    setSortOption(SortOptions.Newest);
-    handleClose(event);
-  };
-
-  const handleSelectOldest = (event: Event | React.SyntheticEvent) => {
-    setSortOption(SortOptions.Oldest);
-    handleClose(event);
-  };
-
-  const handleSelectAlphabetical = (event: Event | React.SyntheticEvent) => {
-    setSortOption(SortOptions.Alphabetical);
-    handleClose(event);
-  };
-
   const handleClose = (event: Event | React.SyntheticEvent) => {
-    if (
-      anchorRef.current &&
-      anchorRef.current.contains(event.target as HTMLElement)
-    ) {
-      return;
-    }
-
-    setOpen(false);
+    closeMenu(event, setOpen, anchorRef);
   };
 
   function handleListKeyDown(event: React.KeyboardEvent) {
-    if (event.key === "Tab") {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === "Escape") {
-      setOpen(false);
-    }
+    keyboardNavigation(event, setOpen);
   }
 
   const prevOpen = React.useRef(open);
@@ -110,15 +84,27 @@ export const SortButton = (props: SortButtonProps) => {
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList autoFocusItem={open} onKeyDown={handleListKeyDown}>
-                    <MenuItem onClick={handleSelectNewest}>
+                    <MenuItem
+                      onClick={() => {
+                        setSortOption(SortOptions.Newest);
+                      }}
+                    >
                       <ArrowUpwardIcon />
                       ㅤNewest
                     </MenuItem>
-                    <MenuItem onClick={handleSelectOldest}>
+                    <MenuItem
+                      onClick={() => {
+                        setSortOption(SortOptions.Oldest);
+                      }}
+                    >
                       <ArrowDownwardIcon />
                       ㅤOldest
                     </MenuItem>
-                    <MenuItem onClick={handleSelectAlphabetical}>
+                    <MenuItem
+                      onClick={() => {
+                        setSortOption(SortOptions.Alphabetical);
+                      }}
+                    >
                       <SortByAlphaIcon />
                       ㅤAlphabetical
                     </MenuItem>

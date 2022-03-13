@@ -1,7 +1,3 @@
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import FilterListIcon from "@mui/icons-material/FilterList";
-import SortByAlphaIcon from "@mui/icons-material/SortByAlpha";
 import QuestionAnswerOutlined from "@mui/icons-material/QuestionAnswerOutlined";
 import {
   Button,
@@ -15,6 +11,7 @@ import {
 } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
 import { Topic } from "../../src/tutorials/types";
+import { closeMenu, keyboardNavigation } from "../../utils/dropDownMenuLogic";
 
 type FilterTopicButtonProps = {
   setTopicFilter: Dispatch<SetStateAction<Topic | undefined>>;
@@ -34,23 +31,11 @@ export const FilterTopicButton = (props: FilterTopicButtonProps) => {
   };
 
   const handleClose = (event: Event | React.SyntheticEvent) => {
-    if (
-      anchorRef.current &&
-      anchorRef.current.contains(event.target as HTMLElement)
-    ) {
-      return;
-    }
-
-    setOpen(false);
+    closeMenu(event, setOpen, anchorRef);
   };
 
   function handleListKeyDown(event: React.KeyboardEvent) {
-    if (event.key === "Tab") {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === "Escape") {
-      setOpen(false);
-    }
+    keyboardNavigation(event, setOpen);
   }
 
   const prevOpen = React.useRef(open);
@@ -101,7 +86,7 @@ export const FilterTopicButton = (props: FilterTopicButtonProps) => {
                   <MenuList autoFocusItem={open} onKeyDown={handleListKeyDown}>
                     <MenuItem
                       onClick={() => {
-                        handleClose;
+                        closeMenu;
                         setTopicFilter(undefined);
                       }}
                     >
@@ -111,7 +96,7 @@ export const FilterTopicButton = (props: FilterTopicButtonProps) => {
                       return (
                         <MenuItem
                           onClick={() => {
-                            handleClose;
+                            closeMenu;
                             setTopicFilter(topic);
                           }}
                           key={index}
