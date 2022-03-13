@@ -102,7 +102,7 @@ export const FilterTopicButton = (props: FilterTopicButtonProps) => {
                     <MenuItem
                       onClick={() => {
                         handleClose;
-                        setTopicFilter();
+                        setTopicFilter(undefined);
                       }}
                     >
                       All

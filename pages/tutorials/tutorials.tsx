@@ -18,14 +18,10 @@ import { SortButton } from "../../components/buttons/SortButton";
 import { FilterTopicButton } from "../../components/buttons/FilterTopicButton";
 
 const Tutorials: NextPage = () => {
-  // Shrink useEffect below into smaller ones
-  // TODO: add temp buttons the user can click to toggle filters, these add to the setFilters (take current, add new, setNew)
-  // TODO: Clear Up Console Errors
-
   const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
   const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
 
-  const [topicFilter, setTopicFilter] = useState<Topic | undefined>();
+  const [topicFilter, setTopicFilter] = useState<Topic | undefined>(undefined);
   const [languagesFilter, setLanguagesFilter] = useState([]);
   const [tagsFilter, setTagsFilter] = useState([]);
 
