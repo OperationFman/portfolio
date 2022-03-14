@@ -19,8 +19,6 @@ import { Languages, Topic } from "../../src/tutorials/types";
 import { LanguagesFilterButton } from "../../src/tutorials/buttons/LanguagesFilterButton";
 
 const Tutorials: NextPage = () => {
-  // TODO: language filter is buggy af, change how the highlighting is done and think about using a useEffect
-  //          .map doesnt seem to reflect changes very well
   const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
   const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
 

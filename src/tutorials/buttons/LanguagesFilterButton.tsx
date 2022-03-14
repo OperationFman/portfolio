@@ -26,48 +26,17 @@ type LanguagesFilterButton = {
 };
 
 export const LanguagesFilterButton = (props: LanguagesFilterButton) => {
+  // TODO: See if MUI has a toggle ui for the MenuItems. Might be best to place this in a new useEffect here
+
+  // Create logic to update setLanguagesFilter
+  // None should clear the array
+  // Clicking a language thats not in the array, should add it
+  // Clicking a language that is in the array, should remove it
   const {
     setLanguagesFilter: setLanguagesFilter,
     languagesFilter,
     availableLanguages,
   } = props;
-
-  const handleNoneSelected = (): void => {
-    const emptyLanguageArray: Languages[] = [];
-    setLanguagesFilter(emptyLanguageArray);
-  };
-
-  const handleToggleLanguageSelection = (language: Languages): void => {
-    console.log("toggle Language");
-    const languageIndex = languagesFilter.indexOf(language);
-
-    if (languageIndex === -1) {
-      languagesFilter.push(language);
-      setLanguagesFilter(languagesFilter);
-    } else {
-      const langFilter = languagesFilter.slice(languageIndex);
-      setLanguagesFilter(langFilter);
-    }
-  };
-
-  const isNoneHighlighted = (): SxProps<Theme> => {
-    console.log({ languagesFilter });
-    if (languagesFilter.length === 0) {
-      return {};
-    }
-    return { color: "#8c8c8c" };
-  };
-
-  const isHighlighted = (language: Languages): SxProps<Theme> => {
-    if (
-      languagesFilter.includes(language) &&
-      availableLanguages.length !== languagesFilter.length
-    ) {
-      return {};
-    }
-
-    return { color: "#8c8c8c" };
-  };
 
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLButtonElement>(null);
@@ -134,9 +103,7 @@ export const LanguagesFilterButton = (props: LanguagesFilterButton) => {
                     <MenuItem
                       onClick={() => {
                         closeMenu;
-                        handleNoneSelected();
                       }}
-                      sx={isNoneHighlighted()}
                     >
                       None
                     </MenuItem>
@@ -145,10 +112,8 @@ export const LanguagesFilterButton = (props: LanguagesFilterButton) => {
                         <MenuItem
                           onClick={() => {
                             closeMenu;
-                            handleToggleLanguageSelection(language);
                           }}
                           key={index + 1}
-                          sx={isHighlighted(language)}
                         >
                           {language}
                         </MenuItem>
