@@ -13,8 +13,8 @@ import {
   Stack,
 } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
-import { SortOptions } from "../../src/tutorials/tutorialsDataService";
-import { closeMenu, keyboardNavigation } from "../../utils/dropDownMenuLogic";
+import { SortOptions } from "../tutorialsDataService";
+import { closeMenu, keyboardNavigation } from "../../../utils/dropDownMenuLogic";
 
 type SortButtonProps = {
   setSortMetaDataBy: Dispatch<SetStateAction<SortOptions>>;

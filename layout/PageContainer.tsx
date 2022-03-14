@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import React from "react";
-import useDeviceDetect from "../../utils/useDeviceDetect";
+import useDeviceDetect from "../utils/useDeviceDetect";
 
 type PageContainerProps = {
   children: React.ReactNode;

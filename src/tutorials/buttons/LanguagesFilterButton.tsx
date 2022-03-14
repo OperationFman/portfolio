@@ -1,4 +1,4 @@
-import QuestionAnswerOutlined from "@mui/icons-material/QuestionAnswerOutlined";
+import CodeOutlined from "@mui/icons-material/CodeOutlined";
 import {
   Button,
   ClickAwayListener,
@@ -8,20 +8,66 @@ import {
   Paper,
   Popper,
   Stack,
+  SxProps,
+  Theme,
 } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
-import { Topic } from "../../src/tutorials/types";
-import { closeMenu, keyboardNavigation } from "../../utils/dropDownMenuLogic";
+import { Languages, Topic } from "../types";
+import {
+  closeMenu,
+  keyboardNavigation,
+} from "../../../utils/dropDownMenuLogic";
+import { ContentPasteGoOutlined } from "@mui/icons-material";
 
-type FilterTopicButtonProps = {
-  setTopicFilter: Dispatch<SetStateAction<Topic | undefined>>;
+type LanguagesFilterButton = {
+  setLanguagesFilter: Dispatch<SetStateAction<Languages[]>>;
+  languagesFilter: Languages[];
+  availableLanguages: Languages[];
 };
 
-// Fix prop type
-export const FilterTopicButton = (props: FilterTopicButtonProps) => {
-  const { setTopicFilter: setTopicFilter } = props;
+export const LanguagesFilterButton = (props: LanguagesFilterButton) => {
+  const {
+    setLanguagesFilter: setLanguagesFilter,
+    languagesFilter,
+    availableLanguages,
+  } = props;
 
-  const topics = Object.values(Topic);
+  const handleNoneSelected = (): void => {
+    const emptyLanguageArray: Languages[] = [];
+    setLanguagesFilter(emptyLanguageArray);
+  };
+
+  const handleToggleLanguageSelection = (language: Languages): void => {
+    console.log("toggle Language");
+    const languageIndex = languagesFilter.indexOf(language);
+
+    if (languageIndex === -1) {
+      languagesFilter.push(language);
+      setLanguagesFilter(languagesFilter);
+    } else {
+      const langFilter = languagesFilter.slice(languageIndex);
+      setLanguagesFilter(langFilter);
+    }
+  };
+
+  const isNoneHighlighted = (): SxProps<Theme> => {
+    console.log({ languagesFilter });
+    if (languagesFilter.length === 0) {
+      return {};
+    }
+    return { color: "#8c8c8c" };
+  };
+
+  const isHighlighted = (language: Languages): SxProps<Theme> => {
+    if (
+      languagesFilter.includes(language) &&
+      availableLanguages.length !== languagesFilter.length
+    ) {
+      return {};
+    }
+
+    return { color: "#8c8c8c" };
+  };
 
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLButtonElement>(null);
@@ -47,6 +93,7 @@ export const FilterTopicButton = (props: FilterTopicButtonProps) => {
     prevOpen.current = open;
   }, [open]);
 
+  console.log({ languagesFilter });
   return (
     <Stack
       direction="row"
@@ -60,10 +107,10 @@ export const FilterTopicButton = (props: FilterTopicButtonProps) => {
           aria-expanded={open ? "true" : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
-          endIcon={<QuestionAnswerOutlined />}
+          endIcon={<CodeOutlined />}
           color="baseGrey"
         >
-          Topic
+          Languages
         </Button>
         <Popper
           open={open}
@@ -87,21 +134,23 @@ export const FilterTopicButton = (props: FilterTopicButtonProps) => {
                     <MenuItem
                       onClick={() => {
                         closeMenu;
-                        setTopicFilter(undefined);
+                        handleNoneSelected();
                       }}
+                      sx={isNoneHighlighted()}
                     >
-                      All
+                      None
                     </MenuItem>
-                    {topics.map((topic, index) => {
+                    {availableLanguages.map((language, index) => {
                       return (
                         <MenuItem
                           onClick={() => {
                             closeMenu;
-                            setTopicFilter(topic);
+                            handleToggleLanguageSelection(language);
                           }}
-                          key={index}
+                          key={index + 1}
+                          sx={isHighlighted(language)}
                         >
-                          {topic}
+                          {language}
                         </MenuItem>
                       );
                     })}

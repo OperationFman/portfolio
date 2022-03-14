@@ -1,32 +1,38 @@
-import { Button, Link } from "@mui/material";
+import { Link } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { FilterTopicButton } from "../../src/tutorials/buttons/FilterTopicButton";
+import { SortButton } from "../../src/tutorials/buttons/SortButton";
+import { PageContainer } from "../../layout/PageContainer";
 import {
-  orderByNewest,
-  tutorialMetaData,
-  filterForTopic,
   filterForLanguages,
   filterForTags,
+  filterForTopic,
   orderByAlphabetical,
-  SortOptions,
+  orderByNewest,
   orderByOldest,
+  SortOptions,
+  tutorialMetaData,
 } from "../../src/tutorials/tutorialsDataService";
-import { Languages, Topic, Tags } from "../../src/tutorials/types";
-import { PageContainer } from "../../components/layout/PageContainer";
-import { SortButton } from "../../components/buttons/SortButton";
-import { FilterTopicButton } from "../../components/buttons/FilterTopicButton";
+import { Languages, Topic } from "../../src/tutorials/types";
+import { LanguagesFilterButton } from "../../src/tutorials/buttons/LanguagesFilterButton";
 
 const Tutorials: NextPage = () => {
+  // TODO: language filter is buggy af, change how the highlighting is done and think about using a useEffect
+  //          .map doesnt seem to reflect changes very well
   const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
   const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
 
   const [topicFilter, setTopicFilter] = useState<Topic | undefined>(undefined);
-  const [languagesFilter, setLanguagesFilter] = useState([]);
-  const [tagsFilter, setTagsFilter] = useState([]);
 
+  const [languagesFilter, setLanguagesFilter] = useState(
+    [] as unknown as Languages[]
+  );
+  const [tagsFilter, setTagsFilter] = useState([]);
   const [filteredMetaData, setFilteredData] = useState(sortedMetaData);
 
+  const availableLanguages: Languages[] = Object.values(Languages);
   useEffect(() => {
     switch (sortMetaDataBy) {
       case SortOptions.Newest:
@@ -39,7 +45,7 @@ const Tutorials: NextPage = () => {
         setSortedMetaData(orderByAlphabetical(tutorialMetaData));
         break;
     }
-  }, [sortMetaDataBy]);
+  }, [sortMetaDataBy, filteredMetaData]);
 
   useEffect(() => {
     let filteredData = sortedMetaData;
@@ -57,7 +63,13 @@ const Tutorials: NextPage = () => {
     }
 
     setFilteredData(filteredData);
-  }, [sortedMetaData, topicFilter, languagesFilter, tagsFilter]);
+  }, [
+    languagesFilter,
+    sortedMetaData,
+    tagsFilter,
+    topicFilter,
+    sortMetaDataBy,
+  ]);
 
   return (
     <div>
@@ -69,6 +81,11 @@ const Tutorials: NextPage = () => {
       <PageContainer>
         <SortButton setSortMetaDataBy={setSortMetaDataBy} />
         <FilterTopicButton setTopicFilter={setTopicFilter} />
+        <LanguagesFilterButton
+          setLanguagesFilter={setLanguagesFilter}
+          languagesFilter={languagesFilter}
+          availableLanguages={availableLanguages}
+        />
 
         <Link
           href={`/tutorials/programming/quickly-setup-next-js-with-typescript`}
