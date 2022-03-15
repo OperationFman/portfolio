@@ -16,7 +16,7 @@ import {
   tutorialMetaData,
 } from "../../src/tutorials/tutorialsDataService";
 import { Languages, Topic } from "../../src/tutorials/types";
-import { LanguagesFilterButton } from "../../src/tutorials/components/LanguagesFilter";
+import { LanguagesFilter } from "../../src/tutorials/components/LanguagesFilter";
 
 const Tutorials: NextPage = () => {
   const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
@@ -24,7 +24,7 @@ const Tutorials: NextPage = () => {
 
   const [topicFilter, setTopicFilter] = useState<Topic | undefined>(undefined);
 
-  const [languagesFilter, setLanguagesFilter] = useState(
+  const [filteredLanguages, setFilteredLanguages] = useState(
     [] as unknown as Languages[]
   );
   const [tagsFilter, setTagsFilter] = useState([]);
@@ -52,8 +52,8 @@ const Tutorials: NextPage = () => {
       filteredData = filterForTopic(filteredData, topicFilter);
     }
 
-    if (languagesFilter.length) {
-      filteredData = filterForLanguages(filteredData, languagesFilter);
+    if (filteredLanguages.length) {
+      filteredData = filterForLanguages(filteredData, filteredLanguages);
     }
 
     if (tagsFilter.length) {
@@ -62,7 +62,7 @@ const Tutorials: NextPage = () => {
 
     setFilteredData(filteredData);
   }, [
-    languagesFilter,
+    filteredLanguages,
     sortedMetaData,
     tagsFilter,
     topicFilter,
@@ -79,9 +79,9 @@ const Tutorials: NextPage = () => {
       <PageContainer>
         <SortButton setSortMetaDataBy={setSortMetaDataBy} />
         <FilterTopicButton setTopicFilter={setTopicFilter} />
-        <LanguagesFilterButton
-          setLanguagesFilter={setLanguagesFilter}
-          languagesFilter={languagesFilter}
+        <LanguagesFilter
+          filteredLanguages={filteredLanguages}
+          setFilteredLanguages={setFilteredLanguages}
           availableLanguages={availableLanguages}
         />
 

@@ -5,7 +5,8 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import * as React from "react";
+import React, { Dispatch, SetStateAction } from "react";
+import { Languages } from "../types";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -31,7 +32,14 @@ const names = [
   "Kelly Snyder",
 ];
 
-export const LanguagesFilterButton = () => {
+type LanguagesFilter = {
+  filteredLanguages: Languages[];
+  setFilteredLanguages: Dispatch<SetStateAction<Languages[]>>;
+  availableLanguages: Languages[];
+};
+
+export const LanguagesFilter = (props: LanguagesFilter) => {
+  //Update below to use props
   const [personName, setPersonName] = React.useState<string[]>([]);
 
   const handleChange = (event: SelectChangeEvent<typeof personName>) => {
@@ -44,14 +52,14 @@ export const LanguagesFilterButton = () => {
   return (
     <div>
       <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-chip-label">Chip</InputLabel>
+        <InputLabel>Filter Languages</InputLabel>
         <Select
-          labelId="demo-multiple-chip-label"
-          id="demo-multiple-chip"
           multiple
           value={personName}
           onChange={handleChange}
-          input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
+          input={
+            <OutlinedInput id="select-multiple-chip" label="Filter Languages" />
+          }
           renderValue={(selected) => (
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
               {selected.map((value) => (
