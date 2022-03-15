@@ -11,7 +11,10 @@ import {
 } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
 import { Topic } from "../types";
-import { closeMenu, keyboardNavigation } from "../../../utils/dropDownMenuLogic";
+import {
+  closeMenu,
+  keyboardNavigation,
+} from "../../../utils/dropDownMenuLogic";
 
 type FilterTopicButtonProps = {
   setTopicFilter: Dispatch<SetStateAction<Topic | undefined>>;
@@ -48,11 +51,7 @@ export const FilterTopicButton = (props: FilterTopicButtonProps) => {
   }, [open]);
 
   return (
-    <Stack
-      direction="row"
-      spacing={2}
-      sx={{ display: "flex", justifyContent: "right" }}
-    >
+    <Stack direction="row" spacing={2}>
       <div>
         <Button
           ref={anchorRef}

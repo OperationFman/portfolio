@@ -30,7 +30,7 @@ describe("tutorialDataService", () => {
       subTitle:
         "Step-by-step instructions to dockerize your repo and use terraform to spin up AWS and host your project from scratch",
       topic: Topic.Infrastructure,
-      languages: [Languages.AWS, Languages.Docker, Languages.Terraform],
+      languages: [Languages.Docker, Languages.Terraform],
       tags: [Tags.Essay],
     },
     {
@@ -78,7 +78,7 @@ describe("tutorialDataService", () => {
           subTitle:
             "Step-by-step instructions to dockerize your repo and use terraform to spin up AWS and host your project from scratch",
           topic: Topic.Infrastructure,
-          languages: [Languages.AWS, Languages.Docker, Languages.Terraform],
+          languages: [Languages.Docker, Languages.Terraform],
           tags: [Tags.Essay],
         },
       ];
@@ -100,7 +100,7 @@ describe("tutorialDataService", () => {
           subTitle:
             "Step-by-step instructions to dockerize your repo and use terraform to spin up AWS and host your project from scratch",
           topic: Topic.Infrastructure,
-          languages: [Languages.AWS, Languages.Docker, Languages.Terraform],
+          languages: [Languages.Docker, Languages.Terraform],
           tags: [Tags.Essay],
         },
         {
@@ -144,7 +144,7 @@ describe("tutorialDataService", () => {
           subTitle:
             "Step-by-step instructions to dockerize your repo and use terraform to spin up AWS and host your project from scratch",
           topic: Topic.Infrastructure,
-          languages: [Languages.AWS, Languages.Docker, Languages.Terraform],
+          languages: [Languages.Docker, Languages.Terraform],
           tags: [Tags.Essay],
         },
         {
@@ -250,7 +250,7 @@ describe("tutorialDataService", () => {
           thumbnail: "TBD",
           subTitle: "subtitle",
           topic: Topic.Agile,
-          languages: [Languages.AWS],
+          languages: [],
           tags: [],
         },
         {
@@ -439,7 +439,7 @@ describe("tutorialDataService", () => {
           subTitle:
             "Step-by-step instructions to dockerize your repo and use terraform to spin up AWS and host your project from scratch",
           topic: Topic.Infrastructure,
-          languages: [Languages.AWS, Languages.Docker, Languages.Terraform],
+          languages: [Languages.Docker, Languages.Terraform],
           tags: [Tags.Essay],
         },
       ];

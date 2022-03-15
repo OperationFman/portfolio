@@ -17,6 +17,12 @@ import {
 } from "../../src/tutorials/tutorialsDataService";
 import { Languages, Topic } from "../../src/tutorials/types";
 import { LanguagesFilter } from "../../src/tutorials/components/LanguagesFilter";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { TopicFilter } from "../../src/tutorials/components/TopicFilter";
 
 const Tutorials: NextPage = () => {
   const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
@@ -31,6 +37,7 @@ const Tutorials: NextPage = () => {
   const [filteredMetaData, setFilteredData] = useState(sortedMetaData);
 
   const availableLanguages: Languages[] = Object.values(Languages);
+
   useEffect(() => {
     switch (sortMetaDataBy) {
       case SortOptions.Newest:
@@ -55,6 +62,7 @@ const Tutorials: NextPage = () => {
     if (filteredLanguages.length) {
       filteredData = filterForLanguages(filteredData, filteredLanguages);
     }
+    console.log({ filteredData });
 
     if (tagsFilter.length) {
       filteredData = filterForTags(filteredData, tagsFilter);
@@ -77,13 +85,27 @@ const Tutorials: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageContainer>
+        <Accordion sx={{ width: 400 }}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>Filters</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <TopicFilter setTopicFilter={setTopicFilter} />
+            <LanguagesFilter
+              filteredLanguages={filteredLanguages}
+              setFilteredLanguages={setFilteredLanguages}
+              availableLanguages={availableLanguages}
+            />
+            <LanguagesFilter
+              filteredLanguages={filteredLanguages}
+              setFilteredLanguages={setFilteredLanguages}
+              availableLanguages={availableLanguages}
+            />
+          </AccordionDetails>
+        </Accordion>
+
         <SortButton setSortMetaDataBy={setSortMetaDataBy} />
         <FilterTopicButton setTopicFilter={setTopicFilter} />
-        <LanguagesFilter
-          filteredLanguages={filteredLanguages}
-          setFilteredLanguages={setFilteredLanguages}
-          availableLanguages={availableLanguages}
-        />
 
         <Link
           href={`/tutorials/programming/quickly-setup-next-js-with-typescript`}
