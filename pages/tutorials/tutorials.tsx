@@ -2,7 +2,7 @@ import { Link } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { FilterTopicButton } from "../../src/tutorials/buttons/FilterTopicButton";
+import { FilterTopicButton } from "../../src/tutorials/components/FilterTopicButton";
 import { SortButton } from "../../src/tutorials/buttons/SortButton";
 import { PageContainer } from "../../layout/PageContainer";
 import {
@@ -16,7 +16,7 @@ import {
   tutorialMetaData,
 } from "../../src/tutorials/tutorialsDataService";
 import { Languages, Topic } from "../../src/tutorials/types";
-import { LanguagesFilterButton } from "../../src/tutorials/buttons/LanguagesFilterButton";
+import { LanguagesFilterButton } from "../../src/tutorials/components/LanguagesFilter";
 
 const Tutorials: NextPage = () => {
   const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
