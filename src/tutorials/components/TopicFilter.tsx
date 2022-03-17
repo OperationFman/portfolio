@@ -8,30 +8,39 @@ import { Topic } from "../types";
 
 type TopicFilterProps = {
   setTopicFilter: Dispatch<SetStateAction<Topic | undefined>>;
+  topicFilter: Topic | undefined;
 };
 
 export const TopicFilter = (props: TopicFilterProps) => {
-  const { setTopicFilter: setTopicFilter } = props;
-  const [age, setAge] = React.useState("");
+  const { setTopicFilter: setTopicFilter, topicFilter } = props;
+  const topics = Object.values(Topic);
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
+    const selectedTopic = event.target.value as string;
+    if (selectedTopic === "All") {
+      setTopicFilter(undefined);
+    } else {
+      setTopicFilter(selectedTopic as Topic);
+    }
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ m: 2, width: 300 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <InputLabel>Topic</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={age}
-          label="Age"
+          value={topicFilter ? topicFilter : "All"}
+          label="Topic"
           onChange={handleChange}
         >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={"All"}>All</MenuItem>
+          {topics.map((topic, index) => {
+            return (
+              <MenuItem key={index} value={topic}>
+                {topic}
+              </MenuItem>
+            );
+          })}
         </Select>
       </FormControl>
     </Box>

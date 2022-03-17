@@ -28,12 +28,12 @@ export const LanguagesFilter = (props: LanguagesFilter) => {
   return (
     <div>
       <FormControl sx={{ m: 2, width: 300 }}>
-        <InputLabel>Filter Languages</InputLabel>
+        <InputLabel>Languages</InputLabel>
         <Select
           multiple
           value={filteredLanguages}
           onChange={handleChange}
-          input={<OutlinedInput label="Filter Languages" />}
+          input={<OutlinedInput label="Languages" />}
           renderValue={(selected) => (
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
               {selected.map((value) => (

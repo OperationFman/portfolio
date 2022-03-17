@@ -2,7 +2,6 @@ import { Link } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { FilterTopicButton } from "../../src/tutorials/components/FilterTopicButton";
 import { SortButton } from "../../src/tutorials/buttons/SortButton";
 import { PageContainer } from "../../layout/PageContainer";
 import {
@@ -29,7 +28,6 @@ const Tutorials: NextPage = () => {
   const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
 
   const [topicFilter, setTopicFilter] = useState<Topic | undefined>(undefined);
-
   const [filteredLanguages, setFilteredLanguages] = useState(
     [] as unknown as Languages[]
   );
@@ -62,7 +60,6 @@ const Tutorials: NextPage = () => {
     if (filteredLanguages.length) {
       filteredData = filterForLanguages(filteredData, filteredLanguages);
     }
-    console.log({ filteredData });
 
     if (tagsFilter.length) {
       filteredData = filterForTags(filteredData, tagsFilter);
@@ -90,7 +87,10 @@ const Tutorials: NextPage = () => {
             <Typography>Filters</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <TopicFilter setTopicFilter={setTopicFilter} />
+            <TopicFilter
+              setTopicFilter={setTopicFilter}
+              topicFilter={topicFilter}
+            />
             <LanguagesFilter
               filteredLanguages={filteredLanguages}
               setFilteredLanguages={setFilteredLanguages}
@@ -105,7 +105,6 @@ const Tutorials: NextPage = () => {
         </Accordion>
 
         <SortButton setSortMetaDataBy={setSortMetaDataBy} />
-        <FilterTopicButton setTopicFilter={setTopicFilter} />
 
         <Link
           href={`/tutorials/programming/quickly-setup-next-js-with-typescript`}
