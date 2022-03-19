@@ -1,9 +1,9 @@
-import { Link } from "@mui/material";
+import { Button, Dialog, DialogTitle, Link, Slide } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import { SortButton } from "../../src/tutorials/buttons/SortButton";
-import { PageContainer } from "../../layout/PageContainer";
+import React, { useEffect, useState } from "react";
+import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
+import { PageContainer } from "../../components/layout/PageContainer";
 import {
   filterForLanguages,
   filterForTags,
@@ -14,16 +14,32 @@ import {
   SortOptions,
   tutorialMetaData,
 } from "../../src/tutorials/tutorialsDataService";
-import { Languages, Topic } from "../../src/tutorials/types";
+import { Languages, Tags, Topic } from "../../src/tutorials/types";
 import { LanguagesFilter } from "../../src/tutorials/components/LanguagesFilter";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { TopicFilter } from "../../src/tutorials/components/TopicFilter";
+import { SingleSelectFilterField } from "../../components/misc/SingleSelectFilterField";
+import { TagsFilter } from "../../src/tutorials/components/TagsFilter";
+import { TransitionProps } from "@mui/material/transitions";
+import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
+import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
+import { MultiSelectFilter } from "../../components/misc/MultiSelectFilterField";
+import useDeviceDetect from "../../utils/useDeviceDetect";
+
+const Transition = React.forwardRef(function Transition(
+  props: TransitionProps & {
+    children: React.ReactElement<any, any>;
+  },
+  ref: React.Ref<unknown>
+) {
+  return <Slide direction="right" ref={ref} {...props} />;
+});
 
 const Tutorials: NextPage = () => {
+  const { isMobile } = useDeviceDetect();
   const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
   const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
 
@@ -31,10 +47,8 @@ const Tutorials: NextPage = () => {
   const [filteredLanguages, setFilteredLanguages] = useState(
     [] as unknown as Languages[]
   );
-  const [tagsFilter, setTagsFilter] = useState([]);
+  const [tagsFilter, setTagsFilter] = useState([] as unknown as Tags[]);
   const [filteredMetaData, setFilteredData] = useState(sortedMetaData);
-
-  const availableLanguages: Languages[] = Object.values(Languages);
 
   useEffect(() => {
     switch (sortMetaDataBy) {
@@ -73,6 +87,15 @@ const Tutorials: NextPage = () => {
     topicFilter,
     sortMetaDataBy,
   ]);
+  const [showFilterMenu, setShowFilterMenu] = React.useState(false);
+
+  const handleCloseFilterMenu = () => {
+    setShowFilterMenu(false);
+  };
+
+  const availableTopics: Topic[] = Object.values(Topic);
+  const availableLanguages: Languages[] = Object.values(Languages);
+  const availableTags: Tags[] = Object.values(Tags);
 
   return (
     <div>
@@ -82,29 +105,10 @@ const Tutorials: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageContainer>
-        <Accordion sx={{ width: 400 }}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>Filters</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <TopicFilter
-              setTopicFilter={setTopicFilter}
-              topicFilter={topicFilter}
-            />
-            <LanguagesFilter
-              filteredLanguages={filteredLanguages}
-              setFilteredLanguages={setFilteredLanguages}
-              availableLanguages={availableLanguages}
-            />
-            <LanguagesFilter
-              filteredLanguages={filteredLanguages}
-              setFilteredLanguages={setFilteredLanguages}
-              availableLanguages={availableLanguages}
-            />
-          </AccordionDetails>
-        </Accordion>
-
-        <SortButton setSortMetaDataBy={setSortMetaDataBy} />
+        <div style={{ display: "flex" }}>
+          <SortButton setSortMetaDataBy={setSortMetaDataBy} />
+          <FilterButton setShowFilterMenu={setShowFilterMenu} />
+        </div>
 
         <Link
           href={`/tutorials/programming/quickly-setup-next-js-with-typescript`}
@@ -117,6 +121,42 @@ const Tutorials: NextPage = () => {
             <li key={link.title}>{link.title}</li>
           ))}
         </ol>
+        <Dialog
+          open={showFilterMenu}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleCloseFilterMenu}
+        >
+          <div
+            style={
+              isMobile
+                ? { margin: "10px 0px 50px 0px" }
+                : { margin: "15px 50px 50px 50px" }
+            }
+          >
+            <DialogTitle>{"Filter"}</DialogTitle>
+
+            <SingleSelectFilterField
+              label={"Topic"}
+              defaultValue={"All"}
+              filter={topicFilter}
+              setFilter={setTopicFilter}
+              dropDownData={availableTopics}
+            />
+            <MultiSelectFilter
+              label={"Languages"}
+              filter={filteredLanguages}
+              setFilter={setFilteredLanguages}
+              dropDownData={availableLanguages}
+            />
+            <MultiSelectFilter
+              label={"Tags"}
+              filter={tagsFilter}
+              setFilter={setTagsFilter}
+              dropDownData={availableTags}
+            />
+          </div>
+        </Dialog>
       </PageContainer>
     </div>
   );

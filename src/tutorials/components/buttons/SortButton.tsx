@@ -13,8 +13,11 @@ import {
   Stack,
 } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
-import { SortOptions } from "../tutorialsDataService";
-import { closeMenu, keyboardNavigation } from "../../../utils/dropDownMenuLogic";
+import { SortOptions } from "../../tutorialsDataService";
+import {
+  closeMenu,
+  keyboardNavigation,
+} from "../../../../utils/dropDownMenuLogic";
 
 type SortButtonProps = {
   setSortMetaDataBy: Dispatch<SetStateAction<SortOptions>>;
@@ -48,11 +51,7 @@ export const SortButton = (props: SortButtonProps) => {
   }, [open]);
 
   return (
-    <Stack
-      direction="row"
-      spacing={2}
-      sx={{ display: "flex", justifyContent: "right" }}
-    >
+    <Stack direction="row" spacing={2} sx={{ margin: "5px 20px" }}>
       <div>
         <Button
           ref={anchorRef}

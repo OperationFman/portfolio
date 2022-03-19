@@ -5,36 +5,45 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import React, { Dispatch, SetStateAction, useEffect } from "react";
-import { Languages } from "../types";
+import React, { Dispatch, SetStateAction } from "react";
+import { Tags, Languages } from "../../src/tutorials/types";
 
 type LanguagesFilter = {
-  filteredLanguages: Languages[];
-  setFilteredLanguages: Dispatch<SetStateAction<Languages[]>>;
+  filter: Languages[];
+  setFilter: Dispatch<SetStateAction<Languages[]>>;
+  dropDownData: Languages[];
 };
 
-export const LanguagesFilter = (props: LanguagesFilter) => {
-  const { filteredLanguages, setFilteredLanguages } = props;
+type TagsFilter = {
+  filter: Tags[];
+  setFilter: Dispatch<SetStateAction<Tags[]>>;
+  dropDownData: Tags[];
+};
 
-  const availableLanguages: Languages[] = Object.values(Languages);
+type MultiSelectFilterProps = (LanguagesFilter | TagsFilter) & {
+  label: string;
+};
 
-  const handleChange = (event: SelectChangeEvent<Languages[]>) => {
+export const MultiSelectFilter = (props: MultiSelectFilterProps) => {
+  const { label, filter, setFilter, dropDownData } = props;
+
+  const handleChange = (event: any) => {
     const {
       target: { value },
     } = event;
 
-    setFilteredLanguages(value as Languages[]);
+    setFilter(value);
   };
 
   return (
     <div>
       <FormControl sx={{ m: 2, width: 300 }}>
-        <InputLabel>Languages</InputLabel>
+        <InputLabel>{label}</InputLabel>
         <Select
           multiple
-          value={filteredLanguages}
+          value={filter}
           onChange={handleChange}
-          input={<OutlinedInput label="Languages" />}
+          input={<OutlinedInput label={label} />}
           renderValue={(selected) => (
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
               {selected.map((value) => (
@@ -51,9 +60,9 @@ export const LanguagesFilter = (props: LanguagesFilter) => {
             },
           }}
         >
-          {availableLanguages.map((language) => (
-            <MenuItem key={language} value={language}>
-              {language}
+          {dropDownData.map((item) => (
+            <MenuItem key={item} value={item}>
+              {item}
             </MenuItem>
           ))}
         </Select>

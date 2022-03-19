@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import React from "react";
-import useDeviceDetect from "../utils/useDeviceDetect";
+import useDeviceDetect from "../../utils/useDeviceDetect";
 
 type PageContainerProps = {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ export const PageContainer = (props: PageContainerProps) => {
   const { isMobile } = useDeviceDetect();
 
   const styling = {
-    // border: "2px solid white",
+    // border: "2px solid blue",
     marginTop: isMobile ? "30px" : "50px",
   };
 
