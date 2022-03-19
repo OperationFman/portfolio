@@ -1,7 +1,7 @@
-import { Button } from "@mui/material";
-
 import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
+import { Button } from "@mui/material";
 import { Dispatch } from "react";
+
 
 type FilterButtonProps = {
   setShowFilterMenu: Dispatch<React.SetStateAction<boolean>>;

@@ -1,0 +1,48 @@
+import { Slide } from "@mui/material";
+import { TransitionProps } from "@mui/material/transitions";
+import React from "react";
+
+export const closeMenu = (
+  event: Event | React.SyntheticEvent,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>,
+  anchorRef: React.RefObject<HTMLButtonElement>
+): void => {
+  if (
+    anchorRef.current &&
+    anchorRef.current.contains(event.target as HTMLElement)
+  ) {
+    return;
+  }
+
+  setOpen(false);
+};
+
+export const keyboardNavigation = (
+  event: React.KeyboardEvent,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+) => {
+  if (event.key === "Tab") {
+    event.preventDefault();
+    setOpen(false);
+  } else if (event.key === "Escape") {
+    setOpen(false);
+  }
+};
+
+export const slideTransition = (
+  direction: "left" | "right" | "up" | "down" | undefined
+) => {
+  return React.forwardRef(function Transition(
+    props: TransitionProps & {
+      children: React.ReactElement<any, any>;
+    },
+    ref: React.Ref<unknown>
+  ) {
+    return <Slide direction={direction} ref={ref} {...props} />;
+  });
+};
+
+export const addTransparency = (color: string, opacity: number): string => {
+  const _opacity = Math.round(Math.min(Math.max(opacity || 1, 0), 1) * 255);
+  return color + _opacity.toString(16).toUpperCase();
+};

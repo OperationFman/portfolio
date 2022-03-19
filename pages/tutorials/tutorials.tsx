@@ -1,85 +1,53 @@
-import { Button, Dialog, DialogTitle, Link, Slide } from "@mui/material";
+import { Dialog, DialogTitle, Divider, Link } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
 import { PageContainer } from "../../components/layout/PageContainer";
+import { MultiSelectFilter } from "../../components/misc/MultiSelectFilterField";
+import { SingleSelectFilterField } from "../../components/misc/SingleSelectFilterField";
+import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
+import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
+import { filterMetaData } from "../../src/tutorials/components/filters/filterMetaData";
+import { sortMetaData } from "../../src/tutorials/components/filters/sortMetaData";
 import {
-  filterForLanguages,
-  filterForTags,
-  filterForTopic,
-  orderByAlphabetical,
-  orderByNewest,
-  orderByOldest,
   SortOptions,
   tutorialMetaData,
 } from "../../src/tutorials/tutorialsDataService";
 import { Languages, Tags, Topic } from "../../src/tutorials/types";
-import { LanguagesFilter } from "../../src/tutorials/components/LanguagesFilter";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { SingleSelectFilterField } from "../../components/misc/SingleSelectFilterField";
-import { TagsFilter } from "../../src/tutorials/components/TagsFilter";
-import { TransitionProps } from "@mui/material/transitions";
-import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
-import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
-import { MultiSelectFilter } from "../../components/misc/MultiSelectFilterField";
+import { slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<any, any>;
-  },
-  ref: React.Ref<unknown>
-) {
-  return <Slide direction="right" ref={ref} {...props} />;
-});
+const Transition = slideTransition("right");
 
 const Tutorials: NextPage = () => {
   const { isMobile } = useDeviceDetect();
+
+  const availableTopics: Topic[] = Object.values(Topic);
+  const availableLanguages: Languages[] = Object.values(Languages);
+  const availableTags: Tags[] = Object.values(Tags);
+  const tutorialPurple = "#ce93d8";
+
   const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
   const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
 
   const [topicFilter, setTopicFilter] = useState<Topic | undefined>(undefined);
-  const [filteredLanguages, setFilteredLanguages] = useState(
-    [] as unknown as Languages[]
-  );
-  const [tagsFilter, setTagsFilter] = useState([] as unknown as Tags[]);
+  const [filteredLanguages, setFilteredLanguages] = useState([] as Languages[]);
+  const [tagsFilter, setTagsFilter] = useState([] as Tags[]);
   const [filteredMetaData, setFilteredData] = useState(sortedMetaData);
+  const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
   useEffect(() => {
-    switch (sortMetaDataBy) {
-      case SortOptions.Newest:
-        setSortedMetaData(orderByNewest(tutorialMetaData));
-        break;
-      case SortOptions.Oldest:
-        setSortedMetaData(orderByOldest(tutorialMetaData));
-        break;
-      case SortOptions.Alphabetical:
-        setSortedMetaData(orderByAlphabetical(tutorialMetaData));
-        break;
-    }
+    sortMetaData(tutorialMetaData, sortMetaDataBy, setSortedMetaData);
   }, [sortMetaDataBy, filteredMetaData]);
 
   useEffect(() => {
-    let filteredData = sortedMetaData;
-
-    if (topicFilter) {
-      filteredData = filterForTopic(filteredData, topicFilter);
-    }
-
-    if (filteredLanguages.length) {
-      filteredData = filterForLanguages(filteredData, filteredLanguages);
-    }
-
-    if (tagsFilter.length) {
-      filteredData = filterForTags(filteredData, tagsFilter);
-    }
-
-    setFilteredData(filteredData);
+    filterMetaData(
+      sortedMetaData,
+      topicFilter,
+      filteredLanguages,
+      tagsFilter,
+      setFilteredData
+    );
   }, [
     filteredLanguages,
     sortedMetaData,
@@ -87,15 +55,10 @@ const Tutorials: NextPage = () => {
     topicFilter,
     sortMetaDataBy,
   ]);
-  const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
   const handleCloseFilterMenu = () => {
     setShowFilterMenu(false);
   };
-
-  const availableTopics: Topic[] = Object.values(Topic);
-  const availableLanguages: Languages[] = Object.values(Languages);
-  const availableTags: Tags[] = Object.values(Tags);
 
   return (
     <div>
@@ -104,13 +67,14 @@ const Tutorials: NextPage = () => {
         <meta name="description" content="Generated by create next app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <PageContainer>
         <div style={{ display: "flex" }}>
           <SortButton setSortMetaDataBy={setSortMetaDataBy} />
           <FilterButton setShowFilterMenu={setShowFilterMenu} />
         </div>
 
-        <Link
+        {/* <Link
           href={`/tutorials/programming/quickly-setup-next-js-with-typescript`}
         >
           <a>Quickly Setup NextJs</a>
@@ -120,7 +84,7 @@ const Tutorials: NextPage = () => {
           {filteredMetaData.map((link) => (
             <li key={link.title}>{link.title}</li>
           ))}
-        </ol>
+        </ol> */}
         <Dialog
           open={showFilterMenu}
           TransitionComponent={Transition}
@@ -131,29 +95,33 @@ const Tutorials: NextPage = () => {
             style={
               isMobile
                 ? { margin: "10px 0px 50px 0px" }
-                : { margin: "15px 50px 50px 50px" }
+                : { margin: "20px 50px 50px 50px" }
             }
           >
             <DialogTitle>{"Filter"}</DialogTitle>
 
+            <Divider sx={{ borderColor: tutorialPurple }} />
             <SingleSelectFilterField
               label={"Topic"}
               defaultValue={"All"}
               filter={topicFilter}
               setFilter={setTopicFilter}
               dropDownData={availableTopics}
+              highlightColor={tutorialPurple}
             />
             <MultiSelectFilter
               label={"Languages"}
               filter={filteredLanguages}
               setFilter={setFilteredLanguages}
               dropDownData={availableLanguages}
+              highlightColor={tutorialPurple}
             />
             <MultiSelectFilter
               label={"Tags"}
               filter={tagsFilter}
               setFilter={setTagsFilter}
               dropDownData={availableTags}
+              highlightColor={tutorialPurple}
             />
           </div>
         </Dialog>
