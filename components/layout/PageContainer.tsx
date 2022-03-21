@@ -17,7 +17,7 @@ export const PageContainer = (props: PageContainerProps) => {
   };
 
   return (
-    <Container maxWidth="md" sx={styling}>
+    <Container maxWidth="lg" sx={styling}>
       {children}
     </Container>
   );

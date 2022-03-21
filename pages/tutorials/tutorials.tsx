@@ -1,4 +1,17 @@
-import { Dialog, DialogTitle, Divider, Link } from "@mui/material";
+import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
+import {
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Dialog,
+  DialogTitle,
+  Divider,
+  Grid,
+  Link,
+  Typography,
+} from "@mui/material";
+import Image from "next/image";
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
@@ -60,6 +73,51 @@ const Tutorials: NextPage = () => {
     setShowFilterMenu(false);
   };
 
+  const filterPopUp = (): JSX.Element => {
+    return (
+      <Dialog
+        open={showFilterMenu}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleCloseFilterMenu}
+      >
+        <div
+          style={
+            isMobile
+              ? { margin: "10px 0px 50px 0px" }
+              : { margin: "20px 50px 50px 50px" }
+          }
+        >
+          <DialogTitle>{"Filter"}</DialogTitle>
+
+          <Divider sx={{ borderColor: tutorialPurple }} />
+          <SingleSelectFilterField
+            label={"Topic"}
+            defaultValue={"All"}
+            filter={topicFilter}
+            setFilter={setTopicFilter}
+            dropDownData={availableTopics}
+            highlightColor={tutorialPurple}
+          />
+          <MultiSelectFilter
+            label={"Languages"}
+            filter={filteredLanguages}
+            setFilter={setFilteredLanguages}
+            dropDownData={availableLanguages}
+            highlightColor={tutorialPurple}
+          />
+          <MultiSelectFilter
+            label={"Tags"}
+            filter={tagsFilter}
+            setFilter={setTagsFilter}
+            dropDownData={availableTags}
+            highlightColor={tutorialPurple}
+          />
+        </div>
+      </Dialog>
+    );
+  };
+
   return (
     <div>
       <Head>
@@ -74,57 +132,35 @@ const Tutorials: NextPage = () => {
           <FilterButton setShowFilterMenu={setShowFilterMenu} />
         </div>
 
-        {/* <Link
-          href={`/tutorials/programming/quickly-setup-next-js-with-typescript`}
-        >
-          <a>Quickly Setup NextJs</a>
-        </Link>
-
-        <ol>
-          {filteredMetaData.map((link) => (
-            <li key={link.title}>{link.title}</li>
+        <Grid container spacing={3}>
+          {filteredMetaData.map((dataItem) => (
+            <Grid item key={dataItem.title}>
+              <Card sx={{ maxWidth: 345 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    width="176"
+                    height="144"
+                    alt={dataItem.title}
+                    image={dataItem.thumbnail}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {dataItem.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      Lizards are a widespread group of squadmate reptiles, with
+                      over 6,000 species, ranging across all continents except
+                      Antarctica
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
           ))}
-        </ol> */}
-        <Dialog
-          open={showFilterMenu}
-          TransitionComponent={Transition}
-          keepMounted
-          onClose={handleCloseFilterMenu}
-        >
-          <div
-            style={
-              isMobile
-                ? { margin: "10px 0px 50px 0px" }
-                : { margin: "20px 50px 50px 50px" }
-            }
-          >
-            <DialogTitle>{"Filter"}</DialogTitle>
+        </Grid>
 
-            <Divider sx={{ borderColor: tutorialPurple }} />
-            <SingleSelectFilterField
-              label={"Topic"}
-              defaultValue={"All"}
-              filter={topicFilter}
-              setFilter={setTopicFilter}
-              dropDownData={availableTopics}
-              highlightColor={tutorialPurple}
-            />
-            <MultiSelectFilter
-              label={"Languages"}
-              filter={filteredLanguages}
-              setFilter={setFilteredLanguages}
-              dropDownData={availableLanguages}
-              highlightColor={tutorialPurple}
-            />
-            <MultiSelectFilter
-              label={"Tags"}
-              filter={tagsFilter}
-              setFilter={setTagsFilter}
-              dropDownData={availableTags}
-              highlightColor={tutorialPurple}
-            />
-          </div>
-        </Dialog>
+        {filterPopUp()}
       </PageContainer>
     </div>
   );
