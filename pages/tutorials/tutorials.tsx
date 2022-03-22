@@ -29,6 +29,10 @@ import {
 import { Languages, Tags, Topic } from "../../src/tutorials/types";
 import { slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
+import {
+  titleFormatter,
+  subTitleShortener,
+} from "../../src/tutorials/components/cards/textFormatter";
 
 const Transition = slideTransition("right");
 
@@ -118,6 +122,7 @@ const Tutorials: NextPage = () => {
     );
   };
 
+  console.log({ filteredMetaData });
   return (
     <div>
       <Head>
@@ -132,7 +137,12 @@ const Tutorials: NextPage = () => {
           <FilterButton setShowFilterMenu={setShowFilterMenu} />
         </div>
 
-        <Grid container spacing={3}>
+        <Grid
+          container
+          spacing={3}
+          justifyContent="center"
+          sx={{ marginTop: "15px" }}
+        >
           {filteredMetaData.map((dataItem) => (
             <Grid item key={dataItem.title}>
               <Card sx={{ maxWidth: 345 }}>
@@ -146,12 +156,11 @@ const Tutorials: NextPage = () => {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      {dataItem.title}
+                      {/* Refactor this (too short) */}
+                      {titleFormatter(dataItem.title)}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squadmate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                      {subTitleShortener(dataItem.subTitle)}
                     </Typography>
                   </CardContent>
                 </CardActionArea>

@@ -10,12 +10,12 @@ import {
   MenuList,
   Paper,
   Popper,
-  Stack
+  Stack,
 } from "@mui/material";
 import React, { Dispatch, SetStateAction } from "react";
 import {
   closeMenu,
-  keyboardNavigation
+  keyboardNavigation,
 } from "../../../../utils/muiSpecificLogic";
 import { SortOptions } from "../../tutorialsDataService";
 
