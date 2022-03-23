@@ -13,7 +13,7 @@ export const PageContainer = (props: PageContainerProps) => {
 
   const styling = {
     // border: "2px solid blue",
-    marginTop: isMobile ? "30px" : "50px",
+    marginTop: isMobile ? "20px" : "50px",
   };
 
   return (

@@ -8,13 +8,10 @@ export const subTitleShortener = (text: string): string => {
   return `${arr.join("")}...`;
 };
 
-export const titleFormatter = (text: string): string => {
+export const titleShortener = (text: string): string => {
   const minimumLength = 30;
   const maximumLength = 50;
 
-  if (text.length < minimumLength) {
-    return `${text} ㅤ ㅤ ㅤ ㅤ ㅤ`;
-  }
   if (text.length > maximumLength) {
     const arr = text.split("");
     arr.length = maximumLength - 3;

@@ -51,7 +51,7 @@ export const SortButton = (props: SortButtonProps) => {
   }, [open]);
 
   return (
-    <Stack direction="row" spacing={2} sx={{ margin: "5px 20px" }}>
+    <Stack direction="row" spacing={2}>
       <div>
         <Button
           ref={anchorRef}
@@ -70,7 +70,6 @@ export const SortButton = (props: SortButtonProps) => {
           role={undefined}
           placement="bottom-start"
           transition
-          disablePortal
         >
           {({ TransitionProps, placement }) => (
             <Grow

@@ -30,7 +30,7 @@ import { Languages, Tags, Topic } from "../../src/tutorials/types";
 import { addTransparency, slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import {
-  titleFormatter,
+  titleShortener,
   subTitleShortener,
 } from "../../src/tutorials/components/cards/textFormatter";
 import Box from "@mui/material/Box";
@@ -133,25 +133,19 @@ const Tutorials: NextPage = () => {
       </Head>
 
       <PageContainer>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", margin: "10px 30px" }}>
           <SortButton setSortMetaDataBy={setSortMetaDataBy} />
           <FilterButton setShowFilterMenu={setShowFilterMenu} />
         </div>
 
-        <Grid
-          container
-          spacing={3}
-          justifyContent="center"
-          sx={{ marginTop: "15px" }}
-        >
+        <Grid container spacing={3} justifyContent="center">
           {filteredMetaData.map((dataItem) => (
             <Grid item key={dataItem.title}>
-              <Card sx={{ maxWidth: 345 }}>
+              <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    width="176"
-                    height="144"
+                    height="180"
                     alt={dataItem.title}
                     image={dataItem.thumbnail}
                   />
@@ -159,32 +153,36 @@ const Tutorials: NextPage = () => {
                     <Box
                       sx={{
                         height: "25px",
-                        width: "150px",
-                        margin: "-30px 0px 0px -10px",
-                        border: `1px solid ${tutorialPurple}`,
-                        borderRadius: 16,
+                        margin: "-35px 0px 0px 0px",
+                        padding: "0px 15px",
+                        border: `2px solid ${tutorialPurple}`,
+                        borderRadius: 6,
                         position: "absolute",
-                        backgroundColor: "background.default",
+                        backgroundColor: "background.paper",
                         boxShadow: 2,
                       }}
                     >
-                      <Typography align="center">{dataItem.topic}</Typography>
-                    </Box>
-                    <Tooltip
-                      title={dataItem.title}
-                      followCursor
-                      enterDelay={200}
-                    >
-                      <Typography gutterBottom variant="h5">
-                        {titleFormatter(dataItem.title)}
+                      <Typography
+                        variant="body2"
+                        align="right"
+                        sx={{ fontWeight: 200 }}
+                      >
+                        {dataItem.topic}
                       </Typography>
-                    </Tooltip>
+                    </Box>
+                    <Typography gutterBottom variant="h5">
+                      {titleShortener(dataItem.title)}
+                    </Typography>
                     <Tooltip
                       title={dataItem.subTitle}
                       followCursor
                       enterDelay={200}
                     >
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        sx={{ paddingLeft: "5px", fontWeight: 200 }}
+                      >
                         {subTitleShortener(dataItem.subTitle)}
                       </Typography>
                     </Tooltip>

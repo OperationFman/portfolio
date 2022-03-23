@@ -19,6 +19,10 @@ declare module "@mui/material/Button" {
 export const darkTheme = createTheme({
   palette: {
     mode: "dark",
+    background: {
+      paper: "#212121",
+      default: "#13181c",
+    },
     baseGrey: {
       main: "#949494",
     },

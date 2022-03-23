@@ -1,4 +1,4 @@
-import { subTitleShortener, titleFormatter } from "./textFormatter";
+import { subTitleShortener, titleShortener } from "./textFormatter";
 
 describe("textFormatter", () => {
   describe("subTitleShortener", () => {
@@ -22,16 +22,9 @@ describe("textFormatter", () => {
   });
 
   describe("titleFormatter", () => {
-    it("returns unchanged string if the length is between 30 and 50", () => {
+    it("returns unchanged string if the length is less than 50", () => {
       const expected = "Lizards are squadmate reptiles";
-      const result = titleFormatter(expected);
-
-      expect(result).toEqual(expected);
-    });
-    it("adds 5 trailing invisible characters if the title contains less than 20 characters", () => {
-      const initialData = "Lizards are";
-      const expected = "Lizards are ㅤ ㅤ ㅤ ㅤ ㅤ";
-      const result = titleFormatter(initialData);
+      const result = titleShortener(expected);
 
       expect(result).toEqual(expected);
     });
@@ -40,10 +33,10 @@ describe("textFormatter", () => {
         "Lizards are a widespread group of squadmate reptiles, with over 6000 new species ranging across all continents except Antarctica";
       const expected = "Lizards are a widespread group of squadmate rep...";
 
-      const result = titleFormatter(initialData);
+      const result = titleShortener(initialData);
 
       expect(result).toEqual(expected);
-      expect(result.length).toEqual(33);
+      expect(result.length).toEqual(50);
     });
   });
 });
