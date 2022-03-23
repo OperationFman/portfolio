@@ -27,12 +27,14 @@ import {
   tutorialMetaData,
 } from "../../src/tutorials/tutorialsDataService";
 import { Languages, Tags, Topic } from "../../src/tutorials/types";
-import { slideTransition } from "../../utils/muiSpecificLogic";
+import { addTransparency, slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import {
   titleFormatter,
   subTitleShortener,
 } from "../../src/tutorials/components/cards/textFormatter";
+import Box from "@mui/material/Box";
+import Tooltip from "@mui/material/Tooltip";
 
 const Transition = slideTransition("right");
 
@@ -122,7 +124,6 @@ const Tutorials: NextPage = () => {
     );
   };
 
-  console.log({ filteredMetaData });
   return (
     <div>
       <Head>
@@ -155,13 +156,38 @@ const Tutorials: NextPage = () => {
                     image={dataItem.thumbnail}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {/* Refactor this (too short) */}
-                      {titleFormatter(dataItem.title)}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {subTitleShortener(dataItem.subTitle)}
-                    </Typography>
+                    <Box
+                      sx={{
+                        height: "25px",
+                        width: "150px",
+                        margin: "-30px 0px 0px -10px",
+                        border: `1px solid ${tutorialPurple}`,
+                        borderRadius: 16,
+                        position: "absolute",
+                        backgroundColor: "background.default",
+                        boxShadow: 2,
+                      }}
+                    >
+                      <Typography align="center">{dataItem.topic}</Typography>
+                    </Box>
+                    <Tooltip
+                      title={dataItem.title}
+                      followCursor
+                      enterDelay={200}
+                    >
+                      <Typography gutterBottom variant="h5">
+                        {titleFormatter(dataItem.title)}
+                      </Typography>
+                    </Tooltip>
+                    <Tooltip
+                      title={dataItem.subTitle}
+                      followCursor
+                      enterDelay={200}
+                    >
+                      <Typography variant="body2" color="text.secondary">
+                        {subTitleShortener(dataItem.subTitle)}
+                      </Typography>
+                    </Tooltip>
                   </CardContent>
                 </CardActionArea>
               </Card>
