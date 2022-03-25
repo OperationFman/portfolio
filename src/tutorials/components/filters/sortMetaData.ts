@@ -3,9 +3,8 @@ import {
   orderByAlphabetical,
   orderByNewest,
   orderByOldest,
-  SortOptions
-} from "../../tutorialsDataService";
-import { TutorialMetaData } from "../../types";
+} from "../../filterAndOrdering";
+import { TutorialMetaData, SortOptions } from "../../types";
 
 export const sortMetaData = (
   startingData: TutorialMetaData[],

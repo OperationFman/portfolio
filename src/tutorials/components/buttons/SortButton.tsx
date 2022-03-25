@@ -17,7 +17,7 @@ import {
   closeMenu,
   keyboardNavigation,
 } from "../../../../utils/muiSpecificLogic";
-import { SortOptions } from "../../tutorialsDataService";
+import { SortOptions } from "../../types";
 
 type SortButtonProps = {
   setSortMetaDataBy: Dispatch<SetStateAction<SortOptions>>;

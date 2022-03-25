@@ -28,3 +28,14 @@ export type TutorialMetaData = {
   languages?: Languages[];
   tags?: Tags[];
 };
+
+export enum SortOptions {
+  Newest = "newest",
+  Oldest = "oldest",
+  Alphabetical = "alphabetical",
+}
+
+export type TutorialContentItem = {
+  metaData: TutorialMetaData;
+  pageContent: () => JSX.Element;
+};

@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import React, { useState } from "react";
-import { Navbar } from "../components/navigation/Navbar";
+import { Navbar } from "../src/global/navigation/Navbar";
 import { GlobalTheme } from "../themes/GlobalTheme";
 
 function MyApp({ Component, pageProps }: AppProps) {

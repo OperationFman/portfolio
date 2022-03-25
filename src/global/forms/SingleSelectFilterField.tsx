@@ -4,8 +4,8 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { Topic } from "../../src/tutorials/types";
-import { addTransparency } from "../../utils/muiSpecificLogic";
+import { Topic } from "../../tutorials/types";
+import { addTransparency } from "../../../utils/muiSpecificLogic";
 
 type TopicFilterProps = {
   filter: Topic | undefined;

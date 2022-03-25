@@ -1,4 +1,3 @@
-import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 import {
   Card,
   CardActionArea,
@@ -8,38 +7,39 @@ import {
   DialogTitle,
   Divider,
   Grid,
-  Link,
   Typography,
 } from "@mui/material";
-import Image from "next/image";
+import Box from "@mui/material/Box";
+import Tooltip from "@mui/material/Tooltip";
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { PageContainer } from "../../components/layout/PageContainer";
-import { MultiSelectFilter } from "../../components/misc/MultiSelectFilterField";
-import { SingleSelectFilterField } from "../../components/misc/SingleSelectFilterField";
+import { PageContainer } from "../../src/global/PageContainer";
+import { MultiSelectFilter } from "../../src/global/forms/MultiSelectFilterField";
+import { SingleSelectFilterField } from "../../src/global/forms/SingleSelectFilterField";
 import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
 import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
+import {
+  subTitleShortener,
+  titleShortener,
+} from "../../src/tutorials/components/cards/textFormatter";
 import { filterMetaData } from "../../src/tutorials/components/filters/filterMetaData";
 import { sortMetaData } from "../../src/tutorials/components/filters/sortMetaData";
+import { getTutorialMetaData } from "../../src/tutorials/tutorialDataService";
 import {
+  Languages,
   SortOptions,
-  tutorialMetaData,
-} from "../../src/tutorials/tutorialsDataService";
-import { Languages, Tags, Topic } from "../../src/tutorials/types";
-import { addTransparency, slideTransition } from "../../utils/muiSpecificLogic";
+  Tags,
+  Topic,
+} from "../../src/tutorials/types";
+import { slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
-import {
-  titleShortener,
-  subTitleShortener,
-} from "../../src/tutorials/components/cards/textFormatter";
-import Box from "@mui/material/Box";
-import Tooltip from "@mui/material/Tooltip";
 
 const Transition = slideTransition("right");
 
 const Tutorials: NextPage = () => {
   const { isMobile } = useDeviceDetect();
+  const tutorialMetaData = getTutorialMetaData();
 
   const availableTopics: Topic[] = Object.values(Topic);
   const availableLanguages: Languages[] = Object.values(Languages);

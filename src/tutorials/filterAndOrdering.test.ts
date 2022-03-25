@@ -7,7 +7,7 @@ import {
   orderByAlphabetical,
   orderByNewest,
   orderByOldest,
-} from "./tutorialsDataService";
+} from "./filterAndOrdering";
 
 describe("tutorialDataService", () => {
   const metaDataPreSorted = [

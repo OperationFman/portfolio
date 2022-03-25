@@ -8,7 +8,7 @@ import { IconButton, Tab, Tabs, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import useDeviceDetect from "../../utils/useDeviceDetect";
+import useDeviceDetect from "../../../utils/useDeviceDetect";
 import {
   container,
   darkModeIcon,

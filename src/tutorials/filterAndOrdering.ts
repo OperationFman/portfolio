@@ -1,20 +1,4 @@
-import { programmingMetaData } from "./metadata/programmingMetaData";
-import { agileMetaData } from "./metadata/agileMetaData";
-import { infrastructureMetaData } from "./metadata/infrastructureMetaData";
-import { Tags, Topic, TutorialMetaData } from "./types";
-import { Languages } from "./types";
-
-export enum SortOptions {
-  Newest = "newest",
-  Oldest = "oldest",
-  Alphabetical = "alphabetical",
-}
-
-export const tutorialMetaData: TutorialMetaData[] = [
-  ...programmingMetaData,
-  ...agileMetaData,
-  ...infrastructureMetaData,
-];
+import { Languages, Tags, Topic, TutorialMetaData } from "./types";
 
 export const orderByNewest = (
   metaData: TutorialMetaData[]
@@ -45,7 +29,7 @@ export const filterForTopic = (
   });
 };
 
-// Update so it returns only meta data that has ALL passed in languages
+// TODO: Update so it returns only meta data that has ALL passed in languages
 export const filterForLanguages = (
   metaData: TutorialMetaData[],
   languages: Languages[]

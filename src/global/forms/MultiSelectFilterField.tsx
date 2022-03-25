@@ -6,8 +6,8 @@ import MenuItem from "@mui/material/MenuItem";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import React, { Dispatch, SetStateAction } from "react";
-import { Tags, Languages } from "../../src/tutorials/types";
-import { addTransparency } from "../../utils/muiSpecificLogic";
+import { Tags, Languages } from "../../tutorials/types";
+import { addTransparency } from "../../../utils/muiSpecificLogic";
 
 type LanguagesFilter = {
   filter: Languages[];

@@ -3,7 +3,7 @@ import {
     filterForLanguages,
     filterForTags,
     filterForTopic
-} from "../../tutorialsDataService";
+} from "../../filterAndOrdering";
 import { Languages, Tags, Topic, TutorialMetaData } from "../../types";
 
 export const filterMetaData = (
