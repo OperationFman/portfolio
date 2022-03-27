@@ -12,8 +12,8 @@ import useDeviceDetect from "../../../utils/useDeviceDetect";
 import {
   container,
   darkModeIcon,
-  desktopHome,
-  mobileHome,
+  desktopHomeButton,
+  mobileHomeButton,
   onHover,
 } from "./NavbarStyles";
 
@@ -75,7 +75,7 @@ export const Navbar = (props: NavbarProps) => {
                 color={tab === 0 ? "primary" : "inherit"}
               />
             }
-            sx={mobileHome()}
+            sx={mobileHomeButton}
           />
         ) : (
           <Tab
@@ -86,7 +86,7 @@ export const Navbar = (props: NavbarProps) => {
                 color={tab === 0 ? "primary" : "inherit"}
               />
             }
-            sx={desktopHome()}
+            sx={desktopHomeButton}
           />
         )}
         <Tab
@@ -97,7 +97,7 @@ export const Navbar = (props: NavbarProps) => {
               color={tab === 1 ? "success" : "inherit"}
             />
           }
-          sx={onHover()}
+          sx={onHover}
         />
         <Tab
           label="TUTORIALS"
@@ -107,7 +107,7 @@ export const Navbar = (props: NavbarProps) => {
               color={tab === 2 ? "secondary" : "inherit"}
             />
           }
-          sx={onHover()}
+          sx={onHover}
         />
         <Tab
           label="PROJECTS"
@@ -117,8 +117,9 @@ export const Navbar = (props: NavbarProps) => {
               color={tab === 3 ? "error" : "inherit"}
             />
           }
-          sx={onHover()}
+          sx={onHover}
         />
+        {/* TODO: Set dark mode on local storage */}
         <IconButton
           onClick={() => setDarkMode(!darkMode)}
           disableRipple

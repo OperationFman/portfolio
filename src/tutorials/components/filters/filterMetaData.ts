@@ -3,13 +3,13 @@ import {
     filterForLanguages,
     filterForTags,
     filterForTopic
-} from "../../filterAndOrdering";
+} from "../../filterAndSort";
 import { Languages, Tags, Topic, TutorialMetaData } from "../../types";
 
 export const filterMetaData = (
   sortedMetaData: TutorialMetaData[],
   topicFilter: Topic | undefined,
-  filteredLanguages: Languages[],
+  languagesFilter: Languages[],
   tagsFilter: Tags[],
   setFilteredData: Dispatch<React.SetStateAction<TutorialMetaData[]>>
 ): void => {
@@ -19,8 +19,8 @@ export const filterMetaData = (
     filteredData = filterForTopic(filteredData, topicFilter);
   }
 
-  if (filteredLanguages.length) {
-    filteredData = filterForLanguages(filteredData, filteredLanguages);
+  if (languagesFilter.length) {
+    filteredData = filterForLanguages(filteredData, languagesFilter);
   }
 
   if (tagsFilter.length) {

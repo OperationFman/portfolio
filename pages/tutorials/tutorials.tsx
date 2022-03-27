@@ -1,37 +1,22 @@
-import {
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Dialog,
-  DialogTitle,
-  Divider,
-  Grid,
-  Typography,
-} from "@mui/material";
-import Box from "@mui/material/Box";
-import Tooltip from "@mui/material/Tooltip";
+import { Dialog, DialogTitle, Divider, Grid } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { PageContainer } from "../../src/global/PageContainer";
 import { MultiSelectFilter } from "../../src/global/forms/MultiSelectFilterField";
 import { SingleSelectFilterField } from "../../src/global/forms/SingleSelectFilterField";
+import { PageContainer } from "../../src/global/PageContainer";
 import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
 import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
-import {
-  subTitleShortener,
-  titleShortener,
-} from "../../src/tutorials/components/cards/textFormatter";
+import { TutorialCard } from "../../src/tutorials/components/cards/TutorialCard";
 import { filterMetaData } from "../../src/tutorials/components/filters/filterMetaData";
 import { sortMetaData } from "../../src/tutorials/components/filters/sortMetaData";
-import { getTutorialMetaData } from "../../src/tutorials/tutorialDataService";
 import {
-  Languages,
-  SortOptions,
-  Tags,
-  Topic,
-} from "../../src/tutorials/types";
+  availableLanguages,
+  availableTags,
+  availableTopics,
+  getTutorialMetaData,
+} from "../../src/tutorials/tutorialDataService";
+import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
 import { slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 
@@ -40,20 +25,17 @@ const Transition = slideTransition("right");
 const Tutorials: NextPage = () => {
   const { isMobile } = useDeviceDetect();
   const tutorialMetaData = getTutorialMetaData();
-
-  const availableTopics: Topic[] = Object.values(Topic);
-  const availableLanguages: Languages[] = Object.values(Languages);
-  const availableTags: Tags[] = Object.values(Tags);
   const tutorialPurple = "#ce93d8";
+  const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
   const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
   const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
 
   const [topicFilter, setTopicFilter] = useState<Topic | undefined>(undefined);
-  const [filteredLanguages, setFilteredLanguages] = useState([] as Languages[]);
+  const [languagesFilter, setFilteredLanguages] = useState([] as Languages[]);
   const [tagsFilter, setTagsFilter] = useState([] as Tags[]);
+
   const [filteredMetaData, setFilteredData] = useState(sortedMetaData);
-  const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
   useEffect(() => {
     sortMetaData(tutorialMetaData, sortMetaDataBy, setSortedMetaData);
@@ -63,18 +45,17 @@ const Tutorials: NextPage = () => {
     filterMetaData(
       sortedMetaData,
       topicFilter,
-      filteredLanguages,
+      languagesFilter,
       tagsFilter,
       setFilteredData
     );
   }, [
-    filteredLanguages,
+    languagesFilter,
     sortedMetaData,
     tagsFilter,
     topicFilter,
     sortMetaDataBy,
   ]);
-
   const handleCloseFilterMenu = () => {
     setShowFilterMenu(false);
   };
@@ -107,7 +88,7 @@ const Tutorials: NextPage = () => {
           />
           <MultiSelectFilter
             label={"Languages"}
-            filter={filteredLanguages}
+            filter={languagesFilter}
             setFilter={setFilteredLanguages}
             dropDownData={availableLanguages}
             highlightColor={tutorialPurple}
@@ -133,7 +114,7 @@ const Tutorials: NextPage = () => {
       </Head>
 
       <PageContainer>
-        <div style={{ display: "flex", margin: "10px 30px" }}>
+        <div style={{ display: "flex", margin: "10px 30px", gap: "15px" }}>
           <SortButton setSortMetaDataBy={setSortMetaDataBy} />
           <FilterButton setShowFilterMenu={setShowFilterMenu} />
         </div>
@@ -141,54 +122,7 @@ const Tutorials: NextPage = () => {
         <Grid container spacing={3} justifyContent="center">
           {filteredMetaData.map((dataItem) => (
             <Grid item key={dataItem.title}>
-              <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="180"
-                    alt={dataItem.title}
-                    image={dataItem.thumbnail}
-                  />
-                  <CardContent>
-                    <Box
-                      sx={{
-                        height: "25px",
-                        margin: "-35px 0px 0px 0px",
-                        padding: "0px 15px",
-                        border: `2px solid ${tutorialPurple}`,
-                        borderRadius: 6,
-                        position: "absolute",
-                        backgroundColor: "background.paper",
-                        boxShadow: 2,
-                      }}
-                    >
-                      <Typography
-                        variant="body2"
-                        align="right"
-                        sx={{ fontWeight: 200 }}
-                      >
-                        {dataItem.topic}
-                      </Typography>
-                    </Box>
-                    <Typography gutterBottom variant="h5">
-                      {titleShortener(dataItem.title)}
-                    </Typography>
-                    <Tooltip
-                      title={dataItem.subTitle}
-                      followCursor
-                      enterDelay={200}
-                    >
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        sx={{ paddingLeft: "5px", fontWeight: 200 }}
-                      >
-                        {subTitleShortener(dataItem.subTitle)}
-                      </Typography>
-                    </Tooltip>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+              <TutorialCard cardData={dataItem} accentColor={tutorialPurple} />
             </Grid>
           ))}
         </Grid>

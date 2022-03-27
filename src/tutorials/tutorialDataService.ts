@@ -1,13 +1,21 @@
-import { TutorialContentItem, TutorialMetaData } from "./types";
-
 import { DockerizeRepo } from "./database/DockerizeRepo";
-import { TSNextJSSetup } from "./database/TSNextJSSetup";
-import { TryCatchType } from "./database/TryCatchType";
 import { ProjectWall } from "./database/ProjectWall.tsx";
 import { TerraformDockerAWS } from "./database/TerraformDockerAWS";
+import { TryCatchType } from "./database/TryCatchType";
+import { TSNextJSSetup } from "./database/TSNextJSSetup";
+import {
+  Languages,
+  Tags,
+  Topic,
+  TutorialContentItem,
+  TutorialMetaData
+} from "./types";
 
+export const availableTopics: Topic[] = Object.values(Topic);
+export const availableLanguages: Languages[] = Object.values(Languages);
+export const availableTags: Tags[] = Object.values(Tags);
 // TODO: Iterate over the files and do this automatically
-export const TutorialContent: TutorialContentItem[] = [
+export const tutorialContent: TutorialContentItem[] = [
   DockerizeRepo,
   TSNextJSSetup,
   TryCatchType,
@@ -16,5 +24,5 @@ export const TutorialContent: TutorialContentItem[] = [
 ];
 
 export const getTutorialMetaData = (): TutorialMetaData[] => {
-  return TutorialContent.map((item) => item.metaData);
+  return tutorialContent.map((item) => item.metaData);
 };

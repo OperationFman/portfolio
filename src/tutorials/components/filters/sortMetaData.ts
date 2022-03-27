@@ -1,9 +1,9 @@
 import { Dispatch } from "react";
 import {
-  orderByAlphabetical,
-  orderByNewest,
-  orderByOldest,
-} from "../../filterAndOrdering";
+  sortByAlphabetical,
+  sortByNewest,
+  sortByOldest,
+} from "../../filterAndSort";
 import { TutorialMetaData, SortOptions } from "../../types";
 
 export const sortMetaData = (
@@ -13,13 +13,13 @@ export const sortMetaData = (
 ): void => {
   switch (sortBy) {
     case SortOptions.Newest:
-      setSortedMetaData(orderByNewest(startingData));
+      setSortedMetaData(sortByNewest(startingData));
       break;
     case SortOptions.Oldest:
-      setSortedMetaData(orderByOldest(startingData));
+      setSortedMetaData(sortByOldest(startingData));
       break;
     case SortOptions.Alphabetical:
-      setSortedMetaData(orderByAlphabetical(startingData));
+      setSortedMetaData(sortByAlphabetical(startingData));
       break;
   }
 };

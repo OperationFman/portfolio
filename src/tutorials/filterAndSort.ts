@@ -1,18 +1,18 @@
 import { Languages, Tags, Topic, TutorialMetaData } from "./types";
 
-export const orderByNewest = (
+export const sortByNewest = (
   metaData: TutorialMetaData[]
 ): TutorialMetaData[] => {
   return metaData.sort((a, b) => b.created - a.created);
 };
 
-export const orderByOldest = (
+export const sortByOldest = (
   metaData: TutorialMetaData[]
 ): TutorialMetaData[] => {
   return metaData.sort((a, b) => a.created - b.created);
 };
 
-export const orderByAlphabetical = (
+export const sortByAlphabetical = (
   metaData: TutorialMetaData[]
 ): TutorialMetaData[] => {
   return metaData.sort((a, b) =>

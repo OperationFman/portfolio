@@ -5,9 +5,35 @@ export const navBarGlobal = {
     styleOverrides: {
       root: {
         color: "#fff",
+        transition: "linear 200ms",
       },
     },
   },
+};
+
+export const onHover: SxProps<Theme> = {
+  "&:hover": {
+    backgroundColor: "#2E2E2E",
+    transition: "linear 400ms",
+  },
+};
+
+export const mobileHomeButton: SxProps<Theme> = {
+  minWidth: "30px",
+  paddingLeft: "20px",
+  marginRight: "10px",
+  marginLeft: "10px",
+  ...onHover,
+};
+
+export const desktopHomeButton: SxProps<Theme> = {
+  display: "flex",
+  alignSelf: "center",
+  justifyContent: "left",
+  position: "absolute",
+  left: 0,
+  paddingTop: "15px",
+  ...onHover,
 };
 
 export const container = (isMobile: boolean): SxProps<Theme> => {
@@ -18,43 +44,13 @@ export const container = (isMobile: boolean): SxProps<Theme> => {
   };
 };
 
-export const mobileHome = (): SxProps<Theme> => {
-  return {
-    minWidth: "30px",
-    paddingLeft: "20px",
-    marginRight: "10px",
-    marginLeft: "10px",
-  };
-};
-
-export const desktopHome = (): SxProps<Theme> => {
-  return {
-    display: "flex",
-    alignSelf: "center",
-    justifyContent: "left",
-    position: "fixed",
-    left: 0,
-    top: "5px",
-  };
-};
-
 export const darkModeIcon = (isMobile: boolean): SxProps<Theme> => {
   return {
     display: "flex",
     justifyContent: "right",
     alignSelf: "center",
-    position: "fixed",
+    position: "absolute",
     right: isMobile ? "10px" : "20px",
-    "&:hover": {
-      backgroundColor: "#242424",
-    },
-  };
-};
-
-export const onHover = (): SxProps<Theme> => {
-  return {
-    "&:hover": {
-      backgroundColor: "#242424",
-    },
+    ...onHover,
   };
 };
