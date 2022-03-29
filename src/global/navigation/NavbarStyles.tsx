@@ -49,7 +49,8 @@ export const darkModeIcon = (isMobile: boolean): SxProps<Theme> => {
     display: "flex",
     justifyContent: "right",
     alignSelf: "center",
-    position: "absolute",
+    // TODO: Find root cause for absolute forcing icon over container
+    position: isMobile ? "fixed" : "absolute",
     right: isMobile ? "10px" : "20px",
     ...onHover,
   };
