@@ -25,6 +25,8 @@ export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
       onClick={() => {
         router.push(`tutorials/${cardData.link}`);
       }}
+      disableRipple
+      disableFocusRipple
     >
       <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
         <CardActionArea>
