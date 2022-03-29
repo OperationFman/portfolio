@@ -121,8 +121,10 @@ export const Navbar = (props: NavbarProps) => {
         />
         {/* TODO: Set dark mode on local storage */}
         <IconButton
-          onClick={() => setDarkMode(!darkMode)}
-          disableRipple
+          onClick={() => {
+            localStorage.setItem("dark-mode", `${!darkMode}`);
+            setDarkMode(!darkMode);
+          }}
           sx={darkModeIcon(isMobile)}
         >
           <Tooltip TransitionComponent={Zoom} title="Dark Mode">
