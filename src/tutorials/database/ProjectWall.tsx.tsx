@@ -1,8 +1,14 @@
-import { Languages, Tags, Topic, TutorialContentItem, TutorialMetaData } from "../types";
+import {
+  Languages,
+  Tags,
+  Topic,
+  TutorialContentItem,
+  TutorialMetaData,
+} from "../types";
 
 const metaData: TutorialMetaData = {
   title: "Project Wall: Single Source of Truth",
-  link: `/agile/project-wall-single-source-of-truth`,
+  link: `project-wall-single-source-of-truth`,
   created: 1640241832,
   thumbnail: "/tutorials/project-wall.jpeg",
   subTitle:

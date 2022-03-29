@@ -1,8 +1,14 @@
-import { Languages, Tags, Topic, TutorialContentItem, TutorialMetaData } from "../types";
+import {
+  Languages,
+  Tags,
+  Topic,
+  TutorialContentItem,
+  TutorialMetaData,
+} from "../types";
 
 const metaData: TutorialMetaData = {
   title: "Deploy to AWS EC2 using Terraform and Docker ",
-  link: `/deploy-to-aws-ec2-using-terraform-and-docker`,
+  link: `deploy-to-aws-ec2-using-terraform-and-docker`,
   created: 1639982632,
   thumbnail: "/tutorials/docker-aws-terraform.jpeg",
   subTitle:

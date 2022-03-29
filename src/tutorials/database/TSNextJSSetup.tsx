@@ -8,7 +8,7 @@ import {
 
 const metaData: TutorialMetaData = {
   title: "Quickly Setup NextJs ES6 with Typescript and more stuff",
-  link: `/programming/quickly-setup-next-js-with-typescript`,
+  link: `quickly-setup-next-js-with-typescript`,
   created: 1642762915,
   thumbnail: "/tutorials/test.png",
   subTitle:

@@ -1,8 +1,14 @@
-import { Languages, Tags, Topic, TutorialContentItem, TutorialMetaData } from "../types";
+import {
+  Languages,
+  Tags,
+  Topic,
+  TutorialContentItem,
+  TutorialMetaData,
+} from "../types";
 
 const metaData: TutorialMetaData = {
   title: "Short Title (<30 Characters",
-  link: `/desired-link`,
+  link: "/desired-link",
   created: 1639982631,
   thumbnail: "/tutorials/test.png",
   subTitle: "Short explaining of content, or summary or sales pitch",

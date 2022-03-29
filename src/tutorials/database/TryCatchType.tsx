@@ -8,7 +8,7 @@ import {
 
 const metaData: TutorialMetaData = {
   title: "Try & Catch by a Type",
-  link: "/programming/try-catch-by-type",
+  link: "try-catch-by-type",
   created: 1640257315,
   thumbnail: "/tutorials/try-catch.png",
   subTitle:

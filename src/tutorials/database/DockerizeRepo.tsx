@@ -1,9 +1,15 @@
 import { Button } from "@mui/material";
-import { Languages, Tags, Topic, TutorialContentItem, TutorialMetaData } from "../types";
+import {
+  Languages,
+  Tags,
+  Topic,
+  TutorialContentItem,
+  TutorialMetaData,
+} from "../types";
 
 const metaData: TutorialMetaData = {
   title: "How To Dockerize Your Repo",
-  link: `/dockerize-your-repo`,
+  link: `dockerize-your-repo`,
   created: 1639982631,
   thumbnail: "/tutorials/test.png",
   subTitle:
