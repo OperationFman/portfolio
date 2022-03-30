@@ -8,14 +8,15 @@ import {
   Tags,
   Topic,
   TutorialContentItem,
-  TutorialMetaData
+  TutorialMetaData,
 } from "./types";
 
 export const availableTopics: Topic[] = Object.values(Topic);
 export const availableLanguages: Languages[] = Object.values(Languages);
 export const availableTags: Tags[] = Object.values(Tags);
+
 // TODO: Iterate over the files and do this automatically
-export const tutorialContent: TutorialContentItem[] = [
+const rawTutorialContent: TutorialContentItem[] = [
   DockerizeRepo,
   TSNextJSSetup,
   TryCatchType,
@@ -23,6 +24,19 @@ export const tutorialContent: TutorialContentItem[] = [
   TerraformDockerAWS,
 ];
 
-export const getTutorialMetaData = (): TutorialMetaData[] => {
-  return tutorialContent.map((item) => item.metaData);
+export const getTutorialMetaData = (
+  contentItems: TutorialContentItem[] = rawTutorialContent
+): TutorialMetaData[] => {
+  return contentItems.map((item) => item.metaData);
+};
+
+export const getTutorialContentByLink = (
+  link: string,
+  contentItems: TutorialContentItem[] = rawTutorialContent
+): TutorialContentItem | undefined => {
+  const tutorialMetaDataAndPage = contentItems.find((item) => {
+    return item.metaData.link === link;
+  });
+
+  return tutorialMetaDataAndPage;
 };

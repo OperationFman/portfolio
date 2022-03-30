@@ -1,4 +1,4 @@
-import { testMetaData } from "./testhelpers/testTutorialMetaData";
+import { testMetaData } from "./testhelpers/tutorialMetaData";
 import {} from "react";
 import { Languages, Tags, Topic } from "./types";
 import {

@@ -1,5 +1,5 @@
 import { Languages, Tags, Topic } from "../../types";
-import { testMetaData } from "../../testhelpers/testTutorialMetaData";
+import { testMetaData } from "../../testhelpers/tutorialMetaData";
 import { filterMetaData } from "./filterMetaData";
 
 describe("sortMetaData", () => {

@@ -12,8 +12,7 @@ const metaData: TutorialMetaData = {
   link: `dockerize-your-repo`,
   created: 1639982631,
   thumbnail: "/tutorials/test.png",
-  subTitle:
-    "Understand and build a container to run your app anywhere with one command",
+  subTitle: "Understand and build containers that run your app anywhere",
   topic: Topic.Infrastructure,
   languages: [Languages.Docker],
   tags: [Tags.StepByStep],
