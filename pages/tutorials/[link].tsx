@@ -18,7 +18,7 @@ const PageContent = () => {
 
   if (!pageData) {
     //TODO: Create error page
-    router.push("/");
+    router.push("error");
     return;
   }
 
