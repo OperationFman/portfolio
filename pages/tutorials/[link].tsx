@@ -16,9 +16,9 @@ const PageContent = () => {
   const router = useRouter();
   const pageData = validateAndFetchPageData(router.query.link);
 
-  if (typeof window !== "undefined" && !pageData) {
+  if (!pageData) {
     //TODO: Create error page
-    router.push("error");
+    router.replace("/error");
     return;
   }
 
