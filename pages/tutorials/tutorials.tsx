@@ -1,8 +1,6 @@
 import { Dialog, DialogTitle, Divider, Grid } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { MultiSelectFilter } from "../../src/global/forms/MultiSelectFilterField";
 import { SingleSelectFilterField } from "../../src/global/forms/SingleSelectFilterField";
@@ -16,7 +14,7 @@ import {
   availableLanguages,
   availableTags,
   availableTopics,
-  getTutorialMetaData,
+  getTutorialMetaData
 } from "../../src/tutorials/tutorialDataService";
 import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
 import { slideTransition } from "../../utils/muiSpecificLogic";

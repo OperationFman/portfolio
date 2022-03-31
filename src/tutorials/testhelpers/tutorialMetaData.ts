@@ -4,6 +4,7 @@ export const testMetaData = [
   {
     title: "Quickly Setup NextJs ES6 with Typescript",
     link: `/programming/quickly-setup-next-js-with-typescript`,
+    notionPage: "c4ca92237cc4434cbc30119b104e9e87",
     created: 1642762915,
     thumbnail: "TBD",
     subTitle:
@@ -15,6 +16,7 @@ export const testMetaData = [
   {
     title: "Deploy to AWS EC2 using Terraform and Docker ",
     link: `/deploy-to-aws-ec2-using-terraform-and-docker`,
+    notionPage: "c4ca92237cc4434cbc30119b104e9e87",
     created: 1639982632,
     thumbnail: "TBD",
     subTitle:
@@ -26,6 +28,7 @@ export const testMetaData = [
   {
     title: "Try & Catch by a Type",
     link: "/programming/try-catch-by-type",
+    notionPage: "c4ca92237cc4434cbc30119b104e9e87",
     created: 1640257315,
     thumbnail: "TBD",
     subTitle:

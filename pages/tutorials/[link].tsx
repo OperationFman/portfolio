@@ -1,38 +1,65 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { getTutorialContentByLink } from "../../src/tutorials/tutorialDataService";
-import { TutorialContentItem } from "../../src/tutorials/types";
-import { ErrorPage } from "../../utils/ErrorContent";
+import { InferGetServerSidePropsType } from "next";
+import { NotionAPI } from "notion-client";
+import { ExtendedRecordMap } from "notion-types";
+import { NotionRenderer } from "react-notion-x";
+import { getTutorialMetaDataByLink } from "../../src/tutorials/tutorialDataService";
+import { TutorialMetaData } from "../../src/tutorials/types";
+import { ErrorContent } from "../../utils/ErrorContent";
 
-const validateAndFetchPageData = (
+type ServerSideContext = {
+  params: { link: string | string[] | undefined };
+};
+
+const validateLinkAndFetchMetaData = (
   link: string | string[] | undefined
-): TutorialContentItem | undefined => {
+): TutorialMetaData | undefined => {
   if (typeof link !== "string") {
     return undefined;
   }
-  return getTutorialContentByLink(link);
+  return getTutorialMetaDataByLink(link);
 };
 
-const PageContent = () => {
-  const router = useRouter();
-  let pageData = validateAndFetchPageData(router.query.link);
-
-  if (!pageData) {
-    return <ErrorPage />;
+const PageContent = ({
+  notionPage,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  if (!notionPage) {
+    return <ErrorContent />;
   }
 
   return (
-    <>
-      <Head>
-        <title>{pageData.metaData.title}</title>
-        <meta
-          name={pageData.metaData.subTitle}
-          content={pageData.metaData.topic}
-        />
-      </Head>
-      <h1>{pageData.pageContent()}</h1>
-    </>
+    <NotionRenderer recordMap={notionPage} fullPage={true} darkMode={true} />
   );
+};
+
+export const getServerSideProps = async (context: ServerSideContext) => {
+  const notion = new NotionAPI();
+  const metaData = validateLinkAndFetchMetaData(context.params.link);
+
+  if (!metaData) {
+    return {
+      props: {
+        notionPage: false,
+      },
+    };
+  }
+  // TODO: Combine into validate and fetch to remove second 'false' response
+  const notionPage: ExtendedRecordMap = await notion.getPage(
+    metaData.notionPage
+  );
+
+  if (!notionPage) {
+    return {
+      props: {
+        notionPage: false,
+      },
+    };
+  }
+
+  return {
+    props: {
+      notionPage,
+    },
+  };
 };
 
 export default PageContent;

@@ -1,42 +1,22 @@
-import { DockerizeRepo } from "./database/DockerizeRepo";
-import { ProjectWall } from "./database/ProjectWall.tsx";
-import { TerraformDockerAWS } from "./database/TerraformDockerAWS";
-import { TryCatchType } from "./database/TryCatchType";
-import { TSNextJSSetup } from "./database/TSNextJSSetup";
+import { tutorialMetaData } from "./TutorialMetaData";
 import {
   Languages,
   Tags,
-  Topic,
-  TutorialContentItem,
-  TutorialMetaData,
+  Topic, TutorialMetaData
 } from "./types";
 
 export const availableTopics: Topic[] = Object.values(Topic);
 export const availableLanguages: Languages[] = Object.values(Languages);
 export const availableTags: Tags[] = Object.values(Tags);
 
-// TODO: Iterate over the files and do this automatically
-const rawTutorialContent: TutorialContentItem[] = [
-  DockerizeRepo,
-  TSNextJSSetup,
-  TryCatchType,
-  ProjectWall,
-  TerraformDockerAWS,
-];
-
-export const getTutorialMetaData = (
-  contentItems: TutorialContentItem[] = rawTutorialContent
-): TutorialMetaData[] => {
-  return contentItems.map((item) => item.metaData);
+export const getTutorialMetaData = (): TutorialMetaData[] => {
+  return tutorialMetaData;
 };
 
-export const getTutorialContentByLink = (
-  link: string,
-  contentItems: TutorialContentItem[] = rawTutorialContent
-): TutorialContentItem | undefined => {
-  const tutorialMetaDataAndPage = contentItems.find((item) => {
-    return item.metaData.link === link;
+export const getTutorialMetaDataByLink = (
+  link: string
+): TutorialMetaData | undefined => {
+  return tutorialMetaData.find((item) => {
+    return item.link === link;
   });
-
-  return tutorialMetaDataAndPage;
 };

@@ -21,6 +21,7 @@ export enum Tags {
 export type TutorialMetaData = {
   title: string;
   link: string;
+  notionPage: string;
   created: number;
   thumbnail: string;
   subTitle: string;
@@ -37,5 +38,5 @@ export enum SortOptions {
 
 export type TutorialContentItem = {
   metaData: TutorialMetaData;
-  pageContent: () => JSX.Element;
+  pageContent: () => Promise<JSX.Element>;
 };

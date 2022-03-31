@@ -1,5 +1,5 @@
-import { SortOptions } from "../../types";
 import { testMetaData } from "../../testhelpers/tutorialMetaData";
+import { SortOptions } from "../../types";
 import { sortMetaData } from "./sortMetaData";
 
 describe("sortMetaData", () => {
@@ -13,6 +13,7 @@ describe("sortMetaData", () => {
       created: 1642762915,
       languages: ["Typescript"],
       link: "/programming/quickly-setup-next-js-with-typescript",
+      notionPage: "c4ca92237cc4434cbc30119b104e9e87",
       subTitle:
         "Get up-and-running with a cleaned up but ready to go repo using nextJs. Includes setting up TS properly, clearing boilerplate, structuring components, routing, setting up an API and SEO consideration",
       tags: ["How To"],
@@ -24,6 +25,7 @@ describe("sortMetaData", () => {
       created: 1640257315,
       languages: ["Typescript"],
       link: "/programming/try-catch-by-type",
+      notionPage: "c4ca92237cc4434cbc30119b104e9e87",
       subTitle:
         "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
       tags: ["Code Block"],
@@ -35,6 +37,7 @@ describe("sortMetaData", () => {
       created: 1639982632,
       languages: ["Docker", "Terraform"],
       link: "/deploy-to-aws-ec2-using-terraform-and-docker",
+      notionPage: "c4ca92237cc4434cbc30119b104e9e87",
       subTitle:
         "Step-by-step instructions to dockerize your repo and use terraform to spin up AWS and host your project from scratch",
       tags: ["Essay"],
@@ -48,6 +51,7 @@ describe("sortMetaData", () => {
       created: 1639982632,
       languages: ["Docker", "Terraform"],
       link: "/deploy-to-aws-ec2-using-terraform-and-docker",
+      notionPage: "c4ca92237cc4434cbc30119b104e9e87",
       subTitle:
         "Step-by-step instructions to dockerize your repo and use terraform to spin up AWS and host your project from scratch",
       tags: ["Essay"],
@@ -59,6 +63,7 @@ describe("sortMetaData", () => {
       created: 1640257315,
       languages: ["Typescript"],
       link: "/programming/try-catch-by-type",
+      notionPage: "c4ca92237cc4434cbc30119b104e9e87",
       subTitle:
         "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
       tags: ["Code Block"],
@@ -70,6 +75,7 @@ describe("sortMetaData", () => {
       created: 1642762915,
       languages: ["Typescript"],
       link: "/programming/quickly-setup-next-js-with-typescript",
+      notionPage: "c4ca92237cc4434cbc30119b104e9e87",
       subTitle:
         "Get up-and-running with a cleaned up but ready to go repo using nextJs. Includes setting up TS properly, clearing boilerplate, structuring components, routing, setting up an API and SEO consideration",
       tags: ["How To"],
@@ -83,6 +89,7 @@ describe("sortMetaData", () => {
       created: 1639982632,
       languages: ["Docker", "Terraform"],
       link: "/deploy-to-aws-ec2-using-terraform-and-docker",
+      notionPage: "c4ca92237cc4434cbc30119b104e9e87",
       subTitle:
         "Step-by-step instructions to dockerize your repo and use terraform to spin up AWS and host your project from scratch",
       tags: ["Essay"],
@@ -94,6 +101,7 @@ describe("sortMetaData", () => {
       created: 1642762915,
       languages: ["Typescript"],
       link: "/programming/quickly-setup-next-js-with-typescript",
+      notionPage: "c4ca92237cc4434cbc30119b104e9e87",
       subTitle:
         "Get up-and-running with a cleaned up but ready to go repo using nextJs. Includes setting up TS properly, clearing boilerplate, structuring components, routing, setting up an API and SEO consideration",
       tags: ["How To"],
@@ -105,6 +113,7 @@ describe("sortMetaData", () => {
       created: 1640257315,
       languages: ["Typescript"],
       link: "/programming/try-catch-by-type",
+      notionPage: "c4ca92237cc4434cbc30119b104e9e87",
       subTitle:
         "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
       tags: ["Code Block"],

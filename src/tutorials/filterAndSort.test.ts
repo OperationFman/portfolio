@@ -1,14 +1,14 @@
-import { testMetaData } from "./testhelpers/tutorialMetaData";
-import {} from "react";
-import { Languages, Tags, Topic } from "./types";
+import { } from "react";
 import {
   filterForLanguages,
   filterForTags,
   filterForTopic,
   sortByAlphabetical,
   sortByNewest,
-  sortByOldest,
+  sortByOldest
 } from "./filterAndSort";
+import { testMetaData } from "./testhelpers/tutorialMetaData";
+import { Languages, Tags, Topic } from "./types";
 
 describe("filterAndSort", () => {
   const metaDataPreSorted = testMetaData;
@@ -18,6 +18,7 @@ describe("filterAndSort", () => {
         {
           title: "Quickly Setup NextJs ES6 with Typescript",
           link: `/programming/quickly-setup-next-js-with-typescript`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1642762915,
           thumbnail: "TBD",
           subTitle:
@@ -29,6 +30,7 @@ describe("filterAndSort", () => {
         {
           title: "Try & Catch by a Type",
           link: "/programming/try-catch-by-type",
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1640257315,
           thumbnail: "TBD",
           subTitle:
@@ -40,6 +42,7 @@ describe("filterAndSort", () => {
         {
           title: "Deploy to AWS EC2 using Terraform and Docker ",
           link: `/deploy-to-aws-ec2-using-terraform-and-docker`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1639982632,
           thumbnail: "TBD",
           subTitle:
@@ -62,6 +65,7 @@ describe("filterAndSort", () => {
         {
           title: "Deploy to AWS EC2 using Terraform and Docker ",
           link: `/deploy-to-aws-ec2-using-terraform-and-docker`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1639982632,
           thumbnail: "TBD",
           subTitle:
@@ -73,6 +77,7 @@ describe("filterAndSort", () => {
         {
           title: "Try & Catch by a Type",
           link: "/programming/try-catch-by-type",
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1640257315,
           thumbnail: "TBD",
           subTitle:
@@ -84,6 +89,7 @@ describe("filterAndSort", () => {
         {
           title: "Quickly Setup NextJs ES6 with Typescript",
           link: `/programming/quickly-setup-next-js-with-typescript`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1642762915,
           thumbnail: "TBD",
           subTitle:
@@ -106,6 +112,7 @@ describe("filterAndSort", () => {
         {
           title: "Deploy to AWS EC2 using Terraform and Docker ",
           link: `/deploy-to-aws-ec2-using-terraform-and-docker`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1639982632,
           thumbnail: "TBD",
           subTitle:
@@ -117,6 +124,7 @@ describe("filterAndSort", () => {
         {
           title: "Quickly Setup NextJs ES6 with Typescript",
           link: `/programming/quickly-setup-next-js-with-typescript`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1642762915,
           thumbnail: "TBD",
           subTitle:
@@ -128,6 +136,7 @@ describe("filterAndSort", () => {
         {
           title: "Try & Catch by a Type",
           link: "/programming/try-catch-by-type",
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1640257315,
           thumbnail: "TBD",
           subTitle:
@@ -150,6 +159,7 @@ describe("filterAndSort", () => {
         {
           title: "Quickly Setup NextJs ES6 with Typescript",
           link: `/programming/quickly-setup-next-js-with-typescript`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1642762915,
           thumbnail: "TBD",
           subTitle:
@@ -161,6 +171,7 @@ describe("filterAndSort", () => {
         {
           title: "Try & Catch by a Type",
           link: "/programming/try-catch-by-type",
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1640257315,
           thumbnail: "TBD",
           subTitle:
@@ -183,6 +194,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -193,6 +205,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -203,6 +216,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -213,6 +227,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -223,6 +238,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -236,6 +252,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -246,6 +263,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -278,6 +296,7 @@ describe("filterAndSort", () => {
         {
           title: "Quickly Setup NextJs ES6 with Typescript",
           link: `/programming/quickly-setup-next-js-with-typescript`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1642762915,
           thumbnail: "TBD",
           subTitle:
@@ -298,6 +317,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -308,6 +328,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -318,6 +339,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -328,6 +350,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -338,6 +361,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -351,6 +375,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -361,6 +386,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -371,6 +397,7 @@ describe("filterAndSort", () => {
         {
           title: "title",
           link: `link`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 123,
           thumbnail: "TBD",
           subTitle: "subtitle",
@@ -401,6 +428,7 @@ describe("filterAndSort", () => {
         {
           title: "Deploy to AWS EC2 using Terraform and Docker ",
           link: `/deploy-to-aws-ec2-using-terraform-and-docker`,
+          notionPage: "c4ca92237cc4434cbc30119b104e9e87",
           created: 1639982632,
           thumbnail: "TBD",
           subTitle:
