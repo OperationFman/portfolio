@@ -12,7 +12,6 @@ export const PageContainer = (props: PageContainerProps) => {
   const { isMobile } = useDeviceDetect();
 
   const styling = {
-    // border: "2px solid blue",
     marginTop: isMobile ? "20px" : "50px",
   };
 
