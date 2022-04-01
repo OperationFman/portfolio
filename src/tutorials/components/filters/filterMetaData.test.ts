@@ -30,7 +30,7 @@ describe("sortMetaData", () => {
         notionPage: "c4ca92237cc4434cbc30119b104e9e87",
         subTitle:
           "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
-        tags: ["Code Block"],
+        tags: ["Snippet"],
         thumbnail: "TBD",
         title: "Try & Catch by a Type",
         topic: "Programming",
@@ -56,7 +56,7 @@ describe("sortMetaData", () => {
         notionPage: "c4ca92237cc4434cbc30119b104e9e87",
         subTitle:
           "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
-        tags: ["Code Block"],
+        tags: ["Snippet"],
         thumbnail: "TBD",
         title: "Try & Catch by a Type",
         topic: "Programming",
@@ -82,7 +82,7 @@ describe("sortMetaData", () => {
         notionPage: "c4ca92237cc4434cbc30119b104e9e87",
         subTitle:
           "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
-        tags: ["Code Block"],
+        tags: ["Snippet"],
         thumbnail: "TBD",
         title: "Try & Catch by a Type",
         topic: "Programming",
@@ -96,7 +96,7 @@ describe("sortMetaData", () => {
         notionPage: "c4ca92237cc4434cbc30119b104e9e87",
         subTitle:
           "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
-        tags: ["Code Block"],
+        tags: ["Snippet"],
         thumbnail: "TBD",
         title: "Try & Catch by a Type",
         topic: "Programming",
@@ -122,7 +122,7 @@ describe("sortMetaData", () => {
         notionPage: "c4ca92237cc4434cbc30119b104e9e87",
         subTitle:
           "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
-        tags: ["Code Block"],
+        tags: ["Snippet"],
         thumbnail: "TBD",
         title: "Try & Catch by a Type",
         topic: "Programming",
@@ -148,7 +148,7 @@ describe("sortMetaData", () => {
         notionPage: "c4ca92237cc4434cbc30119b104e9e87",
         subTitle:
           "Simple technique ff you ever need to handle a thrown error differently because it has a type. Use case: It might be an error you'd like the user to see.",
-        tags: ["Code Block"],
+        tags: ["Snippet"],
         thumbnail: "TBD",
         title: "Try & Catch by a Type",
         topic: "Programming",
