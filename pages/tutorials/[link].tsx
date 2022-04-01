@@ -1,16 +1,17 @@
+import { Container } from "@mui/material";
 import { InferGetServerSidePropsType } from "next";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import { NotionAPI } from "notion-client";
 import { ExtendedRecordMap } from "notion-types";
 import { NotionRenderer } from "react-notion-x";
 import { getTutorialMetaDataByLink } from "../../src/tutorials/tutorialDataService";
 import { TutorialMetaData } from "../../src/tutorials/types";
 import { ErrorContent } from "../../utils/ErrorContent";
-import { isClientSide } from "../../utils/isClientSide";
-import { Code } from "react-notion-x/build/third-party/code";
-import { Collection } from "react-notion-x/build/third-party/collection";
-import { Container } from "@mui/material";
-import useDeviceDetect from "../../utils/useDeviceDetect";
+
+const Code = dynamic<any>(() =>
+  import("react-notion-x/build/third-party/code").then((m) => m.Code)
+);
 
 type ServerSideContext = {
   params: { link: string | string[] | undefined };
@@ -18,62 +19,62 @@ type ServerSideContext = {
 
 const PageContent = ({
   notionPage,
+  metaData,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  const { isMobile } = useDeviceDetect();
-
-  // Todo: Create hook 'isDarkMode' as below is always dark when the page is first loaded
-  const darkMode = isClientSide()
-    ? localStorage.getItem("dark-mode") === "true"
-    : true;
+  const { title, subTitle, topic } = metaData as TutorialMetaData;
 
   if (!notionPage) {
     return <ErrorContent />;
   }
 
   return (
-    <Container maxWidth={"md"} sx={{ overflow: "hidden" }}>
-      <div
-        style={{
-          marginLeft: "auto",
-          marginRight: "auto",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          transform: "translateY(-325px)",
-        }}
-      >
-        <NotionRenderer
-          recordMap={notionPage}
-          fullPage={true}
-          darkMode={darkMode}
-          previewImages={true}
-          components={{ Code, Collection }}
-        />
-      </div>
-    </Container>
-  );
-};
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name={subTitle} content={topic} />
+      </Head>
 
-const validateLinkAndFetchMetaData = (
-  link: string | string[] | undefined
-): TutorialMetaData | undefined => {
-  if (typeof link !== "string") {
-    return undefined;
-  }
-  return getTutorialMetaDataByLink(link);
+      <Container maxWidth={"md"} sx={{ overflow: "hidden" }}>
+        <div
+          style={{
+            marginLeft: "auto",
+            marginRight: "auto",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            transform: "translateY(-100px)",
+          }}
+        >
+          <NotionRenderer
+            recordMap={notionPage}
+            fullPage={true}
+            darkMode={true}
+            components={{ Code }}
+          />
+        </div>
+      </Container>
+    </>
+  );
 };
 
 export const getServerSideProps = async (context: ServerSideContext) => {
   const notion = new NotionAPI();
-  const metaData = validateLinkAndFetchMetaData(context.params.link);
-  const inValid = {
+  const invalid = {
     props: {
-      notionPage: false,
+      notionPage: undefined,
     },
   };
 
+  const { link } = context.params;
+
+  if (typeof link !== "string") {
+    return invalid;
+  }
+
+  const metaData = getTutorialMetaDataByLink(link);
+
   if (!metaData) {
-    return inValid;
+    return invalid;
   }
 
   const notionPage: ExtendedRecordMap = await notion.getPage(
@@ -81,12 +82,13 @@ export const getServerSideProps = async (context: ServerSideContext) => {
   );
 
   if (!notionPage) {
-    return inValid;
+    return invalid;
   }
 
   return {
     props: {
       notionPage,
+      metaData,
     },
   };
 };

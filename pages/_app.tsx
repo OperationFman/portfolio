@@ -1,7 +1,6 @@
-import "katex/dist/katex.min.css";
+
 import type { AppProps } from "next/app";
 import "prismjs/themes/prism-tomorrow.css";
-import "rc-dropdown/assets/index.css";
 import React, { useEffect, useState } from "react";
 import "react-notion-x/src/styles.css";
 import { Navbar } from "../src/global/navigation/Navbar";
