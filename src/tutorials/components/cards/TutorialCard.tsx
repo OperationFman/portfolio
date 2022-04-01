@@ -6,7 +6,6 @@ import {
   CardContent,
   Tooltip,
   Typography,
-  IconButton,
   LinearProgress,
 } from "@mui/material";
 import { useRouter } from "next/router";
@@ -26,13 +25,11 @@ export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <IconButton
+    <div
       onClick={() => {
         setLoading(true);
         router.push(`tutorials/${cardData.link}`);
       }}
-      disableRipple
-      disableFocusRipple
     >
       <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
         <CardActionArea>
@@ -86,6 +83,6 @@ export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
           {loading && <LinearProgress color="secondary" />}
         </CardActionArea>
       </Card>
-    </IconButton>
+    </div>
   );
 };
