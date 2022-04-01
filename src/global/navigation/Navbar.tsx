@@ -62,7 +62,7 @@ export const Navbar = (props: NavbarProps) => {
         scrollButtons={true}
         TabIndicatorProps={{ style: { background: setIndicator[tab] } }}
         textColor="inherit"
-        variant={isMobile ? "fullWidth" : "standard"}
+        variant={"standard"}
         centered
         sx={container(isMobile)}
       >

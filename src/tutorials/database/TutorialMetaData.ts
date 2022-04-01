@@ -3,7 +3,7 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../types";
 // TODO: Create a tool to automatically add to this and push it to the github repo
 export const tutorialMetaData: TutorialMetaData[] = [
   {
-    title: "Snippet: Retry Recursively",
+    title: "Snippet: Retry Any Function Recursively",
     link: `retry-recursively`,
     notionPage: "88e2d51cb8d74f9a9eb561185f16d322",
     created: 1628805824,
@@ -14,7 +14,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
     tags: [Tags.CodeBlock],
   },
   {
-    title: "How To Dockerize Your Repo",
+    title: "How To Dockerize Your Repository",
     link: `dockerize-your-repo`,
     notionPage: "c4ca92237cc4434cbc30119b104e9e87",
     created: 1639982631,
@@ -65,7 +65,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
     created: 1642762915,
     thumbnail: "/tutorials/quickstart-next.png",
     subTitle:
-      "Get up-and-running with a cleaned up but ready to go repo using NextJs",
+      "Get up-and-running with a cleaned up but ready to go NextJs app",
     topic: Topic.Programming,
     languages: [Languages.Typescript],
     tags: [Tags.StepByStep],

@@ -14,6 +14,7 @@ export enum Languages {
 export enum Tags {
   StepByStep = "How To",
   CodeBlock = "Snippet",
+  QuickStart = "Quickstart",
   Essay = "Essay",
   Story = "Story",
 }
