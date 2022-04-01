@@ -1,13 +1,24 @@
-import { Languages, Tags, Topic, TutorialMetaData } from "./types";
+import { Languages, Tags, Topic, TutorialMetaData } from "../types";
 
 // TODO: Create a tool to automatically add to this and push it to the github repo
 export const tutorialMetaData: TutorialMetaData[] = [
+  {
+    title: "Snippet: Retry Recursively",
+    link: `retry-recursively`,
+    notionPage: "88e2d51cb8d74f9a9eb561185f16d322",
+    created: 1648805824,
+    thumbnail: "/tutorials/retry-recursively.png",
+    subTitle: "Rerun Function n number of times or handle a thrown error",
+    topic: Topic.Programming,
+    languages: [Languages.Typescript],
+    tags: [Tags.CodeBlock],
+  },
   {
     title: "How To Dockerize Your Repo",
     link: `dockerize-your-repo`,
     notionPage: "c4ca92237cc4434cbc30119b104e9e87",
     created: 1639982631,
-    thumbnail: "/tutorials/test.png",
+    thumbnail: "/tutorials/dockerize.png",
     subTitle: "Understand and build containers that run your app anywhere",
     topic: Topic.Infrastructure,
     languages: [Languages.Docker],
@@ -28,7 +39,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
     link: `deploy-to-aws-ec2-using-terraform-and-docker`,
     notionPage: "4d5154f6347a46d280c19f2d8ad9de4f",
     created: 1639982632,
-    thumbnail: "/tutorials/docker-aws-terraform.jpeg",
+    thumbnail: "/tutorials/aws-docker-terraform.png",
     subTitle:
       "Step-by-step instructions to spin up AWS and host your project using Terraform",
     topic: Topic.Infrastructure,
@@ -45,14 +56,14 @@ export const tutorialMetaData: TutorialMetaData[] = [
       "Handle showing an error to your backend or UI via a simple try/catch",
     topic: Topic.Programming,
     languages: [Languages.Typescript],
-    tags: [Tags.StepByStep],
+    tags: [Tags.StepByStep, Tags.CodeBlock],
   },
   {
     title: "Quickstart: NextJS",
     link: `quickly-setup-next-js-with-typescript`,
     notionPage: "eb6acd5b26d3416c9372be89cae2b05d",
     created: 1642762915,
-    thumbnail: "/tutorials/test.png",
+    thumbnail: "/tutorials/quickstart-next.png",
     subTitle:
       "Get up-and-running with a cleaned up but ready to go repo using NextJs",
     topic: Topic.Programming,

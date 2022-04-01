@@ -1,4 +1,4 @@
-import { tutorialMetaData } from "./TutorialMetaData";
+import { tutorialMetaData } from "./database/TutorialMetaData";
 import {
   Languages,
   Tags,

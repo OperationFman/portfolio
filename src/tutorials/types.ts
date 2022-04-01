@@ -13,7 +13,7 @@ export enum Languages {
 
 export enum Tags {
   StepByStep = "How To",
-  CodeBlock = "Code Block",
+  CodeBlock = "Snippet",
   Essay = "Essay",
   Story = "Story",
 }
