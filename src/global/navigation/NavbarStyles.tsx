@@ -20,9 +20,9 @@ export const onHover: SxProps<Theme> = {
 
 export const mobileHomeButton: SxProps<Theme> = {
   minWidth: "30px",
-  paddingLeft: "20px",
-  marginRight: "10px",
   marginLeft: "10px",
+  marginRight: "5px",
+  fontSize: 12,
   ...onHover,
 };
 
@@ -36,11 +36,22 @@ export const desktopHomeButton: SxProps<Theme> = {
   ...onHover,
 };
 
+export const centerTabs = (
+  isMobile: boolean,
+  isProject: boolean = false
+): SxProps<Theme> => {
+  return {
+    minWidth: isMobile ? "85px" : "",
+    fontSize: isMobile ? 12 : "",
+    marginRight: isProject && isMobile ? "65px" : "",
+    ...onHover,
+  };
+};
+
 export const container = (isMobile: boolean): SxProps<Theme> => {
   return {
     backgroundColor: "#212121",
     boxShadow: 5,
-    paddingRight: isMobile ? "65px" : "0px",
   };
 };
 
@@ -49,9 +60,8 @@ export const darkModeIcon = (isMobile: boolean): SxProps<Theme> => {
     display: "flex",
     justifyContent: "right",
     alignSelf: "center",
-    // TODO: Find root cause for absolute forcing icon over container
-    position: isMobile ? "fixed" : "absolute",
-    right: isMobile ? "10px" : "20px",
+    position: "absolute",
+    right: isMobile ? "5px" : "20px",
     ...onHover,
   };
 };

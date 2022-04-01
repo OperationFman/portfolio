@@ -15,6 +15,7 @@ import {
   desktopHomeButton,
   mobileHomeButton,
   onHover,
+  centerTabs,
 } from "./NavbarStyles";
 
 type NavbarProps = {
@@ -32,7 +33,6 @@ export const Navbar = (props: NavbarProps) => {
   const navTabs: string[] = ["/", "/skills", "/tutorials", "/projects"];
   const setIndicator: string[] = ["#90caf9", "#66bb6a", "#ce93d8", "#f44336"];
 
-  // TODO: Maintains tab on render, replace with useLayout()
   useEffect(() => {
     const route = router.pathname;
 
@@ -59,7 +59,7 @@ export const Navbar = (props: NavbarProps) => {
       <Tabs
         value={tab}
         onChange={handleChange}
-        scrollButtons={false}
+        scrollButtons={true}
         TabIndicatorProps={{ style: { background: setIndicator[tab] } }}
         textColor="inherit"
         variant={isMobile ? "fullWidth" : "standard"}
@@ -97,7 +97,7 @@ export const Navbar = (props: NavbarProps) => {
               color={tab === 1 ? "success" : "inherit"}
             />
           }
-          sx={onHover}
+          sx={centerTabs(isMobile)}
         />
         <Tab
           label="TUTORIALS"
@@ -107,7 +107,7 @@ export const Navbar = (props: NavbarProps) => {
               color={tab === 2 ? "secondary" : "inherit"}
             />
           }
-          sx={onHover}
+          sx={centerTabs(isMobile)}
         />
         <Tab
           label="PROJECTS"
@@ -117,9 +117,9 @@ export const Navbar = (props: NavbarProps) => {
               color={tab === 3 ? "error" : "inherit"}
             />
           }
-          sx={onHover}
+          sx={centerTabs(isMobile, true)}
         />
-        {/* TODO: Set dark mode on local storage */}
+
         <IconButton
           onClick={() => {
             localStorage.setItem("dark-mode", `${!darkMode}`);
