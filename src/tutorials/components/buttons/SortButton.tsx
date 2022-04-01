@@ -20,7 +20,7 @@ import {
 import { SortOptions } from "../../types";
 
 type SortButtonProps = {
-  setSortMetaDataBy: Dispatch<SetStateAction<SortOptions>>;
+  setSortMetaDataBy: Dispatch<SetStateAction<SortOptions | undefined>>;
 };
 
 export const SortButton = (props: SortButtonProps) => {

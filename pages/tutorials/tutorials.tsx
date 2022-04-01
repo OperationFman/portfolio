@@ -14,7 +14,7 @@ import {
   availableLanguages,
   availableTags,
   availableTopics,
-  getTutorialMetaData
+  getTutorialMetaData,
 } from "../../src/tutorials/tutorialDataService";
 import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
 import { slideTransition } from "../../utils/muiSpecificLogic";
@@ -28,7 +28,9 @@ const Tutorials: NextPage = () => {
   const tutorialPurple = "#ce93d8";
   const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
-  const [sortMetaDataBy, setSortMetaDataBy] = useState(SortOptions.Newest);
+  const [sortMetaDataBy, setSortMetaDataBy] = useState<
+    SortOptions | undefined
+  >();
   const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
 
   const [topicFilter, setTopicFilter] = useState<Topic | undefined>(undefined);
@@ -38,8 +40,10 @@ const Tutorials: NextPage = () => {
   const [filteredMetaData, setFilteredData] = useState(sortedMetaData);
 
   useEffect(() => {
-    sortMetaData(tutorialMetaData, sortMetaDataBy, setSortedMetaData);
-  }, [sortMetaDataBy, filteredMetaData]);
+    if (sortMetaDataBy) {
+      sortMetaData(tutorialMetaData, sortMetaDataBy, setSortedMetaData);
+    }
+  }, [sortMetaDataBy, filteredMetaData, tutorialMetaData]);
 
   useEffect(() => {
     filterMetaData(
