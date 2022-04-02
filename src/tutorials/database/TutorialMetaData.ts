@@ -7,7 +7,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
     link: `command-cheat-sheet`,
     notionPage: "ea55e3b6a5f54b50abdc456bedc4b80a",
     created: 1634181231,
-    thumbnail: "/tutorials/command-cheat-sheet.png",
+    thumbnail: "/tutorials/terminal.png",
     subTitle: "List of common commands you'll actually use",
     topic: Topic.Programming,
     languages: [],
