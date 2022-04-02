@@ -98,14 +98,15 @@ export const SortButton = (props: SortButtonProps) => {
                       <ArrowDownwardIcon />
                       ㅤOldest
                     </MenuItem>
-                    <MenuItem
+                    {/* TODO: Fix alphabetical bug before re-adding */}
+                    {/* <MenuItem
                       onClick={() => {
                         setSortOption(SortOptions.Alphabetical);
                       }}
                     >
                       <SortByAlphaIcon />
                       ㅤAlphabetical
-                    </MenuItem>
+                    </MenuItem> */}
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
