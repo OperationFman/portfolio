@@ -1,4 +1,3 @@
-import { SortOptions } from "../types";
 import {
   filterForLanguages,
   filterForTags,
@@ -9,7 +8,13 @@ import {
   sortByNewest,
   sortByOldest,
 } from "./metaDataSorts";
-import { Languages, Tags, Topic, TutorialMetaData } from "../types";
+import {
+  Languages,
+  Tags,
+  Topic,
+  TutorialMetaData,
+  SortOptions,
+} from "../types";
 import { getTutorialMetaData } from "../tutorialDataService";
 
 export const filterAndSortMetaData = (
