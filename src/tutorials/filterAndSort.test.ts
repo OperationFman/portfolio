@@ -7,7 +7,7 @@ import {
   sortByNewest,
   sortByOldest,
 } from "./filterAndSort";
-import { testMetaData } from "./testhelpers/tutorialMetaData";
+import { testMetaData } from "./testHelpers/tutorialMetaData";
 import { Languages, Tags, Topic } from "./types";
 
 describe("filterAndSort", () => {
