@@ -1,5 +1,5 @@
 import { } from "react";
-import { testMetaData } from "../testhelpers/tutorialMetaData";
+import { testMetaData } from "../test-helpers/tutorialMetaData";
 import { Languages, Tags, Topic } from "../types";
 import {
   filterForLanguages,

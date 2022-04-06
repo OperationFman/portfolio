@@ -12,12 +12,12 @@ import {
   filterForLanguages,
   filterForTags,
   filterForTopic,
-} from "../../src/tutorials/FilterAndSort/metaDataFilters";
+} from "../../src/tutorials/filter-sort/metaDataFilters";
 import {
   sortByAlphabetical,
   sortByNewest,
   sortByOldest
-} from "../../src/tutorials/FilterAndSort/metaDataSorts";
+} from "../../src/tutorials/filter-sort/metaDataSorts";
 import {
   availableLanguages,
   availableTags,
@@ -33,7 +33,7 @@ import {
 } from "../../src/tutorials/types";
 import { slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
-import { filterAndSortMetaData } from "../../src/tutorials/FilterAndSort/filterAndSortMetaData";
+import { filterAndSortMetaData } from "../../src/tutorials/filter-sort/filterAndSortMetaData";
 
 const Transition = slideTransition("right");
 
