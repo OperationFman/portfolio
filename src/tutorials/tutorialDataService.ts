@@ -1,4 +1,4 @@
-import { tutorialMetaData } from "./Database/TutorialMetaData";
+import { tutorialMetaData } from "./database/TutorialMetaData";
 import { Languages, Tags, Topic, TutorialMetaData } from "./types";
 
 export const availableTopics: Topic[] = Object.values(Topic);
