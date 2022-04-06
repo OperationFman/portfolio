@@ -8,58 +8,56 @@ import { PageContainer } from "../../src/global/PageContainer";
 import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
 import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
 import { TutorialCard } from "../../src/tutorials/components/cards/TutorialCard";
-import { filterMetaData } from "../../src/tutorials/components/filters/filterMetaData";
-import { sortMetaData } from "../../src/tutorials/components/filters/sortMetaData";
+import {
+  filterForLanguages,
+  filterForTags,
+  filterForTopic,
+  sortByAlphabetical,
+  sortByNewest,
+  sortByOldest,
+} from "../../src/tutorials/filterAndSort";
 import {
   availableLanguages,
   availableTags,
   availableTopics,
   getTutorialMetaData,
 } from "../../src/tutorials/tutorialDataService";
-import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
+import {
+  Languages,
+  SortOptions,
+  Tags,
+  Topic,
+  TutorialMetaData,
+} from "../../src/tutorials/types";
 import { slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
+import { filterAndSortMetaData } from "../../src/tutorials/filterAndSortMetaData";
 
 const Transition = slideTransition("right");
 
 const Tutorials: NextPage = () => {
   const { isMobile } = useDeviceDetect();
-  const tutorialMetaData = getTutorialMetaData();
   const tutorialPurple = "#ce93d8";
   const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
-  const [sortMetaDataBy, setSortMetaDataBy] = useState<
-    SortOptions | undefined
-  >();
-  const [sortedMetaData, setSortedMetaData] = useState(tutorialMetaData);
-
+  const [sortBy, setSortBy] = useState<SortOptions>(SortOptions.Newest);
   const [topicFilter, setTopicFilter] = useState<Topic | undefined>(undefined);
   const [languagesFilter, setFilteredLanguages] = useState([] as Languages[]);
   const [tagsFilter, setTagsFilter] = useState([] as Tags[]);
-
-  const [filteredMetaData, setFilteredData] = useState(sortedMetaData);
-
-  useEffect(() => {
-    if (sortMetaDataBy) {
-      sortMetaData(tutorialMetaData, sortMetaDataBy, setSortedMetaData);
-    }
-  }, [sortMetaDataBy, filteredMetaData, tutorialMetaData]);
+  const [metaData, setMetaData] = useState(
+    filterAndSortMetaData(sortBy, topicFilter, languagesFilter, tagsFilter)
+  );
 
   useEffect(() => {
-    filterMetaData(
-      sortedMetaData,
+    const preparedMetaData = filterAndSortMetaData(
+      sortBy,
       topicFilter,
       languagesFilter,
-      tagsFilter,
-      setFilteredData
+      tagsFilter
     );
-  }, [
-    languagesFilter,
-    sortedMetaData,
-    tagsFilter,
-    topicFilter,
-    sortMetaDataBy,
-  ]);
+    setMetaData(preparedMetaData);
+  }, [sortBy, topicFilter, languagesFilter, tagsFilter]);
+
   const handleCloseFilterMenu = () => {
     setShowFilterMenu(false);
   };
@@ -120,12 +118,12 @@ const Tutorials: NextPage = () => {
 
       <PageContainer>
         <div style={{ display: "flex", margin: "10px 30px", gap: "15px" }}>
-          <SortButton setSortMetaDataBy={setSortMetaDataBy} />
+          <SortButton setSortMetaDataBy={setSortBy} />
           <FilterButton setShowFilterMenu={setShowFilterMenu} />
         </div>
 
         <Grid container spacing={3} justifyContent="center">
-          {filteredMetaData.map((dataItem) => {
+          {metaData.map((dataItem) => {
             return (
               <Grid item key={dataItem.title}>
                 <TutorialCard

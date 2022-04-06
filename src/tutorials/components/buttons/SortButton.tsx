@@ -20,7 +20,7 @@ import {
 import { SortOptions } from "../../types";
 
 type SortButtonProps = {
-  setSortMetaDataBy: Dispatch<SetStateAction<SortOptions | undefined>>;
+  setSortMetaDataBy: Dispatch<SetStateAction<SortOptions>>;
 };
 
 export const SortButton = (props: SortButtonProps) => {
@@ -98,15 +98,14 @@ export const SortButton = (props: SortButtonProps) => {
                       <ArrowDownwardIcon />
                       ㅤOldest
                     </MenuItem>
-                    {/* TODO: Fix alphabetical bug before re-adding */}
-                    {/* <MenuItem
+                    <MenuItem
                       onClick={() => {
                         setSortOption(SortOptions.Alphabetical);
                       }}
                     >
                       <SortByAlphaIcon />
                       ㅤAlphabetical
-                    </MenuItem> */}
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
