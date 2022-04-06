@@ -8,14 +8,14 @@ import {
   sortByNewest,
   sortByOldest,
 } from "./metaDataSorts";
+import { getTutorialMetaData } from "../tutorialDataService";
 import {
   Languages,
+  SortOptions,
   Tags,
   Topic,
   TutorialMetaData,
-  SortOptions,
 } from "../types";
-import { getTutorialMetaData } from "../tutorialDataService";
 
 export const filterAndSortMetaData = (
   sortMetaDataBy: SortOptions,
