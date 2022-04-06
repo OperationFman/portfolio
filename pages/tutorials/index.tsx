@@ -2,12 +2,12 @@ import { Dialog, DialogTitle, Divider, Grid } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { MultiSelectFilter } from "../../src/global/forms/MultiSelectFilterField";
-import { SingleSelectFilterField } from "../../src/global/forms/SingleSelectFilterField";
-import { PageContainer } from "../../src/global/PageContainer";
-import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
-import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
-import { TutorialCard } from "../../src/tutorials/components/cards/TutorialCard";
+import { MultiSelectFilter } from "../../src/Global/forms/MultiSelectFilterField";
+import { SingleSelectFilterField } from "../../src/Global/forms/SingleSelectFilterField";
+import { PageContainer } from "../../src/Global/PageContainer";
+import { FilterButton } from "../../src/Tutorials/Components/buttons/FilterButton";
+import { SortButton } from "../../src/Tutorials/Components/buttons/SortButton";
+import { TutorialCard } from "../../src/Tutorials/Components/cards/TutorialCard";
 import {
   filterForLanguages,
   filterForTags,
@@ -15,23 +15,23 @@ import {
   sortByAlphabetical,
   sortByNewest,
   sortByOldest,
-} from "../../src/tutorials/filterAndSort";
+} from "../../src/Tutorials/filterAndSort";
 import {
   availableLanguages,
   availableTags,
   availableTopics,
   getTutorialMetaData,
-} from "../../src/tutorials/tutorialDataService";
+} from "../../src/Tutorials/tutorialDataService";
 import {
   Languages,
   SortOptions,
   Tags,
   Topic,
   TutorialMetaData,
-} from "../../src/tutorials/types";
+} from "../../src/Tutorials/types";
 import { slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
-import { filterAndSortMetaData } from "../../src/tutorials/filterAndSortMetaData";
+import { filterAndSortMetaData } from "../../src/Tutorials/filterAndSortMetaData";
 
 const Transition = slideTransition("right");
 
