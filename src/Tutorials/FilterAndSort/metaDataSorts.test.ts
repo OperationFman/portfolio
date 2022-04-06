@@ -1,11 +1,10 @@
-import {} from "react";
 import {
   sortByAlphabetical,
   sortByNewest,
   sortByOldest,
 } from "../FilterAndSort/metaDataSorts";
+import { testMetaData } from "../TestHelpers/tutorialMetaData";
 import { Languages, Tags, Topic } from "../types";
-import { testMetaData } from "../testhelpers/tutorialMetaData";
 
 describe("metaDataSorts()", () => {
   const metaDataPreSorted = testMetaData;

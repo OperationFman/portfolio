@@ -1,4 +1,3 @@
-import {} from "react";
 import {
   filterForLanguages,
   filterForTags,
@@ -9,7 +8,7 @@ import {
   sortByNewest,
   sortByOldest,
 } from "./FilterAndSort/metaDataSorts";
-import { testMetaData } from "./testhelpers/tutorialMetaData";
+import { testMetaData } from "./TestHelpers/tutorialMetaData";
 import { Languages, Tags, Topic } from "./types";
 
 describe("metaDataFilters", () => {

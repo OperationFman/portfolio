@@ -10,12 +10,10 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import {
-  container,
+  centerTabs, container,
   darkModeIcon,
   desktopHomeButton,
-  mobileHomeButton,
-  onHover,
-  centerTabs,
+  mobileHomeButton
 } from "./NavbarStyles";
 
 type NavbarProps = {
