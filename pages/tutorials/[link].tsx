@@ -5,8 +5,8 @@ import Head from "next/head";
 import { NotionAPI } from "notion-client";
 import { ExtendedRecordMap } from "notion-types";
 import { NotionRenderer } from "react-notion-x";
-import { getTutorialMetaDataByLink } from "../../src/Tutorials/tutorialDataService";
-import { TutorialMetaData } from "../../src/Tutorials/types";
+import { getTutorialMetaDataByLink } from "../../src/tutorials/tutorialDataService";
+import { TutorialMetaData } from "../../src/tutorials/types";
 import { ErrorContent } from "../../utils/ErrorContent";
 
 const Code = dynamic<any>(() =>

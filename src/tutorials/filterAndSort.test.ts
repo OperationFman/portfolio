@@ -1,17 +1,16 @@
+import {} from "react";
 import {
   filterForLanguages,
   filterForTags,
   filterForTopic,
-} from "./FilterAndSort/metaDataFilters";
-import {
   sortByAlphabetical,
   sortByNewest,
   sortByOldest,
-} from "./FilterAndSort/metaDataSorts";
-import { testMetaData } from "./TestHelpers/tutorialMetaData";
+} from "./filterAndSort";
+import { testMetaData } from "./testhelpers/tutorialMetaData";
 import { Languages, Tags, Topic } from "./types";
 
-describe("metaDataFilters", () => {
+describe("filterAndSort", () => {
   const metaDataPreSorted = testMetaData;
   describe("orderByNewest", () => {
     it("returns an array of metadata from newest to oldest by epoch", () => {

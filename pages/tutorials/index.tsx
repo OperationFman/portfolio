@@ -5,18 +5,33 @@ import React, { useEffect, useState } from "react";
 import { MultiSelectFilter } from "../../src/global/forms/MultiSelectFilterField";
 import { SingleSelectFilterField } from "../../src/global/forms/SingleSelectFilterField";
 import { PageContainer } from "../../src/global/PageContainer";
-import { FilterButton } from "../../src/Tutorials/Components/buttons/FilterButton";
-import { SortButton } from "../../src/Tutorials/Components/buttons/SortButton";
-import { TutorialCard } from "../../src/Tutorials/Components/cards/TutorialCard";
-import { filterAndSortMetaData } from "../../src/Tutorials/FilterAndSort/FilterAndSortMetaData";
+import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
+import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
+import { TutorialCard } from "../../src/tutorials/components/cards/TutorialCard";
+import {
+  filterForLanguages,
+  filterForTags,
+  filterForTopic,
+  sortByAlphabetical,
+  sortByNewest,
+  sortByOldest,
+} from "../../src/tutorials/filterAndSort";
 import {
   availableLanguages,
   availableTags,
   availableTopics,
-} from "../../src/Tutorials/tutorialDataService";
-import { Languages, SortOptions, Tags, Topic } from "../../src/Tutorials/types";
+  getTutorialMetaData,
+} from "../../src/tutorials/tutorialDataService";
+import {
+  Languages,
+  SortOptions,
+  Tags,
+  Topic,
+  TutorialMetaData,
+} from "../../src/tutorials/types";
 import { slideTransition } from "../../utils/muiSpecificLogic";
 import useDeviceDetect from "../../utils/useDeviceDetect";
+import { filterAndSortMetaData } from "../../src/tutorials/filterAndSortMetaData";
 
 const Transition = slideTransition("right");
 
