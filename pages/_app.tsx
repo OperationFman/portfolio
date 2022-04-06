@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import "prismjs/themes/prism-tomorrow.css";
 import React, { useEffect, useState } from "react";
 import "react-notion-x/src/styles.css";
-import { Navbar } from "../src/Global/Navbar/Navbar";
+import { Navbar } from "../src/global/navigation/Navbar";
 import { GlobalTheme } from "../themes/GlobalTheme";
 
 function MyApp({ Component, pageProps }: AppProps) {

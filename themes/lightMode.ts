@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import { navBarGlobal } from "../src/Global/Navbar/NavbarStyles";
+import { navBarGlobal } from "../src/global/navigation/NavbarStyles";
 
 declare module "@mui/material/styles" {
   interface Palette {

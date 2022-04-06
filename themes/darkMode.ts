@@ -1,4 +1,4 @@
-import { navBarGlobal } from "../src/Global/Navbar/NavbarStyles";
+import { navBarGlobal } from "../src/global/navigation/NavbarStyles";
 import { createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
