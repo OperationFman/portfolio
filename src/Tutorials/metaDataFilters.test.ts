@@ -3,14 +3,16 @@ import {
   filterForLanguages,
   filterForTags,
   filterForTopic,
+} from "./FilterAndSort/metaDataFilters";
+import {
   sortByAlphabetical,
   sortByNewest,
   sortByOldest,
-} from "./filterAndSort";
+} from "./FilterAndSort/metaDataSorts";
 import { testMetaData } from "./testhelpers/tutorialMetaData";
 import { Languages, Tags, Topic } from "./types";
 
-describe("filterAndSort", () => {
+describe("metaDataFilters", () => {
   const metaDataPreSorted = testMetaData;
   describe("orderByNewest", () => {
     it("returns an array of metadata from newest to oldest by epoch", () => {
