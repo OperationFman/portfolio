@@ -1,5 +1,5 @@
 import { } from "react";
-import { testMetaData } from "../test-helpers/tutorialMetaData";
+import { testTutorialMetaDataArrayMetaData } from "../test-helpers/tutorialMetaDataArray";
 import { Languages, Tags, Topic } from "../types";
 import {
   filterForLanguages,
@@ -8,7 +8,7 @@ import {
 } from "./metaDataFilters";
 
 describe("filterAndSort", () => {
-  const metaDataPreSorted = testMetaData;
+  const metaDataPreSorted = testTutorialMetaDataArrayMetaData;
 
   describe("filterForLanguages()", () => {
     it("returns an array of metadata that have the parsed in language", () => {

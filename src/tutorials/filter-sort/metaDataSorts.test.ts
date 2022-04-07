@@ -1,4 +1,4 @@
-import { testMetaData } from "../test-helpers/tutorialMetaData";
+import { testTutorialMetaDataArrayMetaData } from "../test-helpers/tutorialMetaDataArray";
 import { Languages, Tags, Topic } from "../types";
 import {
   sortByAlphabetical,
@@ -7,7 +7,7 @@ import {
 } from "./metaDataSorts";
 
 describe("metaDataSorts()", () => {
-  const metaDataPreSorted = testMetaData;
+  const metaDataPreSorted = testTutorialMetaDataArrayMetaData;
   describe("orderByNewest", () => {
     it("returns an array of metadata from newest to oldest by epoch", () => {
       const metaDataByNewest = [

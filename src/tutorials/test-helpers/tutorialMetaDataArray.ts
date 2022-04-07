@@ -1,6 +1,6 @@
-import { Languages, Tags, Topic } from "../types";
+import { Languages, Tags, Topic, TutorialMetaData } from "../types";
 
-export const testMetaData = [
+export const testTutorialMetaDataArrayMetaData: TutorialMetaData[] = [
   {
     title: "Quickly Setup NextJs ES6 with Typescript",
     link: `/programming/quickly-setup-next-js-with-typescript`,
