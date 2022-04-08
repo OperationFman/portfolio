@@ -58,40 +58,43 @@ const PageContent = ({
 };
 
 export const getServerSideProps = async (context: ServerSideContext) => {
-  // TODO: Replace with error handling and try/catch
   const notion = new NotionAPI();
-  const invalid = {
-    props: {
-      notionPage: "undefined",
-    },
-  };
 
-  const { link } = context.params;
+  try {
+    const { link } = context.params;
+    if (typeof link !== "string") {
+      throw new Error(`Link param is invalid`);
+    }
 
-  if (typeof link !== "string") {
-    return invalid;
+    const metaData = getTutorialMetaDataByLink(link);
+    if (!metaData) {
+      throw new Error(
+        `Could not find Tutorial Meta Data with the link param: ${link}`
+      );
+    }
+
+    const notionPage: ExtendedRecordMap = await notion.getPage(
+      metaData.notionPage
+    );
+    if (!notionPage) {
+      throw new Error(
+        `Could not find Notion Page with metaData notionPage value of: ${metaData.notionPage}`
+      );
+    }
+
+    return {
+      props: {
+        notionPage,
+        metaData,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        notionPage: "undefined",
+      },
+    };
   }
-
-  const metaData = getTutorialMetaDataByLink(link);
-
-  if (!metaData) {
-    return invalid;
-  }
-
-  const notionPage: ExtendedRecordMap = await notion.getPage(
-    metaData.notionPage
-  );
-
-  if (!notionPage) {
-    return invalid;
-  }
-
-  return {
-    props: {
-      notionPage,
-      metaData,
-    },
-  };
 };
 
 export default PageContent;
