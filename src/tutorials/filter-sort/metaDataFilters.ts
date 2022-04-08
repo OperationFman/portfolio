@@ -9,7 +9,6 @@ export const filterForTopic = (
   });
 };
 
-// TODO: Update so it returns only meta data that has ALL passed in languages
 export const filterForLanguages = (
   metaData: TutorialMetaData[],
   languages: Languages[]

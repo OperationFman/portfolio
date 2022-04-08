@@ -1,6 +1,5 @@
 import { Languages, Tags, Topic, TutorialMetaData } from "../types";
 
-// TODO: Create a tool to automatically add to this and push it to the github repo
 export const tutorialMetaData: TutorialMetaData[] = [
   {
     title: "Dockerize Your Repository",

@@ -3,7 +3,6 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import SortByAlphaIcon from "@mui/icons-material/SortByAlpha";
 import {
-  Button,
   ClickAwayListener,
   Grow,
   MenuItem,
@@ -12,6 +11,7 @@ import {
   Popper,
   Stack,
 } from "@mui/material";
+import Button from "@mui/material/Button";
 import React, { Dispatch, SetStateAction } from "react";
 import {
   closeMenu,

@@ -28,6 +28,4 @@ describe("TutorialCard", () => {
       )
     ).toBeTruthy();
   });
-
-  //TODO: test router being pushed to correctly https://www.youtube.com/watch?v=uF2lqBluQV8
 });

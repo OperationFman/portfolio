@@ -10,9 +10,10 @@ export const getTutorialMetaData = (): TutorialMetaData[] => {
 };
 
 export const getTutorialMetaDataByLink = (
-  link: string
+  link: string,
+  metaData: TutorialMetaData[] = getTutorialMetaData()
 ): TutorialMetaData | undefined => {
-  return tutorialMetaData.find((item) => {
+  return metaData.find((item) => {
     return item.link === link;
   });
 };

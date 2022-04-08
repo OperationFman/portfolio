@@ -21,11 +21,11 @@ const PageContent = ({
   notionPage,
   metaData,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  const { title, subTitle, topic } = metaData as TutorialMetaData;
-
-  if (!notionPage) {
+  if (!notionPage || notionPage === "undefined" || !metaData) {
     return <ErrorContent />;
   }
+
+  const { title, subTitle, topic } = metaData as TutorialMetaData;
 
   return (
     <>
@@ -58,10 +58,11 @@ const PageContent = ({
 };
 
 export const getServerSideProps = async (context: ServerSideContext) => {
+  // TODO: Replace with error handling and try/catch
   const notion = new NotionAPI();
   const invalid = {
     props: {
-      notionPage: undefined,
+      notionPage: "undefined",
     },
   };
 

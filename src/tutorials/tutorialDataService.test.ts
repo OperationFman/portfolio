@@ -1,16 +1,16 @@
-import {
-  getTutorialMetaData,
-  getTutorialMetaDataByLink,
-} from "./tutorialDataService";
-import { tutorialMetaData } from "./database/TutorialMetaData";
-import { mocked } from "jest-mock";
 import { testTutorialMetaDataArrayMetaData } from "./test-helpers/tutorialMetaDataArray";
-
-jest.mock("./database/TutorialMetaData", () => ({}));
+import { testTutorialMetaDataItem } from "./test-helpers/tutorialMetaDataItem";
+import { getTutorialMetaDataByLink } from "./tutorialDataService";
 
 describe("tutorialDataService", () => {
-  //TODO: getTutorialData and getTutorialMetaDataByLink
-  it("Returns the unchanged tutorial meta data", () => {
-    expect(true).toEqual(true);
+  describe("getTutorialMetaDataByLink()", () => {
+    it("Returns single metadata item from object using parsed link string", () => {
+      const result = getTutorialMetaDataByLink(
+        "/programming/quickly-setup-next-js-with-typescript",
+        testTutorialMetaDataArrayMetaData
+      );
+
+      expect(result).toEqual(testTutorialMetaDataItem);
+    });
   });
 });

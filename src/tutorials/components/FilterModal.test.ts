@@ -6,7 +6,7 @@ import useDeviceDetect from "../../../utils/useDeviceDetect";
 
 jest.mock("../../../utils/useDeviceDetect");
 
-describe("FilterModal()", () => {
+describe("FilterModal", () => {
   const topicFilter = Topic.Programming;
   const languagesFilter = [Languages.Typescript];
   const tagsFilter = [Tags.CodeBlock];

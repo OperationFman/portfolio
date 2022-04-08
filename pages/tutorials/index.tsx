@@ -10,7 +10,6 @@ import { FilterModal } from "../../src/tutorials/components/FilterModal";
 import { filterAndSortMetaData } from "../../src/tutorials/filter-sort/filterAndSortMetaData";
 import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
 import { slideTransition } from "../../utils/muiSpecificLogic";
-import useDeviceDetect from "../../utils/useDeviceDetect";
 
 const Transition = slideTransition("right");
 
