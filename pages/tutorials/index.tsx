@@ -6,10 +6,10 @@ import { PageContainer } from "../../src/global/PageContainer";
 import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
 import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
 import { TutorialCard } from "../../src/tutorials/components/cards/TutorialCard";
-import { FilterModal } from "../../src/tutorials/components/FilterModal";
+import { FilterModal } from "../../src/tutorials/components/filter/FilterModal";
 import { filterAndSortMetaData } from "../../src/tutorials/filter-sort/filterAndSortMetaData";
 import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
-import { slideTransition } from "../../utils/muiSpecificLogic";
+import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
 
 const Transition = slideTransition("right");
 

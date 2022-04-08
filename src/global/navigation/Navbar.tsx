@@ -55,7 +55,6 @@ export const Navbar = (props: NavbarProps) => {
   };
 
   return (
-    <nav>
       <Tabs
         value={tab}
         onChange={handleChange}
@@ -136,6 +135,5 @@ export const Navbar = (props: NavbarProps) => {
           </Tooltip>
         </IconButton>
       </Tabs>
-    </nav>
   );
 };

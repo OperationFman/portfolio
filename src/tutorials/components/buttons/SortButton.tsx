@@ -16,7 +16,7 @@ import React, { Dispatch, SetStateAction } from "react";
 import {
   closeMenu,
   keyboardNavigation,
-} from "../../../../utils/muiSpecificLogic";
+} from "../filter/filterAnimations";
 import { SortOptions } from "../../types";
 
 type SortButtonProps = {

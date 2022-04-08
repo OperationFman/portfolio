@@ -5,7 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Topic } from "../../tutorials/types";
-import { addTransparency } from "../../../utils/muiSpecificLogic";
+import { addTransparency } from "../../tutorials/components/filter/filterAnimations";
 
 type TopicFilterProps = {
   filter: Topic | undefined;

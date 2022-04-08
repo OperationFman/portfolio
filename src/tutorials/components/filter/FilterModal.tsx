@@ -1,13 +1,13 @@
 import { DialogTitle, Divider } from "@mui/material";
-import useDeviceDetect from "../../../utils/useDeviceDetect";
-import { MultiSelectFilter } from "../../global/forms/MultiSelectFilterField";
-import { SingleSelectFilterField } from "../../global/forms/SingleSelectFilterField";
+import useDeviceDetect from "../../../../utils/useDeviceDetect";
+import { MultiSelectFilter } from "../../../global/forms/MultiSelectFilterField";
+import { SingleSelectFilterField } from "../../../global/forms/SingleSelectFilterField";
 import {
   availableLanguages,
   availableTags,
   availableTopics,
-} from "../tutorialDataService";
-import { Languages, Tags, Topic } from "../types";
+} from "../../tutorialDataService";
+import { Languages, Tags, Topic } from "../../types";
 
 export const FilterModal = (
   topicFilter: Topic | undefined,
