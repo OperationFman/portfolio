@@ -223,12 +223,13 @@ export const tutorialMetaData: TutorialMetaData[] = [
     tags: [Tags.StepByStep, Tags.Essay],
   },
   {
-    title: "Checklist: Planning a Showcase",
+    title: "Planning a Showcase",
     link: "checklist-planning-showcase",
     notionPage: "04f65ce6da4143dc840e8b6d07b56e0e",
     created: 1639982528,
     thumbnail: "/tutorials/presentation-showcase.jpeg",
-    subTitle: "Running an outstanding showcase presentation",
+    subTitle:
+      "What, Who, Why, When and How to run an outstanding Showcase to your Product Owner",
     topic: Topic.Agile,
     languages: [],
     tags: [Tags.StepByStep],
