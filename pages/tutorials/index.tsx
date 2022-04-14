@@ -40,9 +40,9 @@ const Tutorials: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Tutorials</title>
+        <title>Tutorials - Franklin V Moon</title>
         <meta
-          name="Tutorials Blog"
+          name="Tutorials"
           content="Blog containing all my guides, stories and snippets"
         />
       </Head>

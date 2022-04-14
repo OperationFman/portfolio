@@ -139,7 +139,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
     tags: [Tags.CodeBlock],
   },
   {
-    title: "Quickstart: Java 11 with Spring",
+    title: "Quickstart: Spring with Java",
     link: "quickstart-java-with-spring",
     notionPage: "0872f80487ae46eb9f233609b0d0ece0",
     created: 1639982535,
@@ -197,18 +197,6 @@ export const tutorialMetaData: TutorialMetaData[] = [
     topic: Topic.Agile,
     languages: [],
     tags: [Tags.Essay],
-  },
-  {
-    title: "How To Write User Stories",
-    link: "how-to-write-user-stories",
-    notionPage: "454f16c743144519b8a0c2092f089b9d",
-    created: 1639982530,
-    thumbnail: "/tutorials/user-stories.png",
-    subTitle:
-      "Understand what makes a user story, including INVEST principles and Acceptance Criteria",
-    topic: Topic.Agile,
-    languages: [],
-    tags: [Tags.StepByStep],
   },
   {
     title: "How To Give Feedback",

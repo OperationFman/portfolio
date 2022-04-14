@@ -30,7 +30,7 @@ const PageContent = ({
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{title} - Franklin V Moon</title>
         <meta name={subTitle} content={topic} />
       </Head>
 
