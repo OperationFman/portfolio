@@ -1,10 +1,10 @@
-import { testTutorialMetaDataArrayMetaData } from "../test-helpers/tutorialMetaDataArray";
-import { Languages, Tags, Topic } from "../types";
+import { testTutorialMetaDataArrayMetaData } from "../../../tutorials/test-helpers/tutorialMetaDataArray";
+import { Languages, Tags, Topic } from "../../../tutorials/types";
 import {
   sortByAlphabetical,
   sortByNewest,
   sortByOldest,
-} from "./metaDataSorts";
+} from "./sortMetaData";
 
 describe("metaDataSorts()", () => {
   const metaDataPreSorted = testTutorialMetaDataArrayMetaData;

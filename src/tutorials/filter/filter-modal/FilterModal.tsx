@@ -1,7 +1,7 @@
 import { DialogTitle, Divider } from "@mui/material";
 import useDeviceDetect from "../../../../utils/useDeviceDetect";
-import { MultiSelectFilter } from "../../../global/forms/MultiSelectFilterField";
-import { SingleSelectFilterField } from "../../../global/forms/SingleSelectFilterField";
+import { MultiSelectFilter } from "../../../components/forms/MultiSelectFilterField";
+import { SingleSelectFilterField } from "../../../components/forms/SingleSelectFilterField";
 import {
   availableLanguages,
   availableTags,
