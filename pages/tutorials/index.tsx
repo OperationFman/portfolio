@@ -5,11 +5,12 @@ import React, { useEffect, useState } from "react";
 import { PageContainer } from "../../src/global/PageContainer";
 import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
 import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
-import { TutorialCard } from "../../src/tutorials/components/cards/TutorialCard";
+import { FeedCard } from "../../src/global/feed/FeedCard";
 import { FilterModal } from "../../src/tutorials/components/filter/FilterModal";
 import { filterAndSortMetaData } from "../../src/tutorials/filter-sort/filterAndSortMetaData";
 import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
 import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
+import { tutorialFeedCardFormatting } from "../../src/tutorials/components/feed/tutorialFeedCardStyles";
 
 const Transition = slideTransition("right");
 
@@ -73,7 +74,7 @@ const Tutorials: NextPage = () => {
           {metaData.map((dataItem) => {
             return (
               <Grid item key={dataItem.title}>
-                <TutorialCard cardData={dataItem} accentColor={"#ce93d8"} />
+                <FeedCard formatting={tutorialFeedCardFormatting} cardData={dataItem} />
               </Grid>
             );
           })}

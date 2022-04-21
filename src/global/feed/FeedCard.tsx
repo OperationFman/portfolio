@@ -10,56 +10,65 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { TutorialMetaData } from "../../types";
-import { subTitleShortener, titleShortener } from "./textFormatter";
+import { TutorialMetaData } from "../../tutorials/types";
+import { subTitleShortener, titleShortener } from "../../tutorials/components/cards/textFormatter";
+import { FeedCardFormatting, Page } from "./types";
 
-type TutorialCardProps = {
+type FeedCardProps = {
+  formatting: FeedCardFormatting;
   cardData: TutorialMetaData;
-  accentColor: string;
 };
 
-export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
-  const { cardData, accentColor } = props;
+export const FeedCard = (props: FeedCardProps): JSX.Element => {
+  const { formatting, cardData } = props;
   const router = useRouter();
 
   const [loading, setLoading] = useState(false);
+
+  const tutorialTopicBadge = (): JSX.Element | void => {
+    if (formatting.page === Page.TutorialPage) {
+      return (
+        <Box
+          sx={{
+            height: "25px",
+            margin: "-35px 0px 0px 0px",
+            padding: "0px 15px",
+            border: `2px solid ${formatting.accentColor}`,
+            borderRadius: 6,
+            position: "absolute",
+            backgroundColor: "background.paper",
+            boxShadow: 2,
+          }}
+        >
+        <Typography
+          variant="body2"
+          align="right"
+          sx={{ fontWeight: 200 }}
+        >
+            {cardData.topic}
+        </Typography>
+        </Box>
+      )
+    }
+  }
 
   return (
     <div
       onClick={() => {
         setLoading(true);
-        router.push(`tutorials/${cardData.link}`);
+        router.push(`${formatting.page}/${cardData.link}`);
       }}
     >
-      <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
+      <Card sx={{ maxWidth: formatting.maxWidth, boxShadow: 3 }}>
         <CardActionArea>
           <CardMedia
             component="img"
-            height="180"
+            height={formatting.maxHeight}
             alt={cardData.title}
             image={cardData.thumbnail}
           />
           <CardContent>
-            <Box
-              sx={{
-                height: "25px",
-                margin: "-35px 0px 0px 0px",
-                padding: "0px 15px",
-                border: `2px solid ${accentColor}`,
-                borderRadius: 6,
-                position: "absolute",
-                backgroundColor: "background.paper",
-                boxShadow: 2,
-              }}
-            >
-              <Typography
-                variant="body2"
-                align="right"
-                sx={{ fontWeight: 200 }}
-              >
-                {cardData.topic}
-              </Typography>
-            </Box>
+            {tutorialTopicBadge()}
             <Typography
               gutterBottom
               variant="h5"
@@ -80,7 +89,7 @@ export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
               </Typography>
             </Tooltip>
           </CardContent>
-          {loading && <LinearProgress color="secondary" />}
+          {loading && <LinearProgress color={formatting.theme} />}
         </CardActionArea>
       </Card>
     </div>
