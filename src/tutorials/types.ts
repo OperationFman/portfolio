@@ -32,7 +32,3 @@ export type TutorialMetaData = {
   tags?: Tags[];
 };
 
-export type TutorialContentItem = {
-  metaData: TutorialMetaData;
-  pageContent: () => Promise<JSX.Element>;
-};
