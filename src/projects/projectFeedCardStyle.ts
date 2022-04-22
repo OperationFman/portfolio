@@ -8,8 +8,8 @@ export const projectFeedCardStyle = (isMobile: boolean): FeedCardFormatting  => 
             page: Page.ProjectPage,
             accentColor: "#d32f2f",
             theme: "error",
-            maxWidth: isMobile ? 345 : 1035,
-            maxHeight: isMobile ? "180" : "540"
+            maxWidth: isMobile ? 345 : 700,
+            maxHeight: isMobile ? "180" : "400"
         }
     )
 }
