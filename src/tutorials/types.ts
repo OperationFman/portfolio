@@ -38,7 +38,3 @@ export enum SortOptions {
   Alphabetical = "alphabetical",
 }
 
-export type TutorialContentItem = {
-  metaData: TutorialMetaData;
-  pageContent: () => Promise<JSX.Element>;
-};

@@ -1,8 +1,14 @@
 import { Button } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { PageContainer } from "../../src/global/PageContainer";
+import { projectMetaData } from "../../src/projects/database/ProjectMetaData";
+import { ProjectItem } from "../../src/projects/ProjectItem";
 
 const Projects: NextPage = () => {
+  
+  
+  
   return (
     <div>
       <Head>
@@ -11,7 +17,15 @@ const Projects: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Projects page</h1>
+      <PageContainer>
+          {projectMetaData.map((dataItem) => {
+            return (
+                <div key={dataItem.title}>
+                  <ProjectItem metaData={dataItem}/>
+                </div>
+            );
+          })}
+      </PageContainer>
     </div>
   );
 };
