@@ -13,11 +13,10 @@ import { useState } from "react";
 import { TutorialMetaData } from "../../tutorials/types";
 import { subTitleShortener, titleShortener } from "../../../utils/textformatter/textFormatter";
 import { FeedCardFormatting, Page } from "./types";
-import { ProjectMetaData } from "../../projects/types";
 
 type FeedCardProps = {
   formatting: FeedCardFormatting;
-  cardData: TutorialMetaData | ProjectMetaData;
+  cardData: TutorialMetaData;
 };
 
 export const FeedCard = (props: FeedCardProps): JSX.Element => {
@@ -28,7 +27,6 @@ export const FeedCard = (props: FeedCardProps): JSX.Element => {
 
   const tutorialTopicBadge = (): JSX.Element | void => {
     if (formatting.page === Page.TutorialPage) {
-      const data = cardData as TutorialMetaData
       return (
         <Box
           sx={{
@@ -47,7 +45,7 @@ export const FeedCard = (props: FeedCardProps): JSX.Element => {
           align="right"
           sx={{ fontWeight: 200 }}
         >
-            {data.topic}
+            {cardData.topic}
         </Typography>
         </Box>
       )
