@@ -11,7 +11,7 @@ import {
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { TutorialMetaData } from "../../tutorials/types";
-import { subTitleShortener, titleShortener } from "../../../utils/textformatter/textFormatter";
+import { subTitleShortener, titleShortener } from "../../tutorials/components/cards/textFormatter";
 import { FeedCardFormatting, Page } from "./types";
 
 type FeedCardProps = {

@@ -16,8 +16,8 @@ import React, { Dispatch, SetStateAction } from "react";
 import {
   closeMenu,
   keyboardNavigation,
-} from "../../tutorials/filter/filter-modal/animations";
-import { SortOptions } from "../feed/sort/types";
+} from "../filter/filterAnimations";
+import { SortOptions } from "../../types";
 
 type SortButtonProps = {
   setSortMetaDataBy: Dispatch<SetStateAction<SortOptions>>;

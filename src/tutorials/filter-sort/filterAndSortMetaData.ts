@@ -1,14 +1,14 @@
-import { SortOptions } from "../../components/feed/sort/types";
+import { SortOptions } from "../types";
 import {
   filterForLanguages,
   filterForTags,
   filterForTopic,
-} from "./filterMetaData";
+} from "./metaDataFilters";
 import {
   sortByAlphabetical,
   sortByNewest,
   sortByOldest
-} from "../../components/feed/sort/sortMetaData";
+} from "./metaDataSorts";
 import { Languages, Tags, Topic, TutorialMetaData } from "../types";
 import { getTutorialMetaData } from "../tutorialDataService";
 

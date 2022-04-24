@@ -2,16 +2,15 @@ import { Dialog, Grid } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { PageContainer } from "../../src/components/PageContainer";
-import { FilterButton } from "../../src/components/buttons/FilterButton";
-import { SortButton } from "../../src/components/buttons/SortButton";
-import { FeedCard } from "../../src/components/feed/FeedCard";
-import { FilterModal } from "../../src/tutorials/filter/filter-modal/FilterModal";
-import { filterAndSortMetaData } from "../../src/tutorials/filter/filterAndSortMetaData";
-import { Languages, Tags, Topic } from "../../src/tutorials/types";
-import { SortOptions } from "../../src/components/feed/sort/types";
-import { slideTransition } from "../../src/tutorials/filter/filter-modal/animations";
-import { tutorialFeedCardFormatting } from "../../src/tutorials/tutorialFeedCardStyle";
+import { PageContainer } from "../../src/global/PageContainer";
+import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
+import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
+import { FeedCard } from "../../src/global/feed/FeedCard";
+import { FilterModal } from "../../src/tutorials/components/filter/FilterModal";
+import { filterAndSortMetaData } from "../../src/tutorials/filter-sort/filterAndSortMetaData";
+import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
+import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
+import { tutorialFeedCardFormatting } from "../../src/tutorials/components/feed/tutorialFeedCardStyles";
 
 const Transition = slideTransition("right");
 

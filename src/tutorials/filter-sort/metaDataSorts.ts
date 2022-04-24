@@ -1,4 +1,4 @@
-import { TutorialMetaData } from "../../../tutorials/types";
+import { TutorialMetaData } from "../types";
 
 
 export const sortByNewest = (

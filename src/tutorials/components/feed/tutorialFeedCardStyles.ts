@@ -1,4 +1,5 @@
-import { FeedCardFormatting, Page } from "../components/feed/types";
+import { FeedCardFormatting, Page } from "../../../global/feed/types";
+
 
 export const tutorialFeedCardFormatting: FeedCardFormatting = {
     page: Page.TutorialPage,

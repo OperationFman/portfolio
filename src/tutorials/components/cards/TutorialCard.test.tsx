@@ -1,7 +1,8 @@
-import { render } from "@testing-library/react";
-import { testTutorialMetaDataItem } from "../../tutorials/test-helpers/tutorialMetaDataItem";
-import { tutorialFeedCardFormatting } from "../../tutorials/tutorialFeedCardStyle";
-import { FeedCard } from "./FeedCard";
+import { fireEvent, render } from "@testing-library/react";
+import { debug } from "console";
+import Router from "next/router";
+import { testTutorialMetaDataItem } from "../../test-helpers/tutorialMetaDataItem";
+import { FeedCard } from "../../../global/feed/FeedCard";
 
 jest.mock("next/router", () => ({
   useRouter: () => ({ query: { abcd: "3" } }),
@@ -16,7 +17,7 @@ describe("TutorialCard", () => {
 
   it("Renders TutorialCard with correct title and shortened subtitle", () => {
     const { getByText } = render(
-      <FeedCard formatting={tutorialFeedCardFormatting} cardData={metaData} />
+      <FeedCard cardData={metaData} accentColor={"#ce93d8"} />
     );
 
     expect(getByText("Programming")).toBeTruthy();

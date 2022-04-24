@@ -5,7 +5,7 @@ import {
   filterForLanguages,
   filterForTags,
   filterForTopic
-} from "./filterMetaData";
+} from "./metaDataFilters";
 
 describe("filterAndSort", () => {
   const metaDataPreSorted = testTutorialMetaDataArrayMetaData;

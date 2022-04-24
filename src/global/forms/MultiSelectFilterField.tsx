@@ -7,7 +7,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import React, { Dispatch, SetStateAction } from "react";
 import { Tags, Languages } from "../../tutorials/types";
-import { addTransparency } from "../../tutorials/filter/filter-modal/animations";
+import { addTransparency } from "../../tutorials/components/filter/filterAnimations";
 
 type LanguagesFilter = {
   filter: Languages[];
