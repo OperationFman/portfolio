@@ -19,7 +19,7 @@ export const LaptopBorder = (props: LaptopBorderProps) => {
                     borderRadius: isMobile ? "8px 8px 0px 0px" : "15px 15px 0px 0px",
                     margin: "0px 25px",
                     minHeight: "180px",
-                    
+                    boxShadow: "rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px"
                 }
             }>
             {children}
@@ -27,8 +27,7 @@ export const LaptopBorder = (props: LaptopBorderProps) => {
             <div style={{
                 border: isMobile ? "4px solid #282424" : "7px solid #282424",  
                 backgroundColor: "#282424",
-                borderRadius: isMobile ? "0px 0px 8px 8px" : "0px 0px 15px 15px",
-                boxShadow: "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
+                borderRadius: isMobile ? "0px 0px 8px 8px" : "0px 0px 15px 15px"
             }}
             />
         </div>

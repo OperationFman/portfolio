@@ -17,10 +17,17 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
     return (
             <div style={isMobile ? {
                 padding: "0px 0px 100px 0px",
-            } : { 
-                padding: "0px 100px 100px 100px"}
+            } : 
+            { 
+                padding: "0px 100px 100px 100px",
+            }
             }>
-                <h1>{metaData.title}</h1>
+                <h1 style={{
+                    width: "fit-content",
+                    paddingRight: "100px",
+                    borderBottom: "2px solid #f44336"
+                }}>{metaData.title}</h1>
+
                 <Carousel 
                 autoPlay={false} 
                 navButtonsAlwaysVisible={isMobile ? false : true} 
@@ -36,7 +43,7 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
                 }}
                 >
                 {
-                    metaData.images.desktop.map( (item, i) => 
+                    metaData.images.desktop.map((item, i) => 
                         <>
                             <LaptopBorder key={i}>
                                 <Image
@@ -69,7 +76,7 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
                 }
                 </Carousel>
                 
-                <h4>{metaData.subTitle}</h4>
+                <p style={{textAlign: 'center'}}>{metaData.subTitle}</p>
             </div>
     )
 }
