@@ -9,8 +9,8 @@ export const LaptopBorder = (props: LaptopBorderProps) => {
     const { isMobile} = useDeviceDetect()
 
     return (
-        <div style={ isMobile ? {marginRight: "25px"} : {
-            marginRight: "150px"
+        <div style={ isMobile ? {} : {
+            margin: "0px 100px"
         }}>
             <div style={
                 {
@@ -26,6 +26,7 @@ export const LaptopBorder = (props: LaptopBorderProps) => {
             </div>
             <div style={{
                 border: isMobile ? "4px solid #282424" : "7px solid #282424",  
+                backgroundColor: "#282424",
                 borderRadius: isMobile ? "0px 0px 8px 8px" : "0px 0px 15px 15px",
                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 14px 28px, rgba(0, 0, 0, 0.10) 0px 10px 8px"
             }}
