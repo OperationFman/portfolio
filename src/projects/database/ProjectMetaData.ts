@@ -20,7 +20,7 @@ export const projectMetaData: ProjectMetaData[] = [
         created: 1,
         images: {
             desktop: ["/projects/krank/desktop1.png", "/projects/krank/desktop2.png", "/projects/krank/desktop3.png", "/projects/krank/desktop4.png",],
-            mobile: "/projects/krank/mobile.png"
+            mobile: ["/projects/krank/mobile1.png", "/projects/krank/mobile2.png", "/projects/krank/mobile3.png", "/projects/krank/mobile4.png"]
         },
         subTitle: "Food Roulette & Currency Conversion Tool",
         deployedURL: "http://opfman.pythonanywhere.com/",

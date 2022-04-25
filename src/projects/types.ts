@@ -5,7 +5,7 @@ export type ProjectMetaData = {
     created: number;
     images: {
         desktop: Array<string>;
-        mobile?: string;
+        mobile?: Array<string>;
     }
     subTitle: string;
     deployedURL?: string;

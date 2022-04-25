@@ -60,7 +60,7 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
                             {metaData.images.mobile ? 
                                 <MobileBorder>
                                     <Image  
-                                        src={metaData.images.mobile} 
+                                        src={metaData.images.mobile[i]} 
                                         layout="fill"
                                         alt="Picture of the website on mobile"
                                         style={{
