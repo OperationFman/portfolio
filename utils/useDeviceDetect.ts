@@ -5,7 +5,7 @@ export default function useDeviceDetect() {
 
   useEffect(() => {
     const updateMobile = () => {
-      setMobile(window.innerWidth < 700 ? true : false);
+      setMobile(window.innerWidth < 800 ? true : false);
     };
 
     updateMobile();

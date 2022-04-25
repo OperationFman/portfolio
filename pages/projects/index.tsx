@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
@@ -20,7 +20,9 @@ const Projects: NextPage = () => {
       <PageContainer>
           {projectMetaData.map((dataItem) => {
             return (
-                  <ProjectItem metaData={dataItem} key={dataItem.title}/>
+              <div key={dataItem.title} style={{ position: "relative"}}>  
+                  <ProjectItem metaData={dataItem}/>
+              </div>
             );
           })}
       </PageContainer>
