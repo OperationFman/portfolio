@@ -1,9 +1,14 @@
+import { Button, Typography } from '@mui/material';
 import Image from 'next/image';
 import Carousel from "react-material-ui-carousel";
 import useDeviceDetect from "../../../../utils/useDeviceDetect";
 import { ProjectMetaData } from "../../types";
 import { LaptopBorder } from "./device-borders/LaptopBorder";
 import { MobileBorder } from "./device-borders/mobileBorder";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LanguageIcon from '@mui/icons-material/Language';
+import FormatPaintIcon from '@mui/icons-material/FormatPaint';
+import { ExternalLinkButtons } from './ExternalLinkButtons';
 
 type ProjectItemProps = {
     metaData: ProjectMetaData
@@ -24,9 +29,12 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
             }>
                 <h1 style={{
                     width: "fit-content",
-                    paddingRight: "100px",
-                    borderBottom: "2px solid #f44336"
+                    padding: "0px 100px 5px 0px",
+                    borderBottom: "2px solid #f44336",
+                    margin: "5px"
                 }}>{metaData.title}</h1>
+
+                <ExternalLinkButtons metaData={metaData}/>
 
                 <Carousel 
                 autoPlay={false} 
@@ -40,8 +48,7 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
                         backgroundColor: "transparent",
                         color: "grey"
                     }
-                }}
-                >
+                }}>
                 {
                     metaData.images.desktop.map((item, i) => 
                         <>
@@ -76,7 +83,16 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
                 }
                 </Carousel>
                 
-                <p style={{textAlign: 'center'}}>{metaData.subTitle}</p>
+                <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                        textAlign: "center",
+                        marginTop: "30px"
+                    }}
+                >
+                    {metaData.subTitle}
+                </Typography>
             </div>
     )
 }

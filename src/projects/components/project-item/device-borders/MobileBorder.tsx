@@ -14,7 +14,7 @@ export const MobileBorder = (props: MobileBorderProps) => {
             right: isMobile ? "0" : "8%",
             top: "22%",
             height: "70%",
-            width: isMobile ? "19%" : "14%",
+            width: isMobile ? "18%" : "14%",
             border: isMobile ? "4px solid #282424" : "5px solid #282424",
             borderRadius: "15px",
             backgroundColor: "#282424"

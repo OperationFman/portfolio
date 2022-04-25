@@ -25,8 +25,8 @@ export const LaptopBorder = (props: LaptopBorderProps) => {
             {children}
             </div>
             <div style={{
-                border: isMobile ? "4px solid #282424" : "7px solid #282424",  
-                backgroundColor: "#282424",
+                border: isMobile ? "4px solid #484848" : "7px solid #484848",  
+                backgroundColor: "#484848",
                 borderRadius: isMobile ? "0px 0px 8px 8px" : "0px 0px 15px 15px"
             }}
             />
