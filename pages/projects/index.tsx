@@ -20,9 +20,7 @@ const Projects: NextPage = () => {
       <PageContainer>
           {projectMetaData.map((dataItem) => {
             return (
-                <div key={dataItem.title}>
-                  <ProjectItem metaData={dataItem}/>
-                </div>
+                  <ProjectItem metaData={dataItem} key={dataItem.title}/>
             );
           })}
       </PageContainer>
