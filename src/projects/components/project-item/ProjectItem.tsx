@@ -1,13 +1,10 @@
-import { Button, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Image from 'next/image';
 import Carousel from "react-material-ui-carousel";
 import useDeviceDetect from "../../../../utils/useDeviceDetect";
 import { ProjectMetaData } from "../../types";
 import { LaptopBorder } from "./device-borders/LaptopBorder";
-import { MobileBorder } from "./device-borders/mobileBorder";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LanguageIcon from '@mui/icons-material/Language';
-import FormatPaintIcon from '@mui/icons-material/FormatPaint';
+import { MobileBorder } from "./device-borders/MobileBorder";
 import { ExternalLinkButtons } from './ExternalLinkButtons';
 
 type ProjectItemProps = {
