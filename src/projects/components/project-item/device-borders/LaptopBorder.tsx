@@ -1,4 +1,4 @@
-import useDeviceDetect from "../../../utils/useDeviceDetect";
+import useDeviceDetect from "../../../../../utils/useDeviceDetect";
 
 type LaptopBorderProps = {
     children: React.ReactNode;
@@ -28,7 +28,7 @@ export const LaptopBorder = (props: LaptopBorderProps) => {
                 border: isMobile ? "4px solid #282424" : "7px solid #282424",  
                 backgroundColor: "#282424",
                 borderRadius: isMobile ? "0px 0px 8px 8px" : "0px 0px 15px 15px",
-                boxShadow: "rgba(0, 0, 0, 0.1) 0px 14px 28px, rgba(0, 0, 0, 0.10) 0px 10px 8px"
+                boxShadow: "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
             }}
             />
         </div>

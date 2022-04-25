@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
 import { projectMetaData } from "../../src/projects/database/ProjectMetaData";
-import { ProjectItem } from "../../src/projects/ProjectItem";
+import { ProjectItem } from "../../src/projects/components/project-item/ProjectItem";
 
 const Projects: NextPage = () => {
   

@@ -1,12 +1,7 @@
 import {
-  Card,
-  CardMedia,
-  Box,
-  CardActionArea,
-  CardContent,
-  Tooltip,
-  Typography,
-  LinearProgress,
+  Box, Card, CardActionArea,
+  CardContent, CardMedia, LinearProgress, Tooltip,
+  Typography
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
