@@ -28,7 +28,7 @@ export const projectMetaData: ProjectMetaData[] = [
         created: 4,
         images: {
             desktop: ["/projects/mass-effect-crewed/desktop1.png", "/projects/mass-effect-crewed/desktop2.png", "/projects/mass-effect-crewed/desktop3.png", "/projects/mass-effect-crewed/desktop4.png", "/projects/mass-effect-crewed/desktop5.png", "/projects/mass-effect-crewed/desktop6.png", "/projects/mass-effect-crewed/desktop7.png",],
-            mobile: ["/projects/mass-effect-crewed/mobile1.jpg", "/projects/mass-effect-crewed/mobile2.jpg", "/projects/mass-effect-crewed/mobile3.jpg", "/projects/mass-effect-crewed/mobile4.jpg", "/projects/mass-effect-crewed/mobile5.jpg", "/projects/mass-effect-crewed/mobile6.jpg", "/projects/mass-effect-crewed/mobile7.jpg"]
+            mobile: ["/projects/mass-effect-crewed/mobile1.jpg", "/projects/mass-effect-crewed/mobile2.jpg", "/projects/mass-effect-crewed/mobile3.jpg", "/projects/mass-effect-crewed/mobile4.jpg", "/projects/mass-effect-crewed/mobile5.jpg", "/projects/mass-effect-crewed/mobile6.png", "/projects/mass-effect-crewed/mobile7.png"]
         },
         subTitle: "I simple management app that helps players select crew members to take on missions in the game series 'Mass Effect'. Users add and remove crew throughout the games and this tool shows you who you haven't brought on mission recently and randomly recommends them. Additionally, users can use Oauth to have their own account, saved across devices. Built using Javascript with the React Library and hosted on Heroku with Docker and a full 'deploy-to-prod-on-green' CI/CD pipeline in CircleCI",
         deployedURL: "https://mass-effect-crewed.herokuapp.com/",
@@ -49,7 +49,7 @@ export const projectMetaData: ProjectMetaData[] = [
         created: 2,
         images: {
             desktop: ["/projects/travel-blog/desktop1.png", "/projects/travel-blog/desktop2.png", "/projects/travel-blog/desktop3.png", "/projects/travel-blog/desktop4.png", "/projects/travel-blog/desktop5.png",],
-            mobile: ["/projects/travel-blog/mobile1.png", "/projects/travel-blog/mobile2.png", "/projects/travel-blog/mobile3.png", "/projects/travel-blog/mobile4.png", "/projects/travel-blog/mobile5.png"]
+            mobile: ["/projects/travel-blog/mobile1.jpg", "/projects/travel-blog/mobile2.jpg", "/projects/travel-blog/mobile3.jpg", "/projects/travel-blog/mobile4.jpg", "/projects/travel-blog/mobile5.jpg"]
         },
         subTitle: "Traveling the world is an important goal of mine, as I believe living, working and volunteering in other cultures is what can make you more open minded and receptive to new ideas. I built this site using Python with the Flask framework and Javascript with jquery for animations and automatic scaling. The focus is on design and presentation and uses external services like Google Drive for free video hosting and Mapbox for an interactive 3D map containing images",
         deployedURL: "http://frankstravelblog.pythonanywhere.com/",
