@@ -1,7 +1,4 @@
 {
-    "editor.fontSize": 18,
-    "cSpell.words": [
-        "Mapbox",
-        "Vercel"
-    ]
+  "editor.fontSize": 14,
+  "cSpell.words": ["Mapbox", "Vercel"]
 }

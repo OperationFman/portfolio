@@ -17,6 +17,7 @@
     "@mui/material": "^5.5.3",
     "@mui/styles": "^5.5.3",
     "@react-native-community/eslint-config": "^3.0.1",
+    "@react-spring/parallax": "^9.4.4",
     "next": "^12.1.4",
     "notion-client": "^6.1.0",
     "notion-types": "^6.0.26",
