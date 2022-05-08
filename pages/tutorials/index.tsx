@@ -1,4 +1,4 @@
-import { Dialog, Grid } from "@mui/material";
+import { Dialog, Grid, Zoom } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
@@ -70,11 +70,18 @@ const Tutorials: NextPage = () => {
         </div>
 
         <Grid container spacing={3} justifyContent="center">
-          {metaData.map((dataItem) => {
+          {metaData.map((dataItem, index) => {
             return (
-              <Grid item key={dataItem.title}>
-                <TutorialCard cardData={dataItem} accentColor={"#ce93d8"} />
-              </Grid>
+              <Zoom
+                in={true}
+                key={dataItem.title}
+                style={{ transitionDelay: `${index + 1}00ms` }}
+                unmountOnExit
+              >
+                <Grid item>
+                  <TutorialCard cardData={dataItem} accentColor={"#ce93d8"} />
+                </Grid>
+              </Zoom>
             );
           })}
         </Grid>
