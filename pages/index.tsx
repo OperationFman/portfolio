@@ -75,6 +75,9 @@ const Home: NextPage = () => {
           >
             <Button
               onClick={() => {
+                {
+                  /* @ts-ignore */
+                }
                 ref.current.scrollTo(0.5);
               }}
             >
@@ -90,6 +93,9 @@ const Home: NextPage = () => {
 
             <Button
               onClick={() => {
+                {
+                  /* @ts-ignore */
+                }
                 ref.current.scrollTo(1);
               }}
             >
@@ -109,7 +115,7 @@ const Home: NextPage = () => {
             <ul>
               <li>Self taught - programming - journey to TW</li>
               <li>Designer - Abo coop</li>
-              <li>Qualified - Bachelor's/Masters - studies completed</li>
+              <li>Qualified - Bachelors/Masters - studies completed</li>
               <li>Volunteering - media literacy</li>
               <li>Post production</li>
               <li>Hardware - servers and repair work/goals</li>
@@ -117,6 +123,9 @@ const Home: NextPage = () => {
 
             <Button
               onClick={() => {
+                {
+                  /* @ts-ignore */
+                }
                 ref.current.scrollTo(2);
               }}
             >
@@ -136,6 +145,9 @@ const Home: NextPage = () => {
             <p>Use LinkedIn API / List experience</p>
             <Button
               onClick={() => {
+                {
+                  /* @ts-ignore */
+                }
                 ref.current.scrollTo(3);
               }}
             >
