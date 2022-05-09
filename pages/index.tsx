@@ -1,16 +1,12 @@
 import { Button } from "@mui/material";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import type { NextPage } from "next";
-import { useRef } from "react";
 
 const Home: NextPage = () => {
-  const ref = useRef();
-
   return (
     <>
       <div>
-        {/* @ts-ignore */}
-        <Parallax pages={6} ref={ref}>
+        <Parallax pages={5}>
           <ParallaxLayer
             offset={0}
             speed={0.05}
@@ -68,39 +64,18 @@ const Home: NextPage = () => {
           <ParallaxLayer
             offset={0.8}
             speed={1.5}
-            factor={1.75}
+            factor={1}
             style={{
               backgroundColor: "purple",
             }}
           >
-            <Button
-              onClick={() => {
-                {
-                  /* @ts-ignore */
-                }
-                ref.current.scrollTo(0.5);
-              }}
-            >
-              Jump to profile
-            </Button>
             <h3>Leave space here for image</h3>
-            <h1 style={{ paddingTop: "200px" }}>Name & Role(s) (Changing)</h1>
+            <h1 style={{ paddingTop: "100px" }}>Name & Role(s) (Changing)</h1>
             <ul>
               <li>Quick bio</li>
               <li>Who I am (+ mob)</li>
               <li>Where I am</li>
             </ul>
-
-            <Button
-              onClick={() => {
-                {
-                  /* @ts-ignore */
-                }
-                ref.current.scrollTo(1);
-              }}
-            >
-              Jump to Qualifications
-            </Button>
           </ParallaxLayer>
 
           <ParallaxLayer
@@ -120,21 +95,10 @@ const Home: NextPage = () => {
               <li>Post production</li>
               <li>Hardware - servers and repair work/goals</li>
             </ul>
-
-            <Button
-              onClick={() => {
-                {
-                  /* @ts-ignore */
-                }
-                ref.current.scrollTo(2);
-              }}
-            >
-              Jump to experience
-            </Button>
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={2}
+            offset={1.5}
             speed={1}
             factor={1}
             style={{
@@ -143,20 +107,10 @@ const Home: NextPage = () => {
           >
             <h1>Work Experience</h1>
             <p>Use LinkedIn API / List experience</p>
-            <Button
-              onClick={() => {
-                {
-                  /* @ts-ignore */
-                }
-                ref.current.scrollTo(3);
-              }}
-            >
-              Jump to Salary & Contact
-            </Button>
           </ParallaxLayer>
 
           <ParallaxLayer
-            offset={3}
+            offset={1.9}
             speed={1}
             factor={1}
             style={{
@@ -171,7 +125,16 @@ const Home: NextPage = () => {
               <li>Global Travel</li>
               <li>Work/Life Balance</li>
             </ul>
+          </ParallaxLayer>
 
+          <ParallaxLayer
+            offset={2}
+            speed={1}
+            factor={1}
+            style={{
+              backgroundColor: "green",
+            }}
+          >
             <h1>Contact Form</h1>
             <ul>
               <li>Subject</li>
