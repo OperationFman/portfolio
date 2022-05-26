@@ -52,9 +52,7 @@ const Home: NextPage = () => {
         <div style={{display: "grid", alignItems: "center", justifyContent: "center"}}>
           <img src="/homepage/parallax/Light6-01.svg" alt="Light1" />
         </div>
-        <div style={{height: "10000px", backgroundColor: "#1565C0"}}>
-
-        </div>
+        <div style={{height: "2000px", backgroundColor: "#1565C0"}}/>
       </ParallaxLayer>
       <ParallaxLayer
         offset={-0.1}
@@ -62,6 +60,7 @@ const Home: NextPage = () => {
         <div style={{display: "grid", alignItems: "center", justifyContent: "center"}}>
           <img src="/homepage/parallax/Light7-01.svg" alt="Light1" />
         </div>
+        <div style={{height: "2000px", backgroundColor: "#01579B"}}/>
       </ParallaxLayer>
 
       
