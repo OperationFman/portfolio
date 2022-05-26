@@ -6,60 +6,67 @@ const Home: NextPage = () => {
   return (
     <Parallax pages={6}>
       <ParallaxLayer
-        offset={0}
-        speed={0.05}
-        style={{
-          backgroundColor: "blue",
-        }}
-      />
+        offset={-0.6}
+        speed={-0.5}
+      >
+        <div style={{display: "grid", alignItems: "center", justifyContent: "center", height: "30%"}}>
+          <img src="/homepage/parallax/Light1-01.svg" alt="Light1" />
+        </div>
+      </ParallaxLayer>
       <ParallaxLayer
-        offset={0.1}
-        speed={0.1}
-        style={{
-          backgroundColor: "green",
-        }}
-      />
+        offset={-0.7}
+        speed={-0.6}
+      >
+        <div style={{display: "grid", alignItems: "center", justifyContent: "center", height: "30%"}}>
+          <img src="/homepage/parallax/Light2-01.svg" alt="Light1" />
+        </div>
+      </ParallaxLayer>
       <ParallaxLayer
-        offset={0.1}
-        speed={0.2}
-        style={{
-          backgroundColor: "red",
-        }}
-      />
+        offset={-0.7}
+        speed={-0.55}
+      >
+        <div style={{display: "grid", alignItems: "center", justifyContent: "center", height: "30%"}}>
+          <img src="/homepage/parallax/Light3-01.svg" alt="Light1" />
+        </div>
+      </ParallaxLayer>
       <ParallaxLayer
-        offset={0.22}
-        speed={0.3}
-        style={{
-          backgroundColor: "pink",
-        }}
-      />
+        offset={-0.52}
+        speed={-0.4}
+      >
+        <div style={{display: "grid", alignItems: "center", justifyContent: "center", height: "30%"}}>
+          <img src="/homepage/parallax/Light4-01.svg" alt="Light1" />
+        </div>
+      </ParallaxLayer>
+      <ParallaxLayer
+        offset={-0.4}
+        speed={-0.3}
+      >
+        <div style={{display: "grid", alignItems: "center", justifyContent: "center", height: "30%"}}>
+          <img src="/homepage/parallax/Light5-01.svg" alt="Light1" />
+        </div>
+      </ParallaxLayer>
+      <ParallaxLayer
+        offset={-0.3}
+        speed={-0.2}
+      >
+        <div style={{display: "grid", alignItems: "center", justifyContent: "center", height: "30%"}}>
+          <img src="/homepage/parallax/Light6-01.svg" alt="Light1" />
+        </div>
+      </ParallaxLayer>
+      <ParallaxLayer
+        offset={-0.1}
+      >
+        <div style={{display: "grid", alignItems: "center", justifyContent: "center", height: "30%"}}>
+          <img src="/homepage/parallax/Light7-01.svg" alt="Light1" />
+        </div>
+      </ParallaxLayer>
 
+      
       <ParallaxLayer
-        offset={0.3}
-        speed={0.5}
-        style={{
-          backgroundColor: "grey",
-        }}
-      />
-      <ParallaxLayer
-        offset={0.4}
-        speed={0.7}
-        style={{
-          backgroundColor: "cyan",
-        }}
-      />
-      <ParallaxLayer
-        offset={0.5}
-        speed={0.8}
-        style={{
-          backgroundColor: "yellow",
-        }}
-      />
-      <ParallaxLayer
-        offset={0.7}
+        offset={1}
         factor={1.3}
         style={{
-          backgroundColor: "purple",
+          backgroundColor: "#01579B",
         }}
       >
         <h1 style={{ paddingTop: "100px" }}>Name & Role(s) (Changing)</h1>
