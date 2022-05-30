@@ -1229,6 +1229,19 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.5.tgz#2c40f81449a4e554e9fc6396910ed4843ec2be50"
   integrity sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==
 
+"@emotion/react@^11.7.1":
+  version "11.9.0"
+  resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.9.0.tgz#b6d42b1db3bd7511e7a7c4151dc8bc82e14593b8"
+  integrity sha512-lBVSF5d0ceKtfKCDQJveNAtkC7ayxpVlgOohLgXqRwqWr9bOf4TZAFFyIcNngnV6xK6X4x2ZeXq7vliHkoVkxQ==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@emotion/babel-plugin" "^11.7.1"
+    "@emotion/cache" "^11.7.1"
+    "@emotion/serialize" "^1.0.3"
+    "@emotion/utils" "^1.1.0"
+    "@emotion/weak-memoize" "^0.2.5"
+    hoist-non-react-statics "^3.3.1"
+
 "@emotion/react@^11.8.2":
   version "11.8.2"
   resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.8.2.tgz#e51f5e6372e22e82780836c9288da19af4b51e70"
@@ -1253,12 +1266,23 @@
     "@emotion/utils" "^1.0.0"
     csstype "^3.0.2"
 
+"@emotion/serialize@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.0.3.tgz#99e2060c26c6292469fb30db41f4690e1c8fea63"
+  integrity sha512-2mSSvgLfyV3q+iVh3YWgNlUc2a9ZlDU7DjuP5MjK3AXRR0dYigCrP99aeFtaB2L/hjfEZdSThn5dsZ0ufqbvsA==
+  dependencies:
+    "@emotion/hash" "^0.8.0"
+    "@emotion/memoize" "^0.7.4"
+    "@emotion/unitless" "^0.7.5"
+    "@emotion/utils" "^1.0.0"
+    csstype "^3.0.2"
+
 "@emotion/sheet@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.1.0.tgz#56d99c41f0a1cda2726a05aa6a20afd4c63e58d2"
   integrity sha512-u0AX4aSo25sMAygCuQTzS+HsImZFuS8llY8O7b9MDRzbJM0kVJlAz6KNDqcG7pOuQZJmj/8X/rAW+66kMnMW+g==
 
-"@emotion/styled@^11.8.1":
+"@emotion/styled@^11.6.0", "@emotion/styled@^11.8.1":
   version "11.8.1"
   resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.8.1.tgz#856f6f63aceef0eb783985fa2322e2bf66d04e17"
   integrity sha512-OghEVAYBZMpEquHZwuelXcRjRJQOVayvbmNR0zr174NHdmMgrNkLC6TljKC5h9lZLkN5WGrdUcrKlOJ4phhoTQ==
@@ -1557,12 +1581,51 @@
     prop-types "^15.7.2"
     react-is "^17.0.2"
 
+"@mui/base@5.0.0-alpha.82":
+  version "5.0.0-alpha.82"
+  resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.82.tgz#19645af6790a79587517a5782ee32bf9ab7f7ac8"
+  integrity sha512-WUVDjCGnLXzmGxrmfW31blhucg0sRX4YddK2Falq7FlVzwdJaPgWn/xzPZmdLL0+WXon0gQVnDrq2qvggE/GMg==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+    "@emotion/is-prop-valid" "^1.1.2"
+    "@mui/types" "^7.1.3"
+    "@mui/utils" "^5.8.0"
+    "@popperjs/core" "^2.11.5"
+    clsx "^1.1.1"
+    prop-types "^15.8.1"
+    react-is "^17.0.2"
+
+"@mui/icons-material@^5.4.1":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.8.0.tgz#c85768434bda885c64a8e4b9e222e73912244570"
+  integrity sha512-ScwLxa0q5VYV70Jfc60V/9VD0b9SvIeZ0Jddx2Dt2pBUFFO9vKdrbt9LYiT+4p21Au5NdYIb2XSHj46CLN1v3g==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+
 "@mui/icons-material@^5.5.1":
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.5.1.tgz#848a57972617411370775980cbc6990588d4aafb"
   integrity sha512-40f68p5+Yhq3dCn3QYHqQt5RETPyR3AkDw+fma8PtcjqvZ+d+jF84kFmT6NqwA3he7TlwluEtkyAmPzUE4uPdA==
   dependencies:
     "@babel/runtime" "^7.17.2"
+
+"@mui/material@^5.4.1":
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.8.1.tgz#ff3c0dc65cf975362f8b141d4713a6d88b9f08e9"
+  integrity sha512-Vl3BHFzOcAT5TJfvzoQUyuo/Xckn+/NSRyJ8upM4Hbz6Y1egW6P8f1RCa4FdkEfPSd5wSSYdmPfAiEh8eI4rPg==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+    "@mui/base" "5.0.0-alpha.82"
+    "@mui/system" "^5.8.1"
+    "@mui/types" "^7.1.3"
+    "@mui/utils" "^5.8.0"
+    "@types/react-transition-group" "^4.4.4"
+    clsx "^1.1.1"
+    csstype "^3.0.11"
+    hoist-non-react-statics "^3.3.2"
+    prop-types "^15.8.1"
+    react-is "^17.0.2"
+    react-transition-group "^4.4.2"
 
 "@mui/material@^5.5.3":
   version "5.5.3"
@@ -1591,6 +1654,15 @@
     "@mui/utils" "^5.5.3"
     prop-types "^15.7.2"
 
+"@mui/private-theming@^5.8.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@mui/private-theming/-/private-theming-5.8.0.tgz#7d927e7e12616dc10b0dcbe665df2c00ed859796"
+  integrity sha512-MjRAneTmCKLR9u2S4jtjLUe6gpHxlbb4g2bqpDJ2PdwlvwsWIUzbc/gVB4dvccljXeWxr5G2M/Co2blXisvFIw==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+    "@mui/utils" "^5.8.0"
+    prop-types "^15.8.1"
+
 "@mui/styled-engine@^5.5.2":
   version "5.5.2"
   resolved "https://registry.yarnpkg.com/@mui/styled-engine/-/styled-engine-5.5.2.tgz#1f92dd27d76f0b7df7aa52c7c7a710e59b2275a6"
@@ -1599,6 +1671,15 @@
     "@babel/runtime" "^7.17.2"
     "@emotion/cache" "^11.7.1"
     prop-types "^15.7.2"
+
+"@mui/styled-engine@^5.8.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@mui/styled-engine/-/styled-engine-5.8.0.tgz#89ed42efe7c8749e5a60af035bc5d3a6bea362bf"
+  integrity sha512-Q3spibB8/EgeMYHc+/o3RRTnAYkSl7ROCLhXJ830W8HZ2/iDiyYp16UcxKPurkXvLhUaILyofPVrP3Su2uKsAw==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+    "@emotion/cache" "^11.7.1"
+    prop-types "^15.8.1"
 
 "@mui/styles@^5.5.3":
   version "5.5.3"
@@ -1622,6 +1703,20 @@
     jss-plugin-rule-value-function "^10.8.2"
     jss-plugin-vendor-prefixer "^10.8.2"
     prop-types "^15.7.2"
+
+"@mui/system@^5.4.1", "@mui/system@^5.8.1":
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/@mui/system/-/system-5.8.1.tgz#57863657c5dc3edb6b2b11836dede3e0c4871ae9"
+  integrity sha512-kWJMEN62+HJb4LMRNEAZQYc++FPYsqPsU9dCL7ByLgmz/ZzRrZ8FjDi2r4j0ZeE4kaVvqBXh+RA7tLzmCKqV9w==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+    "@mui/private-theming" "^5.8.0"
+    "@mui/styled-engine" "^5.8.0"
+    "@mui/types" "^7.1.3"
+    "@mui/utils" "^5.8.0"
+    clsx "^1.1.1"
+    csstype "^3.0.11"
+    prop-types "^15.8.1"
 
 "@mui/system@^5.5.3":
   version "5.5.3"
@@ -1651,6 +1746,17 @@
     "@types/prop-types" "^15.7.4"
     "@types/react-is" "^16.7.1 || ^17.0.0"
     prop-types "^15.7.2"
+    react-is "^17.0.2"
+
+"@mui/utils@^5.8.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@mui/utils/-/utils-5.8.0.tgz#4b1d19cbcf70773283375e763b7b3552b84cb58f"
+  integrity sha512-7LgUtCvz78676iC0wpTH7HizMdCrTphhBmRWimIMFrp5Ph6JbDFVuKS1CwYnWWxRyYKL0QzXrDL0lptAU90EXg==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+    "@types/prop-types" "^15.7.5"
+    "@types/react-is" "^16.7.1 || ^17.0.0"
+    prop-types "^15.8.1"
     react-is "^17.0.2"
 
 "@next/env@12.1.4":
@@ -1750,6 +1856,11 @@
   version "2.11.4"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.4.tgz#d8c7b8db9226d2d7664553a0741ad7d0397ee503"
   integrity sha512-q/ytXxO5NKvyT37pmisQAItCFqA7FD/vNb8dgaJy3/630Fsc+Mz9/9f2SziBoIZ30TJooXyTwZmhi1zjXmObYg==
+
+"@popperjs/core@^2.11.5":
+  version "2.11.5"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.5.tgz#db5a11bf66bdab39569719555b0f76e138d7bd64"
+  integrity sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==
 
 "@react-native-community/eslint-config@^3.0.1":
   version "3.0.1"
@@ -2158,6 +2269,11 @@
   version "15.7.4"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
+
+"@types/prop-types@^15.7.5":
+  version "15.7.5"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
+  integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
 "@types/react-addons-linked-state-mixin@*":
   version "0.14.22"
@@ -5853,11 +5969,16 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-material-ui-carousel@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/react-material-ui-carousel/-/react-material-ui-carousel-3.1.1.tgz#84c97304a4e9eea6e537736367d0102c30b289cf"
-  integrity sha512-MmU0eQ9NXMAfPOoK8mR5qPBdMvrtIPXq+FHRiiT+FDXQARKoLO4G1UJP/iMQHWx+9/w9hF8QfZvxZSSs3ab+nA==
+react-material-ui-carousel@3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/react-material-ui-carousel/-/react-material-ui-carousel-3.4.1.tgz#96d9be40376e0ef76e2d90edfbbb44fd32192a48"
+  integrity sha512-6wJLUWdqr6jZ6SB9PhUPgppc3tymqKjHifHnCengLPEmqlo0qmtm3xxGqUMCgxLc+SxrLOFQqw9elkOGjuIuiA==
   dependencies:
+    "@emotion/react" "^11.7.1"
+    "@emotion/styled" "^11.6.0"
+    "@mui/icons-material" "^5.4.1"
+    "@mui/material" "^5.4.1"
+    "@mui/system" "^5.4.1"
     framer-motion "^4.1.17"
 
 react-modal@^3.14.3:
