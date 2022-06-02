@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 						justifyContent: "center",
 					}}>
 					<img
-						src='/homepage/parallax/Light1.svg'
+						src='/homepage/parallax/light/Light1.svg'
 						alt='Light1'
 						height={`${windowHeight}px`}
 					/>
@@ -38,7 +38,21 @@ const Home: NextPage = () => {
 						justifyContent: "center",
 					}}>
 					<img
-						src='/homepage/parallax/Light2.svg'
+						src='/homepage/parallax/light/Light2.svg'
+						alt='Light1'
+						height={`${windowHeight}px`}
+					/>
+				</div>
+			</ParallaxLayer>
+			<ParallaxLayer offset={0} speed={0.1}>
+				<div
+					style={{
+						display: "grid",
+						alignItems: "center",
+						justifyContent: "center",
+					}}>
+					<img
+						src='/homepage/parallax/light/Light3.svg'
 						alt='Light1'
 						height={`${windowHeight}px`}
 					/>
@@ -52,7 +66,7 @@ const Home: NextPage = () => {
 						justifyContent: "center",
 					}}>
 					<img
-						src='/homepage/parallax/Light3.svg'
+						src='/homepage/parallax/light/Light4.svg'
 						alt='Light1'
 						height={`${windowHeight}px`}
 					/>
@@ -66,7 +80,7 @@ const Home: NextPage = () => {
 						justifyContent: "center",
 					}}>
 					<img
-						src='/homepage/parallax/Light4.svg'
+						src='/homepage/parallax/light/Light5.svg'
 						alt='Light1'
 						height={`${windowHeight}px`}
 					/>
@@ -80,7 +94,7 @@ const Home: NextPage = () => {
 						justifyContent: "center",
 					}}>
 					<img
-						src='/homepage/parallax/Light5.svg'
+						src='/homepage/parallax/light/Light6.svg'
 						alt='Light1'
 						height={`${windowHeight}px`}
 					/>
@@ -94,7 +108,7 @@ const Home: NextPage = () => {
 						justifyContent: "center",
 					}}>
 					<img
-						src='/homepage/parallax/Light6.svg'
+						src='/homepage/parallax/light/Light7.svg'
 						alt='Light1'
 						height={`${windowHeight}px`}
 					/>
@@ -110,7 +124,7 @@ const Home: NextPage = () => {
 						justifyContent: "center",
 					}}>
 					<img
-						src='/homepage/parallax/Light7.svg'
+						src='/homepage/parallax/light/Light8.svg'
 						alt='Light1'
 						height={`${windowHeight}px`}
 					/>
