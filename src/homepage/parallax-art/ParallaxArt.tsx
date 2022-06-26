@@ -97,21 +97,15 @@ export const ParallaxArt = () => {
 						alt='Light8'
 						height={`${windowHeight}px`}
 					/>
-				</div>
-			</ParallaxLayer>
-			<ParallaxLayer offset={0.89}>
-				<Box
-					sx={{
-						height: "40%",
-						backgroundColor: "background.default",
-						...styles.centerImage,
-					}}>
-					<img
-						src='/homepage/HoneycombPattern.svg'
-						alt='Light8'
-						height={`${windowHeight}px`}
+					{/* Homepage parallax bleeds into second page when scrolling begins, this hides it */}
+					<Box
+						sx={{
+							height: "100vh",
+							backgroundColor: "background.default",
+							...styles.centerImage,
+						}}
 					/>
-				</Box>
+				</div>
 			</ParallaxLayer>
 		</>
 	);

@@ -1,25 +1,38 @@
-
 import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
 import "prismjs/themes/prism-tomorrow.css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "react-notion-x/src/styles.css";
 import { Navbar } from "../src/global/navigation/Navbar";
 import { GlobalTheme } from "../themes/GlobalTheme";
+import { isClientSide } from "../utils/isClientSide";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [darkMode, setDarkMode] = useState(false);
+	const [darkMode, setDarkMode] = useState(false);
+	const router = useRouter();
 
-  useEffect(() => {
-    setDarkMode(localStorage.getItem("dark-mode") === "true");
-  }, []);
+	useEffect(() => {
+		const handleRouteChange = (url: string) => {
+			// React Spring Parallax needed scrollbar removed for Homepage.tsx, this adds it back for other pages:
+			if (url !== "/" && isClientSide()) {
+				document.body.style.overflow = "visible";
+			}
+		};
 
-  return (
-    <GlobalTheme darkMode={darkMode}>
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+		router.events.on("routeChangeStart", handleRouteChange);
+	}, []);
 
-      <Component {...pageProps} />
-    </GlobalTheme>
-  );
+	useEffect(() => {
+		setDarkMode(localStorage.getItem("dark-mode") === "true");
+	}, []);
+
+	return (
+		<GlobalTheme darkMode={darkMode}>
+			<Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+
+			<Component {...pageProps} />
+		</GlobalTheme>
+	);
 }
 
 export default MyApp;
