@@ -6,9 +6,9 @@ import { projectMetaData } from "../../src/projects/database/ProjectMetaData";
 import { ProjectItem } from "../../src/projects/components/project-item/ProjectItem";
 
 const Projects: NextPage = () => {
-  
-  
-  
+  // Todo: Temporary fix for react-material-ui-carousel not resizing properly on initial page load
+  setTimeout(() => {}, 100);
+
   return (
     <div>
       <Head>
@@ -18,13 +18,13 @@ const Projects: NextPage = () => {
       </Head>
 
       <PageContainer>
-          {projectMetaData.map((dataItem) => {
-            return (
-              <div key={dataItem.title} style={{ position: "relative"}}>  
-                  <ProjectItem metaData={dataItem}/>
-              </div>
-            );
-          })}
+        {projectMetaData.map((dataItem) => {
+          return (
+            <div key={dataItem.title} style={{ position: "relative" }}>
+              <ProjectItem metaData={dataItem} />
+            </div>
+          );
+        })}
       </PageContainer>
     </div>
   );
