@@ -7,7 +7,7 @@ import { ProjectItem } from "../../src/projects/components/project-item/ProjectI
 
 const Projects: NextPage = () => {
   // Todo: Temporary fix for react-material-ui-carousel not resizing properly on initial page load
-  setTimeout(() => {}, 100);
+  setTimeout(() => {}, 500);
 
   return (
     <div>
