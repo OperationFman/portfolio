@@ -1,34 +1,31 @@
 import { Parallax } from "@react-spring/parallax";
+import { useRouter } from "next/router";
+import { shouldShowScrollBar } from "../../utils/shouldShowScrollbar";
 import { Biography } from "./bio/Biography";
 import { ContactForm } from "./ContactForm.tsx/ContactForm";
 import { ParallaxArt } from "./parallax-art/ParallaxArt";
 import { Qualifications } from "./qualifications/Qualifications";
 import { SalaryExpectation } from "./salary/SalaryExpectations";
 import { WorkExperience } from "./work-experience/WorkExperience";
-import { isClientSide } from "../../utils/isClientSide";
-import { useRouter } from "next/router";
 
 export const Homepage = () => {
-	const router = useRouter();
+  const router = useRouter();
 
-	if (router.pathname === "/" && isClientSide()) {
-		// React Spring Parallax adds second unremovable scrollbar
-		document.body.style.overflow = "hidden";
-	}
+  shouldShowScrollBar(router);
 
-	return (
-		<Parallax pages={6}>
-			<ParallaxArt />
+  return (
+    <Parallax pages={6}>
+      <ParallaxArt />
 
-			<Biography />
+      <Biography />
 
-			<Qualifications />
+      <Qualifications />
 
-			<WorkExperience />
+      <WorkExperience />
 
-			<SalaryExpectation />
+      <SalaryExpectation />
 
-			<ContactForm />
-		</Parallax>
-	);
+      <ContactForm />
+    </Parallax>
+  );
 };
