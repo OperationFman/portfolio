@@ -8,12 +8,8 @@ export const TitleSectionStyles = {
     fontWeight: "bold",
   },
   autoType: {
-    fontSize: "45px",
+    fontSize: "50px",
     fontWeight: "lighter",
-  },
-  autoTypeCursor: {
-    color: "#1565C0",
-    fontSize: "75px",
   },
   blurb: { fontStyle: "italic", marginTop: "50px" },
 };

@@ -46,7 +46,9 @@ export const TitleSection = () => {
       <ReactTypingEffect
         text={["Developer", "Volunteer", "Designer"]}
         cursorRenderer={(cursor: string) => (
-          <span style={TitleSectionStyles.autoTypeCursor}>{cursor}</span>
+          <span style={{ color: "#1565C0", ...TitleSectionStyles.autoType }}>
+            {cursor}
+          </span>
         )}
         displayTextRenderer={(text: string) => {
           return <span style={TitleSectionStyles.autoType}>{text}</span>;
