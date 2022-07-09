@@ -1,9 +1,34 @@
 import { Typography } from "@mui/material";
+import { intervalToDuration } from "date-fns";
+import { useEffect, useState } from "react";
 // @ts-ignore
 import ReactTypingEffect from "react-typing-effect";
 import { TitleSectionStyles } from "./TitleSectionStyles";
 
 export const TitleSection = () => {
+  const timeWorked = () => {
+    return intervalToDuration({
+      start: new Date("August 2, 2021 09:00:00"),
+      end: new Date(),
+    });
+  };
+
+  const [periodWorked, setPeriodWorked] = useState<Duration>(timeWorked());
+
+  useEffect(() => {
+    const thirtySecondInterval = setInterval(() => {
+      setPeriodWorked(timeWorked());
+    }, 30 * 1000);
+    return () => clearInterval(thirtySecondInterval);
+  });
+
+  const pluralTime = (timeUnit: string, value: number | undefined) => {
+    if (value === undefined) {
+      return `0 ${timeUnit}s`;
+    }
+    return value === 1 ? `${value} ${timeUnit}` : `${value} ${timeUnit}s`;
+  };
+
   return (
     <div style={TitleSectionStyles.container}>
       <span style={TitleSectionStyles.titleFont}>Franklin</span>
@@ -39,7 +64,14 @@ export const TitleSection = () => {
         volunteering globally and advocating for social change
         <br />
         <br />
-        Practicing professional for x years x months x days x hours x minutes
+        Practicing professional for {pluralTime(
+          "year",
+          periodWorked?.years
+        )}{" "}
+        {pluralTime("month", periodWorked?.months)}{" "}
+        {pluralTime("day", periodWorked?.days)}{" "}
+        {pluralTime("hour", periodWorked?.hours)}{" "}
+        {pluralTime("minute", periodWorked?.minutes)}{" "}
       </Typography>
     </div>
   );
