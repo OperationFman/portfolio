@@ -98,22 +98,11 @@ export const ParallaxArt = () => {
             height={`${windowHeight}px`}
           />
           {/* Homepage parallax bleeds into second page when scrolling begins, this hides it */}
-
           <Box
             sx={{
               height: "100vh",
               backgroundColor: "background.default",
               position: "relative",
-              ...styles.centerImage,
-            }}
-          />
-          <Box
-            sx={{
-              height: "100px",
-              width: "100%",
-              position: "absolute",
-              borderRadius: "0 0 40% 40%",
-              backgroundColor: "#00579b",
               ...styles.centerImage,
             }}
           />
