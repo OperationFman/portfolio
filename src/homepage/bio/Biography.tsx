@@ -1,14 +1,42 @@
 import { ParallaxLayer } from "@react-spring/parallax";
+import Image from "next/image";
+import { PageContainer } from "../../global/PageContainer";
+import { TitleSection } from "./TitleSection";
 
 export const Biography = () => {
-	return (
-		<ParallaxLayer offset={1} factor={1}>
-			<h1>Name & Role(s) (Changing)</h1>
-			<ul>
-				<li>Quick bio</li>
-				<li>Who I am (+ mob)</li>
-				<li>Where I am</li>
-			</ul>
-		</ParallaxLayer>
-	);
+  return (
+    <ParallaxLayer offset={1} factor={1}>
+      {/* <h1>Name & Role(s) (Changing)</h1>
+      <ul>
+        <li>Headshot</li>
+        <li>Quick bio, indigenous, who I am, where I am</li>
+        <li>Education</li>
+        <li>
+          Goals (immigration and volunteering) - include nicely animated map
+          bits
+        </li>
+        <li>Vague interests</li>
+      </ul> */}
+      <PageContainer>
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <div
+            style={{
+              width: "50%",
+              marginTop: "auto",
+            }}
+          >
+            <TitleSection />
+          </div>
+          <div style={{ width: "50%" }}>
+            <Image
+              src="/homepage/placeholder.png"
+              width="612"
+              height="408"
+              alt="Head shot"
+            />
+          </div>
+        </div>
+      </PageContainer>
+    </ParallaxLayer>
+  );
 };
