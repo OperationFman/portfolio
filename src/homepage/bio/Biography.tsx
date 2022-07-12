@@ -3,7 +3,7 @@ import { ParallaxLayer } from "@react-spring/parallax";
 import Image from "next/image";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { PageContainer } from "../../global/PageContainer";
-import { JumpToCard } from "./JumpToCard";
+import { JumpToCard } from "./components/JumpToCard";
 import { TitleSection } from "./TitleSection";
 
 export const Biography = () => {

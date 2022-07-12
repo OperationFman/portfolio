@@ -1,6 +1,4 @@
-import { fireEvent, render } from "@testing-library/react";
-import { debug } from "console";
-import Router from "next/router";
+import { render } from "@testing-library/react";
 import { testTutorialMetaDataItem } from "../../test-helpers/tutorialMetaDataItem";
 import { TutorialCard } from "./TutorialCard";
 
@@ -20,12 +18,12 @@ describe("TutorialCard", () => {
       <TutorialCard cardData={metaData} accentColor={"#ce93d8"} />
     );
 
-    expect(getByText("Programming")).toBeTruthy();
-    expect(getByText("Quickly Setup NextJs ES6 with Typescript")).toBeTruthy();
+    expect(getByText("Programming")).toBeDefined();
+    expect(getByText("Quickly Setup NextJs ES6 with Typescript")).toBeDefined();
     expect(
       getByText(
         "Get up-and-running with a cleaned up but ready to go repo using nextJs. Includes settin..."
       )
-    ).toBeTruthy();
+    ).toBeDefined();
   });
 });

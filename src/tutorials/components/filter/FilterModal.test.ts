@@ -33,15 +33,15 @@ describe("FilterModal", () => {
       )
     );
 
-    expect(getByText("Filter")).toBeTruthy();
+    expect(getByText("Filter")).toBeDefined();
 
-    expect(getAllByText("Topic")).toBeTruthy();
-    expect(getByText("Programming")).toBeTruthy();
+    expect(getAllByText("Topic")).toBeDefined();
+    expect(getByText("Programming")).toBeDefined();
 
-    expect(getAllByText("Languages")).toBeTruthy();
-    expect(getByText("Typescript")).toBeTruthy();
+    expect(getAllByText("Languages")).toBeDefined();
+    expect(getByText("Typescript")).toBeDefined();
 
-    expect(getAllByText("Tags")).toBeTruthy();
-    expect(getByText("Snippet")).toBeTruthy();
+    expect(getAllByText("Tags")).toBeDefined();
+    expect(getByText("Snippet")).toBeDefined();
   });
 });
