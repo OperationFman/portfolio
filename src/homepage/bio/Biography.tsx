@@ -4,6 +4,7 @@ import Image from "next/image";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { PageContainer } from "../../global/PageContainer";
 import { JumpToCard } from "./components/JumpToCard";
+import { PageDownIcon } from "./components/PageDownIcon";
 import { TitleSection } from "./TitleSection";
 
 export const Biography = () => {
@@ -62,6 +63,7 @@ export const Biography = () => {
       <PageContainer>
         {isMobile ? <MobileBiography /> : <DesktopBiography />}
       </PageContainer>
+      {!isMobile && <PageDownIcon />}
     </ParallaxLayer>
   );
 };

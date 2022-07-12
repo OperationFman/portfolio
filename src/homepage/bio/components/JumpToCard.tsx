@@ -18,19 +18,19 @@ export const JumpToCard = (props: JumpToCardProps) => {
   const { text } = props;
 
   return (
-    <Grid item>
+    <Grid item sx={{ margin: "0px 50px" }}>
       <Tooltip title="Jump To..." followCursor enterDelay={200}>
         <Card
           sx={{
-            maxWidth: 345,
+            maxWidth: 200,
             boxShadow: 0,
           }}
         >
           <CardActionArea>
-            {/* Do an animation when hovered on */}
+            {/* TODO: Swap with better images and do an animation when hovered on */}
             <CardMedia
               component="img"
-              height="180"
+              height="100"
               alt="Test"
               image="vercel.svg"
             />
