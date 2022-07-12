@@ -1,6 +1,8 @@
+import { Grid } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
 import Image from "next/image";
 import { PageContainer } from "../../global/PageContainer";
+import { JumpToCard } from "./JumpToCard";
 import { TitleSection } from "./TitleSection";
 
 export const Biography = () => {
@@ -35,6 +37,13 @@ export const Biography = () => {
               alt="Head shot"
             />
           </div>
+        </div>
+        <div style={{ marginTop: "100px" }}>
+          <Grid container spacing={3} justifyContent="center">
+            <JumpToCard text={"Education"} />
+            <JumpToCard text={"Experience"} />
+            <JumpToCard text={"Expectations"} />
+          </Grid>
         </div>
       </PageContainer>
     </ParallaxLayer>

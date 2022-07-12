@@ -1,9 +1,8 @@
-import { Box, Button } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
-import { projectMetaData } from "../../src/projects/database/ProjectMetaData";
 import { ProjectItem } from "../../src/projects/components/project-item/ProjectItem";
+import { projectMetaData } from "../../src/projects/database/ProjectMetaData";
 
 const Projects: NextPage = () => {
   // Todo: Temporary fix for react-material-ui-carousel not resizing properly on initial page load
