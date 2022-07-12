@@ -1,25 +1,38 @@
 import { Grid } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
 import Image from "next/image";
+import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { PageContainer } from "../../global/PageContainer";
 import { JumpToCard } from "./JumpToCard";
 import { TitleSection } from "./TitleSection";
 
 export const Biography = () => {
-  return (
-    <ParallaxLayer offset={1} factor={1}>
-      {/* <h1>Name & Role(s) (Changing)</h1>
-      <ul>
-        <li>Headshot</li>
-        <li>Quick bio, indigenous, who I am, where I am</li>
-        <li>Education</li>
-        <li>
-          Goals (immigration and volunteering) - include nicely animated map
-          bits
-        </li>
-        <li>Vague interests</li>
-      </ul> */}
-      <PageContainer>
+  const { isMobile } = useDeviceDetect();
+
+  const Headshot = () => {
+    return (
+      <Image
+        src="/homepage/placeholder.png"
+        width="612"
+        height="408"
+        alt="Head shot"
+      />
+    );
+  };
+
+  const MobileBiography = () => {
+    return (
+      <>
+        <TitleSection />
+        <br />
+        <Headshot />
+      </>
+    );
+  };
+
+  const DesktopBiography = () => {
+    return (
+      <>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div
             style={{
@@ -30,12 +43,7 @@ export const Biography = () => {
             <TitleSection />
           </div>
           <div style={{ width: "50%" }}>
-            <Image
-              src="/homepage/placeholder.png"
-              width="612"
-              height="408"
-              alt="Head shot"
-            />
+            <Headshot />
           </div>
         </div>
         <div style={{ marginTop: "100px" }}>
@@ -45,6 +53,14 @@ export const Biography = () => {
             <JumpToCard text={"Expectations"} />
           </Grid>
         </div>
+      </>
+    );
+  };
+
+  return (
+    <ParallaxLayer offset={1} factor={1}>
+      <PageContainer>
+        {isMobile ? <MobileBiography /> : <DesktopBiography />}
       </PageContainer>
     </ParallaxLayer>
   );

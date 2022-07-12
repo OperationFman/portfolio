@@ -18,7 +18,7 @@ export const Homepage = () => {
   return (
     <Parallax pages={6} ref={ref}>
       <ParallaxArt />
-
+      
       <Biography />
 
       <Qualifications />
