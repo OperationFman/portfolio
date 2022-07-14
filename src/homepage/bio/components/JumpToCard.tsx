@@ -27,7 +27,7 @@ export const JumpToCard = (props: JumpToCardProps) => {
           }}
         >
           <CardActionArea>
-            {/* TODO: Swap with better images and do an animation when hovered on */}
+            {/* Todo: Swap with better images and do an animation when hovered on */}
             <CardMedia
               component="img"
               height="100"

@@ -1,4 +1,4 @@
-import { IParallax, Parallax } from "@react-spring/parallax";
+import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useRouter } from "next/router";
 import { Ref, useRef } from "react";
 import { shouldShowScrollBar } from "../../utils/shouldShowScrollbar";
@@ -15,11 +15,15 @@ export const Homepage = () => {
 
   shouldShowScrollBar(router);
 
+  const scrollToCallback = (page: number) => {
+    ref.current.scrollTo(page);
+  };
+
   return (
     <Parallax pages={6} ref={ref}>
       <ParallaxArt />
-      
-      <Biography />
+
+      <Biography scrollToCallback={scrollToCallback} />
 
       <Qualifications />
 

@@ -7,7 +7,13 @@ import { JumpToCard } from "./components/JumpToCard";
 import { PageDownIcon } from "./components/PageDownIcon";
 import { TitleSection } from "./TitleSection";
 
-export const Biography = () => {
+type BiographyType = {
+  scrollToCallback: (page: number) => void;
+};
+
+export const Biography = (props: BiographyType) => {
+  const { scrollToCallback } = props;
+
   const { isMobile } = useDeviceDetect();
 
   const Headshot = () => {
@@ -63,7 +69,9 @@ export const Biography = () => {
       <PageContainer>
         {isMobile ? <MobileBiography /> : <DesktopBiography />}
       </PageContainer>
-      {!isMobile && <PageDownIcon />}
+      {!isMobile && (
+        <PageDownIcon scrollToCallback={scrollToCallback} scrollToPage={2} />
+      )}
     </ParallaxLayer>
   );
 };

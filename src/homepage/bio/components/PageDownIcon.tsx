@@ -1,7 +1,14 @@
 import ArrowDownwardTwoTone from "@mui/icons-material/ArrowDownwardTwoTone";
 import { Button } from "@mui/material";
 
-export const PageDownIcon = () => {
+type PageDownIconProps = {
+  scrollToCallback: (page: number) => void;
+  scrollToPage: number;
+};
+
+export const PageDownIcon = (props: PageDownIconProps) => {
+  const { scrollToCallback, scrollToPage } = props;
+
   return (
     <div
       style={{
@@ -15,6 +22,7 @@ export const PageDownIcon = () => {
       <Button
         color={"baseGrey"}
         sx={{ width: "50px", height: "60px", borderRadius: "50%" }}
+        onClick={() => scrollToCallback(scrollToPage)}
       >
         {/*TODO: Animate pointing downwards. Idea: Like runway lights?*/}
         <ArrowDownwardTwoTone />
