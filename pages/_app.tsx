@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import "prismjs/themes/prism-tomorrow.css";
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "react-notion-x/src/styles.css";
 import { Navbar } from "../src/global/navigation/Navbar";
 import { GlobalTheme } from "../themes/GlobalTheme";

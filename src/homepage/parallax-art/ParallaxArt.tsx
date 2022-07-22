@@ -8,6 +8,7 @@ import { isClientSide } from "../../../utils/isClientSide";
 export const ParallaxArt = () => {
 	const darkMode = useContext(DarkMode);
 	const selectedTheme = darkMode ? "dark" : "light";
+	const parallaxBackground = darkMode ? "#01579B" : "#90CAF9";
 
 	const [windowHeight, setWindowHeight] = useState(
 		isClientSide() ? window.innerHeight : 1440, // SVGs resolution is 5120x1440px
@@ -91,7 +92,7 @@ export const ParallaxArt = () => {
 						height={`${windowHeight}px`}
 					/>
 				</div>
-				<div style={{ height: "500px", backgroundColor: "#1565C0" }} />
+				<div style={{ height: "500px", backgroundColor: parallaxBackground }} />
 			</ParallaxLayer>
 
 			<ParallaxLayer offset={-0.1}>

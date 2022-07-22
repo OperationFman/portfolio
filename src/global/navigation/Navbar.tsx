@@ -11,12 +11,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import {
-	container,
+	centerTabs, container,
 	darkModeIcon,
 	desktopHomeButton,
-	mobileHomeButton,
-	onHover,
-	centerTabs,
+	mobileHomeButton
 } from "./NavbarStyles";
 
 type NavbarProps = {
