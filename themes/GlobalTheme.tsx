@@ -1,28 +1,32 @@
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
-import React from "react";
+import React, { createContext } from "react";
 import { lightTheme } from "./lightMode";
 import { darkTheme } from "./darkMode";
 
 type GlobalTheme = {
-  children: React.ReactNode;
-  darkMode: boolean;
+	children: React.ReactNode;
+	darkMode: boolean;
 };
 
+export const DarkMode = createContext(false);
+
 export const GlobalTheme = (props: GlobalTheme) => {
-  const { children, darkMode } = props;
+	const { children, darkMode } = props;
 
-  React.useEffect(() => {
-    const jssStyles = document.querySelector("#jss-server-side");
-    if (jssStyles) {
-      jssStyles.parentElement?.removeChild(jssStyles);
-    }
-  }, []);
+	React.useEffect(() => {
+		const jssStyles = document.querySelector("#jss-server-side");
+		if (jssStyles) {
+			jssStyles.parentElement?.removeChild(jssStyles);
+		}
+	}, []);
 
-  return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <CssBaseline />
-      {children}
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+			<DarkMode.Provider value={darkMode}>
+				<CssBaseline />
+				{children}
+			</DarkMode.Provider>
+		</ThemeProvider>
+	);
 };

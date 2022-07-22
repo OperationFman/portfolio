@@ -1,28 +1,32 @@
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import "prismjs/themes/prism-tomorrow.css";
-import { useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
 import "react-notion-x/src/styles.css";
 import { Navbar } from "../src/global/navigation/Navbar";
 import { GlobalTheme } from "../themes/GlobalTheme";
 import { shouldShowScrollBar } from "../utils/shouldShowScrollbar";
-import { useDarkMode } from "../utils/useDarkMode";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { darkMode, setDarkMode } = useDarkMode();
-  const router = useRouter();
+	const router = useRouter();
 
-  useEffect(() => {
-    shouldShowScrollBar(router);
-  }, [router]);
+	const [darkMode, setDarkMode] = useState(false);
 
-  return (
-    <GlobalTheme darkMode={darkMode}>
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+	useEffect(() => {
+		setDarkMode(localStorage.getItem("dark-mode") === "true");
+	}, []);
 
-      <Component {...pageProps} />
-    </GlobalTheme>
-  );
+	useEffect(() => {
+		shouldShowScrollBar(router);
+	}, [router]);
+
+	return (
+		<GlobalTheme darkMode={darkMode}>
+			<Navbar setDarkMode={setDarkMode} />
+
+			<Component {...pageProps} />
+		</GlobalTheme>
+	);
 }
 
 export default MyApp;
