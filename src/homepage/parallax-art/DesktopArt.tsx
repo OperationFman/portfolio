@@ -2,6 +2,8 @@
 import { Box } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { animated, easings, useSpring } from "react-spring";
+import { Clouds } from "./animations/Clouds";
+import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./types";
 
 export const DesktopArt = (props: ParallaxArtProps) => {
@@ -16,49 +18,34 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	};
 
 	// TODO: Convert to wrapper and create folder of animation - Twinkling stars, hovering balloons/plane, building lights on and off, police weewoos, shooting stars, extra birds
-	const clouds = () => {
-		const animation = useSpring({
-			to: { x: 3000 },
-			from: { x: -200 },
-			loop: { reverse: true },
-			config: {
-				duration: 200000,
-				easing: easings.easeInOutSine,
-			},
-		});
-
-		return (
-			<animated.div style={animation}>
-				<div style={styles.centerImage}>
-					<img
-						src={`/homepage/parallax/desktop/${selectedTheme}/2.svg`}
-						alt='Light2'
-						height={`${windowHeight}px`}
-					/>
-				</div>
-			</animated.div>
-		);
-	};
-
 	return (
 		<>
 			<ParallaxLayer offset={0} speed={0.1}>
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/desktop/${selectedTheme}/1.svg`}
-						alt='Light1'
+						alt='Background'
 						height={`${windowHeight}px`}
 					/>
 				</div>
 			</ParallaxLayer>
+			<TwinklingStars
+				selectedTheme={selectedTheme}
+				windowHeight={windowHeight}
+				styles={styles}
+			/>
 			<ParallaxLayer offset={0} speed={0.1}>
-				{clouds()}
+				<Clouds
+					selectedTheme={selectedTheme}
+					windowHeight={windowHeight}
+					styles={styles}
+				/>
 			</ParallaxLayer>
 			<ParallaxLayer offset={0} speed={0.1}>
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/desktop/${selectedTheme}/3.svg`}
-						alt='Light3'
+						alt='Large Mountain'
 						height={`${windowHeight}px`}
 					/>
 				</div>
@@ -67,7 +54,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/desktop/${selectedTheme}/4.svg`}
-						alt='Light4'
+						alt='Medium Mountain'
 						height={`${windowHeight}px`}
 					/>
 				</div>
@@ -76,7 +63,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/desktop/${selectedTheme}/5.svg`}
-						alt='Light5'
+						alt='Small Mountain'
 						height={`${windowHeight}px`}
 					/>
 				</div>
@@ -85,7 +72,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/desktop/${selectedTheme}/6.svg`}
-						alt='Light6'
+						alt='Sky Scrapers'
 						height={`${windowHeight}px`}
 					/>
 				</div>
@@ -94,7 +81,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/desktop/${selectedTheme}/7.svg`}
-						alt='Light7'
+						alt='Town'
 						height={`${windowHeight}px`}
 					/>
 				</div>
@@ -105,7 +92,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/desktop/${selectedTheme}/8.svg`}
-						alt='Light8'
+						alt='Motherboard I/O'
 						height={`${windowHeight}px`}
 					/>
 					{/* Homepage parallax bleeds into second page when scrolling begins, this hides it */}
