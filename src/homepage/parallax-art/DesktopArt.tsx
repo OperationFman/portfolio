@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
+import { animated, easings, useSpring } from "react-spring";
 import { ParallaxArtProps } from "./types";
 
 export const DesktopArt = (props: ParallaxArtProps) => {
@@ -12,6 +13,31 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 			alignItems: "center",
 			justifyContent: "center",
 		},
+	};
+
+	// TODO: Convert to wrapper and create folder of animation - Twinkling stars, hovering balloons/plane, building lights on and off, police weewoos, shooting stars, extra birds
+	const clouds = () => {
+		const animation = useSpring({
+			to: { x: 3000 },
+			from: { x: -200 },
+			loop: { reverse: true },
+			config: {
+				duration: 200000,
+				easing: easings.easeInOutSine,
+			},
+		});
+
+		return (
+			<animated.div style={animation}>
+				<div style={styles.centerImage}>
+					<img
+						src={`/homepage/parallax/desktop/${selectedTheme}/2.svg`}
+						alt='Light2'
+						height={`${windowHeight}px`}
+					/>
+				</div>
+			</animated.div>
+		);
 	};
 
 	return (
@@ -26,13 +52,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				</div>
 			</ParallaxLayer>
 			<ParallaxLayer offset={0} speed={0.1}>
-				<div style={styles.centerImage}>
-					<img
-						src={`/homepage/parallax/desktop/${selectedTheme}/2.svg`}
-						alt='Light2'
-						height={`${windowHeight}px`}
-					/>
-				</div>
+				{clouds()}
 			</ParallaxLayer>
 			<ParallaxLayer offset={0} speed={0.1}>
 				<div style={styles.centerImage}>
