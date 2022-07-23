@@ -4,6 +4,7 @@ import { ParallaxLayer } from "@react-spring/parallax";
 import { BuildingLight } from "./animations/BuildingLight";
 import { Clouds } from "./animations/Clouds";
 import { Hover } from "./animations/Hover";
+import { IronMan } from "./animations/Ironman";
 import { ShootingStar } from "./animations/ShootingStar";
 import { Train } from "./animations/Train";
 import { TwinklingStars } from "./animations/TwinklingStars";
@@ -21,8 +22,6 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	};
 
 	// TODO:
-	// Train (day on far mountain)
-	// Kite in the day
 	// Easter egg - Space ship
 
 	return (
@@ -106,6 +105,11 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					/>
 				</div>
 			</ParallaxLayer>
+			<IronMan
+				selectedTheme={selectedTheme}
+				windowHeight={windowHeight}
+				styles={styles}
+			/>
 			<ParallaxLayer offset={0} speed={0.4}>
 				<Hover
 					selectedTheme={selectedTheme}
