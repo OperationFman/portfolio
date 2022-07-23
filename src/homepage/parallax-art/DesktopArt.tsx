@@ -21,6 +21,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 
 	// TODO:
 	// Steam train (day on far mountain)
+	// Kite in the day
 	// Easter egg - Space ship
 
 	return (
@@ -44,15 +45,6 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				windowHeight={windowHeight}
 				styles={styles}
 			/>
-			<ParallaxLayer offset={0} speed={0.1}>
-				<div style={styles.centerImage}>
-					<img
-						src={"/homepage/parallax/desktop/dark/Stars1.svg"}
-						alt='Stars'
-						height={`${windowHeight}px`}
-					/>
-				</div>
-			</ParallaxLayer>
 			<Clouds
 				selectedTheme={selectedTheme}
 				windowHeight={windowHeight}
