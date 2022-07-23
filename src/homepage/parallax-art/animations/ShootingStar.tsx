@@ -11,10 +11,10 @@ export const ShootingStar = (props: AnimationProps) => {
 	}
 
 	const config = useSpring({
-		to: { x: 1000, y: 1000 },
-		from: { x: -1000, y: -1000 },
+		to: { x: 2000, y: 2000 },
+		from: { x: -2000, y: -2000 },
 		config: {
-			duration: 2500,
+			duration: 4000,
 			easing: easings.easeInOutCubic,
 		},
 	});

@@ -20,7 +20,6 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	};
 
 	// TODO:
-	// Shooting star
 	// Steam train (day on far mountain)
 	// Easter egg - Space ship
 
