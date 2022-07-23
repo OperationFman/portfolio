@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
-import { animated, easings, useSpring } from "react-spring";
 import { Clouds } from "./animations/Clouds";
 import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./types";
@@ -17,7 +16,15 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 		},
 	};
 
-	// TODO: Convert to wrapper and create folder of animation - Twinkling stars, hovering balloons/plane, building lights on and off, police weewoos, shooting stars, extra birds
+	// TODO:
+	// Hovering hot air balloons & Plane
+	// Shooting star
+	// Extra birds
+	// Building lights turning on/off
+	// Flying kites (day only)
+	// Steam train (day on far mountain)
+	// Easter egg - Reaper
+
 	return (
 		<>
 			<ParallaxLayer offset={0} speed={0.1}>
@@ -34,13 +41,11 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				windowHeight={windowHeight}
 				styles={styles}
 			/>
-			<ParallaxLayer offset={0} speed={0.1}>
-				<Clouds
-					selectedTheme={selectedTheme}
-					windowHeight={windowHeight}
-					styles={styles}
-				/>
-			</ParallaxLayer>
+			<Clouds
+				selectedTheme={selectedTheme}
+				windowHeight={windowHeight}
+				styles={styles}
+			/>
 			<ParallaxLayer offset={0} speed={0.1}>
 				<div style={styles.centerImage}>
 					<img

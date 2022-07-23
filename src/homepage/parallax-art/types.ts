@@ -14,4 +14,5 @@ export type AnimationProps = {
 			justifyContent: string;
 		};
 	};
+	children?: React.ReactNode;
 };
