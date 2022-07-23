@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
+import { useEffect, useState } from "react";
 import { BuildingLight } from "./animations/BuildingLight";
 import { Clouds } from "./animations/Clouds";
 import { Hover } from "./animations/Hover";
@@ -21,8 +22,22 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 		},
 	};
 
-	// TODO:
-	// Easter egg - Space ship
+	const [easterEggCounter, setEasterEggCounter] = useState(0);
+	const [showEasterEgg, setShowEasterEgg] = useState(false);
+
+	const incrementEasterEgg = () => {
+		if (selectedTheme === "dark") {
+			setEasterEggCounter(easterEggCounter + 1);
+		}
+	};
+
+	useEffect(() => {
+		if (easterEggCounter > 10) {
+			setShowEasterEgg(true);
+		}
+	}, [easterEggCounter]);
+
+	console.log(showEasterEgg);
 
 	return (
 		<>
@@ -156,7 +171,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					styles={styles}
 				/>
 			</ParallaxLayer>
-			<ParallaxLayer offset={-0.1}>
+			<ParallaxLayer offset={-0.1} onClick={() => incrementEasterEgg()}>
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/desktop/${selectedTheme}/8.svg`}
