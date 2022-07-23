@@ -12,15 +12,13 @@ export const BuildingLight = (props: AnimationProps) => {
 	}, 50000);
 
 	return shouldAppear ? (
-		<ParallaxLayer offset={0} speed={0.1}>
-			<div style={styles.centerImage}>
-				<img
-					src={`/homepage/parallax/desktop/${selectedTheme}/TownLight.svg`}
-					alt='Building Light'
-					height={`${windowHeight}px`}
-				/>
-			</div>
-		</ParallaxLayer>
+		<div style={styles.centerImage}>
+			<img
+				src={`/homepage/parallax/desktop/${selectedTheme}/TownLight.svg`}
+				alt='Building Light'
+				height={`${windowHeight}px`}
+			/>
+		</div>
 	) : (
 		<></>
 	);

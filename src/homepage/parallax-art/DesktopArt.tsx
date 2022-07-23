@@ -5,6 +5,7 @@ import { BuildingLight } from "./animations/BuildingLight";
 import { Clouds } from "./animations/Clouds";
 import { Hover } from "./animations/Hover";
 import { ShootingStar } from "./animations/ShootingStar";
+import { Train } from "./animations/Train";
 import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./types";
 
@@ -20,7 +21,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	};
 
 	// TODO:
-	// Steam train (day on far mountain)
+	// Train (day on far mountain)
 	// Kite in the day
 	// Easter egg - Space ship
 
@@ -59,6 +60,11 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					/>
 				</div>
 			</ParallaxLayer>
+			<Train
+				selectedTheme={selectedTheme}
+				windowHeight={windowHeight}
+				styles={styles}
+			/>
 			<ParallaxLayer offset={0} speed={0.2}>
 				<div style={styles.centerImage}>
 					<img
@@ -75,8 +81,8 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					styles={styles}>
 					<div style={styles.centerImage}>
 						<img
-							src={`/homepage/parallax/desktop/${selectedTheme}/NearBalloons.svg`}
-							alt='Near balloons'
+							src={`/homepage/parallax/desktop/${selectedTheme}/FarBalloons.svg`}
+							alt='Far balloons'
 							height={`${windowHeight}px`}
 						/>
 					</div>
@@ -107,8 +113,8 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					styles={styles}>
 					<div style={styles.centerImage}>
 						<img
-							src={`/homepage/parallax/desktop/${selectedTheme}/FarBalloons.svg`}
-							alt='Far balloons'
+							src={`/homepage/parallax/desktop/${selectedTheme}/NearBalloons.svg`}
+							alt='Near balloons'
 							height={`${windowHeight}px`}
 						/>
 					</div>
