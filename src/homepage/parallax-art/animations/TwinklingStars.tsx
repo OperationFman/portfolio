@@ -55,15 +55,7 @@ export const TwinklingStars = (props: AnimationProps) => {
 					</animated.div>
 				</div>
 			</ParallaxLayer>
-			<ParallaxLayer offset={0} speed={0.1}>
-				<div style={styles.centerImage}>
-					<img
-						src={"/homepage/parallax/desktop/dark/Stars1.svg"}
-						alt='Stars'
-						height={`${windowHeight}px`}
-					/>
-				</div>
-			</ParallaxLayer>
+			
 		</>
 	);
 };
