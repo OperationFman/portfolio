@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
+import { Clouds } from "./animations/Clouds";
+import { Hover } from "./animations/Hover";
+import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./types";
 
 export const MobileArt = (props: ParallaxArtProps) => {
@@ -20,16 +23,28 @@ export const MobileArt = (props: ParallaxArtProps) => {
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/mobile/${selectedTheme}/1.svg`}
-						alt='Light1'
+						alt='Background'
 						height={`${windowHeight}px`}
 					/>
 				</div>
 			</ParallaxLayer>
+
+			<TwinklingStars
+				selectedTheme={selectedTheme}
+				windowHeight={windowHeight}
+				styles={styles}
+			/>
+			<Clouds
+				selectedTheme={selectedTheme}
+				windowHeight={windowHeight}
+				styles={styles}
+			/>
+
 			<ParallaxLayer offset={0} speed={0.1}>
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/mobile/${selectedTheme}/2.svg`}
-						alt='Light2'
+						alt='Clouds'
 						height={`${windowHeight}px`}
 					/>
 				</div>
@@ -38,7 +53,7 @@ export const MobileArt = (props: ParallaxArtProps) => {
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/mobile/${selectedTheme}/3.svg`}
-						alt='Light3'
+						alt='Far Mountain'
 						height={`${windowHeight}px`}
 					/>
 				</div>
@@ -47,45 +62,86 @@ export const MobileArt = (props: ParallaxArtProps) => {
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/mobile/${selectedTheme}/4.svg`}
-						alt='Light4'
+						alt='Mid Mountain'
 						height={`${windowHeight}px`}
 					/>
 				</div>
+			</ParallaxLayer>
+			<ParallaxLayer offset={0} speed={0.2}>
+				<Hover
+					selectedTheme={selectedTheme}
+					windowHeight={windowHeight}
+					styles={styles}>
+					<div style={styles.centerImage}>
+						<img
+							src={`/homepage/parallax/mobile/${selectedTheme}/BalloonFar.svg`}
+							alt='Far balloon'
+							height={`${windowHeight}px`}
+						/>
+					</div>
+				</Hover>
 			</ParallaxLayer>
 			<ParallaxLayer offset={0} speed={0.3}>
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/mobile/${selectedTheme}/5.svg`}
-						alt='Light5'
+						alt='Near Mountain'
 						height={`${windowHeight}px`}
 					/>
 				</div>
+			</ParallaxLayer>
+			<ParallaxLayer offset={0} speed={0.3}>
+				<Hover
+					selectedTheme={selectedTheme}
+					windowHeight={windowHeight}
+					styles={styles}>
+					<div style={styles.centerImage}>
+						<img
+							src={`/homepage/parallax/mobile/${selectedTheme}/Plane.svg`}
+							alt='Plane'
+							height={`${windowHeight}px`}
+						/>
+					</div>
+				</Hover>
 			</ParallaxLayer>
 			<ParallaxLayer offset={0} speed={0.4}>
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/mobile/${selectedTheme}/6.svg`}
-						alt='Light6'
+						alt='Sky scrapers'
 						height={`${windowHeight}px`}
 					/>
 				</div>
+			</ParallaxLayer>
+			<ParallaxLayer offset={0} speed={0.4}>
+				<Hover
+					selectedTheme={selectedTheme}
+					windowHeight={windowHeight}
+					styles={styles}>
+					<div style={styles.centerImage}>
+						<img
+							src={`/homepage/parallax/mobile/${selectedTheme}/BalloonClose.svg`}
+							alt='Close balloon'
+							height={`${windowHeight}px`}
+						/>
+					</div>
+				</Hover>
 			</ParallaxLayer>
 			<ParallaxLayer offset={0} speed={0.5}>
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/mobile/${selectedTheme}/7.svg`}
-						alt='Light7'
+						alt='Town'
 						height={`${windowHeight}px`}
 					/>
 				</div>
 				<div style={{ height: "500px", backgroundColor: parallaxBackground }} />
 			</ParallaxLayer>
-
 			<ParallaxLayer offset={-0.1}>
 				<div style={styles.centerImage}>
 					<img
 						src={`/homepage/parallax/mobile/${selectedTheme}/8.svg`}
-						alt='Light8'
+						alt='Motherboard I/O'
 						height={`${windowHeight}px`}
 					/>
 					{/* Homepage parallax bleeds into second page when scrolling begins, this hides it */}
