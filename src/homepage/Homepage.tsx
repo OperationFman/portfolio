@@ -1,7 +1,6 @@
-import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { IParallax, Parallax } from "@react-spring/parallax";
 import { useRouter } from "next/router";
-import { Ref, useEffect, useRef } from "react";
-import { isClientSide } from "../../utils/isClientSide";
+import { useRef } from "react";
 import { shouldShowScrollBar } from "../../utils/shouldShowScrollbar";
 import { Biography } from "./bio/Biography";
 import { ContactForm } from "./ContactForm.tsx/ContactForm";

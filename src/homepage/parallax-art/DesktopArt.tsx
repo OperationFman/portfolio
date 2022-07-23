@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
+import { BuildingLight } from "./animations/BuildingLight";
 import { Clouds } from "./animations/Clouds";
 import { Hover } from "./animations/Hover";
+import { ShootingStar } from "./animations/ShootingStar";
 import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./types";
 
@@ -19,7 +21,6 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 
 	// TODO:
 	// Shooting star
-	// Building lights turning on/off
 	// Steam train (day on far mountain)
 	// Easter egg - Space ship
 
@@ -34,6 +35,11 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					/>
 				</div>
 			</ParallaxLayer>
+			<ShootingStar
+				selectedTheme={selectedTheme}
+				windowHeight={windowHeight}
+				styles={styles}
+			/>
 			<TwinklingStars
 				selectedTheme={selectedTheme}
 				windowHeight={windowHeight}
@@ -132,8 +138,14 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				</div>
 				<div style={{ height: "500px", backgroundColor: parallaxBackground }} />
 			</ParallaxLayer>
-			{/* Town Light */}
 
+			<ParallaxLayer offset={0} speed={0.5}>
+				<BuildingLight
+					selectedTheme={selectedTheme}
+					windowHeight={windowHeight}
+					styles={styles}
+				/>
+			</ParallaxLayer>
 			<ParallaxLayer offset={-0.1}>
 				<div style={styles.centerImage}>
 					<img

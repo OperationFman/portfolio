@@ -1,17 +1,20 @@
 import { ParallaxLayer } from "@react-spring/parallax";
-import { useSpring, animated, easings } from "react-spring";
+import { useState } from "react";
+import { useSpring, animated, config, easings } from "react-spring";
 import { AnimationProps } from "../types";
 
-export const Clouds = (props: AnimationProps) => {
+export const ShootingStar = (props: AnimationProps) => {
 	const { selectedTheme, windowHeight, styles } = props;
-	const temporal = 60 * 60 * 60;
+
+	if (selectedTheme === "light") {
+		return <></>;
+	}
 
 	const config = useSpring({
-		to: { x: 1000 },
-		from: { x: -200 },
-		loop: { reverse: true },
+		to: { x: 1000, y: 1000 },
+		from: { x: -1000, y: -1000 },
 		config: {
-			duration: temporal,
+			duration: 2500,
 			easing: easings.easeInOutCubic,
 		},
 	});
@@ -21,8 +24,8 @@ export const Clouds = (props: AnimationProps) => {
 			<div style={styles.centerImage}>
 				<animated.div style={config}>
 					<img
-						src={`/homepage/parallax/desktop/${selectedTheme}/2.svg`}
-						alt='Clouds'
+						src={`/homepage/parallax/desktop/${selectedTheme}/ShootingStar.svg`}
+						alt='Twinkling Stars Fast'
 						height={`${windowHeight}px`}
 					/>
 				</animated.div>
