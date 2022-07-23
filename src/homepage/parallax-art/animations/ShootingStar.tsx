@@ -24,7 +24,7 @@ export const ShootingStar = (props: AnimationProps) => {
 			<div style={styles.centerImage}>
 				<animated.div style={config}>
 					<img
-						src={`/homepage/parallax/desktop/${selectedTheme}/ShootingStar.svg`}
+						src={'/homepage/parallax/desktop/dark/ShootingStar.svg'}
 						alt='Twinkling Stars Fast'
 						height={`${windowHeight}px`}
 					/>

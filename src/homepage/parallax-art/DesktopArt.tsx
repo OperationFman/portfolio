@@ -4,6 +4,7 @@ import { ParallaxLayer } from "@react-spring/parallax";
 import { useEffect, useState } from "react";
 import { BuildingLight } from "./animations/BuildingLight";
 import { Clouds } from "./animations/Clouds";
+import { EasterEgg } from "./animations/EasterEgg";
 import { Hover } from "./animations/Hover";
 import { IronMan } from "./animations/Ironman";
 import { ShootingStar } from "./animations/ShootingStar";
@@ -32,12 +33,10 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	};
 
 	useEffect(() => {
-		if (easterEggCounter > 10) {
+		if (easterEggCounter > 2) {
 			setShowEasterEgg(true);
 		}
 	}, [easterEggCounter]);
-
-	console.log(showEasterEgg);
 
 	return (
 		<>
@@ -60,6 +59,15 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				windowHeight={windowHeight}
 				styles={styles}
 			/>
+			{showEasterEgg ? (
+				<EasterEgg
+					selectedTheme={selectedTheme}
+					windowHeight={windowHeight}
+					styles={styles}
+				/>
+			) : (
+				<></>
+			)}
 			<Clouds
 				selectedTheme={selectedTheme}
 				windowHeight={windowHeight}
@@ -163,7 +171,6 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				</div>
 				<div style={{ height: "500px", backgroundColor: parallaxBackground }} />
 			</ParallaxLayer>
-
 			<ParallaxLayer offset={0} speed={0.5}>
 				<BuildingLight
 					selectedTheme={selectedTheme}
