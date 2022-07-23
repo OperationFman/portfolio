@@ -1,5 +1,5 @@
 import { ParallaxLayer } from "@react-spring/parallax";
-import { useSpring, animated, easings } from "react-spring";
+import { animated, easings, useSpring } from "react-spring";
 import { AnimationProps } from "../types";
 
 export const EasterEgg = (props: AnimationProps) => {
