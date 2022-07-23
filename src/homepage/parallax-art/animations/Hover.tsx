@@ -4,17 +4,21 @@ import { AnimationProps } from "../types";
 export const Hover = (props: AnimationProps) => {
 	const { styles, children } = props;
 
+	const randomHoverAmount = Math.floor(Math.random() * 9000) + 5000;
+
 	const config = useSpring({
-		to: { x: 3000 },
-		from: { x: -200 },
+		to: { y: -40 },
+		from: { y: -20 },
 		loop: { reverse: true },
 		config: {
-			duration: 100,
-			easing: easings.easeInOutCubic,
+			duration: randomHoverAmount,
+			easing: easings.easeInOutQuad,
 		},
 	});
 
-	<div style={styles.centerImage}>
-		<animated.div style={config}>{children}</animated.div>
-	</div>;
+	return (
+		<div style={styles.centerImage}>
+			<animated.div style={config}>{children}</animated.div>
+		</div>
+	);
 };

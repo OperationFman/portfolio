@@ -2,6 +2,7 @@
 import { Box } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { Clouds } from "./animations/Clouds";
+import { Hover } from "./animations/Hover";
 import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./types";
 
@@ -17,13 +18,10 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	};
 
 	// TODO:
-	// Hovering hot air balloons & Plane
 	// Shooting star
-	// Extra birds
 	// Building lights turning on/off
-	// Flying kites (day only)
 	// Steam train (day on far mountain)
-	// Easter egg - Reaper
+	// Easter egg - Space ship
 
 	return (
 		<>
@@ -64,6 +62,20 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					/>
 				</div>
 			</ParallaxLayer>
+			<ParallaxLayer offset={0} speed={0.2}>
+				<Hover
+					selectedTheme={selectedTheme}
+					windowHeight={windowHeight}
+					styles={styles}>
+					<div style={styles.centerImage}>
+						<img
+							src={`/homepage/parallax/desktop/${selectedTheme}/NearBalloons.svg`}
+							alt='Near balloons'
+							height={`${windowHeight}px`}
+						/>
+					</div>
+				</Hover>
+			</ParallaxLayer>
 			<ParallaxLayer offset={0} speed={0.3}>
 				<div style={styles.centerImage}>
 					<img
@@ -82,6 +94,34 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					/>
 				</div>
 			</ParallaxLayer>
+			<ParallaxLayer offset={0} speed={0.4}>
+				<Hover
+					selectedTheme={selectedTheme}
+					windowHeight={windowHeight}
+					styles={styles}>
+					<div style={styles.centerImage}>
+						<img
+							src={`/homepage/parallax/desktop/${selectedTheme}/FarBalloons.svg`}
+							alt='Far balloons'
+							height={`${windowHeight}px`}
+						/>
+					</div>
+				</Hover>
+			</ParallaxLayer>
+			<ParallaxLayer offset={0} speed={0.4}>
+				<Hover
+					selectedTheme={selectedTheme}
+					windowHeight={windowHeight}
+					styles={styles}>
+					<div style={styles.centerImage}>
+						<img
+							src={`/homepage/parallax/desktop/${selectedTheme}/Plane.svg`}
+							alt='Plane'
+							height={`${windowHeight}px`}
+						/>
+					</div>
+				</Hover>
+			</ParallaxLayer>
 			<ParallaxLayer offset={0} speed={0.5}>
 				<div style={styles.centerImage}>
 					<img
@@ -92,6 +132,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				</div>
 				<div style={{ height: "500px", backgroundColor: parallaxBackground }} />
 			</ParallaxLayer>
+			{/* Town Light */}
 
 			<ParallaxLayer offset={-0.1}>
 				<div style={styles.centerImage}>

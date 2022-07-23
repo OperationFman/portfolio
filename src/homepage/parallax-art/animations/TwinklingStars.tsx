@@ -37,7 +37,7 @@ export const TwinklingStars = (props: AnimationProps) => {
 				<div style={styles.centerImage}>
 					<animated.div style={fastTwinkle}>
 						<img
-							src={`/homepage/parallax/desktop/${selectedTheme}/stars3.svg`}
+							src={`/homepage/parallax/desktop/${selectedTheme}/Stars3.svg`}
 							alt='Twinkling Stars Fast'
 							height={`${windowHeight}px`}
 						/>
@@ -48,7 +48,7 @@ export const TwinklingStars = (props: AnimationProps) => {
 				<div style={styles.centerImage}>
 					<animated.div style={slowTwinkle}>
 						<img
-							src={`/homepage/parallax/desktop/${selectedTheme}/stars2.svg`}
+							src={`/homepage/parallax/desktop/${selectedTheme}/Stars2.svg`}
 							alt='Twinkling Stars Moderate'
 							height={`${windowHeight}px`}
 						/>
@@ -58,7 +58,7 @@ export const TwinklingStars = (props: AnimationProps) => {
 			<ParallaxLayer offset={0} speed={0.1}>
 				<div style={styles.centerImage}>
 					<img
-						src={`/homepage/parallax/desktop/${selectedTheme}/stars1.svg`}
+						src={`/homepage/parallax/desktop/${selectedTheme}/Stars1.svg`}
 						alt='Twinkling Stars Slow'
 						height={`${windowHeight}px`}
 					/>
