@@ -2,7 +2,6 @@
 import { Box } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { useEffect, useState } from "react";
-import { BuildingLight } from "./animations/BuildingLight";
 import { Clouds } from "./animations/Clouds";
 import { EasterEgg } from "./animations/EasterEgg";
 import { Hover } from "./animations/Hover";
@@ -164,13 +163,6 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					/>
 				</div>
 				<div style={{ height: "500px", backgroundColor: parallaxBackground }} />
-			</ParallaxLayer>
-			<ParallaxLayer offset={0} speed={0.5}>
-				<BuildingLight
-					selectedTheme={selectedTheme}
-					windowHeight={windowHeight}
-					styles={styles}
-				/>
 			</ParallaxLayer>
 			<ParallaxLayer offset={-0.1} onClick={() => incrementEasterEgg()}>
 				<div style={styles.centerImage}>
