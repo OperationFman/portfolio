@@ -2,7 +2,18 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
-		title: "Convert and Resize Images using ImageMagick",
+		title: "Type Validate an API Fetch Call",
+		link: `fetch-api-type-validation`,
+		notionPage: "44f4f50236114c078b83e55a4fb8e9c5",
+		created: 1659149375,
+		thumbnail: "/tutorials/api-validation.png",
+		subTitle: "Use io-ts to verify incoming data",
+		topic: Topic.Programming,
+		languages: [Languages.Typescript],
+		tags: [Tags.StepByStep],
+	},
+	{
+		title: "Manipulate Images using ImageMagick",
 		link: `convert-resize-with-imagemagick`,
 		notionPage: "0a6b86c59ce54c5480c67e7edd5b59ba",
 		created: 1656459369,
