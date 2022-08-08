@@ -72,7 +72,8 @@ export const TitleSection = () => {
         )}{" "}
         {pluralTime("month", periodWorked?.months)}{" "}
         {pluralTime("day", periodWorked?.days)}{" "}
-        {pluralTime("hour", periodWorked?.hours)}{" "}
+        {pluralTime("hour", periodWorked?.hours)}
+        {" and "}
         {pluralTime("minute", periodWorked?.minutes)}{" "}
       </Typography>
     </div>
