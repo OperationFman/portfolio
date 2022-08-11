@@ -1,5 +1,7 @@
 import ArrowDownwardTwoTone from "@mui/icons-material/ArrowDownwardTwoTone";
 import { Button } from "@mui/material";
+import useDeviceDetect from "../../../../utils/useDeviceDetect";
+import useHeightDetect from "../../../../utils/useHeightDetect";
 
 type PageDownIconProps = {
   scrollToCallback: (page: number) => void;
@@ -8,6 +10,12 @@ type PageDownIconProps = {
 
 export const PageDownIcon = (props: PageDownIconProps) => {
   const { scrollToCallback, scrollToPage } = props;
+  const { isMobile } = useDeviceDetect();
+  const { isShort } = useHeightDetect();
+
+  if (isMobile || isShort) {
+    return <></>;
+  }
 
   return (
     <div

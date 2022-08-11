@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { ParallaxLayer } from "@react-spring/parallax";
 import Image from "next/image";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
+import useHeightDetect from "../../../utils/useHeightDetect";
 import { PageContainer } from "../../global/PageContainer";
 import { JumpToCard } from "./components/JumpToCard";
 import { PageDownIcon } from "./components/PageDownIcon";
@@ -15,6 +16,8 @@ export const Biography = (props: BiographyType) => {
   const { scrollToCallback } = props;
 
   const { isMobile } = useDeviceDetect();
+  const { isShort } = useHeightDetect();
+  console.log({ isShort });
 
   const Headshot = () => {
     return (
@@ -53,13 +56,15 @@ export const Biography = (props: BiographyType) => {
             <Headshot />
           </div>
         </div>
-        <div style={{ marginTop: "100px" }}>
-          <Grid container spacing={3} justifyContent="center">
-            <JumpToCard text={"Education"} />
-            <JumpToCard text={"Experience"} />
-            <JumpToCard text={"Expectations"} />
-          </Grid>
-        </div>
+        {!isShort && (
+          <div style={{ marginTop: "100px" }}>
+            <Grid container spacing={3} justifyContent="center">
+              <JumpToCard text={"Education"} />
+              <JumpToCard text={"Experience"} />
+              <JumpToCard text={"Expectations"} />
+            </Grid>
+          </div>
+        )}
       </>
     );
   };
@@ -69,9 +74,7 @@ export const Biography = (props: BiographyType) => {
       <PageContainer>
         {isMobile ? <MobileBiography /> : <DesktopBiography />}
       </PageContainer>
-      {!isMobile && (
-        <PageDownIcon scrollToCallback={scrollToCallback} scrollToPage={2} />
-      )}
+      <PageDownIcon scrollToCallback={scrollToCallback} scrollToPage={2} />
     </ParallaxLayer>
   );
 };
