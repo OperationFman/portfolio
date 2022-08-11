@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import { TitleSectionStyles } from "./TitleSectionStyles";
 
-export const TitleSection = () => {
-  const timeWorked = () => {
-    return intervalToDuration({
-      start: new Date("August 2, 2021 09:00:00"),
-      end: new Date(),
-    });
-  };
+export const timeWorked = () => {
+  return intervalToDuration({
+    start: new Date("August 2, 2021 09:00:00"),
+    end: new Date(),
+  });
+};
 
+export const TitleSection = () => {
   const [periodWorked, setPeriodWorked] = useState<Duration>(timeWorked());
 
   useEffect(() => {
