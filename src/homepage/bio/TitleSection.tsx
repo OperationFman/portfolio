@@ -12,6 +12,13 @@ export const timeWorked = () => {
   });
 };
 
+export const pluralTime = (timeUnit: string, value: number | undefined) => {
+  if (value === undefined) {
+    return `0 ${timeUnit}s`;
+  }
+  return value === 1 ? `${value} ${timeUnit}` : `${value} ${timeUnit}s`;
+};
+
 export const TitleSection = () => {
   const [periodWorked, setPeriodWorked] = useState<Duration>(timeWorked());
 
@@ -21,13 +28,6 @@ export const TitleSection = () => {
     }, 30 * 1000);
     return () => clearInterval(thirtySecondInterval);
   });
-
-  const pluralTime = (timeUnit: string, value: number | undefined) => {
-    if (value === undefined) {
-      return `0 ${timeUnit}s`;
-    }
-    return value === 1 ? `${value} ${timeUnit}` : `${value} ${timeUnit}s`;
-  };
 
   return (
     <div style={TitleSectionStyles.container}>
