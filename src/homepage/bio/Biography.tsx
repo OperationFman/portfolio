@@ -9,22 +9,21 @@ import { PageDownIcon } from "./components/PageDownIcon";
 import { TitleSection } from "./TitleSection";
 
 type BiographyType = {
-  scrollToCallback: (page: number) => void;
+  scrollTo: (page: number) => void;
 };
 
 export const Biography = (props: BiographyType) => {
-  const { scrollToCallback } = props;
+  const { scrollTo } = props;
 
   const { isMobile } = useDeviceDetect();
   const { isShort } = useHeightDetect();
-  console.log({ isShort });
 
   const Headshot = () => {
     return (
       <Image
         src="/homepage/placeholder.png"
-        width="612"
-        height="408"
+        width="480"
+        height="300"
         alt="Head shot"
       />
     );
@@ -59,9 +58,21 @@ export const Biography = (props: BiographyType) => {
         {!isShort && (
           <div style={{ marginTop: "100px" }}>
             <Grid container spacing={3} justifyContent="center">
-              <JumpToCard text={"Education"} />
-              <JumpToCard text={"Experience"} />
-              <JumpToCard text={"Expectations"} />
+              <JumpToCard
+                text={"Experience"}
+                scrollToPage={3}
+                scrollTo={scrollTo}
+              />
+              <JumpToCard
+                text={"Expectations"}
+                scrollToPage={4}
+                scrollTo={scrollTo}
+              />
+              <JumpToCard
+                text={"Contact"}
+                scrollToPage={5}
+                scrollTo={scrollTo}
+              />
             </Grid>
           </div>
         )}
@@ -74,7 +85,7 @@ export const Biography = (props: BiographyType) => {
       <PageContainer>
         {isMobile ? <MobileBiography /> : <DesktopBiography />}
       </PageContainer>
-      <PageDownIcon scrollToCallback={scrollToCallback} scrollToPage={2} />
+      <PageDownIcon scrollTo={scrollTo} scrollToPage={2} />
     </ParallaxLayer>
   );
 };

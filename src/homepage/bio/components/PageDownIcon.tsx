@@ -4,12 +4,12 @@ import useDeviceDetect from "../../../../utils/useDeviceDetect";
 import useHeightDetect from "../../../../utils/useHeightDetect";
 
 type PageDownIconProps = {
-  scrollToCallback: (page: number) => void;
+  scrollTo: (page: number) => void;
   scrollToPage: number;
 };
 
 export const PageDownIcon = (props: PageDownIconProps) => {
-  const { scrollToCallback, scrollToPage } = props;
+  const { scrollTo, scrollToPage } = props;
   const { isMobile } = useDeviceDetect();
   const { isShort } = useHeightDetect();
 
@@ -30,7 +30,7 @@ export const PageDownIcon = (props: PageDownIconProps) => {
       <Button
         color={"baseGrey"}
         sx={{ width: "50px", height: "60px", borderRadius: "50%" }}
-        onClick={() => scrollToCallback(scrollToPage)}
+        onClick={() => scrollTo(scrollToPage)}
       >
         {/*TODO: Animate pointing downwards. Idea: Like runway lights?*/}
         <ArrowDownwardTwoTone />

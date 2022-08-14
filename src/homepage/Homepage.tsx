@@ -10,28 +10,28 @@ import { SalaryExpectation } from "./salary/SalaryExpectations";
 import { WorkExperience } from "./work-experience/WorkExperience";
 
 export const Homepage = () => {
-	const router = useRouter();
-	const ref = useRef<IParallax>(null!);
+  const router = useRouter();
+  const ref = useRef<IParallax>(null!);
 
-	shouldShowScrollBar(router);
+  shouldShowScrollBar(router);
 
-	const scrollToCallback = (page: number) => {
-		ref.current.scrollTo(page);
-	};
+  const scrollTo = (page: number) => {
+    ref.current.scrollTo(page);
+  };
 
-	return (
-		<Parallax pages={6} ref={ref}>
-			<ParallaxArt />
+  return (
+    <Parallax pages={6} ref={ref}>
+      <ParallaxArt />
 
-			<Biography scrollToCallback={scrollToCallback} />
+      <Biography scrollTo={scrollTo} />
 
-			<Qualifications />
+      <Qualifications />
 
-			<WorkExperience />
+      <WorkExperience />
 
-			<SalaryExpectation />
+      <SalaryExpectation />
 
-			<ContactForm />
-		</Parallax>
-	);
+      <ContactForm />
+    </Parallax>
+  );
 };
