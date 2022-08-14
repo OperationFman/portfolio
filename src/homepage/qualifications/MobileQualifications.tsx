@@ -11,8 +11,6 @@ export const MobileQualifications = () => {
 
   return (
     <PageContainer styleOverrides={{ marginTop: "0px" }}>
-      <h1 style={styles.subHeading}>Goals</h1>
-      <h1>TBD Accordion</h1>
       <h1 style={styles.subHeading}>Qualifications</h1>
       <QualificationAccordion />
     </PageContainer>
