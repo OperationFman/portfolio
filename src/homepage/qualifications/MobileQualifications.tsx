@@ -2,16 +2,18 @@ import { PageContainer } from "../../global/PageContainer";
 import { QualificationAccordion } from "./accordions/QualificationAccordion";
 
 export const MobileQualifications = () => {
+  const styles = {
+    subHeading: {
+      fontSize: "50px",
+      fontWeight: "lighter",
+    },
+  };
+
   return (
     <PageContainer styleOverrides={{ marginTop: "0px" }}>
-      <h1
-        style={{
-          fontSize: "50px",
-          fontWeight: "lighter",
-        }}
-      >
-        Qualifications
-      </h1>
+      <h1 style={styles.subHeading}>Goals</h1>
+      <h1>TBD Accordion</h1>
+      <h1 style={styles.subHeading}>Qualifications</h1>
       <QualificationAccordion />
     </PageContainer>
   );
