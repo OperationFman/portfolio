@@ -16,7 +16,7 @@ const Projects: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <PageContainer>
+      <PageContainer >
         {projectMetaData.map((dataItem) => {
           return (
             <div key={dataItem.title} style={{ position: "relative" }}>

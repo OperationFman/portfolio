@@ -82,7 +82,7 @@ export const Biography = (props: BiographyType) => {
 
   return (
     <ParallaxLayer offset={1} factor={1}>
-      <PageContainer>
+      <PageContainer styleOverrides={{ marginTop: "0px" }}>
         {isMobile ? <MobileBiography /> : <DesktopBiography />}
       </PageContainer>
       <PageDownIcon scrollTo={scrollTo} scrollToPage={2} />
