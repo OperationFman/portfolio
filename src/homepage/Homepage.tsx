@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import { shouldShowScrollBar } from "../../utils/shouldShowScrollbar";
 import { Biography } from "./bio/Biography";
-import { ContactForm } from "./ContactForm.tsx/ContactForm";
+import { ContactForm } from "./contact/ContactForm";
 import { ParallaxArt } from "./parallax-art/ParallaxArt";
 import { Qualifications } from "./qualifications/Qualifications";
 import { SalaryExpectation } from "./salary/SalaryExpectations";
@@ -21,7 +21,7 @@ export const Homepage = () => {
 
   return (
     <Parallax pages={6} ref={ref}>
-      <ParallaxArt />
+      <ParallaxArt scrollTo={scrollTo} />
 
       <Biography scrollTo={scrollTo} />
 

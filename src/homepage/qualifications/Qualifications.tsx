@@ -2,12 +2,7 @@ import { ParallaxLayer } from "@react-spring/parallax";
 
 export const Qualifications = () => {
   return (
-    <ParallaxLayer
-      offset={2}
-      style={{
-        backgroundColor: "orange",
-      }}
-    >
+    <ParallaxLayer offset={2}>
       <h1>Qualifications</h1>
       <ul>
         <li>Self taught - programming - journey to TW</li>

@@ -8,7 +8,12 @@ import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { DesktopArt } from "./DesktopArt";
 import { MobileArt } from "./MobileArt";
 
-export const ParallaxArt = () => {
+type ParallaxArtType = {
+	scrollTo: (page: number) => void;
+}
+
+export const ParallaxArt = (props: ParallaxArtType) => {
+	const { scrollTo } = props;
 	const darkMode = useContext(DarkMode);
 	const { isMobile } = useDeviceDetect();
 	const selectedTheme = darkMode ? "dark" : "light";
@@ -35,6 +40,7 @@ export const ParallaxArt = () => {
 			windowHeight={windowHeight}
 			selectedTheme={selectedTheme}
 			parallaxBackground={parallaxBackground}
+			scrollTo={scrollTo}
 		/>
 	);
 };

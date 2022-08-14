@@ -4,8 +4,8 @@ import Image from "next/image";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import useHeightDetect from "../../../utils/useHeightDetect";
 import { PageContainer } from "../../global/PageContainer";
-import { JumpToCard } from "./components/JumpToCard";
-import { PageDownIcon } from "./components/PageDownIcon";
+import { JumpToCard } from "../components/JumpToCard";
+import { PageDownIcon } from "../components/PageDownIcon";
 import { TitleSection } from "./TitleSection";
 
 type BiographyType = {

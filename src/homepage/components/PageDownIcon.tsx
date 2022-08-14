@@ -1,7 +1,7 @@
 import ArrowDownwardTwoTone from "@mui/icons-material/ArrowDownwardTwoTone";
 import { Button } from "@mui/material";
-import useDeviceDetect from "../../../../utils/useDeviceDetect";
-import useHeightDetect from "../../../../utils/useHeightDetect";
+import useDeviceDetect from "../../../utils/useDeviceDetect";
+import useHeightDetect from "../../../utils/useHeightDetect";
 
 type PageDownIconProps = {
   scrollTo: (page: number) => void;
