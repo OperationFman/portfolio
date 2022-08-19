@@ -11,8 +11,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.8.2",
+    "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.8.1",
+    "@mantine/core": "^5.2.0",
+    "@mantine/hooks": "^5.2.0",
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.3",
     "@mui/styles": "^5.5.3",
