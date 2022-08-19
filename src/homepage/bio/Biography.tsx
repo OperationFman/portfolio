@@ -25,8 +25,6 @@ export const Biography = (props: BiographyType) => {
         width="480"
         height="300"
         alt="Head shot"
-        blurDataURL="/images/path-to-blur-image.jpg"
-        placeholder="blur"
       />
     );
   };
