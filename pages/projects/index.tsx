@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
 import { ProjectItem } from "../../src/projects/components/project-item/ProjectItem";
-import { projectMetaData } from "../../src/projects/database/ProjectMetaData";
+import { projectMetaData } from "../../src/datasources/ProjectMetaData";
 
 const Projects: NextPage = () => {
   // Todo: Temporary fix for react-material-ui-carousel not resizing properly on initial page load
