@@ -1,4 +1,4 @@
-import { Languages, Tags, Topic, TutorialMetaData } from "../types";
+import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{

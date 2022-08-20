@@ -1,4 +1,4 @@
-import { ProjectMetaData } from '../types'
+import { ProjectMetaData } from '../projects/types'
 
 export const projectMetaData: ProjectMetaData[] = [
     {
