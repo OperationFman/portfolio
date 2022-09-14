@@ -2,6 +2,18 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Cleaner Conditional Component Rendering",
+		link: `clearer-conditional-rendering`,
+		notionPage: "578b462fff1b45f89a064d5eafe61c5f",
+		created: 1663151345,
+		thumbnail: "/tutorials/showif.png",
+		subTitle:
+			"Replace messy ternaries and booleans with this neat component wrapper",
+		topic: Topic.Programming,
+		languages: [Languages.Typescript],
+		tags: [Tags.CodeBlock],
+	},
+	{
 		title: "Type Validate an API Fetch Call",
 		link: `fetch-api-type-validation`,
 		notionPage: "44f4f50236114c078b83e55a4fb8e9c5",
