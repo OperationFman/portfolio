@@ -2,11 +2,22 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Provider Wrapping with Souvlaki",
+		link: `provider-wrapping-with-souvlaki`,
+		notionPage: "5bd25204d97e4e8aa6e5946619973ba3",
+		created: 1663809960,
+		thumbnail: "/tutorials/souvlaki-wrap.jpg",
+		subTitle: "Simpler reusable provider wrappers for all your unit test needs",
+		topic: Topic.Programming,
+		languages: [Languages.Typescript],
+		tags: [Tags.StepByStep],
+	},
+	{
 		title: "Cleaner Conditional Component Rendering",
 		link: `clearer-conditional-rendering`,
 		notionPage: "578b462fff1b45f89a064d5eafe61c5f",
 		created: 1663151345,
-		thumbnail: "/tutorials/showif.png",
+		thumbnail: "/tutorials/showif.jpeg",
 		subTitle:
 			"Replace messy ternaries and booleans with this neat component wrapper",
 		topic: Topic.Programming,
