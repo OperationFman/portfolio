@@ -2,6 +2,18 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Revert a Commit",
+		link: `revert-commit`,
+		notionPage: "9d8e0e3197544913af8ab782a011d4f2",
+		created: 1664495954,
+		thumbnail: "/tutorials/revert-commit.jpg",
+		subTitle:
+			"Keep calm and fix the pipeline with these super simple instructions",
+		topic: Topic.Programming,
+		languages: [],
+		tags: [Tags.StepByStep],
+	},
+	{
 		title: "Provider Wrapping with Souvlaki",
 		link: `provider-wrapping-with-souvlaki`,
 		notionPage: "5bd25204d97e4e8aa6e5946619973ba3",
