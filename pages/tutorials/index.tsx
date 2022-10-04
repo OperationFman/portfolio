@@ -1,4 +1,4 @@
-import { Dialog, Fade, Grid, Zoom } from "@mui/material";
+import { Dialog, Fade, Grid } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
@@ -6,10 +6,10 @@ import { PageContainer } from "../../src/global/PageContainer";
 import { FilterButton } from "../../src/tutorials/components/buttons/FilterButton";
 import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
 import { TutorialCard } from "../../src/tutorials/components/cards/TutorialCard";
+import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
 import { FilterModal } from "../../src/tutorials/components/filter/FilterModal";
 import { filterAndSortMetaData } from "../../src/tutorials/filter-sort/filterAndSortMetaData";
 import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
-import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
 
 const Transition = slideTransition("right");
 
@@ -74,7 +74,7 @@ const Tutorials: NextPage = () => {
 							<Fade
 								in={true}
 								key={dataItem.title}
-								style={{ transitionDelay: `${index + 1}00ms` }}
+								style={{ transitionDelay: `${index}20ms` }}
 								unmountOnExit>
 								<Grid item>
 									<TutorialCard cardData={dataItem} accentColor={"#ce93d8"} />
