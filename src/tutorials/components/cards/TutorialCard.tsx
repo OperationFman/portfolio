@@ -30,7 +30,7 @@ export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
 				setLoading(true);
 				router.push(`tutorials/${cardData.link}`);
 			}}>
-			<Card sx={{ maxWidth: 345, height: 325, boxShadow: 3 }}>
+			<Card sx={{ maxWidth: 345, boxShadow: 3 }}>
 				<CardActionArea>
 					<CardMedia
 						component='img'
@@ -38,7 +38,7 @@ export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
 						alt={cardData.title}
 						image={cardData.thumbnail}
 					/>
-					<CardContent>
+					<CardContent sx={{ height: 140 }}>
 						<Box
 							sx={{
 								height: "25px",

@@ -39,13 +39,11 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 			<ExternalLinkButtons metaData={metaData} />
 
 			<Carousel
+				swipe={false}
 				autoPlay={false}
-				navButtonsAlwaysVisible={isMobile ? false : true}
 				indicators={false}
 				fullHeightHover={false}
-				animation={"slide"}
-				duration={500}
-				swipe={false}
+				navButtonsAlwaysVisible={isMobile ? false : true}
 				navButtonsProps={{
 					style: {
 						backgroundColor: "transparent",
