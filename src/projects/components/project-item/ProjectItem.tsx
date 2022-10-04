@@ -61,6 +61,7 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 								style={{
 									borderRadius: "5px 5px 0px 0px",
 								}}
+								placeholder={"empty"}
 							/>
 						</LaptopBorder>
 
@@ -75,6 +76,7 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 										position: "absolute",
 										right: "50px",
 									}}
+									placeholder={"empty"}
 								/>
 							</MobileBorder>
 						) : null}
