@@ -7,14 +7,15 @@ import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import { IconButton, Tab, Tabs, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 import { useRouter } from "next/router";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import {
-	centerTabs, container,
+	centerTabs,
+	container,
 	darkModeIcon,
 	desktopHomeButton,
-	mobileHomeButton
+	mobileHomeButton,
 } from "./NavbarStyles";
 
 type NavbarProps = {
@@ -24,40 +25,42 @@ type NavbarProps = {
 export const Navbar = (props: NavbarProps) => {
 	const { setDarkMode } = props;
 	const darkMode = useContext(DarkMode);
-
 	const { isMobile } = useDeviceDetect();
 	const router = useRouter();
-	const [tab, setTab] = useState(-1);
 
-	// Order is important
-	const navTabs: string[] = ["/", "/skills", "/tutorials", "/projects"];
 	const setIndicator: string[] = ["#90caf9", "#66bb6a", "#ce93d8", "#f44336"];
 
-	useEffect(() => {
+	const initialTab = () => {
+		const routes: string[] = ["/", "/skills", "/tutorials", "/projects"];
+
 		const route = router.pathname;
 
-		if (route === navTabs[0]) {
-			setTab(0);
-			return;
+		if (route === routes[0]) {
+			return 0;
 		}
 
-		for (let i = 1; i < navTabs.length; i++) {
-			if (route.startsWith(navTabs[i])) {
-				setTab(i);
-				break;
+		for (let tab = 1; tab < routes.length; tab++) {
+			if (route.startsWith(routes[tab])) {
+				return tab;
 			}
 		}
-	});
 
-	const handleChange = (event: React.SyntheticEvent, newTab: number) => {
-		setTab(newTab);
-		router.replace(navTabs[newTab]);
+		return -1;
+	};
+
+	const [tab, setTab] = useState(initialTab());
+
+	const handleTabClick = (route: string, tab: number) => {
+		setTab(tab);
+
+		setTimeout(() => {
+			router.replace(route);
+		}, 400);
 	};
 
 	return (
 		<Tabs
 			value={tab}
-			onChange={handleChange}
 			scrollButtons={true}
 			TabIndicatorProps={{ style: { background: setIndicator[tab] } }}
 			textColor='inherit'
@@ -74,6 +77,9 @@ export const Navbar = (props: NavbarProps) => {
 						/>
 					}
 					sx={mobileHomeButton}
+					onClick={() => {
+						handleTabClick("/", 0);
+					}}
 				/>
 			) : (
 				<Tab
@@ -85,6 +91,9 @@ export const Navbar = (props: NavbarProps) => {
 						/>
 					}
 					sx={desktopHomeButton}
+					onClick={() => {
+						handleTabClick("/", 0);
+					}}
 				/>
 			)}
 			<Tab
@@ -96,6 +105,9 @@ export const Navbar = (props: NavbarProps) => {
 					/>
 				}
 				sx={centerTabs(isMobile)}
+				onClick={() => {
+					handleTabClick("/skills", 1);
+				}}
 			/>
 			<Tab
 				label='TUTORIALS'
@@ -106,6 +118,9 @@ export const Navbar = (props: NavbarProps) => {
 					/>
 				}
 				sx={centerTabs(isMobile)}
+				onClick={() => {
+					handleTabClick("/tutorials", 2);
+				}}
 			/>
 			<Tab
 				label='PROJECTS'
@@ -116,8 +131,10 @@ export const Navbar = (props: NavbarProps) => {
 					/>
 				}
 				sx={centerTabs(isMobile, true)}
+				onClick={() => {
+					handleTabClick("/projects", 3);
+				}}
 			/>
-
 			<IconButton
 				onClick={() => {
 					localStorage.setItem("dark-mode", `${!darkMode}`);
