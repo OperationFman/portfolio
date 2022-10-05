@@ -1,11 +1,12 @@
-import { Typography } from "@mui/material";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { Button, Tooltip, Typography } from "@mui/material";
 import Image from "next/image";
-import Carousel from "react-material-ui-carousel";
+import Carousel from "nuka-carousel";
 import useDeviceDetect from "../../../../utils/useDeviceDetect";
 import { ProjectMetaData } from "../../types";
-import { LaptopBorder } from "./device-borders/LaptopBorder";
-import { MobileBorder } from "./device-borders/MobileBorder";
 import { ExternalLinkButtons } from "./ExternalLinkButtons";
+import Zoom from "@mui/material/Zoom";
 
 type ProjectItemProps = {
 	metaData: ProjectMetaData;
@@ -35,52 +36,40 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 				}}>
 				{metaData.title}
 			</h1>
-
 			<ExternalLinkButtons metaData={metaData} />
-
 			<Carousel
-				swipe={false}
-				autoPlay={false}
-				indicators={false}
-				fullHeightHover={false}
-				navButtonsAlwaysVisible={isMobile ? false : true}
-				navButtonsProps={{
-					style: {
-						backgroundColor: "transparent",
-						color: "grey",
-					},
-				}}>
-				{metaData.images.desktop.map((item, i) => (
-					<>
-						<LaptopBorder key={i}>
-							<Image
-								src={item}
-								width={1280}
-								height={720}
-								alt='Picture of the website'
-								style={{
-									borderRadius: "5px 5px 0px 0px",
-								}}
-								placeholder={"empty"}
-							/>
-						</LaptopBorder>
-
-						{metaData.images.mobile ? (
-							<MobileBorder>
-								<Image
-									src={metaData.images.mobile[i]}
-									layout='fill'
-									alt='Picture of the website on mobile'
-									style={{
-										borderRadius: "10px",
-										position: "absolute",
-										right: "50px",
-									}}
-									placeholder={"empty"}
-								/>
-							</MobileBorder>
-						) : null}
-					</>
+				wrapAround={true}
+				renderBottomCenterControls={() => {}} // Equivalent to false
+				renderCenterLeftControls={({ previousSlide }) => (
+					<Tooltip TransitionComponent={Zoom} title='Previous Slide'>
+						<Button
+							color='defaultText'
+							onClick={previousSlide}
+							style={{ borderRadius: "50px" }}>
+							<KeyboardArrowLeftIcon />
+						</Button>
+					</Tooltip>
+				)}
+				renderCenterRightControls={({ nextSlide }) => (
+					<Tooltip TransitionComponent={Zoom} title='Next Slide'>
+						<Button
+							color='defaultText'
+							onClick={nextSlide}
+							style={{ borderRadius: "50px" }}>
+							<KeyboardArrowRightIcon />
+						</Button>
+					</Tooltip>
+				)}>
+				{metaData.images.desktop.map((item) => (
+					<div style={{ padding: "0px 50px" }}>
+						<Image
+							src={item}
+							width={1280}
+							height={720}
+							alt='Picture of the website'
+							placeholder={"empty"}
+						/>
+					</div>
 				))}
 			</Carousel>
 

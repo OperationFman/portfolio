@@ -26,9 +26,9 @@
     "notion-client": "^6.1.0",
     "notion-types": "^6.0.26",
     "notion-utils": "^6.1.0",
+    "nuka-carousel": "^5.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-material-ui-carousel": "^3.4.2",
     "react-notion-x": "^6.1.2",
     "react-spring": "^9.4.5",
     "react-typing-effect": "^2.0.5"
