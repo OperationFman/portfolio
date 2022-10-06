@@ -1,3 +1,4 @@
+export {}
 // import { useSpring, animated, easings } from "react-spring";
 // import { AnimationProps } from "../types";
 // import Image from "next/future/image";
