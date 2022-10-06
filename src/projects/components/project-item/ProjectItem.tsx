@@ -39,7 +39,7 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 			<ExternalLinkButtons metaData={metaData} />
 			<Carousel
 				wrapAround={true}
-				renderBottomCenterControls={() => {}} // Equivalent to false
+				renderBottomCenterControls={null}
 				renderCenterLeftControls={({ previousSlide }) => (
 					<Tooltip TransitionComponent={Zoom} title='Previous Slide'>
 						<Button
