@@ -60,8 +60,8 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 						</Button>
 					</Tooltip>
 				)}>
-				{metaData.images.desktop.map((item) => (
-					<div style={{ padding: "0px 50px" }}>
+				{metaData.images.desktop.map((item, i) => (
+					<div style={{ padding: "0px 50px" }} key={i}>
 						<Image
 							src={item}
 							width={1280}

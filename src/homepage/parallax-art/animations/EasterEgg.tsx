@@ -8,31 +8,32 @@ export const EasterEgg = (props: AnimationProps) => {
 		return <></>;
 	}
 
-	const firstDestroyer = useSpring({
-		to: { x: 0 },
-		from: { x: -2000 },
-		loop: { reverse: false },
-		config: {
-			duration: 500,
-			easing: easings.easeOutExpo,
+	const config = useSpring({
+		firstDestroyer: {
+			to: { x: 0 },
+			from: { x: -2000 },
+			loop: { reverse: false },
+			config: {
+				duration: 500,
+				easing: easings.easeOutExpo,
+			},
 		},
-	});
-
-	const secondDestroyer = useSpring({
-		to: { x: 0 },
-		from: { x: -2000 },
-		loop: { reverse: false },
-		delay: 2000,
-		config: {
-			duration: 1000,
-			easing: easings.easeOutExpo,
+		secondDestroyer: {
+			to: { x: 0 },
+			from: { x: -2000 },
+			loop: { reverse: false },
+			delay: 2000,
+			config: {
+				duration: 1000,
+				easing: easings.easeOutExpo,
+			},
 		},
 	});
 
 	return (
 		<>
 			<div style={styles.centerImage}>
-				<animated.div style={firstDestroyer}>
+				<animated.div style={config.firstDestroyer}>
 					<img
 						src={"/homepage/parallax/desktop/dark/StarDestroyerFar.svg"}
 						alt='Star Destroyer'
@@ -41,7 +42,7 @@ export const EasterEgg = (props: AnimationProps) => {
 				</animated.div>
 			</div>
 			<div style={styles.centerImage}>
-				<animated.div style={secondDestroyer}>
+				<animated.div style={config.secondDestroyer}>
 					<img
 						src={"/homepage/parallax/desktop/dark/StarDestroyerClose.svg"}
 						alt='Star Destroyer 2'
