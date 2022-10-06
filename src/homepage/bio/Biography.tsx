@@ -1,5 +1,4 @@
 import { Grid } from "@mui/material";
-import { ParallaxLayer } from "@react-spring/parallax";
 import Image from "next/image";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import useHeightDetect from "../../../utils/useHeightDetect";
@@ -81,11 +80,11 @@ export const Biography = (props: BiographyType) => {
 	};
 
 	return (
-		<ParallaxLayer offset={1} factor={1}>
+		<>
 			<PageContainer styleOverrides={{ marginTop: "0px" }}>
 				{isMobile ? <MobileBiography /> : <DesktopBiography />}
 			</PageContainer>
 			<PageDownIcon scrollTo={scrollTo} scrollToPage={2} />
-		</ParallaxLayer>
+		</>
 	);
 };

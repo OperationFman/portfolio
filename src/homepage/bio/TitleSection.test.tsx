@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { timeWorked, pluralTime, TitleSection } from "./TitleSection";
+import { pluralTime, TitleSection } from "./TitleSection";
 
 describe("Title Section", () => {
   describe("plural time", () => {
