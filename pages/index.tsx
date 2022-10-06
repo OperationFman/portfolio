@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Homepage } from "../src/homepage/HomePage";
+import { ParallaxArt } from "../src/homepage/parallax-art/ParallaxArt";
 
 const Home: NextPage = () => {
 	return (
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 					content='My Resume, Experience and Contact Form'
 				/>
 			</Head>
-			<Homepage />
+			<ParallaxArt />
 		</>
 	);
 };
