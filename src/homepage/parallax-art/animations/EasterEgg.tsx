@@ -1,4 +1,3 @@
-import { ParallaxLayer } from "@react-spring/parallax";
 import { animated, easings, useSpring } from "react-spring";
 import { AnimationProps } from "../types";
 
@@ -32,28 +31,24 @@ export const EasterEgg = (props: AnimationProps) => {
 
 	return (
 		<>
-			<ParallaxLayer offset={0} speed={0.1}>
-				<div style={styles.centerImage}>
-					<animated.div style={firstDestroyer}>
-						<img
-							src={"/homepage/parallax/desktop/dark/StarDestroyerFar.svg"}
-							alt='Star Destroyer'
-							height={`${windowHeight}px`}
-						/>
-					</animated.div>
-				</div>
-			</ParallaxLayer>
-			<ParallaxLayer offset={0} speed={0.1}>
-				<div style={styles.centerImage}>
-					<animated.div style={secondDestroyer}>
-						<img
-							src={"/homepage/parallax/desktop/dark/StarDestroyerClose.svg"}
-							alt='Star Destroyer 2'
-							height={`${windowHeight}px`}
-						/>
-					</animated.div>
-				</div>
-			</ParallaxLayer>
+			<div style={styles.centerImage}>
+				<animated.div style={firstDestroyer}>
+					<img
+						src={"/homepage/parallax/desktop/dark/StarDestroyerFar.svg"}
+						alt='Star Destroyer'
+						height={`${windowHeight}px`}
+					/>
+				</animated.div>
+			</div>
+			<div style={styles.centerImage}>
+				<animated.div style={secondDestroyer}>
+					<img
+						src={"/homepage/parallax/desktop/dark/StarDestroyerClose.svg"}
+						alt='Star Destroyer 2'
+						height={`${windowHeight}px`}
+					/>
+				</animated.div>
+			</div>
 		</>
 	);
 };

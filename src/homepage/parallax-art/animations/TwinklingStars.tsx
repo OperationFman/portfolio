@@ -1,4 +1,3 @@
-import { ParallaxLayer } from "@react-spring/parallax";
 import { useState } from "react";
 import { useSpring, animated, config, easings } from "react-spring";
 import { AnimationProps } from "../types";
@@ -33,37 +32,32 @@ export const TwinklingStars = (props: AnimationProps) => {
 
 	return (
 		<>
-			<ParallaxLayer offset={0} speed={0.1}>
-				<div style={styles.centerImage}>
-					<animated.div style={fastTwinkle}>
-						<img
-							src={"/homepage/parallax/desktop/dark/TwinklingStars1.svg"}
-							alt='Twinkling Stars 2'
-							height={`${windowHeight}px`}
-						/>
-					</animated.div>
-				</div>
-			</ParallaxLayer>
-			<ParallaxLayer offset={0} speed={0.1}>
-				<div style={styles.centerImage}>
-					<animated.div style={slowTwinkle}>
-						<img
-							src={"/homepage/parallax/desktop/dark/TwinklingStars2.svg"}
-							alt='Twinkling Stars 1'
-							height={`${windowHeight}px`}
-						/>
-					</animated.div>
-				</div>
-			</ParallaxLayer>
-			<ParallaxLayer offset={0} speed={0.1}>
-				<div style={styles.centerImage}>
+			<div style={styles}>
+				<animated.div style={fastTwinkle}>
 					<img
-						src={"/homepage/parallax/desktop/dark/StaticStars.svg"}
-						alt='Stars'
+						src={"/homepage/parallax/desktop/dark/TwinklingStars1.svg"}
+						alt='Twinkling Stars 2'
 						height={`${windowHeight}px`}
 					/>
-				</div>
-			</ParallaxLayer>
+				</animated.div>
+			</div>
+
+			<div style={styles}>
+				<animated.div style={slowTwinkle}>
+					<img
+						src={"/homepage/parallax/desktop/dark/TwinklingStars2.svg"}
+						alt='Twinkling Stars 1'
+						height={`${windowHeight}px`}
+					/>
+				</animated.div>
+			</div>
+			<div style={styles}>
+				<img
+					src={"/homepage/parallax/desktop/dark/StaticStars.svg"}
+					alt='Stars'
+					height={`${windowHeight}px`}
+				/>
+			</div>
 		</>
 	);
 };
