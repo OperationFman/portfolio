@@ -6,12 +6,6 @@ import Image from "next/future/image";
 export const TwinklingStars = (props: AnimationProps) => {
 	const { selectedTheme, styles, offSetY } = props;
 
-	const layerStyle = {
-		...styles,
-		zIndex: -7,
-		transform: `translateY(${offSetY * -0.1}px`,
-	};
-
 	if (selectedTheme === "light") {
 		return <></>;
 	}
@@ -46,7 +40,9 @@ export const TwinklingStars = (props: AnimationProps) => {
 					width='0'
 					height='0'
 					style={{
-						...layerStyle,
+						...styles,
+						zIndex: -7,
+						transform: `translateY(${offSetY * 0.1}px)`,
 						position: "inherit",
 					}}
 				/>
@@ -59,7 +55,9 @@ export const TwinklingStars = (props: AnimationProps) => {
 					width='0'
 					height='0'
 					style={{
-						...layerStyle,
+						...styles,
+						zIndex: -7,
+						transform: `translateY(${offSetY * 0.2}px)`,
 						position: "inherit",
 					}}
 				/>
@@ -70,8 +68,9 @@ export const TwinklingStars = (props: AnimationProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...styles,
 					zIndex: -7,
+					transform: `translateY(${offSetY * 0.3}px)`,
 				}}
 			/>
 		</>

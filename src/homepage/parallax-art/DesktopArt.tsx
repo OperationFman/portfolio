@@ -1,6 +1,7 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
 import { isClientSide } from "../../../utils/isClientSide";
+import { ShootingStar } from "./animations/ShootingStar";
 import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./types";
 
@@ -15,6 +16,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	};
 
 	// Refactor this to use spring so it's smoother
+	// Add 'first time' to local storage to do a nice animation up
 	const [offSetY, setOffSetY] = useState(0);
 	const handleScroll = () => {
 		setOffSetY(window.pageYOffset);
@@ -42,9 +44,14 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -8,
-					transform: `translateY(${offSetY * -0.1}px`,
+					transform: `translateY(${offSetY * -0.1}px)`,
 				}}
 			/>
+			{/* <ShootingStar
+				selectedTheme={selectedTheme}
+				styles={layerStyle}
+				offSetY={offSetY}
+			/> */}
 			<TwinklingStars
 				selectedTheme={selectedTheme}
 				styles={layerStyle}
@@ -58,7 +65,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -6,
-					transform: `translateY(${offSetY * -0.1}px`,
+					transform: `translateY(${offSetY * -0.1}px)`,
 				}}
 			/>
 			<Image
@@ -69,7 +76,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -5,
-					transform: `translateY(${offSetY * -0.2}px`,
+					transform: `translateY(${offSetY * -0.2}px)`,
 				}}
 			/>
 			<Image
@@ -80,7 +87,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -4,
-					transform: `translateY(${offSetY * -0.3}px`,
+					transform: `translateY(${offSetY * -0.3}px)`,
 				}}
 			/>
 			<Image
@@ -91,7 +98,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -3,
-					transform: `translateY(${offSetY * -0.4}px`,
+					transform: `translateY(${offSetY * -0.4}px)`,
 				}}
 			/>
 			<Image
@@ -102,7 +109,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -2,
-					transform: `translateY(${offSetY * -0.5}px`,
+					transform: `translateY(${offSetY * -0.5}px)`,
 				}}
 			/>
 			<Image
@@ -113,7 +120,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -1,
-					transform: `translateY(${offSetY * -0.6}px`,
+					transform: `translateY(${offSetY * -0.6}px)`,
 				}}
 			/>
 			<div style={{ height: "100vh" }} />
