@@ -76,6 +76,17 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				}}
 			/>
 			<Image
+				src={`/homepage/parallax/desktop/${selectedTheme}/FarBalloons.svg`}
+				alt='Far Balloon'
+				width='0'
+				height='0'
+				style={{
+					...layerStyle,
+					zIndex: -5,
+					transform: `translateY(${offSetY * -0.2 + -20}px)`, // Remove + 20
+				}}
+			/>
+			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/4.svg`}
 				alt='Clouds'
 				width='0'
@@ -103,6 +114,17 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				offSetY={offSetY}
 			/>
 			<Image
+				src={`/homepage/parallax/desktop/${selectedTheme}/NearBalloons.svg`}
+				alt='Near Balloon'
+				width='0'
+				height='0'
+				style={{
+					...layerStyle,
+					zIndex: -3,
+					transform: `translateY(${offSetY * -0.2}px)`, // Remove + 20
+				}}
+			/>
+			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/6.svg`}
 				alt='Clouds'
 				width='0'
@@ -113,6 +135,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					transform: `translateY(${offSetY * -0.4}px)`,
 				}}
 			/>
+
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/7.svg`}
 				alt='Clouds'
