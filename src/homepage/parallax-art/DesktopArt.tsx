@@ -1,15 +1,16 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
+import { isClientSide } from "../../../utils/isClientSide";
 import { ParallaxArtProps } from "./types";
 
 export const DesktopArt = (props: ParallaxArtProps) => {
-	const { windowHeight, selectedTheme } = props;
+	const { selectedTheme } = props;
 
 	const layerStyle: any = {
 		// Type issue with absolute positioning when passed to NextJS Image Component
 		position: "absolute",
 		width: "auto",
-		height: `${windowHeight}px`,
+		height: `100vh`,
 	};
 
 	// Refactor this to use spring so it's smoother
