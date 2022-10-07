@@ -1,4 +1,4 @@
-export {}
+export {};
 // import { animated, easings, useSpring } from "react-spring";
 // import { AnimationProps } from "../types";
 

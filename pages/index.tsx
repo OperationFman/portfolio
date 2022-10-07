@@ -13,6 +13,7 @@ const Home: NextPage = () => {
 				/>
 			</Head>
 			<ParallaxArt />
+			<div style={{ height: "100vh" }} />
 		</>
 	);
 };
