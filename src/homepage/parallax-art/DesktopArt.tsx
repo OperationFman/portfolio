@@ -73,6 +73,17 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				}}
 			/>
 			<Image
+				src={`/homepage/parallax/desktop/${selectedTheme}/Plane.svg`}
+				alt='Plane'
+				width='0'
+				height='0'
+				style={{
+					...layerStyle,
+					zIndex: -2,
+					transform: `translateY(${offSetY * -0.5}px)`,
+				}}
+			/>
+			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/FarBalloons.svg`}
 				alt='Far Balloon'
 				width='0'
@@ -118,7 +129,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -3,
-					transform: `translateY(${offSetY * -0.2}px)`, // Remove + 20
+					transform: `translateY(${offSetY * -0.2}px)`,
 				}}
 			/>
 			<Image
