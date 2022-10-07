@@ -16,14 +16,11 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 		height: `100vh`,
 	};
 
-	// Refactor this to use spring so it's smoother
 	// Add 'first time' to local storage to do a nice animation up
 	const [offSetY, setOffSetY] = useState(0);
 	const handleScroll = () => {
 		setOffSetY(window.pageYOffset);
 	};
-
-	// Weird phantom scroll bar appearing, why? Assuming not spring animate
 
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
