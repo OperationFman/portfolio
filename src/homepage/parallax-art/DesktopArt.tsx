@@ -1,6 +1,8 @@
 import Image from "next/future/image";
+import { off } from "process";
 import { useEffect, useState } from "react";
 import { isClientSide } from "../../../utils/isClientSide";
+import { Clouds } from "./animations/Clouds";
 import { ShootingStar } from "./animations/ShootingStar";
 import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./types";
@@ -46,7 +48,6 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -8,
-					transform: `translateY(${offSetY * -0.1}px)`,
 				}}
 			/>
 			<ShootingStar
@@ -55,6 +56,11 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				offSetY={offSetY}
 			/>
 			<TwinklingStars
+				selectedTheme={selectedTheme}
+				styles={layerStyle}
+				offSetY={offSetY}
+			/>
+			<Clouds
 				selectedTheme={selectedTheme}
 				styles={layerStyle}
 				offSetY={offSetY}

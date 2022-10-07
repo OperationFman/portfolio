@@ -1,7 +1,7 @@
+import Image from "next/future/image";
 import { useState } from "react";
 import { animated, config, easings, useSpring } from "react-spring";
 import { AnimationProps } from "../types";
-import Image from "next/future/image";
 
 export const TwinklingStars = (props: AnimationProps) => {
 	const { selectedTheme, styles, offSetY } = props;
