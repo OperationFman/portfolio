@@ -1,6 +1,7 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
 import { isClientSide } from "../../../utils/isClientSide";
+import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./types";
 
 export const DesktopArt = (props: ParallaxArtProps) => {
@@ -40,11 +41,15 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				height='0'
 				style={{
 					...layerStyle,
-					zIndex: -7,
+					zIndex: -8,
 					transform: `translateY(${offSetY * -0.1}px`,
 				}}
 			/>
-			{/* Don't start with shooting star */}
+			<TwinklingStars
+				selectedTheme={selectedTheme}
+				styles={layerStyle}
+				offSetY={offSetY}
+			/>
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/3.svg`}
 				alt='Clouds'

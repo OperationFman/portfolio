@@ -3,7 +3,6 @@ export type ParallaxArtProps = {
 };
 
 export type AnimationProps = {
-	windowHeight: number;
 	selectedTheme: string;
 	styles: any;
 	offSetY: number;
