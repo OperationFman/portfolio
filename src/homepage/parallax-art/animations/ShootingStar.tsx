@@ -8,7 +8,6 @@ export const ShootingStar = (props: AnimationProps) => {
 		return <></>;
 	}
 
-	//Rework animation from scratch, ideally without animate spring
 	return (
 		<Image
 			src={"/homepage/parallax/desktop/dark/ShootingStar.svg"}

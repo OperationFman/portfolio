@@ -1,12 +1,12 @@
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Button, Tooltip, Typography } from "@mui/material";
+import Zoom from "@mui/material/Zoom";
 import Image from "next/image";
 import Carousel from "nuka-carousel";
 import useDeviceDetect from "../../../../utils/useDeviceDetect";
 import { ProjectMetaData } from "../../types";
 import { ExternalLinkButtons } from "./ExternalLinkButtons";
-import Zoom from "@mui/material/Zoom";
 
 type ProjectItemProps = {
 	metaData: ProjectMetaData;

@@ -1,14 +1,11 @@
+import { Fade } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { projectMetaData } from "../../src/datasources/ProjectMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { ProjectItem } from "../../src/projects/components/project-item/ProjectItem";
-import { projectMetaData } from "../../src/datasources/ProjectMetaData";
-import { Fade } from "@mui/material";
 
 const Projects: NextPage = () => {
-	// Todo: Temporary fix for react-material-ui-carousel not resizing properly on initial page load
-	setTimeout(() => {}, 500);
-
 	return (
 		<div>
 			<Head>

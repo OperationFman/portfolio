@@ -1,7 +1,3 @@
-export type ParallaxArtProps = {
-	selectedTheme: string;
-};
-
 export type AnimationProps = {
 	selectedTheme: string;
 	styles: any;

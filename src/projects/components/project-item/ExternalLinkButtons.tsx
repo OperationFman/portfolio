@@ -1,9 +1,9 @@
-import { Button, Tooltip } from "@mui/material";
-import { ProjectMetaData } from "../../types";
+import FormatPaintIcon from "@mui/icons-material/FormatPaint";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
-import FormatPaintIcon from "@mui/icons-material/FormatPaint";
+import { Button, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
+import { ProjectMetaData } from "../../types";
 
 type ExternalLinks = {
 	metaData: ProjectMetaData;
