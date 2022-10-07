@@ -22,6 +22,8 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 		setOffSetY(window.pageYOffset);
 	};
 
+	// Weird phantom scroll bar appearing, why? Assuming not spring animate
+
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
 
@@ -47,11 +49,11 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					transform: `translateY(${offSetY * -0.1}px)`,
 				}}
 			/>
-			{/* <ShootingStar
+			<ShootingStar
 				selectedTheme={selectedTheme}
 				styles={layerStyle}
 				offSetY={offSetY}
-			/> */}
+			/>
 			<TwinklingStars
 				selectedTheme={selectedTheme}
 				styles={layerStyle}

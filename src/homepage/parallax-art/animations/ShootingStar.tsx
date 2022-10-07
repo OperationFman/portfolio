@@ -1,36 +1,26 @@
-import { animated, easings, useSpring } from "react-spring";
-import { AnimationProps } from "../types";
 import Image from "next/future/image";
+import { AnimationProps } from "../types";
 
 export const ShootingStar = (props: AnimationProps) => {
-	const { selectedTheme, styles, offSetY } = props;
+	const { selectedTheme } = props;
 
 	if (selectedTheme === "light") {
 		return <></>;
 	}
 
-	const starShot = useSpring({
-		// to: { x: 2000, y: 2000 },
-		from: { x: 0, y: 0 },
-		config: {
-			duration: 8000,
-			easing: easings.easeInOutCubic,
-		},
-	});
-
+	//Rework animation from scratch, ideally without animate spring
 	return (
-		// <animated.div style={starShot}>
 		<Image
 			src={"/homepage/parallax/desktop/dark/ShootingStar.svg"}
-			alt='Twinkling Stars 1'
+			alt='Shooting Star'
 			width='0'
 			height='0'
 			style={{
-				...styles,
+				position: "absolute",
+				width: "auto",
+				height: `100vh`,
 				zIndex: -7,
-				border: "2px solid pink",
 			}}
 		/>
-		// </animated.div>
 	);
 };
