@@ -1,6 +1,5 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
-import { ShootingStar } from "./animations/ShootingStar";
 import { ParallaxArtProps } from "./types";
 
 export const DesktopArt = (props: ParallaxArtProps) => {
