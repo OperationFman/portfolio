@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Homepage } from "../src/homepage/Homepage";
-import { ParallaxArt } from "../src/homepage/parallax-art/ParallaxArt";
 
 const Home: NextPage = () => {
 	return (

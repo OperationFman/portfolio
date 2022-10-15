@@ -1,10 +1,11 @@
-import { useContext } from "react";
-import { DarkMode } from "../../../themes/GlobalTheme";
 import { DesktopArt } from "./DesktopArt";
 
-export const ParallaxArt = () => {
-	const darkMode = useContext(DarkMode);
-	const selectedTheme = darkMode ? "dark" : "light";
+export type ParallaxArtProps = {
+	selectedTheme: string;
+};
+
+export const ParallaxArt = (props: ParallaxArtProps) => {
+	const { selectedTheme } = props;
 
 	return <DesktopArt selectedTheme={selectedTheme} />;
 };

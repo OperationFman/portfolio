@@ -2,10 +2,7 @@ import Image from "next/future/image";
 import { useEffect, useState } from "react";
 import { ShootingStar } from "./animations/ShootingStar";
 import { TwinklingStars } from "./animations/TwinklingStars";
-
-type ParallaxArtProps = {
-	selectedTheme: string;
-};
+import { ParallaxArtProps } from "./ParallaxArt";
 
 export const DesktopArt = (props: ParallaxArtProps) => {
 	const { selectedTheme } = props;
@@ -185,10 +182,8 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -1,
-					// transform: `translateY(${offSetY * -0.6}px)`,
 				}}
 			/>
-			<div style={{ height: "100vh" }} />
 		</div>
 	);
 };
