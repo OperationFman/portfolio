@@ -18,7 +18,7 @@ export const TwinklingStars = (props: AnimationProps) => {
 				style={{
 					...styles,
 					zIndex: -7,
-					transform: `translateY(${offSetY * 0.9 - 50}px)`,
+					transform: `translateY(${offSetY * 0.6 - 50}px)`,
 				}}
 			/>
 			<Image
@@ -29,7 +29,7 @@ export const TwinklingStars = (props: AnimationProps) => {
 				style={{
 					...styles,
 					zIndex: -7,
-					transform: `translateY(${offSetY * 0.94 - 50}px)`,
+					transform: `translateY(${offSetY * 0.64 - 50}px)`,
 				}}
 			/>
 			<Image
@@ -40,7 +40,7 @@ export const TwinklingStars = (props: AnimationProps) => {
 				style={{
 					...styles,
 					zIndex: -7,
-					transform: `translateY(${offSetY * 0.98 - 20}px)`,
+					transform: `translateY(${offSetY * 0.68 - 20}px)`,
 				}}
 			/>
 		</>

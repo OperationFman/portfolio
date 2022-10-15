@@ -52,7 +52,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -8,
-					transform: `translateY(${offSetY * 0.9}px)`,
+					transform: `translateY(${offSetY * 0.6}px)`,
 				}}
 			/>
 			<ShootingStar
@@ -73,7 +73,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -7,
-					transform: `translateY(${offSetY * 0.5}px)`,
+					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
 			/>
 			<Image
@@ -84,7 +84,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -6,
-					transform: `translateY(${offSetY * 0.8}px)`,
+					transform: `translateY(${offSetY * 0.5}px)`,
 				}}
 			/>
 			<Image
@@ -95,7 +95,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -5,
-					transform: `translateY(${offSetY * 0.5 + -20}px)`, // Remove + 20
+					transform: `translateY(${offSetY * 0.4 + -20}px)`, // Remove + 20
 				}}
 			/>
 			<Image
@@ -106,7 +106,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -3,
-					transform: `translateY(${offSetY * 0.5}px)`,
+					transform: `translateY(${offSetY * 0.35}px)`,
 				}}
 			/>
 			<Image
@@ -129,7 +129,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -4,
-					transform: `translateY(${offSetY * 0.4}px)`,
+					transform: `translateY(${offSetY * 0.35}px)`,
 				}}
 			/>
 			<Image
@@ -174,7 +174,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -2,
-					transform: `translateY(${offSetY * 0.6}px)`,
+					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
 			/>
 			<Image
