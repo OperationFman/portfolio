@@ -1,8 +1,6 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
-import { Clouds } from "./animations/Clouds";
 import { ShootingStar } from "./animations/ShootingStar";
-import { Train } from "./animations/Train";
 import { TwinklingStars } from "./animations/TwinklingStars";
 
 type ParallaxArtProps = {
@@ -41,7 +39,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 			}}>
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/1.svg`}
-				alt='Moon'
+				alt='Sun/Moon'
 				width='0'
 				height='0'
 				style={{
@@ -59,14 +57,20 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				styles={layerStyle}
 				offSetY={offSetY}
 			/>
-			<Clouds
-				selectedTheme={selectedTheme}
-				styles={layerStyle}
-				offSetY={offSetY}
+			<Image
+				src={`/homepage/parallax/desktop/${selectedTheme}/2.svg`}
+				alt='Clouds'
+				width='0'
+				height='0'
+				style={{
+					...layerStyle,
+					zIndex: -7,
+					transform: `translateY(${offSetY * -0.2}px)`,
+				}}
 			/>
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/3.svg`}
-				alt='Clouds'
+				alt='Farthest Mountain'
 				width='0'
 				height='0'
 				style={{
@@ -87,17 +91,6 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				}}
 			/>
 			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/4.svg`}
-				alt='Clouds'
-				width='0'
-				height='0'
-				style={{
-					...layerStyle,
-					zIndex: -5,
-					transform: `translateY(${offSetY * -0.2}px)`,
-				}}
-			/>
-			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/NearBalloons.svg`}
 				alt='Near Balloon'
 				width='0'
@@ -109,8 +102,20 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				}}
 			/>
 			<Image
+				src={`/homepage/parallax/desktop/${selectedTheme}/4.svg`}
+				alt='Mid Mountains'
+				width='0'
+				height='0'
+				style={{
+					...layerStyle,
+					zIndex: -5,
+					transform: `translateY(${offSetY * -0.2}px)`,
+				}}
+			/>
+
+			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/5.svg`}
-				alt='Clouds'
+				alt='Nearest Mountain'
 				width='0'
 				height='0'
 				style={{
@@ -119,14 +124,20 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					transform: `translateY(${offSetY * -0.3}px)`,
 				}}
 			/>
-			<Train
-				selectedTheme={selectedTheme}
-				styles={layerStyle}
-				offSetY={offSetY}
+			<Image
+				src={`/homepage/parallax/desktop/${selectedTheme}/Train.svg`}
+				alt='Train'
+				width='0'
+				height='0'
+				style={{
+					...layerStyle,
+					zIndex: -6,
+					transform: `translateY(${offSetY * -0.2}px)`,
+				}}
 			/>
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/6.svg`}
-				alt='Clouds'
+				alt='Farthest City'
 				width='0'
 				height='0'
 				style={{
@@ -138,7 +149,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/7.svg`}
-				alt='Clouds'
+				alt='Closest City'
 				width='0'
 				height='0'
 				style={{
@@ -160,7 +171,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 			/>
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/8.svg`}
-				alt='Clouds'
+				alt='Motherboard I/O'
 				width='0'
 				height='0'
 				style={{
