@@ -37,6 +37,13 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				alignItems: "center",
 				justifyContent: "center",
 			}}>
+			<div
+				style={{
+					height: "100vh",
+					width: "100%",
+					backgroundColor: selectedTheme === "dark" ? "#01579b" : "#a3dcf9",
+					zIndex: -9,
+				}}></div>
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/1.svg`}
 				alt='Sun/Moon'
@@ -45,6 +52,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -8,
+					transform: `translateY(${offSetY * 0.9}px)`,
 				}}
 			/>
 			<ShootingStar
@@ -65,7 +73,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -7,
-					transform: `translateY(${offSetY * -0.2}px)`,
+					transform: `translateY(${offSetY * 0.5}px)`,
 				}}
 			/>
 			<Image
@@ -76,7 +84,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -6,
-					transform: `translateY(${offSetY * -0.1}px)`,
+					transform: `translateY(${offSetY * 0.8}px)`,
 				}}
 			/>
 			<Image
@@ -87,7 +95,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -5,
-					transform: `translateY(${offSetY * -0.2 + -20}px)`, // Remove + 20
+					transform: `translateY(${offSetY * 0.5 + -20}px)`, // Remove + 20
 				}}
 			/>
 			<Image
@@ -98,7 +106,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -3,
-					transform: `translateY(${offSetY * -0.3}px)`,
+					transform: `translateY(${offSetY * 0.5}px)`,
 				}}
 			/>
 			<Image
@@ -109,7 +117,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -5,
-					transform: `translateY(${offSetY * -0.2}px)`,
+					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
 			/>
 
@@ -121,7 +129,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -4,
-					transform: `translateY(${offSetY * -0.3}px)`,
+					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
 			/>
 			<Image
@@ -132,7 +140,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -6,
-					transform: `translateY(${offSetY * -0.2}px)`,
+					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
 			/>
 			<Image
@@ -143,7 +151,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -3,
-					transform: `translateY(${offSetY * -0.3}px)`,
+					transform: `translateY(${offSetY * 0.2}px)`,
 				}}
 			/>
 
@@ -155,7 +163,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -2,
-					transform: `translateY(${offSetY * -0.4}px)`,
+					transform: `translateY(${offSetY * 0.1}px)`,
 				}}
 			/>
 			<Image
@@ -166,7 +174,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -2,
-					transform: `translateY(${offSetY * -0.4}px)`,
+					transform: `translateY(${offSetY * 0.6}px)`,
 				}}
 			/>
 			<Image
@@ -177,7 +185,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					...layerStyle,
 					zIndex: -1,
-					transform: `translateY(${offSetY * -0.6}px)`,
+					// transform: `translateY(${offSetY * -0.6}px)`,
 				}}
 			/>
 			<div style={{ height: "100vh" }} />

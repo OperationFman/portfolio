@@ -5,8 +5,10 @@ export const Homepage = () => {
 	return (
 		<>
 			<ParallaxArt />
-			
+
 			<Biography />
 		</>
 	);
 };
+
+// Layer in-front moves faster
