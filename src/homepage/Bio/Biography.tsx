@@ -1,8 +1,4 @@
-import { ParallaxArtProps } from "../parallax-art/ParallaxArt";
-
-export const Biography = (props: ParallaxArtProps) => {
-	const { selectedTheme } = props;
-
+export const Biography = ({ selectedTheme }: { selectedTheme: string }) => {
 	return (
 		<div
 			style={{
