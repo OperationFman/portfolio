@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DarkMode } from "../../themes/GlobalTheme";
-import { Biography } from "./Bio/Biography";
+import { PageContainer } from "../global/PageContainer";
+import { Biography } from "./bio/Biography";
 import { ParallaxArt } from "./parallax-art/ParallaxArt";
 
 export const Homepage = () => {
@@ -11,7 +12,9 @@ export const Homepage = () => {
 		<>
 			<ParallaxArt selectedTheme={selectedTheme} />
 
-			<Biography selectedTheme={selectedTheme} />
+			<PageContainer>
+				<Biography />
+			</PageContainer>
 		</>
 	);
 };
