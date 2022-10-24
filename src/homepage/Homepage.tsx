@@ -11,8 +11,6 @@ export const Homepage = () => {
 		<>
 			<ParallaxArt selectedTheme={selectedTheme} />
 
-			<div style={{ height: "70vh" }}></div>
-
 			<Biography selectedTheme={selectedTheme} />
 		</>
 	);
