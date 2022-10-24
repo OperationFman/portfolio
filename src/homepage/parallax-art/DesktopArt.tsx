@@ -15,7 +15,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	const parallaxLayerPosition: any = {
 		// Type issue with absolute positioning when passed to NextJS Image Component
 		position: "inherit",
-		height: "100vh",
+		height: "70vh",
 		width: "auto",
 		overflow: "hidden",
 	};
@@ -37,7 +37,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 			style={{
 				position: "absolute",
 				width: "100%",
-				height: `100vh`,
+				height: `70vh`,
 				overflow: "hidden",
 				display: "flex",
 				alignItems: "center",
@@ -47,7 +47,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				style={{
 					zIndex: -9,
 					width: "100%",
-					height: "100vh",
+					height: "70vh",
 					backgroundColor: selectedTheme === "dark" ? "#01579b" : "#a3dcf9",
 				}}></div>
 
