@@ -1,9 +1,14 @@
 import Image from "next/future/image";
-import { AnimationProps } from "../types";
 
-export const TwinklingStars = (props: AnimationProps) => {
-	const { selectedTheme, styleOverrides, offSetY } = props;
-
+export const Stars = ({
+	selectedTheme,
+	offSetY,
+	styleOverrides,
+}: {
+	selectedTheme: string;
+	styleOverrides: any;
+	offSetY: number;
+}) => {
 	if (selectedTheme === "light") {
 		return <></>;
 	}

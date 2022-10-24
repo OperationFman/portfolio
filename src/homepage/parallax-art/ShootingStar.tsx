@@ -1,9 +1,14 @@
 import Image from "next/future/image";
-import { AnimationProps } from "../types";
 
-export const ShootingStar = (props: AnimationProps) => {
-	const { selectedTheme, offSetY, styleOverrides } = props;
-
+export const ShootingStar = ({
+	selectedTheme,
+	offSetY,
+	styleOverrides,
+}: {
+	selectedTheme: string;
+	styleOverrides: any;
+	offSetY: number;
+}) => {
 	if (selectedTheme === "light") {
 		return <></>;
 	}
