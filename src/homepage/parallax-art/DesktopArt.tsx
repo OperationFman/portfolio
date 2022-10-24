@@ -10,6 +10,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	const { selectedTheme } = props;
 
 	const { isMobile } = useDeviceDetect();
+	const platform = isMobile ? "mobile" : "desktop";
 
 	const parallaxLayerPosition: any = {
 		// Type issue with absolute positioning when passed to NextJS Image Component
@@ -83,10 +84,32 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 						transform: `translateY(${offSetY * 0.4}px)`,
 					}}
 				/>
+				<Image
+					src={`/homepage/parallax/${platform}//${selectedTheme}/FarBalloons.svg`}
+					alt='Far Balloon'
+					width='0'
+					height='0'
+					style={{
+						...parallaxLayerPosition,
+						zIndex: -5,
+						transform: `translateY(${offSetY * 0.4 + -20}px)`, // Remove + 20
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/${platform}//${selectedTheme}/NearBalloons.svg`}
+					alt='Near Balloon'
+					width='0'
+					height='0'
+					style={{
+						...parallaxLayerPosition,
+						zIndex: -3,
+						transform: `translateY(${offSetY * 0.35}px)`,
+					}}
+				/>
 			</ShowIf>
 
 			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/1.svg`}
+				src={`/homepage/parallax/${platform}/${selectedTheme}/1.svg`}
 				alt='Sun/Moon'
 				width='0'
 				height='0'
@@ -97,7 +120,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				}}
 			/>
 			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/2.svg`}
+				src={`/homepage/parallax/${platform}//${selectedTheme}/2.svg`}
 				alt='Clouds'
 				width='0'
 				height='0'
@@ -108,7 +131,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				}}
 			/>
 			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/3.svg`}
+				src={`/homepage/parallax/${platform}//${selectedTheme}/3.svg`}
 				alt='Farthest Mountain'
 				width='0'
 				height='0'
@@ -118,30 +141,9 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					transform: `translateY(${offSetY * 0.5}px)`,
 				}}
 			/>
+
 			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/FarBalloons.svg`}
-				alt='Far Balloon'
-				width='0'
-				height='0'
-				style={{
-					...parallaxLayerPosition,
-					zIndex: -5,
-					transform: `translateY(${offSetY * 0.4 + -20}px)`, // Remove + 20
-				}}
-			/>
-			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/NearBalloons.svg`}
-				alt='Near Balloon'
-				width='0'
-				height='0'
-				style={{
-					...parallaxLayerPosition,
-					zIndex: -3,
-					transform: `translateY(${offSetY * 0.35}px)`,
-				}}
-			/>
-			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/4.svg`}
+				src={`/homepage/parallax/${platform}//${selectedTheme}/4.svg`}
 				alt='Mid Mountains'
 				width='0'
 				height='0'
@@ -152,7 +154,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				}}
 			/>
 			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/5.svg`}
+				src={`/homepage/parallax/${platform}//${selectedTheme}/5.svg`}
 				alt='Nearest Mountain'
 				width='0'
 				height='0'
@@ -164,7 +166,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 			/>
 
 			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/6.svg`}
+				src={`/homepage/parallax/${platform}//${selectedTheme}/6.svg`}
 				alt='Farthest City'
 				width='0'
 				height='0'
@@ -176,7 +178,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 			/>
 
 			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/7.svg`}
+				src={`/homepage/parallax/${platform}//${selectedTheme}/7.svg`}
 				alt='Closest City'
 				width='0'
 				height='0'
@@ -188,7 +190,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 			/>
 
 			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/8.svg`}
+				src={`/homepage/parallax/${platform}//${selectedTheme}/8.svg`}
 				alt='Motherboard I/O'
 				width='0'
 				height='0'
