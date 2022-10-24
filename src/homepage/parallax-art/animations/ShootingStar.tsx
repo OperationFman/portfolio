@@ -2,7 +2,7 @@ import Image from "next/future/image";
 import { AnimationProps } from "../types";
 
 export const ShootingStar = (props: AnimationProps) => {
-	const { selectedTheme, offSetY } = props;
+	const { selectedTheme, offSetY, styleOverrides } = props;
 
 	if (selectedTheme === "light") {
 		return <></>;
@@ -15,9 +15,7 @@ export const ShootingStar = (props: AnimationProps) => {
 			width='0'
 			height='0'
 			style={{
-				position: "absolute",
-				width: "auto",
-				height: `100vh`,
+				...styleOverrides,
 				zIndex: -7,
 				transform: `translateY(${offSetY * 0.55}px)`,
 			}}

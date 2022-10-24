@@ -7,11 +7,12 @@ import { ParallaxArtProps } from "./ParallaxArt";
 export const DesktopArt = (props: ParallaxArtProps) => {
 	const { selectedTheme } = props;
 
-	const layerStyle: any = {
+	const parallaxLayerPosition: any = {
 		// Type issue with absolute positioning when passed to NextJS Image Component
-		position: "absolute",
+		position: "inherit",
+		height: "100vh",
 		width: "auto",
-		height: `100vh`,
+		overflow: "hidden",
 	};
 
 	// Add 'first time' to local storage to do a nice animation up
@@ -29,17 +30,20 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 	return (
 		<div
 			style={{
-				overflowX: "hidden",
+				position: "absolute",
+				width: "100%",
+				height: `100vh`,
+				overflow: "hidden",
 				display: "flex",
 				alignItems: "center",
 				justifyContent: "center",
 			}}>
 			<div
 				style={{
-					height: "100vh",
-					width: "100%",
-					backgroundColor: selectedTheme === "dark" ? "#01579b" : "#a3dcf9",
 					zIndex: -9,
+					width: "100%",
+					height: "100vh",
+					backgroundColor: selectedTheme === "dark" ? "#01579b" : "#a3dcf9",
 				}}></div>
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/1.svg`}
@@ -47,19 +51,19 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -8,
 					transform: `translateY(${offSetY * 0.6}px)`,
 				}}
 			/>
 			<ShootingStar
 				selectedTheme={selectedTheme}
-				styles={layerStyle}
+				styleOverrides={parallaxLayerPosition}
 				offSetY={offSetY}
 			/>
 			<TwinklingStars
 				selectedTheme={selectedTheme}
-				styles={layerStyle}
+				styleOverrides={parallaxLayerPosition}
 				offSetY={offSetY}
 			/>
 			<Image
@@ -68,7 +72,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -7,
 					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
@@ -79,7 +83,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -6,
 					transform: `translateY(${offSetY * 0.5}px)`,
 				}}
@@ -90,7 +94,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -5,
 					transform: `translateY(${offSetY * 0.4 + -20}px)`, // Remove + 20
 				}}
@@ -101,7 +105,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -3,
 					transform: `translateY(${offSetY * 0.35}px)`,
 				}}
@@ -112,7 +116,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -5,
 					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
@@ -124,7 +128,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -4,
 					transform: `translateY(${offSetY * 0.35}px)`,
 				}}
@@ -135,7 +139,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -6,
 					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
@@ -146,7 +150,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -3,
 					transform: `translateY(${offSetY * 0.2}px)`,
 				}}
@@ -158,7 +162,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -2,
 					transform: `translateY(${offSetY * 0.1}px)`,
 				}}
@@ -169,7 +173,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -2,
 					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
@@ -180,7 +184,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				width='0'
 				height='0'
 				style={{
-					...layerStyle,
+					...parallaxLayerPosition,
 					zIndex: -1,
 				}}
 			/>

@@ -2,7 +2,7 @@ import Image from "next/future/image";
 import { AnimationProps } from "../types";
 
 export const TwinklingStars = (props: AnimationProps) => {
-	const { selectedTheme, styles, offSetY } = props;
+	const { selectedTheme, styleOverrides, offSetY } = props;
 
 	if (selectedTheme === "light") {
 		return <></>;
@@ -16,9 +16,9 @@ export const TwinklingStars = (props: AnimationProps) => {
 				width='0'
 				height='0'
 				style={{
-					...styles,
+					...styleOverrides,
 					zIndex: -7,
-					transform: `translateY(${offSetY * 0.6 - 50}px)`,
+					transform: `translateY(${offSetY * 0.8 - 50}px)`,
 				}}
 			/>
 			<Image
@@ -27,9 +27,9 @@ export const TwinklingStars = (props: AnimationProps) => {
 				width='0'
 				height='0'
 				style={{
-					...styles,
+					...styleOverrides,
 					zIndex: -7,
-					transform: `translateY(${offSetY * 0.64 - 50}px)`,
+					transform: `translateY(${offSetY * 0.84 - 50}px)`,
 				}}
 			/>
 			<Image
@@ -38,9 +38,9 @@ export const TwinklingStars = (props: AnimationProps) => {
 				width='0'
 				height='0'
 				style={{
-					...styles,
+					...styleOverrides,
 					zIndex: -7,
-					transform: `translateY(${offSetY * 0.68 - 20}px)`,
+					transform: `translateY(${offSetY * 0.88 - 20}px)`,
 				}}
 			/>
 		</>

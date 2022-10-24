@@ -1,6 +1,6 @@
 export type AnimationProps = {
 	selectedTheme: string;
-	styles: any;
+	styleOverrides: any;
 	offSetY: number;
 	children?: React.ReactNode;
 };
