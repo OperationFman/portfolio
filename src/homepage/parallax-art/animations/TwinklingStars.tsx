@@ -33,7 +33,7 @@ export const TwinklingStars = (props: AnimationProps) => {
 				}}
 			/>
 			<Image
-				src={"/homepage/parallax/desktop/dark/StaticStars.svg"}
+				src={"/homepage/parallax/desktop/dark/TwinklingStars3.svg"}
 				alt='Stars'
 				width='0'
 				height='0'

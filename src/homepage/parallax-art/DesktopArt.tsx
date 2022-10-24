@@ -45,17 +45,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					height: "100vh",
 					backgroundColor: selectedTheme === "dark" ? "#01579b" : "#a3dcf9",
 				}}></div>
-			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/1.svg`}
-				alt='Sun/Moon'
-				width='0'
-				height='0'
-				style={{
-					...parallaxLayerPosition,
-					zIndex: -8,
-					transform: `translateY(${offSetY * 0.6}px)`,
-				}}
-			/>
+
 			<ShootingStar
 				selectedTheme={selectedTheme}
 				styleOverrides={parallaxLayerPosition}
@@ -67,13 +57,47 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 				offSetY={offSetY}
 			/>
 			<Image
+				src={`/homepage/parallax/desktop/${selectedTheme}/Plane.svg`}
+				alt='Plane'
+				width='0'
+				height='0'
+				style={{
+					...parallaxLayerPosition,
+					zIndex: -2,
+					transform: `translateY(${offSetY * 0.4}px)`,
+				}}
+			/>
+			<Image
+				src={`/homepage/parallax/desktop/${selectedTheme}/Train.svg`}
+				alt='Train'
+				width='0'
+				height='0'
+				style={{
+					...parallaxLayerPosition,
+					zIndex: -4,
+					transform: `translateY(${offSetY * 0.4}px)`,
+				}}
+			/>
+
+			<Image
+				src={`/homepage/parallax/desktop/${selectedTheme}/1.svg`}
+				alt='Sun/Moon'
+				width='0'
+				height='0'
+				style={{
+					...parallaxLayerPosition,
+					zIndex: -8,
+					transform: `translateY(${offSetY * 0.6}px)`,
+				}}
+			/>
+			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/2.svg`}
 				alt='Clouds'
 				width='0'
 				height='0'
 				style={{
 					...parallaxLayerPosition,
-					zIndex: -7,
+					zIndex: -4,
 					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
 			/>
@@ -121,7 +145,6 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					transform: `translateY(${offSetY * 0.4}px)`,
 				}}
 			/>
-
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/5.svg`}
 				alt='Nearest Mountain'
@@ -133,17 +156,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					transform: `translateY(${offSetY * 0.35}px)`,
 				}}
 			/>
-			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/Train.svg`}
-				alt='Train'
-				width='0'
-				height='0'
-				style={{
-					...parallaxLayerPosition,
-					zIndex: -6,
-					transform: `translateY(${offSetY * 0.4}px)`,
-				}}
-			/>
+
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/6.svg`}
 				alt='Farthest City'
@@ -167,17 +180,7 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					transform: `translateY(${offSetY * 0.1}px)`,
 				}}
 			/>
-			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/Plane.svg`}
-				alt='Plane'
-				width='0'
-				height='0'
-				style={{
-					...parallaxLayerPosition,
-					zIndex: -2,
-					transform: `translateY(${offSetY * 0.4}px)`,
-				}}
-			/>
+
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/8.svg`}
 				alt='Motherboard I/O'
