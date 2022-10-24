@@ -1,11 +1,15 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
+import ShowIf from "../../../utils/ShowIf";
+import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { ShootingStar } from "./animations/ShootingStar";
 import { TwinklingStars } from "./animations/TwinklingStars";
 import { ParallaxArtProps } from "./ParallaxArt";
 
 export const DesktopArt = (props: ParallaxArtProps) => {
 	const { selectedTheme } = props;
+
+	const { isMobile } = useDeviceDetect();
 
 	const parallaxLayerPosition: any = {
 		// Type issue with absolute positioning when passed to NextJS Image Component
@@ -46,38 +50,40 @@ export const DesktopArt = (props: ParallaxArtProps) => {
 					backgroundColor: selectedTheme === "dark" ? "#01579b" : "#a3dcf9",
 				}}></div>
 
-			<ShootingStar
-				selectedTheme={selectedTheme}
-				styleOverrides={parallaxLayerPosition}
-				offSetY={offSetY}
-			/>
-			<TwinklingStars
-				selectedTheme={selectedTheme}
-				styleOverrides={parallaxLayerPosition}
-				offSetY={offSetY}
-			/>
-			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/Plane.svg`}
-				alt='Plane'
-				width='0'
-				height='0'
-				style={{
-					...parallaxLayerPosition,
-					zIndex: -2,
-					transform: `translateY(${offSetY * 0.4}px)`,
-				}}
-			/>
-			<Image
-				src={`/homepage/parallax/desktop/${selectedTheme}/Train.svg`}
-				alt='Train'
-				width='0'
-				height='0'
-				style={{
-					...parallaxLayerPosition,
-					zIndex: -4,
-					transform: `translateY(${offSetY * 0.4}px)`,
-				}}
-			/>
+			<ShowIf condition={!isMobile}>
+				<ShootingStar
+					selectedTheme={selectedTheme}
+					styleOverrides={parallaxLayerPosition}
+					offSetY={offSetY}
+				/>
+				<TwinklingStars
+					selectedTheme={selectedTheme}
+					styleOverrides={parallaxLayerPosition}
+					offSetY={offSetY}
+				/>
+				<Image
+					src={`/homepage/parallax/desktop/${selectedTheme}/Plane.svg`}
+					alt='Plane'
+					width='0'
+					height='0'
+					style={{
+						...parallaxLayerPosition,
+						zIndex: -2,
+						transform: `translateY(${offSetY * 0.4}px)`,
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/desktop/${selectedTheme}/Train.svg`}
+					alt='Train'
+					width='0'
+					height='0'
+					style={{
+						...parallaxLayerPosition,
+						zIndex: -4,
+						transform: `translateY(${offSetY * 0.4}px)`,
+					}}
+				/>
+			</ShowIf>
 
 			<Image
 				src={`/homepage/parallax/desktop/${selectedTheme}/1.svg`}
