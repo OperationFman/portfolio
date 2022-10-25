@@ -21,11 +21,6 @@ const Accordion = styled((props: AccordionProps) => (
 		marginLeft: "20px",
 		display: "none",
 	},
-	"& .MuiAccordionSummary-root .Mui-expanded": {
-		// border: "2px solid green",
-		marginBottom: "50px",
-		transition: "2s",
-	},
 }));
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
@@ -34,9 +29,9 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 			<KeyboardArrowRightIcon
 				sx={{
 					fontSize: "1.5rem",
-					color: "white",
 					fontWeight: "bold",
 					marginLeft: "20px",
+					color: "white",
 				}}
 			/>
 		}
@@ -72,6 +67,7 @@ export const BioAccordion = () => {
 			width: "100%",
 			height: "100%",
 			backgroundSize: "cover",
+			borderRadius: "2px",
 			transition: "1s",
 		},
 	};
@@ -91,7 +87,7 @@ export const BioAccordion = () => {
 					id='panel1d-header'
 					style={{
 						...style.coverImages,
-						backgroundImage: "url(homepage/biography/placeholder.png)",
+						backgroundImage: "url(homepage/biography/software-dev-image.png)",
 						filter: expanded === "panel1" ? "" : "grayscale(100%)",
 					}}>
 					<div style={style.summary}>
@@ -100,7 +96,7 @@ export const BioAccordion = () => {
 							style={{
 								marginLeft: isMobile ? "" : "50px",
 								fontWeight: "bold",
-								color: "white",
+								color: "#FFFFFF",
 							}}>
 							Software Development
 						</Typography>
@@ -113,16 +109,23 @@ export const BioAccordion = () => {
 			<Accordion
 				expanded={expanded === "panel2"}
 				onChange={handleChange("panel2")}>
-				<AccordionSummary aria-controls='panel2d-content' id='panel2d-header'>
+				<AccordionSummary
+					aria-controls='panel2d-content'
+					id='panel2d-header'
+					style={{
+						...style.coverImages,
+						backgroundImage: "url(homepage/biography/placeholder.png)",
+						filter: expanded === "panel2" ? "" : "grayscale(100%)",
+					}}>
 					<div style={style.summary}>
 						<Typography
 							variant='h4'
 							style={{
 								marginLeft: isMobile ? "" : "50px",
 								fontWeight: "bold",
-								color: "white",
+								color: "#FFFFFF",
 							}}>
-							User Experience & Design
+							Design
 						</Typography>
 					</div>
 				</AccordionSummary>
@@ -133,16 +136,23 @@ export const BioAccordion = () => {
 			<Accordion
 				expanded={expanded === "panel3"}
 				onChange={handleChange("panel3")}>
-				<AccordionSummary aria-controls='panel3d-content' id='panel3d-header'>
+				<AccordionSummary
+					aria-controls='panel3d-content'
+					id='panel3d-header'
+					style={{
+						...style.coverImages,
+						backgroundImage: "url(homepage/biography/placeholder.png)",
+						filter: expanded === "panel3" ? "" : "grayscale(100%)",
+					}}>
 					<div style={style.summary}>
 						<Typography
 							variant='h4'
 							style={{
 								marginLeft: isMobile ? "" : "50px",
 								fontWeight: "bold",
-								color: "white",
+								color: "#FFFFFF",
 							}}>
-							Volunteering
+							Post Production
 						</Typography>
 					</div>
 				</AccordionSummary>
@@ -153,16 +163,23 @@ export const BioAccordion = () => {
 			<Accordion
 				expanded={expanded === "panel4"}
 				onChange={handleChange("panel4")}>
-				<AccordionSummary aria-controls='panel4d-content' id='panel4d-header'>
+				<AccordionSummary
+					aria-controls='panel4d-content'
+					id='panel4d-header'
+					style={{
+						...style.coverImages,
+						backgroundImage: "url(homepage/biography/placeholder.png)",
+						filter: expanded === "panel4" ? "" : "grayscale(100%)",
+					}}>
 					<div style={style.summary}>
 						<Typography
 							variant='h4'
 							style={{
 								marginLeft: isMobile ? "" : "50px",
 								fontWeight: "bold",
-								color: "white",
+								color: "#FFFFFF",
 							}}>
-							Post Production
+							Volunteering
 						</Typography>
 					</div>
 				</AccordionSummary>

@@ -18,5 +18,3 @@ export const Homepage = () => {
 		</>
 	);
 };
-
-// Layer in-front moves faster
