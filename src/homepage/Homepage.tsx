@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { DarkMode } from "../../themes/GlobalTheme";
 import { PageContainer } from "../global/PageContainer";
-import { Biography } from "./bio/Biography";
+import { Biography } from "../homepage/bio/Biography";
 import { ParallaxArt } from "./parallax-art/ParallaxArt";
 
 export const Homepage = () => {
