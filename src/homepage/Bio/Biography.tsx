@@ -2,7 +2,7 @@ import Image from "next/future/image";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 //ts-ignore
-import { TitleSection } from "../bio/TitleSection";
+import { TitleSection } from "./TitleSection";
 
 export const Biography = () => {
 	const { isMobile } = useDeviceDetect();
