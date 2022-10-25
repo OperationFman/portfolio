@@ -1,5 +1,5 @@
 // @ts-ignore
-import ReactTypingEffect from "react-typing-effect";
+// import ReactTypingEffect from "react-typing-effect";
 import { Typography } from "@mui/material";
 import { intervalToDuration } from "date-fns";
 import { useEffect, useState } from "react";
@@ -56,7 +56,7 @@ export const TitleSection = (): JSX.Element => {
 			</span>
 
 			<br />
-			<ReactTypingEffect
+			{/* <ReactTypingEffect
 				text={["Developer", "Volunteer", "Designer"]}
 				cursorRenderer={(cursor: string) => (
 					<span style={{ color: "#1565C0", ...TitleSectionStyles.autoType }}>
@@ -67,7 +67,7 @@ export const TitleSection = (): JSX.Element => {
 					return <span style={TitleSectionStyles.autoType}>{text}</span>;
 				}}
 				typingDelay='1500ms'
-			/>
+			/> */}
 
 			<Typography
 				variant='subtitle1'
