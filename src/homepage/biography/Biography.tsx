@@ -28,7 +28,6 @@ export const Biography = () => {
 					</div>
 				</ShowIf>
 			</div>
-			<div style={{ height: "30vh" }} />
 			<BioAccordion />
 			<div style={{ height: "100vh" }} />
 		</>

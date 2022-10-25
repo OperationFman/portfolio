@@ -1,8 +1,8 @@
-import AddRoundedIcon from "@mui/icons-material/AddRounded";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import MuiAccordionSummary, {
-    AccordionSummaryProps
+	AccordionSummaryProps,
 } from "@mui/material/AccordionSummary";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
@@ -17,15 +17,26 @@ const Accordion = styled((props: AccordionProps) => (
 	},
 	backgroundColor: `${theme.palette.background.default}`,
 	"&:before": {
+		marginLeft: "20px",
 		display: "none",
+	},
+	"& .MuiAccordionSummary-root .Mui-expanded": {
+		// border: "2px solid green",
+		marginBottom: "75px",
+		transition: "2s",
 	},
 }));
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
 	<MuiAccordionSummary
 		expandIcon={
-			<AddRoundedIcon
-				sx={{ fontSize: "1.5rem", color: "white", fontWeight: "bold" }}
+			<KeyboardArrowRightIcon
+				sx={{
+					fontSize: "1.5rem",
+					color: "white",
+					fontWeight: "bold",
+					marginLeft: "20px",
+				}}
 			/>
 		}
 		{...props}
@@ -36,6 +47,7 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 			? "rgba(255, 255, 255, .05)"
 			: "rgba(0, 0, 0, .03)",
 	flexDirection: "row-reverse",
+
 	"& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
 		transform: "rotate(90deg)",
 	},
@@ -53,12 +65,12 @@ export const BioAccordion = () => {
 	const [expanded, setExpanded] = useState<string | false>("panel0");
 
 	const style = {
-		summary: { margin: "40px 20px" },
+		summary: { margin: "20px" },
 		coverImages: {
 			width: "100%",
 			height: "100%",
 			backgroundSize: "cover",
-			transition: "transform 5s ease-in-out",
+			transition: "1s",
 		},
 	};
 
@@ -77,16 +89,33 @@ export const BioAccordion = () => {
 					id='panel1d-header'
 					style={{
 						...style.coverImages,
-						backgroundImage: `url(homepage/biography/${
-							expanded === "panel1" ? "placeholder" : "BWplaceholder"
-						}.png)`,
+						backgroundImage: "url(homepage/biography/placeholder.png)",
+						filter: expanded === "panel1" ? "" : "grayscale(100%)",
 					}}>
 					<div style={style.summary}>
-						<Typography>Software Development</Typography>
+						<Typography
+							variant='h4'
+							style={{
+								marginLeft: "50px",
+								fontWeight: "bold",
+								color: "white",
+							}}>
+							Software Development
+						</Typography>
 					</div>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Typography>blah</Typography>
+					<Typography>
+						Lorem Ipsum is simply dummy text of the printing and typesetting
+						industry. Lorem Ipsum has been the industry's standard dummy text
+						ever since the 1500s, when an unknown printer took a galley of type
+						and scrambled it to make a type specimen book. It has survived not
+						only five centuries, but also the leap into electronic typesetting,
+						remaining essentially unchanged. It was popularised in the 1960s
+						with the release of Letraset sheets containing Lorem Ipsum passages,
+						and more recently with desktop publishing software like Aldus
+						PageMaker including versions of Lorem Ipsum.
+					</Typography>
 				</AccordionDetails>
 			</Accordion>
 			<Accordion
@@ -94,7 +123,15 @@ export const BioAccordion = () => {
 				onChange={handleChange("panel2")}>
 				<AccordionSummary aria-controls='panel2d-content' id='panel2d-header'>
 					<div style={style.summary}>
-						<Typography>User Experience & Design</Typography>
+						<Typography
+							variant='h4'
+							style={{
+								marginLeft: "50px",
+								fontWeight: "bold",
+								color: "white",
+							}}>
+							User Experience & Design
+						</Typography>
 					</div>
 				</AccordionSummary>
 				<AccordionDetails>
@@ -106,7 +143,15 @@ export const BioAccordion = () => {
 				onChange={handleChange("panel3")}>
 				<AccordionSummary aria-controls='panel3d-content' id='panel3d-header'>
 					<div style={style.summary}>
-						<Typography>Volunteering</Typography>
+						<Typography
+							variant='h4'
+							style={{
+								marginLeft: "50px",
+								fontWeight: "bold",
+								color: "white",
+							}}>
+							Volunteering
+						</Typography>
 					</div>
 				</AccordionSummary>
 				<AccordionDetails>
@@ -118,7 +163,15 @@ export const BioAccordion = () => {
 				onChange={handleChange("panel4")}>
 				<AccordionSummary aria-controls='panel4d-content' id='panel4d-header'>
 					<div style={style.summary}>
-						<Typography>Post Production</Typography>
+						<Typography
+							variant='h4'
+							style={{
+								marginLeft: "50px",
+								fontWeight: "bold",
+								color: "white",
+							}}>
+							Post Production
+						</Typography>
 					</div>
 				</AccordionSummary>
 				<AccordionDetails>
