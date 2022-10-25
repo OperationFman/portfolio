@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/future/image";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { TitleSection } from "./TitleSection";
@@ -13,15 +13,10 @@ export const Biography = () => {
 					display: "flex",
 					flexDirection: "row",
 				}}>
-				<div
-					style={{
-						width: isMobile ? "100%" : "50%",
-						marginTop: "auto",
-					}}>
-					<TitleSection />
-				</div>
+				<TitleSection />
+
 				<ShowIf condition={!isMobile}>
-					<div style={{ width: "50%" }}>
+					<div style={{ width: "50%", alignItems: "center" }}>
 						<Image
 							src='/homepage/placeholder.png'
 							width='480'
@@ -31,7 +26,6 @@ export const Biography = () => {
 					</div>
 				</ShowIf>
 			</div>
-			<div style={{ height: "100vh" }} />
 		</>
 	);
 };
