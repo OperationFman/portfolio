@@ -1,16 +1,16 @@
+import { Typography } from "@mui/material";
+import { intervalToDuration } from "date-fns";
+import { useEffect, useState } from "react";
 // @ts-ignore
 import ReactTypingEffect from "react-typing-effect";
-import { Typography } from "@mui/material";
-// import { intervalToDuration } from "date-fns";
-import { useEffect, useState } from "react";
 
 export const TitleSection = (): JSX.Element => {
-	// const timeWorked = () => {
-	// 	return intervalToDuration({
-	// 		start: new Date("August 2, 2021 09:00:00"),
-	// 		end: new Date(),
-	// 	});
-	// };
+	const timeWorked = () => {
+		return intervalToDuration({
+			start: new Date("August 2, 2021 09:00:00"),
+			end: new Date(),
+		});
+	};
 
 	const pluralTime = (timeUnit: string, value: number | undefined) => {
 		if (value === undefined) {
@@ -19,7 +19,7 @@ export const TitleSection = (): JSX.Element => {
 		return value === 1 ? `${value} ${timeUnit}` : `${value} ${timeUnit}s`;
 	};
 
-	// const [periodWorked, setPeriodWorked] = useState<Duration>(timeWorked());
+	const [periodWorked, setPeriodWorked] = useState<Duration>(timeWorked());
 	const TitleSectionStyles = {
 		container: {
 			marginTop: "20px",
@@ -36,12 +36,12 @@ export const TitleSection = (): JSX.Element => {
 		blurb: { fontStyle: "italic", marginTop: "50px" },
 	};
 
-	// useEffect(() => {
-	// 	const thirtySecondInterval = setInterval(() => {
-	// 		setPeriodWorked(timeWorked());
-	// 	}, 30 * 1000);
-	// 	return () => clearInterval(thirtySecondInterval);
-	// });
+	useEffect(() => {
+		const thirtySecondInterval = setInterval(() => {
+			setPeriodWorked(timeWorked());
+		}, 30 * 1000);
+		return () => clearInterval(thirtySecondInterval);
+	});
 
 	return (
 		<div style={TitleSectionStyles.container}>
@@ -78,7 +78,7 @@ export const TitleSection = (): JSX.Element => {
 				volunteering globally and advocating for social change
 				<br />
 				<br />
-				{/* Practicing professional for {pluralTime(
+				Practicing professional for {pluralTime(
 					"year",
 					periodWorked?.years,
 				)}{" "}
@@ -86,7 +86,7 @@ export const TitleSection = (): JSX.Element => {
 				{pluralTime("day", periodWorked?.days)}{" "}
 				{pluralTime("hour", periodWorked?.hours)}
 				{" and "}
-				{pluralTime("minute", periodWorked?.minutes)}{" "} */}
+				{pluralTime("minute", periodWorked?.minutes)}{" "}
 			</Typography>
 		</div>
 	);
