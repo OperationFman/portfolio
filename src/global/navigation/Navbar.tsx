@@ -65,7 +65,8 @@ export const Navbar = (props: NavbarProps) => {
 			TabIndicatorProps={{ style: { background: setIndicator[tab] } }}
 			textColor='inherit'
 			variant={"standard"}
-			centered>
+			centered
+			sx={container(isMobile)}>
 			{isMobile ? (
 				<Tab
 					label={"FVM"}

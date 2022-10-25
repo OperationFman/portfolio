@@ -48,7 +48,7 @@ export const centerTabs = (
 	};
 };
 
-export const container = (): SxProps<Theme> => {
+export const container = (isMobile: boolean): SxProps<Theme> => {
 	return {
 		backgroundColor: "#212121",
 		boxShadow: 5,

@@ -1,6 +1,7 @@
 import Image from "next/future/image";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
+import { BioAccordion } from "./BioAccordion";
 import { BioDescription } from "./BioDescription";
 
 export const Biography = () => {
@@ -12,6 +13,7 @@ export const Biography = () => {
 				style={{
 					display: "flex",
 					flexDirection: "row",
+					marginBottom: "150px",
 				}}>
 				<BioDescription />
 
@@ -26,6 +28,9 @@ export const Biography = () => {
 					</div>
 				</ShowIf>
 			</div>
+			<div style={{ height: "30vh" }} />
+			<BioAccordion />
+			<div style={{ height: "100vh" }} />
 		</>
 	);
 };
