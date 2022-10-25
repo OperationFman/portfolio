@@ -7,6 +7,7 @@ import MuiAccordionSummary, {
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
+import useDeviceDetect from "../../../utils/useDeviceDetect";
 
 const Accordion = styled((props: AccordionProps) => (
 	<MuiAccordion elevation={0} square {...props} />
@@ -22,7 +23,7 @@ const Accordion = styled((props: AccordionProps) => (
 	},
 	"& .MuiAccordionSummary-root .Mui-expanded": {
 		// border: "2px solid green",
-		marginBottom: "75px",
+		marginBottom: "50px",
 		transition: "2s",
 	},
 }));
@@ -62,6 +63,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export const BioAccordion = () => {
+	const { isMobile } = useDeviceDetect();
 	const [expanded, setExpanded] = useState<string | false>("panel0");
 
 	const style = {
@@ -96,7 +98,7 @@ export const BioAccordion = () => {
 						<Typography
 							variant='h4'
 							style={{
-								marginLeft: "50px",
+								marginLeft: isMobile ? "" : "50px",
 								fontWeight: "bold",
 								color: "white",
 							}}>
@@ -105,17 +107,7 @@ export const BioAccordion = () => {
 					</div>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Typography>
-						Lorem Ipsum is simply dummy text of the printing and typesetting
-						industry. Lorem Ipsum has been the industry's standard dummy text
-						ever since the 1500s, when an unknown printer took a galley of type
-						and scrambled it to make a type specimen book. It has survived not
-						only five centuries, but also the leap into electronic typesetting,
-						remaining essentially unchanged. It was popularised in the 1960s
-						with the release of Letraset sheets containing Lorem Ipsum passages,
-						and more recently with desktop publishing software like Aldus
-						PageMaker including versions of Lorem Ipsum.
-					</Typography>
+					<Typography>Blah</Typography>
 				</AccordionDetails>
 			</Accordion>
 			<Accordion
@@ -126,7 +118,7 @@ export const BioAccordion = () => {
 						<Typography
 							variant='h4'
 							style={{
-								marginLeft: "50px",
+								marginLeft: isMobile ? "" : "50px",
 								fontWeight: "bold",
 								color: "white",
 							}}>
@@ -146,7 +138,7 @@ export const BioAccordion = () => {
 						<Typography
 							variant='h4'
 							style={{
-								marginLeft: "50px",
+								marginLeft: isMobile ? "" : "50px",
 								fontWeight: "bold",
 								color: "white",
 							}}>
@@ -166,7 +158,7 @@ export const BioAccordion = () => {
 						<Typography
 							variant='h4'
 							style={{
-								marginLeft: "50px",
+								marginLeft: isMobile ? "" : "50px",
 								fontWeight: "bold",
 								color: "white",
 							}}>
