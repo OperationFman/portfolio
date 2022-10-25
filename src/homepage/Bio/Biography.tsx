@@ -1,7 +1,7 @@
 import Image from "next/future/image";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
-import { TitleSection } from "./TitleSection";
+import { Description } from "./description/Description";
 
 export const Biography = () => {
 	const { isMobile } = useDeviceDetect();
@@ -13,7 +13,7 @@ export const Biography = () => {
 					display: "flex",
 					flexDirection: "row",
 				}}>
-				<TitleSection />
+				<Description />
 
 				<ShowIf condition={!isMobile}>
 					<div style={{ width: "50%", alignItems: "center" }}>

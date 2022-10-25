@@ -18,7 +18,7 @@ export const pluralTime = (timeUnit: string, value: number | undefined) => {
 	return value === 1 ? `${value} ${timeUnit}` : `${value} ${timeUnit}s`;
 };
 
-export const TitleSection = () => {
+export const Description = (): JSX.Element => {
 	const [periodWorked, setPeriodWorked] = useState<Duration>(timeWorked());
 
 	const TitleSectionStyles = {
