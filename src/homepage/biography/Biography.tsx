@@ -1,6 +1,7 @@
 import Image from "next/future/image";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
+import { BioDescription } from "./Description";
 
 export const Biography = () => {
 	const { isMobile } = useDeviceDetect();
@@ -12,7 +13,7 @@ export const Biography = () => {
 					display: "flex",
 					flexDirection: "row",
 				}}>
-				<h1>No Description Yet</h1>
+				<BioDescription />
 
 				<ShowIf condition={!isMobile}>
 					<div style={{ width: "50%", alignItems: "center" }}>
