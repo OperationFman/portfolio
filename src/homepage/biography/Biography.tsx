@@ -1,7 +1,7 @@
 import Image from "next/future/image";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
-import { BioDescription } from "./Description";
+import { BioDescription } from "./BioDescription";
 
 export const Biography = () => {
 	const { isMobile } = useDeviceDetect();
