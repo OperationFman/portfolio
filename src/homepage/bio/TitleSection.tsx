@@ -4,21 +4,21 @@ import { useEffect, useState } from "react";
 // @ts-ignore
 import ReactTypingEffect from "react-typing-effect";
 
-export const timeWorked = () => {
+const timeWorked = () => {
 	return intervalToDuration({
 		start: new Date("August 2, 2021 09:00:00"),
 		end: new Date(),
 	});
 };
 
-export const pluralTime = (timeUnit: string, value: number | undefined) => {
+const pluralTime = (timeUnit: string, value: number | undefined) => {
 	if (value === undefined) {
 		return `0 ${timeUnit}s`;
 	}
 	return value === 1 ? `${value} ${timeUnit}` : `${value} ${timeUnit}s`;
 };
 
-export const Description = (): JSX.Element => {
+export const TitleSection = (): JSX.Element => {
 	const [periodWorked, setPeriodWorked] = useState<Duration>(timeWorked());
 
 	const TitleSectionStyles = {
