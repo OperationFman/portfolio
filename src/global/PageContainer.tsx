@@ -1,4 +1,4 @@
-import { Container, Fade } from "@mui/material";
+import { Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 
