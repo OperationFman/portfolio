@@ -88,7 +88,7 @@ export const BioAccordion = () => {
 					style={{
 						...style.coverImages,
 						backgroundImage: "url(homepage/biography/software-dev-image.png)",
-						filter: expanded === "panel1" ? "" : "grayscale(100%)",
+						filter: expanded === "panel1" ? "" : "grayscale(80%)",
 					}}>
 					<div style={style.summary}>
 						<Typography
@@ -98,7 +98,7 @@ export const BioAccordion = () => {
 								fontWeight: "bold",
 								color: "#FFFFFF",
 							}}>
-							Software Development
+							Development
 						</Typography>
 					</div>
 				</AccordionSummary>
@@ -114,8 +114,8 @@ export const BioAccordion = () => {
 					id='panel2d-header'
 					style={{
 						...style.coverImages,
-						backgroundImage: "url(homepage/biography/placeholder.png)",
-						filter: expanded === "panel2" ? "" : "grayscale(100%)",
+						backgroundImage: "url(homepage/biography/design-image.png)",
+						filter: expanded === "panel2" ? "" : "grayscale(80%)",
 					}}>
 					<div style={style.summary}>
 						<Typography
@@ -141,8 +141,9 @@ export const BioAccordion = () => {
 					id='panel3d-header'
 					style={{
 						...style.coverImages,
-						backgroundImage: "url(homepage/biography/placeholder.png)",
-						filter: expanded === "panel3" ? "" : "grayscale(100%)",
+						backgroundImage:
+							"url(homepage/biography/post-production-image.png)",
+						filter: expanded === "panel3" ? "" : "grayscale(80%)",
 					}}>
 					<div style={style.summary}>
 						<Typography
@@ -168,8 +169,8 @@ export const BioAccordion = () => {
 					id='panel4d-header'
 					style={{
 						...style.coverImages,
-						backgroundImage: "url(homepage/biography/placeholder.png)",
-						filter: expanded === "panel4" ? "" : "grayscale(100%)",
+						backgroundImage: "url(homepage/biography/volunteering-image.png)",
+						filter: expanded === "panel4" ? "" : "grayscale(80%)",
 					}}>
 					<div style={style.summary}>
 						<Typography
