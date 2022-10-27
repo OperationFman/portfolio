@@ -1,7 +1,7 @@
+import { Typography } from "@mui/material";
 import Image from "next/future/image";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
-import { BioAccordion } from "./BioAccordion";
 import { BioDescription } from "./BioDescription";
 
 export const Biography = () => {
@@ -28,7 +28,15 @@ export const Biography = () => {
 					</div>
 				</ShowIf>
 			</div>
-			<BioAccordion />
+			<Typography
+				variant='h4'
+				align='center'
+				style={{
+					marginLeft: isMobile ? "" : "50px",
+					fontWeight: "bold",
+				}}>
+				What Can I Do For You?
+			</Typography>
 			<div style={{ height: "100vh" }} />
 		</>
 	);

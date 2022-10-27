@@ -18,17 +18,17 @@ export const PageContainer = (props: PageContainerProps) => {
 		...styleOverrides,
 	};
 
-	const [test, setTest] = useState(styling);
+	const [subtleFade, setSubtleFade] = useState(styling);
 
 	useEffect(
 		() => () => {
-			setTest({ styling, ...{ opacity: 0 } });
+			setSubtleFade({ styling, ...{ opacity: 0 } });
 		},
 		[],
 	);
 
 	return (
-		<Container maxWidth='lg' sx={test}>
+		<Container maxWidth='lg' sx={subtleFade}>
 			{children}
 		</Container>
 	);
