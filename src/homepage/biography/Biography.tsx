@@ -19,7 +19,7 @@ export const Biography = () => {
 				<BioDescription />
 
 				<ShowIf condition={!isMobile}>
-					<div style={{ width: "50%", alignItems: "center" }}>
+					<div style={{ width: "40%", alignItems: "center" }}>
 						<Image
 							src='/homepage/placeholder.png'
 							width='480'

@@ -36,7 +36,7 @@ export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
 						component='img'
 						height='180'
 						alt={cardData.title}
-						image={cardData.thumbnail}∏
+						image={cardData.thumbnail}
 					/>
 					<CardContent sx={{ height: 140 }}>
 						<Box

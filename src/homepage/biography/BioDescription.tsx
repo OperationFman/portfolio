@@ -71,7 +71,7 @@ export const BioDescription = (): JSX.Element => {
 			/>
 
 			<Typography
-				variant='subtitle1'
+				variant='h6'
 				align='left'
 				color='baseGrey'
 				sx={TitleSectionStyles.blurb}>
