@@ -1,11 +1,15 @@
 import { Typography } from "@mui/material";
 import Image from "next/future/image";
+import CommitIcon from "@mui/icons-material/Commit";
+import { useContext } from "react";
+import { DarkMode } from "../../../../themes/GlobalTheme";
 
 export const WorkExpItem = ({
 	companyLogo,
 	periodWithEmployer,
 	employerLocation,
 	employerExperiences,
+	isLastElement = false,
 }: {
 	companyLogo: string;
 	periodWithEmployer: string;
@@ -14,46 +18,62 @@ export const WorkExpItem = ({
 		title: string;
 		period: string;
 	}[];
+	isLastElement?: boolean;
 }) => {
+	const darkMode = useContext(DarkMode);
+	const selectedTheme = darkMode ? "#13181c" : "#FFFFFF";
+
 	return (
-		<div
-			style={{
-				width: "100%",
-				marginBottom: "50px",
-				borderLeft: "3px solid #1565C0",
-				padding: "0px 25px 25px",
-			}}>
-			<Image
-				src={`/homepage/biography/companies/${companyLogo}.png`}
-				alt='tw'
-				width='200'
-				height='50'
-				style={{ height: 50, width: "auto", lineHeight: 0 }}
+		<>
+			<CommitIcon
+				fontSize='large'
+				style={{
+					position: "absolute",
+					marginLeft: "-16px",
+					marginTop: "10px",
+					color: "#1565C0",
+					backgroundColor: selectedTheme,
+				}}
 			/>
-			<Typography variant='subtitle1'>{periodWithEmployer}</Typography>
-			<Typography
-				variant='subtitle1'
-				color='#949494'
-				style={{ marginBottom: "15px" }}>
-				{employerLocation}
-			</Typography>
-			{employerExperiences.map((experienceItem, index) => {
-				return (
-					<div key={index}>
-						<Typography
-							variant='subtitle1'
-							style={{ margin: "25px 0px 0px 25px" }}>
-							{experienceItem.title}
-						</Typography>
-						<Typography
-							variant='subtitle1'
-							color='#949494'
-							style={{ marginLeft: "25px" }}>
-							{experienceItem.period}
-						</Typography>
-					</div>
-				);
-			})}
-		</div>
+			<div
+				style={{
+					width: "100%",
+					borderLeft: "3px solid #1565C0",
+					padding: isLastElement ? "0px 50px 0px" : "0px 50px 85px",
+				}}>
+				<Image
+					src={`/homepage/biography/companies/${companyLogo}.png`}
+					alt='tw'
+					width='200'
+					height='50'
+					style={{ height: 50, width: "auto", lineHeight: 0 }}
+				/>
+
+				<Typography variant='subtitle1'>{periodWithEmployer}</Typography>
+				<Typography
+					variant='subtitle1'
+					color='#949494'
+					style={{ marginBottom: "15px" }}>
+					{employerLocation}
+				</Typography>
+				{employerExperiences.map((experienceItem, index) => {
+					return (
+						<div key={index}>
+							<Typography
+								variant='subtitle1'
+								style={{ margin: "25px 0px 0px 25px" }}>
+								{experienceItem.title}
+							</Typography>
+							<Typography
+								variant='subtitle1'
+								color='#949494'
+								style={{ marginLeft: "25px" }}>
+								{experienceItem.period}
+							</Typography>
+						</div>
+					);
+				})}
+			</div>
+		</>
 	);
 };

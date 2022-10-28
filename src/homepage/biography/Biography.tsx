@@ -161,6 +161,7 @@ export const Biography = () => {
 							period: "Jan 2019 - Apr 2019",
 						},
 					]}
+					isLastElement={true}
 				/>
 			</Container>
 
