@@ -1,8 +1,9 @@
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Image from "next/future/image";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { BioDescription } from "./BioDescription";
+import { ForYouCard } from "./components/ForYouCard";
 
 export const Biography = () => {
 	const { isMobile } = useDeviceDetect();
@@ -29,14 +30,30 @@ export const Biography = () => {
 				</ShowIf>
 			</div>
 			<Typography
-				variant='h4'
+				variant='h3'
 				align='center'
 				style={{
-					marginLeft: isMobile ? "" : "50px",
+					marginBottom: "20px",
 					fontWeight: "bold",
 				}}>
 				What Can I Do For You?
 			</Typography>
+
+			<Grid container spacing={5} justifyContent='center'>
+				<Grid item>
+					<ForYouCard />
+				</Grid>
+				<Grid item>
+					<ForYouCard />
+				</Grid>
+				<Grid item>
+					<ForYouCard />
+				</Grid>
+				<Grid item>
+					<ForYouCard />
+				</Grid>
+			</Grid>
+
 			<div style={{ height: "100vh" }} />
 		</>
 	);
