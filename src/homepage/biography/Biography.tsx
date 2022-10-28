@@ -33,7 +33,7 @@ export const Biography = () => {
 				variant='h3'
 				align='center'
 				style={{
-					marginBottom: "20px",
+					marginBottom: "25px",
 					fontWeight: "bold",
 				}}>
 				What Can I Do For You?
@@ -42,6 +42,7 @@ export const Biography = () => {
 			<Grid container spacing={5} justifyContent='center'>
 				<Grid item>
 					<ForYouCard
+						isMobile={isMobile}
 						logo={"code"}
 						title={"Programming"}
 						paragraph1={
@@ -52,6 +53,7 @@ export const Biography = () => {
 				</Grid>
 				<Grid item>
 					<ForYouCard
+						isMobile={isMobile}
 						logo={"design"}
 						title={"Design"}
 						paragraph1={"Crafting user interfaces, wireframes, and prototypes."}
@@ -62,6 +64,7 @@ export const Biography = () => {
 				</Grid>
 				<Grid item>
 					<ForYouCard
+						isMobile={isMobile}
 						logo={"postproduction"}
 						title={"Post-Production"}
 						paragraph1={
@@ -75,6 +78,7 @@ export const Biography = () => {
 				</Grid>
 				<Grid item>
 					<ForYouCard
+						isMobile={isMobile}
 						logo={"volunteer"}
 						title={"Volunteering"}
 						paragraph1={

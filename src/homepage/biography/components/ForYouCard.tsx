@@ -3,12 +3,14 @@ import Image from "next/future/image";
 import ShowIf from "../../../../utils/ShowIf";
 
 export const ForYouCard = ({
+	isMobile,
 	logo,
 	title,
 	paragraph1,
 	paragraph2,
 	paragraphGap = true,
 }: {
+	isMobile: boolean;
 	logo: string;
 	title: string;
 	paragraph1: string;
@@ -23,7 +25,12 @@ export const ForYouCard = ({
 	const titleNoFirstLetter = title.substring(1);
 
 	return (
-		<Card sx={{ width: 415, height: 440 }}>
+		<Card
+			sx={{
+				width: isMobile ? 345 : 415,
+				height: isMobile ? 480 : 440,
+				boxShadow: 5,
+			}}>
 			<CardContent
 				style={{
 					display: "flex",
