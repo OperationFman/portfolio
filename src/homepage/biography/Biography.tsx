@@ -52,7 +52,7 @@ export const Biography = () => {
 				</Grid>
 				<Grid item>
 					<ForYouCard
-						logo={"code"}
+						logo={"design"}
 						title={"Design"}
 						paragraph1={"Crafting user interfaces, wireframes, and prototypes."}
 						paragraph2={
@@ -62,7 +62,7 @@ export const Biography = () => {
 				</Grid>
 				<Grid item>
 					<ForYouCard
-						logo={"code"}
+						logo={"postproduction"}
 						title={"Post-Production"}
 						paragraph1={
 							"Producing, editing, color correcting, and rendering motion pictures."
@@ -75,12 +75,13 @@ export const Biography = () => {
 				</Grid>
 				<Grid item>
 					<ForYouCard
-						logo={"code"}
+						logo={"volunteer"}
 						title={"Volunteering"}
 						paragraph1={
-							"Sharing knowledge and resources with those eager to learn but who do not have the means to pursue careers in technology. This is my life pursuit."
+							"Sharing knowledge and resources with those eager to learn but who do not have the means to pursue careers in technology."
 						}
-						paragraph2={"See Skills for more."}
+						paragraph2={"This is my life pursuit."}
+						paragraphGap={false}
 					/>
 				</Grid>
 			</Grid>
