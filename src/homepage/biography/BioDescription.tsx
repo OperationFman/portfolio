@@ -27,11 +27,11 @@ export const BioDescription = (): JSX.Element => {
 			lineHeight: 1,
 		},
 		titleFont: {
-			fontSize: "55px",
+			fontSize: "80px",
 			fontWeight: "bold",
 		},
 		autoType: {
-			fontSize: "50px",
+			fontSize: "80px",
 			fontWeight: "lighter",
 		},
 		blurb: { fontStyle: "italic", marginTop: "50px" },
