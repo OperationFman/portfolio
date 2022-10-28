@@ -103,7 +103,6 @@ export const Biography = () => {
 			</Typography>
 
 			<Container maxWidth='xs'>
-				<p style={{ marginLeft: -20, color: " #949494 " }}>Today</p>
 				<WorkExpItem
 					companyLogo={"thoughtworks"}
 					periodWithEmployer={"Aug 2021 - Present"}
