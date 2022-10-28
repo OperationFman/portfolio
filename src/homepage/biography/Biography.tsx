@@ -1,9 +1,10 @@
-import { Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import Image from "next/future/image";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { BioDescription } from "./BioDescription";
 import { ForYouCard } from "./components/ForYouCard";
+import { WorkExpItem } from "./components/WorkExpItem";
 
 export const Biography = () => {
 	const { isMobile } = useDeviceDetect();
@@ -14,7 +15,6 @@ export const Biography = () => {
 				style={{
 					display: "flex",
 					flexDirection: "row",
-					marginBottom: "150px",
 				}}>
 				<BioDescription />
 
@@ -33,6 +33,7 @@ export const Biography = () => {
 				variant='h3'
 				align='center'
 				style={{
+					marginTop: "150px",
 					marginBottom: "25px",
 					fontWeight: "bold",
 				}}>
@@ -89,6 +90,79 @@ export const Biography = () => {
 					/>
 				</Grid>
 			</Grid>
+
+			<Typography
+				variant='h3'
+				align='center'
+				style={{
+					marginTop: "150px",
+					marginBottom: "25px",
+					fontWeight: "bold",
+				}}>
+				Work Experience
+			</Typography>
+
+			<Container maxWidth='xs'>
+				<p style={{ marginLeft: -20, color: " #949494 " }}>Today</p>
+				<WorkExpItem
+					companyLogo={"thoughtworks"}
+					periodWithEmployer={"Aug 2021 - Present"}
+					employerLocation={"Melbourne, Australia"}
+					employerExperiences={[
+						{
+							title: "Consultant Software Developer",
+							period: "Aug 2022 - Present",
+						},
+						{
+							title: "Graduate Software Developer",
+							period: "Aug 2021 - Aug 2022",
+						},
+						{
+							title: "Developer Intern",
+							period: "Nov 2019 - Aug 2021",
+						},
+						{
+							title: "Business Analyst Intern",
+							period: "Jun 2019 - Jul 2019",
+						},
+					]}
+				/>
+				<WorkExpItem
+					companyLogo={"ibm"}
+					periodWithEmployer={"Aug 2018 - Aug 2021"}
+					employerLocation={"Ballarat, Australia"}
+					employerExperiences={[
+						{
+							title: "Test Automation Engineer",
+							period: "Feb 2019 - Jan 2021",
+						},
+						{
+							title: "Remote Hardware Technician",
+							period: "Apr 2017 - Feb 2019",
+						},
+					]}
+				/>
+				<WorkExpItem
+					companyLogo={"federation"}
+					periodWithEmployer={"Feb 2018 - Nov 2020"}
+					employerLocation={"Ballarat, Australia"}
+					employerExperiences={[
+						{
+							title:
+								"Indigenous and Torres Strait Islander Senate Representative",
+							period: "Apr 2019 - Nov 2020",
+						},
+						{
+							title: "Academic Support Worker",
+							period: "May 2018 - Nov 2020",
+						},
+						{
+							title: "Mentor Team Leader",
+							period: "Jan 2019 - Apr 2019",
+						},
+					]}
+				/>
+			</Container>
 
 			<div style={{ height: "100vh" }} />
 		</>

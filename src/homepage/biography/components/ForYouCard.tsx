@@ -30,6 +30,10 @@ export const ForYouCard = ({
 				width: isMobile ? 345 : 415,
 				height: isMobile ? 480 : 440,
 				boxShadow: 5,
+				"&:hover": {
+					backgroundColor: "#2D2D2D",
+					transition: "linear 400ms",
+				},
 			}}>
 			<CardContent
 				style={{
@@ -41,7 +45,7 @@ export const ForYouCard = ({
 					padding: "30px",
 				}}>
 				<Image
-					src={`/homepage/biography/${logo}.svg`}
+					src={`/homepage/biography/foryou/${logo}.svg`}
 					alt={logo}
 					width={60}
 					height={60}
