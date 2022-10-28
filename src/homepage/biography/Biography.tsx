@@ -165,6 +165,17 @@ export const Biography = () => {
 				/>
 			</Container>
 
+			<Typography
+				variant='h3'
+				align='center'
+				style={{
+					marginTop: "150px",
+					marginBottom: "25px",
+					fontWeight: "bold",
+				}}>
+				Qualifications
+			</Typography>
+
 			<div style={{ height: "100vh" }} />
 		</>
 	);

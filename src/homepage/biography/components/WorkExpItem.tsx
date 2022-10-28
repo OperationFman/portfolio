@@ -46,7 +46,7 @@ export const WorkExpItem = ({
 					alt='tw'
 					width='200'
 					height='50'
-					style={{ height: 50, width: "auto", lineHeight: 0 }}
+					style={{ height: 40, width: "auto", lineHeight: 0 }}
 				/>
 
 				<Typography variant='subtitle1'>{periodWithEmployer}</Typography>
