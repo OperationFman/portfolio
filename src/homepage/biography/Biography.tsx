@@ -96,7 +96,7 @@ export const Biography = () => {
 				align='center'
 				style={{
 					marginTop: "150px",
-					marginBottom: "25px",
+					marginBottom: "50px",
 					fontWeight: "bold",
 				}}>
 				Work Experience
@@ -117,18 +117,33 @@ export const Biography = () => {
 							period: "Aug 2021 - Aug 2022",
 						},
 						{
-							title: "Developer Intern",
+							title: "Intern Software Developer",
 							period: "Nov 2019 - Aug 2021",
 						},
 						{
-							title: "Business Analyst Intern",
+							title: "Intern Business Analyst",
 							period: "Jun 2019 - Jul 2019",
 						},
 					]}
 				/>
 				<WorkExpItem
+					companyLogo={"badac"}
+					periodWithEmployer={"Jan 2021 - Aug 2021"}
+					employerLocation={"Ballarat, Australia"}
+					employerExperiences={[
+						{
+							title: "Website Developer",
+							period: "Mar 2021 - Aug 2021",
+						},
+						{
+							title: "Digital Media Designer",
+							period: "Jan 2021 - Aug 2021",
+						},
+					]}
+				/>
+				<WorkExpItem
 					companyLogo={"ibm"}
-					periodWithEmployer={"Aug 2018 - Aug 2021"}
+					periodWithEmployer={"Apr 2017 - Jan 2021"}
 					employerLocation={"Ballarat, Australia"}
 					employerExperiences={[
 						{
@@ -143,7 +158,7 @@ export const Biography = () => {
 				/>
 				<WorkExpItem
 					companyLogo={"federation"}
-					periodWithEmployer={"Feb 2018 - Nov 2020"}
+					periodWithEmployer={"May 2018 - Nov 2020"}
 					employerLocation={"Ballarat, Australia"}
 					employerExperiences={[
 						{
@@ -152,12 +167,12 @@ export const Biography = () => {
 							period: "Apr 2019 - Nov 2020",
 						},
 						{
-							title: "Academic Support Worker",
-							period: "May 2018 - Nov 2020",
-						},
-						{
 							title: "Mentor Team Leader",
 							period: "Jan 2019 - Apr 2019",
+						},
+						{
+							title: "Academic Support Worker",
+							period: "May 2018 - Nov 2020",
 						},
 					]}
 					isLastElement={true}

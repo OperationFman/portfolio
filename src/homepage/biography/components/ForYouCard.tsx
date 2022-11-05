@@ -1,5 +1,7 @@
 import { Card, CardContent, Typography } from "@mui/material";
 import Image from "next/future/image";
+import { useContext } from "react";
+import { DarkMode } from "../../../../themes/GlobalTheme";
 import ShowIf from "../../../../utils/ShowIf";
 
 export const ForYouCard = ({
@@ -17,6 +19,7 @@ export const ForYouCard = ({
 	paragraph2?: string;
 	paragraphGap?: boolean;
 }) => {
+	const darkMode = useContext(DarkMode);
 	const titleOnlyFirstLetter = title
 		.split(" ")
 		.map((word) => word[0])
@@ -31,7 +34,7 @@ export const ForYouCard = ({
 				height: isMobile ? 480 : 440,
 				boxShadow: 5,
 				"&:hover": {
-					backgroundColor: "#2D2D2D",
+					backgroundColor: darkMode ? "#2D2D2D" : "#f2f2f2",
 					transition: "linear 400ms",
 				},
 			}}>
