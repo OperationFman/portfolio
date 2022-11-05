@@ -13,7 +13,7 @@ export const SalaryExpectationsSection = ({
 		hybridRemote: -5000,
 		flatHierarchy: -2000,
 		exceptionalColleagues: -3000,
-		teamBonding: -3000,
+		teamBonding: -2000,
 		ethical: -2000,
 		workLifeBalance: -5000,
 		internationalTravel: -20000,
@@ -45,6 +45,7 @@ export const SalaryExpectationsSection = ({
 	const [ethical, setEthical] = useState(true);
 	const [workLifeBalance, setWorkLifeBalance] = useState(true);
 	const [internationalTravel, setInternationalTravel] = useState(true);
+	const [fourDays, setFourDays] = useState(true);
 
 	// user to add:
 	// - Phone/Book/Lunch allowances
@@ -53,7 +54,7 @@ export const SalaryExpectationsSection = ({
 	// - Stock Options
 	// - Extra leave (User to enter extra days and then calc based off full year the amount to remove)
 
-	// 4-day toggle work week to remove 25%
+	// 4-day toggle work week to remove 20%
 
 	// At the bottom allow a drop down that shows the algorithm calculation
 
@@ -109,7 +110,7 @@ export const SalaryExpectationsSection = ({
 							checked={hybridRemote}
 							onChange={() => setHybridRemote(!hybridRemote)}
 							description={
-								"The employee is mandated to attend the office some days of he week"
+								"The employee is mandated to work at the office some days of the week"
 							}
 						/>
 						<Gap />
@@ -130,11 +131,11 @@ export const SalaryExpectationsSection = ({
 							}
 						/>
 						<SalarySwitch
-							text={"Team Bonding"}
+							text={"Regular Team Bonding"}
 							checked={teamBonding}
 							onChange={() => setTeamBonding(!teamBonding)}
 							description={
-								"E.g Regular team dinners, Social events, Meetup activities etc"
+								"Team dinners, meetup activities, companies retreats, conferences, fun days etc"
 							}
 						/>
 						<SalarySwitch
@@ -142,7 +143,7 @@ export const SalaryExpectationsSection = ({
 							checked={ethical}
 							onChange={() => setEthical(!ethical)}
 							description={
-								"The company prioritizes fair and equitable hiring/promoting practices. Works to improve quality of life for the world and makes morally 'good' decisions"
+								"The company prioritizes fair and equitable hiring & promoting practices. Works to improve quality of life for the world and makes morally 'good' decisions"
 							}
 						/>
 						<SalarySwitch
@@ -150,7 +151,7 @@ export const SalaryExpectationsSection = ({
 							checked={workLifeBalance}
 							onChange={() => setWorkLifeBalance(!workLifeBalance)}
 							description={
-								"Work culture discouraging over-working. Encourages employees to take breaks, annual leave and sick leave when required"
+								"Work culture that discourages >40 hour work weeks. Encourages employees to take breaks, annual leave and sick leave when required"
 							}
 						/>
 						<Gap />
@@ -159,7 +160,15 @@ export const SalaryExpectationsSection = ({
 							checked={internationalTravel}
 							onChange={() => setInternationalTravel(!internationalTravel)}
 							description={
-								"An opportunity involving regular short or some long term assignments abroad"
+								"Opportunity for regular short-term assignments abroad or supports employees to relocate overseas long-term within the company"
+							}
+						/>
+						<SalarySwitch
+							text={"4-Day Work Week"}
+							checked={fourDays}
+							onChange={() => setFourDays(!fourDays)}
+							description={
+								"The employee can work 4 x 8 hour work days per week for an equal reduction in pay (20%)"
 							}
 						/>
 					</div>
