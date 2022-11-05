@@ -4,6 +4,7 @@ import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { BioDescription } from "./BioDescription";
 import { ForYouCard } from "./components/ForYouCard";
+import { QualificationCard } from "./components/QualificationCard";
 import { WorkExpItem } from "./components/WorkExpItem";
 
 export const Biography = () => {
@@ -189,6 +190,53 @@ export const Biography = () => {
 				}}>
 				Qualifications
 			</Typography>
+
+			<Grid container spacing={7} justifyContent='center'>
+				<Grid item>
+					<QualificationCard
+						logo={"degree"}
+						title={"Masters of Information Systems and Finance"}
+						location={"Deakin University"}
+						lowerLocation={true}
+					/>
+				</Grid>
+				<Grid item>
+					<QualificationCard
+						logo={"degree"}
+						title={"Bachelors of Information Technology Professional Practice"}
+						location={"Federation University"}
+					/>
+				</Grid>
+				<Grid item>
+					<QualificationCard
+						logo={"certificate"}
+						title={"Information Communication and Design Certificate"}
+						location={"theGordon"}
+					/>
+				</Grid>
+				<Grid item>
+					<QualificationCard
+						logo={"certificate"}
+						title={"Web Scraping with Python Certificate"}
+						location={"LeWagon"}
+						lowerLocation={true}
+					/>
+				</Grid>
+				<Grid item>
+					<QualificationCard
+						logo={"certificate"}
+						title={"Backend Development for the Metaverse Certificate"}
+						location={"Decentraland, GITEX"}
+					/>
+				</Grid>
+				<Grid item>
+					<QualificationCard
+						logo={"language"}
+						title={"Teaching English as a Second Language Certificate"}
+						location={"TEFLEN College"}
+					/>
+				</Grid>
+			</Grid>
 
 			<div style={{ height: "100vh" }} />
 		</>
