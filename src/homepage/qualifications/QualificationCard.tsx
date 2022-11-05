@@ -1,7 +1,7 @@
-import { CardContent, Card, Typography } from "@mui/material";
+import { Card, CardContent, Typography } from "@mui/material";
 import Image from "next/future/image";
 import { useContext } from "react";
-import { DarkMode } from "../../../../themes/GlobalTheme";
+import { DarkMode } from "../../../themes/GlobalTheme";
 
 export const QualificationCard = ({
 	logo,

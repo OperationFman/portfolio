@@ -1,8 +1,8 @@
+import CommitIcon from "@mui/icons-material/Commit";
 import { Typography } from "@mui/material";
 import Image from "next/future/image";
-import CommitIcon from "@mui/icons-material/Commit";
 import { useContext } from "react";
-import { DarkMode } from "../../../../themes/GlobalTheme";
+import { DarkMode } from "../../../themes/GlobalTheme";
 
 export const WorkExpItem = ({
 	companyLogo,

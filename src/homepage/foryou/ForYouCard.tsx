@@ -1,8 +1,8 @@
 import { Card, CardContent, Typography } from "@mui/material";
 import Image from "next/future/image";
 import { useContext } from "react";
-import { DarkMode } from "../../../../themes/GlobalTheme";
-import ShowIf from "../../../../utils/ShowIf";
+import { DarkMode } from "../../../themes/GlobalTheme";
+import ShowIf from "../../../utils/ShowIf";
 
 export const ForYouCard = ({
 	isMobile,

@@ -1,6 +1,6 @@
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { Switch, Tooltip, Typography } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 export const SalarySwitch = ({
 	text,
