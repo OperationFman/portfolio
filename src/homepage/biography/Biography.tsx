@@ -5,6 +5,7 @@ import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { BioDescription } from "./BioDescription";
 import { ForYouCard } from "./components/ForYouCard";
 import { QualificationCard } from "./components/QualificationCard";
+import { SalaryExpectationsSection } from "./salary-expectations/SalaryExpectationsSection";
 import { WorkExpItem } from "./components/WorkExpItem";
 
 export const Biography = () => {
@@ -20,7 +21,7 @@ export const Biography = () => {
 				<BioDescription />
 
 				<ShowIf condition={!isMobile}>
-					<div style={{ width: "40%", alignItems: "center" }}>
+					<div style={{ alignItems: "center" }}>
 						<Image
 							src='/homepage/placeholder.png'
 							width='480'
@@ -210,14 +211,14 @@ export const Biography = () => {
 				<Grid item>
 					<QualificationCard
 						logo={"certificate"}
-						title={"Information Communication and Design Certificate"}
+						title={"Certificate of Communication Information & Design"}
 						location={"theGordon"}
 					/>
 				</Grid>
 				<Grid item>
 					<QualificationCard
 						logo={"certificate"}
-						title={"Web Scraping with Python Certificate"}
+						title={"Certificate of Web Scraping with Python"}
 						location={"LeWagon"}
 						lowerLocation={true}
 					/>
@@ -225,18 +226,38 @@ export const Biography = () => {
 				<Grid item>
 					<QualificationCard
 						logo={"certificate"}
-						title={"Backend Development for the Metaverse Certificate"}
-						location={"Decentraland, GITEX"}
+						title={"Certificate of Backend Development for the Metaverse"}
+						location={"Decentraland, Gitex"}
 					/>
 				</Grid>
 				<Grid item>
 					<QualificationCard
 						logo={"language"}
-						title={"Teaching English as a Second Language Certificate"}
-						location={"TEFLEN College"}
+						title={"Certificate of Teaching English as a Second Language"}
+						location={"Teflen College"}
 					/>
 				</Grid>
 			</Grid>
+
+			<Typography
+				variant='h6'
+				align='center'
+				style={{ marginTop: "250px", marginBottom: "250px" }}>
+				-- Some SVG Art --
+			</Typography>
+
+			<Typography
+				variant='h3'
+				align='center'
+				style={{
+					marginTop: "150px",
+					marginBottom: "25px",
+					fontWeight: "bold",
+				}}>
+				Salary
+			</Typography>
+
+			<SalaryExpectationsSection isMobile={isMobile} />
 
 			<div style={{ height: "100vh" }} />
 		</>

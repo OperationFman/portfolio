@@ -30,7 +30,7 @@ export const WorkExpItem = ({
 				style={{
 					position: "absolute",
 					marginLeft: "-16px",
-					marginTop: "10px",
+					marginTop: "5px",
 					color: "#1565C0",
 					backgroundColor: selectedTheme,
 				}}
