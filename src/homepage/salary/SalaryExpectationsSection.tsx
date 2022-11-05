@@ -81,7 +81,7 @@ export const SalaryExpectationsSection = ({
 					fontWeight: "bold",
 					marginBottom: "20px",
 				}}>
-				Expected Annual Salary
+				Expected Annual Salary ($AUD)
 			</Typography>
 
 			<FormGroup>
@@ -89,7 +89,7 @@ export const SalaryExpectationsSection = ({
 					style={{
 						display: isMobile ? "" : "flex",
 					}}>
-					<div style={{ flex: 1, marginLeft: "50px" }}>
+					<div style={{ flex: 1, marginLeft: isMobile ? "" : "50px" }}>
 						<SalarySwitch
 							text={"Toggle all"}
 							checked={toggleAll}

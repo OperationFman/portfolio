@@ -15,7 +15,10 @@ export const SalarySwitch = ({
 }) => {
 	return (
 		<div style={{ display: "flex", margin: "10px 30px", gap: "15px" }}>
-			<Tooltip TransitionComponent={Zoom} title={description}>
+			<Tooltip
+				TransitionComponent={Zoom}
+				title={description}
+				enterTouchDelay={0}>
 				<HelpOutlineIcon style={{ marginTop: "7px" }} />
 			</Tooltip>{" "}
 			<Switch
