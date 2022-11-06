@@ -1,6 +1,8 @@
-import { Card, FormGroup, Typography } from "@mui/material";
+import { Card, FormGroup, Tooltip, Typography, Zoom } from "@mui/material";
+import { validateConfig } from "next/dist/server/config-shared";
 import { useEffect, useState } from "react";
 import { Gap } from "./components/Gap";
+import { MoneyInput } from "./components/MoneyInput";
 import { SalarySwitch } from "./components/SalarySwitch";
 
 export const SalaryExpectationsSection = ({
@@ -8,23 +10,30 @@ export const SalaryExpectationsSection = ({
 }: {
 	isMobile: boolean;
 }) => {
-	const valueOf = {
-		fullyRemote: -8000,
-		hybridRemote: -5000,
-		flatHierarchy: -2000,
-		exceptionalColleagues: -3000,
-		teamBonding: -2000,
-		ethical: -2000,
-		workLifeBalance: -5000,
-		internationalTravel: -20000,
-	};
+	// 4-day toggle work week AND stock to remove 20%
+	// At the bottom allow a drop down that shows the algorithm calculation
 
 	const commaSeparate = (value: number) => {
 		return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	};
 
-	const [expectedSalary, setExpectedSalary] = useState(61000);
-	const [toggleAll, setToggleAll] = useState(true);
+	const [values, setValues] = useState({
+		fullyRemote: 8000,
+		hybridRemote: 5000,
+		flatHierarchy: 2000,
+		teamBonding: 2000,
+		ethical: 2000,
+		workLifeBalance: 5000,
+		internationalTravel: 20000,
+		stock: 10000,
+		trainingAllowances: 2500,
+		wellnessAllowances: 500,
+		otherAllowances: 2000,
+	});
+
+	const EXPECTED_SALARY_WITH_NO_BENEFITS = 130000;
+	const MINIMUM_SALARY = 60000;
+	const [expectedSalary, setExpectedSalary] = useState(60000);
 
 	const [fullyRemote, setFullyRemote] = useState(true);
 	const [hybridRemote, setHybridRemote] = useState(false);
@@ -40,23 +49,82 @@ export const SalaryExpectationsSection = ({
 	}, [hybridRemote]);
 
 	const [flatHierarchy, setFlatHierarchy] = useState(true);
-	const [exceptionalColleagues, setExceptionalColleagues] = useState(true);
 	const [teamBonding, setTeamBonding] = useState(true);
 	const [ethical, setEthical] = useState(true);
 	const [workLifeBalance, setWorkLifeBalance] = useState(true);
 	const [internationalTravel, setInternationalTravel] = useState(true);
 	const [fourDays, setFourDays] = useState(true);
 
-	// user to add:
-	// - Phone/Book/Lunch allowances
-	// - Training allowances
-	// - Wellness allowances
-	// - Stock Options
-	// - Extra leave (User to enter extra days and then calc based off full year the amount to remove)
+	const handleMoneyInputChange = (
+		event: React.ChangeEvent<HTMLInputElement>,
+	) => {
+		setValues({
+			...values,
+			[event.target.name]: event.target.value,
+		});
+	};
 
-	// 4-day toggle work week to remove 20%
+	useEffect(() => {
+		const calculateExpectedSalary = () => {
+			let baseSalary = EXPECTED_SALARY_WITH_NO_BENEFITS;
 
-	// At the bottom allow a drop down that shows the algorithm calculation
+			// TODO: Cleaner approach?
+			if (fullyRemote) {
+				baseSalary = baseSalary - values.fullyRemote;
+			}
+
+			if (hybridRemote) {
+				baseSalary = baseSalary - values.hybridRemote;
+			}
+
+			if (flatHierarchy) {
+				baseSalary = baseSalary - values.flatHierarchy;
+			}
+
+			if (teamBonding) {
+				baseSalary = baseSalary - values.teamBonding;
+			}
+
+			if (ethical) {
+				baseSalary = baseSalary - values.ethical;
+			}
+
+			if (workLifeBalance) {
+				baseSalary = baseSalary - values.workLifeBalance;
+			}
+
+			if (internationalTravel) {
+				baseSalary = baseSalary - values.internationalTravel;
+			}
+
+			baseSalary = baseSalary - values.stock * 0.7; // 30% reduction for stock
+			baseSalary = baseSalary - values.trainingAllowances;
+			baseSalary = baseSalary - values.wellnessAllowances;
+			baseSalary = baseSalary - values.otherAllowances;
+
+			if (fourDays) {
+				baseSalary = baseSalary * 0.8; // 20% reduction for 4 day work weeks
+			}
+
+			if (baseSalary < MINIMUM_SALARY) {
+				baseSalary = MINIMUM_SALARY;
+			}
+
+			return baseSalary;
+		};
+
+		setExpectedSalary(calculateExpectedSalary());
+	}, [
+		fullyRemote,
+		hybridRemote,
+		flatHierarchy,
+		teamBonding,
+		ethical,
+		workLifeBalance,
+		internationalTravel,
+		fourDays,
+		values,
+	]);
 
 	return (
 		<Card
@@ -64,16 +132,22 @@ export const SalaryExpectationsSection = ({
 				width: "100%",
 				boxShadow: 5,
 			}}>
-			<Typography
-				variant='h3'
-				align='center'
-				style={{
-					marginTop: "40px",
-					fontWeight: "bold",
-					color: "#1565C0",
-				}}>
-				${commaSeparate(expectedSalary)}
-			</Typography>
+			<Tooltip
+				TransitionComponent={Zoom}
+				title={"Australian Dollars"}
+				enterTouchDelay={0}>
+				<Typography
+					variant='h3'
+					align='center'
+					style={{
+						marginTop: "40px",
+						fontWeight: "bold",
+						color: "#1565C0",
+					}}>
+					${commaSeparate(expectedSalary)}
+				</Typography>
+			</Tooltip>
+
 			<Typography
 				variant='h5'
 				align='center'
@@ -81,7 +155,7 @@ export const SalaryExpectationsSection = ({
 					fontWeight: "bold",
 					marginBottom: "20px",
 				}}>
-				Expected Annual Salary ($AUD)
+				Expected Annual Salary
 			</Typography>
 
 			<FormGroup>
@@ -90,12 +164,6 @@ export const SalaryExpectationsSection = ({
 						display: isMobile ? "" : "flex",
 					}}>
 					<div style={{ flex: 1, marginLeft: isMobile ? "" : "50px" }}>
-						<SalarySwitch
-							text={"Toggle all"}
-							checked={toggleAll}
-							onChange={() => alert("TBD")}
-							description={"Enable/Disable all modifiers"}
-						/>
 						<Gap />
 						<SalarySwitch
 							text={"Fully Remote Working"}
@@ -123,15 +191,7 @@ export const SalaryExpectationsSection = ({
 							}
 						/>
 						<SalarySwitch
-							text={"Exceptional Colleagues"}
-							checked={exceptionalColleagues}
-							onChange={() => setExceptionalColleagues(!exceptionalColleagues)}
-							description={
-								"Remarkable co-workers that achieve great things, mentor one another and are supportive"
-							}
-						/>
-						<SalarySwitch
-							text={"Regular Team Bonding"}
+							text={"Frequent Team Bonding"}
 							checked={teamBonding}
 							onChange={() => setTeamBonding(!teamBonding)}
 							description={
@@ -163,6 +223,51 @@ export const SalaryExpectationsSection = ({
 								"Opportunity for regular short-term assignments abroad or supports employees to relocate overseas long-term within the company"
 							}
 						/>
+						<Gap />
+					</div>
+					<div
+						style={{
+							flex: 1,
+						}}>
+						<MoneyInput
+							name={"stock"}
+							title={"Stock Options / Shares"}
+							value={values.stock}
+							onChange={handleMoneyInputChange}
+							description={
+								"The value of public or private shares given to the employee, including restricted units (Annually)"
+							}
+						/>
+						<Gap />
+						<MoneyInput
+							name={"trainingAllowances"}
+							title={"Training Allowance"}
+							value={values.trainingAllowances}
+							onChange={handleMoneyInputChange}
+							description={
+								"E.g Conferences, courses, course material and classes (Annually)"
+							}
+						/>
+						<MoneyInput
+							name={"wellnessAllowances"}
+							title={"Wellness Allowance"}
+							value={values.wellnessAllowances}
+							onChange={handleMoneyInputChange}
+							description={
+								"E.g Gym memberships, stress management classes, massages etc (Annually)"
+							}
+						/>
+						<MoneyInput
+							name={"otherAllowances"}
+							title={"Other Allowances / Benefits"}
+							value={values.otherAllowances}
+							onChange={handleMoneyInputChange}
+							description={
+								"E.g Laptop, Laptop Accessories, Books, Travel, Lunch, Dinners etc (Annually)"
+							}
+						/>
+						<Gap />
+
 						<SalarySwitch
 							text={"4-Day Work Week"}
 							checked={fourDays}
@@ -171,17 +276,7 @@ export const SalaryExpectationsSection = ({
 								"The employee can work 4 x 8 hour work days per week for an equal reduction in pay (20%)"
 							}
 						/>
-					</div>
-					<div
-						style={{
-							border: "2px solid red",
-							flex: 1,
-							marginRight: "50px",
-						}}>
-						<h1>What up?</h1>
-						<h1>What up?</h1>
-						<h1>What up?</h1>
-						<h1>What up?</h1>
+						<Gap />
 					</div>
 				</div>
 			</FormGroup>
