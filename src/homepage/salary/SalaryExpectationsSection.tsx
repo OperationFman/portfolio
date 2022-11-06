@@ -1,5 +1,4 @@
 import { Card, FormGroup, Tooltip, Typography, Zoom } from "@mui/material";
-import { validateConfig } from "next/dist/server/config-shared";
 import { useEffect, useState } from "react";
 import { Gap } from "./components/Gap";
 import { MoneyInput } from "./components/MoneyInput";
@@ -10,9 +9,6 @@ export const SalaryExpectationsSection = ({
 }: {
 	isMobile: boolean;
 }) => {
-	// 4-day toggle work week AND stock to remove 20%
-	// At the bottom allow a drop down that shows the algorithm calculation
-
 	const commaSeparate = (value: number) => {
 		return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	};
@@ -28,12 +24,12 @@ export const SalaryExpectationsSection = ({
 		stock: 10000,
 		trainingAllowances: 2500,
 		wellnessAllowances: 500,
-		otherAllowances: 2000,
+		otherAllowances: 3500,
 	});
 
 	const EXPECTED_SALARY_WITH_NO_BENEFITS = 130000;
-	const MINIMUM_SALARY = 60000;
-	const [expectedSalary, setExpectedSalary] = useState(60000);
+	const MINIMUM_LIVABLE_SALARY = 60000;
+	const [expectedSalary, setExpectedSalary] = useState(MINIMUM_LIVABLE_SALARY);
 
 	const [fullyRemote, setFullyRemote] = useState(true);
 	const [hybridRemote, setHybridRemote] = useState(false);
@@ -68,7 +64,7 @@ export const SalaryExpectationsSection = ({
 		const calculateExpectedSalary = () => {
 			let baseSalary = EXPECTED_SALARY_WITH_NO_BENEFITS;
 
-			// TODO: Cleaner approach?
+			// TODO: Cleaner approach
 			if (fullyRemote) {
 				baseSalary = baseSalary - values.fullyRemote;
 			}
@@ -97,7 +93,7 @@ export const SalaryExpectationsSection = ({
 				baseSalary = baseSalary - values.internationalTravel;
 			}
 
-			baseSalary = baseSalary - values.stock * 0.7; // 30% reduction for stock
+			baseSalary = baseSalary - values.stock * 0.5; // 50% reduction for stock
 			baseSalary = baseSalary - values.trainingAllowances;
 			baseSalary = baseSalary - values.wellnessAllowances;
 			baseSalary = baseSalary - values.otherAllowances;
@@ -106,8 +102,8 @@ export const SalaryExpectationsSection = ({
 				baseSalary = baseSalary * 0.8; // 20% reduction for 4 day work weeks
 			}
 
-			if (baseSalary < MINIMUM_SALARY) {
-				baseSalary = MINIMUM_SALARY;
+			if (baseSalary < MINIMUM_LIVABLE_SALARY) {
+				baseSalary = MINIMUM_LIVABLE_SALARY;
 			}
 
 			return baseSalary;
@@ -267,13 +263,12 @@ export const SalaryExpectationsSection = ({
 							}
 						/>
 						<Gap />
-
 						<SalarySwitch
 							text={"4-Day Work Week"}
 							checked={fourDays}
 							onChange={() => setFourDays(!fourDays)}
 							description={
-								"The employee can work 4 x 8 hour work days per week for an equal reduction in pay (20%)"
+								"The employee can work 4 x 8 hour work days per week for a 20% reduction in pay"
 							}
 						/>
 						<Gap />
