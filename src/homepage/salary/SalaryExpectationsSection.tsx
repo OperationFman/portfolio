@@ -1,4 +1,11 @@
-import { Card, FormGroup, Tooltip, Typography, Zoom } from "@mui/material";
+import {
+	Button,
+	Card,
+	FormGroup,
+	Tooltip,
+	Typography,
+	Zoom,
+} from "@mui/material";
 import { useEffect, useState } from "react";
 import { Gap } from "./components/Gap";
 import { MoneyInput } from "./components/MoneyInput";
@@ -53,6 +60,12 @@ export const SalaryExpectationsSection = ({
 	const [fourDays, setFourDays] = useState(true);
 	const [internationalRelocation, setInternationalRelocation] = useState(false);
 
+	const STOCK_OPTIONS = "stock";
+	const TRAINING_ALLOWANCES = "trainingAllowances";
+	const OTHER_ALLOWANCES = "otherAllowances";
+
+	const [disableClearAll, setDisableClearAll] = useState(false);
+
 	const handleMoneyInputChange = (
 		event: React.ChangeEvent<HTMLInputElement>,
 	) => {
@@ -69,9 +82,30 @@ export const SalaryExpectationsSection = ({
 		});
 	};
 
+	const handleClearAll = () => {
+		setFullyRemote(false);
+		setHybridRemote(false);
+		setFlatHierarchy(false);
+		setTeamBonding(false);
+		setEthical(false);
+		setWorkLifeBalance(false);
+		setInternationalTravel(false);
+		setFourDays(false);
+		setInternationalRelocation(false);
+		setValues({
+			...values,
+			[STOCK_OPTIONS]: 0,
+			[TRAINING_ALLOWANCES]: 0,
+			[OTHER_ALLOWANCES]: 0,
+		});
+	};
+
 	useEffect(() => {
 		const calculateExpectedSalary = () => {
 			let baseSalary = EXPECTED_SALARY_WITH_NO_BENEFITS;
+			const stock = values.stock;
+			const trainingAllowance = values.trainingAllowances;
+			const otherAllowances = values.otherAllowances;
 
 			// TODO: Cleaner approach
 
@@ -111,12 +145,18 @@ export const SalaryExpectationsSection = ({
 				baseSalary = baseSalary - values.internationalRelocation;
 			}
 
-			baseSalary = baseSalary - values.stock * 0.5; // 50% reduction
-			baseSalary = baseSalary - values.trainingAllowances * 0.9; // 10% reduction
-			baseSalary = baseSalary - values.otherAllowances * 0.8; // 20% reduction
+			baseSalary = baseSalary - stock * 0.5; // 50% reduction
+			baseSalary = baseSalary - trainingAllowance * 0.9; // 10% reduction
+			baseSalary = baseSalary - otherAllowances * 0.8; // 20% reduction
 
 			if (baseSalary < MINIMUM_LIVABLE_SALARY) {
 				baseSalary = MINIMUM_LIVABLE_SALARY;
+			}
+
+			if (baseSalary === EXPECTED_SALARY_WITH_NO_BENEFITS) {
+				setDisableClearAll(true);
+			} else {
+				setDisableClearAll(false);
 			}
 
 			return baseSalary;
@@ -142,10 +182,7 @@ export const SalaryExpectationsSection = ({
 				width: "100%",
 				boxShadow: 5,
 			}}>
-			<Tooltip
-				TransitionComponent={Zoom}
-				title={"Australian Dollars"}
-				enterTouchDelay={0}>
+			<div style={{ display: "flex", justifyContent: "center" }}>
 				<Typography
 					variant='h3'
 					align='center'
@@ -156,7 +193,17 @@ export const SalaryExpectationsSection = ({
 					}}>
 					${commaSeparate(expectedSalary)}
 				</Typography>
-			</Tooltip>
+				<Typography
+					variant='h6'
+					align='left'
+					style={{
+						marginTop: "62px",
+						fontWeight: "bold",
+						color: "#90caf9",
+					}}>
+					AUD
+				</Typography>
+			</div>
 
 			<Typography
 				variant='h5'
@@ -200,14 +247,7 @@ export const SalaryExpectationsSection = ({
 								"An organization with few or no levels of management between staff and executives"
 							}
 						/>
-						<SalarySwitch
-							text={"Frequent Team Bonding"}
-							checked={teamBonding}
-							onChange={() => setTeamBonding(!teamBonding)}
-							description={
-								"Team dinners, meetup activities, companies retreats, conferences, fun days etc"
-							}
-						/>
+
 						<SalarySwitch
 							text={"Ethical / Socially Aware"}
 							checked={ethical}
@@ -228,7 +268,17 @@ export const SalaryExpectationsSection = ({
 							text={"International Travel"}
 							checked={internationalTravel}
 							onChange={() => setInternationalTravel(!internationalTravel)}
-							description={"Opportunity to travel abroad as a part of the job"}
+							description={
+								"Opportunity to travel abroad short-term as a part of the job"
+							}
+						/>
+						<SalarySwitch
+							text={"Frequent Team Bonding"}
+							checked={teamBonding}
+							onChange={() => setTeamBonding(!teamBonding)}
+							description={
+								"Team dinners, meetup activities, companies retreats, conferences, fun days etc"
+							}
 						/>
 						<Gap />
 					</div>
@@ -237,7 +287,7 @@ export const SalaryExpectationsSection = ({
 							flex: 1,
 						}}>
 						<MoneyInput
-							name={"stock"}
+							name={STOCK_OPTIONS}
 							title={"Stock Options / Shares"}
 							value={values.stock}
 							onChange={handleMoneyInputChange}
@@ -247,7 +297,7 @@ export const SalaryExpectationsSection = ({
 							}
 						/>
 						<MoneyInput
-							name={"trainingAllowances"}
+							name={TRAINING_ALLOWANCES}
 							title={"Training Allowance"}
 							value={values.trainingAllowances}
 							onChange={handleMoneyInputChange}
@@ -257,7 +307,7 @@ export const SalaryExpectationsSection = ({
 							}
 						/>
 						<MoneyInput
-							name={"otherAllowances"}
+							name={OTHER_ALLOWANCES}
 							title={"Other Allowances / Benefits"}
 							value={values.otherAllowances}
 							onChange={handleMoneyInputChange}
@@ -285,10 +335,19 @@ export const SalaryExpectationsSection = ({
 								"Opportunity to relocate abroad long term or permanently"
 							}
 						/>
-						<Gap />
 					</div>
 				</div>
 			</FormGroup>
+			<div style={{ display: "flex", justifyContent: "center" }}>
+				<Button
+					variant='outlined'
+					size='medium'
+					onClick={() => handleClearAll()}
+					disabled={disableClearAll}>
+					Clear All
+				</Button>
+			</div>
+			<Gap />
 		</Card>
 	);
 };
