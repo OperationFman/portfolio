@@ -62,6 +62,13 @@ export const SalaryExpectationsSection = ({
 		});
 	};
 
+	const handleMoneyInputClear = (fieldName: string) => {
+		setValues({
+			...values,
+			[fieldName]: 0,
+		});
+	};
+
 	useEffect(() => {
 		const calculateExpectedSalary = () => {
 			let baseSalary = EXPECTED_SALARY_WITH_NO_BENEFITS;
@@ -234,25 +241,27 @@ export const SalaryExpectationsSection = ({
 							title={"Stock Options / Shares"}
 							value={values.stock}
 							onChange={handleMoneyInputChange}
+							onClear={handleMoneyInputClear}
 							description={
 								"The value of public or private shares given to the employee, including restricted units (Annually)"
 							}
 						/>
-						<Gap />
 						<MoneyInput
 							name={"trainingAllowances"}
 							title={"Training Allowance"}
 							value={values.trainingAllowances}
 							onChange={handleMoneyInputChange}
+							onClear={handleMoneyInputClear}
 							description={
 								"E.g Conferences, courses, course material and classes (Annually)"
 							}
 						/>
 						<MoneyInput
 							name={"otherAllowances"}
-							title={"All Other Allowances / Benefits"}
+							title={"Other Allowances / Benefits"}
 							value={values.otherAllowances}
 							onChange={handleMoneyInputChange}
+							onClear={handleMoneyInputClear}
 							description={
 								"E.g Wellness, Laptop, Laptop Accessories, Books, Travel, Lunch, Dinners etc (Annually)"
 							}
@@ -263,7 +272,7 @@ export const SalaryExpectationsSection = ({
 							checked={fourDays}
 							onChange={() => setFourDays(!fourDays)}
 							description={
-								"The employee can work 4 x 8 hour work days per week for a 20% reduction in pay"
+								"4 x 8 hour work days per week for a 20% reduction in overall pay"
 							}
 						/>
 						<SalarySwitch

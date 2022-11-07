@@ -1,4 +1,5 @@
 import {
+	IconButton,
 	InputAdornment,
 	InputLabel,
 	OutlinedInput,
@@ -6,6 +7,7 @@ import {
 	Zoom,
 } from "@mui/material";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import React from "react";
 
 export const MoneyInput = ({
@@ -13,12 +15,14 @@ export const MoneyInput = ({
 	name,
 	value,
 	onChange,
+	onClear,
 	description,
 }: {
 	title: string;
 	name: string;
 	value: number;
 	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	onClear: (fieldName: string) => void;
 	description: string;
 }) => {
 	return (
@@ -40,6 +44,15 @@ export const MoneyInput = ({
 					type={"number"}
 				/>
 			</div>
+			<Tooltip TransitionComponent={Zoom} title={"Clear"} enterTouchDelay={0}>
+				<IconButton
+					color='primary'
+					component='label'
+					onClick={() => onClear(name)}
+					sx={{ marginTop: "20px", width: "55px" }}>
+					<DeleteOutlineIcon />
+				</IconButton>
+			</Tooltip>
 		</div>
 	);
 };
