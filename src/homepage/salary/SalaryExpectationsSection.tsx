@@ -13,22 +13,23 @@ export const SalaryExpectationsSection = ({
 		return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	};
 
+	const EXPECTED_SALARY_WITH_NO_BENEFITS = 125000;
+	const MINIMUM_LIVABLE_SALARY = 60000;
+
 	const [values, setValues] = useState({
 		fullyRemote: 8000,
-		hybridRemote: 5000,
-		flatHierarchy: 2000,
-		teamBonding: 2000,
+		hybridRemote: 4000,
+		flatHierarchy: 1000,
+		teamBonding: 1000,
 		ethical: 2000,
-		workLifeBalance: 5000,
-		internationalTravel: 20000,
+		workLifeBalance: 3000,
+		internationalTravel: 500,
 		stock: 10000,
 		trainingAllowances: 2500,
-		wellnessAllowances: 500,
-		otherAllowances: 3500,
+		otherAllowances: 4000,
+		internationalRelocation: 10000,
 	});
 
-	const EXPECTED_SALARY_WITH_NO_BENEFITS = 130000;
-	const MINIMUM_LIVABLE_SALARY = 60000;
 	const [expectedSalary, setExpectedSalary] = useState(MINIMUM_LIVABLE_SALARY);
 
 	const [fullyRemote, setFullyRemote] = useState(true);
@@ -50,6 +51,7 @@ export const SalaryExpectationsSection = ({
 	const [workLifeBalance, setWorkLifeBalance] = useState(true);
 	const [internationalTravel, setInternationalTravel] = useState(true);
 	const [fourDays, setFourDays] = useState(true);
+	const [internationalRelocation, setInternationalRelocation] = useState(false);
 
 	const handleMoneyInputChange = (
 		event: React.ChangeEvent<HTMLInputElement>,
@@ -65,6 +67,11 @@ export const SalaryExpectationsSection = ({
 			let baseSalary = EXPECTED_SALARY_WITH_NO_BENEFITS;
 
 			// TODO: Cleaner approach
+
+			if (fourDays) {
+				baseSalary = baseSalary * 0.8; // 20% reduction for 4 day work weeks
+			}
+
 			if (fullyRemote) {
 				baseSalary = baseSalary - values.fullyRemote;
 			}
@@ -93,14 +100,13 @@ export const SalaryExpectationsSection = ({
 				baseSalary = baseSalary - values.internationalTravel;
 			}
 
-			baseSalary = baseSalary - values.stock * 0.5; // 50% reduction for stock
-			baseSalary = baseSalary - values.trainingAllowances;
-			baseSalary = baseSalary - values.wellnessAllowances;
-			baseSalary = baseSalary - values.otherAllowances;
-
-			if (fourDays) {
-				baseSalary = baseSalary * 0.8; // 20% reduction for 4 day work weeks
+			if (internationalRelocation) {
+				baseSalary = baseSalary - values.internationalRelocation;
 			}
+
+			baseSalary = baseSalary - values.stock * 0.5; // 50% reduction
+			baseSalary = baseSalary - values.trainingAllowances * 0.9; // 10% reduction
+			baseSalary = baseSalary - values.otherAllowances * 0.8; // 20% reduction
 
 			if (baseSalary < MINIMUM_LIVABLE_SALARY) {
 				baseSalary = MINIMUM_LIVABLE_SALARY;
@@ -120,6 +126,7 @@ export const SalaryExpectationsSection = ({
 		internationalTravel,
 		fourDays,
 		values,
+		internationalRelocation,
 	]);
 
 	return (
@@ -138,7 +145,7 @@ export const SalaryExpectationsSection = ({
 					style={{
 						marginTop: "40px",
 						fontWeight: "bold",
-						color: "#1565C0",
+						color: "#90caf9",
 					}}>
 					${commaSeparate(expectedSalary)}
 				</Typography>
@@ -210,14 +217,11 @@ export const SalaryExpectationsSection = ({
 								"Work culture that discourages >40 hour work weeks. Encourages employees to take breaks, annual leave and sick leave when required"
 							}
 						/>
-						<Gap />
 						<SalarySwitch
-							text={"International Travel Opportunities"}
+							text={"International Travel"}
 							checked={internationalTravel}
 							onChange={() => setInternationalTravel(!internationalTravel)}
-							description={
-								"Opportunity for regular short-term assignments abroad or supports employees to relocate overseas long-term within the company"
-							}
+							description={"Opportunity to travel abroad as a part of the job"}
 						/>
 						<Gap />
 					</div>
@@ -245,21 +249,12 @@ export const SalaryExpectationsSection = ({
 							}
 						/>
 						<MoneyInput
-							name={"wellnessAllowances"}
-							title={"Wellness Allowance"}
-							value={values.wellnessAllowances}
-							onChange={handleMoneyInputChange}
-							description={
-								"E.g Gym memberships, stress management classes, massages etc (Annually)"
-							}
-						/>
-						<MoneyInput
 							name={"otherAllowances"}
-							title={"Other Allowances / Benefits"}
+							title={"All Other Allowances / Benefits"}
 							value={values.otherAllowances}
 							onChange={handleMoneyInputChange}
 							description={
-								"E.g Laptop, Laptop Accessories, Books, Travel, Lunch, Dinners etc (Annually)"
+								"E.g Wellness, Laptop, Laptop Accessories, Books, Travel, Lunch, Dinners etc (Annually)"
 							}
 						/>
 						<Gap />
@@ -269,6 +264,16 @@ export const SalaryExpectationsSection = ({
 							onChange={() => setFourDays(!fourDays)}
 							description={
 								"The employee can work 4 x 8 hour work days per week for a 20% reduction in pay"
+							}
+						/>
+						<SalarySwitch
+							text={"International Relocation"}
+							checked={internationalRelocation}
+							onChange={() =>
+								setInternationalRelocation(!internationalRelocation)
+							}
+							description={
+								"Opportunity to relocate abroad long term or permanently"
 							}
 						/>
 						<Gap />
