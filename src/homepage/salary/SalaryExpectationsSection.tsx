@@ -27,7 +27,7 @@ export const SalaryExpectationsSection = ({
 		stock: 10000,
 		trainingAllowances: 2500,
 		otherAllowances: 4000,
-		internationalRelocation: 10000,
+		internationalRelocation: 15000,
 	});
 
 	const [expectedSalary, setExpectedSalary] = useState(MINIMUM_LIVABLE_SALARY);
