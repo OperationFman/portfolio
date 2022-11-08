@@ -31,7 +31,7 @@ export const projectMetaData: ProjectMetaData[] = [
 		},
 		subTitle:
 			"Visually simple single page application to track a single stock and display the value of your holdings in USD and AUD, ideal if your workplace offers equity. Built using Typescript with the React library and a focus on Terraform to automatically provision and deploy a tested application on an AWS EC2 instance, using a Docker fed into AWS ECR.",
-		deployedURL: "http://tw-stock-tracker.franklinvmoon.com/",
+		// deployedURL: "http://tw-stock-tracker.franklinvmoon.com/",
 		repoURL: "https://github.com/OperationFman/Stock-Ticker-Overview",
 	},
 	{
@@ -50,7 +50,7 @@ export const projectMetaData: ProjectMetaData[] = [
 		},
 		subTitle:
 			"I simple management app that helps players select crew members to take on missions in the game series 'Mass Effect'. Users add and remove crew throughout the games and this tool shows you who you haven't brought on mission recently and randomly recommends them. Additionally, users can use Oauth to have their own account, saved across devices. Built using Javascript with the React Library and hosted on Heroku with Docker and a full 'deploy-to-prod-on-green' CI/CD pipeline in CircleCI",
-		deployedURL: "https://mass-effect-crewed.herokuapp.com/",
+		// deployedURL: "https://mass-effect-crewed.herokuapp.com/",
 		repoURL: "https://github.com/OperationFman/Mass-Effect-Crewed",
 		uxURL:
 			"https://www.figma.com/proto/XL7Gz06sz0iLn4hyVpGnRz/Mass-Effect-Crewed?node-id=0%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=0%3A3",
