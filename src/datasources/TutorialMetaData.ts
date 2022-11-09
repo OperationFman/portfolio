@@ -2,6 +2,18 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Quickstart: React-Redux Refresher",
+		link: `react-redux-refresher`,
+		notionPage: "b2b95c4552a24526ba3fec209cb1eb4a",
+		created: 1667982722,
+		thumbnail: "/tutorials/redux-ducks.png",
+		subTitle:
+			"Get upto speed on how redux flows, the testing pattern ducks and simple unit testing",
+		topic: Topic.Programming,
+		languages: [Languages.Javascript],
+		tags: [Tags.QuickStart],
+	},
+	{
 		title: "Revert a Commit",
 		link: `revert-commit`,
 		notionPage: "9d8e0e3197544913af8ab782a011d4f2",
