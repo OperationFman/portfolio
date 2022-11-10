@@ -21,13 +21,13 @@ export const SalaryExpectationsSection = ({
 		hybridRemote: 4000,
 		flatHierarchy: 1000,
 		teamBonding: 1000,
-		ethical: 2000,
+		ethical: 2050,
 		workLifeBalance: 3000,
 		internationalTravel: 500,
 		stock: 10000,
 		trainingAllowances: 2500,
 		otherAllowances: 4000,
-		internationalRelocation: 15000,
+		internationalRelocation: 10000,
 	});
 
 	const [expectedSalary, setExpectedSalary] = useState(MINIMUM_LIVABLE_SALARY);
@@ -51,7 +51,7 @@ export const SalaryExpectationsSection = ({
 	const [workLifeBalance, setWorkLifeBalance] = useState(true);
 	const [internationalTravel, setInternationalTravel] = useState(true);
 	const [fourDays, setFourDays] = useState(true);
-	const [internationalRelocation, setInternationalRelocation] = useState(false);
+	const [internationalRelocation, setInternationalRelocation] = useState(true);
 
 	const STOCK_OPTIONS = "stock";
 	const TRAINING_ALLOWANCES = "trainingAllowances";
@@ -205,7 +205,7 @@ export const SalaryExpectationsSection = ({
 					fontWeight: "bold",
 					marginBottom: "20px",
 				}}>
-				Expected Annual Salary
+				Proposed Annual Salary
 			</Typography>
 
 			<FormGroup>
@@ -216,22 +216,52 @@ export const SalaryExpectationsSection = ({
 					<div style={{ flex: 1, marginLeft: isMobile ? "" : "50px" }}>
 						<Gap />
 						<SalarySwitch
-							text={"Fully Remote Working"}
+							text={"Fully Remote"}
 							checked={fullyRemote}
 							onChange={() => setFullyRemote(!fullyRemote)}
 							description={
 								"Allows the employee complete flexibility to work from home or the office"
 							}
+							isMobile={isMobile}
 						/>
 						<SalarySwitch
-							text={"Hybrid Remote Working"}
+							text={"Hybrid Remote"}
 							checked={hybridRemote}
 							onChange={() => setHybridRemote(!hybridRemote)}
 							description={
 								"The employee is mandated to work at the office some days of the week"
 							}
+							isMobile={isMobile}
 						/>
 						<Gap />
+
+						<SalarySwitch
+							text={"Ethical & Socially Aware"}
+							checked={ethical}
+							onChange={() => setEthical(!ethical)}
+							description={
+								"The company prioritizes fair and equitable hiring & promoting practices. Works to improve quality of life for the world and makes morally 'good' decisions"
+							}
+							isMobile={isMobile}
+						/>
+						<SalarySwitch
+							text={"Strong Work-Life Balance"}
+							checked={workLifeBalance}
+							onChange={() => setWorkLifeBalance(!workLifeBalance)}
+							description={
+								"Employees are not expected to work at all outside salaried hours and encouraged to take breaks/leave"
+							}
+							isMobile={isMobile}
+						/>
+						<SalarySwitch
+							text={"Reoccurring Team Bonding"}
+							checked={teamBonding}
+							onChange={() => setTeamBonding(!teamBonding)}
+							description={
+								"Team dinners, meetup activities, game sessions, company retreats, conferences, fun days etc"
+							}
+							isMobile={isMobile}
+						/>
 						<SalarySwitch
 							text={"Flat Organizational Hierarchy"}
 							checked={flatHierarchy}
@@ -239,39 +269,16 @@ export const SalaryExpectationsSection = ({
 							description={
 								"An organization with few or no levels of management between staff and executives"
 							}
-						/>
-
-						<SalarySwitch
-							text={"Ethical / Socially Aware"}
-							checked={ethical}
-							onChange={() => setEthical(!ethical)}
-							description={
-								"The company prioritizes fair and equitable hiring & promoting practices. Works to improve quality of life for the world and makes morally 'good' decisions"
-							}
+							isMobile={isMobile}
 						/>
 						<SalarySwitch
-							text={"Work Life Balance"}
-							checked={workLifeBalance}
-							onChange={() => setWorkLifeBalance(!workLifeBalance)}
-							description={
-								"Work culture that discourages >40 hour work weeks. Encourages employees to take breaks, annual leave and sick leave when required"
-							}
-						/>
-						<SalarySwitch
-							text={"International Travel"}
+							text={"Travel Opportunities"}
 							checked={internationalTravel}
 							onChange={() => setInternationalTravel(!internationalTravel)}
 							description={
-								"Opportunity to travel abroad short-term as a part of the job"
+								"Opportunity to travel abroad short-term as a part of the role"
 							}
-						/>
-						<SalarySwitch
-							text={"Frequent Team Bonding"}
-							checked={teamBonding}
-							onChange={() => setTeamBonding(!teamBonding)}
-							description={
-								"Team dinners, meetup activities, companies retreats, conferences, fun days etc"
-							}
+							isMobile={isMobile}
 						/>
 						<Gap />
 					</div>
@@ -281,13 +288,14 @@ export const SalaryExpectationsSection = ({
 						}}>
 						<MoneyInput
 							name={STOCK_OPTIONS}
-							title={"Stock Options / Shares"}
+							title={"Stock Options & Shares"}
 							value={values.stock}
 							onChange={handleMoneyInputChange}
 							onClear={handleMoneyInputClear}
 							description={
-								"The value of public or private shares given to the employee, including restricted units (Annually)"
+								"The value of public or private shares given to the employee, including restricted units"
 							}
+							isMobile={isMobile}
 						/>
 						<MoneyInput
 							name={TRAINING_ALLOWANCES}
@@ -296,8 +304,9 @@ export const SalaryExpectationsSection = ({
 							onChange={handleMoneyInputChange}
 							onClear={handleMoneyInputClear}
 							description={
-								"E.g Conferences, courses, course material and classes (Annually)"
+								"Conferences, courses, course material and classes (Annually)"
 							}
+							isMobile={isMobile}
 						/>
 						<MoneyInput
 							name={OTHER_ALLOWANCES}
@@ -306,18 +315,11 @@ export const SalaryExpectationsSection = ({
 							onChange={handleMoneyInputChange}
 							onClear={handleMoneyInputClear}
 							description={
-								"E.g Wellness, Laptop, Laptop Accessories, Books, Travel, Lunch, Dinners etc (Annually)"
+								"Laptop, Laptop Accessories, Books, Gym Membership, Public Transport Card etc (Annually)"
 							}
+							isMobile={isMobile}
 						/>
 						<Gap />
-						<SalarySwitch
-							text={"4-Day Work Week"}
-							checked={fourDays}
-							onChange={() => setFourDays(!fourDays)}
-							description={
-								"4 x 8 hour work days per week for a 20% reduction in overall pay"
-							}
-						/>
 						<SalarySwitch
 							text={"International Relocation"}
 							checked={internationalRelocation}
@@ -325,8 +327,18 @@ export const SalaryExpectationsSection = ({
 								setInternationalRelocation(!internationalRelocation)
 							}
 							description={
-								"Opportunity to relocate abroad long term or permanently"
+								"Requirement or opportunity relocate abroad long term or permanently"
 							}
+							isMobile={isMobile}
+						/>
+						<SalarySwitch
+							text={"4-Day Work Week Allowed"}
+							checked={fourDays}
+							onChange={() => setFourDays(!fourDays)}
+							description={
+								"For a 20% reduction in pay the employee can work 1 less day"
+							}
+							isMobile={isMobile}
 						/>
 					</div>
 				</div>
@@ -336,7 +348,8 @@ export const SalaryExpectationsSection = ({
 					variant='outlined'
 					size='medium'
 					onClick={() => handleClearAll()}
-					disabled={disableClearAll}>
+					disabled={disableClearAll}
+					style={{ marginTop: isMobile ? "40px" : "" }}>
 					Clear All
 				</Button>
 			</div>
