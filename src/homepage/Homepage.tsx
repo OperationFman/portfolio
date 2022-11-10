@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { DarkMode } from "../../themes/GlobalTheme";
 import { PageContainer } from "../global/PageContainer";
 import { Biography } from "./biography/Biography";
+import { Contact } from "./contact/Contact";
 import { ForYou } from "./foryou/ForYou";
 import { ParallaxArt } from "./parallax-art/ParallaxArt";
 import { Qualifications } from "./qualifications/Qualifications";
@@ -22,8 +23,7 @@ export const Homepage = () => {
 				<WorkExperience />
 				<Qualifications />
 				<Salary />
-
-				<div style={{ height: "100vh" }} />
+				<Contact />
 			</PageContainer>
 		</>
 	);

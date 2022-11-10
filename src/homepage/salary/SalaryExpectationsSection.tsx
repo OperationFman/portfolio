@@ -1,7 +1,7 @@
 import { Button, Card, FormGroup, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Gap } from "./components/Gap";
-import { MoneyInput } from "./components/MoneyInput";
+import { MoneyInput as SalaryInput } from "./components/SalaryInput";
 import { SalarySwitch } from "./components/SalarySwitch";
 
 export const SalaryExpectationsSection = ({
@@ -286,7 +286,7 @@ export const SalaryExpectationsSection = ({
 						style={{
 							flex: 1,
 						}}>
-						<MoneyInput
+						<SalaryInput
 							name={STOCK_OPTIONS}
 							title={"Stock Options & Shares"}
 							value={values.stock}
@@ -297,7 +297,7 @@ export const SalaryExpectationsSection = ({
 							}
 							isMobile={isMobile}
 						/>
-						<MoneyInput
+						<SalaryInput
 							name={TRAINING_ALLOWANCES}
 							title={"Training Allowance"}
 							value={values.trainingAllowances}
@@ -308,7 +308,7 @@ export const SalaryExpectationsSection = ({
 							}
 							isMobile={isMobile}
 						/>
-						<MoneyInput
+						<SalaryInput
 							name={OTHER_ALLOWANCES}
 							title={"Other Allowances / Benefits"}
 							value={values.otherAllowances}

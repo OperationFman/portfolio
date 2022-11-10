@@ -4,6 +4,7 @@ import Head from "next/head";
 import { projectMetaData } from "../../src/datasources/ProjectMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { ProjectItem } from "../../src/projects/components/project-item/ProjectItem";
+import { Footer } from "../../utils/Footer";
 
 const Projects: NextPage = () => {
 	return (
@@ -29,6 +30,7 @@ const Projects: NextPage = () => {
 					);
 				})}
 			</PageContainer>
+			<Footer />
 		</div>
 	);
 };

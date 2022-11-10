@@ -10,6 +10,7 @@ import { slideTransition } from "../../src/tutorials/components/filter/filterAni
 import { FilterModal } from "../../src/tutorials/components/filter/FilterModal";
 import { filterAndSortMetaData } from "../../src/tutorials/filter-sort/filterAndSortMetaData";
 import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
+import { Footer } from "../../utils/Footer";
 
 const Transition = slideTransition("right");
 
@@ -84,6 +85,7 @@ const Tutorials: NextPage = () => {
 					})}
 				</Grid>
 			</PageContainer>
+			<Footer />
 		</div>
 	);
 };
