@@ -240,7 +240,7 @@ export const SalaryExpectationsSection = ({
 							checked={ethical}
 							onChange={() => setEthical(!ethical)}
 							description={
-								"The company prioritizes fair and equitable hiring & promoting practices. Works to improve quality of life for the world and makes morally 'good' decisions"
+								"The company prioritizes fair hiring & promoting. Works to improve quality of life for the world and makes morally 'good' decisions"
 							}
 							isMobile={isMobile}
 						/>
@@ -249,7 +249,7 @@ export const SalaryExpectationsSection = ({
 							checked={workLifeBalance}
 							onChange={() => setWorkLifeBalance(!workLifeBalance)}
 							description={
-								"Employees are not expected to work at all outside salaried hours and encouraged to take breaks/leave"
+								"Employees are not expected to work outside of salaried hours and are encouraged to take breaks & holidays"
 							}
 							isMobile={isMobile}
 						/>
@@ -304,7 +304,7 @@ export const SalaryExpectationsSection = ({
 							onChange={handleMoneyInputChange}
 							onClear={handleMoneyInputClear}
 							description={
-								"Conferences, courses, course material and classes (Annually)"
+								"Conferences, courses, course material, books and classes (Annually)"
 							}
 							isMobile={isMobile}
 						/>
@@ -315,7 +315,7 @@ export const SalaryExpectationsSection = ({
 							onChange={handleMoneyInputChange}
 							onClear={handleMoneyInputClear}
 							description={
-								"Laptop, Laptop Accessories, Books, Gym Membership, Public Transport Card etc (Annually)"
+								"Standing desk, Ergonomic chair, Gym membership, Public transport card, Therapy, Friday lunch etc (Annually)"
 							}
 							isMobile={isMobile}
 						/>
@@ -336,7 +336,7 @@ export const SalaryExpectationsSection = ({
 							checked={fourDays}
 							onChange={() => setFourDays(!fourDays)}
 							description={
-								"For a 20% reduction in pay the employee can work 1 less day"
+								"For a 20% reduction in pay the employee can work one less day each week"
 							}
 							isMobile={isMobile}
 						/>
