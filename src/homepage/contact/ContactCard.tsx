@@ -7,15 +7,24 @@ export const ContactCard = ({
 	children,
 	contactMethod,
 	value,
+	link,
 }: {
 	children: React.ReactNode;
 	contactMethod: string;
 	value?: string;
+	link?: string;
 }) => {
 	const darkMode = useContext(DarkMode);
 
+	const handleLinkClick = () => {
+		if (link) {
+			window.open(link, "_blank");
+		}
+	};
+
 	return (
 		<Card
+			onClick={() => handleLinkClick()}
 			sx={{
 				width: 210,
 				height: 180,

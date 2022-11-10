@@ -16,37 +16,46 @@ export const Contact = () => {
 					marginBottom: "25px",
 					fontWeight: "bold",
 				}}>
-				Contact
+				Get In Touch
 			</Typography>
 
 			<Grid container spacing={3} justifyContent='center'>
 				<Grid item>
-					<ContactCard contactMethod={"LinkedIn"}>
+					<ContactCard
+						contactMethod={"LinkedIn"}
+						link={"https://www.linkedin.com/in/franklin-moon-23572518a/"}>
 						<LinkedInIcon color={"primary"} fontSize={"large"} />
 					</ContactCard>
 				</Grid>
 				<Grid item>
-					<ContactCard contactMethod={"Phone"} value={"0475 064 993"}>
+					<ContactCard
+						contactMethod={"Phone"}
+						value={"0475 064 993"}
+						link={"tel:0475064993"}>
 						<PhoneEnabledIcon color={"primary"} fontSize={"large"} />
 					</ContactCard>
 				</Grid>
 				<Grid item>
 					<ContactCard
 						contactMethod={"Email"}
-						value={"Franklin.v.moon@gmail.com"}>
+						value={"Franklin.v.moon@gmail.com"}
+						link={"mailto:franklin.v.moon@gmail.com"}>
 						<EmailIcon color={"primary"} fontSize={"large"} />
 					</ContactCard>
 				</Grid>
 				<Grid item>
 					<ContactCard
 						contactMethod={"Location"}
-						value={"Melbourne, Australia"}>
+						value={"Melbourne, Australia"}
+						link={"https://goo.gl/maps/NbAkwiG8RxdSeR8i7"}>
 						<LocationOnIcon color={"primary"} fontSize={"large"} />
 					</ContactCard>
 				</Grid>
 
 				<Grid item>
-					<ContactCard contactMethod={"Facebook"}>
+					<ContactCard
+						contactMethod={"Facebook"}
+						link={"https://www.facebook.com/frank.moon.731/"}>
 						<LinkedInIcon color={"primary"} fontSize={"large"} />
 					</ContactCard>
 				</Grid>
