@@ -4,14 +4,16 @@ import Image from "next/future/image";
 import { useContext } from "react";
 import { DarkMode } from "../../../../themes/GlobalTheme";
 
-export const VolunteerItem = ({
+export const WorkExpListItem = ({
 	companyLogo,
+	employerName,
 	periodWithEmployer,
 	employerLocation,
 	employerExperiences,
 	isLastElement = false,
 }: {
 	companyLogo: string;
+	employerName: string;
 	periodWithEmployer: string;
 	employerLocation: string;
 	employerExperiences: {
@@ -49,12 +51,16 @@ export const VolunteerItem = ({
 					style={{ height: 40, width: "auto", lineHeight: 0 }}
 				/>
 
-				<Typography variant='subtitle1'>{periodWithEmployer}</Typography>
+				<Typography variant='subtitle1'>{employerName}</Typography>
+
+				<Typography variant='subtitle1' color='#949494'>
+					{employerLocation}
+				</Typography>
 				<Typography
 					variant='subtitle1'
 					color='#949494'
-					style={{ marginBottom: "15px" }}>
-					{employerLocation}
+					style={{ marginBottom: "15px", marginTop: "-10px" }}>
+					{periodWithEmployer}
 				</Typography>
 				{employerExperiences.map((experienceItem, index) => {
 					return (
@@ -67,7 +73,7 @@ export const VolunteerItem = ({
 							<Typography
 								variant='subtitle1'
 								color='#949494'
-								style={{ marginLeft: "25px" }}>
+								style={{ marginLeft: "25px", marginTop: "-10px" }}>
 								{experienceItem.period}
 							</Typography>
 						</div>

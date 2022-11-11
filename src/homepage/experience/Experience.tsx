@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
-import { VolunteerItem } from "./components/VolunteerItem";
-import { WorkExpItem } from "./components/WorkExpItem";
+import { WorkExpListItem } from "./components/WorkExpListItem";
+import { VolunteerListItem } from "./components/VolunteerListItem";
 
 export const Experience = () => {
 	const { isMobile } = useDeviceDetect();
@@ -32,78 +32,49 @@ export const Experience = () => {
 						}}>
 						Volunteering
 					</Typography>
-					<WorkExpItem
-						companyLogo={"thoughtworks"}
-						periodWithEmployer={"Aug 2021 - Present"}
-						employerLocation={"Melbourne, Australia"}
-						employerExperiences={[
-							{
-								title: "Consultant Software Developer",
-								period: "Aug 2022 - Present",
-							},
-							{
-								title: "Graduate Software Developer",
-								period: "Aug 2021 - Aug 2022",
-							},
-							{
-								title: "Intern Software Developer",
-								period: "Nov 2019 - Aug 2021",
-							},
-							{
-								title: "Intern Business Analyst",
-								period: "Jun 2019 - Jul 2019",
-							},
-						]}
+					<VolunteerListItem
+						logo={"badac"}
+						title={
+							"BADAC Website Developer, Photographer and Newsletter Producer"
+						}
+						location={"Ballarat, Australia"}
+						year={"2021"}
 					/>
-					<WorkExpItem
-						companyLogo={"badac"}
-						periodWithEmployer={"Jan 2021 - Aug 2021"}
-						employerLocation={"Ballarat, Australia"}
-						employerExperiences={[
-							{
-								title: "Website Developer",
-								period: "Mar 2021 - Aug 2021",
-							},
-							{
-								title: "Digital Media Designer",
-								period: "Jan 2021 - Aug 2021",
-							},
-						]}
+					<VolunteerListItem
+						logo={"badac"}
+						title={"Federation University: Regional Secondary Schools Outreach"}
+						location={"Victoria, Australia"}
+						year={"2018 - 2020"}
 					/>
-					<WorkExpItem
-						companyLogo={"ibm"}
-						periodWithEmployer={"Apr 2017 - Jan 2021"}
-						employerLocation={"Ballarat, Australia"}
-						employerExperiences={[
-							{
-								title: "Test Automation Engineer",
-								period: "Feb 2019 - Jan 2021",
-							},
-							{
-								title: "Remote Hardware Technician",
-								period: "Apr 2017 - Feb 2019",
-							},
-						]}
+					<VolunteerListItem
+						logo={"badac"}
+						title={"Project Borneo: Media Literacy Outreach Challenge"}
+						location={"East Kalimantan, Indonesia"}
+						year={"2019"}
 					/>
-					<WorkExpItem
-						companyLogo={"federation"}
-						periodWithEmployer={"May 2018 - Nov 2020"}
-						employerLocation={"Ballarat, Australia"}
-						employerExperiences={[
-							{
-								title:
-									"Indigenous and Torres Strait Islander Senate Representative",
-								period: "Apr 2019 - Nov 2020",
-							},
-							{
-								title: "Mentor Team Leader",
-								period: "Jan 2019 - Apr 2019",
-							},
-							{
-								title: "Academic Support Worker",
-								period: "May 2018 - Nov 2020",
-							},
-						]}
+					<VolunteerListItem
+						logo={"badac"}
+						title={
+							"Post-Production Project for the Australian New Colombo Plan"
+						}
+						location={"Ballarat, Australia"}
+						year={"2018"}
+					/>
+					<VolunteerListItem
+						logo={"badac"}
+						title={
+							"Australian Emergency Response: Restoration of Network Infrastructure "
+						}
+						location={"Dhulikhel, Nepal"}
+						year={"2018"}
+					/>
+					<VolunteerListItem
+						logo={"badac"}
+						title={
+							"Enforcer for the Penny Arcade Exhibition Australia (PAXAUS)"
+						}
+						location={"Melbourne, Australia"}
+						year={"2013 - 2018"}
 						isLastElement={true}
 					/>
 				</Container>
@@ -117,76 +88,59 @@ export const Experience = () => {
 						}}>
 						Employment
 					</Typography>
-					<VolunteerItem
+					<WorkExpListItem
 						companyLogo={"thoughtworks"}
-						periodWithEmployer={"Aug 2021 - Present"}
+						employerName={"Thoughtworks Australia"}
+						periodWithEmployer={"2021 - Present"}
 						employerLocation={"Melbourne, Australia"}
 						employerExperiences={[
 							{
 								title: "Consultant Software Developer",
-								period: "Aug 2022 - Present",
+								period: "2022 - Present",
 							},
 							{
 								title: "Graduate Software Developer",
-								period: "Aug 2021 - Aug 2022",
+								period: "2021 - 2022",
 							},
 							{
 								title: "Intern Software Developer",
-								period: "Nov 2019 - Aug 2021",
+								period: "2019 - 2021",
 							},
 							{
 								title: "Intern Business Analyst",
-								period: "Jun 2019 - Jul 2019",
+								period: "2019 - 2019",
 							},
 						]}
 					/>
-					<VolunteerItem
-						companyLogo={"badac"}
-						periodWithEmployer={"Jan 2021 - Aug 2021"}
-						employerLocation={"Ballarat, Australia"}
-						employerExperiences={[
-							{
-								title: "Website Developer",
-								period: "Mar 2021 - Aug 2021",
-							},
-							{
-								title: "Digital Media Designer",
-								period: "Jan 2021 - Aug 2021",
-							},
-						]}
-					/>
-					<VolunteerItem
+					<WorkExpListItem
 						companyLogo={"ibm"}
-						periodWithEmployer={"Apr 2017 - Jan 2021"}
+						employerName={"International Business Machines"}
+						periodWithEmployer={"2017 - 2021"}
 						employerLocation={"Ballarat, Australia"}
 						employerExperiences={[
 							{
 								title: "Test Automation Engineer",
-								period: "Feb 2019 - Jan 2021",
+								period: "2019 - 2021",
 							},
 							{
 								title: "Remote Hardware Technician",
-								period: "Apr 2017 - Feb 2019",
+								period: "2017 - 2019",
 							},
 						]}
 					/>
-					<VolunteerItem
+					<WorkExpListItem
 						companyLogo={"federation"}
-						periodWithEmployer={"May 2018 - Nov 2020"}
+						employerName={"Federation University"}
+						periodWithEmployer={"2018 - 2020"}
 						employerLocation={"Ballarat, Australia"}
 						employerExperiences={[
 							{
-								title:
-									"Indigenous and Torres Strait Islander Senate Representative",
-								period: "Apr 2019 - Nov 2020",
-							},
-							{
 								title: "Mentor Team Leader",
-								period: "Jan 2019 - Apr 2019",
+								period: "2019 - 2019",
 							},
 							{
 								title: "Academic Support Worker",
-								period: "May 2018 - Nov 2020",
+								period: "2018 - 2020",
 							},
 						]}
 						isLastElement={true}

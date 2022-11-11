@@ -3,21 +3,19 @@ import { Typography } from "@mui/material";
 import Image from "next/future/image";
 import { useContext } from "react";
 import { DarkMode } from "../../../../themes/GlobalTheme";
+import ShowIf from "../../../../utils/ShowIf";
 
-export const WorkExpItem = ({
-	companyLogo,
-	periodWithEmployer,
-	employerLocation,
-	employerExperiences,
+export const VolunteerListItem = ({
+	logo,
+	title,
+	location,
+	year,
 	isLastElement = false,
 }: {
-	companyLogo: string;
-	periodWithEmployer: string;
-	employerLocation: string;
-	employerExperiences: {
-		title: string;
-		period: string;
-	}[];
+	logo: string;
+	title: string;
+	location: string;
+	year: string;
 	isLastElement?: boolean;
 }) => {
 	const darkMode = useContext(DarkMode);
@@ -42,7 +40,7 @@ export const WorkExpItem = ({
 					padding: isLastElement ? "0px 50px 0px" : "0px 50px 85px",
 				}}>
 				<Image
-					src={`/homepage/biography/companies/${companyLogo}.png`}
+					src={`/homepage/biography/companies/${logo}.png`}
 					alt='tw'
 					width='200'
 					height='50'
@@ -50,7 +48,6 @@ export const WorkExpItem = ({
 						float: "right",
 						height: 40,
 						width: "auto",
-						lineHeight: 0,
 						paddingRight: "5px",
 					}}
 				/>
@@ -59,35 +56,23 @@ export const WorkExpItem = ({
 				<Typography
 					variant='subtitle1'
 					align='right'
-					style={{ paddingRight: "5px" }}>
-					{periodWithEmployer}
+					style={{ paddingRight: "5px", lineHeight: 1.5 }}>
+					{title}
 				</Typography>
 				<Typography
 					variant='subtitle1'
 					color='#949494'
 					align='right'
-					style={{ marginBottom: "15px" }}>
-					{employerLocation}
+					style={{ marginRight: "6px", marginTop: "5px" }}>
+					{location}
 				</Typography>
-				{employerExperiences.map((experienceItem, index) => {
-					return (
-						<div key={index}>
-							<Typography
-								variant='subtitle1'
-								style={{ margin: "25px 30px 0px 0px" }}
-								align='right'>
-								{experienceItem.title}
-							</Typography>
-							<Typography
-								variant='subtitle1'
-								color='#949494'
-								style={{ marginRight: "30px" }}
-								align='right'>
-								{experienceItem.period}
-							</Typography>
-						</div>
-					);
-				})}
+				<Typography
+					variant='subtitle1'
+					color='#949494'
+					align='right'
+					style={{ marginRight: "6px", marginTop: "-10px" }}>
+					{year}
+				</Typography>
 			</div>
 		</>
 	);
