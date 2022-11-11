@@ -47,13 +47,13 @@ export const Experience = () => {
 						year={"2018 - 2020"}
 					/>
 					<VolunteerListItem
-						logo={"badac"}
+						logo={"challenges"}
 						title={"Project Borneo: Media Literacy Outreach Challenge"}
 						location={"East Kalimantan, Indonesia"}
 						year={"2019"}
 					/>
 					<VolunteerListItem
-						logo={"badac"}
+						logo={"colombo"}
 						title={
 							"Post-Production Project for the Australian New Colombo Plan"
 						}
@@ -61,7 +61,7 @@ export const Experience = () => {
 						year={"2018"}
 					/>
 					<VolunteerListItem
-						logo={"badac"}
+						logo={"navy"}
 						title={
 							"Australian Emergency Response: Restoration of Network Infrastructure "
 						}
@@ -69,7 +69,7 @@ export const Experience = () => {
 						year={"2018"}
 					/>
 					<VolunteerListItem
-						logo={"badac"}
+						logo={"paxaus"}
 						title={
 							"Enforcer for the Penny Arcade Exhibition Australia (PAXAUS)"
 						}

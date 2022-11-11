@@ -48,7 +48,7 @@ export const ForYouCard = ({
 					padding: "30px",
 				}}>
 				<Image
-					src={`/homepage/biography/foryou/${logo}.svg`}
+					src={`/homepage/foryou/${logo}.svg`}
 					alt={logo}
 					width={60}
 					height={60}

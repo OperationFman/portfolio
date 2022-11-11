@@ -37,7 +37,7 @@ export const QualificationCard = ({
 					padding: "30px",
 				}}>
 				<Image
-					src={`/homepage/biography/qualifications/${logo}.svg`}
+					src={`/homepage/qualifications/${logo}.svg`}
 					alt={logo}
 					width={50}
 					height={50}

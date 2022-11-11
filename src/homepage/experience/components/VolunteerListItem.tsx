@@ -40,7 +40,7 @@ export const VolunteerListItem = ({
 					padding: isLastElement ? "0px 50px 0px" : "0px 50px 85px",
 				}}>
 				<Image
-					src={`/homepage/biography/companies/${logo}.png`}
+					src={`/homepage/companies/${logo}.png`}
 					alt='tw'
 					width='200'
 					height='50'

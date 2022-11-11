@@ -44,7 +44,7 @@ export const WorkExpListItem = ({
 					padding: isLastElement ? "0px 50px 0px" : "0px 50px 85px",
 				}}>
 				<Image
-					src={`/homepage/biography/companies/${companyLogo}.png`}
+					src={`/homepage/companies/${companyLogo}.png`}
 					alt='tw'
 					width='200'
 					height='50'
