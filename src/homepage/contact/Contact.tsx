@@ -4,6 +4,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import { Grid, Typography } from "@mui/material";
 import { ContactCard } from "./ContactCard";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 export const Contact = () => {
 	return (
@@ -56,7 +57,7 @@ export const Contact = () => {
 					<ContactCard
 						contactMethod={"Facebook"}
 						link={"https://www.facebook.com/frank.moon.731/"}>
-						<LinkedInIcon color={"primary"} fontSize={"large"} />
+						<FacebookIcon color={"primary"} fontSize={"large"} />
 					</ContactCard>
 				</Grid>
 			</Grid>
