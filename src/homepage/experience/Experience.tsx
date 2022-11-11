@@ -9,15 +9,15 @@ export const Experience = () => {
 	return (
 		<>
 			<Typography
-				variant='h3'
 				align='center'
+				variant='h3'
 				style={{
 					marginTop: "150px",
-					marginBottom: "50px",
 					fontWeight: "bold",
 				}}>
 				Experience
 			</Typography>
+
 			<div
 				style={{
 					display: isMobile ? "" : "flex",
@@ -41,7 +41,7 @@ export const Experience = () => {
 						year={"2021"}
 					/>
 					<VolunteerListItem
-						logo={"badac"}
+						logo={"federation"}
 						title={"Federation University: Regional Secondary Schools Outreach"}
 						location={"Victoria, Australia"}
 						year={"2018 - 2020"}
@@ -85,6 +85,7 @@ export const Experience = () => {
 						style={{
 							fontWeight: "bold",
 							marginBottom: "50px",
+							marginTop: isMobile ? "150px" : "",
 						}}>
 						Employment
 					</Typography>
@@ -108,7 +109,7 @@ export const Experience = () => {
 							},
 							{
 								title: "Intern Business Analyst",
-								period: "2019 - 2019",
+								period: "2019",
 							},
 						]}
 					/>
@@ -136,11 +137,19 @@ export const Experience = () => {
 						employerExperiences={[
 							{
 								title: "Mentor Team Leader",
-								period: "2019 - 2019",
+								period: "2019",
 							},
 							{
-								title: "Academic Support Worker",
+								title: "Academic Support Tutor",
 								period: "2018 - 2020",
+							},
+							{
+								title: "Research Assistant",
+								period: "2018",
+							},
+							{
+								title: "Mentor Team Member",
+								period: "2018 - 2019",
 							},
 						]}
 						isLastElement={true}
