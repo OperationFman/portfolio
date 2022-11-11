@@ -7,7 +7,7 @@ import { ForYou } from "./foryou/ForYou";
 import { ParallaxArt } from "./parallax-art/ParallaxArt";
 import { Qualifications } from "./qualifications/Qualifications";
 import { Salary } from "./salary/Salary";
-import { WorkExperience } from "./work-experience/WorkExperience";
+import { Experience } from "./experience/Experience";
 
 export const Homepage = () => {
 	const darkMode = useContext(DarkMode);
@@ -20,7 +20,7 @@ export const Homepage = () => {
 			<PageContainer>
 				<Biography />
 				<ForYou />
-				<WorkExperience />
+				<Experience />
 				<Qualifications />
 				<Salary />
 				<Contact />

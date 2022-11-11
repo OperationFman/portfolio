@@ -2,7 +2,7 @@ import CommitIcon from "@mui/icons-material/Commit";
 import { Typography } from "@mui/material";
 import Image from "next/future/image";
 import { useContext } from "react";
-import { DarkMode } from "../../../themes/GlobalTheme";
+import { DarkMode } from "../../../../themes/GlobalTheme";
 
 export const WorkExpItem = ({
 	companyLogo,
@@ -28,8 +28,8 @@ export const WorkExpItem = ({
 			<CommitIcon
 				fontSize='large'
 				style={{
-					position: "absolute",
-					marginLeft: "-16px",
+					float: "right",
+					marginRight: "-16px",
 					marginTop: "5px",
 					color: "#1565C0",
 					backgroundColor: selectedTheme,
@@ -38,7 +38,7 @@ export const WorkExpItem = ({
 			<div
 				style={{
 					width: "100%",
-					borderLeft: "3px solid #1565C0",
+					borderRight: "3px solid #1565C0",
 					padding: isLastElement ? "0px 50px 0px" : "0px 50px 85px",
 				}}>
 				<Image
@@ -46,13 +46,26 @@ export const WorkExpItem = ({
 					alt='tw'
 					width='200'
 					height='50'
-					style={{ height: 40, width: "auto", lineHeight: 0 }}
+					style={{
+						float: "right",
+						height: 40,
+						width: "auto",
+						lineHeight: 0,
+						paddingRight: "5px",
+					}}
 				/>
+				<div style={{ height: 47 }} />
 
-				<Typography variant='subtitle1'>{periodWithEmployer}</Typography>
+				<Typography
+					variant='subtitle1'
+					align='right'
+					style={{ paddingRight: "5px" }}>
+					{periodWithEmployer}
+				</Typography>
 				<Typography
 					variant='subtitle1'
 					color='#949494'
+					align='right'
 					style={{ marginBottom: "15px" }}>
 					{employerLocation}
 				</Typography>
@@ -61,13 +74,15 @@ export const WorkExpItem = ({
 						<div key={index}>
 							<Typography
 								variant='subtitle1'
-								style={{ margin: "25px 0px 0px 25px" }}>
+								style={{ margin: "25px 30px 0px 0px" }}
+								align='right'>
 								{experienceItem.title}
 							</Typography>
 							<Typography
 								variant='subtitle1'
 								color='#949494'
-								style={{ marginLeft: "25px" }}>
+								style={{ marginRight: "30px" }}
+								align='right'>
 								{experienceItem.period}
 							</Typography>
 						</div>
