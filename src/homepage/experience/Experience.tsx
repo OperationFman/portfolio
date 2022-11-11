@@ -35,7 +35,7 @@ export const Experience = () => {
 					<VolunteerListItem
 						logo={"badac"}
 						title={
-							"BADAC Website Developer, Photographer and Newsletter Producer"
+							"BADAC: Website Developer, Photographer and Newsletter Producer"
 						}
 						location={"Ballarat, Australia"}
 						year={"2021"}
@@ -48,31 +48,27 @@ export const Experience = () => {
 					/>
 					<VolunteerListItem
 						logo={"challenges"}
-						title={"Project Borneo: Media Literacy Outreach Challenge"}
+						title={"Challenges Abroad Project Borneo: Media Literacy Outreach"}
 						location={"East Kalimantan, Indonesia"}
 						year={"2019"}
 					/>
 					<VolunteerListItem
 						logo={"colombo"}
-						title={
-							"Post-Production Project for the Australian New Colombo Plan"
-						}
+						title={"Australian New Colombo Plan: Post-Production Project"}
 						location={"Ballarat, Australia"}
 						year={"2018"}
 					/>
 					<VolunteerListItem
 						logo={"navy"}
 						title={
-							"Australian Emergency Response: Restoration of Network Infrastructure "
+							"Australian NAVY Emergency Responder for the Restoration of Network Infrastructure "
 						}
 						location={"Dhulikhel, Nepal"}
 						year={"2018"}
 					/>
 					<VolunteerListItem
 						logo={"paxaus"}
-						title={
-							"Enforcer for the Penny Arcade Exhibition Australia (PAXAUS)"
-						}
+						title={"Penny Arcade Exhibition Enforcer "}
 						location={"Melbourne, Australia"}
 						year={"2013 - 2018"}
 						isLastElement={true}
