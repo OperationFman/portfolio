@@ -317,7 +317,7 @@ export const SalaryExpectationsSection = ({
 								setInternationalRelocation(!internationalRelocation)
 							}
 							description={
-								"Requirement or opportunity relocate abroad long term or permanently"
+								"Opportunities to relocate abroad long term or permanently"
 							}
 						/>
 						<SalarySwitch
