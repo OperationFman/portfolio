@@ -17,7 +17,6 @@ export const MoneyInput = ({
 	onChange,
 	onClear,
 	description,
-	isMobile,
 }: {
 	title: string;
 	name: string;
@@ -25,7 +24,6 @@ export const MoneyInput = ({
 	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 	onClear: (fieldName: string) => void;
 	description: string;
-	isMobile: boolean;
 }) => {
 	return (
 		<div style={{ display: "flex", margin: "10px 30px", gap: "15px" }}>
@@ -33,7 +31,7 @@ export const MoneyInput = ({
 				TransitionComponent={Zoom}
 				title={description}
 				enterTouchDelay={0}
-				leaveDelay={isMobile ? 5000 : 0}>
+				leaveTouchDelay={5000}>
 				<HelpOutlineIcon style={{ marginTop: "40px" }} />
 			</Tooltip>{" "}
 			<div>

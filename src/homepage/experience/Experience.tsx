@@ -8,23 +8,14 @@ export const Experience = () => {
 
 	return (
 		<>
-			<Typography
-				align='center'
-				variant='h3'
-				style={{
-					marginTop: "150px",
-					fontWeight: "bold",
-				}}>
-				Experience
-			</Typography>
-
 			<div
 				style={{
+					marginTop: "150px",
 					display: isMobile ? "" : "flex",
 				}}>
 				<Container maxWidth='xs' style={{ flex: 1 }}>
 					<Typography
-						variant='h4'
+						variant='h3'
 						align='center'
 						style={{
 							fontWeight: "bold",
@@ -54,7 +45,7 @@ export const Experience = () => {
 					/>
 					<VolunteerListItem
 						logo={"colombo"}
-						title={"Australian New Colombo Plan: Post-Production Project"}
+						title={"New Colombo Plan: Post-Production Project"}
 						location={"Ballarat, Australia"}
 						year={"2018"}
 					/>
@@ -76,7 +67,7 @@ export const Experience = () => {
 				</Container>
 				<Container maxWidth='xs' style={{ flex: 1 }}>
 					<Typography
-						variant='h4'
+						variant='h3'
 						align='center'
 						style={{
 							fontWeight: "bold",
@@ -88,11 +79,11 @@ export const Experience = () => {
 					<WorkExpListItem
 						companyLogo={"thoughtworks"}
 						employerName={"Thoughtworks Australia"}
-						periodWithEmployer={"2021 - Present"}
+						periodWithEmployer={"2019 - Present"}
 						employerLocation={"Melbourne, Australia"}
 						employerExperiences={[
 							{
-								title: "Consultant Software Developer",
+								title: "Software Developer",
 								period: "2022 - Present",
 							},
 							{

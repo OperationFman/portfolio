@@ -222,7 +222,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"Allows the employee complete flexibility to work from home or the office"
 							}
-							isMobile={isMobile}
 						/>
 						<SalarySwitch
 							text={"Hybrid Remote"}
@@ -231,7 +230,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"The employee is mandated to work at the office some days of the week"
 							}
-							isMobile={isMobile}
 						/>
 						<Gap />
 
@@ -242,7 +240,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"The company prioritizes fair hiring & promoting. Works to improve quality of life for the world and makes morally 'good' decisions"
 							}
-							isMobile={isMobile}
 						/>
 						<SalarySwitch
 							text={"Strong Work-Life Balance"}
@@ -251,7 +248,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"Employees are not expected to work outside of salaried hours and are encouraged to take breaks & holidays"
 							}
-							isMobile={isMobile}
 						/>
 						<SalarySwitch
 							text={"Reoccurring Team Bonding"}
@@ -260,7 +256,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"Team dinners, meetup activities, game sessions, company retreats, conferences, fun days etc"
 							}
-							isMobile={isMobile}
 						/>
 						<SalarySwitch
 							text={"Flat Organizational Hierarchy"}
@@ -269,7 +264,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"An organization with few or no levels of management between staff and executives"
 							}
-							isMobile={isMobile}
 						/>
 						<SalarySwitch
 							text={"Travel Opportunities"}
@@ -278,7 +272,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"Opportunity to travel abroad short-term as a part of the role"
 							}
-							isMobile={isMobile}
 						/>
 						<Gap />
 					</div>
@@ -295,7 +288,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"The value of public or private shares given to the employee, including restricted units"
 							}
-							isMobile={isMobile}
 						/>
 						<SalaryInput
 							name={TRAINING_ALLOWANCES}
@@ -306,7 +298,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"Conferences, courses, course material, books and classes (Annually)"
 							}
-							isMobile={isMobile}
 						/>
 						<SalaryInput
 							name={OTHER_ALLOWANCES}
@@ -317,7 +308,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"Standing desk, Ergonomic chair, Gym membership, Public transport card, Therapy, Friday lunch etc (Annually)"
 							}
-							isMobile={isMobile}
 						/>
 						<Gap />
 						<SalarySwitch
@@ -329,7 +319,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"Requirement or opportunity relocate abroad long term or permanently"
 							}
-							isMobile={isMobile}
 						/>
 						<SalarySwitch
 							text={"4-Day Work Week Allowed"}
@@ -338,7 +327,6 @@ export const SalaryExpectationsSection = ({
 							description={
 								"For a 20% reduction in pay the employee can work one less day each week"
 							}
-							isMobile={isMobile}
 						/>
 					</div>
 				</div>
