@@ -12,6 +12,36 @@
 	margin-bottom: 50px;
 }
 
+.lineIcon {
+	position: absolute;
+	margin: 5px 0px 0px -16px;
+	color: #1565c0;
+}
+
+.itemContainer {
+	width: 100%;
+	border-left: 3px solid #1565c0;
+}
+
+.logo {
+	height: 40;
+	width: auto;
+	line-height: 0;
+}
+
+.periodText {
+	margin: -10px 0px 15px 0px;
+}
+
+.roleTitle {
+	margin: 25px 0px 0px 25px;
+}
+
+.rolePeriod {
+	margin-left: 25px;
+	margin-top: -10px;
+}
+
 /* Desktop - Mobile should be priority*/
 @media (min-width: 800px) {
 	.container {
