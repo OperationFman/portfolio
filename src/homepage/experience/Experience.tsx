@@ -1,26 +1,14 @@
 import { Container, Typography } from "@mui/material";
-import useDeviceDetect from "../../../utils/useDeviceDetect";
-import { WorkExpListItem } from "./components/WorkExpListItem";
 import { VolunteerListItem } from "./components/VolunteerListItem";
+import { WorkExpListItem } from "./components/WorkExpListItem";
+import styles from "./Experience.module.css";
 
 export const Experience = () => {
-	const { isMobile } = useDeviceDetect();
-
 	return (
 		<>
-			<div
-				style={{
-					marginTop: "150px",
-					display: isMobile ? "" : "flex",
-				}}>
-				<Container maxWidth='xs' style={{ flex: 1 }}>
-					<Typography
-						variant='h3'
-						align='center'
-						style={{
-							fontWeight: "bold",
-							marginBottom: "50px",
-						}}>
+			<div className={styles.container}>
+				<Container maxWidth='xs' className={styles.column}>
+					<Typography variant='h3' align='center' className={styles.heading}>
 						Volunteering
 					</Typography>
 					<VolunteerListItem
@@ -65,15 +53,8 @@ export const Experience = () => {
 						isLastElement={true}
 					/>
 				</Container>
-				<Container maxWidth='xs' style={{ flex: 1 }}>
-					<Typography
-						variant='h3'
-						align='center'
-						style={{
-							fontWeight: "bold",
-							marginBottom: "50px",
-							marginTop: isMobile ? "150px" : "",
-						}}>
+				<Container maxWidth='xs' className={styles.column}>
+					<Typography variant='h3' align='center' className={styles.heading}>
 						Employment
 					</Typography>
 					<WorkExpListItem

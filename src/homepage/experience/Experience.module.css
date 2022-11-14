@@ -1,0 +1,20 @@
+.container {
+	margin-top: 150px;
+}
+
+.column {
+	flex: 1;
+	margin-bottom: 150px;
+}
+
+.heading {
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+/* Desktop - Mobile should be priority*/
+@media (min-width: 800px) {
+	.container {
+		display: flex;
+	}
+}
