@@ -1,15 +1,15 @@
 .container {
-	margin-top: 150px;
+	margin-top: 50px;
 }
 
 .column {
 	flex: 1;
-	margin-bottom: 150px;
 }
 
 .heading {
 	font-weight: bold;
 	margin-bottom: 50px;
+	margin-top: 150px;
 }
 
 .lineIcon {
@@ -29,16 +29,24 @@
 	line-height: 0;
 }
 
+.title {
+	margin-right: 5px;
+	line-height: 1.5;
+}
+
 .periodText {
 	margin: -10px 0px 15px 0px;
 }
 
+.roles {
+	margin-left: 25px;
+}
+
 .roleTitle {
-	margin: 25px 0px 0px 25px;
+	margin-top: 25px;
 }
 
 .rolePeriod {
-	margin-left: 25px;
 	margin-top: -10px;
 }
 
@@ -46,5 +54,38 @@
 @media (min-width: 800px) {
 	.container {
 		display: flex;
+	}
+
+	.lineIconDesktop {
+		position: static;
+		float: right;
+		margin: 5px -16px 0px 0px;
+		color: #1565c0;
+	}
+
+	.itemContainerDesktop {
+		border-right: 3px solid #1565c0;
+		border-left: none;
+	}
+
+	.logoDesktop {
+		float: right;
+		padding-right: 5px;
+	}
+
+	.title {
+		padding-top: 70px;
+		margin-right: 0px;
+		line-height: normal;
+	}
+
+	.roleLocation {
+		margin-right: 6px;
+		margin-top: 5px;
+	}
+
+	.rolePeriodDesktop {
+		margin-right: 6px;
+		margin-top: -10px;
 	}
 }

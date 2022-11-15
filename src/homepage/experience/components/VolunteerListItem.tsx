@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 import Image from "next/future/image";
 import { useContext } from "react";
 import { DarkMode } from "../../../../themes/GlobalTheme";
-import ShowIf from "../../../../utils/ShowIf";
+import styles from "../Experience.module.css";
 
 export const VolunteerListItem = ({
 	logo,
@@ -11,12 +11,14 @@ export const VolunteerListItem = ({
 	location,
 	year,
 	isLastElement = false,
+	isMobile,
 }: {
 	logo: string;
 	title: string;
 	location: string;
 	year: string;
 	isLastElement?: boolean;
+	isMobile: boolean;
 }) => {
 	const darkMode = useContext(DarkMode);
 	const selectedTheme = darkMode ? "#13181c" : "#FFFFFF";
@@ -25,18 +27,14 @@ export const VolunteerListItem = ({
 		<>
 			<CommitIcon
 				fontSize='large'
+				className={`${styles.lineIcon} ${styles.lineIconDesktop}`}
 				style={{
-					float: "right",
-					marginRight: "-16px",
-					marginTop: "5px",
-					color: "#1565C0",
 					backgroundColor: selectedTheme,
 				}}
 			/>
 			<div
+				className={`${styles.itemContainer} ${styles.itemContainerDesktop}`}
 				style={{
-					width: "100%",
-					borderRight: "3px solid #1565C0",
 					padding: isLastElement ? "0px 50px 0px" : "0px 50px 85px",
 				}}>
 				<Image
@@ -44,33 +42,27 @@ export const VolunteerListItem = ({
 					alt='tw'
 					width='200'
 					height='50'
-					style={{
-						float: "right",
-						height: 40,
-						width: "auto",
-						paddingRight: "5px",
-					}}
+					className={`${styles.logo} ${styles.logoDesktop}`}
 				/>
-				<div style={{ height: 47 }} />
 
 				<Typography
 					variant='subtitle1'
-					align='right'
-					style={{ paddingRight: "5px", lineHeight: 1.5 }}>
+					align={isMobile ? "left" : "right"}
+					className={styles.title}>
 					{title}
 				</Typography>
 				<Typography
 					variant='subtitle1'
 					color='#949494'
-					align='right'
-					style={{ marginRight: "6px", marginTop: "5px" }}>
+					align={isMobile ? "left" : "right"}
+					className={styles.roleLocation}>
 					{location}
 				</Typography>
 				<Typography
 					variant='subtitle1'
 					color='#949494'
-					align='right'
-					style={{ marginRight: "6px", marginTop: "-10px" }}>
+					align={isMobile ? "left" : "right"}
+					className={`${styles.rolePeriod} ${styles.rolePeriodDesktop}`}>
 					{year}
 				</Typography>
 			</div>

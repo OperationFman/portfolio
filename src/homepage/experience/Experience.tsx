@@ -1,9 +1,12 @@
 import { Container, Typography } from "@mui/material";
+import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { VolunteerListItem } from "./components/VolunteerListItem";
 import { WorkExpListItem } from "./components/WorkExpListItem";
 import styles from "./Experience.module.css";
 
 export const Experience = () => {
+	const { isMobile } = useDeviceDetect();
+
 	return (
 		<>
 			<div className={styles.container}>
@@ -18,24 +21,28 @@ export const Experience = () => {
 						}
 						location={"Ballarat, Australia"}
 						year={"2021"}
+						isMobile={isMobile}
 					/>
 					<VolunteerListItem
 						logo={"federation"}
 						title={"Federation University: Regional Secondary Schools Outreach"}
 						location={"Victoria, Australia"}
 						year={"2018 - 2020"}
+						isMobile={isMobile}
 					/>
 					<VolunteerListItem
 						logo={"challenges"}
 						title={"Challenges Abroad Project Borneo: Media Literacy Outreach"}
 						location={"East Kalimantan, Indonesia"}
 						year={"2019"}
+						isMobile={isMobile}
 					/>
 					<VolunteerListItem
 						logo={"colombo"}
 						title={"New Colombo Plan: Post-Production Project"}
 						location={"Ballarat, Australia"}
 						year={"2018"}
+						isMobile={isMobile}
 					/>
 					<VolunteerListItem
 						logo={"navy"}
@@ -44,12 +51,14 @@ export const Experience = () => {
 						}
 						location={"Dhulikhel, Nepal"}
 						year={"2018"}
+						isMobile={isMobile}
 					/>
 					<VolunteerListItem
 						logo={"paxaus"}
 						title={"Penny Arcade Exhibition Enforcer "}
 						location={"Melbourne, Australia"}
 						year={"2013 - 2018"}
+						isMobile={isMobile}
 						isLastElement={true}
 					/>
 				</Container>

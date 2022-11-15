@@ -61,7 +61,7 @@ export const WorkExpListItem = ({
 				</Typography>
 				{employerExperiences.map((experienceItem, index) => {
 					return (
-						<div key={index}>
+						<div key={index} className={styles.roles}>
 							<Typography variant='subtitle1' className={styles.roleTitle}>
 								{experienceItem.title}
 							</Typography>
