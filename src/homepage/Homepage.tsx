@@ -16,7 +16,6 @@ export const Homepage = () => {
 	return (
 		<>
 			<ParallaxArt selectedTheme={selectedTheme} />
-
 			<PageContainer>
 				<Biography />
 				<ForYou />
