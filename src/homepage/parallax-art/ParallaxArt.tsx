@@ -1,17 +1,18 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
-import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { ShootingStar } from "./ShootingStar";
 import { Stars } from "./Stars";
 
 export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 	const { isMobile } = useDeviceDetect();
-	const platform = isMobile ? "mobile" : "desktop";
 
 	const [offSetY, setOffSetY] = useState(0);
 	const handleScroll = () => {
-		setOffSetY(window.pageYOffset);
+		// Strop rendering once parallax is off screen
+		if (window.pageYOffset < 2000) {
+			setOffSetY(window.pageYOffset);
+		}
 	};
 
 	useEffect(() => {
@@ -22,12 +23,12 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 	const style: any = {
 		// any because of a known type issue with nextJS Image
 		outerContainer: {
-			height: isMobile ? "35vh" : "70vh",
+			height: isMobile ? "35vh" : "55vh",
 		},
 		innerContainer: {
 			position: "absolute",
 			width: "100%",
-			height: isMobile ? "35vh" : "70vh",
+			height: isMobile ? "35vh" : "55vh",
 			overflow: "hidden",
 			display: "flex",
 			alignItems: "center",
@@ -36,12 +37,12 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 		backgroundColor: {
 			zIndex: -9,
 			width: "100%",
-			height: isMobile ? "35vh" : "70vh",
+			height: isMobile ? "35vh" : "55vh",
 			backgroundColor: selectedTheme === "dark" ? "#01579b" : "#a3dcf9",
 		},
 		layer: {
 			position: "inherit",
-			height: isMobile ? "35vh" : "70vh",
+			height: isMobile ? "35vh" : "55vh",
 			width: "auto",
 			overflow: "hidden",
 		},
