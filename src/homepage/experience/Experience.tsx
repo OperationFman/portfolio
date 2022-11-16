@@ -11,7 +11,10 @@ export const Experience = () => {
 		<>
 			<div className={styles.container}>
 				<Container maxWidth='xs' className={styles.column}>
-					<Typography variant='h3' align='center' className={styles.heading}>
+					<Typography
+						variant='h3'
+						align='center'
+						className={`${styles.heading} ${styles.backupHeader}`}>
 						Volunteering
 					</Typography>
 					<VolunteerListItem
@@ -79,7 +82,10 @@ export const Experience = () => {
 					/>
 				</Container>
 				<Container maxWidth='xs' className={styles.column}>
-					<Typography variant='h3' align='center' className={styles.heading}>
+					<Typography
+						variant='h3'
+						align='center'
+						className={`${styles.heading} ${styles.backupHeader}`}>
 						Employment
 					</Typography>
 					<WorkExpListItem
