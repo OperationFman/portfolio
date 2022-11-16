@@ -14,7 +14,11 @@ export const Experience = () => {
 					<Typography
 						variant='h3'
 						align='center'
-						className={`${styles.heading} ${styles.backupHeader}`}>
+						style={{
+							fontWeight: "bold",
+							marginBottom: "50px",
+							marginTop: "150px",
+						}}>
 						Volunteering
 					</Typography>
 					<VolunteerListItem
@@ -85,7 +89,11 @@ export const Experience = () => {
 					<Typography
 						variant='h3'
 						align='center'
-						className={`${styles.heading} ${styles.backupHeader}`}>
+						style={{
+							fontWeight: "bold",
+							marginBottom: "50px",
+							marginTop: "150px",
+						}}>
 						Employment
 					</Typography>
 					<WorkExpListItem
