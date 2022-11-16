@@ -28,8 +28,8 @@ export const ContactCard = ({
 		<Card
 			onClick={() => handleLinkClick()}
 			sx={{
-				width: isMobile ? 180 : 210,
-				height: isMobile ? 150 : 180,
+				width: isMobile ? 160 : 210,
+				height: isMobile ? 130 : 180,
 				boxShadow: 3,
 				"&:hover": {
 					backgroundColor: darkMode ? "#2D2D2D" : "#f2f2f2",
@@ -43,7 +43,7 @@ export const ContactCard = ({
 					flexWrap: "wrap",
 					alignItems: "flex-end",
 					justifyContent: "center",
-					paddingTop: "35px",
+					paddingTop: isMobile ? "25px" : "35px",
 				}}>
 				{/* Icon */}
 				{children}
@@ -53,7 +53,7 @@ export const ContactCard = ({
 					style={{
 						width: "100%",
 						fontWeight: "bold",
-						marginTop: isMobile ? "20px" : "25px",
+						marginTop: isMobile ? "15px" : "25px",
 						color: "#90caf9",
 					}}>
 					{contactMethod}
