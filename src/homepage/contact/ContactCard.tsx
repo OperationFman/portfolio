@@ -2,6 +2,7 @@ import { Card, CardContent, Typography } from "@mui/material";
 import { useContext } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
 import ShowIf from "../../../utils/ShowIf";
+import useDeviceDetect from "../../../utils/useDeviceDetect";
 
 export const ContactCard = ({
 	children,
@@ -15,6 +16,7 @@ export const ContactCard = ({
 	link?: string;
 }) => {
 	const darkMode = useContext(DarkMode);
+	const { isMobile } = useDeviceDetect();
 
 	const handleLinkClick = () => {
 		if (link) {
@@ -26,8 +28,8 @@ export const ContactCard = ({
 		<Card
 			onClick={() => handleLinkClick()}
 			sx={{
-				width: 210,
-				height: 180,
+				width: isMobile ? 180 : 210,
+				height: isMobile ? 150 : 180,
 				boxShadow: 3,
 				"&:hover": {
 					backgroundColor: darkMode ? "#2D2D2D" : "#f2f2f2",
@@ -51,12 +53,12 @@ export const ContactCard = ({
 					style={{
 						width: "100%",
 						fontWeight: "bold",
-						marginTop: "25px",
+						marginTop: isMobile ? "20px" : "25px",
 						color: "#90caf9",
 					}}>
 					{contactMethod}
 				</Typography>
-				<ShowIf condition={value}>
+				<ShowIf condition={value && !isMobile}>
 					<Typography
 						variant='subtitle2'
 						align='center'
