@@ -8,8 +8,8 @@
 
 .heading {
 	font-weight: bold;
-	margin-bottom: 50px;
-	margin-top: 150px;
+	margin-bottom: 100px;
+	margin-top: 200px;
 }
 
 .lineIcon {
@@ -54,6 +54,11 @@
 @media (min-width: 800px) {
 	.container {
 		display: flex;
+	}
+
+	.heading {
+		margin-bottom: 50px;
+		margin-top: 150px;
 	}
 
 	.lineIconDesktop {

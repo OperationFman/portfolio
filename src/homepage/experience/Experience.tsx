@@ -17,45 +17,61 @@ export const Experience = () => {
 					<VolunteerListItem
 						logo={"badac"}
 						title={
-							"BADAC: Website Developer, Photographer and Newsletter Producer"
+							"B.A.D.A.C Website Developer, Photographer and Newsletter Producer"
 						}
 						location={"Ballarat, Australia"}
 						year={"2021"}
 						isMobile={isMobile}
 					/>
 					<VolunteerListItem
-						logo={"federation"}
-						title={"Federation University: Regional Secondary Schools Outreach"}
+						logo={"creative"}
+						title={"Ballarat Creative City Report Print Producer"}
+						location={"Ballarat, Australia"}
+						year={"2021"}
+						isMobile={isMobile}
+					/>
+					<VolunteerListItem
+						logo={"outreach"}
+						title={"Federation University: Regional Schools Outreach Exponent"}
 						location={"Victoria, Australia"}
 						year={"2018 - 2020"}
 						isMobile={isMobile}
 					/>
 					<VolunteerListItem
+						logo={"senate"}
+						title={
+							"Federation University Student Senate: Indigenous Representative"
+						}
+						location={"Ballarat, Australia"}
+						year={"2019"}
+						isMobile={isMobile}
+					/>
+					<VolunteerListItem
 						logo={"challenges"}
-						title={"Challenges Abroad Project Borneo: Media Literacy Outreach"}
+						title={"Challenges Abroad Project Borneo: Media Literacy Trainer"}
 						location={"East Kalimantan, Indonesia"}
 						year={"2019"}
 						isMobile={isMobile}
 					/>
 					<VolunteerListItem
-						logo={"colombo"}
-						title={"New Colombo Plan: Post-Production Project"}
-						location={"Ballarat, Australia"}
-						year={"2018"}
-						isMobile={isMobile}
-					/>
-					<VolunteerListItem
 						logo={"navy"}
 						title={
-							"Australian NAVY Emergency Responder for the Restoration of Network Infrastructure "
+							"Restoration of Rural Network Infrastructure Emergency Responder"
 						}
 						location={"Dhulikhel, Nepal"}
 						year={"2018"}
 						isMobile={isMobile}
 					/>
 					<VolunteerListItem
+						logo={"colombo"}
+						title={"New Colombo Plan: Post-Production Project Videographer"}
+						location={"Shaoguan, China"}
+						year={"2017"}
+						isMobile={isMobile}
+					/>
+					<VolunteerListItem
 						logo={"paxaus"}
-						title={"Penny Arcade Exhibition Enforcer "}
+						title={"PAX Aus Enforcer"}
 						location={"Melbourne, Australia"}
 						year={"2013 - 2018"}
 						isMobile={isMobile}
