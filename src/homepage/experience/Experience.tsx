@@ -32,7 +32,7 @@ export const Experience = () => {
 					/>
 					<VolunteerListItem
 						logo={"creative"}
-						title={"Ballarat Creative City Report Print Producer"}
+						title={"Ballarat Creative City Production Manager"}
 						location={"Ballarat, Australia"}
 						year={"2021"}
 						isMobile={isMobile}
