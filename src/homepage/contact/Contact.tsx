@@ -5,20 +5,12 @@ import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import { Grid, Typography } from "@mui/material";
 import { ContactCard } from "./ContactCard";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { SubHeading } from "../components/SubHeading";
 
 export const Contact = () => {
 	return (
 		<>
-			<Typography
-				variant='h3'
-				align='center'
-				style={{
-					marginTop: "150px",
-					marginBottom: "25px",
-					fontWeight: "bold",
-				}}>
-				Get In Touch
-			</Typography>
+			<SubHeading text={"Get In Touch"} />
 
 			<Grid container spacing={3} justifyContent='center'>
 				<Grid item>

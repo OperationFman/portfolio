@@ -1,5 +1,6 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
+import { SubHeading } from "../components/SubHeading";
 import { ForYouCard } from "../foryou/ForYouCard";
 
 export const ForYou = () => {
@@ -7,16 +8,7 @@ export const ForYou = () => {
 
 	return (
 		<>
-			<Typography
-				variant='h3'
-				align='center'
-				style={{
-					marginTop: "150px",
-					marginBottom: "25px",
-					fontWeight: "bold",
-				}}>
-				What Can I Do For You?
-			</Typography>
+			<SubHeading text={"What Can I Do For You?"} />
 
 			<Grid container spacing={5} justifyContent='center'>
 				<Grid item>

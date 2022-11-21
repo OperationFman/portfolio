@@ -1,5 +1,6 @@
 import { Container, Typography } from "@mui/material";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
+import { SubHeading } from "../components/SubHeading";
 import { VolunteerListItem } from "./components/VolunteerListItem";
 import { WorkExpListItem } from "./components/WorkExpListItem";
 import styles from "./Experience.module.css";
@@ -11,16 +12,7 @@ export const Experience = () => {
 		<>
 			<div className={styles.container}>
 				<Container maxWidth='xs' className={styles.column}>
-					<Typography
-						variant='h3'
-						align='center'
-						style={{
-							fontWeight: "bold",
-							marginBottom: "50px",
-							marginTop: "150px",
-						}}>
-						Volunteering
-					</Typography>
+					<SubHeading text={"Volunteering"} />
 					<VolunteerListItem
 						logo={"badac"}
 						title={
@@ -86,16 +78,7 @@ export const Experience = () => {
 					/>
 				</Container>
 				<Container maxWidth='xs' className={styles.column}>
-					<Typography
-						variant='h3'
-						align='center'
-						style={{
-							fontWeight: "bold",
-							marginBottom: "50px",
-							marginTop: "150px",
-						}}>
-						Employment
-					</Typography>
+					<SubHeading text={"Employment"} />
 					<WorkExpListItem
 						companyLogo={"thoughtworks"}
 						employerName={"Thoughtworks Australia"}

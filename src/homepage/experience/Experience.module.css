@@ -4,7 +4,13 @@
 
 .column {
 	flex: 1;
+	margin-bottom: 150px;
+}
 
+.heading {
+	font-weight: bold;
+	padding-bottom: 50px;
+	margin-top: 150px;
 }
 
 .lineIcon {

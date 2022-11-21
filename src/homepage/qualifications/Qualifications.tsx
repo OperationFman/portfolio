@@ -1,19 +1,11 @@
 import { Grid, Typography } from "@mui/material";
+import { SubHeading } from "../components/SubHeading";
 import { QualificationCard } from "./QualificationCard";
 
 export const Qualifications = () => {
 	return (
 		<>
-			<Typography
-				variant='h3'
-				align='center'
-				style={{
-					marginTop: "150px",
-					marginBottom: "25px",
-					fontWeight: "bold",
-				}}>
-				Qualifications
-			</Typography>
+			<SubHeading text={"Qualifications"} />
 
 			<Grid container spacing={7} justifyContent='center'>
 				<Grid item>

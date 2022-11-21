@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
+import { SubHeading } from "../components/SubHeading";
 import { SalaryExpectationsSection } from "./SalaryExpectationsSection";
 
 export const Salary = () => {
@@ -14,16 +15,7 @@ export const Salary = () => {
 				-- Some SVG Art --
 			</Typography>
 
-			<Typography
-				variant='h3'
-				align='center'
-				style={{
-					marginTop: "150px",
-					marginBottom: "25px",
-					fontWeight: "bold",
-				}}>
-				Salary
-			</Typography>
+			<SubHeading text={"Salary"} />
 
 			<SalaryExpectationsSection isMobile={isMobile} />
 		</>
