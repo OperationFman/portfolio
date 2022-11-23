@@ -20,7 +20,8 @@ export const Biography = () => {
 			<BioDescription />
 
 			<ShowIf condition={!isMobile}>
-				<div className='overflow-hidden' style={{ alignItems: "center" }}>
+				<div
+					style={{ alignItems: "center", overflow: isMobile ? "hidden" : "" }}>
 					<Image
 						src={`/homepage/biography/headshot-${selectedTheme}.svg`}
 						width='480'
