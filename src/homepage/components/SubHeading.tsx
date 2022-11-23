@@ -1,19 +1,13 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import styles from "./SubHeading.module.css";
 
 export const SubHeading = ({ text }: { text: string }) => {
-	const maxTextLength = 20;
-
-	const textOversized = () => {
-		return text.length > maxTextLength;
-	};
 	return (
-		<div className={styles.container}>
-			<Typography variant='h3' align='center' className={styles.typography}>
+		<div className='flex justify-center mt-[150px] mb-[50px] '>
+			<Typography variant='h3' align='center' className='font-bold'>
 				{text}
-				<div className={styles.lineContainer}>
-					<div className={styles.line}></div>
+				<div className='flex relative justify-center'>
+					<div className='absolute w-[150px] t-[2px] border-solid border-b-[5px] border-[#42a5f5] opacity-20  md:inset-[-10%] md:w-[120%]'></div>
 				</div>
 			</Typography>
 		</div>

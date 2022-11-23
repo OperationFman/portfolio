@@ -19,11 +19,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 	}
 
 	return (
-		<GlobalTheme darkMode={darkMode}>
-			<Navbar setDarkMode={setDarkMode} />
+		<>
+			<GlobalTheme darkMode={darkMode}>
+				<Navbar setDarkMode={setDarkMode} />
 
-			<Component {...pageProps} />
-		</GlobalTheme>
+				<Component {...pageProps} />
+			</GlobalTheme>
+		</>
 	);
 }
 
