@@ -25,7 +25,7 @@ export const Homepage = () => {
 				<Salary />
 				<Contact />
 			</PageContainer>
-			<div className='flex justify-center'>
+			<div className='flex justify-center overflow-hidden'>
 				<Image
 					src={"/homepage/moon-footer.svg"}
 					alt='Moon and Astronaut'
