@@ -1,3 +1,4 @@
+import Image from "next/future/image";
 import { useContext } from "react";
 import { DarkMode } from "../../themes/GlobalTheme";
 import { PageContainer } from "../global/PageContainer";
@@ -24,6 +25,14 @@ export const Homepage = () => {
 				<Salary />
 				<Contact />
 			</PageContainer>
+			<div className='flex justify-center'>
+				<Image
+					src={"/homepage/moon-footer.svg"}
+					alt='Moon and Astronaut'
+					width={1920}
+					height={720}
+				/>
+			</div>
 		</>
 	);
 };

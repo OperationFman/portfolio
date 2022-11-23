@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 				/>
 			</Head>
 			<Homepage />
-			<Footer />
+			<Footer margin={false} />
 		</>
 	);
 };

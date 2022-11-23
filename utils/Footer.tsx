@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 
-export const Footer = () => {
+export const Footer = ({ margin = true }: { margin?: boolean }) => {
 	const toPageTop = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
@@ -8,7 +8,7 @@ export const Footer = () => {
 	return (
 		<footer
 			style={{
-				marginTop: "200px",
+				marginTop: margin ? "200px" : "",
 				height: "40px",
 				backgroundColor: "#212121",
 				display: "flex",
