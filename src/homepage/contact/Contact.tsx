@@ -54,12 +54,6 @@ export const Contact = () => {
 				</Grid>
 			</Grid>
 
-			<Typography
-				variant='h6'
-				align='center'
-				style={{ marginTop: "250px", marginBottom: "250px" }}>
-				-- Some SVG Art --
-			</Typography>
 		</>
 	);
 };
