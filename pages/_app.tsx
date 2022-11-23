@@ -5,6 +5,7 @@ import "react-notion-x/src/styles.css";
 import { Navbar } from "../src/global/navigation/Navbar";
 import { GlobalTheme } from "../themes/GlobalTheme";
 import { isClientSide } from "../utils/isClientSide";
+import "../themes/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const [darkMode, setDarkMode] = useState(false);
