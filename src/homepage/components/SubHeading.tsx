@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import React from "react";
 
 export const SubHeading = ({ text }: { text: string }) => {
