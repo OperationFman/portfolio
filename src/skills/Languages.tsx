@@ -98,12 +98,11 @@ export const Languages = () => {
 						container
 						spacing={isMobile ? 5 : 12}
 						justifyContent={isMobile ? "left" : "center"}>
-						{languagesMetaData.map((columnData) => {
+						{languagesMetaData.map((columnData, index) => {
 							return (
-								<Grid item>
+								<Grid item key={`${index} ${columnData.heading}`}>
 									<LanguageColumn
 										columnData={columnData}
-										key={columnData.heading}
 										isExpanded={false}
 										developing={false}
 										isMobile={isMobile}

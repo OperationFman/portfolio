@@ -19,12 +19,12 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 	return (
 		<>
 			<div className='w-full pr-6 md:pr-0 md:w-[175px]'>
-				<h1 className='md:mb-[-10px]'> {heading} </h1>
+				<h1 className='mb-[-10px]'> {heading} </h1>
 				<div className='flex flex-row'>
 					<div className='w-[150px]'>
-						{initialTech.map((item) => {
+						{initialTech.map((item, index) => {
 							return (
-								<div className='pt-3' key={item}>
+								<div className='pt-3' key={`${index} ${item}`}>
 									<Typography variant='body1' color='text.secondary' key={item}>
 										{item}
 									</Typography>
@@ -36,7 +36,7 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 						<div>
 							{remaining.map((item, index) => {
 								return (
-									<div className='pt-3' key={item}>
+									<div className='pt-3' key={`${index} ${item}`}>
 										<Typography
 											variant='body1'
 											color='text.secondary'
