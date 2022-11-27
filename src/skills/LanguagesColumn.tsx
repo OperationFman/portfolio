@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import ShowIf from "../../utils/ShowIf";
 import { ColumnData } from "./Languages";
 

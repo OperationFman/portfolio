@@ -1,8 +1,8 @@
-import { CardContent, Card, Grid, Button } from "@mui/material";
 import TerminalIcon from "@mui/icons-material/Terminal";
-import { LanguageColumn } from "./LanguagesColumn";
+import { Button, Card, CardContent, Grid } from "@mui/material";
 import ShowIf from "../../utils/ShowIf";
 import useDeviceDetect from "../../utils/useDeviceDetect";
+import { LanguageColumn } from "./LanguagesColumn";
 
 export type ColumnData = {
 	heading: string;
