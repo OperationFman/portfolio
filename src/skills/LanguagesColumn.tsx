@@ -13,8 +13,11 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const { columnData, isExpanded, isMobile } = props;
 	const { heading, tech } = columnData;
 
-	const primeTech = tech.slice(0, Math.floor(tech.length / 2));
-	const extraTech = tech.slice(Math.floor(tech.length / 2), tech.length);
+	const techCenter = Math.floor(tech.length / 2);
+	const techBreakpoint = techCenter > 6 ? techCenter : 6;
+
+	const primeTech = tech.slice(0, techBreakpoint);
+	const extraTech = tech.slice(techBreakpoint, tech.length);
 
 	return (
 		<>
