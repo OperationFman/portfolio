@@ -27,13 +27,13 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 			<div
 				className={
 					isDeveloping
-						? " bg-black h-[98%] rounded-lg opacity-20 pl-4 pb-4"
+						? " bg-black h-[98%] rounded-lg opacity-20 pb-4 pl-4 mr-5 "
 						: ""
 				}>
 				<div className='w-full pr-6 sm:pr-0 sm:w-[175px]'>
 					<h1 className='sm:mb-[-7px]'> {heading} </h1>
 					<div className='flex flex-row sm:block'>
-						<div className='w-[150px]'>
+						<div className='w-[150px] mb-4'>
 							{primeTech.map((item, index) => {
 								return (
 									<div className='pt-3' key={`${index} ${item}`}>
@@ -48,10 +48,10 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 							})}
 						</div>
 						<ShowIf condition={isExpanded || isMobile}>
-							<div className='sm:mt-5'>
+							<div className='w-[150px]'>
 								{extraTech.map((item, index) => {
 									return (
-										<div className='pt-3' key={`${index} ${item}`}>
+										<div className='pl-1 pt-3' key={`${index} ${item}`}>
 											<Typography
 												variant='body1'
 												color='text.secondary'

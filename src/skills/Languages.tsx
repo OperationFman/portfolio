@@ -28,7 +28,7 @@ export const Languages = () => {
 						justifyContent={"center"}>
 						{languagesMetaData.map((columnData, index) => {
 							return (
-								<Grid item key={`${index} ${columnData.heading}`}>
+								<Grid item key={`${index} ${columnData.heading}`} sm={5} xs={0}>
 									<LanguageColumn
 										columnData={columnData}
 										isExpanded={expandLanguages}
