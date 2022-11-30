@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 import { useContext } from "react";
-import { DarkMode } from "../../themes/GlobalTheme";
-import ShowIf from "../../utils/ShowIf";
-import { ColumnData } from "./types";
+import { DarkMode } from "../../../themes/GlobalTheme";
+import ShowIf from "../../../utils/ShowIf";
+import { ColumnData } from "../types";
 
 type LanguagesColumnProps = {
 	columnData: ColumnData;
@@ -14,14 +14,13 @@ type LanguagesColumnProps = {
 export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const { columnData, isExpanded, isMobile, isDeveloping } = props;
 	const { heading, tech } = columnData;
+	const darkMode = useContext(DarkMode);
 
 	const techCenter = Math.floor(tech.length / 2);
 	const techBreakpoint = techCenter > 6 ? techCenter : 6;
 
 	const primeTech = tech.slice(0, techBreakpoint);
 	const extraTech = tech.slice(techBreakpoint, tech.length);
-
-	const darkMode = useContext(DarkMode);
 
 	return (
 		<div className='relative'>
@@ -31,9 +30,9 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 			<div
 				className={
 					isDeveloping
-						? `${
-								darkMode ? "bg-black" : "bg-slate-400"
-						  } h-[98%] rounded-lg opacity-20 pb-4 pl-4 mr-5 `
+						? `${darkMode ? "bg-black" : "bg-[#b9b9b9]"} ${
+								darkMode ? "opacity-10" : "opacity-40"
+						  } h-[98%] rounded-lg pb-4 pl-4 mr-5 `
 						: ""
 				}>
 				<div className='w-full pr-6 sm:pr-0 sm:w-[175px]'>
