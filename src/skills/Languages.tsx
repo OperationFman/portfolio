@@ -32,7 +32,7 @@ export const Languages = () => {
 									<LanguageColumn
 										columnData={columnData}
 										isExpanded={expandLanguages}
-										developing={false}
+										isDeveloping={columnData.isDeveloping}
 										isMobile={isMobile}
 									/>
 								</Grid>

@@ -35,6 +35,7 @@ export const languagesMetaData: ColumnData[] = [
 	},
 	{
 		heading: "C#",
+		isDeveloping: true,
 		tech: ["ASP .NET Core", "XUnit", "Unity"],
 	},
 	{
