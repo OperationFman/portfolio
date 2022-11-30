@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import ShowIf from "../../utils/ShowIf";
-import { ColumnData } from "./Languages";
+import { ColumnData } from "./types";
 
 type LanguagesColumnProps = {
 	columnData: ColumnData;
@@ -10,19 +10,19 @@ type LanguagesColumnProps = {
 };
 
 export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
-	const { isMobile, columnData } = props;
+	const { columnData, isExpanded, isMobile } = props;
 	const { heading, tech } = columnData;
 
-	const initialTech = tech.slice(0, 6);
-	const remaining = tech.slice(6, tech.length);
+	const primeTech = tech.slice(0, Math.floor(tech.length / 2));
+	const extraTech = tech.slice(Math.floor(tech.length / 2), tech.length);
 
 	return (
 		<>
-			<div className='w-full pr-6 md:pr-0 md:w-[175px]'>
-				<h1 className='mb-[-10px]'> {heading} </h1>
-				<div className='flex flex-row'>
+			<div className='w-full pr-6 sm:pr-0 sm:w-[175px]'>
+				<h1 className='sm:mb-[-7px]'> {heading} </h1>
+				<div className='flex flex-row sm:block'>
 					<div className='w-[150px]'>
-						{initialTech.map((item, index) => {
+						{primeTech.map((item, index) => {
 							return (
 								<div className='pt-3' key={`${index} ${item}`}>
 									<Typography variant='body1' color='text.secondary' key={item}>
@@ -32,9 +32,9 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 							);
 						})}
 					</div>
-					<ShowIf condition={isMobile}>
-						<div>
-							{remaining.map((item, index) => {
+					<ShowIf condition={isExpanded || isMobile}>
+						<div className='sm:mt-5'>
+							{extraTech.map((item, index) => {
 								return (
 									<div className='pt-3' key={`${index} ${item}`}>
 										<Typography

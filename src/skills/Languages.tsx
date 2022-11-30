@@ -1,88 +1,15 @@
 import TerminalIcon from "@mui/icons-material/Terminal";
 import { Button, Card, CardContent, Grid } from "@mui/material";
+import { useState } from "react";
 import ShowIf from "../../utils/ShowIf";
 import useDeviceDetect from "../../utils/useDeviceDetect";
 import { LanguageColumn } from "./LanguagesColumn";
-
-export type ColumnData = {
-	heading: string;
-	tech: string[];
-};
+import { languagesMetaData } from "../datasources/SkillsMetaData";
 
 export const Languages = () => {
 	const { isMobile } = useDeviceDetect();
 
-	// Max 12 tech items per language
-	const languagesMetaData: ColumnData[] = [
-		{
-			heading: "Javascript",
-			tech: [
-				"Typescript",
-				"React",
-				"React native",
-				"NodeJS",
-				"GraphQL",
-				"NextJS",
-				"Typescript",
-				"React",
-				"React native",
-				"NodeJS",
-				"GraphQL",
-				"NextJS",
-			],
-		},
-		{
-			heading: "Python",
-			tech: [
-				"Typescript",
-				"React",
-				"React native",
-				"NodeJS",
-				"GraphQL",
-				"NextJS",
-				"Typescript",
-				"React",
-				"React native",
-				"NodeJS",
-				"GraphQL",
-				"NextJS",
-			],
-		},
-		{
-			heading: "C#",
-			tech: [
-				"Typescript",
-				"React",
-				"React native",
-				"NodeJS",
-				"GraphQL",
-				"NextJS",
-				"Typescript",
-				"React",
-				"React native",
-				"NodeJS",
-				"GraphQL",
-				"NextJS",
-			],
-		},
-		{
-			heading: "Misc.",
-			tech: [
-				"Typescript",
-				"React",
-				"React native",
-				"NodeJS",
-				"GraphQL",
-				"NextJS",
-				"Typescript",
-				"React",
-				"React native",
-				"NodeJS",
-				"GraphQL",
-				"NextJS",
-			],
-		},
-	];
+	const [expandLanguages, setExpandLanguages] = useState(false);
 
 	return (
 		<div className='ml-15 mr-15 '>
@@ -95,15 +22,16 @@ export const Languages = () => {
 			<Card>
 				<CardContent className='ml-5 md:ml-12'>
 					<Grid
+						wrap={isMobile ? "wrap" : "nowrap"}
 						container
-						spacing={isMobile ? 5 : 12}
-						justifyContent={isMobile ? "left" : "center"}>
+						spacing={{ xs: 0, sm: 2, md: 5, lg: 12 }}
+						justifyContent={"center"}>
 						{languagesMetaData.map((columnData, index) => {
 							return (
 								<Grid item key={`${index} ${columnData.heading}`}>
 									<LanguageColumn
 										columnData={columnData}
-										isExpanded={false}
+										isExpanded={expandLanguages}
 										developing={false}
 										isMobile={isMobile}
 									/>
@@ -114,8 +42,14 @@ export const Languages = () => {
 				</CardContent>
 				<ShowIf condition={!isMobile}>
 					<div className='h-[50px] w-full flex justify-center'>
-						<Button variant='text' color='baseGrey' className='w-full'>
-							More
+						<Button
+							variant='text'
+							color='baseGrey'
+							className='w-full'
+							onClick={() => {
+								setExpandLanguages(!expandLanguages);
+							}}>
+							{expandLanguages ? "Less" : "More"}
 						</Button>
 					</div>
 				</ShowIf>
