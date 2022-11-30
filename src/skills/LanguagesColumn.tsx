@@ -1,4 +1,6 @@
 import { Typography } from "@mui/material";
+import { useContext } from "react";
+import { DarkMode } from "../../themes/GlobalTheme";
 import ShowIf from "../../utils/ShowIf";
 import { ColumnData } from "./types";
 
@@ -19,15 +21,19 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const primeTech = tech.slice(0, techBreakpoint);
 	const extraTech = tech.slice(techBreakpoint, tech.length);
 
+	const darkMode = useContext(DarkMode);
+
 	return (
 		<div className='relative'>
 			<ShowIf condition={isDeveloping}>
-				<p className='absolute w-full top-14 text-center'>Developing...</p>
+				<p className='absolute w-full top-14 text-center pr-4'>Developing...</p>
 			</ShowIf>
 			<div
 				className={
 					isDeveloping
-						? " bg-black h-[98%] rounded-lg opacity-20 pb-4 pl-4 mr-5 "
+						? `${
+								darkMode ? "bg-black" : "bg-slate-400"
+						  } h-[98%] rounded-lg opacity-20 pb-4 pl-4 mr-5 `
 						: ""
 				}>
 				<div className='w-full pr-6 sm:pr-0 sm:w-[175px]'>
