@@ -3,58 +3,63 @@ import ConstructionIcon from "@mui/icons-material/Construction";
 import { Card, CardContent, Typography } from "@mui/material";
 
 export const Tools = () => {
-	const toolsMetaData = [
+	const groupedToolsMetaData = [
+		{
+			grouping: "Dev",
+			tools: [
+				"Github",
+				"VSCode",
+				"Insomnia",
+				"Postman",
+				"Ubuntu",
+				"Arch",
+				"Debian",
+				"Rasbian",
+				"ArduinoOS",
+			],
+		},
+		{
+			grouping: "VFX",
+			tools: [
+				"Sony Vegas Pro",
+				"Davinci Resolve",
+				"Google Earth Studio",
+				"Blender",
+				"AutoCAD",
+			],
+		},
 		{
 			grouping: "Adobe",
 			tools: [
 				"After Effects",
+				"InDesign",
+				"Flash",
 				"Premiere Pro",
 				"Photoshop",
-				"Illustrator",
 				"XD",
-				"InDesign",
+				"Dream Weaver",
+				"Illustrator",
 			],
 		},
 		{
-			grouping: "Linux",
-			tools: ["Raspbian", "Arch", "Debian", "Ubuntu"],
-		},
-		{
-			grouping: "Atlassian",
-			tools: ["Jira", "Confluence"],
-		},
-		{
-			grouping: "Other",
-			tools: [
-				"Github",
-				"Blackmagic Davinci Resolve",
-				"Figma",
-				"Sony Vegas, Gimp",
-				"Blender",
-				"MacOS",
-				"Postman",
-				"Insomnia",
-			],
+			grouping: "Imaging",
+			tools: ["Figma", "Gimp", "ImageMagick", "Skylum Luminar"],
 		},
 	];
 
 	return (
-		<div className='mt-20 w-full sm:mr-5'>
+		<div className='mt-20 w-full sm:mr-4'>
 			<SkillSubHeading title='Tools'>
 				<ConstructionIcon color='success' className='text-5xl' />
 			</SkillSubHeading>
 			<Card>
-				<CardContent className='mb-5 md:ml-12 flex flex-row flex-wrap'>
-					{toolsMetaData.map((item) => {
-						if (item.grouping === "Other") {
-							return;
-						}
-
+				<CardContent className='mb-5 pl-12 flex flex-col flex-wrap lg:h-[460px]'>
+					{groupedToolsMetaData.map((item) => {
 						return (
-							<div
-								key={`${item.grouping} tools`}
-								className='w-[200px] mb-4 ml-2 mr-2'>
-								<h1 className='sm:mb-2'> {item.grouping} </h1>
+							<div key={`${item.grouping} tools`} className='w-[220px] mr-2'>
+								{item.grouping !== "Other" && (
+									<h1 className='sm:mb-2'> {item.grouping} </h1>
+								)}
 								<div className='flex flex-row flex-wrap'>
 									{item.tools.map((tool) => {
 										return (
@@ -62,7 +67,7 @@ export const Tools = () => {
 												variant='body1'
 												color='text.secondary'
 												key={tool}
-												className='w-[80px] mr-4 mb-2'>
+												className='w-100px] pr-5 mb-2'>
 												{tool}
 											</Typography>
 										);
