@@ -21,14 +21,14 @@ export const languagesMetaData: ColumnData[] = [
 	{
 		heading: "Python",
 		tech: [
-			"Django",
 			"Flask",
-			"RapidAPI",
-			"Scrapy",
+			"Django",
+			"PyTest",
 			"Selenium",
 			"NumPy",
+			"RapidAPI",
 			"Pandas",
-			"PyTest",
+			"Scrapy",
 			"PyGame",
 			"Unittest",
 		],
@@ -52,5 +52,49 @@ export const languagesMetaData: ColumnData[] = [
 			"Tailwind",
 			"Bootstrap",
 		],
+	},
+];
+
+export const groupedToolsMetaData = [
+	{
+		grouping: "Dev",
+		tools: [
+			"Github",
+			"VSCode",
+			"Insomnia",
+			"Postman",
+			"Ubuntu",
+			"Arch",
+			"Debian",
+			"Rasbian",
+			"ArduinoOS",
+		],
+	},
+	{
+		grouping: "VFX",
+		tools: [
+			"Sony Vegas Pro",
+			"Davinci Resolve",
+			"AutoCAD",
+			"Blender",
+			"Google Earth Studio",
+		],
+	},
+	{
+		grouping: "Adobe",
+		tools: [
+			"After Effects",
+			"Photoshop",
+			"XD",
+			"Flash",
+			"Dream Weaver",
+			"Premiere Pro",
+			"InDesign",
+			"Illustrator",
+		],
+	},
+	{
+		grouping: "Imaging",
+		tools: ["Figma", "Gimp", "Skylum Luminar", "ImageMagick"],
 	},
 ];
