@@ -10,7 +10,7 @@ const Home: NextPage = () => {
 				<title>Homepage - Franklin V Moon</title>
 				<meta
 					name='Homepage'
-					content='My Resume, Experience and Contact Form'
+					content="This guys name is Franklin and he's a full-stack software developer with a passion for user centric design, volunteering globally and advocating for social change"
 				/>
 			</Head>
 			<Homepage />

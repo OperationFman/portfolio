@@ -12,8 +12,9 @@ export const Skills: NextPage = () => {
 		<div>
 			<Head>
 				<title>Skills - Franklin V Moon</title>
+				<meta
 					name='Skills'
-					content='List of all my skills, abilities and personality'
+					content='Known Programming Languages and Cloud Tools'
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>

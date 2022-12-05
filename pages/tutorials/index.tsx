@@ -44,7 +44,7 @@ const Tutorials: NextPage = () => {
 				<title>Tutorials - Franklin V Moon</title>
 				<meta
 					name='Tutorials'
-					content='Blog containing all my guides, stories and snippets'
+					content='Comprehensive training, guides and useful code snippets'
 				/>
 			</Head>
 
