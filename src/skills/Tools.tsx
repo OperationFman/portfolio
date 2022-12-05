@@ -23,27 +23,27 @@ export const Tools = () => {
 			tools: [
 				"Sony Vegas Pro",
 				"Davinci Resolve",
-				"Google Earth Studio",
-				"Blender",
 				"AutoCAD",
+				"Blender",
+				"Google Earth Studio",
 			],
 		},
 		{
 			grouping: "Adobe",
 			tools: [
 				"After Effects",
-				"InDesign",
-				"Flash",
-				"Premiere Pro",
 				"Photoshop",
 				"XD",
+				"Flash",
 				"Dream Weaver",
+				"Premiere Pro",
+				"InDesign",
 				"Illustrator",
 			],
 		},
 		{
 			grouping: "Imaging",
-			tools: ["Figma", "Gimp", "ImageMagick", "Skylum Luminar"],
+			tools: ["Figma", "Gimp", "Skylum Luminar", "ImageMagick"],
 		},
 	];
 
@@ -53,10 +53,12 @@ export const Tools = () => {
 				<ConstructionIcon color='success' className='text-5xl' />
 			</SkillSubHeading>
 			<Card>
-				<CardContent className='mb-5 pl-12 flex flex-col flex-wrap lg:h-[460px]'>
+				<CardContent className='mb-5 pl-10 flex flex-col flex-wrap lg:pl-12 lg:h-[480px]'>
 					{groupedToolsMetaData.map((item) => {
 						return (
-							<div key={`${item.grouping} tools`} className='w-[220px] mr-2'>
+							<div
+								key={`${item.grouping} tools`}
+								className='w-[94%] mr-2 lg:w-[220px]'>
 								{item.grouping !== "Other" && (
 									<h1 className='sm:mb-2'> {item.grouping} </h1>
 								)}
@@ -67,7 +69,7 @@ export const Tools = () => {
 												variant='body1'
 												color='text.secondary'
 												key={tool}
-												className='w-100px] pr-5 mb-2'>
+												className='w-[50%] pr-10 mb-2 lg:pr-5 lg:mb-1'>
 												{tool}
 											</Typography>
 										);
