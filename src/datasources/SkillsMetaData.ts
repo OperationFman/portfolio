@@ -1,4 +1,4 @@
-import { ColumnData } from "../skills/types";
+import { ColumnData, ListingMetaData } from "../skills/types";
 
 export const languagesMetaData: ColumnData[] = [
 	{
@@ -55,46 +55,54 @@ export const languagesMetaData: ColumnData[] = [
 	},
 ];
 
-export const groupedToolsMetaData = [
+export const groupedToolsMetaData: ListingMetaData[] = [
 	{
-		grouping: "Dev",
-		tools: [
-			"Github",
-			"VSCode",
-			"Insomnia",
-			"Postman",
-			"Ubuntu",
-			"Arch",
-			"Debian",
-			"Rasbian",
-			"ArduinoOS",
-		],
+		heading: "Dev",
+		items: ["Github", "Insomnia", "Postman", "Ubuntu", "Debian", "Rasbian"],
 	},
 	{
-		grouping: "VFX",
-		tools: [
-			"Sony Vegas Pro",
-			"Davinci Resolve",
-			"AutoCAD",
-			"Blender",
-			"Google Earth Studio",
-		],
+		heading: "VFX",
+		items: ["Davinci Resolve", "Google Earth Studio", "Blender", "Sony Vegas"],
 	},
 	{
-		grouping: "Adobe",
-		tools: [
-			"After Effects",
+		heading: "Adobe",
+		items: [
 			"Photoshop",
-			"XD",
-			"Flash",
-			"Dream Weaver",
-			"Premiere Pro",
+			"After Effects",
 			"InDesign",
 			"Illustrator",
+			"Premiere",
+			"XD",
 		],
 	},
 	{
-		grouping: "Imaging",
-		tools: ["Figma", "Gimp", "Skylum Luminar", "ImageMagick"],
+		heading: "Imaging",
+		items: ["Skylum Luminar", "Image Magick", "Figma", "Gimp"],
+	},
+];
+
+export const groupedCloudMetaData: ListingMetaData[] = [
+	{
+		heading: "AWS",
+		items: ["EC2", "ECR", "Cloudfront", "DynamoDB", "Route53", "S3"],
+	},
+	{
+		heading: "Google",
+		items: ["GCS", "Firebase", "Android App Distribution", "Play Store"],
+	},
+	{
+		heading: "Other",
+		items: ["Python Anywhere", "Heroku", "Apple Developer", "Vercel"],
+	},
+	{
+		heading: "CI/CD",
+		items: [
+			"Circle",
+			"GoCD",
+			"Buildkite",
+			"Travis CI",
+			"Github Actions",
+			"Jenkins",
+		],
 	},
 ];
