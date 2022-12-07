@@ -5,6 +5,7 @@ import { Convictions } from "../../src/skills/Convictions";
 import { Cloud } from "../../src/skills/Cloud";
 import { Languages } from "../../src/skills/languages/Languages";
 import { Tools } from "../../src/skills/Tools";
+import { Footer } from "../../utils/Footer";
 
 export const Skills: NextPage = () => {
 	return (
@@ -26,6 +27,7 @@ export const Skills: NextPage = () => {
 					<Convictions />
 				</div>
 			</PageContainer>
+			<Footer />
 		</div>
 	);
 };
