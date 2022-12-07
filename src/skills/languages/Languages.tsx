@@ -14,7 +14,7 @@ export const Languages = () => {
 
 	return (
 		<div className='ml-15 mr-15 '>
-			<SkillSubHeading title='Languages'>
+			<SkillSubHeading title='Languages' align='justify-start'>
 				<TerminalIcon color='success' className='text-5xl' />
 			</SkillSubHeading>
 			<Card>

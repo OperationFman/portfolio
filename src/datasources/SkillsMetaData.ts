@@ -1,4 +1,4 @@
-import { ColumnData, ListingMetaData } from "../skills/types";
+import { ColumnData, BoxListingMetaData } from "../skills/types";
 
 export const languagesMetaData: ColumnData[] = [
 	{
@@ -55,7 +55,7 @@ export const languagesMetaData: ColumnData[] = [
 	},
 ];
 
-export const groupedToolsMetaData: ListingMetaData[] = [
+export const toolsMetaData: BoxListingMetaData[] = [
 	{
 		heading: "Dev",
 		items: ["Github", "Insomnia", "Postman", "Ubuntu", "Debian", "Rasbian"],
@@ -81,7 +81,7 @@ export const groupedToolsMetaData: ListingMetaData[] = [
 	},
 ];
 
-export const groupedCloudMetaData: ListingMetaData[] = [
+export const cloudMetaData: BoxListingMetaData[] = [
 	{
 		heading: "AWS",
 		items: ["EC2", "ECR", "Cloudfront", "DynoDB", "Route53", "S3"],
@@ -104,6 +104,37 @@ export const groupedCloudMetaData: ListingMetaData[] = [
 			"Travis CI",
 			"Github Actions",
 			"Jenkins",
+		],
+	},
+];
+
+export const convictionMetaData: BoxListingMetaData[] = [
+	{
+		heading: "Pairing",
+		items: [
+			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
+			"A second sentence",
+		],
+	},
+	{
+		heading: "TDD",
+		items: [
+			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
+			"A second sentence",
+		],
+	},
+	{
+		heading: "Automated Testing",
+		items: [
+			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
+			"A second sentence",
+		],
+	},
+	{
+		heading: "Sensible Defaults",
+		items: [
+			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
+			"A second sentence",
 		],
 	},
 ];

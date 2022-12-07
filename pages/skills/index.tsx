@@ -1,10 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
-import { Aptitude } from "../../src/skills/Aptitude";
+import { Convictions } from "../../src/skills/Convictions";
 import { Cloud } from "../../src/skills/Cloud";
 import { Languages } from "../../src/skills/languages/Languages";
-import { Personality } from "../../src/skills/Personality";
 import { Tools } from "../../src/skills/Tools";
 
 export const Skills: NextPage = () => {
@@ -21,13 +20,10 @@ export const Skills: NextPage = () => {
 
 			<PageContainer>
 				<Languages />
-				<div className='sm:flex sm:flex-row'>
+				<div className='sm:flex sm:flex-row justify-evenly flex-wrap'>
 					<Tools />
 					<Cloud />
-				</div>
-				<div className='sm:flex sm:flex-row'>
-					<Aptitude />
-					<Personality />
+					<Convictions />
 				</div>
 			</PageContainer>
 		</div>

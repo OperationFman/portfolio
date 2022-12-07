@@ -4,7 +4,18 @@ export type ColumnData = {
 	tech: string[];
 };
 
-export type ListingMetaData = {
+interface BoxListing {
 	heading: string;
+}
+
+interface BoxListingWithItems extends BoxListing {
 	items: string[];
-};
+	blurb?: never;
+}
+
+interface BoxListingWithBlurb extends BoxListing {
+	items?: never;
+	blurb: string;
+}
+
+export type BoxListingMetaData = BoxListingWithItems | BoxListingWithBlurb;

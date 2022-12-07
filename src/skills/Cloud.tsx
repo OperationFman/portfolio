@@ -1,17 +1,15 @@
 import { SkillSubHeading } from "./components/SkillSubHeading";
 import FilterDramaIcon from "@mui/icons-material/FilterDrama";
 import { BoxListing } from "./components/BoxListing";
-import { groupedCloudMetaData } from "../datasources/SkillsMetaData";
+import { cloudMetaData } from "../datasources/SkillsMetaData";
 
 export const Cloud = () => {
 	return (
-		<div className='mt-20 w-full sm:ml-5'>
+		<div className='mt-20'>
 			<SkillSubHeading title='Cloud'>
 				<FilterDramaIcon color='success' className='text-5xl' />
 			</SkillSubHeading>
-			<div className='ml-12 sm:ml-8 mt-4'>
-				<BoxListing metaData={groupedCloudMetaData} />
-			</div>
+			<BoxListing metaData={cloudMetaData} />
 		</div>
 	);
 };
