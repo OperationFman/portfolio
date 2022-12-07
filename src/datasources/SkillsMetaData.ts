@@ -84,20 +84,21 @@ export const groupedToolsMetaData: ListingMetaData[] = [
 export const groupedCloudMetaData: ListingMetaData[] = [
 	{
 		heading: "AWS",
-		items: ["EC2", "ECR", "Cloudfront", "DynamoDB", "Route53", "S3"],
+		items: ["EC2", "ECR", "Cloudfront", "DynoDB", "Route53", "S3"],
 	},
-	{
-		heading: "Google",
-		items: ["GCS", "Firebase", "Android App Distribution", "Play Store"],
-	},
+
 	{
 		heading: "Other",
 		items: ["Python Anywhere", "Heroku", "Apple Developer", "Vercel"],
 	},
 	{
+		heading: "Google",
+		items: ["GCS", "Firebase", "Android App Distribution"],
+	},
+	{
 		heading: "CI/CD",
 		items: [
-			"Circle",
+			"CircleCI",
 			"GoCD",
 			"Buildkite",
 			"Travis CI",

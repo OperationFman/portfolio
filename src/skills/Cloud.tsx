@@ -9,7 +9,7 @@ export const Cloud = () => {
 			<SkillSubHeading title='Cloud'>
 				<FilterDramaIcon color='success' className='text-5xl' />
 			</SkillSubHeading>
-			<div className='ml-10 mt-4'>
+			<div className='ml-12 sm:ml-8 mt-4'>
 				<BoxListing metaData={groupedCloudMetaData} />
 			</div>
 		</div>

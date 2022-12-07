@@ -22,7 +22,7 @@ export const Languages = () => {
 					<Grid
 						wrap={isMobile ? "wrap" : "nowrap"}
 						container
-						spacing={{ xs: 0, sm: 2, md: 5, lg: 12 }}
+						spacing={{ xs: 0, sm: 2, lg: 12 }}
 						justifyContent={"center"}>
 						{languagesMetaData.map((columnData, index) => {
 							return (

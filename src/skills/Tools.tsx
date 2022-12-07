@@ -12,7 +12,7 @@ export const Tools = () => {
 			</SkillSubHeading>
 			<Card>
 				<CardContent>
-					<div className='mb-5 pl-10 lg:pl-8'>
+					<div className='mb-5 pl-10'>
 						<BoxListing metaData={groupedToolsMetaData} />
 					</div>
 				</CardContent>
