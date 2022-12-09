@@ -6,7 +6,7 @@ export const BoxListing = ({
 	metaData: BoxListingMetaData[];
 }) => {
 	return (
-		<div className='flex flex-col w-[300px] pl-6'>
+		<div className='flex flex-col w-[300px] pl-16 md:pl-12'>
 			{metaData.map((grouping) => {
 				return (
 					<div key={`${grouping.heading} tools`} className='mr-6 w-[300px]'>
@@ -22,7 +22,7 @@ export const BoxListing = ({
 								})}
 							</div>
 						)}
-						{grouping.blurb && <p>{grouping.blurb}</p>}
+						{grouping.blurb && <p className='mr-10'>{grouping.blurb}</p>}
 					</div>
 				);
 			})}

@@ -84,31 +84,23 @@ export const toolsMetaData: BoxListingMetaData[] = [
 export const convictionMetaData: BoxListingMetaData[] = [
 	{
 		heading: "Pairing",
-		items: [
+		blurb:
 			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
-			"A second sentence",
-		],
 	},
 	{
 		heading: "TDD",
-		items: [
+		blurb:
 			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
-			"A second sentence",
-		],
 	},
 	{
 		heading: "Automated Testing",
-		items: [
+		blurb:
 			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
-			"A second sentence",
-		],
 	},
 	{
 		heading: "Sensible Defaults",
-		items: [
+		blurb:
 			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
-			"A second sentence",
-		],
 	},
 ];
 

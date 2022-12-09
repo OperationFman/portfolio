@@ -44,7 +44,7 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 				<div className='w-full pr-6 sm:pr-0 sm:w-[175px]'>
 					<h1 className='sm:mb-[-7px]'> {heading} </h1>
 					<div className='flex flex-row sm:block'>
-						<div className='w-[150px] mb-4'>
+						<div className='w-[150px]'>
 							{primeTech.map((item, index) => {
 								return (
 									<div className='pt-3' key={`${index} ${item}`}>
@@ -62,7 +62,7 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 							<div className='w-[150px]'>
 								{extraTech.map((item, index) => {
 									return (
-										<div className='pl-1 pt-3' key={`${index} ${item}`}>
+										<div className='pt-3' key={`${index} ${item}`}>
 											<Typography
 												variant='body1'
 												color='text.secondary'

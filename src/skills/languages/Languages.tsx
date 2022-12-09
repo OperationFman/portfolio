@@ -13,12 +13,14 @@ export const Languages = () => {
 	const [expandLanguages, setExpandLanguages] = useState(false);
 
 	return (
-		<div className='ml-12 mr-8 '>
-			<SkillSubHeading title='Languages' align='justify-start'>
+		<div className='md:ml-12 md:mr-8 '>
+			<SkillSubHeading
+				title='Languages'
+				align={isMobile ? "justify-center" : "justify-start"}>
 				<TerminalIcon color='success' className='text-5xl' />
 			</SkillSubHeading>
 			<Card>
-				<CardContent className='ml-5 md:ml-24'>
+				<CardContent className='ml-12 sm:ml-5 md:ml-24 mb-14 sm:mb-0'>
 					<Grid
 						wrap={isMobile ? "wrap" : "nowrap"}
 						container

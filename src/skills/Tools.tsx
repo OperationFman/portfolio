@@ -6,7 +6,7 @@ import { SkillSubHeading } from "./components/SkillSubHeading";
 
 export const Tools = () => {
 	return (
-		<div className='mt-20'>
+		<div className='mt-36 ml-[-10px] pb-20 sm:mt-20'>
 			<SkillSubHeading title='Tools'>
 				<ConstructionIcon color='success' className='text-5xl' />
 			</SkillSubHeading>
