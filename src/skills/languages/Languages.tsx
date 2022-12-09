@@ -13,20 +13,19 @@ export const Languages = () => {
 	const [expandLanguages, setExpandLanguages] = useState(false);
 
 	return (
-		<div className='ml-15 mr-15 '>
+		<div className='ml-12 mr-8 '>
 			<SkillSubHeading title='Languages' align='justify-start'>
 				<TerminalIcon color='success' className='text-5xl' />
 			</SkillSubHeading>
 			<Card>
-				<CardContent className='ml-5 md:ml-12'>
+				<CardContent className='ml-5 md:ml-24'>
 					<Grid
 						wrap={isMobile ? "wrap" : "nowrap"}
 						container
-						spacing={{ xs: 0, sm: 2, lg: 12 }}
-						justifyContent={"center"}>
+						justifyContent='space-evenly'>
 						{languagesMetaData.map((columnData, index) => {
 							return (
-								<Grid item key={`${index} ${columnData.heading}`} sm={5} xs={0}>
+								<Grid item key={`${index} ${columnData.heading}`} sm={5}>
 									<LanguageColumn
 										columnData={columnData}
 										isExpanded={expandLanguages}

@@ -81,33 +81,6 @@ export const toolsMetaData: BoxListingMetaData[] = [
 	},
 ];
 
-export const cloudMetaData: BoxListingMetaData[] = [
-	{
-		heading: "AWS",
-		items: ["EC2", "ECR", "Cloudfront", "DynoDB", "Route53", "S3"],
-	},
-
-	{
-		heading: "Other",
-		items: ["Python Anywhere", "Heroku", "Apple Developer", "Vercel"],
-	},
-	{
-		heading: "Google",
-		items: ["GCS", "Firebase", "Android App Distribution"],
-	},
-	{
-		heading: "CI/CD",
-		items: [
-			"CircleCI",
-			"GoCD",
-			"Buildkite",
-			"Travis CI",
-			"Github Actions",
-			"Jenkins",
-		],
-	},
-];
-
 export const convictionMetaData: BoxListingMetaData[] = [
 	{
 		heading: "Pairing",
@@ -135,6 +108,33 @@ export const convictionMetaData: BoxListingMetaData[] = [
 		items: [
 			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
 			"A second sentence",
+		],
+	},
+];
+
+export const cloudMetaData: BoxListingMetaData[] = [
+	{
+		heading: "AWS",
+		items: ["EC2", "ECR", "Cloudfront", "DynoDB", "Route53", "S3"],
+	},
+
+	{
+		heading: "Other",
+		items: ["Python Anywhere", "Heroku", "Apple Developer", "Vercel"],
+	},
+	{
+		heading: "Google",
+		items: ["GCS", "Firebase", "Android App Distribution"],
+	},
+	{
+		heading: "CI/CD",
+		items: [
+			"CircleCI",
+			"GoCD",
+			"Buildkite",
+			"Travis CI",
+			"Github Actions",
+			"Jenkins",
 		],
 	},
 ];

@@ -22,17 +22,23 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const primeTech = tech.slice(0, techBreakpoint);
 	const extraTech = tech.slice(techBreakpoint, tech.length);
 
+	// Remove when switched to using tailwind global theme over MUI
+	const developingStyle = {
+		color: darkMode ? "bg-black" : "bg-[#b9b9b9]",
+		opacity: darkMode ? "opacity-10" : "opacity-40",
+	};
+
 	return (
 		<div className='relative'>
 			<ShowIf condition={isDeveloping}>
-				<p className='absolute w-full top-14 text-center pr-4'>Developing...</p>
+				<p className='absolute w-full top-14 text-center pr-10'>
+					Developing...
+				</p>
 			</ShowIf>
 			<div
 				className={
 					isDeveloping
-						? `${darkMode ? "bg-black" : "bg-[#b9b9b9]"} ${
-								darkMode ? "opacity-10" : "opacity-40"
-						  } h-[98%] rounded-lg pb-4 pl-4 mr-5 `
+						? `${developingStyle.color} ${developingStyle.opacity} h-[98%] rounded-lg pb-4 pl-4 mr-10`
 						: ""
 				}>
 				<div className='w-full pr-6 sm:pr-0 sm:w-[175px]'>

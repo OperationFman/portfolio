@@ -23,8 +23,8 @@ export const Skills: NextPage = () => {
 				<Languages />
 				<div className='sm:flex sm:flex-row justify-evenly flex-wrap'>
 					<Tools />
-					<Cloud />
 					<Convictions />
+					<Cloud />
 				</div>
 			</PageContainer>
 			<Footer />
