@@ -9,15 +9,21 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 
 	const [offSetY, setOffSetY] = useState(0);
 	const handleScroll = () => {
-		// Strop rendering once parallax is off screen
+		// Stop rendering once parallax is off screen
 		if (window.pageYOffset < 2000) {
 			setOffSetY(window.pageYOffset);
 		}
 	};
 
 	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
+		const handleScrollAnimation = () => {
+			handleScroll();
+			window.requestAnimationFrame(handleScrollAnimation);
+		};
+		handleScrollAnimation();
+		return () => {
+			window.cancelAnimationFrame(handleScrollAnimation);
+		};
 	}, []);
 
 	const style: any = {
