@@ -62,7 +62,7 @@ export const toolsMetaData: BoxListingMetaData[] = [
 	},
 	{
 		heading: "VFX",
-		items: ["Davinci Resolve", "Google Earth Studio", "Blender", "Sony Vegas"],
+		items: ["Davinci Resolve", "Blender", "Google Earth Studio", "Sony Vegas"],
 	},
 	{
 		heading: "Adobe",
@@ -77,7 +77,7 @@ export const toolsMetaData: BoxListingMetaData[] = [
 	},
 	{
 		heading: "Imaging",
-		items: ["Skylum Luminar", "Image Magick", "Figma", "Gimp"],
+		items: ["Image Magick", "Figma", "Skylum Luminar", "Gimp"],
 	},
 ];
 
@@ -85,22 +85,17 @@ export const convictionMetaData: BoxListingMetaData[] = [
 	{
 		heading: "Pairing",
 		blurb:
-			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
+			"A developer's productivity should be evaluated based on the problems they solve. Pair programming enables developers to solve problems more efficiently, share knowledge, and improve their skills",
 	},
 	{
 		heading: "TDD",
 		blurb:
-			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
+			"Unit tests and test-driven development provide long-term benefits by ensuring that code meets project requirements and can save time and effort in the future",
 	},
 	{
 		heading: "Automated Testing",
 		blurb:
-			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
-	},
-	{
-		heading: "Sensible Defaults",
-		blurb:
-			"The art of doing things but also not doing things, which in itself is a thing which negates the chance",
+			"A reliable testing pipeline can ensure that the platform functions correctly without developer intervention, saving time and effort. Making the development process more efficient and effective",
 	},
 ];
 
@@ -112,7 +107,7 @@ export const cloudMetaData: BoxListingMetaData[] = [
 
 	{
 		heading: "Other",
-		items: ["Python Anywhere", "Heroku", "Apple Developer", "Vercel"],
+		items: ["Python Anywhere", "Apple Developer", "Heroku", "Vercel"],
 	},
 	{
 		heading: "Google",

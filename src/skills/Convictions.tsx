@@ -5,7 +5,7 @@ import { convictionMetaData } from "../datasources/SkillsMetaData";
 
 export const Convictions = () => {
 	return (
-		<div className='mt-20 ml-[-10px] pb-20'>
+		<div className='mt-20 ml-[-10px] pb-24'>
 			<SkillSubHeading title='Convictions'>
 				<EmojiEventsIcon color='success' className='text-5xl' />
 			</SkillSubHeading>
