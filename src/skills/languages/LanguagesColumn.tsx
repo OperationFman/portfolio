@@ -16,11 +16,9 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const { heading, tech } = columnData;
 	const darkMode = useContext(DarkMode);
 
-	const techCenter = Math.floor(tech.length / 2);
-	const techBreakpoint = techCenter > 6 ? techCenter : 6;
-
-	const primeTech = tech.slice(0, techBreakpoint);
-	const extraTech = tech.slice(techBreakpoint, tech.length);
+	const TOTAL_PRIME_ITEMS = 5;
+	const primeTech = tech.slice(0, TOTAL_PRIME_ITEMS);
+	const extraTech = tech.slice(TOTAL_PRIME_ITEMS, tech.length);
 
 	// Remove when switched to using tailwind global theme over MUI
 	const developingStyle = {
