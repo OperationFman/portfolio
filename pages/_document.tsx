@@ -11,9 +11,6 @@ export default class MyDocument extends Document {
 						href='https://fonts.cdnfonts.com/css/montserrat'
 						rel='stylesheet'
 					/>
-					<style>
-						@import url('https://fonts.cdnfonts.com/css/montserrat');
-					</style>
 				</Head>
 				<body>
 					<Main />
