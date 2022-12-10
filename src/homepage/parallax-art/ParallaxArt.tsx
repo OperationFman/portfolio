@@ -22,7 +22,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 		};
 		handleScrollAnimation();
 		return () => {
-			window.cancelAnimationFrame(handleScrollAnimation);
+			window.cancelAnimationFrame(handleScrollAnimation as any);
 		};
 	}, []);
 
