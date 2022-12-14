@@ -14,11 +14,7 @@ export const Languages = () => {
 
 	return (
 		<div className='md:ml-12 md:mr-8 '>
-			<SkillSubHeading
-				title='Languages'
-				align={isMobile ? "justify-center" : "justify-start"}>
-				<TerminalIcon color='success' className='text-5xl' />
-			</SkillSubHeading>
+			<h1 className='m-4 self-center text-[#66bb6a]'>Languages</h1>
 			<Card>
 				<CardContent className='ml-12 sm:ml-5 md:ml-24 mb-14 sm:mb-0'>
 					<Grid
