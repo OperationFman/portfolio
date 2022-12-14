@@ -1,11 +1,9 @@
-import TerminalIcon from "@mui/icons-material/Terminal";
 import { Button, Card, CardContent, Grid } from "@mui/material";
 import { useState } from "react";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
-import { LanguageColumn } from "./LanguagesColumn";
 import { languagesMetaData } from "../../datasources/SkillsMetaData";
-import { SkillSubHeading } from "../components/SkillSubHeading";
+import { LanguageColumn } from "./LanguagesColumn";
 
 export const Languages = () => {
 	const { isMobile } = useDeviceDetect();
@@ -14,7 +12,9 @@ export const Languages = () => {
 
 	return (
 		<div className='md:ml-12 md:mr-8 '>
-			<h1 className='m-4 self-center text-[#66bb6a]'>Languages</h1>
+			<div className='flex justify-center'>
+				<h1 className='m-4 self-center text-[#66bb6a]'>Languages</h1>
+			</div>
 			<Card>
 				<CardContent className='ml-12 sm:ml-5 md:ml-24 mb-14 sm:mb-0'>
 					<Grid
