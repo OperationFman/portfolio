@@ -1,4 +1,5 @@
-import { ColumnData, BoxListingMetaData } from "../skills/types";
+import { ColumnData, Skills } from "../skills/types";
+import { ConvictionsRow } from "./../skills/types";
 
 export const headerBlurb = `
 This page outlines my skills and experience with various programming languages, tools, and development methodologies. 
@@ -59,7 +60,7 @@ export const languagesMetaData: ColumnData[] = [
 	},
 ];
 
-export const toolsMetaData: BoxListingMetaData[] = [
+export const toolsMetaData: Skills[] = [
 	{
 		heading: "Dev",
 		items: ["Github", "Insomnia", "Postman", "Ubuntu", "Debian", "Rasbian"],
@@ -85,25 +86,7 @@ export const toolsMetaData: BoxListingMetaData[] = [
 	},
 ];
 
-export const convictionMetaData: BoxListingMetaData[] = [
-	{
-		heading: "Pairing",
-		blurb:
-			"A developer's productivity should be evaluated based on the problems they solve. Pair programming enables developers to solve problems more efficiently, share knowledge, and improve their skills",
-	},
-	{
-		heading: "TDD",
-		blurb:
-			"Unit tests and test-driven development provide long-term benefits by ensuring that code meets project requirements and can save time and effort in the future",
-	},
-	{
-		heading: "Automated Testing",
-		blurb:
-			"A reliable testing pipeline can ensure that the platform functions correctly without developer intervention, saving time and effort. Making the development process more efficient and effective",
-	},
-];
-
-export const cloudMetaData: BoxListingMetaData[] = [
+export const cloudMetaData: Skills[] = [
 	{
 		heading: "AWS",
 		items: ["EC2", "ECR", "Cloudfront", "DynoDB", "Route53", "S3"],
@@ -127,5 +110,23 @@ export const cloudMetaData: BoxListingMetaData[] = [
 			"Github Actions",
 			"Jenkins",
 		],
+	},
+];
+
+export const convictionMetaData: ConvictionsRow[] = [
+	{
+		heading: "Pairing",
+		blurb:
+			"A developer's productivity should be evaluated based on the problems they solve. Pair programming enables developers to solve problems more efficiently, share knowledge, and improve their skills",
+	},
+	{
+		heading: "TDD",
+		blurb:
+			"Unit tests and test-driven development provide long-term benefits by ensuring that code meets project requirements and can save time and effort in the future",
+	},
+	{
+		heading: "Automated Testing",
+		blurb:
+			"A reliable testing pipeline can ensure that the platform functions correctly without developer intervention, saving time and effort. Making the development process more efficient and effective",
 	},
 ];

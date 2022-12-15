@@ -1,16 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import {
-	headerBlurb,
 	cloudMetaData,
 	convictionMetaData,
-	toolsMetaData,
+	headerBlurb,
+	toolsMetaData
 } from "../../src/datasources/SkillsMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
-import { SkillsColumn } from "../../src/skills/SkillsColumn";
+import { Convictions } from "../../src/skills/Convictions";
 import { Languages } from "../../src/skills/languages/Languages";
+import { SkillsColumn } from "../../src/skills/SkillsColumn";
 import { Footer } from "../../utils/Footer";
-import { Typography } from "@mui/material";
 
 export const Skills: NextPage = () => {
 	const splitStringAtFullStop = (str: string) => {
@@ -54,7 +54,11 @@ export const Skills: NextPage = () => {
 					<SkillsColumn title='Tools' metaData={toolsMetaData} />
 					<SkillsColumn title='Cloud' metaData={cloudMetaData} />
 				</div>
-				<SkillsColumn title='Convictions' metaData={convictionMetaData} />
+				<Convictions
+					title='Convictions'
+					metaData={convictionMetaData}
+					splitStringAtFullStop={splitStringAtFullStop}
+				/>
 			</PageContainer>
 			<Footer />
 		</div>

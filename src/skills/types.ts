@@ -4,18 +4,12 @@ export type ColumnData = {
 	tech: string[];
 };
 
-interface BoxListing {
+export type ConvictionsRow = {
 	heading: string;
-}
-
-interface BoxListingWithItems extends BoxListing {
-	items: string[];
-	blurb?: never;
-}
-
-interface BoxListingWithBlurb extends BoxListing {
-	items?: never;
 	blurb: string;
-}
+};
 
-export type BoxListingMetaData = BoxListingWithItems | BoxListingWithBlurb;
+export type Skills = {
+	heading: string;
+	items: string[];
+};
