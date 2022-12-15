@@ -4,7 +4,7 @@ import {
 	cloudMetaData,
 	convictionMetaData,
 	headerBlurb,
-	toolsMetaData
+	toolsMetaData,
 } from "../../src/datasources/SkillsMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { Convictions } from "../../src/skills/Convictions";
@@ -39,7 +39,7 @@ export const Skills: NextPage = () => {
 			</Head>
 
 			<PageContainer>
-				<div className='w-[500px] text-center mx-auto mb-12'>
+				<div className='max-w-[600px] text-center mx-auto mb-12 pl-2 pr-2'>
 					{blurbArray.map((sentence, index) => {
 						return (
 							<p key={index} className=''>

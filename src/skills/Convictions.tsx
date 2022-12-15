@@ -1,3 +1,4 @@
+import { SkillsSubHeading } from "./components/SkillsSubHeading";
 import { ConvictionsRow } from "./types";
 
 export const Convictions = ({
@@ -10,26 +11,19 @@ export const Convictions = ({
 	splitStringAtFullStop: (str: string) => string[];
 }) => {
 	return (
-		<div className='mt-20 ml-[-10px]'>
-			<div className='flex justify-center'>
-				<h1 className='m-0 self-center text-[#66bb6a]'>{title}</h1>
-			</div>
-			<div className='flex flex-row w-[300px] pl-16 md:pl-12'>
+		<div className='mt-20'>
+			<SkillsSubHeading title={title} />
+			<div className='flex justify-center flex-wrap'>
 				{metaData.map((grouping) => {
 					const blurbArray = splitStringAtFullStop(grouping.blurb);
 					return (
 						<div
 							key={`${grouping.heading} conviction`}
-							className='mr-6 w-[300px]'>
-							<h1 className='mb-[-12px]'> {grouping.heading} </h1>
-							{blurbArray &&
-								blurbArray.map((sentence, index) => {
-									return (
-										<p key={index} className='mr-8 mb-4'>
-											{sentence}.
-										</p>
-									);
-								})}
+							className='w-full sm:w-1/2 md:w-1/3 p-4'>
+							<h1 className='w-[200px]'>{grouping.heading}</h1>
+							{blurbArray.map((sentence, index) => {
+								return <p key={index}>{sentence}.</p>;
+							})}
 						</div>
 					);
 				})}

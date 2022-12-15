@@ -1,3 +1,4 @@
+import { SkillsSubHeading } from "./components/SkillsSubHeading";
 import { Skills } from "./types";
 
 export const SkillsColumn = ({
@@ -9,9 +10,7 @@ export const SkillsColumn = ({
 }) => {
 	return (
 		<div className='mt-20 ml-[-10px]'>
-			<div className='flex justify-center'>
-				<h1 className='m-0 self-center text-[#66bb6a]'>{title}</h1>
-			</div>
+			<SkillsSubHeading title={title} />
 
 			<div className='flex flex-col w-[300px] pl-16 md:pl-12'>
 				{metaData.map((grouping) => {
