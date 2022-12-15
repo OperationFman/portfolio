@@ -1,5 +1,10 @@
 import { ColumnData, BoxListingMetaData } from "../skills/types";
 
+export const headerBlurb = `
+This page outlines my skills and experience with various programming languages, tools, and development methodologies. 
+I am confident in my ability to deliver high-quality results, and am always ready to take on new challenges and learn new skills. 
+Click on any of the items on this page to learn more about my specific skills and experience in each area.`;
+
 export const languagesMetaData: ColumnData[] = [
 	{
 		heading: "Javascript",
