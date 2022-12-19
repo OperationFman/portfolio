@@ -1,15 +1,14 @@
 import { Typography } from "@mui/material";
+import { splitStringAtFullStop } from "../../utils/splitStringAtFullStop";
 import { SkillsSubHeading } from "./components/SkillsSubHeading";
 import { ConvictionsRow } from "./types";
 
 export const Convictions = ({
 	title,
 	metaData,
-	splitStringAtFullStop,
 }: {
 	title: string;
 	metaData: ConvictionsRow[];
-	splitStringAtFullStop: (str: string) => string[];
 }) => {
 	return (
 		<div className='mt-20'>

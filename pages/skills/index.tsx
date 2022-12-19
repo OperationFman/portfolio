@@ -11,20 +11,9 @@ import { Convictions } from "../../src/skills/Convictions";
 import { Languages } from "../../src/skills/languages/Languages";
 import { SkillsColumn } from "../../src/skills/SkillsColumn";
 import { Footer } from "../../utils/Footer";
+import { splitStringAtFullStop } from "../../utils/splitStringAtFullStop";
 
 export const Skills: NextPage = () => {
-	const splitStringAtFullStop = (str: string) => {
-		let splitStrings = str.split(".");
-
-		return splitStrings.map((splitString, index) => {
-			if (index === splitStrings.length - 1) {
-				return splitString;
-			} else {
-				return splitString + ".";
-			}
-		});
-	};
-
 	const blurbArray = splitStringAtFullStop(headerBlurb);
 
 	return (
@@ -54,11 +43,7 @@ export const Skills: NextPage = () => {
 					<SkillsColumn title='Tools' metaData={toolsMetaData} />
 					<SkillsColumn title='Cloud' metaData={cloudMetaData} />
 				</div>
-				<Convictions
-					title='Convictions'
-					metaData={convictionMetaData}
-					splitStringAtFullStop={splitStringAtFullStop}
-				/>
+				<Convictions title='Convictions' metaData={convictionMetaData} />
 			</PageContainer>
 			<Footer />
 		</div>
