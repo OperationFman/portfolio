@@ -5,11 +5,14 @@ export const headerBlurb = `
 On this page, you'll find an outline of my skills & experience with various programming languages, tools, and development methodologies.
 Click on any of the technologies listed below, you can learn more about my current specific abilities and level of involvement in each area.`;
 
-const { Unknown, Proficient, HighlyProficient } = Proficiency;
+const { HighlyProficient } = Proficiency;
 
 const proficiencyDescription: Descriptions[] = [
-	{ key: Proficient, description: "bar" },
-	{ key: HighlyProficient, description: "bar" },
+	{
+		key: HighlyProficient,
+		description:
+			"Can lead pairing on a project no matter who the pair is. Very comfortable in the language and can teach others at different skill levels and in different project situations.",
+	},
 ];
 
 const getDescription = (proficiency: Proficiency) => {
@@ -26,7 +29,8 @@ const getDescription = (proficiency: Proficiency) => {
 export const languagesMetaData: ColumnData[] = [
 	{
 		heading: "Javascript",
-		knowledge: "foo",
+		knowledge:
+			"I have a strong understanding in the language and am confident in my ability to use it effectively. My understanding of the syntax and modern concepts of the language, as well as the tools and frameworks that are commonly used with it is very strong. JavaScript has evolved over time and I genuinely enjoy staying up-to-date with the latest developments.",
 		proficiency: HighlyProficient,
 		description: getDescription(HighlyProficient),
 		tech: [
