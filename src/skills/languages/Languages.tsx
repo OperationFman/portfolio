@@ -3,12 +3,13 @@ import { useState } from "react";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { languagesMetaData } from "../../datasources/SkillsMetaData";
+import { Payload } from "../types";
 import { LanguageColumn } from "./LanguagesColumn";
 
 export const Languages = ({
 	handleOpenModal,
 }: {
-	handleOpenModal: () => void;
+	handleOpenModal: (payload: Payload) => void;
 }) => {
 	const { isMobile } = useDeviceDetect();
 

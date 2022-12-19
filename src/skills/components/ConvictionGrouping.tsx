@@ -16,8 +16,8 @@ export const ConvictionGrouping = ({
 			<h2 className='w-[200px] text-[#66bb6a]'>{grouping.heading}</h2>
 			{blurbArray.map((sentence, index) => {
 				return (
-					<div className={"mb-6"}>
-						<Typography variant='body1' color='text.secondary' key={index}>
+					<div className={"mb-6"} key={index}>
+						<Typography variant='body1' color='text.secondary'>
 							{sentence}
 						</Typography>
 					</div>

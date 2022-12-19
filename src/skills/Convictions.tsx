@@ -13,8 +13,8 @@ export const Convictions = ({
 		<div className='mt-20'>
 			<SkillsSubHeading title={title} />
 			<div className='flex justify-center flex-wrap'>
-				{metaData.map((grouping) => {
-					return <ConvictionGrouping grouping={grouping} />;
+				{metaData.map((grouping, index) => {
+					return <ConvictionGrouping grouping={grouping} key={index} />;
 				})}
 			</div>
 		</div>

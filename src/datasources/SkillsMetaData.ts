@@ -1,13 +1,34 @@
-import { ColumnData, Skills } from "../skills/types";
+import { ColumnData, Descriptions, Proficiency, Skills } from "../skills/types";
 import { ConvictionsRow } from "./../skills/types";
 
 export const headerBlurb = `
 On this page, you'll find an outline of my skills & experience with various programming languages, tools, and development methodologies.
 Click on any of the technologies listed below, you can learn more about my current specific abilities and level of involvement in each area.`;
 
+const { Unknown, Proficient, HighlyProficient } = Proficiency;
+
+const proficiencyDescription: Descriptions[] = [
+	{ key: Proficient, description: "bar" },
+	{ key: HighlyProficient, description: "bar" },
+];
+
+const getDescription = (proficiency: Proficiency) => {
+	const description = proficiencyDescription.find(
+		(description) => description.key === proficiency,
+	);
+
+	if (!description) {
+		return "Something went wrong";
+	}
+	return description.description;
+};
+
 export const languagesMetaData: ColumnData[] = [
 	{
 		heading: "Javascript",
+		knowledge: "foo",
+		proficiency: HighlyProficient,
+		description: getDescription(HighlyProficient),
 		tech: [
 			"Typescript",
 			"React",
@@ -25,6 +46,9 @@ export const languagesMetaData: ColumnData[] = [
 	},
 	{
 		heading: "Python",
+		knowledge: "foo",
+		proficiency: HighlyProficient,
+		description: getDescription(HighlyProficient),
 		tech: [
 			"Flask",
 			"Django",
@@ -40,11 +64,17 @@ export const languagesMetaData: ColumnData[] = [
 	},
 	{
 		heading: "C#",
+		knowledge: "foo",
+		proficiency: HighlyProficient,
+		description: getDescription(HighlyProficient),
 		isDeveloping: true,
 		tech: ["ASP .NET Core", "XUnit", "Unity"],
 	},
 	{
 		heading: "Misc.",
+		knowledge: "foo",
+		proficiency: HighlyProficient,
+		description: getDescription(HighlyProficient),
 		tech: [
 			"Docker",
 			"Terraform",

@@ -2,20 +2,20 @@ import { Typography } from "@mui/material";
 import { useContext } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
 import ShowIf from "../../../utils/ShowIf";
-import { ColumnData } from "../types";
+import { ColumnData, Payload } from "../types";
 
 type LanguagesColumnProps = {
 	columnData: ColumnData;
 	isExpanded: boolean;
-	isDeveloping: boolean | undeˇfined;
+	isDeveloping: boolean | undefined;
 	isMobile: boolean;
-	handleOpenModal: () => void;
+	handleOpenModal: (payload: Payload) => void;
 };
 
 export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const { columnData, isExpanded, isMobile, isDeveloping, handleOpenModal } =
 		props;
-	const { heading, tech } = columnData;
+	const { heading, tech, knowledge, proficiency, description } = columnData;
 	const darkMode = useContext(DarkMode);
 
 	const TOTAL_PRIME_ITEMS = 5;
@@ -26,6 +26,13 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const developingStyle = {
 		color: darkMode ? "bg-black" : "bg-[#b9b9b9]",
 		opacity: darkMode ? "opacity-10" : "opacity-40",
+	};
+
+	const modalPayload: Payload = {
+		heading,
+		knowledge,
+		proficiency,
+		description,
 	};
 
 	return (
@@ -44,7 +51,7 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 				<div className='w-full pr-6 sm:pr-0 sm:w-[175px]'>
 					<h2
 						className='sm:mb-[-7px] text-[#66bb6a] cursor-pointer'
-						onClick={() => handleOpenModal()}>
+						onClick={() => handleOpenModal(modalPayload)}>
 						{heading}
 					</h2>
 					<div className='flex flex-row sm:block'>
