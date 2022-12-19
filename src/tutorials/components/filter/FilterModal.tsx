@@ -28,7 +28,7 @@ export const FilterModal = (
           : { margin: "20px 50px 50px 50px" }
       }
     >
-      <DialogTitle>{"Filter"}</DialogTitle>
+      <DialogTitle>Filter</DialogTitle>
 
       <Divider sx={{ borderColor: tutorialPurple }} />
       <SingleSelectFilterField

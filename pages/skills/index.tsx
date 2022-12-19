@@ -1,3 +1,4 @@
+import { Dialog } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import {
@@ -7,11 +8,15 @@ import {
 	toolsMetaData,
 } from "../../src/datasources/SkillsMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
+import { SkillModal } from "../../src/skills/components/SkillModal";
 import { Convictions } from "../../src/skills/Convictions";
 import { Languages } from "../../src/skills/languages/Languages";
 import { SkillsColumn } from "../../src/skills/SkillsColumn";
+import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
 import { Footer } from "../../utils/Footer";
 import { splitStringAtFullStop } from "../../utils/splitStringAtFullStop";
+
+const Transition = slideTransition("right");
 
 export const Skills: NextPage = () => {
 	const blurbArray = splitStringAtFullStop(headerBlurb);
@@ -26,6 +31,14 @@ export const Skills: NextPage = () => {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
+
+			<Dialog
+				open={true}
+				TransitionComponent={Transition}
+				keepMounted
+				onClose={() => {}}>
+				{SkillModal()}
+			</Dialog>
 
 			<PageContainer>
 				<div className='max-w-[620px] text-center mx-auto mb-12 pl-2 pr-2'>
