@@ -138,7 +138,7 @@ export const convictionMetaData: ConvictionsRow[] = [
 			"Helps you to maintain a healthy and balanced work-life and prevent burnout. Self-sustainability involves taking care of your physical, mental, and emotional well-being, and finding ways to support yourself and manage stress in a healthy way",
 	},
 	{
-		heading: "User Focused",
+		heading: "User Focused Development",
 		blurb:
 			"Ensures that the software you create meets the needs and expectations of the people who will be using it. User-focused development involves putting yourself in the user's shoes and considering their perspective when designing, building, and testing your software",
 	},

@@ -24,12 +24,14 @@ export const Convictions = ({
 							<h2 className='w-[200px] text-[#66bb6a]'>{grouping.heading}</h2>
 							{blurbArray.map((sentence, index) => {
 								return (
-									<Typography
-										variant='body1'
-										color='text.secondary'
-										key={index}>
-										{sentence}
-									</Typography>
+									<div className={"mb-6"}>
+										<Typography
+											variant='body1'
+											color='text.secondary'
+											key={index}>
+											{sentence}
+										</Typography>
+									</div>
 								);
 							})}
 						</div>
