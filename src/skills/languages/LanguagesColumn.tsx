@@ -29,7 +29,7 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 	return (
 		<div className='relative'>
 			<ShowIf condition={isDeveloping}>
-				<p className='absolute w-full top-14 text-center pr-10'>
+				<p className='absolute w-full top-11 text-center pr-10'>
 					Developing...
 				</p>
 			</ShowIf>
@@ -40,7 +40,7 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 						: ""
 				}>
 				<div className='w-full pr-6 sm:pr-0 sm:w-[175px]'>
-					<h1 className='sm:mb-[-7px]'> {heading} </h1>
+					<h2 className='sm:mb-[-7px] text-[#66bb6a]'> {heading} </h2>
 					<div className='flex flex-row sm:block'>
 						<div className='w-[150px]'>
 							{primeTech.map((item, index) => {

@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { SkillsSubHeading } from "./components/SkillsSubHeading";
 import { Skills } from "./types";
 
@@ -16,16 +17,18 @@ export const SkillsColumn = ({
 				{metaData.map((grouping) => {
 					return (
 						<div key={`${grouping.heading} tools`} className='mr-6 w-[300px]'>
-							<h1 className='mb-[-12px]'> {grouping.heading} </h1>
+							<h2 className='mb-[-6px] text-[#66bb6a]'>{grouping.heading}</h2>
 							{grouping.items && (
 								<div className='flex flex-row flex-wrap mb-6'>
 									{grouping.items.map((item) => {
 										return (
-											<p
-												key={item}
-												className='w-[50%] pr-10 mb-[-3px] lg:pr-5 '>
-												{item}
-											</p>
+											<div
+												className='w-[50%] pt-2 pb-2 pr-10 mb-[-3px] lg:pr-5'
+												key={item}>
+												<Typography variant='body1' color='text.secondary'>
+													{item}
+												</Typography>
+											</div>
 										);
 									})}
 								</div>

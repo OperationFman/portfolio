@@ -2,8 +2,8 @@ import { ColumnData, Skills } from "../skills/types";
 import { ConvictionsRow } from "./../skills/types";
 
 export const headerBlurb = `
-This page outlines my skills and experience with various programming languages, tools, and development methodologies.  
-Click on any of the below items to learn more about my specific skills and experience in each area.`;
+On this page, you'll find an outline of my skills & experience with various programming languages, tools, and development methodologies.
+Click on any of the technologies listed below, you can learn more about my current specific abilities and level of involvement in each area.`;
 
 export const languagesMetaData: ColumnData[] = [
 	{
@@ -90,11 +90,6 @@ export const cloudMetaData: Skills[] = [
 		heading: "AWS",
 		items: ["EC2", "ECR", "Cloudfront", "DynoDB", "Route53", "S3"],
 	},
-
-	{
-		heading: "Other",
-		items: ["Python Anywhere", "Apple Developer", "Heroku", "Vercel"],
-	},
 	{
 		heading: "Google",
 		items: ["GCS", "Firebase", "Android App Distribution"],
@@ -109,6 +104,10 @@ export const cloudMetaData: Skills[] = [
 			"Github Actions",
 			"Jenkins",
 		],
+	},
+	{
+		heading: "Other",
+		items: ["Python Anywhere", "Apple Developer", "Heroku", "Vercel"],
 	},
 ];
 

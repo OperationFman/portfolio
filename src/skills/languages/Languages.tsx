@@ -13,7 +13,7 @@ export const Languages = () => {
 	return (
 		<div className='md:ml-12 md:mr-8 '>
 			<div className='flex justify-center'>
-				<h1 className='m-4 self-center text-[#66bb6a]'>Languages</h1>
+				<h1 className='m-4 self-center'>Languages</h1>
 			</div>
 			<Card>
 				<CardContent className='ml-12 sm:ml-5 md:ml-24 mb-14 sm:mb-0'>

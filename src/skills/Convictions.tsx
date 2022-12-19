@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { SkillsSubHeading } from "./components/SkillsSubHeading";
 import { ConvictionsRow } from "./types";
 
@@ -20,9 +21,16 @@ export const Convictions = ({
 						<div
 							key={`${grouping.heading} conviction`}
 							className='w-full sm:w-1/2 md:w-1/3 p-4'>
-							<h1 className='w-[200px]'>{grouping.heading}</h1>
+							<h2 className='w-[200px] text-[#66bb6a]'>{grouping.heading}</h2>
 							{blurbArray.map((sentence, index) => {
-								return <p key={index}>{sentence}.</p>;
+								return (
+									<Typography
+										variant='body1'
+										color='text.secondary'
+										key={index}>
+										{sentence}
+									</Typography>
+								);
 							})}
 						</div>
 					);
