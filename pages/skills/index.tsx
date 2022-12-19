@@ -1,6 +1,7 @@
 import { Dialog } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useState } from "react";
 import {
 	cloudMetaData,
 	convictionMetaData,
@@ -21,6 +22,12 @@ const Transition = slideTransition("right");
 export const Skills: NextPage = () => {
 	const blurbArray = splitStringAtFullStop(headerBlurb);
 
+	const [showModal, setShowModal] = useState(false);
+
+	const handleOpenModal = () => {
+		setShowModal(true);
+	};
+
 	return (
 		<div>
 			<Head>
@@ -33,11 +40,10 @@ export const Skills: NextPage = () => {
 			</Head>
 
 			<Dialog
-				open={true}
+				open={showModal}
 				TransitionComponent={Transition}
-				keepMounted
-				onClose={() => {}}>
-				{SkillModal()}
+				onClose={() => setShowModal(false)}>
+				<SkillModal setShowModal={setShowModal} />
 			</Dialog>
 
 			<PageContainer>
@@ -51,7 +57,7 @@ export const Skills: NextPage = () => {
 					})}
 				</div>
 
-				<Languages />
+				<Languages handleOpenModal={handleOpenModal} />
 				<div className='sm:flex sm:flex-row justify-evenly flex-wrap'>
 					<SkillsColumn title='Tools' metaData={toolsMetaData} />
 					<SkillsColumn title='Cloud' metaData={cloudMetaData} />

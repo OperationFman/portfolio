@@ -5,7 +5,11 @@ import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { languagesMetaData } from "../../datasources/SkillsMetaData";
 import { LanguageColumn } from "./LanguagesColumn";
 
-export const Languages = () => {
+export const Languages = ({
+	handleOpenModal,
+}: {
+	handleOpenModal: () => void;
+}) => {
 	const { isMobile } = useDeviceDetect();
 
 	const [expandLanguages, setExpandLanguages] = useState(false);
@@ -29,6 +33,7 @@ export const Languages = () => {
 										isExpanded={expandLanguages}
 										isDeveloping={columnData.isDeveloping}
 										isMobile={isMobile}
+										handleOpenModal={handleOpenModal}
 									/>
 								</Grid>
 							);

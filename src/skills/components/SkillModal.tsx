@@ -1,13 +1,23 @@
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { Button, DialogActions, DialogTitle, Divider } from "@mui/material";
+import { DialogTitle, Divider } from "@mui/material";
+import { Dispatch, SetStateAction } from "react";
 
-export const SkillModal = () => {
+export const SkillModal = ({
+	setShowModal,
+}: {
+	setShowModal: Dispatch<SetStateAction<boolean>>;
+}) => {
 	return (
 		<div className='mt-2 mb-4 md:m-4 md:mt-3'>
 			<DialogTitle>
 				<div className='flex justify-between items-center'>
 					<h3 className='m-0 font-bold'>Typescript</h3>
-					<CloseRoundedIcon color='disabled' />
+					<div className='cursor-pointer'>
+						<CloseRoundedIcon
+							color='disabled'
+							onClick={() => setShowModal(false)}
+						/>
+					</div>
 				</div>
 			</DialogTitle>
 			<Divider />

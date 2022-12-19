@@ -7,12 +7,14 @@ import { ColumnData } from "../types";
 type LanguagesColumnProps = {
 	columnData: ColumnData;
 	isExpanded: boolean;
-	isDeveloping: boolean | undefined;
+	isDeveloping: boolean | undeˇfined;
 	isMobile: boolean;
+	handleOpenModal: () => void;
 };
 
 export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
-	const { columnData, isExpanded, isMobile, isDeveloping } = props;
+	const { columnData, isExpanded, isMobile, isDeveloping, handleOpenModal } =
+		props;
 	const { heading, tech } = columnData;
 	const darkMode = useContext(DarkMode);
 
@@ -40,7 +42,11 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 						: ""
 				}>
 				<div className='w-full pr-6 sm:pr-0 sm:w-[175px]'>
-					<h2 className='sm:mb-[-7px] text-[#66bb6a]'> {heading} </h2>
+					<h2
+						className='sm:mb-[-7px] text-[#66bb6a] cursor-pointer'
+						onClick={() => handleOpenModal()}>
+						{heading}
+					</h2>
 					<div className='flex flex-row sm:block'>
 						<div className='w-[150px]'>
 							{primeTech.map((item, index) => {
