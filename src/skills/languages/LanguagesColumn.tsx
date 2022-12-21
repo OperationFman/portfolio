@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
 import ShowIf from "../../../utils/ShowIf";
 import { ColumnData, Payload } from "../types";
+import { LanguagesRow } from "./LanguagesRow";
 
 type LanguagesColumnProps = {
 	columnData: ColumnData;
@@ -12,7 +13,7 @@ type LanguagesColumnProps = {
 	handleOpenModal: (payload: Payload) => void;
 };
 
-export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
+export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const { columnData, isExpanded, isMobile, isDeveloping, handleOpenModal } =
 		props;
 	const { heading, tech, knowledge, proficiency, description } = columnData;
@@ -58,14 +59,11 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 						<div className='w-[150px]'>
 							{primeTech.map((item, index) => {
 								return (
-									<div className='pt-3' key={`${index} ${item}`}>
-										<Typography
-											variant='body1'
-											color='text.secondary'
-											key={item}>
-											{item}
-										</Typography>
-									</div>
+									<LanguagesRow
+										item={item}
+										handleOpenModal={handleOpenModal}
+										key={index}
+									/>
 								);
 							})}
 						</div>
@@ -73,14 +71,11 @@ export const LanguageColumn = (props: LanguagesColumnProps): JSX.Element => {
 							<div className='w-[150px]'>
 								{extraTech.map((item, index) => {
 									return (
-										<div className='pt-3' key={`${index} ${item}`}>
-											<Typography
-												variant='body1'
-												color='text.secondary'
-												key={index}>
-												{item}
-											</Typography>
-										</div>
+										<LanguagesRow
+											item={item}
+											handleOpenModal={handleOpenModal}
+											key={index}
+										/>
 									);
 								})}
 							</div>

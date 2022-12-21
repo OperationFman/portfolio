@@ -4,7 +4,7 @@ import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { languagesMetaData } from "../../datasources/SkillsMetaData";
 import { Payload } from "../types";
-import { LanguageColumn } from "./LanguagesColumn";
+import { LanguagesColumn } from "./LanguagesColumn";
 
 export const Languages = ({
 	handleOpenModal,
@@ -29,7 +29,7 @@ export const Languages = ({
 						{languagesMetaData.map((columnData, index) => {
 							return (
 								<Grid item key={`${index} ${columnData.heading}`} sm={5}>
-									<LanguageColumn
+									<LanguagesColumn
 										columnData={columnData}
 										isExpanded={expandLanguages}
 										isDeveloping={columnData.isDeveloping}

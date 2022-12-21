@@ -5,11 +5,6 @@ export enum Proficiency {
 	HighlyProficient = "Highly Proficient",
 }
 
-export type Descriptions = {
-	key: Proficiency;
-	description: string;
-};
-
 export type Payload = {
 	heading: string;
 	knowledge: string;
@@ -23,7 +18,14 @@ export type ColumnData = {
 	proficiency: Proficiency;
 	description: string;
 	isDeveloping?: boolean;
-	tech: string[];
+	tech: Tech[];
+};
+
+export type Tech = {
+	title: string;
+	knowledge: string;
+	proficiency: Proficiency;
+	description: string;
 };
 
 export type ConvictionsRow = {
