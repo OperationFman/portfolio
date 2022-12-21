@@ -36,7 +36,7 @@ export const SkillModal = (
 					</div>
 				</div>
 			</DialogTitle>
-			<Divider className='border-[#66bb6a] ml-4 mr-4' />
+			<div className='border-[0.5px] border-solid border-[#66bb6a] ml-4 mr-4' />
 			<div className='ml-12 mr-12 mb-14'>
 				{knowledgeSentences.map((sentence, index) => {
 					return <p key={index}>{sentence}</p>;
