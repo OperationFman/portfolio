@@ -45,7 +45,9 @@ export const SkillModal = (
 				<Divider />
 				<div className='sm:flex'>
 					<h3 className='mb-0 sm:mb-5'>Knowledge:</h3>
-					<h3 className='font-normal mt-0 sm:mt-5 sm:ml-4'>{proficiency}</h3>
+					<h3 className='font-normal mt-0 sm:mt-[19px] sm:ml-4'>
+						{proficiency}
+					</h3>
 				</div>
 				<Divider />
 				{descriptionSentences.map((sentence, index) => {

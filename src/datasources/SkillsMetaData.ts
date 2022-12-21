@@ -5,25 +5,17 @@ export const headerBlurb = `
 On this page, you'll find an outline of my skills & experience with various programming languages, tools, and development methodologies.
 Click on any of the technologies listed below, you can learn more about my current specific abilities and level of involvement in each area.`;
 
-const { HighlyProficient } = Proficiency;
+const { Learning, Capable, Proficient, HighlyProficient } = Proficiency;
 
-const proficiencyDescription: Descriptions[] = [
-	{
-		key: HighlyProficient,
-		description:
-			"Can lead pairing on a project no matter who the pair is. Very comfortable in the language and can teach others at different skill levels and in different project situations.",
-	},
-];
-
-const getDescription = (proficiency: Proficiency) => {
-	const description = proficiencyDescription.find(
-		(description) => description.key === proficiency,
-	);
-
-	if (!description) {
-		return "Something went wrong";
-	}
-	return description.description;
+const Description = {
+	Learning:
+		"Want to learn for career development. I've never worked with it professionally and knowledge is theoretical only. But I am interested in this and want to prove myself.",
+	Capable:
+		"Practiced some. Knowledge is practical and I have played around a little but haven’t gone into significant depth yet.",
+	Proficient:
+		"I've worked with it, I've gone into depth, and I'm comfortable guiding others. I can pair with other developers and influence at my peer level and with folks I'm guiding.",
+	HighlyProficient:
+		"Can lead pairing on a project no matter who the pair is. Very comfortable in the language and can teach others at different skill levels and in different project situations.",
 };
 
 export const languagesMetaData: ColumnData[] = [
@@ -32,7 +24,7 @@ export const languagesMetaData: ColumnData[] = [
 		knowledge:
 			"I have a strong understanding in the language and am confident in my ability to use it effectively. My understanding of the syntax and modern concepts of the language, as well as the tools and frameworks that are commonly used with it is very strong. JavaScript has evolved over time and I genuinely enjoy staying up-to-date with the latest developments.",
 		proficiency: HighlyProficient,
-		description: getDescription(HighlyProficient),
+		description: Description.HighlyProficient,
 		tech: [
 			"Typescript",
 			"React",
@@ -50,9 +42,10 @@ export const languagesMetaData: ColumnData[] = [
 	},
 	{
 		heading: "Python",
-		knowledge: "foo",
-		proficiency: HighlyProficient,
-		description: getDescription(HighlyProficient),
+		knowledge:
+			"I use Python to write scripts for automation, data processing, web development and other tasks that require quick and efficient execution. My favorite aspect of Python is the integration of hardware and software components that allow for physical inventions, automated tooling and robots.",
+		proficiency: Proficient,
+		description: Description.Proficient,
 		tech: [
 			"Flask",
 			"Django",
@@ -69,8 +62,8 @@ export const languagesMetaData: ColumnData[] = [
 	{
 		heading: "C#",
 		knowledge: "foo",
-		proficiency: HighlyProficient,
-		description: getDescription(HighlyProficient),
+		proficiency: Learning,
+		description: Description.Learning,
 		isDeveloping: true,
 		tech: ["ASP .NET Core", "XUnit", "Unity"],
 	},
@@ -78,7 +71,7 @@ export const languagesMetaData: ColumnData[] = [
 		heading: "Misc.",
 		knowledge: "foo",
 		proficiency: HighlyProficient,
-		description: getDescription(HighlyProficient),
+		description: Description.HighlyProficient,
 		tech: [
 			"Docker",
 			"Terraform",

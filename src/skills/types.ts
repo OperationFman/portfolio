@@ -1,5 +1,4 @@
 export enum Proficiency {
-	Unknown = "Unknown",
 	Learning = "Learning",
 	Capable = "Capable",
 	Proficient = "Proficient",
