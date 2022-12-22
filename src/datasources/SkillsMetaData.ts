@@ -29,7 +29,7 @@ export const languagesMetaData: ColumnData[] = [
 			{
 				title: "Typescript",
 				knowledge:
-					"I have a strong understanding of the benefits and drawbacks of using Typescript, it's benefits of type safety improves the reliability and maintainability of code. TypeScript's features can be effectively applied to build robust and easier to scale code bases.",
+					"I have used Typescript in various projects, including web applications and mobile apps, and have found that it helps me catch errors early on in the development process, reducing the time spent on debugging and testing. Additionally, Typescript's type system allows me to write more modular and reusable code, which helps me work more efficiently and effectively.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
@@ -210,7 +210,7 @@ export const languagesMetaData: ColumnData[] = [
 			{
 				title: "XUnit",
 				knowledge:
-					"To compliment my learning of dotNET, I must ensure I'm writing maintainable reliable C# code with unit test.",
+					"To compliment my learning of dotNET, I must ensure I'm writing maintainable reliable C# code with XUnit unit tests.",
 				proficiency: Learning,
 				description: Description.Learning,
 			},

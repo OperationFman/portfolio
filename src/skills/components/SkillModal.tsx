@@ -27,7 +27,7 @@ export const SkillModal = (
 		<div className='mt-2 mb-4 md:m-4 md:mt-3'>
 			<DialogTitle>
 				<div className='flex justify-between items-center'>
-					<h3 className='m-0 font-bold'>{heading}</h3>
+					<h3 className='m-0 ml-6 font-bold'>{heading}</h3>
 					<div className='cursor-pointer'>
 						<CloseRoundedIcon
 							color='disabled'
