@@ -28,75 +28,88 @@ export const languagesMetaData: ColumnData[] = [
 		tech: [
 			{
 				title: "Typescript",
-				knowledge: "foo",
+				knowledge:
+					"I have a strong understanding of the benefits and drawbacks of using Typescript, it's benefits of type safety improves the reliability and maintainability of code. TypeScript's features can be effectively applied to build robust and easier to scale code bases.",
 				proficiency: HighlyProficient,
-				description: "bar",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "React",
-				knowledge: "foo bar",
+				knowledge:
+					"I have a strong understanding of the framework and am able to effectively utilize its features to build efficient and effective user interfaces. I'm confident in my ability to troubleshoot and debug issues that may arise while working with React, and am able to quickly adapt to new features and updates to the framework.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "React Native",
-				knowledge: "foo bar",
+				knowledge:
+					"I am able to effectively utilize its features to build high-quality, performant mobile applications. I'm also confident in my ability to troubleshoot issues and find solutions when working with React Native and have a good sense of best practices and design patterns for building applications and am able to apply this knowledge to my projects.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Jest",
-				knowledge: "foo bar",
+				knowledge:
+					"I am effective at using Jest to write and run tests for various back and frontend applications. I'm familiar with the various assertion methods and test utilities that Jest provides, and you am able to troubleshoot and debug any issues that may arise during testing.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "NextJS",
-				knowledge: "foo bar",
+				knowledge:
+					"I have a strong understanding of Vercels NextJS features like SSR and Code splitting. I am able to effectively apply them in various projects and am confident in my ability to use NextJs to build high-quality applications and am able to troubleshoot any issues that may arise.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "GraphQL",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "Redux",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "React Testing Library",
-				knowledge: "foo bar",
+				knowledge:
+					"I've used RTL on various front end projects and have a good understanding of its benefits and drawbacks when compared to alternative libraries, and I'm able to effectively apply it when practicing effective TDD.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
+			},
+
+			{
+				title: "Node",
+				knowledge:
+					"I can confidently say that I use it regularly in my work and have a strong understanding of its benefits and drawbacks. Benefits of using NodeJS include its ability to handle a large number of concurrent connections, its lightweight and efficient nature, and its support for real-time web applications. It is a flawed tool, given it's single-threaded nature.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "GraphQL",
+				knowledge:
+					"I've worked with GraphQL on various projects and am familiar with its benefits and drawbacks. For example, some benefits include the ability to request specific data from an API, usage of a single endpoint for all data queries, and the ability to easily update and evolve the API. Drawbacks include the need for a GraphQL server, the learning curve for developers who are new to the technology, and the potential for performance issues if not implemented correctly.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Redux",
+				knowledge:
+					"I have used React Redux and have a solid understanding of its ability to manage complex state in a scalable and maintainable way. It allows for clear separation of concerns, making it easier to understand and update the codebase. Additionally, it provides a predictable way to update the application's state, which helps to minimize potential bugs. However, there are also some drawbacks to using React Redux, such as added complexity.",
+				proficiency: HighlyProficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "React Spring",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"I find React Spring valuable in my work as a developer because it allows me to create visually appealing and engaging animations that add depth and interactivity to my projects. I have found that using React Spring can help to make my applications more dynamic and engaging, which can be particularly useful in creating user interfaces that are intuitive and easy to use. Overall, I believe that React Spring is a valuable tool for any developer looking to create high-quality animations in their projects.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "JQuery",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "Node",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"I've Jquery on various legacy applications and understand it's valuable tool for manipulating the DOM and adding interactivity to my web applications. However, it is important to consider the drawbacks of using Jquery, it can add a significant amount of weight to a page if many Jquery plugins are used, and it is not as performant as some newer JavaScript libraries and frameworks.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "Express",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"I find it to be a valuable tool in my work. I use it regularly in my projects and have a strong understanding of its features and capabilities. ExpressJS is a lightweight, flexible framework that makes it easy to build web applications and APIs. It provides a wide range of features and middleware that can be easily customized and integrated into any project. I appreciate the simplicity and power of ExpressJS, and find it to be an essential part of my toolkit as a developer.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 		],
 	},
@@ -109,63 +122,73 @@ export const languagesMetaData: ColumnData[] = [
 		tech: [
 			{
 				title: "Flask",
-				knowledge: "foo bar",
+				knowledge:
+					"I can confidently say that I am very familiar with it and use it regularly in my projects. I have a strong understanding of its features and capabilities, and am able to effectively apply them to build web applications. In my experience, Python Flask has proven to be a valuable tool for building web applications quickly and efficiently. Its simplicity and flexibility make it an excellent choice for a wide range of projects.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "Django",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "PyTest",
-				knowledge: "foo bar",
+				knowledge:
+					" I find it to be a valuable tool for testing my code. PyTest makes it easy to write and execute tests, and the ability to run tests in parallel helps to speed up the testing process. In addition, the rich set of features offered by PyTest, such as fixture support and the ability to customize test discovery, make it a flexible and powerful testing framework.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Selenium",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"I have found it to be a valuable tool for automating web browser tasks. It allows me to easily write scripts that can interact with websites and perform tasks such as filling out forms, clicking buttons, and navigating pages. This can save a lot of time and effort, especially when it comes to tasks that need to be repeated frequently or on a large scale.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "RapidAPI",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "NumPy",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "Pandas",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "Scrapy",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "PyGame",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"I have found it to be a valuable tool in my work. It allows me to easily access and integrate a wide range of APIs into my projects, saving me time and effort in the development process. I have used Python RapidAPI to connect to a variety of APIs and have found it to be easy to use and reliable. I appreciate the convenience and efficiency that it provides, and believe it is a valuable resource for any developer working with APIs.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Unittest",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"Using Python Unittest has helped me to write more robust and reliable code. It gives me confidence that my code is working as intended and allows me to catch and fix issues before they become more significant problems.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Django",
+				knowledge:
+					" I have a strong understanding of its capabilities and how it can be used to build powerful web applications. I have found it to be a valuable tool in my work as a developer because it provides a robust and flexible framework that makes it easy to build and maintain complex applications. In addition, the extensive library of tools and modules available for Django makes it possible to add a wide range of functionality to applications, further enhancing its value as a development platform.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "NumPy",
+				knowledge:
+					"I have used NumPy in a variety of projects, including scientific computing and machine learning, and have come to appreciate its efficiency and versatility. Overall, I believe that my experience with NumPy has helped me to become a more effective and efficient developer, and I continue to find it valuable in my work.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "Pandas",
+				knowledge:
+					"Pandas is a powerful library for data analysis and manipulation, and I have used it to perform a variety of tasks such as cleaning and preprocessing data, aggregating and summarizing data, and creating charts and visualizations.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "Scrapy",
+				knowledge:
+					"I have used it in the past for tasks such as gathering information for data analysis or building a database of information from the web.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "PyGame",
+				knowledge:
+					"I am familiar with its capabilities and have experience applying it in a university project setting. I find Python PyGame to be a valuable tool for building interactive and visually appealing applications.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 		],
 	},
@@ -179,21 +202,24 @@ export const languagesMetaData: ColumnData[] = [
 		tech: [
 			{
 				title: "ASP .NET Core",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"I'm excited to be prioritizing dotNET as my next major learning goal.",
+				proficiency: Learning,
+				description: Description.Learning,
 			},
 			{
 				title: "XUnit",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"To compliment my learning of dotNET, I must ensure I'm writing maintainable reliable C# code with unit test.",
+				proficiency: Learning,
+				description: Description.Learning,
 			},
 			{
 				title: "Unity",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"After I feel confident with C# and dotNET I hope to explore game development with Unity.",
+				proficiency: Learning,
+				description: Description.Learning,
 			},
 		],
 	},
