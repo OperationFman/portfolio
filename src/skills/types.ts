@@ -5,35 +5,24 @@ export enum Proficiency {
 	HighlyProficient = "Highly Proficient",
 }
 
-export type Payload = {
-	heading: string;
-	knowledge: string;
-	proficiency: Proficiency;
-	description: string;
-};
-
-export type ColumnData = {
-	heading: string;
-	knowledge: string;
-	proficiency: Proficiency;
-	description: string;
-	isDeveloping?: boolean;
-	tech: Tech[];
-};
-
-export type Tech = {
+export type MetaData = {
 	title: string;
 	knowledge: string;
 	proficiency: Proficiency;
 	description: string;
 };
 
-export type ConvictionsRow = {
-	heading: string;
-	blurb: string;
+export interface ColumnData extends MetaData {
+	isDeveloping?: boolean;
+	data: MetaData[];
+}
+
+export type SkillData = {
+	title: string;
+	data: MetaData[];
 };
 
-export type Skills = {
-	heading: string;
-	items: string[];
+export type ConvictionsRow = {
+	title: string;
+	blurb: string;
 };

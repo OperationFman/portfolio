@@ -6,14 +6,14 @@ import {
 	cloudMetaData,
 	convictionMetaData,
 	headerBlurb,
-	toolsMetaData,
+	toolsMetaData
 } from "../../src/datasources/SkillsMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { SkillModal } from "../../src/skills/components/SkillModal";
 import { Convictions } from "../../src/skills/Convictions";
 import { Languages } from "../../src/skills/languages/Languages";
 import { SkillsColumn } from "../../src/skills/SkillsColumn";
-import { Payload, Proficiency } from "../../src/skills/types";
+import { MetaData } from "../../src/skills/types";
 import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
 import { Footer } from "../../utils/Footer";
 import { splitStringAtFullStop } from "../../utils/splitStringAtFullStop";
@@ -24,9 +24,9 @@ export const Skills: NextPage = () => {
 	const blurbArray = splitStringAtFullStop(headerBlurb);
 
 	const [showModal, setShowModal] = useState(false);
-	const [modalPayload, setModalPayload] = useState<Payload>();
+	const [modalPayload, setModalPayload] = useState<MetaData>();
 
-	const handleOpenModal = (payload: Payload) => {
+	const handleOpenModal = (payload: MetaData) => {
 		setModalPayload(payload);
 		setShowModal(true);
 	};

@@ -3,13 +3,13 @@ import { useState } from "react";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { languagesMetaData } from "../../datasources/SkillsMetaData";
-import { Payload } from "../types";
+import { MetaData } from "../types";
 import { LanguagesColumn } from "./LanguagesColumn";
 
 export const Languages = ({
 	handleOpenModal,
 }: {
-	handleOpenModal: (payload: Payload) => void;
+	handleOpenModal: (payload: MetaData) => void;
 }) => {
 	const { isMobile } = useDeviceDetect();
 
@@ -28,7 +28,7 @@ export const Languages = ({
 						justifyContent='space-evenly'>
 						{languagesMetaData.map((columnData, index) => {
 							return (
-								<Grid item key={`${index} ${columnData.heading}`} sm={5}>
+								<Grid item key={`${index} ${columnData.title}`} sm={5}>
 									<LanguagesColumn
 										columnData={columnData}
 										isExpanded={expandLanguages}

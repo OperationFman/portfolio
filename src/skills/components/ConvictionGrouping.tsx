@@ -11,9 +11,9 @@ export const ConvictionGrouping = ({
 
 	return (
 		<div
-			key={`${grouping.heading} conviction`}
+			key={`${grouping.title} conviction`}
 			className='w-full sm:w-1/2 md:w-1/3 p-4'>
-			<h2 className='w-[200px] text-[#66bb6a]'>{grouping.heading}</h2>
+			<h2 className='w-[200px] text-[#66bb6a]'>{grouping.title}</h2>
 			{blurbArray.map((sentence, index) => {
 				return (
 					<div className={"mb-6"} key={index}>

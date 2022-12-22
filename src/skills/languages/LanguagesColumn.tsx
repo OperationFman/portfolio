@@ -1,8 +1,7 @@
-import { Typography } from "@mui/material";
 import { useContext } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
 import ShowIf from "../../../utils/ShowIf";
-import { ColumnData, Payload } from "../types";
+import { ColumnData, MetaData } from "../types";
 import { LanguagesRow } from "./LanguagesRow";
 
 type LanguagesColumnProps = {
@@ -10,13 +9,13 @@ type LanguagesColumnProps = {
 	isExpanded: boolean;
 	isDeveloping: boolean | undefined;
 	isMobile: boolean;
-	handleOpenModal: (payload: Payload) => void;
+	handleOpenModal: (payload: MetaData) => void;
 };
 
 export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const { columnData, isExpanded, isMobile, isDeveloping, handleOpenModal } =
 		props;
-	const { heading, tech, knowledge, proficiency, description } = columnData;
+	const { title, data: tech, knowledge, proficiency, description } = columnData;
 	const darkMode = useContext(DarkMode);
 
 	const TOTAL_PRIME_ITEMS = 5;
@@ -29,8 +28,8 @@ export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
 		opacity: darkMode ? "opacity-10" : "opacity-40",
 	};
 
-	const modalPayload: Payload = {
-		heading,
+	const modalPayload: MetaData = {
+		title: title,
 		knowledge,
 		proficiency,
 		description,
@@ -53,7 +52,7 @@ export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
 					<h2
 						className='sm:mb-[-7px] text-[#66bb6a] cursor-pointer'
 						onClick={() => handleOpenModal(modalPayload)}>
-						{heading}
+						{title}
 					</h2>
 					<div className='flex flex-row sm:block'>
 						<div className='w-[150px]'>

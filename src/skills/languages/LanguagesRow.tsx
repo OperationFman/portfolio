@@ -1,17 +1,17 @@
 import { Typography } from "@mui/material";
-import { Payload, Tech } from "../types";
+import { MetaData } from "../types";
 
 export const LanguagesRow = ({
 	item,
 	handleOpenModal,
 }: {
-	item: Tech;
-	handleOpenModal: (payload: Payload) => void;
+	item: MetaData;
+	handleOpenModal: (payload: MetaData) => void;
 }) => {
 	const { title, knowledge, proficiency, description } = item;
 
-	const modalPayload: Payload = {
-		heading: title,
+	const modalPayload: MetaData = {
+		title: title,
 		knowledge,
 		proficiency,
 		description,

@@ -2,15 +2,15 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { DialogTitle, Divider } from "@mui/material";
 import { Dispatch, SetStateAction } from "react";
 import { splitStringAtFullStop } from "../../../utils/splitStringAtFullStop";
-import { Payload } from "../types";
+import { MetaData } from "../types";
 
 export const SkillModal = (
 	setShowModal: Dispatch<SetStateAction<boolean>>,
-	payload: Payload | undefined,
+	payload: MetaData | undefined,
 ) => {
 	if (
 		!payload ||
-		!payload?.heading ||
+		!payload?.title ||
 		!payload?.knowledge ||
 		!payload?.proficiency ||
 		!payload?.description
@@ -18,7 +18,7 @@ export const SkillModal = (
 		return;
 	}
 
-	const { heading, knowledge, proficiency, description } = payload;
+	const { title: heading, knowledge, proficiency, description } = payload;
 
 	const knowledgeSentences = splitStringAtFullStop(knowledge);
 	const descriptionSentences = splitStringAtFullStop(description);

@@ -1,4 +1,4 @@
-import { ColumnData, Proficiency, Skills } from "../skills/types";
+import { ColumnData, Proficiency, SkillData } from "../skills/types";
 import { ConvictionsRow } from "./../skills/types";
 
 export const headerBlurb = `
@@ -20,12 +20,12 @@ const Description = {
 
 export const languagesMetaData: ColumnData[] = [
 	{
-		heading: "Javascript",
+		title: "Javascript",
 		knowledge:
 			"I have a strong understanding in the language and am confident in my ability to use it effectively. My understanding of the syntax and modern concepts of the language, as well as the tools and frameworks that are commonly used with it is very strong. JavaScript has evolved over time and I genuinely enjoy staying up-to-date with the latest developments.",
 		proficiency: HighlyProficient,
 		description: Description.HighlyProficient,
-		tech: [
+		data: [
 			{
 				title: "Typescript",
 				knowledge:
@@ -114,12 +114,12 @@ export const languagesMetaData: ColumnData[] = [
 		],
 	},
 	{
-		heading: "Python",
+		title: "Python",
 		knowledge:
 			"I use Python to write scripts for automation, data processing, web development and other tasks that require quick and efficient execution. My favorite aspect of Python is the integration of hardware and software components that allow for physical inventions, automated tooling and robots.",
 		proficiency: Proficient,
 		description: Description.Proficient,
-		tech: [
+		data: [
 			{
 				title: "Flask",
 				knowledge:
@@ -193,13 +193,13 @@ export const languagesMetaData: ColumnData[] = [
 		],
 	},
 	{
-		heading: "C#",
+		title: "C#",
 		knowledge:
 			"C sharp is a modern and object-oriented language, which means it is well-suited for building robust and scalable backend systems. This can be particularly useful as I am interested in becoming a backend and infrastructure expert.",
 		proficiency: Learning,
 		description: Description.Learning,
 		isDeveloping: true,
-		tech: [
+		data: [
 			{
 				title: "ASP .NET Core",
 				knowledge:
@@ -224,12 +224,12 @@ export const languagesMetaData: ColumnData[] = [
 		],
 	},
 	{
-		heading: "Misc.",
+		title: "Misc.",
 		knowledge:
 			"Various languages that I'm fully capable of working in. I understand them well and have significant real world world experience with each of them.",
 		proficiency: Proficient,
 		description: Description.Proficient,
-		tech: [
+		data: [
 			{
 				title: "HTML",
 				knowledge:
@@ -297,86 +297,314 @@ export const languagesMetaData: ColumnData[] = [
 	},
 ];
 
-export const toolsMetaData: Skills[] = [
+export const toolsMetaData: SkillData[] = [
 	{
-		heading: "Dev",
-		items: ["Github", "Insomnia", "Postman", "Ubuntu", "Debian", "Rasbian"],
-	},
-	{
-		heading: "VFX",
-		items: ["Davinci Resolve", "Blender", "Google Earth Studio", "Sony Vegas"],
-	},
-	{
-		heading: "Adobe",
-		items: [
-			"Photoshop",
-			"After Effects",
-			"InDesign",
-			"Illustrator",
-			"Premiere",
-			"XD",
+		title: "Dev",
+		data: [
+			{
+				title: "Github",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Insomnia",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Postman",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Ubuntu",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Debian",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Rasbian",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
 		],
 	},
 	{
-		heading: "Imaging",
-		items: ["Image Magick", "Figma", "Skylum Luminar", "Gimp"],
+		title: "VFX",
+		data: [
+			{
+				title: "Davinci Resolve",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Blender",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Google Earth Studio",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Sony Vegas",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+		],
+	},
+	{
+		title: "Adobe",
+		data: [
+			{
+				title: "Photoshop",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "After Effects",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "InDesign",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Illustrator",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Premiere",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "XD",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+		],
+	},
+	{
+		title: "Imaging",
+		data: [
+			{
+				title: "Image Magick",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Figma",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Skylum Luminar",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Gimp",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+		],
 	},
 ];
 
-export const cloudMetaData: Skills[] = [
+export const cloudMetaData: SkillData[] = [
 	{
-		heading: "AWS",
-		items: ["EC2", "ECR", "Cloudfront", "DynoDB", "Route53", "S3"],
-	},
-	{
-		heading: "Google",
-		items: ["GCS", "Firebase", "Android App Distribution"],
-	},
-	{
-		heading: "CI/CD",
-		items: [
-			"CircleCI",
-			"GoCD",
-			"Buildkite",
-			"Travis CI",
-			"Github Actions",
-			"Jenkins",
+		title: "AWS",
+		data: [
+			{
+				title: "EC2",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "ECR",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Cloudfront",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "DynoDB",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Route53",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "S3",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
 		],
 	},
 	{
-		heading: "Other",
-		items: ["Python Anywhere", "Apple Developer", "Heroku", "Vercel"],
+		title: "Google",
+		data: [
+			{
+				title: "GCS",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Firebase",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Android App Distribution",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+		],
+	},
+	{
+		title: "CI/CD",
+		data: [
+			{
+				title: "CircleCI",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "GoCD",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Buildkite",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Travis CI",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Github Actions",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Jenkins",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+		],
+	},
+	{
+		title: "Other",
+		data: [
+			{
+				title: "Python Anywhere",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Apple Developer",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Heroku",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+			{
+				title: "Vercel",
+				knowledge: "foo",
+				proficiency: HighlyProficient,
+				description: "foo",
+			},
+		],
 	},
 ];
 
 export const convictionMetaData: ConvictionsRow[] = [
 	{
-		heading: "Pair Programming",
+		title: "Pair Programming",
 		blurb:
 			"A developer's productivity should be evaluated based on the problems they solve. Pair programming enables developers to solve problems more efficiently, share knowledge, and improve their skills",
 	},
 	{
-		heading: "Automated Testing",
+		title: "Automated Testing",
 		blurb:
 			"A reliable testing pipeline can ensure that the platform functions correctly without developer intervention, saving time and effort. Making the development process more efficient and effective",
 	},
 	{
-		heading: "Test Driven Development",
+		title: "Test Driven Development",
 		blurb:
 			"Improve the quality of code by ensuring that it is correct and complete. By writing tests before writing the code, you can identify and fix problems early in the development process, before they become more difficult and costly to fix",
 	},
 	{
-		heading: "Continuous Learning",
+		title: "Continuous Learning",
 		blurb:
 			"The field of software development is constantly evolving and changing. New technologies, tools, and best practices are being developed all the time, and staying up to date with these developments is essential for staying competitive and ensuring that you are able to deliver the best possible solutions",
 	},
 	{
-		heading: "Self Sustainability",
+		title: "Self Sustainability",
 		blurb:
 			"Helps you to maintain a healthy and balanced work-life and prevent burnout. Self-sustainability involves taking care of your physical, mental, and emotional well-being, and finding ways to support yourself and manage stress in a healthy way",
 	},
 	{
-		heading: "User Focused Development",
+		title: "User Focused Development",
 		blurb:
 			"Ensures that the software you create meets the needs and expectations of the people who will be using it. User-focused development involves putting yourself in the user's shoes and considering their perspective when designing, building, and testing your software",
 	},
