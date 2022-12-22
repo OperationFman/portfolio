@@ -231,58 +231,67 @@ export const languagesMetaData: ColumnData[] = [
 		description: Description.Proficient,
 		tech: [
 			{
-				title: "Docker",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "Terraform",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
 				title: "HTML",
-				knowledge: "foo bar",
+				knowledge:
+					"In my experience, HTML has proven to be a core reliable and essential part of any web developers career. It allows me to create well-structured and visually appealing web pages, and I am comfortable using it to implement a wide range of design elements in various methods.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "CSS",
-				knowledge: "foo bar",
+				knowledge:
+					"I have used CSS in numerous projects in the past and have found it to be an invaluable tool for styling and formatting the front-end of web applications. I appreciate the flexibility and control that CSS gives me as a developer, and I am confident in my ability to use it effectively to create visually appealing and user-friendly interfaces.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 			{
-				title: "SQL",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
-			},
-			{
-				title: "Bash / Shell",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				title: "Docker",
+				knowledge:
+					"I understand the value it brings to projects. Docker allows for easy containerization of applications, which makes it easier to deploy and run applications in different environments. I have used Docker in a variety of projects, including deploying and scaling web applications and microservices.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Git",
-				knowledge: "foo bar",
-				proficiency: HighlyProficient,
-				description: "foo bar",
+				knowledge:
+					"Git allows for version control of code, which means I can track changes made to my code over time and easily revert back to previous versions if necessary. It also makes it easy to collaborate with other developers by allowing us to work on the same codebase without overwriting each other's changes. Overall, I find Git to be an invaluable tool for any developer, as it helps to streamline the development process and make it more efficient and effective.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Terraform",
+				knowledge:
+					"Its declarative configuration language makes it easy to understand and maintain infrastructure as code, which helps to improve the reliability and repeatability of my deployments. Overall, I have found Terraform to be an invaluable tool in my work as a developer and believe it can be a valuable asset for any organization.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "SQL",
+				knowledge:
+					"I have used SQL to write queries to extract, manipulate, and analyze data, and you have gained a good understanding of its syntax and capabilities. ",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "Bash / Shell",
+				knowledge:
+					"BASH/Shell allows me to automate tasks and perform actions quickly and efficiently on the command line. I have used it to manage and manipulate files and directories, run scripts, and execute commands on remote servers.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "Tailwind",
-				knowledge: "foo bar",
+				knowledge:
+					"I find it valuable because it is a utility-first CSS framework that allows me to rapidly build custom user interfaces with ease. Instead of having to write custom CSS for every design element, I can use the pre-defined utility classes provided by Tailwind to style my components quickly and consistently. This saves me a lot of time and effort when building and styling web applications, as I don't have to spend as much time writing custom CSS.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Bootstrap",
-				knowledge: "foo bar",
+				knowledge:
+					"One of the main reasons I find Bootstrap valuable is because it saves me a lot of time in the development process. With its pre-designed components and grid system, I can easily create a consistent and professional looking layout without having to write a lot of custom CSS.",
 				proficiency: HighlyProficient,
-				description: "foo bar",
+				description: Description.HighlyProficient,
 			},
 		],
 	},
