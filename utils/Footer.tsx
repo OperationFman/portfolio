@@ -18,7 +18,7 @@ export const Footer = ({ margin = true }: { margin?: boolean }) => {
 				onClick={() => toPageTop()}
 				variant='text'
 				style={{ width: "100vw", color: "#949494" }}>
-				Back to top
+				Back To Top
 			</Button>
 		</footer>
 	);
