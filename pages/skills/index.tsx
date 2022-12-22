@@ -62,8 +62,8 @@ export const Skills: NextPage = () => {
 
 				<Languages handleOpenModal={handleOpenModal} />
 				<div className='sm:flex sm:flex-row justify-evenly flex-wrap'>
-					<SkillsColumn title='Tools' metaData={toolsMetaData} />
-					<SkillsColumn title='Cloud' metaData={cloudMetaData} />
+					<SkillsColumn title='Tools' metaData={toolsMetaData} handleOpenModal={handleOpenModal}/>
+					<SkillsColumn title='Cloud' metaData={cloudMetaData} handleOpenModal={handleOpenModal} />
 				</div>
 				<Convictions title='Convictions' metaData={convictionMetaData} />
 			</PageContainer>

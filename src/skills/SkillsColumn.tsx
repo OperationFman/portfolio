@@ -1,13 +1,15 @@
 import { SkillsGrouping } from "./components/SkillGrouping";
 import { SkillsSubHeading } from "./components/SkillsSubHeading";
-import { SkillData } from "./types";
+import { MetaData, SkillData } from "./types";
 
 export const SkillsColumn = ({
 	title,
 	metaData,
+	handleOpenModal
 }: {
 	title: string;
 	metaData: SkillData[];
+	handleOpenModal: (payload: MetaData) => void;
 }) => {
 	return (
 		<div className='mt-20 ml-[-10px]'>
@@ -18,7 +20,7 @@ export const SkillsColumn = ({
 					return (
 						<div key={`${grouping.title} tools`} className='mr-6 w-[300px]'>
 							<h2 className='mb-[-6px] text-[#66bb6a]'>{grouping.title}</h2>
-							<SkillsGrouping grouping={grouping} />
+							<SkillsGrouping grouping={grouping} handleOpenModal={handleOpenModal} />
 						</div>
 					);
 				})}

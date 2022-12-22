@@ -29,7 +29,7 @@ export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
 	};
 
 	const modalPayload: MetaData = {
-		title: title,
+		title,
 		knowledge,
 		proficiency,
 		description,
