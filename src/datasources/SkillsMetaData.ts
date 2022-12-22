@@ -466,39 +466,45 @@ export const cloudMetaData: SkillData[] = [
 		data: [
 			{
 				title: "EC2",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, scalable compute capacity in the cloud, allowing users to launch and manage virtual machines (known as EC2 instances) that can run a variety of applications. I regularly use this across almost every project for CI/CD pipelines and scalable cloud deployments.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "ECR",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"AWS Elastic Container Registry (ECR) is a fully-managed Docker container registry that makes it easy to store, manage, and deploy Docker container images. I've used it on multiple projects as a step in our deployment automation process as it's highly secure and reliable.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "Cloudfront",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"AWS CloudFront is a content delivery network (CDN) that speeds up the delivery of static and dynamic web content, such as HTML, CSS, JavaScript, and images, to users by caching the content at edge locations around the world. It's an incredibly powerful tool that I've used to significantly improve the scalability of a web app.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "DynoDB",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability, allowing users to store and retrieve any amount of data, and serve any level of request traffic. It is frequently my go-to for simpler small apps that just require a key-value database solution.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Route53",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Amazon Web Services Route 53 is a highly available and scalable Domain Name System (DNS) web service that translates domain names into numerical IP addresses, allowing computers to connect to each other and access websites. Most of my personal domains were setup via R53.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "S3",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Amazon Simple Storage Service (S3) is a cloud storage service that enables users to store and retrieve large amounts of data from anywhere on the internet. like much of AWS services, it's an outstanding value option for storing blobs, apps destined for testing and release and also simply any user submitted documents.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 		],
 	},
@@ -507,21 +513,24 @@ export const cloudMetaData: SkillData[] = [
 		data: [
 			{
 				title: "GCS",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Google Cloud Services is a suite of cloud computing services that allows users to build, test, and deploy applications and websites, store and analyze data, and manage infrastructure and resources using Google's network of servers and infrastructure. Along with C# this is a focus of mine currently to develop and become proficient in.",
+				proficiency: Learning,
+				description: Description.Learning,
 			},
 			{
 				title: "Firebase",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Google Firebase is a platform that provides a variety of tools and services for building mobile and web applications, including a real-time database, user authentication, hosting, and analytics. I've used it to push data to client devices instead of using sockets and intend to keep learning it as it's an awesome solution for backend problems.",
+				proficiency: Learning,
+				description: Description.Learning,
 			},
 			{
 				title: "Android App Distribution",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Android App Distribution is a process by which Android apps are made available for users to download and install on their devices via the google play store. I've worked on projects where it was an integral part of the release process and required me to understand how it functioned, how to use the provided indicators and also how to debug.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 		],
 	},
@@ -530,39 +539,45 @@ export const cloudMetaData: SkillData[] = [
 		data: [
 			{
 				title: "CircleCI",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"CircleCI is a continuous integration and delivery platform that helps development teams build, test, and deploy their code rapidly and reliably. I've used it on multiple projects to handle testing requirements and is an excellent tool to create visibility of code status.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "GoCD",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"GoCD is a continuous delivery platform that helps organizations automate and track the build, test, and release process for their software projects, enabling them to deliver high-quality software faster and more reliably. I've used it on multiple projects to handle testing requirements and is an excellent tool to create visibility of code status.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "Buildkite",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Buldkite is a tool for continuous integration and continuous delivery that allows users to build, test, and deploy their software projects automatically, ensuring that their code is always up to date and in a deployable state. I've used it on multiple projects to handle testing requirements and is an excellent tool to create visibility of code status.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Travis CI",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Travis CI is a continuous integration tool that allows developers to automatically build, test, and deploy their software projects, typically as part of a larger development workflow. I've used it on multiple projects to handle testing requirements and is an excellent tool to create visibility of code status.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Github Actions",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"GitHub Actions is a tool that allows users to automate processes and workflows within a GitHub repository, such as building and deploying code, running tests, and integrating with external services. I often use this to easily deploy smaller projects and ones where using less services are a priority.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Jenkins",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Jenkins is an open-source automation server that helps to automate parts of the software development process, including building, testing, and deploying software. I've used it primarily for legacy applications that have shaky reliability so i'm confident in my ability to use it in concerning situations safely.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 		],
 	},
@@ -571,27 +586,31 @@ export const cloudMetaData: SkillData[] = [
 		data: [
 			{
 				title: "Python Anywhere",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Python Anywhere is a cloud-based platform that allows users to run and host Python applications, as well as access a web-based integrated development environment (IDE) and other tools for developing and managing Python code. I've used it to deploy my first websites ever made in addition to my travel blog.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Apple Developer",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Apple Developer is a suite of tools and resources provided by Apple for developing and distributing software for the company's platforms, including iOS, iPadOS, macOS, watchOS, and tvOS. used alongside Android App Distribution where I've worked on projects where it was an integral part of the release process and required me to understand how it functioned, how to use the provided indicators and also how to debug.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Heroku",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Heroku is a cloud platform that enables developers to build, run, and operate applications entirely in the cloud. I've used it to deploy various backends and micro services as it's super simple to get started with and reliable.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Vercel",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Vercel is a cloud platform for hosting websites and web applications, allowing developers to deploy their projects with a global network of edge servers for low latency and high performance. I have used it to deploy this very site as it meshes well with NextJS, also maintained by Vercel",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 		],
 	},
