@@ -15,7 +15,7 @@ const Description = {
 	Proficient:
 		"I've worked with it, I've gone into depth, and I'm comfortable guiding others. I can pair with other developers and influence at my peer level and with folks I'm guiding.",
 	HighlyProficient:
-		"Can lead pairing on a project no matter who the pair is. Very comfortable in the language and can teach others at different skill levels and in different project situations.",
+		"Can lead pairing on a project no matter who the pair is. Very comfortable with the language/tool and can teach others at different skill levels and in different project situations.",
 };
 
 export const languagesMetaData: ColumnData[] = [
@@ -303,39 +303,45 @@ export const toolsMetaData: SkillData[] = [
 		data: [
 			{
 				title: "Github",
-				knowledge: "foo",
+				knowledge:
+					"I have used Github to host my own personal projects as well as contribute to open source projects. It's a core tool all devs need to know these days and im comfortable with it",
 				proficiency: HighlyProficient,
-				description: "foo",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Insomnia",
-				knowledge: "foo",
+				knowledge:
+					"Insomnia is a tool that allows developers to test and debug APIs by allowing them to make HTTP requests and view the responses. I prefer it over Postman as it's faster, simpler and more secure.",
 				proficiency: HighlyProficient,
-				description: "foo",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Postman",
-				knowledge: "foo",
+				knowledge:
+					"Postman is a tool that allows developers to test and debug APIs by making requests, receiving responses, and analyzing the results. I've used it for years on multiple code bases and am comfortable building out useful collections and automatic repetitive calls.",
 				proficiency: HighlyProficient,
-				description: "foo",
-			},
-			{
-				title: "Ubuntu",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
-			},
-			{
-				title: "Debian",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Rasbian",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Raspbian is a free operating system based on Debian optimized for the Raspberry Pi hardware. I love using Pis for various projects around the house and in automation. I have even used it/them to build a bare metal kubernetes cluster just for fun.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Ubuntu",
+				knowledge:
+					"Ubuntu is a Linux-based operating system that can be used for hosting websites and other web applications. This is a foundational OS used for a huge portion of infrastructure and I've used it to varying levels to run cloud applications.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "Debian",
+				knowledge:
+					"Debian is a free and open-source operating system that can be used for hosting websites and other applications. I've used to specifically for testing pipelines and as a remote great OS to work with remotely.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 		],
 	},
@@ -344,27 +350,31 @@ export const toolsMetaData: SkillData[] = [
 		data: [
 			{
 				title: "Davinci Resolve",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Davinci Resolve is a post-production tool that allows users to edit, color correct, and finish video projects. I regularly work on various projects involving music videos and documentaries which require a deep knowledge of the software.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Blender",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Blender is a 3D graphics software that is used for creating and manipulating 3D models, animations, and visual effects in post-production. I've used it for over a decade now to add an extra 'spice' to my video projects and to 3D print.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "Google Earth Studio",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Google Earth Studio is a tool that allows post-production professionals to create high-quality, realistic 3D animations of locations and landscapes using real-world satellite and aerial imagery. It's a technical marvel and makes it easy to get 'drone-like' shots from anywhere in the world.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Sony Vegas",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Similar to Davinci Resolve, Sony Vegas is a video editing software used in post production for creating and editing professional-quality video and audio content. I've used it for many years and can quickly finish technical projects using it.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 		],
 	},
@@ -373,39 +383,45 @@ export const toolsMetaData: SkillData[] = [
 		data: [
 			{
 				title: "Photoshop",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Photoshop is a graphics editing software that allows users to manipulate and enhance images and graphics. I've used it for over a decade to correct color, remove noise and to create various imagery, much of which you can see on this site.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "After Effects",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Adobe After Effects is a tool for creating and editing motion graphics and visual effects for video and film. I primarily use it to add moving typography and for transitions but have also completed entire animations in 2D and 3D space.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "InDesign",
-				knowledge: "foo",
+				knowledge:
+					"Adobe InDesign is a tool used for creating and designing professional documents such as brochures. I've used it as a volunteer to generate various reports, newsletters and magazines. ",
 				proficiency: HighlyProficient,
-				description: "foo",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Illustrator",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Adobe Illustrator is a vector graphics editor used for creating and editing digital graphics and designs. Similar to photoshop, I've used it to generate stills and even motion graphic sprites of various needs, often for websites by taking advantage of the power of SVGs.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Premiere",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Adobe Premiere is a video editing software that allows users to create and edit professional-quality video projects. I regularly work on various projects involving music videos and documentaries which require a deep knowledge of the software.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "XD",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Adobe XD is a design and prototyping tool used to create user interfaces and user experiences for websites and mobile applications. I've used it to generate various projects for analysis and also regularly use it for work when I assist Experience Designers with prototyping.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 		],
 	},
@@ -414,27 +430,31 @@ export const toolsMetaData: SkillData[] = [
 		data: [
 			{
 				title: "Image Magick",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"ImageMagick is a tool for converting, editing, and manipulating images in various formats using a command line. It's particularly powerful for mass-editing files, ideal for cleaning data for AI models.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Figma",
-				knowledge: "foo",
+				knowledge:
+					"Figma is a collaborative design tool for prototyping and designing user interfaces.  I've used it to generate various projects for analysis and also regularly use it for work when I assist Experience Designers with prototyping.",
 				proficiency: HighlyProficient,
-				description: "foo",
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Skylum Luminar",
-				knowledge: "foo",
-				proficiency: HighlyProficient,
-				description: "foo",
+				knowledge:
+					"Skylum Luminar is a photo editing software that allows users to enhance, retouch, and add creative effects to their photographs. I've worked on projects where we used this over other tools to create thumbnails and heder images for blogs and marketplace listings.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Gimp",
-				knowledge: "foo",
+				knowledge:
+					"GIMP (GNU Image Manipulation Program) is an open-source image editing software that allows users to create, edit, and manipulate digital images. I often use it in a work environment due to its open-source nature to quickly edit images for presentations, deployments and sharing information.",
 				proficiency: HighlyProficient,
-				description: "foo",
+				description: Description.HighlyProficient,
 			},
 		],
 	},

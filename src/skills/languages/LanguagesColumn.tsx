@@ -15,12 +15,12 @@ type LanguagesColumnProps = {
 export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const { columnData, isExpanded, isMobile, isDeveloping, handleOpenModal } =
 		props;
-	const { title, data: tech, knowledge, proficiency, description } = columnData;
+	const { title, data, knowledge, proficiency, description } = columnData;
 	const darkMode = useContext(DarkMode);
 
 	const TOTAL_PRIME_ITEMS = 5;
-	const primeTech = tech.slice(0, TOTAL_PRIME_ITEMS);
-	const extraTech = tech.slice(TOTAL_PRIME_ITEMS, tech.length);
+	const primeTech = data.slice(0, TOTAL_PRIME_ITEMS);
+	const extraTech = data.slice(TOTAL_PRIME_ITEMS, data.length);
 
 	// Remove when switched to using tailwind global theme over MUI
 	const developingStyle = {
