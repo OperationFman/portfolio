@@ -18,7 +18,7 @@ export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
 	const { title, data, knowledge, proficiency, description } = columnData;
 	const darkMode = useContext(DarkMode);
 
-	const TOTAL_PRIME_ITEMS = 5;
+	const TOTAL_PRIME_ITEMS = 6;
 	const primeTech = data.slice(0, TOTAL_PRIME_ITEMS);
 	const extraTech = data.slice(TOTAL_PRIME_ITEMS, data.length);
 
