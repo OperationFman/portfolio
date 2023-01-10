@@ -1,4 +1,5 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
+import { qualificationMetaData } from "../../datasources/HomepageMetaData";
 import { SubHeading } from "../components/SubHeading";
 import { QualificationCard } from "./QualificationCard";
 
@@ -7,51 +8,18 @@ export const Qualifications = () => {
 		<>
 			<SubHeading text={"Qualifications"} />
 
-			<Grid container spacing={7} justifyContent='center'>
-				<Grid item>
-					<QualificationCard
-						logo={"degree"}
-						title={"Masters of Information Systems and Finance"}
-						location={"Deakin University"}
-						lowerLocation={true}
-					/>
-				</Grid>
-				<Grid item>
-					<QualificationCard
-						logo={"degree"}
-						title={"Bachelors of Information Technology Professional Practice"}
-						location={"Federation University"}
-					/>
-				</Grid>
-				<Grid item>
-					<QualificationCard
-						logo={"certificate"}
-						title={"Certificate of Communication Information & Design"}
-						location={"theGordon"}
-					/>
-				</Grid>
-				<Grid item>
-					<QualificationCard
-						logo={"certificate"}
-						title={"Certificate of Web Scraping with Python"}
-						location={"LeWagon"}
-						lowerLocation={true}
-					/>
-				</Grid>
-				<Grid item>
-					<QualificationCard
-						logo={"certificate"}
-						title={"Certificate of Backend Development for the Metaverse"}
-						location={"Decentraland, Gitex"}
-					/>
-				</Grid>
-				<Grid item>
-					<QualificationCard
-						logo={"language"}
-						title={"Certificate of Teaching English as a Second Language"}
-						location={"Teflen College"}
-					/>
-				</Grid>
+			<Grid container spacing={5} justifyContent='center'>
+				{qualificationMetaData.map((item, index) => {
+					return (
+						<Grid item key={index}>
+							<QualificationCard
+								logo={item.logo}
+								title={item.title}
+								location={item.location}
+							/>
+						</Grid>
+					);
+				})}
 			</Grid>
 		</>
 	);
