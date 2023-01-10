@@ -24,6 +24,7 @@ export const BioDescription = (): JSX.Element => {
 	const TitleSectionStyles = {
 		container: {
 			marginTop: "20px",
+			marginBottom: "100px",
 			lineHeight: 1,
 		},
 		titleFont: {
@@ -34,7 +35,7 @@ export const BioDescription = (): JSX.Element => {
 			fontSize: "80px",
 			fontWeight: "lighter",
 		},
-		blurb: { fontStyle: "italic", marginTop: "50px" },
+		blurb: { marginTop: "50px" },
 	};
 
 	useEffect(() => {
