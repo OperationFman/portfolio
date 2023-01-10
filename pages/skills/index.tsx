@@ -5,8 +5,7 @@ import { useState } from "react";
 import {
 	cloudMetaData,
 	convictionMetaData,
-	headerBlurb,
-	toolsMetaData
+	toolsMetaData,
 } from "../../src/datasources/SkillsMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { SkillModal } from "../../src/skills/components/SkillModal";
@@ -16,13 +15,10 @@ import { SkillsColumn } from "../../src/skills/SkillsColumn";
 import { MetaData } from "../../src/skills/types";
 import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
 import { Footer } from "../../utils/Footer";
-import { splitStringAtFullStop } from "../../utils/splitStringAtFullStop";
 
-const Transition = slideTransition("right");
+const Transition: any = slideTransition("right");
 
 export const Skills: NextPage = () => {
-	const blurbArray = splitStringAtFullStop(headerBlurb);
-
 	const [showModal, setShowModal] = useState(false);
 	const [modalPayload, setModalPayload] = useState<MetaData>();
 
@@ -51,19 +47,22 @@ export const Skills: NextPage = () => {
 
 			<PageContainer>
 				<div className='max-w-[620px] text-center mx-auto mb-12 pl-2 pr-2'>
-					{blurbArray.map((sentence, index) => {
-						return (
-							<p key={index} className=''>
-								{sentence}
-							</p>
-						);
-					})}
+					Click any of the technologies listed below to learn more about my
+					current specific abilities, capabilities and level of involvement.
 				</div>
 
 				<Languages handleOpenModal={handleOpenModal} />
 				<div className='sm:flex sm:flex-row justify-evenly flex-wrap'>
-					<SkillsColumn title='Tools' metaData={toolsMetaData} handleOpenModal={handleOpenModal}/>
-					<SkillsColumn title='Cloud' metaData={cloudMetaData} handleOpenModal={handleOpenModal} />
+					<SkillsColumn
+						title='Tools'
+						metaData={toolsMetaData}
+						handleOpenModal={handleOpenModal}
+					/>
+					<SkillsColumn
+						title='Cloud'
+						metaData={cloudMetaData}
+						handleOpenModal={handleOpenModal}
+					/>
 				</div>
 				<Convictions title='Convictions' metaData={convictionMetaData} />
 			</PageContainer>

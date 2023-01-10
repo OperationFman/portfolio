@@ -1,10 +1,6 @@
 import { ColumnData, Proficiency, SkillData } from "../skills/types";
 import { ConvictionsRow } from "./../skills/types";
 
-export const headerBlurb = `
-On this page, you'll find an outline of my skills & experience with various programming languages, tools, and development methodologies.
-Click on any of the technologies listed below, you can learn more about my current specific abilities and level of involvement in each area.`;
-
 const { Learning, Capable, Proficient, HighlyProficient } = Proficiency;
 
 const Description = {
@@ -22,42 +18,42 @@ export const languagesMetaData: ColumnData[] = [
 	{
 		title: "Javascript",
 		knowledge:
-			"I have a strong understanding in the language and am confident in my ability to use it effectively. My understanding of the syntax and modern concepts of the language, as well as the tools and frameworks that are commonly used with it is very strong. JavaScript has evolved over time and I genuinely enjoy staying up-to-date with the latest developments.",
+			"I have a thorough understanding of the language and am proficient in using it effectively. My expertise in the syntax, modern concepts, and commonly used tools and frameworks of JavaScript is strong. I keep up-to-date with the latest developments in the language and have a genuine interest in its evolution.",
 		proficiency: HighlyProficient,
 		description: Description.HighlyProficient,
 		data: [
 			{
 				title: "Typescript",
 				knowledge:
-					"I have used Typescript in various projects, including web applications and mobile apps, and have found that it helps me catch errors early on in the development process, reducing the time spent on debugging and testing. Additionally, Typescript's type system allows me to write more modular and reusable code, which helps me work more efficiently and effectively.",
+					"I have used Typescript in various projects, including web applications and mobile apps, and have found that it helps me catch errors early on in the development process, saving time spent on debugging and testing. Additionally, Typescript's type system allows me to write more modular and reusable code, increasing my efficiency and effectiveness.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
 			{
 				title: "React",
 				knowledge:
-					"I have a strong understanding of the framework and am able to effectively utilize its features to build efficient and effective user interfaces. I'm confident in my ability to troubleshoot and debug issues that may arise while working with React, and am able to quickly adapt to new features and updates to the framework.",
+					"I have a strong understanding of the framework and am proficient in using its features to build efficient and effective user interfaces. I am adept at troubleshooting and debugging issues that may arise while working with React and can adapt quickly to new features and updates to the framework.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
 			{
 				title: "React Native",
 				knowledge:
-					"I am able to effectively utilize its features to build high-quality, performant mobile applications. I'm also confident in my ability to troubleshoot issues and find solutions when working with React Native and have a good sense of best practices and design patterns for building applications and am able to apply this knowledge to my projects.",
+					"I am proficient in using the features of React Native to build high-quality, performant mobile applications. I am confident in my ability to troubleshoot issues and find solutions when working with React Native and have a good understanding of best practices and design patterns for building applications, which I can apply to my projects.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
 			{
 				title: "Jest",
 				knowledge:
-					"I am effective at using Jest to write and run tests for various back and frontend applications. I'm familiar with the various assertion methods and test utilities that Jest provides, and you am able to troubleshoot and debug any issues that may arise during testing.",
+					"I am effective at using Jest to write and run tests for various back and frontend applications. I am familiar with the various assertion methods and test utilities that Jest provides, and am able to troubleshoot and debug any issues that may arise during testing.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
 			{
 				title: "NextJS",
 				knowledge:
-					"I have a strong understanding of Vercels NextJS features like SSR and Code splitting. I am able to effectively apply them in various projects and am confident in my ability to use NextJs to build high-quality applications and am able to troubleshoot any issues that may arise.",
+					"I have a strong understanding of Vercel's NextJS features like server-side rendering and code splitting. I am proficient in applying these features in various projects and am confident in my ability to use NextJS to build high-quality applications. I am also capable of troubleshooting any issues that may arise.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
@@ -72,7 +68,7 @@ export const languagesMetaData: ColumnData[] = [
 			{
 				title: "Node",
 				knowledge:
-					"I can confidently say that I use it regularly in my work and have a strong understanding of its benefits and drawbacks. Benefits of using NodeJS include its ability to handle a large number of concurrent connections, its lightweight and efficient nature, and its support for real-time web applications. It is a flawed tool, given it's single-threaded nature.",
+					"I have consistently utilized NodeJS in my professional capacity, and have gained a thorough understanding of its strengths and limitations. NodeJS boasts a high capacity for handling multiple concurrent connections and is known for its efficiency and lightweight design. It is particularly well-suited for developing real-time web applications. However, it should be noted that NodeJS operates on a single thread, which can potentially present certain challenges.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
