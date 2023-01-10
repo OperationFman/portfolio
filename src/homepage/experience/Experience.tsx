@@ -13,6 +13,7 @@ export const Experience = () => {
 			<div className={styles.container}>
 				<Container maxWidth='xs' className={styles.column}>
 					<SubHeading text={"Volunteering"} />
+					<div className='mb-8' />
 					<VolunteerListItem
 						logo={"badac"}
 						title={
@@ -79,6 +80,7 @@ export const Experience = () => {
 				</Container>
 				<Container maxWidth='xs' className={styles.column}>
 					<SubHeading text={"Employment"} />
+					<div className='mb-8' />
 					<WorkExpListItem
 						companyLogo={"thoughtworks"}
 						employerName={"Thoughtworks Australia"}
