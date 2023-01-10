@@ -106,7 +106,6 @@ export const projectMetaData: ProjectMetaData[] = [
 		},
 		subTitle:
 			"My first ever programming project. A tool to help my partner and I while we were stuck in Japan during the 2020 pandemic. The webapp is primarily designed for mobile and has a 'food roulette' mode to store a list of meals we like and randomly suggests one when tapping 'generate'. \n It also has a simple currency conversion tool that quickly shows purchasing power of other fx compared to AUD. \n It was built using Python with the Flask framework and deployed to PythonAnywhere.com",
-		deployedURL: "http://opfman.pythonanywhere.com/",
 		repoURL: "https://github.com/OperationFman/Krank",
 	},
 ];
