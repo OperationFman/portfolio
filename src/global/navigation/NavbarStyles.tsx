@@ -52,6 +52,9 @@ export const container = (isMobile: boolean): SxProps<Theme> => {
 	return {
 		backgroundColor: "#212121",
 		boxShadow: 5,
+		position: "sticky",
+		top: 0,
+		zIndex: 9999,
 	};
 };
 
