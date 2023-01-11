@@ -34,7 +34,6 @@ export const Experience = () => {
 			window.getComputedStyle(rightColumn).getPropertyValue("height"),
 		);
 
-		console.log({ smallerColumnHeight });
 		setStickyColumnLock(smallerColumnHeight);
 	}, []);
 
