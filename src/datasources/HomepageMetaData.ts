@@ -21,6 +21,117 @@ export const forYouMetaData: ForYouMetaData[] = [
 	},
 ];
 
+export const volunteeringMetaData = [
+	{
+		logo: "badac",
+		title: "B.A.D.A.C Website Developer, Photographer and Newsletter Producer",
+		location: "Ballarat, Australia",
+		year: "2021",
+	},
+	{
+		logo: "creative",
+		title: "Ballarat Creative City Production Manager",
+		location: "Ballarat, Australia",
+		year: "2021",
+	},
+	{
+		logo: "outreach",
+		title: "Federation University: Regional Schools Outreach Exponent",
+		location: "Victoria, Australia",
+		year: "2018 - 2020",
+	},
+	{
+		logo: "senate",
+		title: "Federation University Student Senate: Indigenous Representative",
+		location: "Ballarat, Australia",
+		year: "2019",
+	},
+	{
+		logo: "challenges",
+		title: "Challenges Abroad Project Borneo: Media Literacy Trainer",
+		location: "East Kalimantan, Indonesia",
+		year: "2019",
+	},
+	{
+		logo: "navy",
+		title: "Restoration of Rural Network Infrastructure Emergency Responder",
+		location: "Dhulikhel, Nepal",
+		year: "2018",
+	},
+	{
+		logo: "colombo",
+		title: "New Colombo Plan: Post-Production Project Videographer",
+		location: "Shaoguan, China",
+		year: "2017",
+	},
+	{
+		logo: "paxaus",
+		title: "PAX Aus Enforcer",
+		location: "Melbourne, Australia",
+		year: "2013 - 2018",
+		isLastElement: true,
+	},
+];
+
+export const workExperienceMetaData = [
+	{
+		logo: "thoughtworks",
+		employer: "Thoughtworks Australia",
+		period: "2019 - Present",
+		location: "Melbourne, Australia",
+		experiences: [
+			{
+				title: "Software Developer",
+				period: "2022 - Present",
+			},
+			{
+				title: "Graduate Software Developer",
+				period: "2021 - 2022",
+			},
+			{
+				title: "Intern Software Developer",
+				period: "2019 - 2021",
+			},
+			{
+				title: "Intern Business Analyst",
+				period: "2019",
+			},
+		],
+	},
+	{
+		logo: "ibm",
+		employer: "International Business Machines",
+		period: "2017 - 2021",
+		location: "Ballarat, Australia",
+		experiences: [
+			{
+				title: "Test Automation Engineer",
+				period: "2019 - 2021",
+			},
+			{
+				title: "Remote Hardware Technician",
+				period: "2017 - 2019",
+			},
+		],
+	},
+	{
+		logo: "federation",
+		employer: "Federation University",
+		period: "2018 - 2020",
+		location: "Ballarat, Australia",
+		experiences: [
+			{
+				title: "Mentor Team Leader",
+				period: "2019",
+			},
+			{
+				title: "Academic Support Tutor",
+				period: "2018 - 2020",
+			},
+		],
+	},
+];
+
 export const qualificationMetaData = [
 	{
 		logo: "degree",
