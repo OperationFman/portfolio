@@ -1,0 +1,78 @@
+@import "../../../themes/colors.module";
+@import "../../../themes/breakpoints";
+
+.container {
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	background-color: $darkGrey;
+}
+
+.hover {
+	&:hover {
+		background-color: $mediumGrey;
+		transition: linear 400ms;
+	}
+}
+
+.homepageTab {
+	min-width: 30px;
+	margin: 0 5px 0 10px;
+	font-size: 12;
+
+	@include breakpoint(small) {
+		position: absolute;
+		left: 0;
+		display: flex;
+		align-self: center;
+		justify-content: left;
+		font-size: 14;
+		padding-top: 15px;
+	}
+
+	@extend .hover;
+}
+
+.centerTab {
+	min-width: 85px;
+	font-size: 12;
+
+	@include breakpoint(small) {
+		min-width: none;
+		font-size: 14;
+	}
+
+	@extend .hover;
+}
+
+.projectTab {
+	margin-right: 65px;
+
+	@include breakpoint(small) {
+		margin-right: 0;
+	}
+}
+
+.darkModeToggle {
+	display: flex;
+	justify-content: right;
+	align-self: center;
+	position: absolute;
+	right: 5px;
+
+	@include breakpoint(small) {
+		right: 20px;
+	}
+}
+
+.iconDim {
+	color: $brightGrey;
+}
+
+.iconBright {
+	color: $white;
+}
+
+.colorDefault {
+	color: $brightGrey;
+}

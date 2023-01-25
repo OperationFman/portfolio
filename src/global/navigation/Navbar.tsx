@@ -9,14 +9,9 @@ import Zoom from "@mui/material/Zoom";
 import { useRouter } from "next/router";
 import React, { useContext, useState } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
+import colors from "../../../themes/_colors.module.scss";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
-import {
-	centerTabs,
-	container,
-	darkModeIcon,
-	desktopHomeButton,
-	mobileHomeButton,
-} from "./NavbarStyles";
+import styles from "./NavBar.module.scss";
 
 type NavbarProps = {
 	setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
@@ -24,6 +19,7 @@ type NavbarProps = {
 
 export const Navbar = (props: NavbarProps) => {
 	const { setDarkMode } = props;
+
 	const darkMode = useContext(DarkMode);
 	const { isMobile } = useDeviceDetect();
 	const router = useRouter();
@@ -58,6 +54,11 @@ export const Navbar = (props: NavbarProps) => {
 		}, 400);
 	};
 
+	const handleDarkModeToggle = () => {
+		localStorage.setItem("dark-mode", `${!darkMode}`);
+		setDarkMode(!darkMode);
+	};
+
 	return (
 		<Tabs
 			value={tab}
@@ -66,45 +67,29 @@ export const Navbar = (props: NavbarProps) => {
 			textColor='inherit'
 			variant={"standard"}
 			centered
-			sx={container(isMobile)}>
-			{isMobile ? (
-				<Tab
-					label={"FVM"}
-					icon={
-						<AccountCircleOutlinedIcon
-							fontSize='small'
-							color={tab === 0 ? "primary" : "inherit"}
-						/>
-					}
-					sx={mobileHomeButton}
-					onClick={() => {
-						handleTabClick("/", 0);
-					}}
-				/>
-			) : (
-				<Tab
-					label={"FRANKLIN V MOON"}
-					icon={
-						<AccountCircleOutlinedIcon
-							fontSize='small'
-							color={tab === 0 ? "primary" : "inherit"}
-						/>
-					}
-					sx={desktopHomeButton}
-					onClick={() => {
-						handleTabClick("/", 0);
-					}}
-				/>
-			)}
+			className={styles.container}>
+			<Tab
+				label={isMobile ? "FVM" : "FRANKLIN V MOON"}
+				icon={
+					<AccountCircleOutlinedIcon
+						fontSize='small'
+						className={tab === 0 ? colors.defaultBlue : styles.colorDefault}
+					/>
+				}
+				className={styles.homepageTab}
+				onClick={() => {
+					handleTabClick("/", 0);
+				}}
+			/>
 			<Tab
 				label='SKILLS'
 				icon={
 					<LightbulbOutlinedIcon
 						fontSize='small'
-						color={tab === 1 ? "success" : "inherit"}
+						className={tab === 1 ? colors.defaultGreen : styles.colorDefault}
 					/>
 				}
-				sx={centerTabs(isMobile)}
+				className={styles.centerTab}
 				onClick={() => {
 					handleTabClick("/skills", 1);
 				}}
@@ -114,10 +99,10 @@ export const Navbar = (props: NavbarProps) => {
 				icon={
 					<SchoolOutlinedIcon
 						fontSize='small'
-						color={tab === 2 ? "secondary" : "inherit"}
+						className={tab === 2 ? colors.defaultPurple : styles.colorDefault}
 					/>
 				}
-				sx={centerTabs(isMobile)}
+				className={styles.centerTab}
 				onClick={() => {
 					handleTabClick("/tutorials", 2);
 				}}
@@ -127,25 +112,22 @@ export const Navbar = (props: NavbarProps) => {
 				icon={
 					<BookmarkBorderOutlinedIcon
 						fontSize='small'
-						color={tab === 3 ? "error" : "inherit"}
+						className={tab === 3 ? colors.defaultRed : styles.colorDefault}
 					/>
 				}
-				sx={centerTabs(isMobile, true)}
+				className={`${styles.centerTab} ${styles.projectTab}`}
 				onClick={() => {
 					handleTabClick("/projects", 3);
 				}}
 			/>
 			<IconButton
-				onClick={() => {
-					localStorage.setItem("dark-mode", `${!darkMode}`);
-					setDarkMode(!darkMode);
-				}}
-				sx={darkModeIcon(isMobile)}>
+				onClick={() => handleDarkModeToggle()}
+				className={styles.darkModeToggle}>
 				<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
 					{darkMode ? (
-						<Brightness6Icon sx={{ color: "#9c9c9c" }} />
+						<Brightness6Icon className={styles.iconDim} />
 					) : (
-						<Brightness3Icon sx={{ color: "#fff" }} />
+						<Brightness3Icon className={styles.iconBright} />
 					)}
 				</Tooltip>
 			</IconButton>

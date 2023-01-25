@@ -2,7 +2,7 @@ body {
 	font-family: "Montserrat", sans-serif;
 }
 
-@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url("https://fonts.cdnfonts.com/css/montserrat");
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
