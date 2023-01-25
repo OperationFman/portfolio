@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/future/image";
+
 import Head from "next/head";
 import { useContext } from "react";
 import { PageContainer } from "../src/global/PageContainer";
@@ -7,6 +7,7 @@ import { Biography } from "../src/homepage/biography/Biography";
 import { Contact } from "../src/homepage/contact/Contact";
 import { Experience } from "../src/homepage/experience/Experience";
 import { ForYou } from "../src/homepage/foryou/ForYou";
+import { HomeFooterImage } from "../src/homepage/homeFooter/HomeFooterImage";
 import { ParallaxArt } from "../src/homepage/parallax-art/ParallaxArt";
 import { Qualifications } from "../src/homepage/qualifications/Qualifications";
 import { Salary } from "../src/homepage/salary/Salary";
@@ -35,14 +36,7 @@ const Home: NextPage = () => {
 				<Salary />
 				<Contact />
 			</PageContainer>
-			<div className='flex justify-center overflow-hidden'>
-				<Image
-					src={"/homepage/moon-footer.svg"}
-					alt='Moon and Astronaut'
-					width={1920}
-					height={720}
-				/>
-			</div>
+			<HomeFooterImage />
 			<Footer margin={false} />
 		</>
 	);
