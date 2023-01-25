@@ -41,7 +41,8 @@ export const Skills: NextPage = () => {
 			<Dialog
 				open={showModal}
 				TransitionComponent={Transition}
-				onClose={() => setShowModal(false)}>
+				onClose={() => setShowModal(false)}
+				className='mt-14'>
 				{SkillModal(setShowModal, modalPayload)}
 			</Dialog>
 
