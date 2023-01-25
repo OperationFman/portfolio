@@ -29,12 +29,13 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 	const style: any = {
 		// any because of a known type issue with nextJS Image
 		outerContainer: {
-			height: isMobile ? "35vh" : "55vh",
+			height: isMobile ? "35vh" : "69vh",
 		},
 		innerContainer: {
 			position: "absolute",
+
 			width: "100%",
-			height: isMobile ? "35vh" : "55vh",
+			height: isMobile ? "35vh" : "69vh",
 			overflow: "hidden",
 			display: "flex",
 			alignItems: "center",
@@ -43,12 +44,12 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 		backgroundColor: {
 			zIndex: -9,
 			width: "100%",
-			height: isMobile ? "35vh" : "55vh",
+			height: isMobile ? "35vh" : "69vh",
 			backgroundColor: selectedTheme === "dark" ? "#01579b" : "#a3dcf9",
 		},
 		layer: {
 			position: "inherit",
-			height: isMobile ? "35vh" : "55vh",
+			height: isMobile ? "35vh" : "69vh",
 			width: "auto",
 			overflow: "hidden",
 		},
@@ -59,62 +60,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 			<div style={style.innerContainer}>
 				<div style={style.backgroundColor} />
 
-				<ShootingStar
-					selectedTheme={selectedTheme}
-					styleOverrides={style.layer}
-					offSetY={offSetY}
-				/>
-				<Stars
-					selectedTheme={selectedTheme}
-					styleOverrides={style.layer}
-					offSetY={offSetY}
-				/>
 				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/Plane.svg`}
-					alt='Plane'
-					width='0'
-					height='0'
-					style={{
-						...style.layer,
-						zIndex: -2,
-						transform: `translateY(${offSetY * 0.4}px)`,
-					}}
-				/>
-				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/Train.svg`}
-					alt='Train'
-					width='0'
-					height='0'
-					style={{
-						...style.layer,
-						zIndex: -4,
-						transform: `translateY(${offSetY * 0.4}px)`,
-					}}
-				/>
-				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/FarBalloons.svg`}
-					alt='Far Balloon'
-					width='0'
-					height='0'
-					style={{
-						...style.layer,
-						zIndex: -5,
-						transform: `translateY(${offSetY * 0.4 + -20}px)`, // Remove + 20
-					}}
-				/>
-				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/NearBalloons.svg`}
-					alt='Near Balloon'
-					width='0'
-					height='0'
-					style={{
-						...style.layer,
-						zIndex: -3,
-						transform: `translateY(${offSetY * 0.35}px)`,
-					}}
-				/>
-				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/1.svg`}
+					src={`/homepage/parallax/dark/17 Sun Moon.svg`}
 					alt='Sun/Moon'
 					width='0'
 					height='0'
@@ -125,18 +72,74 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					}}
 				/>
 				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/2.svg`}
-					alt='Clouds'
+					src={`/homepage/parallax/dark/16 Stars Some 2.svg`}
+					alt='Minor amount of stars'
 					width='0'
 					height='0'
 					style={{
 						...style.layer,
-						zIndex: -4,
-						transform: `translateY(${offSetY * 0.4}px)`,
+						zIndex: -7,
+						transform: `translateY(${offSetY * 0.8 - 50}px)`,
 					}}
 				/>
 				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/3.svg`}
+					src={`/homepage/parallax/dark/15 Stars Some.svg`}
+					alt='Moderate amount of stars'
+					width='0'
+					height='0'
+					style={{
+						...style.layer,
+						zIndex: -7,
+						transform: `translateY(${offSetY * 0.84 - 50}px)`,
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/dark/14 Stars Most.svg`}
+					alt='Significant amount of stars'
+					width='0'
+					height='0'
+					style={{
+						...style.layer,
+						zIndex: -7,
+						transform: `translateY(${offSetY * 0.88 - 20}px)`,
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/dark/13 Shooting Star.svg`}
+					alt='Shooting Star'
+					width='0'
+					height='0'
+					style={{
+						...style.layer,
+						zIndex: -6,
+						transform: `translateY(${offSetY * 0.1}px)`,
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/dark/12 Star Destroyer Close.svg`}
+					alt='Star Destroyer nearby'
+					width='0'
+					height='0'
+					style={{
+						...style.layer,
+						zIndex: -6,
+						transform: `translateY(${offSetY * 0.5}px)`,
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/dark/11 Star Destroyer Far.svg`}
+					alt='Star Destroyer far away'
+					width='0'
+					height='0'
+					style={{
+						...style.layer,
+						zIndex: -7,
+						transform: `translateY(${offSetY * 0.7}px)`,
+					}}
+				/>
+
+				<Image
+					src={`/homepage/parallax/dark/10 Mountain Far.svg`}
 					alt='Farthest Mountain'
 					width='0'
 					height='0'
@@ -146,9 +149,30 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						transform: `translateY(${offSetY * 0.5}px)`,
 					}}
 				/>
-
 				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/4.svg`}
+					src={`/homepage/parallax/dark/9 Train.svg`}
+					alt='Train'
+					width='0'
+					height='0'
+					style={{
+						...style.layer,
+						zIndex: -5,
+						transform: `translateY(${offSetY * 0.4}px)`,
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/dark/8 Clouds Far.svg`}
+					alt='Far clouds'
+					width='0'
+					height='0'
+					style={{
+						...style.layer,
+						zIndex: -6,
+						transform: `translateY(${offSetY * 0.45}px)`,
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/dark/7 Mountains Middle.svg`}
 					alt='Mid Mountains'
 					width='0'
 					height='0'
@@ -159,7 +183,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					}}
 				/>
 				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/5.svg`}
+					src={`/homepage/parallax/dark/6 Mountains Close.svg`}
 					alt='Nearest Mountain'
 					width='0'
 					height='0'
@@ -169,9 +193,19 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						transform: `translateY(${offSetY * 0.35}px)`,
 					}}
 				/>
-
 				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/6.svg`}
+					src={`/homepage/parallax/dark/5 Clouds Near.svg`}
+					alt='Close low clouds'
+					width='0'
+					height='0'
+					style={{
+						...style.layer,
+						zIndex: -3,
+						transform: `translateY(${offSetY * 0.25}px)`,
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/dark/4 City.svg`}
 					alt='Farthest City'
 					width='0'
 					height='0'
@@ -181,9 +215,19 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						transform: `translateY(${offSetY * 0.2}px)`,
 					}}
 				/>
-
 				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/7.svg`}
+					src={`/homepage/parallax/dark/3 Plane.svg`}
+					alt='Closest City'
+					width='0'
+					height='0'
+					style={{
+						...style.layer,
+						zIndex: -2,
+						transform: `translateY(${offSetY * 0.005}px)`,
+					}}
+				/>
+				<Image
+					src={`/homepage/parallax/dark/2 Town.svg`}
 					alt='Closest City'
 					width='0'
 					height='0'
@@ -195,7 +239,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 				/>
 
 				<Image
-					src={`/homepage/parallax/desktop/${selectedTheme}/8.svg`}
+					src={`/homepage/parallax/dark/1 Motherboard.svg`}
 					alt='Motherboard I/O'
 					width='0'
 					height='0'
