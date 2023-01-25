@@ -38,7 +38,7 @@ export const slideTransition = (
 		},
 		ref: React.Ref<unknown>,
 	) {
-		return <Slide direction={direction} ref={ref} {...props} timeout={750} />;
+		return <Slide direction={direction} ref={ref} {...props} timeout={550} />;
 	});
 };
 

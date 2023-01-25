@@ -34,9 +34,7 @@ const Tutorials: NextPage = () => {
 	}, [sortBy, topicFilter, languagesFilter, tagsFilter]);
 
 	const [showFilterMenu, setShowFilterMenu] = React.useState(false);
-	const handleCloseFilterMenu = () => {
-		setShowFilterMenu(false);
-	};
+
 
 	return (
 		<div>
@@ -52,7 +50,7 @@ const Tutorials: NextPage = () => {
 				open={showFilterMenu}
 				TransitionComponent={Transition}
 				keepMounted
-				onClose={handleCloseFilterMenu}>
+				onClose={() => setShowFilterMenu(false)}>
 				{FilterModal(
 					topicFilter,
 					setTopicFilter,
@@ -60,6 +58,7 @@ const Tutorials: NextPage = () => {
 					setFilteredLanguages,
 					tagsFilter,
 					setTagsFilter,
+					setShowFilterMenu,
 				)}
 			</Dialog>
 
