@@ -1,0 +1,24 @@
+$small-screen: 600px;
+$medium-screen: 900px;
+$large-screen: 1200px;
+$extra-large-screen: 1536px;
+
+@mixin breakpoint($point) {
+	@if $point == small {
+		@media (min-width: $small-screen) {
+			@content;
+		}
+	} @else if $point == medium {
+		@media (min-width: $medium-screen) {
+			@content;
+		}
+	} @else if $point == large {
+		@media (min-width: $large-screen) {
+			@content;
+		}
+	} @else if $point == xLarge {
+		@media (min-width: $extra-large-screen) {
+			@content;
+		}
+	}
+}

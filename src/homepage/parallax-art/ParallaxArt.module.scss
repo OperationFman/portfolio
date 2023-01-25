@@ -1,0 +1,50 @@
+@import "../../../themes/breakpoints";
+
+
+$smallerHeight: 35vh;
+$largerHeight: 69vh;
+$backgroundColor: #01579b;
+
+.outerContainer {
+	height: $smallerHeight;
+
+	@include breakpoint(small) {
+		height: $largerHeight;
+	}
+}
+
+.innerContainer {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	height: $smallerHeight;
+
+	@include breakpoint(small) {
+		height: $largerHeight;
+	}
+}
+
+.background {
+	z-index: -9;
+	width: 100%;
+	background-color: $backgroundColor;
+	height: $smallerHeight;
+
+	@include breakpoint(small) {
+		height: $largerHeight;
+	}
+}
+
+.layer {
+	position: inherit;
+	width: auto;
+	overflow: hidden;
+	height: $smallerHeight;
+
+	@include breakpoint(small) {
+		height: $largerHeight;
+	}
+}

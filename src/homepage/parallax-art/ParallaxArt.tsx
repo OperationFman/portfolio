@@ -1,7 +1,7 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
-import styles from "./ParallaxArt.module.css";
+import styles from "./ParallaxArt.module.scss";
 
 export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 	const { isMobile } = useDeviceDetect();
