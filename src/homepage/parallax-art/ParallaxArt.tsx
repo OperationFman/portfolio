@@ -1,8 +1,7 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
-import { ShootingStar } from "./ShootingStar";
-import { Stars } from "./Stars";
+import styles from "./ParallaxArt.module.css";
 
 export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 	const { isMobile } = useDeviceDetect();
@@ -26,47 +25,18 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 		};
 	}, []);
 
-	const style: any = {
-		// any because of a known type issue with nextJS Image
-		outerContainer: {
-			height: isMobile ? "35vh" : "69vh",
-		},
-		innerContainer: {
-			position: "absolute",
-
-			width: "100%",
-			height: isMobile ? "35vh" : "69vh",
-			overflow: "hidden",
-			display: "flex",
-			alignItems: "center",
-			justifyContent: "center",
-		},
-		backgroundColor: {
-			zIndex: -9,
-			width: "100%",
-			height: isMobile ? "35vh" : "69vh",
-			backgroundColor: selectedTheme === "dark" ? "#01579b" : "#a3dcf9",
-		},
-		layer: {
-			position: "inherit",
-			height: isMobile ? "35vh" : "69vh",
-			width: "auto",
-			overflow: "hidden",
-		},
-	};
-
 	return (
-		<div style={style.outerContainer}>
-			<div style={style.innerContainer}>
-				<div style={style.backgroundColor} />
+		<div className={styles.outerContainer}>
+			<div className={styles.innerContainer}>
+				<div className={styles.background} />
 
 				<Image
 					src={`/homepage/parallax/dark/17 Sun Moon.svg`}
 					alt='Sun/Moon'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -8,
 						transform: `translateY(${offSetY * 0.6}px)`,
 					}}
@@ -76,8 +46,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Minor amount of stars'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -7,
 						transform: `translateY(${offSetY * 0.8 - 50}px)`,
 					}}
@@ -87,8 +57,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Moderate amount of stars'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -7,
 						transform: `translateY(${offSetY * 0.84 - 50}px)`,
 					}}
@@ -98,8 +68,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Significant amount of stars'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -7,
 						transform: `translateY(${offSetY * 0.88 - 20}px)`,
 					}}
@@ -109,8 +79,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Shooting Star'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -6,
 						transform: `translateY(${offSetY * 0.1}px)`,
 					}}
@@ -119,9 +89,9 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					src={`/homepage/parallax/dark/12 Star Destroyer Close.svg`}
 					alt='Star Destroyer nearby'
 					width='0'
-					height='0'
+					height='0' className={styles.layer}
 					style={{
-						...style.layer,
+						
 						zIndex: -6,
 						transform: `translateY(${offSetY * 0.5}px)`,
 					}}
@@ -130,9 +100,9 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					src={`/homepage/parallax/dark/11 Star Destroyer Far.svg`}
 					alt='Star Destroyer far away'
 					width='0'
-					height='0'
+					height='0' className={styles.layer}
 					style={{
-						...style.layer,
+						
 						zIndex: -7,
 						transform: `translateY(${offSetY * 0.7}px)`,
 					}}
@@ -143,8 +113,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Farthest Mountain'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -6,
 						transform: `translateY(${offSetY * 0.5}px)`,
 					}}
@@ -154,8 +124,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Train'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -5,
 						transform: `translateY(${offSetY * 0.4}px)`,
 					}}
@@ -165,8 +135,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Far clouds'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -6,
 						transform: `translateY(${offSetY * 0.45}px)`,
 					}}
@@ -176,8 +146,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Mid Mountains'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -5,
 						transform: `translateY(${offSetY * 0.4}px)`,
 					}}
@@ -187,8 +157,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Nearest Mountain'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -4,
 						transform: `translateY(${offSetY * 0.35}px)`,
 					}}
@@ -198,8 +168,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Close low clouds'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -3,
 						transform: `translateY(${offSetY * 0.25}px)`,
 					}}
@@ -209,8 +179,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Farthest City'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -3,
 						transform: `translateY(${offSetY * 0.2}px)`,
 					}}
@@ -220,8 +190,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Closest City'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -2,
 						transform: `translateY(${offSetY * 0.005}px)`,
 					}}
@@ -231,8 +201,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Closest City'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -2,
 						transform: `translateY(${offSetY * 0.1}px)`,
 					}}
@@ -243,8 +213,8 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					alt='Motherboard I/O'
 					width='0'
 					height='0'
+					className={styles.layer}
 					style={{
-						...style.layer,
 						zIndex: -1,
 					}}
 				/>
