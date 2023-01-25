@@ -115,7 +115,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						transform: `translateY(${offSetY * 0.1}px)`,
 					}}
 				/>
-				<Image
+				{/* <Image
 					src={`/homepage/parallax/dark/12 Star Destroyer Close.svg`}
 					alt='Star Destroyer nearby'
 					width='0'
@@ -136,7 +136,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						zIndex: -7,
 						transform: `translateY(${offSetY * 0.7}px)`,
 					}}
-				/>
+				/> */}
 
 				<Image
 					src={`/homepage/parallax/dark/10 Mountain Far.svg`}

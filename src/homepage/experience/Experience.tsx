@@ -40,7 +40,7 @@ export const Experience = () => {
 	const stickyColumn: any = !isMobile
 		? {
 				position: "sticky",
-				top: `calc(90vh - ${stickyColumnLock}px)`,
+				top: `calc(100vh - ${stickyColumnLock}px)`,
 				height: "100%",
 		  }
 		: {};
