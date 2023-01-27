@@ -1,10 +1,8 @@
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import { MultiSelectFilterField } from "./MultiSelectFilterField";
+import { render } from "@testing-library/react";
 import { Languages } from "../../../types";
+import { MultiSelectFilterField } from "./MultiSelectFilterField";
 
 describe("MultiSelectFilter", () => {
-	const handleChange = jest.fn();
 	const dropDownData = [
 		Languages.Javascript,
 		Languages.Typescript,

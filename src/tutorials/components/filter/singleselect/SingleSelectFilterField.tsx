@@ -7,28 +7,21 @@ import { Dispatch, SetStateAction } from "react";
 import { Topic } from "../../../types";
 import { addTransparency } from "../filterAnimations";
 
-type TopicFilterProps = {
+export const SingleSelectFilterField = ({
+	label,
+	defaultValue,
+	filter,
+	setFilter,
+	dropDownData,
+	highlightColor,
+}: {
 	filter: Topic | undefined;
 	setFilter: Dispatch<SetStateAction<Topic | undefined>>;
 	dropDownData: Topic[];
-};
-
-type SingleSelectFilterField = TopicFilterProps & {
 	label: string;
 	defaultValue: string;
 	highlightColor: string;
-};
-
-export const SingleSelectFilterField = (props: SingleSelectFilterField) => {
-	const {
-		label,
-		defaultValue,
-		filter,
-		setFilter,
-		dropDownData,
-		highlightColor,
-	} = props;
-
+}) => {
 	const handleChange = (event: any) => {
 		const {
 			target: { value },
