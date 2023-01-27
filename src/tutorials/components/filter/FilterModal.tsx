@@ -1,8 +1,7 @@
 import { DialogTitle, Divider } from "@mui/material";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import useDeviceDetect from "../../../../utils/useDeviceDetect";
-import { MultiSelectFilter } from "../../../global/forms/MultiSelectFilterField";
-import { SingleSelectFilterField } from "../../../global/forms/SingleSelectFilterField";
+import { SingleSelectFilterField } from "./singleselect/SingleSelectFilterField";
 import {
 	availableLanguages,
 	availableTags,
@@ -10,6 +9,7 @@ import {
 } from "../../tutorialDataService";
 import { Languages, Tags, Topic } from "../../types";
 import { Dispatch, SetStateAction } from "react";
+import { MultiSelectFilterField } from "./multiselect/MultiSelectFilterField";
 
 export const FilterModal = (
 	topicFilter: Topic | undefined,
@@ -51,14 +51,14 @@ export const FilterModal = (
 				dropDownData={availableTopics}
 				highlightColor={tutorialPurple}
 			/>
-			<MultiSelectFilter
+			<MultiSelectFilterField
 				label={"Languages"}
 				filter={languagesFilter}
 				setFilter={setFilteredLanguages}
 				dropDownData={availableLanguages}
 				highlightColor={tutorialPurple}
 			/>
-			<MultiSelectFilter
+			<MultiSelectFilterField
 				label={"Tags"}
 				filter={tagsFilter}
 				setFilter={setTagsFilter}
