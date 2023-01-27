@@ -13,13 +13,11 @@ import colors from "../../../themes/_colors.module.scss";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import styles from "./NavBar.module.scss";
 
-type NavbarProps = {
+export const Navbar = ({
+	setDarkMode,
+}: {
 	setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-export const Navbar = (props: NavbarProps) => {
-	const { setDarkMode } = props;
-
+}) => {
 	const darkMode = useContext(DarkMode);
 	const { isMobile } = useDeviceDetect();
 	const router = useRouter();
