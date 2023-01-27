@@ -1,34 +1,10 @@
 import { Container } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import useDeviceDetect from "../../utils/useDeviceDetect";
+import React from "react";
+import styles from "./PageContainer.module.scss";
 
-type PageContainerProps = {
-	children: React.ReactNode;
-	styleOverrides?: any;
-};
-
-export const PageContainer = (props: PageContainerProps) => {
-	const { children, styleOverrides } = props;
-
-	const { isMobile } = useDeviceDetect();
-
-	const styling = {
-		marginTop: isMobile ? "20px" : "50px",
-		transition: "400ms",
-		...styleOverrides,
-	};
-
-	const [subtleFade, setSubtleFade] = useState(styling);
-
-	useEffect(
-		() => () => {
-			setSubtleFade({ styling, ...{ opacity: 0 } });
-		},
-		[],
-	);
-
+export const PageContainer = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<Container maxWidth='lg' sx={subtleFade}>
+		<Container maxWidth='lg' className={styles.container}>
 			{children}
 		</Container>
 	);

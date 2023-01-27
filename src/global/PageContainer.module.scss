@@ -1,0 +1,9 @@
+@import "../../themes/breakpoints";
+
+.container {
+	margin-top: 20px;
+
+	@include breakpoint(small) {
+		margin-top: 50px;
+	}
+}
