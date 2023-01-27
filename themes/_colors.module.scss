@@ -1,4 +1,6 @@
 $defaultBlue: #90caf9;
+$defaultDarkBlue: #1565c0;
+
 $defaultGreen: #66bb6a;
 $defaultPurple: #ce93d8;
 $defaultRed: #f44336;
@@ -11,6 +13,10 @@ $white: #fff;
 .defaultBlue {
 	color: $defaultBlue;
 }
+.defaultDarkBlue {
+	color: $defaultDarkBlue;
+}
+
 .defaultGreen {
 	color: $defaultGreen;
 }

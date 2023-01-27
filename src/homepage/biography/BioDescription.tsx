@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 // @ts-ignore
 import ReactTypingEffect from "react-typing-effect";
 
+import color from "../../../themes/_colors.module.scss";
+import styles from "./BioDescription.module.scss";
+
 export const BioDescription = (): JSX.Element => {
 	const timeWorked = () => {
 		return intervalToDuration({
@@ -21,23 +24,6 @@ export const BioDescription = (): JSX.Element => {
 
 	const [periodWorked, setPeriodWorked] = useState<Duration>(timeWorked());
 
-	const TitleSectionStyles = {
-		container: {
-			marginTop: "20px",
-			marginBottom: "100px",
-			lineHeight: 1,
-		},
-		titleFont: {
-			fontSize: "80px",
-			fontWeight: "bold",
-		},
-		autoType: {
-			fontSize: "80px",
-			fontWeight: "lighter",
-		},
-		blurb: { marginTop: "50px" },
-	};
-
 	useEffect(() => {
 		const thirtySecondInterval = setInterval(() => {
 			setPeriodWorked(timeWorked());
@@ -46,14 +32,10 @@ export const BioDescription = (): JSX.Element => {
 	});
 
 	return (
-		<div style={TitleSectionStyles.container}>
-			<span style={TitleSectionStyles.titleFont}>Franklin</span>
-			<span style={TitleSectionStyles.titleFont}>{` V `}</span>
-			<span
-				style={{
-					color: "#1565C0",
-					...TitleSectionStyles.titleFont,
-				}}>
+		<div className={styles.container}>
+			<span className={styles.titleFont}>Franklin</span>
+			<span className={styles.titleFont}>{` V `}</span>
+			<span className={`${styles.titleFont} ${color.defaultDarkBlue}`}>
 				Moon
 			</span>
 
@@ -61,12 +43,12 @@ export const BioDescription = (): JSX.Element => {
 			<ReactTypingEffect
 				text={["Developer", "Volunteer", "Designer"]}
 				cursorRenderer={(cursor: string) => (
-					<span style={{ color: "#1565C0", ...TitleSectionStyles.autoType }}>
+					<span className={`${styles.autoType} ${color.defaultDarkBlue}`}>
 						{cursor}
 					</span>
 				)}
 				displayTextRenderer={(text: string) => {
-					return <span style={TitleSectionStyles.autoType}>{text}</span>;
+					return <span className={styles.autoType}>{text}</span>;
 				}}
 				typingDelay='1500ms'
 			/>
@@ -75,7 +57,7 @@ export const BioDescription = (): JSX.Element => {
 				variant='h6'
 				align='left'
 				color='baseGrey'
-				sx={TitleSectionStyles.blurb}>
+				className={styles.blurb}>
 				Full-stack software developer with a passion for user centric design,
 				volunteering globally and advocating for social change
 				<br />
