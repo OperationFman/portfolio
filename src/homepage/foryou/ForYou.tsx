@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { SubHeading } from "../SubHeading";
 import { ForYouCard } from "../foryou/ForYouCard";
 import { forYouMetaData } from "../../datasources/HomepageMetaData";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export const ForYou = () => {
 	return (
@@ -12,11 +13,13 @@ export const ForYou = () => {
 				{forYouMetaData.map((item, index) => {
 					return (
 						<Grid item key={index}>
-							<ForYouCard
-								logo={item.logo}
-								title={item.title}
-								paragraph={item.paragraph}
-							/>
+							<ScrollAnimation animateIn='fadeIn' delay={index * 100}>
+								<ForYouCard
+									logo={item.logo}
+									title={item.title}
+									paragraph={item.paragraph}
+								/>
+							</ScrollAnimation>
 						</Grid>
 					);
 				})}

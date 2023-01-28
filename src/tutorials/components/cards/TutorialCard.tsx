@@ -63,7 +63,7 @@ export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
 							sx={{ marginBottom: loading ? "0px" : "5px" }}>
 							{titleShortener(cardData.title)}
 						</Typography>
-						<Tooltip title={cardData.subTitle} followCursor enterDelay={200}>
+						<Tooltip title={cardData.subTitle} followCursor enterDelay={100}>
 							<Typography
 								variant='body2'
 								color='text.secondary'

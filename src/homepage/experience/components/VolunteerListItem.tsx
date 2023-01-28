@@ -6,17 +6,20 @@ import { setDark } from "../../../../utils/configureCss/configureCss";
 import color from "../../../../themes/_colors.module.scss";
 import styles from "../Experience.module.scss";
 import volunteerStyles from "./VolunteerListItem.module.scss";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export const VolunteerListItem = ({
 	logo,
 	title,
 	location,
 	year,
+	index,
 }: {
 	logo: string;
 	title: string;
 	location: string;
 	year: string;
+	index: number;
 }) => {
 	return (
 		<>
@@ -34,19 +37,23 @@ export const VolunteerListItem = ({
 					className={`${styles.logo} ${volunteerStyles.logo}`}
 				/>
 
-				<Typography variant='subtitle1' className={`${volunteerStyles.title}`}>
-					{title}
-				</Typography>
-				<Typography
-					variant='subtitle1'
-					className={`${styles.roleLocation} ${volunteerStyles.roleLocation} ${color.brightGrey}`}>
-					{location}
-				</Typography>
-				<Typography
-					variant='subtitle1'
-					className={`${styles.rolePeriod} ${volunteerStyles.rolePeriod} ${color.brightGrey}`}>
-					{year}
-				</Typography>
+				<ScrollAnimation animateIn='fadeIn' delay={index * 10}>
+					<Typography
+						variant='subtitle1'
+						className={`${volunteerStyles.title}`}>
+						{title}
+					</Typography>
+					<Typography
+						variant='subtitle1'
+						className={`${styles.roleLocation} ${volunteerStyles.roleLocation} ${color.brightGrey}`}>
+						{location}
+					</Typography>
+					<Typography
+						variant='subtitle1'
+						className={`${styles.rolePeriod} ${volunteerStyles.rolePeriod} ${color.brightGrey}`}>
+						{year}
+					</Typography>
+				</ScrollAnimation>
 			</div>
 		</>
 	);

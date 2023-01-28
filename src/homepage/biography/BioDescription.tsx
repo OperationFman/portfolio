@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { intervalToDuration } from "date-fns";
 import { useEffect, useState } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 // @ts-ignore
 import ReactTypingEffect from "react-typing-effect";
 
@@ -53,25 +54,27 @@ export const BioDescription = (): JSX.Element => {
 				typingDelay='1500ms'
 			/>
 
-			<Typography
-				variant='h6'
-				align='left'
-				color='baseGrey'
-				className={styles.blurb}>
-				Full-stack software developer with a passion for user centric design,
-				volunteering globally and advocating for social change
-				<br />
-				<br />
-				Practicing professional for {pluralTime(
-					"year",
-					periodWorked?.years,
-				)}{" "}
-				{pluralTime("month", periodWorked?.months)}{" "}
-				{pluralTime("day", periodWorked?.days)}{" "}
-				{pluralTime("hour", periodWorked?.hours)}
-				{" and "}
-				{pluralTime("minute", periodWorked?.minutes)}{" "}
-			</Typography>
+			<ScrollAnimation animateIn='fadeIn'>
+				<Typography
+					variant='h6'
+					align='left'
+					color='baseGrey'
+					className={styles.blurb}>
+					Full-stack software developer with a passion for user centric design,
+					volunteering globally and advocating for social change
+					<br />
+					<br />
+					Practicing professional for {pluralTime(
+						"year",
+						periodWorked?.years,
+					)}{" "}
+					{pluralTime("month", periodWorked?.months)}{" "}
+					{pluralTime("day", periodWorked?.days)}{" "}
+					{pluralTime("hour", periodWorked?.hours)}
+					{" and "}
+					{pluralTime("minute", periodWorked?.minutes)}{" "}
+				</Typography>
+			</ScrollAnimation>
 		</div>
 	);
 };

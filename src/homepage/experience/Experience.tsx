@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import {
 	volunteeringMetaData,
-	workExperienceMetaData
+	workExperienceMetaData,
 } from "../../datasources/HomepageMetaData";
 import { SubHeading } from "../SubHeading";
 import { VolunteerListItem } from "./components/VolunteerListItem";
@@ -62,6 +62,7 @@ export const Experience = () => {
 								location={item.location}
 								year={item.year}
 								key={index}
+								index={index}
 							/>
 						);
 					})}
@@ -84,6 +85,7 @@ export const Experience = () => {
 									employerLocation={item.location}
 									employerExperiences={item.experiences}
 									key={index}
+									index={index}
 								/>
 							);
 						})}

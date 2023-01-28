@@ -5,6 +5,7 @@ import { setDark } from "../../../../utils/configureCss/configureCss";
 
 import color from "../../../../themes/_colors.module.scss";
 import styles from "../Experience.module.scss";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export const WorkExpListItem = ({
 	companyLogo,
@@ -12,6 +13,7 @@ export const WorkExpListItem = ({
 	periodWithEmployer,
 	employerLocation,
 	employerExperiences,
+	index,
 }: {
 	companyLogo: string;
 	employerName: string;
@@ -21,6 +23,7 @@ export const WorkExpListItem = ({
 		title: string;
 		period: string;
 	}[];
+	index: number;
 }) => {
 	return (
 		<>
@@ -37,30 +40,32 @@ export const WorkExpListItem = ({
 					className={styles.logo}
 				/>
 
-				<Typography variant='subtitle1'>{employerName}</Typography>
+				<ScrollAnimation animateIn='fadeIn' delay={index * 100}>
+					<Typography variant='subtitle1'>{employerName}</Typography>
 
-				<Typography variant='subtitle1' className={color.brightGrey}>
-					{employerLocation}
-				</Typography>
-				<Typography
-					variant='subtitle1'
-					className={`${styles.periodText} ${color.brightGrey}`}>
-					{periodWithEmployer}
-				</Typography>
-				{employerExperiences.map((experienceItem, index) => {
-					return (
-						<div key={index} className={styles.roles}>
-							<Typography variant='subtitle1' className={styles.roleTitle}>
-								{experienceItem.title}
-							</Typography>
-							<Typography
-								variant='subtitle1'
-								className={`${styles.rolePeriod}  ${color.brightGrey}`}>
-								{experienceItem.period}
-							</Typography>
-						</div>
-					);
-				})}
+					<Typography variant='subtitle1' className={color.brightGrey}>
+						{employerLocation}
+					</Typography>
+					<Typography
+						variant='subtitle1'
+						className={`${styles.periodText} ${color.brightGrey}`}>
+						{periodWithEmployer}
+					</Typography>
+					{employerExperiences.map((experienceItem, index) => {
+						return (
+							<div key={index} className={styles.roles}>
+								<Typography variant='subtitle1' className={styles.roleTitle}>
+									{experienceItem.title}
+								</Typography>
+								<Typography
+									variant='subtitle1'
+									className={`${styles.rolePeriod}  ${color.brightGrey}`}>
+									{experienceItem.period}
+								</Typography>
+							</div>
+						);
+					})}
+				</ScrollAnimation>
 			</div>
 		</>
 	);

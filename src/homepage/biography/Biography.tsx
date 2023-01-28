@@ -12,19 +12,19 @@ export const Biography = () => {
 	const selectedTheme = darkMode ? "dark" : "light";
 
 	return (
-		<ScrollAnimation animateIn='fadeIn' delay={200}>
-			<div className={styles.container}>
-				<BioDescription />
+		<ScrollAnimation
+			animateIn='fadeIn'
+			className={styles.container}>
+			<BioDescription />
 
-				<div className={styles.headshot}>
-					<Image
-						src={`/homepage/biography/headshot-${selectedTheme}.svg`}
-						width='480'
-						height='300'
-						alt='Head shot'
-					/>
-				</div>
-			</div>
+			<ScrollAnimation animateIn='fadeIn' className={styles.headshot}>
+				<Image
+					src={`/homepage/biography/headshot-${selectedTheme}.svg`}
+					width='480'
+					height='300'
+					alt='Head shot'
+				/>
+			</ScrollAnimation>
 		</ScrollAnimation>
 	);
 };
