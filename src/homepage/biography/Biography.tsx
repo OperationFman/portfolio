@@ -1,35 +1,28 @@
 import Image from "next/future/image";
 import { useContext } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
-import ShowIf from "../../../utils/ShowIf";
-import useDeviceDetect from "../../../utils/useDeviceDetect";
+
+import styles from "./Biography.module.scss";
 import { BioDescription } from "./BioDescription";
 
 export const Biography = () => {
-	const { isMobile } = useDeviceDetect();
 	const darkMode = useContext(DarkMode);
+	console.log({ darkMode });
 
 	const selectedTheme = darkMode ? "dark" : "light";
 
 	return (
-		<div
-			style={{
-				display: "flex",
-				flexDirection: "row",
-			}}>
+		<div className={styles.container}>
 			<BioDescription />
 
-			<ShowIf condition={!isMobile}>
-				<div
-					style={{ alignItems: "center", overflow: isMobile ? "hidden" : "" }}>
-					<Image
-						src={`/homepage/biography/headshot-${selectedTheme}.svg`}
-						width='480'
-						height='300'
-						alt='Head shot'
-					/>
-				</div>
-			</ShowIf>
+			<div className={styles.headshot}>
+				<Image
+					src={`/homepage/biography/headshot-${selectedTheme}.svg`}
+					width='480'
+					height='300'
+					alt='Head shot'
+				/>
+			</div>
 		</div>
 	);
 };

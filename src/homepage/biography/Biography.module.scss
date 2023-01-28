@@ -1,0 +1,15 @@
+@import "../../../themes/breakpoints";
+
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
+.headshot {
+	display: none;
+	align-items: center;
+
+	@include breakpoint(medium) {
+		display: flex;
+	}
+}

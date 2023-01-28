@@ -7,7 +7,6 @@ jest.mock("react-typing-effect", () => {
 	));
 });
 
-
 describe("BioDescription", () => {
 	it("renders the correct text and elements", () => {
 		const { getByText } = render(<BioDescription />);
