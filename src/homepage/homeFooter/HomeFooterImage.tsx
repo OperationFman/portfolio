@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import styles from "./HomeFooterImage.module.css";
+import styles from "./HomeFooterImage.module.scss";
 
 export const HomeFooterImage = () => {
 	return (
