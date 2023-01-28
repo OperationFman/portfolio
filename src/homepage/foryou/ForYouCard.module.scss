@@ -1,0 +1,33 @@
+@import "../../../themes/colors.module";
+
+.container {
+	width: 350px;
+}
+
+.innerContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 32px 24px;
+}
+
+.title {
+	text-align: center;
+	font-weight: bold;
+	color: $defaultDarkBlue;
+}
+
+.content {
+	margin-top: 24px;
+	height: 200px;
+}
+
+.sentence {
+	text-align: center;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.logo {
+	margin-bottom: 24px;
+}
