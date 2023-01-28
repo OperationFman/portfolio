@@ -1,6 +1,5 @@
 import { Card, CardContent, Typography } from "@mui/material";
-import { useContext } from "react";
-import { DarkMode } from "../../../themes/GlobalTheme";
+import { setDark } from "../../../utils/configureCss/configureCss";
 import ShowIf from "../../../utils/ShowIf";
 
 import styles from "./Contact.module.scss";
@@ -16,8 +15,6 @@ export const ContactCard = ({
 	value?: string;
 	link?: string;
 }) => {
-	const isDarkMode = useContext(DarkMode);
-
 	const handleLinkClick = () => {
 		if (link) {
 			window.open(link, "_blank");
@@ -27,9 +24,7 @@ export const ContactCard = ({
 	return (
 		<Card
 			onClick={() => handleLinkClick()}
-			className={`${styles.cardContainer} ${
-				isDarkMode ? styles.cardContainerDark : ""
-			}`}>
+			className={setDark(styles, "cardContainer")}>
 			<CardContent className={styles.cardContent}>
 				{/* Icon */}
 				{children}
