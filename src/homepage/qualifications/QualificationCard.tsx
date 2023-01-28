@@ -1,6 +1,8 @@
 import { Typography } from "@mui/material";
 import Image from "next/future/image";
 
+import styles from "./QualificationCard.module.scss";
+
 export const QualificationCard = ({
 	logo,
 	title,
@@ -11,33 +13,20 @@ export const QualificationCard = ({
 	location: string;
 }) => {
 	return (
-		<div className='w-[340px] flex flex-col items-center pt-8 pb-8 pl-6 pr-6'>
+		<div className={styles.container}>
 			<Image
 				src={`/homepage/qualifications/${logo}.svg`}
 				alt={logo}
 				width={50}
 				height={50}
-				className='mt-6'
+				className={styles.icon}
 			/>
 
-			<Typography
-				variant='h5'
-				align='center'
-				style={{
-					marginTop: "20px",
-					lineHeight: 1.5,
-				}}>
+			<Typography variant='h5' className={styles.title}>
 				{title}
 			</Typography>
 
-			<Typography
-				variant='h5'
-				align='center'
-				style={{
-					marginTop: "20px",
-					fontWeight: "bold",
-					color: "#1565C0",
-				}}>
+			<Typography variant='h5' align='center' className={styles.location}>
 				{location}
 			</Typography>
 		</div>

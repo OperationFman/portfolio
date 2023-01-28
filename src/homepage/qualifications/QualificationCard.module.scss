@@ -1,0 +1,26 @@
+@import "../../../themes/colors.module";
+
+.container {
+	width: 340px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 32px 24px;
+}
+
+.icon {
+	margin-top: 24px;
+}
+
+.title {
+	margin-top: 20px;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.location {
+	text-align: center;
+	margin-top: 20px;
+	font-weight: bold;
+	color: $defaultDarkBlue;
+}
