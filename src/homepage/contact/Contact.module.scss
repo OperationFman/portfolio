@@ -1,0 +1,64 @@
+@import "../../../themes/breakpoints";
+@import "../../../themes/colors.module";
+
+.container {
+	margin-top: 32px;
+}
+
+.cardContainer {
+	width: 160px;
+	height: 130px;
+	box-shadow: 3px;
+	transition: linear 400ms;
+
+	&:hover {
+		background-color: $dimmerWhite;
+	}
+
+	@include breakpoint(small) {
+		width: 210px;
+		height: 180px;
+	}
+}
+
+.cardContainerDark {
+	&:hover {
+		background-color: $mediumGrey;
+	}
+}
+
+.cardContent {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: center;
+	padding-top: 25px;
+
+	@include breakpoint(small) {
+		padding-top: 35px;
+	}
+}
+
+.contactMethod {
+	width: 100%;
+	font-weight: bold;
+	margin-top: 15px;
+	color: $defaultLightBlue;
+
+	@include breakpoint(small) {
+		margin-top: 25px;
+	}
+}
+
+.contactSubtitle {
+	display: none;
+
+	@include breakpoint(small) {
+		display: inline;
+		width: 100%;
+		font-weight: regular;
+		line-height: 1.5;
+		color: $brightGrey;
+	}
+}

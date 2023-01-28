@@ -2,7 +2,8 @@ import { Card, CardContent, Typography } from "@mui/material";
 import { useContext } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
 import ShowIf from "../../../utils/ShowIf";
-import useDeviceDetect from "../../../utils/useDeviceDetect";
+
+import styles from "./Contact.module.scss";
 
 export const ContactCard = ({
 	children,
@@ -15,8 +16,7 @@ export const ContactCard = ({
 	value?: string;
 	link?: string;
 }) => {
-	const darkMode = useContext(DarkMode);
-	const { isMobile } = useDeviceDetect();
+	const isDarkMode = useContext(DarkMode);
 
 	const handleLinkClick = () => {
 		if (link) {
@@ -27,47 +27,23 @@ export const ContactCard = ({
 	return (
 		<Card
 			onClick={() => handleLinkClick()}
-			sx={{
-				width: isMobile ? 160 : 210,
-				height: isMobile ? 130 : 180,
-				boxShadow: 3,
-				"&:hover": {
-					backgroundColor: darkMode ? "#2D2D2D" : "#f2f2f2",
-					transition: "linear 400ms",
-				},
-			}}>
-			<CardContent
-				style={{
-					display: "flex",
-					flexDirection: "row",
-					flexWrap: "wrap",
-					alignItems: "flex-end",
-					justifyContent: "center",
-					paddingTop: isMobile ? "25px" : "35px",
-				}}>
+			className={`${styles.cardContainer} ${
+				isDarkMode ? styles.cardContainerDark : ""
+			}`}>
+			<CardContent className={styles.cardContent}>
 				{/* Icon */}
 				{children}
 				<Typography
 					variant='h5'
 					align='center'
-					style={{
-						width: "100%",
-						fontWeight: "bold",
-						marginTop: isMobile ? "15px" : "25px",
-						color: "#90caf9",
-					}}>
+					className={styles.contactMethod}>
 					{contactMethod}
 				</Typography>
-				<ShowIf condition={value && !isMobile}>
+				<ShowIf condition={value}>
 					<Typography
 						variant='subtitle2'
 						align='center'
-						style={{
-							width: "100%",
-							fontWeight: "regular",
-							lineHeight: 1.5,
-							color: "#949494",
-						}}>
+						className={styles.contactSubtitle}>
 						{value}
 					</Typography>
 				</ShowIf>
