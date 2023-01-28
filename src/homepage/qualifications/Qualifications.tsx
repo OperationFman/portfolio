@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { qualificationMetaData } from "../../datasources/HomepageMetaData";
-import { SubHeading } from "../components/SubHeading";
+import { SubHeading } from "../SubHeading";
 import { QualificationCard } from "./QualificationCard";
 
 export const Qualifications = () => {

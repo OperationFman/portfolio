@@ -1,5 +1,5 @@
 import useDeviceDetect from "../../../utils/useDeviceDetect";
-import { SubHeading } from "../components/SubHeading";
+import { SubHeading } from "../SubHeading";
 import { SalaryExpectationsSection } from "./SalaryExpectationsSection";
 
 export const Salary = () => {

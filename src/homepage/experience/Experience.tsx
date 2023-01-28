@@ -5,7 +5,7 @@ import {
 	volunteeringMetaData,
 	workExperienceMetaData,
 } from "../../datasources/HomepageMetaData";
-import { SubHeading } from "../components/SubHeading";
+import { SubHeading } from "../SubHeading";
 import { VolunteerListItem } from "./components/VolunteerListItem";
 import { WorkExpListItem } from "./components/WorkExpListItem";
 import styles from "./Experience.module.css";

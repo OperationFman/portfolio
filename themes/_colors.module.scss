@@ -1,4 +1,5 @@
-$defaultBlue: #90caf9;
+$defaultLightBlue: #90caf9;
+$defaultBlue: #42a5f5;
 $defaultDarkBlue: #1565c0;
 
 $defaultGreen: #66bb6a;
@@ -10,8 +11,8 @@ $mediumGrey: #2e2e2e;
 $brightGrey: #9c9c9c;
 $white: #fff;
 
-.defaultBlue {
-	color: $defaultBlue;
+.defaultLightBlue {
+	color: $defaultLightBlue;
 }
 .defaultDarkBlue {
 	color: $defaultDarkBlue;

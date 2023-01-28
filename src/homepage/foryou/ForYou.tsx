@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { SubHeading } from "../components/SubHeading";
+import { SubHeading } from "../SubHeading";
 import { ForYouCard } from "../foryou/ForYouCard";
 import { forYouMetaData } from "../../datasources/HomepageMetaData";
 

@@ -71,7 +71,7 @@ export const Navbar = ({
 				icon={
 					<AccountCircleOutlinedIcon
 						fontSize='small'
-						className={tab === 0 ? colors.defaultBlue : styles.colorDefault}
+						className={tab === 0 ? colors.defaultLightBlue : styles.colorDefault}
 					/>
 				}
 				className={styles.homepageTab}

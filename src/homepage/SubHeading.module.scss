@@ -1,0 +1,33 @@
+@import "../../themes/breakpoints";
+@import "../../themes/colors.module";
+
+.container {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.title {
+	text-align: center;
+	font-size: 3rem;
+	line-height: 1;
+}
+
+.lineContainer {
+	display: flex;
+	position: relative;
+	justify-content: center;
+}
+
+.line {
+	position: absolute;
+	width: 150px;
+	margin-top: 6px;
+	border-bottom: 1px solid $defaultDarkBlue;
+	opacity: 0.5;
+
+	@include breakpoint(medium) {
+		inset: -10%;
+		width: 120%;
+	}
+}

@@ -2,7 +2,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Grid } from "@mui/material";
-import { SubHeading } from "../components/SubHeading";
+import { SubHeading } from "../SubHeading";
 import { ContactCard } from "./ContactCard";
 
 export const Contact = () => {
