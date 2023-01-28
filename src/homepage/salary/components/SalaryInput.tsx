@@ -10,6 +10,8 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import React from "react";
 
+import styles from "./SalaryInput.module.scss";
+
 export const MoneyInput = ({
 	title,
 	name,
@@ -26,13 +28,13 @@ export const MoneyInput = ({
 	description: string;
 }) => {
 	return (
-		<div style={{ display: "flex", margin: "10px 30px", gap: "15px" }}>
+		<div className={styles.container}>
 			<Tooltip
 				TransitionComponent={Zoom}
 				title={description}
 				enterTouchDelay={0}
 				leaveTouchDelay={5000}>
-				<HelpOutlineIcon style={{ marginTop: "40px" }} />
+				<HelpOutlineIcon className={styles.helpIcon} />
 			</Tooltip>{" "}
 			<div>
 				<InputLabel htmlFor='outlined-adornment-amount'>{title}</InputLabel>
@@ -50,7 +52,7 @@ export const MoneyInput = ({
 					color='primary'
 					component='label'
 					onClick={() => onClear(name)}
-					sx={{ marginTop: "20px", width: "55px" }}>
+					className={styles.iconButton}>
 					<DeleteOutlineIcon />
 				</IconButton>
 			</Tooltip>

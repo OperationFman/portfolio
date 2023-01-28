@@ -55,7 +55,7 @@
 
 .clearAllButton {
 	margin-top: 40px;
-	color: $defaultDarkBlue;
+	color: $defaultBlue;
 	border-color: $defaultDarkBlue;
 
 	@include breakpoint(small) {
