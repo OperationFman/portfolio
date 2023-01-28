@@ -1,0 +1,68 @@
+@import "../../../themes/colors.module";
+@import "../../../themes/breakpoints";
+
+.headingGap {
+	margin-bottom: 24px;
+}
+
+.cardContainer {
+	width: 100%;
+	box-shadow: 10px;
+}
+
+.heading {
+	display: flex;
+	justify-content: center;
+}
+
+.salaryNumber {
+	text-align: center;
+	margin-top: 40px;
+	font-weight: bold;
+	color: $defaultDarkBlue;
+}
+
+.salaryCurrency {
+	text-align: left;
+	margin-top: 62px;
+	font-weight: bold;
+	color: $defaultDarkBlue;
+}
+
+.subHeading {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.formGroup {
+	@include breakpoint(small) {
+		display: flex;
+	}
+}
+
+.leftColumn {
+	@include breakpoint(small) {
+		flex: 1;
+		margin-left: 50px;
+	}
+}
+
+.clearAllContainer {
+	display: flex;
+	justify-content: center;
+}
+
+.clearAllButton {
+	margin-top: 40px;
+	color: $defaultDarkBlue;
+	border-color: $defaultDarkBlue;
+
+	@include breakpoint(small) {
+		margin-top: 0;
+	}
+}
+
+.gap {
+	margin-top: 30px;
+}

@@ -4,6 +4,8 @@ import { Gap } from "./components/Gap";
 import { MoneyInput as SalaryInput } from "./components/SalaryInput";
 import { SalarySwitch } from "./components/SalarySwitch";
 
+import styles from "./Salary.module.scss";
+
 export const SalaryExpectationsSection = ({
 	isMobile,
 }: {
@@ -100,8 +102,6 @@ export const SalaryExpectationsSection = ({
 			const trainingAllowance = values.trainingAllowances;
 			const otherAllowances = values.otherAllowances;
 
-			// TODO: Cleaner approach
-
 			if (fourDays) {
 				baseSalary = baseSalary * 0.8; // 20% reduction for 4 day work weeks
 			}
@@ -170,50 +170,23 @@ export const SalaryExpectationsSection = ({
 	]);
 
 	return (
-		<Card
-			sx={{
-				width: "100%",
-				boxShadow: 5,
-			}}>
-			<div style={{ display: "flex", justifyContent: "center" }}>
-				<Typography
-					variant='h3'
-					align='center'
-					style={{
-						marginTop: "40px",
-						fontWeight: "bold",
-						color: "#90caf9",
-					}}>
+		<Card className={styles.cardContainer}>
+			<div className={styles.heading}>
+				<Typography variant='h3' className={styles.salaryNumber}>
 					${commaSeparate(expectedSalary)}
 				</Typography>
-				<Typography
-					variant='h6'
-					align='left'
-					style={{
-						marginTop: "62px",
-						fontWeight: "bold",
-						color: "#90caf9",
-					}}>
+				<Typography variant='h6' align='left' className={styles.salaryCurrency}>
 					AUD
 				</Typography>
 			</div>
 
-			<Typography
-				variant='h5'
-				align='center'
-				style={{
-					fontWeight: "bold",
-					marginBottom: "20px",
-				}}>
+			<Typography variant='h5' className={styles.subHeading}>
 				Proposed Annual Salary
 			</Typography>
 
 			<FormGroup>
-				<div
-					style={{
-						display: isMobile ? "" : "flex",
-					}}>
-					<div style={{ flex: 1, marginLeft: isMobile ? "" : "50px" }}>
+				<div className={styles.formGroup}>
+					<div className={styles.leftColumn}>
 						<Gap />
 						<SalarySwitch
 							text={"Fully Remote"}
@@ -331,13 +304,13 @@ export const SalaryExpectationsSection = ({
 					</div>
 				</div>
 			</FormGroup>
-			<div style={{ display: "flex", justifyContent: "center" }}>
+			<div className={styles.clearAllContainer}>
 				<Button
 					variant='outlined'
 					size='medium'
 					onClick={() => handleClearAll()}
 					disabled={disableClearAll}
-					style={{ marginTop: isMobile ? "40px" : "" }}>
+					className={styles.clearAllButton}>
 					Clear All
 				</Button>
 			</div>
