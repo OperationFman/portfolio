@@ -13,6 +13,9 @@ $brightGrey: #9c9c9c;
 $white: #fff;
 $dimmerWhite: #f2f2f2;
 
+$lightBackground: #ffffff;
+$darkBackground: #13181c;
+
 .defaultLightBlue {
 	color: $defaultLightBlue;
 }
@@ -28,4 +31,8 @@ $dimmerWhite: #f2f2f2;
 }
 .defaultRed {
 	color: $defaultRed;
+}
+
+.brightGrey {
+	color: $brightGrey;
 }

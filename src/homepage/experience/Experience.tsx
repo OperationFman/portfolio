@@ -37,11 +37,9 @@ export const Experience = () => {
 		setStickyColumnLock(smallerColumnHeight);
 	}, []);
 
-	const stickyColumn: any = !isMobile
+	const stickyColumn = !isMobile
 		? {
-				position: "sticky",
 				top: `calc(100vh - ${stickyColumnLock}px)`,
-				height: "100%",
 		  }
 		: {};
 
@@ -54,7 +52,7 @@ export const Experience = () => {
 					id='left-column'
 					style={stickyColumn}>
 					<SubHeading text={"Volunteering"} />
-					<div className='mb-8' />
+					<div className={styles.headingGap} />
 
 					{volunteeringMetaData.map((item, index) => {
 						return (
@@ -63,7 +61,6 @@ export const Experience = () => {
 								title={item.title}
 								location={item.location}
 								year={item.year}
-								isMobile={isMobile}
 								key={index}
 							/>
 						);
@@ -75,7 +72,7 @@ export const Experience = () => {
 					id='right-column'
 					style={stickyColumn}>
 					<SubHeading text={"Employment"} />
-					<div className='mb-8' />
+					<div className={styles.headingGap} />
 
 					<div>
 						{workExperienceMetaData.map((item, index) => {

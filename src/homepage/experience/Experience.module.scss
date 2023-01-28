@@ -10,13 +10,13 @@
 }
 
 .column {
+	position: sticky;
+	height: 100%;
 	flex: 1;
 }
 
-.heading {
-	font-weight: bold;
-	padding-bottom: 50px;
-	margin-top: 150px;
+.headingGap {
+	margin-bottom: 34px;
 }
 
 .lineIcon {
@@ -25,24 +25,23 @@
 	color: $defaultDarkBlue;
 }
 
-.volunteerLineIcon {
-	@include breakpoint(small) {
-		position: static;
-		float: right;
-		margin: 5px -16px 0px 0px;
-		color: $defaultDarkBlue;
-	}
+.workExpLineIcon {
+	background-color: $lightBackground;
+}
+
+.workExpLineIconDark {
+	background-color: $darkBackground;
 }
 
 .itemContainer {
 	width: 100%;
+	padding: 0px 50px 50px;
 	border-left: 3px solid $defaultDarkBlue;
 }
 
-.volunteerItemContainer {
+.itemContainer:last-child {
 	@include breakpoint(small) {
-		border-right: 3px solid $defaultDarkBlue;
-		border-left: none;
+		padding: 0px 50px 120px;
 	}
 }
 
@@ -50,24 +49,6 @@
 	height: 40;
 	width: auto;
 	line-height: 0;
-}
-
-.volunteerLogo {
-	@include breakpoint(small) {
-		float: right;
-		padding-right: 5px;
-	}
-}
-
-.volunteerTitle {
-	margin-right: 5px;
-	line-height: 1.5;
-
-	@include breakpoint(small) {
-		padding-top: 70px;
-		margin-right: 0px;
-		line-height: normal;
-	}
 }
 
 .periodText {
@@ -82,20 +63,6 @@
 	margin-top: 25px;
 }
 
-.volunteerLocation {
-	@include breakpoint(small) {
-		margin-right: 6px;
-		margin-top: 5px;
-	}
-}
-
 .rolePeriod {
 	margin-top: -10px;
-}
-
-.volunteerRolePeriod {
-	@include breakpoint(small) {
-		margin-right: 6px;
-		margin-top: -10px;
-	}
 }

@@ -1,0 +1,63 @@
+@import "../../../../themes/colors.module";
+@import "../../../../themes/breakpoints";
+
+.lineIcon {
+	background-color: $lightBackground;
+
+	@include breakpoint(small) {
+		position: static;
+		float: right;
+		margin: 5px -16px 0px 0px;
+		color: $defaultDarkBlue;
+	}
+}
+
+.lineIconDark {
+	background-color: $darkBackground;
+}
+
+.itemContainer {
+	@include breakpoint(small) {
+		border-right: 3px solid $defaultDarkBlue;
+		border-left: none;
+	}
+}
+
+.logo {
+	@include breakpoint(small) {
+		float: right;
+		padding-right: 5px;
+	}
+}
+
+.title {
+	margin-right: 5px;
+	line-height: 1.5;
+	text-align: left;
+
+	@include breakpoint(small) {
+		text-align: right;
+		padding-top: 70px;
+		margin-right: 0px;
+		line-height: normal;
+	}
+}
+
+.roleLocation {
+	text-align: left;
+
+	@include breakpoint(small) {
+		text-align: right;
+	}
+}
+
+.rolePeriod {
+	text-align: left;
+
+	@include breakpoint(small) {
+		text-align: right;
+
+		margin-right: 6px;
+		margin-top: -10px;
+	}
+}
