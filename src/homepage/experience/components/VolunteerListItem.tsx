@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 import Image from "next/future/image";
 import { useContext } from "react";
 import { DarkMode } from "../../../../themes/GlobalTheme";
-import styles from "../Experience.module.css";
+import styles from "../Experience.module.scss";
 
 export const VolunteerListItem = ({
 	logo,
@@ -27,13 +27,13 @@ export const VolunteerListItem = ({
 		<>
 			<CommitIcon
 				fontSize='large'
-				className={`${styles.lineIcon} ${styles.lineIconDesktop}`}
+				className={`${styles.lineIcon} ${styles.volunteerLineIcon}`}
 				style={{
 					backgroundColor: selectedTheme,
 				}}
 			/>
 			<div
-				className={`${styles.itemContainer} ${styles.itemContainerDesktop}`}
+				className={`${styles.itemContainer} ${styles.volunteerItemContainer}`}
 				style={{
 					padding: isLastElement ? "0px 50px 0px" : "0px 50px 85px",
 				}}>
@@ -42,20 +42,20 @@ export const VolunteerListItem = ({
 					alt='tw'
 					width='200'
 					height='50'
-					className={`${styles.logo} ${styles.logoDesktop}`}
+					className={`${styles.logo} ${styles.volunteerLogo}`}
 				/>
 
 				<Typography
 					variant='subtitle1'
 					align={isMobile ? "left" : "right"}
-					className={styles.title}>
+					className={styles.volunteerTitle}>
 					{title}
 				</Typography>
 				<Typography
 					variant='subtitle1'
 					color='#949494'
 					align={isMobile ? "left" : "right"}
-					className={styles.roleLocation}>
+					className={styles.volunteerLocation}>
 					{location}
 				</Typography>
 				<Typography

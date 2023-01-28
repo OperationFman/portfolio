@@ -7,7 +7,6 @@ import { BioDescription } from "./BioDescription";
 
 export const Biography = () => {
 	const darkMode = useContext(DarkMode);
-	console.log({ darkMode });
 
 	const selectedTheme = darkMode ? "dark" : "light";
 

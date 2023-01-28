@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 import Image from "next/future/image";
 import { useContext } from "react";
 import { DarkMode } from "../../../../themes/GlobalTheme";
-import styles from "../Experience.module.css";
+import styles from "../Experience.module.scss";
 
 export const WorkExpListItem = ({
 	companyLogo,

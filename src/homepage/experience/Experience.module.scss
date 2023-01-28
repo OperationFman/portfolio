@@ -1,0 +1,101 @@
+@import "../../../themes/colors.module";
+@import "../../../themes/breakpoints";
+
+.container {
+	margin-top: 50px;
+
+	@include breakpoint(small) {
+		display: flex;
+	}
+}
+
+.column {
+	flex: 1;
+}
+
+.heading {
+	font-weight: bold;
+	padding-bottom: 50px;
+	margin-top: 150px;
+}
+
+.lineIcon {
+	position: absolute;
+	margin: 5px 0px 0px -16px;
+	color: $defaultDarkBlue;
+}
+
+.volunteerLineIcon {
+	@include breakpoint(small) {
+		position: static;
+		float: right;
+		margin: 5px -16px 0px 0px;
+		color: $defaultDarkBlue;
+	}
+}
+
+.itemContainer {
+	width: 100%;
+	border-left: 3px solid $defaultDarkBlue;
+}
+
+.volunteerItemContainer {
+	@include breakpoint(small) {
+		border-right: 3px solid $defaultDarkBlue;
+		border-left: none;
+	}
+}
+
+.logo {
+	height: 40;
+	width: auto;
+	line-height: 0;
+}
+
+.volunteerLogo {
+	@include breakpoint(small) {
+		float: right;
+		padding-right: 5px;
+	}
+}
+
+.volunteerTitle {
+	margin-right: 5px;
+	line-height: 1.5;
+
+	@include breakpoint(small) {
+		padding-top: 70px;
+		margin-right: 0px;
+		line-height: normal;
+	}
+}
+
+.periodText {
+	margin: -10px 0px 15px 0px;
+}
+
+.roles {
+	margin-left: 25px;
+}
+
+.roleTitle {
+	margin-top: 25px;
+}
+
+.volunteerLocation {
+	@include breakpoint(small) {
+		margin-right: 6px;
+		margin-top: 5px;
+	}
+}
+
+.rolePeriod {
+	margin-top: -10px;
+}
+
+.volunteerRolePeriod {
+	@include breakpoint(small) {
+		margin-right: 6px;
+		margin-top: -10px;
+	}
+}

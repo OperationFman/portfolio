@@ -8,7 +8,7 @@ import {
 import { SubHeading } from "../SubHeading";
 import { VolunteerListItem } from "./components/VolunteerListItem";
 import { WorkExpListItem } from "./components/WorkExpListItem";
-import styles from "./Experience.module.css";
+import styles from "./Experience.module.scss";
 
 export const Experience = () => {
 	const { isMobile } = useDeviceDetect();
