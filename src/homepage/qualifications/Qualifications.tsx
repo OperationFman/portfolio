@@ -13,7 +13,10 @@ export const Qualifications = () => {
 				{qualificationMetaData.map((item, index) => {
 					return (
 						<Grid item key={index}>
-							<ScrollAnimation animateIn='fadeIn' delay={index * 100}>
+							<ScrollAnimation
+								animateIn='fadeIn'
+								animateOnce
+								delay={index * 100}>
 								<QualificationCard
 									logo={item.logo}
 									title={item.title}

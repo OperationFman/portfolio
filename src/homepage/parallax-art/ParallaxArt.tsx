@@ -27,7 +27,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 	}, []);
 
 	return (
-		<ScrollAnimation animateIn='fadeIn'>
+		<ScrollAnimation animateIn='fadeIn' animateOnce delay={100}>
 			<div className={styles.outerContainer}>
 				<div className={styles.innerContainer}>
 					<div className={styles.background} />

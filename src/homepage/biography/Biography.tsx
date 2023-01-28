@@ -14,10 +14,14 @@ export const Biography = () => {
 	return (
 		<ScrollAnimation
 			animateIn='fadeIn'
+			animateOnce
 			className={styles.container}>
 			<BioDescription />
 
-			<ScrollAnimation animateIn='fadeIn' className={styles.headshot}>
+			<ScrollAnimation
+				animateIn='fadeIn'
+				animateOnce
+				className={styles.headshot}>
 				<Image
 					src={`/homepage/biography/headshot-${selectedTheme}.svg`}
 					width='480'

@@ -37,7 +37,7 @@ export const VolunteerListItem = ({
 					className={`${styles.logo} ${volunteerStyles.logo}`}
 				/>
 
-				<ScrollAnimation animateIn='fadeIn' delay={index * 10}>
+				<ScrollAnimation animateIn='fadeIn' animateOnce delay={index * 10}>
 					<Typography
 						variant='subtitle1'
 						className={`${volunteerStyles.title}`}>

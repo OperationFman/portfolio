@@ -16,7 +16,7 @@ export const Contact = () => {
 			<div className={styles.gap}>
 				<Grid container spacing={3} justifyContent='center'>
 					<Grid item>
-						<ScrollAnimation animateIn='fadeIn'>
+						<ScrollAnimation animateIn='fadeIn' animateOnce>
 							<ContactCard
 								contactMethod={"LinkedIn"}
 								link={"https://www.linkedin.com/in/franklin-moon-23572518a/"}>
@@ -26,7 +26,7 @@ export const Contact = () => {
 					</Grid>
 
 					<Grid item>
-						<ScrollAnimation animateIn='fadeIn' delay={100}>
+						<ScrollAnimation animateIn='fadeIn' animateOnce delay={100}>
 							<ContactCard
 								contactMethod={"Email"}
 								value={"Franklin.v.moon@gmail.com"}
@@ -37,7 +37,7 @@ export const Contact = () => {
 					</Grid>
 
 					<Grid item>
-						<ScrollAnimation animateIn='fadeIn' delay={200}>
+						<ScrollAnimation animateIn='fadeIn' animateOnce delay={200}>
 							<ContactCard
 								contactMethod={"Github"}
 								link={"https://github.com/OperationFman"}>

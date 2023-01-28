@@ -40,7 +40,7 @@ export const WorkExpListItem = ({
 					className={styles.logo}
 				/>
 
-				<ScrollAnimation animateIn='fadeIn' delay={index * 100}>
+				<ScrollAnimation animateIn='fadeIn' animateOnce delay={index * 100}>
 					<Typography variant='subtitle1'>{employerName}</Typography>
 
 					<Typography variant='subtitle1' className={color.brightGrey}>

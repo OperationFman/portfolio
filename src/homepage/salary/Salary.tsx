@@ -6,7 +6,7 @@ import styles from "./Salary.module.scss";
 
 export const Salary = () => {
 	return (
-		<ScrollAnimation animateIn='fadeIn'>
+		<ScrollAnimation animateIn='fadeIn' animateOnce>
 			<SubHeading text={"Salary"} />
 			<div className={styles.headingGap} />
 			<SalaryExpectationsSection />

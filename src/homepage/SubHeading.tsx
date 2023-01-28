@@ -5,7 +5,10 @@ import styles from "./SubHeading.module.scss";
 
 export const SubHeading = ({ text }: { text: string }) => {
 	return (
-		<ScrollAnimation animateIn='fadeIn' className={styles.container}>
+		<ScrollAnimation
+			animateIn='fadeIn'
+			animateOnce
+			className={styles.container}>
 			<h1 className={styles.title}>
 				{text}
 				<div className={styles.lineContainer}>

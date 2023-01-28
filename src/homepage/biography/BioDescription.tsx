@@ -54,7 +54,7 @@ export const BioDescription = (): JSX.Element => {
 				typingDelay='1500ms'
 			/>
 
-			<ScrollAnimation animateIn='fadeIn'>
+			<ScrollAnimation animateIn='fadeIn' animateOnce>
 				<Typography
 					variant='h6'
 					align='left'
