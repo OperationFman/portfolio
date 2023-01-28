@@ -6,16 +6,12 @@ import { SalarySwitch } from "./components/SalarySwitch";
 
 import styles from "./Salary.module.scss";
 
-export const SalaryExpectationsSection = ({
-	isMobile,
-}: {
-	isMobile: boolean;
-}) => {
+export const SalaryExpectationsSection = () => {
 	const commaSeparate = (value: number) => {
 		return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	};
 
-	const EXPECTED_SALARY_WITH_NO_BENEFITS = 125000;
+	const EXPECTED_SALARY_WITH_NO_BENEFITS = 120000;
 	const MINIMUM_LIVABLE_SALARY = 60000;
 
 	const [values, setValues] = useState({
@@ -26,7 +22,7 @@ export const SalaryExpectationsSection = ({
 		ethical: 2050,
 		workLifeBalance: 3000,
 		internationalTravel: 500,
-		stock: 10000,
+		stock: 0,
 		trainingAllowances: 2500,
 		otherAllowances: 4000,
 		internationalRelocation: 10000,
