@@ -1,9 +1,9 @@
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import { useEffect, useState } from "react";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import {
 	volunteeringMetaData,
-	workExperienceMetaData,
+	workExperienceMetaData
 } from "../../datasources/HomepageMetaData";
 import { SubHeading } from "../SubHeading";
 import { VolunteerListItem } from "./components/VolunteerListItem";
