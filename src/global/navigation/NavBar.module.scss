@@ -33,6 +33,9 @@
 .tab:first-child {
 	display: flex;
 	flex-direction: column;
+	min-width: 40px;
+	padding: 0 15px;
+
 	&::after {
 		margin-top: 5px;
 		content: "FVM";
@@ -49,12 +52,13 @@
 .darkModeToggle {
 	display: flex;
 	justify-content: right;
+	border-radius: 0;
 
-	margin-left: 5px;
-	padding: 0 25px;
+	padding-right: 10px;
 
 	@include breakpoint(small) {
 		margin-left: 60px;
+		padding: 0 15px;
 	}
 
 	@include breakpoint(medium) {

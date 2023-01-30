@@ -12,7 +12,7 @@
 .cardContainer {
 	width: 160px;
 	height: 130px;
-	box-shadow: 3px;
+	box-shadow: $defaultShadow;
 	transition: linear 400ms;
 
 	&:hover {
