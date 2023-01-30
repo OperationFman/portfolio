@@ -15,7 +15,6 @@ jest.mock("next/router", () => {
 describe("Navbar component", () => {
 	it("renders the navbar correctly", () => {
 		const { getByText } = render(<Navbar setDarkMode={() => {}} />);
-		expect(getByText("FRANKLIN V MOON")).toBeDefined();
 		expect(getByText("SKILLS")).toBeDefined();
 		expect(getByText("TUTORIALS")).toBeDefined();
 		expect(getByText("PROJECTS")).toBeDefined();

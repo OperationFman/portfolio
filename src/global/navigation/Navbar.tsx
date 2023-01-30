@@ -44,6 +44,7 @@ export const Navbar = ({
 
 	const handleTabClick = (route: string, tab: number) => {
 		setTab(tab);
+		router.replace(route);
 	};
 
 	const handleDarkModeToggle = () => {
