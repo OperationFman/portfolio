@@ -15,54 +15,51 @@
 	}
 }
 
-.homepageTab {
-	min-width: 30px;
-	margin: 0 5px 0 10px;
-	font-size: 12;
+.tab {
+	font-size: 10px;
 
 	@include breakpoint(small) {
-		position: absolute;
-		left: 0;
-		display: flex;
-		align-self: center;
-		justify-content: left;
-		font-size: 14;
-		padding-top: 15px;
+		font-size: 14px;
 	}
 
 	@extend .hover;
 }
 
-.centerTab {
-	min-width: 85px;
-	font-size: 12;
-
-	@include breakpoint(small) {
-		min-width: none;
-		font-size: 14;
+.tab:first-child {
+	display: flex;
+	flex-direction: column;
+	&::after {
+		margin-top: 5px;
+		content: "FVM";
 	}
 
-	@extend .hover;
-}
-
-.projectTab {
-	margin-right: 65px;
-
 	@include breakpoint(small) {
-		margin-right: 0;
+		&::after {
+			margin-top: 5px;
+			content: "FRANKLIN V MOON";
+		}
 	}
 }
 
 .darkModeToggle {
 	display: flex;
 	justify-content: right;
-	align-self: center;
-	position: absolute;
-	right: 5px;
+
+	margin-left: 5px;
+	padding-right: 25px;
 
 	@include breakpoint(small) {
-		right: 20px;
+		margin-left: 60px;
+		padding-left: 25px;
 	}
+
+	@include breakpoint(medium) {
+		margin-left: 90px;
+	}
+}
+
+.spacer {
+	flex-grow: 1;
 }
 
 .iconDim {

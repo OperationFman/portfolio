@@ -10,7 +10,6 @@ import { useRouter } from "next/router";
 import React, { useContext, useState } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
 import colors from "../../../themes/_colors.module.scss";
-import useDeviceDetect from "../../../utils/useDeviceDetect";
 import styles from "./NavBar.module.scss";
 
 export const Navbar = ({
@@ -19,7 +18,6 @@ export const Navbar = ({
 	setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
 	const darkMode = useContext(DarkMode);
-	const { isMobile } = useDeviceDetect();
 	const router = useRouter();
 
 	const setIndicator: string[] = ["#90caf9", "#66bb6a", "#ce93d8", "#f44336"];
@@ -46,10 +44,6 @@ export const Navbar = ({
 
 	const handleTabClick = (route: string, tab: number) => {
 		setTab(tab);
-
-		setTimeout(() => {
-			router.replace(route);
-		}, 400);
 	};
 
 	const handleDarkModeToggle = () => {
@@ -67,27 +61,29 @@ export const Navbar = ({
 			centered
 			className={styles.container}>
 			<Tab
-				label={isMobile ? "FVM" : "FRANKLIN V MOON"}
 				icon={
 					<AccountCircleOutlinedIcon
-						fontSize='small'
-						className={tab === 0 ? colors.defaultLightBlue : styles.colorDefault}
+						className={
+							tab === 0 ? colors.defaultLightBlue : styles.colorDefault
+						}
 					/>
 				}
-				className={styles.homepageTab}
+				className={styles.tab}
+				style={{ order: 1 }}
 				onClick={() => {
 					handleTabClick("/", 0);
 				}}
 			/>
+
 			<Tab
 				label='SKILLS'
 				icon={
 					<LightbulbOutlinedIcon
-						fontSize='small'
 						className={tab === 1 ? colors.defaultGreen : styles.colorDefault}
 					/>
 				}
-				className={styles.centerTab}
+				style={{ order: 3 }}
+				className={styles.tab}
 				onClick={() => {
 					handleTabClick("/skills", 1);
 				}}
@@ -96,11 +92,11 @@ export const Navbar = ({
 				label='TUTORIALS'
 				icon={
 					<SchoolOutlinedIcon
-						fontSize='small'
 						className={tab === 2 ? colors.defaultPurple : styles.colorDefault}
 					/>
 				}
-				className={styles.centerTab}
+				style={{ order: 4 }}
+				className={styles.tab}
 				onClick={() => {
 					handleTabClick("/tutorials", 2);
 				}}
@@ -109,18 +105,21 @@ export const Navbar = ({
 				label='PROJECTS'
 				icon={
 					<BookmarkBorderOutlinedIcon
-						fontSize='small'
 						className={tab === 3 ? colors.defaultRed : styles.colorDefault}
 					/>
 				}
-				className={`${styles.centerTab} ${styles.projectTab}`}
+				style={{ order: 5 }}
+				className={`${styles.tab} ${styles.projectTab}`}
 				onClick={() => {
 					handleTabClick("/projects", 3);
 				}}
 			/>
+			<div className={styles.spacer} style={{ order: 2 }} />
+			<div className={styles.spacer} style={{ order: 6 }} />
 			<IconButton
 				onClick={() => handleDarkModeToggle()}
-				className={styles.darkModeToggle}>
+				className={styles.darkModeToggle}
+				style={{ order: 7 }}>
 				<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
 					{darkMode ? (
 						<Brightness6Icon className={styles.iconDim} />
