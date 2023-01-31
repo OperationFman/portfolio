@@ -1,15 +1,12 @@
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import Brightness6Icon from "@mui/icons-material/Brightness6";
-import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
-import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import { IconButton, Tab, Tabs, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 import { useRouter } from "next/router";
 import React, { useContext, useState } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
-import colors from "../../../themes/_colors.module.scss";
+
+import { tabsData } from "../../datasources/NavBarMetaData";
 import styles from "./NavBar.module.scss";
 
 export const Navbar = ({
@@ -20,30 +17,26 @@ export const Navbar = ({
 	const darkMode = useContext(DarkMode);
 	const router = useRouter();
 
-	const setIndicator: string[] = ["#90caf9", "#66bb6a", "#ce93d8", "#f44336"];
-
 	const initialTab = () => {
-		const routes: string[] = ["/", "/skills", "/tutorials", "/projects"];
+		const currentBrowserRoute = router.pathname;
 
-		const route = router.pathname;
-
-		if (route === routes[0]) {
+		if (currentBrowserRoute === tabsData[0].route) {
 			return 0;
 		}
 
-		for (let tab = 1; tab < routes.length; tab++) {
-			if (route.startsWith(routes[tab])) {
+		for (let tab = 1; tab < tabsData.length; tab++) {
+			if (currentBrowserRoute.startsWith(tabsData[tab].route)) {
 				return tab;
 			}
 		}
 
-		return -1;
+		return 0;
 	};
 
-	const [tab, setTab] = useState(initialTab());
+	const [tabIndex, setTabIndex] = useState(initialTab());
 
 	const handleTabClick = (route: string, tab: number) => {
-		setTab(tab);
+		setTabIndex(tab);
 		router.replace(route);
 	};
 
@@ -54,69 +47,31 @@ export const Navbar = ({
 
 	return (
 		<Tabs
-			value={tab}
+			value={tabIndex}
 			scrollButtons={true}
-			TabIndicatorProps={{ style: { background: setIndicator[tab] } }}
+			TabIndicatorProps={{ style: { background: tabsData[tabIndex].color } }}
 			textColor='inherit'
 			variant={"standard"}
 			centered
 			className={styles.container}>
-			<Tab
-				icon={
-					<AccountCircleOutlinedIcon
-						className={
-							tab === 0 ? colors.defaultLightBlue : styles.colorDefault
-						}
+			{tabsData.map((item, index) => {
+				return (
+					<Tab
+						label={item.label}
+						icon={item.icon(tabIndex)}
+						className={styles.tab}
+						style={{ order: item.order }}
+						key={index}
+						onClick={() => {
+							handleTabClick(item.route, index);
+						}}
 					/>
-				}
-				className={styles.tab}
-				style={{ order: 1 }}
-				onClick={() => {
-					handleTabClick("/", 0);
-				}}
-			/>
+				);
+			})}
 
-			<Tab
-				label='SKILLS'
-				icon={
-					<LightbulbOutlinedIcon
-						className={tab === 1 ? colors.defaultGreen : styles.colorDefault}
-					/>
-				}
-				style={{ order: 3 }}
-				className={styles.tab}
-				onClick={() => {
-					handleTabClick("/skills", 1);
-				}}
-			/>
-			<Tab
-				label='TUTORIALS'
-				icon={
-					<SchoolOutlinedIcon
-						className={tab === 2 ? colors.defaultPurple : styles.colorDefault}
-					/>
-				}
-				style={{ order: 4 }}
-				className={styles.tab}
-				onClick={() => {
-					handleTabClick("/tutorials", 2);
-				}}
-			/>
-			<Tab
-				label='PROJECTS'
-				icon={
-					<BookmarkBorderOutlinedIcon
-						className={tab === 3 ? colors.defaultRed : styles.colorDefault}
-					/>
-				}
-				style={{ order: 5 }}
-				className={`${styles.tab} ${styles.projectTab}`}
-				onClick={() => {
-					handleTabClick("/projects", 3);
-				}}
-			/>
 			<div className={styles.spacer} style={{ order: 2 }} />
 			<div className={styles.spacer} style={{ order: 6 }} />
+
 			<IconButton
 				onClick={() => handleDarkModeToggle()}
 				className={styles.darkModeToggle}

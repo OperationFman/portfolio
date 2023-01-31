@@ -1,5 +1,6 @@
 import { Button, Card, FormGroup, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 import { Gap } from "./components/Gap";
 import { MoneyInput as SalaryInput } from "./components/SalaryInput";
 import { SalarySwitch } from "./components/SalarySwitch";
@@ -167,6 +168,7 @@ export const SalaryExpectationsSection = () => {
 
 	return (
 		<Card className={styles.cardContainer}>
+			<ScrollAnimation animateIn='fadeIn' animateOnce>
 			<div className={styles.heading}>
 				<Typography variant='h3' className={styles.salaryNumber}>
 					${commaSeparate(expectedSalary)}
@@ -311,6 +313,7 @@ export const SalaryExpectationsSection = () => {
 				</Button>
 			</div>
 			<Gap />
+			</ScrollAnimation>
 		</Card>
 	);
 };
