@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import { MetaData } from "../types";
 
 export const LanguagesRow = ({
@@ -21,9 +20,7 @@ export const LanguagesRow = ({
 		<div
 			className='pt-3 cursor-pointer'
 			onClick={() => handleOpenModal(modalPayload)}>
-			<Typography variant='body1' color='text.secondary'>
-				{item.title}
-			</Typography>
+			<div style={{ color: "#9c9c9c" }}>{item.title}</div>
 		</div>
 	);
 };

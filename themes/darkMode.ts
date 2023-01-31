@@ -37,9 +37,4 @@ export const darkTheme = createTheme({
 		},
 	},
 	components: navBarGlobal,
-	typography: {
-		button: {
-			textTransform: "none",
-		},
-	},
 });

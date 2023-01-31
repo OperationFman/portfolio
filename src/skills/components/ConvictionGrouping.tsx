@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import { splitStringAtFullStop } from "../../../utils/splitStringAtFullStop";
 import { ConvictionsRow } from "../types";
 
@@ -17,9 +16,7 @@ export const ConvictionGrouping = ({
 			{blurbArray.map((sentence, index) => {
 				return (
 					<div className={"mb-6"} key={index}>
-						<Typography variant='body1' color='text.secondary'>
-							{sentence}
-						</Typography>
+						<div style={{ color: "#9c9c9c" }}>{sentence}</div>
 					</div>
 				);
 			})}

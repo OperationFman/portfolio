@@ -6,7 +6,6 @@ import {
 	CardMedia,
 	LinearProgress,
 	Tooltip,
-	Typography,
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -50,29 +49,33 @@ export const TutorialCard = (props: TutorialCardProps): JSX.Element => {
 								backgroundColor: "background.paper",
 								boxShadow: 2,
 							}}>
-							<Typography
-								variant='body2'
-								align='right'
-								sx={{ fontWeight: 200 }}>
-								{cardData.topic}
-							</Typography>
-						</Box>
-						<Typography
-							gutterBottom
-							variant='h5'
-							sx={{ marginBottom: loading ? "0px" : "5px" }}>
-							{titleShortener(cardData.title)}
-						</Typography>
-						<Tooltip title={cardData.subTitle} followCursor enterDelay={100}>
-							<Typography
-								variant='body2'
-								color='text.secondary'
-								sx={{
-									paddingLeft: "5px",
+							<div
+								style={{
 									fontWeight: 200,
+									textAlign: "right",
+									marginTop: "2px",
+								}}>
+								{cardData.topic}
+							</div>
+						</Box>
+						<div
+							style={{
+								marginBottom: loading ? "0px" : "5px",
+								fontSize: "22px",
+								paddingLeft: "5px",
+							}}>
+							{titleShortener(cardData.title)}
+						</div>
+						<Tooltip title={cardData.subTitle} followCursor enterDelay={100}>
+							<div
+								style={{
+									padding: "10px 0 0 5px",
+									fontWeight: 200,
+									fontSize: "15px",
+									color: "#9c9c9c",
 								}}>
 								{subTitleShortener(cardData.subTitle)}
-							</Typography>
+							</div>
 						</Tooltip>
 					</CardContent>
 					{loading && <LinearProgress color='secondary' />}

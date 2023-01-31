@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card } from "@mui/material";
 import { setDark } from "../../../utils/configureCss/configureCss";
 import ShowIf from "../../../utils/ShowIf";
 

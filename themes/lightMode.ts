@@ -34,9 +34,4 @@ export const lightTheme = createTheme({
 	},
 
 	components: navBarGlobal,
-	typography: {
-		button: {
-			textTransform: "none",
-		},
-	},
 });

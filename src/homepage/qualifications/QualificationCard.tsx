@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import Image from "next/future/image";
 
 import styles from "./QualificationCard.module.scss";

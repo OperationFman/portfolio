@@ -1,6 +1,6 @@
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { Button, Tooltip, Typography } from "@mui/material";
+import { Button, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 import Image from "next/image";
 import Carousel from "nuka-carousel";
@@ -73,15 +73,14 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 				))}
 			</Carousel>
 
-			<Typography
-				variant='body2'
-				color='text.secondary'
-				sx={{
+			<div
+				stylea={{
+					color: "#9c9c9c",
 					textAlign: "center",
-					marginTop: "30px",
+					marginTop: "35px",
 				}}>
 				{metaData.subTitle}
-			</Typography>
+			</div>
 		</div>
 	);
 };

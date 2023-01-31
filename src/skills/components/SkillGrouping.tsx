@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import { MetaData, SkillData } from "../types";
 
 export const SkillsGrouping = ({
@@ -24,9 +23,7 @@ export const SkillsGrouping = ({
 						className='w-[50%] pt-2 pb-2 pr-10 mb-[-3px] lg:pr-5  cursor-pointer'
 						onClick={() => handleOpenModal(modalPayload)}
 						key={item.title}>
-						<Typography variant='body1' color='text.secondary'>
-							{item.title}
-						</Typography>
+						<div style={{ color: "#9c9c9c" }}>{item.title}</div>
 					</div>
 				);
 			})}
