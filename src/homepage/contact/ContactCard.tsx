@@ -25,14 +25,13 @@ export const ContactCard = ({
 		<Card
 			onClick={() => handleLinkClick()}
 			className={setDark(styles, "cardContainer")}>
-			<CardContent className={styles.cardContent}>
-				{/* Icon */}
+			<div className={styles.cardContent}>
 				{children}
 				<div className={styles.contactMethod}>{contactMethod}</div>
 				<ShowIf condition={value}>
 					<div className={styles.contactSubtitle}>{value}</div>
 				</ShowIf>
-			</CardContent>
+			</div>
 		</Card>
 	);
 };
