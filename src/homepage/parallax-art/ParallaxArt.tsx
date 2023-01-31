@@ -33,7 +33,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					<div className={styles.background} />
 
 					<Image
-						src={`/homepage/parallax/dark/17 Sun Moon.svg`}
+						src={"/homepage/parallax/dark/17 Sun Moon.svg"}
 						alt='Sun/Moon'
 						width='0'
 						height='0'
@@ -44,7 +44,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/16 Stars Some 2.svg`}
+						src={"/homepage/parallax/dark/16 Stars Some 2.svg"}
 						alt='Minor amount of stars'
 						width='0'
 						height='0'
@@ -55,7 +55,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/15 Stars Some.svg`}
+						src={"/homepage/parallax/dark/15 Stars Some.svg"}
 						alt='Moderate amount of stars'
 						width='0'
 						height='0'
@@ -66,7 +66,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/14 Stars Most.svg`}
+						src={"/homepage/parallax/dark/14 Stars Most.svg"}
 						alt='Significant amount of stars'
 						width='0'
 						height='0'
@@ -77,7 +77,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/13 Shooting Star.svg`}
+						src={"/homepage/parallax/dark/13 Shooting Star.svg"}
 						alt='Shooting Star'
 						width='0'
 						height='0'
@@ -111,7 +111,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 				/> */}
 
 					<Image
-						src={`/homepage/parallax/dark/10 Mountain Far.svg`}
+						src={"/homepage/parallax/dark/10 Mountain Far.svg"}
 						alt='Farthest Mountain'
 						width='0'
 						height='0'
@@ -122,7 +122,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/9 Train.svg`}
+						src={"/homepage/parallax/dark/9 Train.svg"}
 						alt='Train'
 						width='0'
 						height='0'
@@ -133,7 +133,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/8 Clouds Far.svg`}
+						src={"/homepage/parallax/dark/8 Clouds Far.svg"}
 						alt='Far clouds'
 						width='0'
 						height='0'
@@ -144,7 +144,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/7 Mountains Middle.svg`}
+						src={"/homepage/parallax/dark/7 Mountains Middle.svg"}
 						alt='Mid Mountains'
 						width='0'
 						height='0'
@@ -155,7 +155,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/6 Mountains Close.svg`}
+						src={"/homepage/parallax/dark/6 Mountains Close.svg"}
 						alt='Nearest Mountain'
 						width='0'
 						height='0'
@@ -166,7 +166,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/5 Clouds Near.svg`}
+						src={"/homepage/parallax/dark/5 Clouds Near.svg"}
 						alt='Close low clouds'
 						width='0'
 						height='0'
@@ -177,7 +177,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/4 City.svg`}
+						src={"/homepage/parallax/dark/4 City.svg"}
 						alt='Farthest City'
 						width='0'
 						height='0'
@@ -188,7 +188,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/3 Plane.svg`}
+						src={"/homepage/parallax/dark/3 Plane.svg"}
 						alt='Closest City'
 						width='0'
 						height='0'
@@ -199,7 +199,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 						}}
 					/>
 					<Image
-						src={`/homepage/parallax/dark/2 Town.svg`}
+						src={"/homepage/parallax/dark/2 Town.svg"}
 						alt='Closest City'
 						width='0'
 						height='0'
@@ -211,7 +211,7 @@ export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
 					/>
 
 					<Image
-						src={`/homepage/parallax/dark/1 Motherboard.svg`}
+						src={"/homepage/parallax/dark/1 Motherboard.svg"}
 						alt='Motherboard I/O'
 						width='0'
 						height='0'

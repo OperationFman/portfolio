@@ -3,7 +3,7 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
 		title: "Quickstart: React-Redux Refresher",
-		link: `react-redux-refresher`,
+		link: "react-redux-refresher",
 		notionPage: "b2b95c4552a24526ba3fec209cb1eb4a",
 		created: 1667982722,
 		thumbnail: "/tutorials/redux-ducks.png",
@@ -15,7 +15,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Revert a Commit",
-		link: `revert-commit`,
+		link: "revert-commit",
 		notionPage: "9d8e0e3197544913af8ab782a011d4f2",
 		created: 1664495954,
 		thumbnail: "/tutorials/revert-commit.jpg",
@@ -27,7 +27,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Provider Wrapping with Souvlaki",
-		link: `provider-wrapping-with-souvlaki`,
+		link: "provider-wrapping-with-souvlaki",
 		notionPage: "5bd25204d97e4e8aa6e5946619973ba3",
 		created: 1663809960,
 		thumbnail: "/tutorials/souvlaki-wrap.jpg",
@@ -38,7 +38,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Cleaner Conditional Component Rendering",
-		link: `clearer-conditional-rendering`,
+		link: "clearer-conditional-rendering",
 		notionPage: "578b462fff1b45f89a064d5eafe61c5f",
 		created: 1663151345,
 		thumbnail: "/tutorials/showif.jpeg",
@@ -50,7 +50,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Type Validate an API Fetch Call",
-		link: `fetch-api-type-validation`,
+		link: "fetch-api-type-validation",
 		notionPage: "44f4f50236114c078b83e55a4fb8e9c5",
 		created: 1659149375,
 		thumbnail: "/tutorials/api-validation.png",
@@ -61,7 +61,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Manipulate Images using ImageMagick",
-		link: `convert-resize-with-imagemagick`,
+		link: "convert-resize-with-imagemagick",
 		notionPage: "0a6b86c59ce54c5480c67e7edd5b59ba",
 		created: 1656459369,
 		thumbnail: "/tutorials/convert-resize.png",
@@ -71,7 +71,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Dockerize Your Repository",
-		link: `dockerize-your-repo`,
+		link: "dockerize-your-repo",
 		notionPage: "c4ca92237cc4434cbc30119b104e9e87",
 		created: 1639982643,
 		thumbnail: "/tutorials/dockerize.png",
@@ -82,7 +82,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Terminal Commands Cheat Sheet",
-		link: `command-cheat-sheet`,
+		link: "command-cheat-sheet",
 		notionPage: "ea55e3b6a5f54b50abdc456bedc4b80a",
 		created: 1639982642,
 		thumbnail: "/tutorials/terminal.png",
@@ -93,7 +93,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Deploy Containers to AWS with Terraform",
-		link: `deploy-to-aws-ec2-using-terraform-and-docker`,
+		link: "deploy-to-aws-ec2-using-terraform-and-docker",
 		notionPage: "4d5154f6347a46d280c19f2d8ad9de4f",
 		created: 1639982641,
 		thumbnail: "/tutorials/aws-docker-terraform.png",
@@ -105,7 +105,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Quickstart: NextJS",
-		link: `quickly-setup-next-js-with-typescript`,
+		link: "quickly-setup-next-js-with-typescript",
 		notionPage: "eb6acd5b26d3416c9372be89cae2b05d",
 		created: 1639982640,
 		thumbnail: "/tutorials/quickstart-next.png",
@@ -116,7 +116,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Snippet: Test a Thrown Error",
-		link: `test-thrown-error`,
+		link: "test-thrown-error",
 		notionPage: "1ad3c64947224e5e9acf4a09e9086a5b",
 		created: 1639982639,
 		thumbnail: "/tutorials/test-thrown-error.png",
@@ -127,7 +127,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Override Props for UI Tests",
-		link: `override-props-for-ui-tests`,
+		link: "override-props-for-ui-tests",
 		notionPage: "c5923b0c20964128be7178d42d7e884b",
 		created: 1639982638,
 		thumbnail: "/tutorials/override-test-props.png",
@@ -139,7 +139,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Snippet: Repeat One Test with New Variables",
-		link: `repeat-test-with-new-variables`,
+		link: "repeat-test-with-new-variables",
 		notionPage: "f5255703bba04229aafded995e423d25",
 		created: 1639982637,
 		thumbnail: "/tutorials/repeat-test.jpg",
@@ -151,7 +151,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Project Wall: Single Source of Truth",
-		link: `project-wall-single-source-of-truth`,
+		link: "project-wall-single-source-of-truth",
 		notionPage: "a036e1f8f1d844a5a512dc6d7a011ccf",
 		created: 1639982636,
 		thumbnail: "/tutorials/project-wall.jpg",
@@ -161,7 +161,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Snippet: Create Array with Only Truthy Values",
-		link: `filter-array-with-only-truthy-values`,
+		link: "filter-array-with-only-truthy-values",
 		notionPage: "f546bb620f29415ba0d9b3b6e5bac748",
 		created: 1639982635,
 		thumbnail: "/tutorials/array-filter.png",
@@ -173,7 +173,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Snippet: Retry Any Function Recursively",
-		link: `retry-recursively`,
+		link: "retry-recursively",
 		notionPage: "88e2d51cb8d74f9a9eb561185f16d322",
 		created: 1639982634,
 		thumbnail: "/tutorials/retry-recursively.jpg",
@@ -184,7 +184,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	},
 	{
 		title: "Snippet: Run GraphQL and Express Together",
-		link: `run-graphql-and-express`,
+		link: "run-graphql-and-express",
 		notionPage: "0e6becfb9fb64c6b96f4ef66742ac3e9",
 		created: 1639982633,
 		thumbnail: "/tutorials/graphql-express.png",

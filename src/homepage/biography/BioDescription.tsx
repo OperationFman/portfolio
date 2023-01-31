@@ -35,7 +35,7 @@ export const BioDescription = (): JSX.Element => {
 	return (
 		<div className={styles.container}>
 			<span className={styles.titleFont}>Franklin</span>
-			<span className={styles.titleFont}>{` V `}</span>
+			<span className={styles.titleFont}>{" V "}</span>
 			<span className={`${styles.titleFont} ${color.defaultDarkBlue}`}>
 				Moon
 			</span>

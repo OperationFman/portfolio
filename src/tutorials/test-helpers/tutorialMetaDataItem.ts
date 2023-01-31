@@ -2,7 +2,7 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../types";
 
 export const testTutorialMetaDataItem: TutorialMetaData = {
   title: "Quickly Setup NextJs ES6 with Typescript",
-  link: `/programming/quickly-setup-next-js-with-typescript`,
+  link: "/programming/quickly-setup-next-js-with-typescript",
   notionPage: "c4ca92237cc4434cbc30119b104e9e87",
   created: 1642762915,
   thumbnail: "TBD",

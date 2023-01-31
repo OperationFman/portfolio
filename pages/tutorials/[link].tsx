@@ -63,7 +63,7 @@ export const getServerSideProps = async (context: ServerSideContext) => {
   try {
     const { link } = context.params;
     if (typeof link !== "string") {
-      throw new Error(`Link param is invalid`);
+      throw new Error("Link param is invalid");
     }
 
     const metaData = getTutorialMetaDataByLink(link);

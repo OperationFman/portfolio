@@ -3,7 +3,7 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../types";
 export const testTutorialMetaDataArrayMetaData: TutorialMetaData[] = [
   {
     title: "Quickly Setup NextJs ES6 with Typescript",
-    link: `/programming/quickly-setup-next-js-with-typescript`,
+    link: "/programming/quickly-setup-next-js-with-typescript",
     notionPage: "c4ca92237cc4434cbc30119b104e9e87",
     created: 1642762915,
     thumbnail: "TBD",
@@ -15,7 +15,7 @@ export const testTutorialMetaDataArrayMetaData: TutorialMetaData[] = [
   },
   {
     title: "Deploy to AWS EC2 using Terraform and Docker ",
-    link: `/deploy-to-aws-ec2-using-terraform-and-docker`,
+    link: "/deploy-to-aws-ec2-using-terraform-and-docker",
     notionPage: "c4ca92237cc4434cbc30119b104e9e87",
     created: 1639982632,
     thumbnail: "TBD",
