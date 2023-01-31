@@ -40,12 +40,6 @@
 	border-left: 3px solid $defaultDarkBlue;
 }
 
-.itemContainer:last-child {
-	@include breakpoint(small) {
-		padding: 0px 50px 120px;
-	}
-}
-
 .logo {
 	height: 40;
 	width: auto;
