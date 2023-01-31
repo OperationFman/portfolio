@@ -1,5 +1,4 @@
 import CommitIcon from "@mui/icons-material/Commit";
-import { Typography } from "@mui/material";
 import Image from "next/future/image";
 import { setDark } from "../../../../utils/configureCss/configureCss";
 
@@ -41,27 +40,19 @@ export const WorkExpListItem = ({
 				/>
 
 				<ScrollAnimation animateIn='fadeIn' animateOnce delay={index * 100}>
-					<Typography variant='subtitle1'>{employerName}</Typography>
+					<div>{employerName}</div>
 
-					<Typography variant='subtitle1' className={color.brightGrey}>
-						{employerLocation}
-					</Typography>
-					<Typography
-						variant='subtitle1'
-						className={`${styles.periodText} ${color.brightGrey}`}>
+					<div className={styles.location}>{employerLocation}</div>
+					<div className={`${styles.periodText} ${color.brightGrey}`}>
 						{periodWithEmployer}
-					</Typography>
+					</div>
 					{employerExperiences.map((experienceItem, index) => {
 						return (
 							<div key={index} className={styles.roles}>
-								<Typography variant='subtitle1' className={styles.roleTitle}>
-									{experienceItem.title}
-								</Typography>
-								<Typography
-									variant='subtitle1'
-									className={`${styles.rolePeriod}  ${color.brightGrey}`}>
+								<div className={styles.roleTitle}>{experienceItem.title}</div>
+								<div className={`${styles.rolePeriod}  ${color.brightGrey}`}>
 									{experienceItem.period}
-								</Typography>
+								</div>
 							</div>
 						);
 					})}

@@ -1,5 +1,5 @@
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { Switch, Tooltip, Typography } from "@mui/material";
+import { Switch, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 
 import styles from "./SalarySwitch.module.scss";
@@ -30,9 +30,7 @@ export const SalarySwitch = ({
 				size='medium'
 				className={styles.switch}
 			/>
-			<Typography variant='h6' className={styles.text}>
-				{text}
-			</Typography>
+			<div className={styles.text}>{text}</div>
 		</div>
 	);
 };

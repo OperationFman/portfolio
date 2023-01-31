@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+
 import { intervalToDuration } from "date-fns";
 import { useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -55,11 +55,7 @@ export const BioDescription = (): JSX.Element => {
 			/>
 
 			<ScrollAnimation animateIn='fadeIn' animateOnce>
-				<Typography
-					variant='h6'
-					align='left'
-					color='baseGrey'
-					className={styles.blurb}>
+				<div className={styles.blurb}>
 					Full-stack software developer with a passion for user centric design,
 					volunteering globally and advocating for social change
 					<br />
@@ -73,7 +69,7 @@ export const BioDescription = (): JSX.Element => {
 					{pluralTime("hour", periodWorked?.hours)}
 					{" and "}
 					{pluralTime("minute", periodWorked?.minutes)}{" "}
-				</Typography>
+				</div>
 			</ScrollAnimation>
 		</div>
 	);

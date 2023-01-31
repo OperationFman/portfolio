@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import Image from "next/future/image";
 import { splitStringAtFullStop } from "../../../utils/splitStringAtFullStop";
 
@@ -18,16 +17,14 @@ export const ForYouCard = ({
 	return (
 		<div className={styles.container}>
 			<div className={styles.innerContainer}>
-				<Typography variant='h5' className={styles.title}>
-					{title}
-				</Typography>
+				<div className={styles.title}>{title}</div>
 
 				<div className={styles.content}>
 					{paragraphArray.map((sentence, index) => {
 						return (
-							<Typography key={index} variant='h6' className={styles.sentence}>
+							<div key={index} className={styles.sentence}>
 								{sentence}
-							</Typography>
+							</div>
 						);
 					})}
 				</div>

@@ -1,5 +1,4 @@
 import CommitIcon from "@mui/icons-material/Commit";
-import { Typography } from "@mui/material";
 import Image from "next/future/image";
 import { setDark } from "../../../../utils/configureCss/configureCss";
 
@@ -38,21 +37,15 @@ export const VolunteerListItem = ({
 				/>
 
 				<ScrollAnimation animateIn='fadeIn' animateOnce delay={index * 10}>
-					<Typography
-						variant='subtitle1'
-						className={`${volunteerStyles.title}`}>
-						{title}
-					</Typography>
-					<Typography
-						variant='subtitle1'
+					<div className={`${volunteerStyles.title}`}>{title}</div>
+					<div
 						className={`${styles.roleLocation} ${volunteerStyles.roleLocation} ${color.brightGrey}`}>
 						{location}
-					</Typography>
-					<Typography
-						variant='subtitle1'
+					</div>
+					<div
 						className={`${styles.rolePeriod} ${volunteerStyles.rolePeriod} ${color.brightGrey}`}>
 						{year}
-					</Typography>
+					</div>
 				</ScrollAnimation>
 			</div>
 		</>

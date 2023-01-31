@@ -46,6 +46,8 @@
 
 .contactMethod {
 	width: 100%;
+	font-size: 24px;
+	text-align: center;
 	font-weight: bold;
 	margin-top: 15px;
 	color: $defaultLightBlue;
@@ -62,7 +64,8 @@
 		display: inline;
 		width: 100%;
 		font-weight: regular;
-		line-height: 1.5;
+		font-size: 11px;
+		text-align: center;
 		color: $brightGrey;
 	}
 }

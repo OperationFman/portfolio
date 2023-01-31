@@ -30,10 +30,15 @@
 	}
 }
 
-.title {
-	margin-right: 5px;
-	line-height: 1.5;
+.subText {
+	line-height: 2;
+	font-size: 16px;
 	text-align: left;
+}
+
+.title {
+	@extend .subText;
+	margin-right: 5px;
 
 	@include breakpoint(small) {
 		text-align: right;
@@ -44,7 +49,9 @@
 }
 
 .roleLocation {
-	text-align: left;
+	@extend .subText;
+	padding-top: 10px;
+	color: $brightGrey;
 
 	@include breakpoint(small) {
 		text-align: right;
@@ -52,12 +59,10 @@
 }
 
 .rolePeriod {
-	text-align: left;
+	@extend .subText;
+	color: $brightGrey;
 
 	@include breakpoint(small) {
 		text-align: right;
-
-		margin-right: 6px;
-		margin-top: -10px;
 	}
 }

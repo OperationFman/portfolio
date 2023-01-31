@@ -22,13 +22,9 @@ export const QualificationCard = ({
 				className={styles.icon}
 			/>
 
-			<Typography variant='h5' className={styles.title}>
-				{title}
-			</Typography>
+			<div className={styles.title}>{title}</div>
 
-			<Typography variant='h5' align='center' className={styles.location}>
-				{location}
-			</Typography>
+			<div className={styles.location}>{location}</div>
 		</div>
 	);
 };

@@ -1,3 +1,5 @@
+@import "../../../themes/colors.module";
+
 .container {
 	margin-top: 20px;
 	margin-bottom: 100px;
@@ -15,5 +17,8 @@
 }
 
 .blurb {
+	text-align: left;
 	margin-top: 50px;
+	line-height: 1.6;
+	color: $dimmerWhite;
 }

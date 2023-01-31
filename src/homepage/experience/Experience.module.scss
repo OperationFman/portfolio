@@ -34,6 +34,7 @@
 }
 
 .itemContainer {
+	font-size: 15px;
 	width: 100%;
 	padding: 0px 50px 50px;
 	border-left: 3px solid $defaultDarkBlue;
@@ -49,10 +50,17 @@
 	height: 40;
 	width: auto;
 	line-height: 0;
+	margin-bottom: 10px;
+}
+
+.location {
+	margin-top: 10px;
+
+	color: $brightGrey;
 }
 
 .periodText {
-	margin: -10px 0px 15px 0px;
+	margin-bottom: 25px;
 }
 
 .roles {
@@ -60,9 +68,9 @@
 }
 
 .roleTitle {
-	margin-top: 25px;
+	margin-top: 15px;
 }
 
 .rolePeriod {
-	margin-top: -10px;
+	margin-top: -3px;
 }

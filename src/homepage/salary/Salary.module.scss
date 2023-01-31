@@ -18,21 +18,23 @@
 .salaryNumber {
 	text-align: center;
 	margin-top: 40px;
+	font-size: 40px;
 	font-weight: bold;
 	color: $defaultDarkBlue;
 }
 
 .salaryCurrency {
 	text-align: left;
-	margin-top: 62px;
-	font-weight: bold;
+	margin-top: 65px;
+	font-weight: bolder;
 	color: $defaultDarkBlue;
 }
 
 .subHeading {
 	text-align: center;
+	font-size: 24px;
 	font-weight: bold;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .formGroup {
@@ -54,13 +56,9 @@
 }
 
 .clearAllButton {
-	margin-top: 40px;
+	margin: 40px 0 10px 0;
 	color: $defaultBlue;
 	border-color: $defaultDarkBlue;
-
-	@include breakpoint(small) {
-		margin-top: 0;
-	}
 }
 
 .gap {

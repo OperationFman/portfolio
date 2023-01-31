@@ -28,19 +28,9 @@ export const ContactCard = ({
 			<CardContent className={styles.cardContent}>
 				{/* Icon */}
 				{children}
-				<Typography
-					variant='h5'
-					align='center'
-					className={styles.contactMethod}>
-					{contactMethod}
-				</Typography>
+				<div className={styles.contactMethod}>{contactMethod}</div>
 				<ShowIf condition={value}>
-					<Typography
-						variant='subtitle2'
-						align='center'
-						className={styles.contactSubtitle}>
-						{value}
-					</Typography>
+					<div className={styles.contactSubtitle}>{value}</div>
 				</ShowIf>
 			</CardContent>
 		</Card>
