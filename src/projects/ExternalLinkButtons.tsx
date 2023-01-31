@@ -3,28 +3,23 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
 import { Button, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
-import { ProjectMetaData } from "../../types";
+import { ProjectMetaData } from "./types";
 
-type ExternalLinks = {
+import colors from "../../themes/_colors.module.scss";
+import styles from "./ExternalLinkButtons.module.scss";
+
+export const ExternalLinkButtons = ({
+	metaData,
+}: {
 	metaData: ProjectMetaData;
-};
-
-export const ExternalLinkButtons = (props: ExternalLinks): JSX.Element => {
-	const { metaData } = props;
-
+}): JSX.Element => {
 	return (
-		<div
-			style={{
-				display: "flex",
-				margin: "0px 30px 30px 0px",
-				gap: "15px",
-			}}>
+		<div className={styles.container}>
 			{metaData.deployedURL ? (
 				<Tooltip TransitionComponent={Zoom} title='Deployed Website'>
 					<Button
-						variant='text'
 						startIcon={<LanguageIcon />}
-						color={"baseGrey"}
+						className={colors.brightGrey}
 						target='_blank'
 						href={metaData.deployedURL}>
 						SITE
@@ -34,9 +29,8 @@ export const ExternalLinkButtons = (props: ExternalLinks): JSX.Element => {
 			{metaData.repoURL ? (
 				<Tooltip TransitionComponent={Zoom} title='Github Repository'>
 					<Button
-						variant='text'
 						startIcon={<GitHubIcon />}
-						color={"baseGrey"}
+						className={colors.brightGrey}
 						target='_blank'
 						href={metaData.repoURL}>
 						REPO
@@ -46,9 +40,8 @@ export const ExternalLinkButtons = (props: ExternalLinks): JSX.Element => {
 			{metaData.uxURL ? (
 				<Tooltip TransitionComponent={Zoom} title='Early Design Documents'>
 					<Button
-						variant='text'
 						startIcon={<FormatPaintIcon />}
-						color={"baseGrey"}
+						className={colors.brightGrey}
 						target='_blank'
 						href={metaData.uxURL}>
 						UX

@@ -4,38 +4,20 @@ import { Button, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 import Image from "next/image";
 import Carousel from "nuka-carousel";
-import useDeviceDetect from "../../../../utils/useDeviceDetect";
-import { ProjectMetaData } from "../../types";
 import { ExternalLinkButtons } from "./ExternalLinkButtons";
+import { ProjectMetaData } from "./types";
 
-type ProjectItemProps = {
+import styles from "./ProjectItem.module.scss";
+import { setDark } from "../../utils/configureCss/configureCss";
+
+export const ProjectItem = ({
+	metaData,
+}: {
 	metaData: ProjectMetaData;
-};
-
-export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
-	const { metaData } = props;
-	const { isMobile } = useDeviceDetect();
-
+}): JSX.Element => {
 	return (
-		<div
-			style={
-				isMobile
-					? {
-							padding: "0px 0px 100px 0px",
-					  }
-					: {
-							padding: "0px 100px 100px 100px",
-					  }
-			}>
-			<h1
-				style={{
-					width: "fit-content",
-					padding: "0px 100px 5px 0px",
-					borderBottom: "2px solid #f44336",
-					margin: "5px",
-				}}>
-				{metaData.title}
-			</h1>
+		<div className={styles.container}>
+			<h1 className={styles.title}>{metaData.title}</h1>
 			<ExternalLinkButtons metaData={metaData} />
 			<Carousel
 				wrapAround={true}
@@ -43,9 +25,8 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 				renderCenterLeftControls={({ previousSlide }) => (
 					<Tooltip TransitionComponent={Zoom} title='Previous Slide'>
 						<Button
-							color='defaultText'
 							onClick={previousSlide}
-							style={{ borderRadius: "50px" }}>
+							className={setDark(styles, "navButton")}>
 							<KeyboardArrowLeftIcon />
 						</Button>
 					</Tooltip>
@@ -53,34 +34,25 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 				renderCenterRightControls={({ nextSlide }) => (
 					<Tooltip TransitionComponent={Zoom} title='Next Slide'>
 						<Button
-							color='defaultText'
 							onClick={nextSlide}
-							style={{ borderRadius: "50px" }}>
+							className={setDark(styles, "navButton")}>
 							<KeyboardArrowRightIcon />
 						</Button>
 					</Tooltip>
 				)}>
-				{metaData.images.desktop.map((item, i) => (
-					<div style={{ padding: "0px 50px" }} key={i}>
+				{metaData.images.map((item, index) => (
+					<div className={styles.image} key={index}>
 						<Image
 							src={item}
 							width={1280}
 							height={720}
-							alt='Picture of the website'
-							placeholder={"empty"}
+							alt={`Picture of my ${metaData.title} project`}
 						/>
 					</div>
 				))}
 			</Carousel>
 
-			<div
-				style={{
-					color: "#9c9c9c",
-					textAlign: "center",
-					marginTop: "35px",
-				}}>
-				{metaData.subTitle}
-			</div>
+			<div className={styles.subTitle}>{metaData.subTitle}</div>
 		</div>
 	);
 };

@@ -18,17 +18,14 @@ export const Biography = () => {
 			className={styles.container}>
 			<BioDescription />
 
-			<ScrollAnimation
-				animateIn='fadeIn'
-				animateOnce
-				className={styles.headshot}>
+			<div className={styles.headshot}>
 				<Image
 					src={`/homepage/biography/headshot-${selectedTheme}.svg`}
 					width='480'
 					height='300'
 					alt='Head shot'
 				/>
-			</ScrollAnimation>
+			</div>
 		</ScrollAnimation>
 	);
 };

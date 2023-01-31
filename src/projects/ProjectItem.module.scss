@@ -1,0 +1,36 @@
+@import "../../themes/breakpoints";
+@import "../../themes/colors.module";
+
+.container {
+	padding-bottom: 100px;
+
+	@include breakpoint(small) {
+		padding: 0px 100px 100px 100px;
+	}
+}
+
+.title {
+	width: fit-content;
+	padding: 0 100px 5px 0;
+	margin: 5px;
+	border-bottom: 2px solid $defaultRed;
+}
+
+.navButton {
+	border-radius: 50px;
+	color: $brightGrey;
+}
+
+.navButtonDark {
+	color: $dimmerWhite;
+}
+
+.image {
+	padding: 0 50px;
+}
+
+.subTitle {
+	color: $brightGrey;
+	text-align: center;
+	margin-top: 35px;
+}
