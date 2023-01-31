@@ -74,7 +74,7 @@ export const ProjectItem = (props: ProjectItemProps): JSX.Element => {
 			</Carousel>
 
 			<div
-				stylea={{
+				style={{
 					color: "#9c9c9c",
 					textAlign: "center",
 					marginTop: "35px",
