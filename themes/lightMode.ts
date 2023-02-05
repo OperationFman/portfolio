@@ -3,18 +3,18 @@ import { navBarGlobal } from "./legacyMUIStyles";
 
 declare module "@mui/material/styles" {
 	interface Palette {
-		baseGrey: Palette["primary"];
+		brightGrey: Palette["primary"];
 		defaultText: Palette["primary"];
 	}
 	interface PaletteOptions {
-		baseGrey?: PaletteOptions["primary"];
+		brightGrey?: PaletteOptions["primary"];
 		defaultText?: Palette["primary"];
 	}
 }
 
 declare module "@mui/material/Button" {
 	interface ButtonPropsColorOverrides {
-		baseGrey: true;
+		brightGrey: true;
 		defaultText: true;
 	}
 }
@@ -22,7 +22,7 @@ declare module "@mui/material/Button" {
 export const lightTheme = createTheme({
 	palette: {
 		mode: "light",
-		baseGrey: {
+		brightGrey: {
 			main: "#8c8c8c",
 		},
 		defaultText: {

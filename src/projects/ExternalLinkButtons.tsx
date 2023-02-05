@@ -5,7 +5,6 @@ import { Button, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 import { ProjectMetaData } from "./types";
 
-import colors from "../../themes/_colors.module.scss";
 import styles from "./ExternalLinkButtons.module.scss";
 
 export const ExternalLinkButtons = ({
@@ -19,7 +18,7 @@ export const ExternalLinkButtons = ({
 				<Tooltip TransitionComponent={Zoom} title='Deployed Website'>
 					<Button
 						startIcon={<LanguageIcon />}
-						className={colors.brightGrey}
+						color='brightGrey'
 						target='_blank'
 						href={metaData.deployedURL}>
 						SITE
@@ -30,7 +29,7 @@ export const ExternalLinkButtons = ({
 				<Tooltip TransitionComponent={Zoom} title='Github Repository'>
 					<Button
 						startIcon={<GitHubIcon />}
-						className={colors.brightGrey}
+						color='brightGrey'
 						target='_blank'
 						href={metaData.repoURL}>
 						REPO
@@ -41,7 +40,7 @@ export const ExternalLinkButtons = ({
 				<Tooltip TransitionComponent={Zoom} title='Early Design Documents'>
 					<Button
 						startIcon={<FormatPaintIcon />}
-						className={colors.brightGrey}
+						color='brightGrey'
 						target='_blank'
 						href={metaData.uxURL}>
 						UX

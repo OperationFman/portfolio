@@ -45,7 +45,7 @@ export const Languages = ({
 					<div className='h-[50px] w-full flex justify-center'>
 						<Button
 							variant='text'
-							color='baseGrey'
+							color='brightGrey'
 							className='w-full'
 							onClick={() => {
 								setExpandLanguages(!expandLanguages);

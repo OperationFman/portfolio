@@ -24,18 +24,14 @@ export const ProjectItem = ({
 				renderBottomCenterControls={null}
 				renderCenterLeftControls={({ previousSlide }) => (
 					<Tooltip TransitionComponent={Zoom} title='Previous Slide'>
-						<Button
-							onClick={previousSlide}
-							className={setDark(styles, "navButton")}>
+						<Button onClick={previousSlide} color='brightGrey'>
 							<KeyboardArrowLeftIcon />
 						</Button>
 					</Tooltip>
 				)}
 				renderCenterRightControls={({ nextSlide }) => (
 					<Tooltip TransitionComponent={Zoom} title='Next Slide'>
-						<Button
-							onClick={nextSlide}
-							className={setDark(styles, "navButton")}>
+						<Button onClick={nextSlide} color='brightGrey'>
 							<KeyboardArrowRightIcon />
 						</Button>
 					</Tooltip>

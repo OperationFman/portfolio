@@ -3,7 +3,7 @@ import { ExternalLinkButtons } from "./ExternalLinkButtons";
 import { ProjectMetaData } from "./types";
 
 describe("ExternalLinkButtons component", () => {
-	it("renders correctly with all links", () => {
+	it("renders component", () => {
 		const metaData: ProjectMetaData = {
 			title: "Test Project",
 			subTitle: "Test Subtitle",
