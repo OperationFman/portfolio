@@ -16,4 +16,8 @@
 	cursor: pointer;
 
 	color: $brightGrey;
+
+	&:hover {
+		color: $defaultGreen;
+	}
 }

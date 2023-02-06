@@ -4,6 +4,8 @@ import { Dispatch, SetStateAction } from "react";
 import { splitStringAtFullStop } from "../../../utils/splitStringAtFullStop";
 import { MetaData } from "../types";
 
+import styles from "./SkillModal.module.scss";
+
 export const SkillModal = (
 	setShowModal: Dispatch<SetStateAction<boolean>>,
 	payload: MetaData | undefined,
@@ -24,11 +26,11 @@ export const SkillModal = (
 	const descriptionSentences = splitStringAtFullStop(description);
 
 	return (
-		<div className='mt-2 mb-4 md:m-4 md:mt-3'>
+		<div className={styles.container}>
 			<DialogTitle>
-				<div className='flex justify-between items-center'>
-					<h3 className='m-0 ml-6 font-bold'>{heading}</h3>
-					<div className='cursor-pointer'>
+				<div className={styles.titleContainer}>
+					<h3 className={styles.title}>{heading}</h3>
+					<div className={styles.closeButton}>
 						<CloseRoundedIcon
 							color='disabled'
 							onClick={() => setShowModal(false)}
@@ -36,18 +38,16 @@ export const SkillModal = (
 					</div>
 				</div>
 			</DialogTitle>
-			<div className='border-[0.5px] border-solid border-[#66bb6a] ml-4 mr-4' />
-			<div className='ml-12 mr-12 mb-14'>
+			<div className={styles.titleDivider} />
+			<div className={styles.content}>
 				{knowledgeSentences.map((sentence, index) => {
 					return <p key={index}>{sentence}</p>;
 				})}
 
 				<Divider />
-				<div className='sm:flex'>
-					<h3 className='mb-0 sm:mb-5'>Knowledge:</h3>
-					<h3 className='font-normal mt-0 sm:mt-[19px] sm:ml-4'>
-						{proficiency}
-					</h3>
+				<div className={styles.knowledgeContainer}>
+					<h3 className={styles.knowledgeTitle}>Knowledge:</h3>
+					<h3 className={styles.proficiency}>{proficiency}</h3>
 				</div>
 				<Divider />
 				{descriptionSentences.map((sentence, index) => {
