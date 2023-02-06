@@ -1,5 +1,5 @@
 import { ConvictionGrouping } from "./ConvictionGrouping";
-import { SkillsSubHeading } from "../components/SkillsSubHeading";
+import { SkillsSubHeading } from "../sub-heading/SkillsSubHeading";
 import { ConvictionsRow } from "../types";
 
 import styles from "./Convictions.module.scss";

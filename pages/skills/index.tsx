@@ -8,7 +8,7 @@ import {
 	toolsMetaData,
 } from "../../src/datasources/SkillsMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
-import { SkillModal } from "../../src/skills/components/SkillModal";
+import { SkillModal } from "../../src/skills/modal/SkillModal";
 import { Convictions } from "../../src/skills/convictions/Convictions";
 import { Languages } from "../../src/skills/languages/Languages";
 import { SkillsColumn } from "../../src/skills/skills-column/SkillsColumn";

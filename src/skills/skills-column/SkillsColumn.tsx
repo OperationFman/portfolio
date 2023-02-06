@@ -1,5 +1,5 @@
 import { SkillsGrouping } from "./SkillGrouping";
-import { SkillsSubHeading } from "../components/SkillsSubHeading";
+import { SkillsSubHeading } from "../sub-heading/SkillsSubHeading";
 import { MetaData, SkillData } from "../types";
 
 import styles from "./SkillsColumn.module.scss";
