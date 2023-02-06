@@ -1,6 +1,8 @@
 import { splitStringAtFullStop } from "../../../utils/splitStringAtFullStop";
 import { ConvictionsRow } from "../types";
 
+import styles from "./Convictions.module.scss";
+
 export const ConvictionGrouping = ({
 	grouping,
 }: {
@@ -9,14 +11,12 @@ export const ConvictionGrouping = ({
 	const blurbArray = splitStringAtFullStop(grouping.blurb);
 
 	return (
-		<div
-			key={`${grouping.title} conviction`}
-			className='w-full sm:w-1/2 md:w-1/3 p-4'>
-			<h2 className='w-[200px] text-[#66bb6a]'>{grouping.title}</h2>
+		<div className={styles.grouping}>
+			<h2 className={styles.title}>{grouping.title}</h2>
 			{blurbArray.map((sentence, index) => {
 				return (
-					<div className={"mb-6"} key={index}>
-						<div style={{ color: "#9c9c9c" }}>{sentence}</div>
+					<div className={styles.sentence} key={index}>
+						{sentence}
 					</div>
 				);
 			})}

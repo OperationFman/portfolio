@@ -1,6 +1,8 @@
-import { ConvictionGrouping } from "./components/ConvictionGrouping";
-import { SkillsSubHeading } from "./components/SkillsSubHeading";
-import { ConvictionsRow } from "./types";
+import { ConvictionGrouping } from "./ConvictionGrouping";
+import { SkillsSubHeading } from "../components/SkillsSubHeading";
+import { ConvictionsRow } from "../types";
+
+import styles from "./Convictions.module.scss";
 
 export const Convictions = ({
 	title,
@@ -10,9 +12,9 @@ export const Convictions = ({
 	metaData: ConvictionsRow[];
 }) => {
 	return (
-		<div className='mt-20'>
+		<div className={styles.container}>
 			<SkillsSubHeading title={title} />
-			<div className='flex justify-center flex-wrap'>
+			<div className={styles.dataContainer}>
 				{metaData.map((grouping, index) => {
 					return <ConvictionGrouping grouping={grouping} key={index} />;
 				})}
