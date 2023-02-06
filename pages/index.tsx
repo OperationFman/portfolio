@@ -15,8 +15,6 @@ import { DarkMode } from "../themes/GlobalTheme";
 import { Footer } from "../utils/Footer";
 
 const Home: NextPage = () => {
-	const darkMode = useContext(DarkMode);
-	const selectedTheme = darkMode ? "dark" : "light";
 
 	return (
 		<>
@@ -27,7 +25,7 @@ const Home: NextPage = () => {
 					content="This guys name is Franklin and he's a full-stack software developer with a passion for user centric design, volunteering globally and advocating for social change"
 				/>
 			</Head>
-			<ParallaxArt selectedTheme={selectedTheme} />
+			<ParallaxArt />
 			<PageContainer>
 				<Biography />
 				<ForYou />

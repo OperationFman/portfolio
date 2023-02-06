@@ -1,10 +1,6 @@
-import { FilterModal } from "./FilterModal";
-import { mocked } from "jest-mock";
 import { render } from "@testing-library/react";
-import { Languages, Topic, Tags } from "../../types";
-import useDeviceDetect from "../../../../utils/useDeviceDetect";
-
-jest.mock("../../../../utils/useDeviceDetect");
+import { Languages, Tags, Topic } from "../../types";
+import { FilterModal } from "./FilterModal";
 
 describe("FilterModal", () => {
 	const topicFilter = Topic.Programming;

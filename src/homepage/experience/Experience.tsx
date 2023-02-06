@@ -1,9 +1,8 @@
 import { Container } from "@mui/material";
 import { useEffect, useState } from "react";
-import useDeviceDetect from "../../../utils/useDeviceDetect";
 import {
 	volunteeringMetaData,
-	workExperienceMetaData,
+	workExperienceMetaData
 } from "../../datasources/HomepageMetaData";
 import { SubHeading } from "../SubHeading";
 import { VolunteerListItem } from "./components/VolunteerListItem";
@@ -11,8 +10,7 @@ import { WorkExpListItem } from "./components/WorkExpListItem";
 import styles from "./Experience.module.scss";
 
 export const Experience = () => {
-	const { isMobile } = useDeviceDetect();
-
+	const [isMobile, setMobile] = useState(false);
 	const [stickyColumnLock, setStickyColumnLock] = useState(0);
 
 	useEffect(() => {
@@ -35,6 +33,16 @@ export const Experience = () => {
 		);
 
 		setStickyColumnLock(smallerColumnHeight);
+
+		const updateMobile = () => {
+			setMobile(window.innerWidth < 600 ? true : false);
+		};
+
+		updateMobile();
+		window.addEventListener("resize", updateMobile);
+		return () => {
+			window.removeEventListener("resize", updateMobile);
+		};
 	}, []);
 
 	const stickyColumn = !isMobile
