@@ -11,6 +11,8 @@ import { Languages, Tags, Topic } from "../../types";
 import { Dispatch, SetStateAction } from "react";
 import { MultiSelectFilterField } from "./multiselect/MultiSelectFilterField";
 
+import styles from "./FilterModal.module.scss";
+
 export const FilterModal = (
 	topicFilter: Topic | undefined,
 	setTopicFilter: React.Dispatch<React.SetStateAction<Topic | undefined>>,
@@ -20,20 +22,14 @@ export const FilterModal = (
 	setTagsFilter: React.Dispatch<React.SetStateAction<Tags[]>>,
 	setShowFilterMenu: Dispatch<SetStateAction<boolean>>,
 ) => {
-	const { isMobile } = useDeviceDetect();
-	const tutorialPurple = "#ce93d8";
+	const tutorialPurpleOverride = "#ce93d8";
 
 	return (
-		<div
-			style={
-				isMobile
-					? { margin: "10px 0px 50px 0px" }
-					: { margin: "20px 50px 50px 50px" }
-			}>
+		<div className={styles.container}>
 			<DialogTitle>
-				<div className='flex justify-between items-center'>
+				<div className={styles.titleContainer}>
 					Filter
-					<div className='cursor-pointer'>
+					<div className={styles.closeButton}>
 						<CloseRoundedIcon
 							color='disabled'
 							onClick={() => setShowFilterMenu(false)}
@@ -42,28 +38,28 @@ export const FilterModal = (
 				</div>
 			</DialogTitle>
 
-			<Divider sx={{ borderColor: tutorialPurple }} />
+			<Divider className={styles.divider} />
 			<SingleSelectFilterField
 				label={"Topic"}
 				defaultValue={"All"}
 				filter={topicFilter}
 				setFilter={setTopicFilter}
 				dropDownData={availableTopics}
-				highlightColor={tutorialPurple}
+				highlightColor={tutorialPurpleOverride}
 			/>
 			<MultiSelectFilterField
 				label={"Languages"}
 				filter={languagesFilter}
 				setFilter={setFilteredLanguages}
 				dropDownData={availableLanguages}
-				highlightColor={tutorialPurple}
+				highlightColor={tutorialPurpleOverride}
 			/>
 			<MultiSelectFilterField
 				label={"Tags"}
 				filter={tagsFilter}
 				setFilter={setTagsFilter}
 				dropDownData={availableTags}
-				highlightColor={tutorialPurple}
+				highlightColor={tutorialPurpleOverride}
 			/>
 		</div>
 	);

@@ -1,4 +1,3 @@
-import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -6,6 +5,8 @@ import Select from "@mui/material/Select";
 import { Dispatch, SetStateAction } from "react";
 import { Topic } from "../../../types";
 import { addTransparency } from "../filterAnimations";
+
+import styles from "./SingleSelect.module.scss";
 
 export const SingleSelectFilterField = ({
 	label,
@@ -29,7 +30,7 @@ export const SingleSelectFilterField = ({
 		setFilter(value === defaultValue ? undefined : value);
 	};
 
-	const dropDownStyling = {
+	const dropDownStylingOverrides = {
 		"&:hover": {
 			backgroundColor: `${addTransparency(highlightColor, 0.4)} !important`,
 		},
@@ -39,12 +40,7 @@ export const SingleSelectFilterField = ({
 	};
 
 	return (
-		<Box
-			sx={{
-				m: 2,
-				width: 200,
-				paddingTop: "20px",
-			}}>
+		<div className={styles.container}>
 			<FormControl fullWidth>
 				<InputLabel
 					sx={{
@@ -65,18 +61,18 @@ export const SingleSelectFilterField = ({
 							},
 						},
 					}}>
-					<MenuItem value={defaultValue} sx={dropDownStyling}>
+					<MenuItem value={defaultValue} sx={dropDownStylingOverrides}>
 						{defaultValue}
 					</MenuItem>
 					{dropDownData.map((item, index) => {
 						return (
-							<MenuItem key={index} value={item} sx={dropDownStyling}>
+							<MenuItem key={index} value={item} sx={dropDownStylingOverrides}>
 								{item}
 							</MenuItem>
 						);
 					})}
 				</Select>
 			</FormControl>
-		</Box>
+		</div>
 	);
 };
