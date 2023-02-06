@@ -9,8 +9,6 @@ import { Dispatch, SetStateAction } from "react";
 import { Languages, Tags } from "../../../types";
 import { addTransparency } from "../filterAnimations";
 
-import styles from "./MultiSelectFilterField.module.scss";
-
 type LanguagesFilter = {
 	filter: Languages[];
 	setFilter: Dispatch<SetStateAction<Languages[]>>;
@@ -41,7 +39,7 @@ export const MultiSelectFilterField = (props: MultiSelectFilterProps) => {
 
 	return (
 		<div>
-			<FormControl className={styles.container}>
+			<FormControl sx={{ m: 2, width: 300 }}>
 				<InputLabel
 					sx={{
 						"&.Mui-focused": {
@@ -63,11 +61,11 @@ export const MultiSelectFilterField = (props: MultiSelectFilterProps) => {
 						},
 					}}
 					renderValue={(selected) => (
-						<div className={styles.chipContainer}>
+						<Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
 							{selected.map((value) => (
 								<Chip key={value} label={value} />
 							))}
-						</div>
+						</Box>
 					)}
 					MenuProps={{
 						PaperProps: {
