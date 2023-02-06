@@ -14,12 +14,12 @@
 }
 
 .content {
-	margin: 0 0 56px 48px;
+	margin: 0 0 56px -30px;
+	display: flex;
+	justify-content: center;
 
 	@include breakpoint(small) {
 		margin: 0 0 0 20px;
-		display: flex;
-		justify-content: center;
 	}
 
 	@include breakpoint(medium) {
