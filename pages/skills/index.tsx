@@ -16,6 +16,8 @@ import { MetaData } from "../../src/skills/types";
 import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
 import { Footer } from "../../utils/Footer";
 
+import styles from "../../src/skills/index.module.scss";
+
 const Transition: any = slideTransition("right");
 
 export const Skills: NextPage = () => {
@@ -38,22 +40,23 @@ export const Skills: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Dialog
-				open={showModal}
-				TransitionComponent={Transition}
-				onClose={() => setShowModal(false)}
-				className='mt-14'>
-				{SkillModal(setShowModal, modalPayload)}
-			</Dialog>
+			<div className={styles.modalContainer}>
+				<Dialog
+					open={showModal}
+					TransitionComponent={Transition}
+					onClose={() => setShowModal(false)}>
+					{SkillModal(setShowModal, modalPayload)}
+				</Dialog>
+			</div>
 
 			<PageContainer>
-				<div className='max-w-[620px] text-center mx-auto mb-12 pl-2 pr-2'>
+				<div className={styles.heroText}>
 					Click any of the technologies listed below to learn more about my
 					current specific abilities, capabilities and level of involvement.
 				</div>
 
 				<Languages handleOpenModal={handleOpenModal} />
-				<div className='sm:flex sm:flex-row justify-evenly flex-wrap'>
+				<div className={styles.columnsContainer}>
 					<SkillsColumn
 						title='Tools'
 						metaData={toolsMetaData}

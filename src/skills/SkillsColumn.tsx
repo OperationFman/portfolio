@@ -2,25 +2,30 @@ import { SkillsGrouping } from "./components/SkillGrouping";
 import { SkillsSubHeading } from "./components/SkillsSubHeading";
 import { MetaData, SkillData } from "./types";
 
+import styles from "./SkillsColumn.module.scss";
+
 export const SkillsColumn = ({
 	title,
 	metaData,
-	handleOpenModal
+	handleOpenModal,
 }: {
 	title: string;
 	metaData: SkillData[];
 	handleOpenModal: (payload: MetaData) => void;
 }) => {
 	return (
-		<div className='mt-20 ml-[-10px]'>
+		<div className={styles.container}>
 			<SkillsSubHeading title={title} />
 
-			<div className='flex flex-col w-[300px] pl-16 md:pl-12'>
-				{metaData.map((grouping) => {
+			<div className={styles.dataContainer}>
+				{metaData.map((grouping, index) => {
 					return (
-						<div key={`${grouping.title} tools`} className='mr-6 w-[300px]'>
-							<h2 className='mb-[-6px] text-[#66bb6a]'>{grouping.title}</h2>
-							<SkillsGrouping grouping={grouping} handleOpenModal={handleOpenModal} />
+						<div key={index} className={styles.skillsGroupingContainer}>
+							<h2 className={styles.skillsHeading}>{grouping.title}</h2>
+							<SkillsGrouping
+								grouping={grouping}
+								handleOpenModal={handleOpenModal}
+							/>
 						</div>
 					);
 				})}

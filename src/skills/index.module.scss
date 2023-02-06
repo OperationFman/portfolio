@@ -1,0 +1,22 @@
+@import "../../themes/breakpoints";
+
+.modalContainer {
+	margin-top: 56px;
+}
+
+.heroText {
+	max-width: 620px;
+	text-align: center;
+	margin: 0 auto 48px auto;
+	padding: 0 8px;
+}
+
+.columnsContainer {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+
+	@include breakpoint(small) {
+		flex-direction: row;
+	}
+}

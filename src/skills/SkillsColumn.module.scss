@@ -1,0 +1,28 @@
+@import "../../themes/breakpoints";
+@import "../../themes/colors.module.scss";
+
+.container {
+	margin-top: 80px;
+	margin-left: -10px;
+}
+
+.dataContainer {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	padding-left: 30px;
+
+	@include breakpoint(medium) {
+		padding-left: 40px;
+	}
+}
+
+.skillsGroupingContainer {
+	margin-right: 24px;
+	width: 300px;
+}
+
+.skillsHeading {
+	margin-bottom: -6px;
+	color: $defaultGreen;
+}
