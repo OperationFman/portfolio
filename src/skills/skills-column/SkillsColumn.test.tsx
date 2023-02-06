@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { SkillsColumn } from "./SkillsColumn";
-import { Proficiency } from "./types";
+import { Proficiency } from "../types";
 
 describe("SkillsColumn component", () => {
 	const title = "Skills Column Title";

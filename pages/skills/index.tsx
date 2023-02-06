@@ -11,7 +11,7 @@ import { PageContainer } from "../../src/global/PageContainer";
 import { SkillModal } from "../../src/skills/components/SkillModal";
 import { Convictions } from "../../src/skills/convictions/Convictions";
 import { Languages } from "../../src/skills/languages/Languages";
-import { SkillsColumn } from "../../src/skills/SkillsColumn";
+import { SkillsColumn } from "../../src/skills/skills-column/SkillsColumn";
 import { MetaData } from "../../src/skills/types";
 import { slideTransition } from "../../src/tutorials/components/filter/filterAnimations";
 import { Footer } from "../../utils/Footer";

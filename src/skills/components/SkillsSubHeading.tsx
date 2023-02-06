@@ -1,7 +1,9 @@
+import styles from "./SkillsSubHeading.module.scss";
+
 export const SkillsSubHeading = ({ title }: { title: string }) => {
 	return (
-		<div className='flex justify-center'>
-			<h1 className='m-0 self-center'>{title}</h1>
+		<div className={styles.container}>
+			<h1 className={styles.title}>{title}</h1>
 		</div>
 	);
 };

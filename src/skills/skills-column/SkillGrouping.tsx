@@ -1,5 +1,7 @@
 import { MetaData, SkillData } from "../types";
 
+import styles from "./SkillsGrouping.module.scss";
+
 export const SkillsGrouping = ({
 	grouping,
 	handleOpenModal,
@@ -8,8 +10,8 @@ export const SkillsGrouping = ({
 	handleOpenModal: (payload: MetaData) => void;
 }) => {
 	return (
-		<div className='flex flex-row flex-wrap mb-6'>
-			{grouping.data.map((item) => {
+		<div className={styles.container}>
+			{grouping.data.map((item, index) => {
 				const { title, knowledge, proficiency, description } = item;
 
 				const modalPayload: MetaData = {
@@ -20,10 +22,10 @@ export const SkillsGrouping = ({
 				};
 				return (
 					<div
-						className='w-[50%] pt-2 pb-2 pr-10 mb-[-3px] lg:pr-5  cursor-pointer'
+						className={styles.skillItem}
 						onClick={() => handleOpenModal(modalPayload)}
-						key={item.title}>
-						<div style={{ color: "#9c9c9c" }}>{item.title}</div>
+						key={index}>
+						{item.title}
 					</div>
 				);
 			})}
