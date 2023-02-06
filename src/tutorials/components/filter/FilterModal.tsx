@@ -22,7 +22,7 @@ export const FilterModal = (
 	setTagsFilter: React.Dispatch<React.SetStateAction<Tags[]>>,
 	setShowFilterMenu: Dispatch<SetStateAction<boolean>>,
 ) => {
-	const tutorialPurpleOverride = "#ce93d8";
+	const tutorialPurple = "#ce93d8";
 
 	return (
 		<div className={styles.container}>
@@ -38,28 +38,28 @@ export const FilterModal = (
 				</div>
 			</DialogTitle>
 
-			<Divider className={styles.divider} />
+			<Divider sx={{ borderColor: tutorialPurple }} />
 			<SingleSelectFilterField
 				label={"Topic"}
 				defaultValue={"All"}
 				filter={topicFilter}
 				setFilter={setTopicFilter}
 				dropDownData={availableTopics}
-				highlightColor={tutorialPurpleOverride}
+				highlightColor={tutorialPurple}
 			/>
 			<MultiSelectFilterField
 				label={"Languages"}
 				filter={languagesFilter}
 				setFilter={setFilteredLanguages}
 				dropDownData={availableLanguages}
-				highlightColor={tutorialPurpleOverride}
+				highlightColor={tutorialPurple}
 			/>
 			<MultiSelectFilterField
 				label={"Tags"}
 				filter={tagsFilter}
 				setFilter={setTagsFilter}
 				dropDownData={availableTags}
-				highlightColor={tutorialPurpleOverride}
+				highlightColor={tutorialPurple}
 			/>
 		</div>
 	);
