@@ -40,7 +40,7 @@ export const TutorialCard = ({
 					/>
 					<CardContent>
 						<div className={styles.cardContent}>
-							<div className={setDark(styles, "topic")}>
+							<div className={setDark(styles, "topicContainer")}>
 								<div className={styles.topicText}>{cardData.topic}</div>
 							</div>
 							<div className={styles.title}>
