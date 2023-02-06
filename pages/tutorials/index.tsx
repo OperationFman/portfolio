@@ -12,6 +12,9 @@ import { filterAndSortMetaData } from "../../src/tutorials/filter-sort/filterAnd
 import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
 import { Footer } from "../../utils/Footer";
 
+import styles from "../../src/tutorials/index.module.scss";
+import ScrollAnimation from "react-animate-on-scroll";
+
 const Transition = slideTransition("right");
 
 const Tutorials: NextPage = () => {
@@ -34,7 +37,6 @@ const Tutorials: NextPage = () => {
 	}, [sortBy, topicFilter, languagesFilter, tagsFilter]);
 
 	const [showFilterMenu, setShowFilterMenu] = React.useState(false);
-
 
 	return (
 		<div>
@@ -63,23 +65,21 @@ const Tutorials: NextPage = () => {
 			</Dialog>
 
 			<PageContainer>
-				<div style={{ display: "flex", margin: "10px 30px", gap: "15px" }}>
-					<SortButton setSortMetaDataBy={setSortBy} />
-					<FilterButton setShowFilterMenu={setShowFilterMenu} />
+				<div className={styles.filterContainer}>
+					<div className={styles.filters}>
+						<FilterButton setShowFilterMenu={setShowFilterMenu} />
+						<SortButton setSortMetaDataBy={setSortBy} />
+					</div>
 				</div>
 
-				<Grid container spacing={3} justifyContent='center'>
+				<Grid container className={styles.gridContainer}>
 					{metaData.map((dataItem, index) => {
 						return (
-							<Fade
-								in={true}
-								key={dataItem.title}
-								style={{ transitionDelay: `${index}20ms` }}
-								unmountOnExit>
+							<ScrollAnimation animateIn='fadeIn' animateOnce key={index}>
 								<Grid item>
-									<TutorialCard cardData={dataItem} accentColor={"#ce93d8"} />
+									<TutorialCard cardData={dataItem} />
 								</Grid>
-							</Fade>
+							</ScrollAnimation>
 						);
 					})}
 				</Grid>

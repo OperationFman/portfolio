@@ -9,7 +9,6 @@ export const subTitleShortener = (text: string): string => {
 };
 
 export const titleShortener = (text: string): string => {
-  const minimumLength = 30;
   const maximumLength = 50;
 
   if (text.length > maximumLength) {

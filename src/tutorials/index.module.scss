@@ -1,0 +1,30 @@
+@import "../../themes/breakpoints";
+
+.filterContainer {
+	display: flex;
+	justify-content: center;
+}
+
+.filters {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
+	width: 100%;
+
+	@include breakpoint(small) {
+		margin: 0 35px;
+	}
+
+	@include breakpoint(medium) {
+		width: 700px;
+	}
+
+	@include breakpoint(large) {
+		margin: 0 10px;
+		width: 100%;
+	}
+}
+
+.gridContainer {
+	justify-content: center;
+}

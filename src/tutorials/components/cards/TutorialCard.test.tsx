@@ -1,29 +1,22 @@
 import { render } from "@testing-library/react";
-import { testTutorialMetaDataItem } from "../../test-helpers/tutorialMetaDataItem";
+import { Topic } from "../../types";
 import { TutorialCard } from "./TutorialCard";
 
-jest.mock("next/router", () => ({
-  useRouter: () => ({ query: { abcd: "3" } }),
-}));
+describe("renders component information", () => {
+	const mockCardData = {
+		title: "Title",
+		link: "link",
+		notionPage: "notionPage",
+		created: 123,
+		thumbnail: "thumbnail.jpg",
+		subTitle: "Subtitle",
+		topic: Topic.Programming,
+	};
 
-describe("TutorialCard", () => {
-  const metaData = testTutorialMetaDataItem;
-
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
-  it("Renders TutorialCard with correct title and shortened subtitle", () => {
-    const { getByText } = render(
-      <TutorialCard cardData={metaData} accentColor={"#ce93d8"} />
-    );
-
-    expect(getByText("Programming")).toBeDefined();
-    expect(getByText("Quickly Setup NextJs ES6 with Typescript")).toBeDefined();
-    expect(
-      getByText(
-        "Get up-and-running with a cleaned up but ready to go repo using nextJs. Includes settin..."
-      )
-    ).toBeDefined();
-  });
+	it("renders card data correctly", () => {
+		const { getByText } = render(<TutorialCard cardData={mockCardData} />);
+		expect(getByText(mockCardData.topic)).toBeDefined();
+		expect(getByText(mockCardData.title)).toBeDefined();
+		expect(getByText(mockCardData.subTitle)).toBeDefined();
+	});
 });

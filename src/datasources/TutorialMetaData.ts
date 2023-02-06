@@ -2,7 +2,7 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
-		title: "Quickstart: React-Redux Refresher",
+		title: "React-Redux Refresher",
 		link: "react-redux-refresher",
 		notionPage: "b2b95c4552a24526ba3fec209cb1eb4a",
 		created: 1667982722,
