@@ -1,5 +1,6 @@
 import { Button, Card, CardContent, Grid } from "@mui/material";
 import { useState } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 import ShowIf from "../../../utils/ShowIf";
 import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { languagesMetaData } from "../../datasources/SkillsMetaData";
@@ -28,14 +29,19 @@ export const Languages = ({
 						justifyContent='space-evenly'>
 						{languagesMetaData.map((columnData, index) => {
 							return (
-								<Grid item key={`${index} ${columnData.title}`} sm={5}>
-									<LanguagesColumn
-										columnData={columnData}
-										isExpanded={expandLanguages}
-										isDeveloping={columnData.isDeveloping}
-										isMobile={isMobile}
-										handleOpenModal={handleOpenModal}
-									/>
+								<Grid item key={index} sm={5}>
+									<ScrollAnimation
+										animateIn='fadeIn'
+										animateOnce
+										delay={index * 100}>
+										<LanguagesColumn
+											columnData={columnData}
+											isExpanded={expandLanguages}
+											isDeveloping={columnData.isDeveloping}
+											isMobile={isMobile}
+											handleOpenModal={handleOpenModal}
+										/>
+									</ScrollAnimation>
 								</Grid>
 							);
 						})}

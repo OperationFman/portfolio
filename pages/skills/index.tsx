@@ -17,6 +17,7 @@ import { slideTransition } from "../../src/tutorials/components/filter/filterAni
 import { Footer } from "../../utils/Footer";
 
 import styles from "../../src/skills/index.module.scss";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Transition: any = slideTransition("right");
 
@@ -50,10 +51,13 @@ export const Skills: NextPage = () => {
 			</div>
 
 			<PageContainer>
-				<div className={styles.heroText}>
+				<ScrollAnimation
+					animateIn='fadeIn'
+					animateOnce
+					className={styles.heroText}>
 					Click any of the technologies listed below to learn more about my
 					current specific abilities, capabilities and level of involvement.
-				</div>
+				</ScrollAnimation>
 
 				<Languages handleOpenModal={handleOpenModal} />
 				<div className={styles.columnsContainer}>

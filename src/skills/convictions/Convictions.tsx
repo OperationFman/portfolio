@@ -16,7 +16,7 @@ export const Convictions = ({
 			<SkillsSubHeading title={title} />
 			<div className={styles.dataContainer}>
 				{metaData.map((grouping, index) => {
-					return <ConvictionGrouping grouping={grouping} key={index} />;
+					return <ConvictionGrouping grouping={grouping} key={index} index={index}/>;
 				})}
 			</div>
 		</div>
