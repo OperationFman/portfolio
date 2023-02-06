@@ -1,5 +1,7 @@
 import { MetaData } from "../types";
 
+import styles from "./LanguagesRow.module.scss";
+
 export const LanguagesRow = ({
 	item,
 	handleOpenModal,
@@ -18,9 +20,9 @@ export const LanguagesRow = ({
 
 	return (
 		<div
-			className='pt-3 cursor-pointer'
+			className={styles.rowItem}
 			onClick={() => handleOpenModal(modalPayload)}>
-			<div style={{ color: "#9c9c9c" }}>{item.title}</div>
+			{item.title}
 		</div>
 	);
 };

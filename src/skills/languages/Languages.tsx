@@ -1,35 +1,29 @@
-import { Button, Card, CardContent, Grid } from "@mui/material";
+import { Button, Card, Grid } from "@mui/material";
 import { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
-import ShowIf from "../../../utils/ShowIf";
-import useDeviceDetect from "../../../utils/useDeviceDetect";
 import { languagesMetaData } from "../../datasources/SkillsMetaData";
 import { MetaData } from "../types";
 import { LanguagesColumn } from "./LanguagesColumn";
+
+import styles from "./Languages.module.scss";
 
 export const Languages = ({
 	handleOpenModal,
 }: {
 	handleOpenModal: (payload: MetaData) => void;
 }) => {
-	const { isMobile } = useDeviceDetect();
-
 	const [expandLanguages, setExpandLanguages] = useState(false);
 
 	return (
-		<div className='md:ml-12 md:mr-8 '>
-			<div className='flex justify-center'>
-				<h1 className='m-4 self-center'>Languages</h1>
-			</div>
+		<div className={styles.container}>
+			<h1 className={styles.sectionTitle}>Languages</h1>
+
 			<Card>
-				<CardContent className='ml-12 sm:ml-5 md:ml-24 mb-14 sm:mb-0'>
-					<Grid
-						wrap={isMobile ? "wrap" : "nowrap"}
-						container
-						justifyContent='space-evenly'>
+				<div className={styles.content}>
+					<Grid container className={styles.columnContainer}>
 						{languagesMetaData.map((columnData, index) => {
 							return (
-								<Grid item key={index} sm={5}>
+								<Grid item key={index}>
 									<ScrollAnimation
 										animateIn='fadeIn'
 										animateOnce
@@ -38,7 +32,6 @@ export const Languages = ({
 											columnData={columnData}
 											isExpanded={expandLanguages}
 											isDeveloping={columnData.isDeveloping}
-											isMobile={isMobile}
 											handleOpenModal={handleOpenModal}
 										/>
 									</ScrollAnimation>
@@ -46,20 +39,19 @@ export const Languages = ({
 							);
 						})}
 					</Grid>
-				</CardContent>
-				<ShowIf condition={!isMobile}>
-					<div className='h-[50px] w-full flex justify-center'>
-						<Button
-							variant='text'
-							color='brightGrey'
-							className='w-full'
-							onClick={() => {
-								setExpandLanguages(!expandLanguages);
-							}}>
-							{expandLanguages ? "Less" : "More"}
-						</Button>
-					</div>
-				</ShowIf>
+				</div>
+
+				<div className={styles.expandableContent}>
+					<Button
+						variant='text'
+						color='brightGrey'
+						className={styles.expandButton}
+						onClick={() => {
+							setExpandLanguages(!expandLanguages);
+						}}>
+						{expandLanguages ? "Less" : "More"}
+					</Button>
+				</div>
 			</Card>
 		</div>
 	);

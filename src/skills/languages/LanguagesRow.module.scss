@@ -1,0 +1,12 @@
+@import "../../../themes/colors.module.scss";
+
+.rowItem {
+	padding-top: 12px;
+	cursor: pointer;
+
+	color: $brightGrey;
+
+	&:hover {
+		color: $defaultGreen;
+	}
+}

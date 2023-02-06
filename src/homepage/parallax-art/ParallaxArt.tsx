@@ -1,12 +1,9 @@
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
-import useDeviceDetect from "../../../utils/useDeviceDetect";
 import styles from "./ParallaxArt.module.scss";
 
-export const ParallaxArt = ({ selectedTheme }: { selectedTheme: string }) => {
-	const { isMobile } = useDeviceDetect();
-
+export const ParallaxArt = () => {
 	const [offSetY, setOffSetY] = useState(0);
 	const handleScroll = () => {
 		// Stop rendering once parallax is off screen

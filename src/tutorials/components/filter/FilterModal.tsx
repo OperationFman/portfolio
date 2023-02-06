@@ -1,15 +1,14 @@
-import { DialogTitle, Divider } from "@mui/material";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import useDeviceDetect from "../../../../utils/useDeviceDetect";
-import { SingleSelectFilterField } from "./singleselect/SingleSelectFilterField";
+import { DialogTitle, Divider } from "@mui/material";
+import { Dispatch, SetStateAction } from "react";
 import {
 	availableLanguages,
 	availableTags,
-	availableTopics,
+	availableTopics
 } from "../../tutorialDataService";
 import { Languages, Tags, Topic } from "../../types";
-import { Dispatch, SetStateAction } from "react";
 import { MultiSelectFilterField } from "./multiselect/MultiSelectFilterField";
+import { SingleSelectFilterField } from "./singleselect/SingleSelectFilterField";
 
 import styles from "./FilterModal.module.scss";
 

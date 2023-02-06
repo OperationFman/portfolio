@@ -1,0 +1,83 @@
+@import "../../../themes/breakpoints";
+@import "../../../themes/colors.module.scss";
+
+.container {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.developingText {
+	position: absolute;
+	top: 44px;
+	text-align: center;
+	padding-right: 40px;
+	width: 80%;
+
+	@include breakpoint(small) {
+		width: 95%;
+	}
+}
+
+.developingOverlay {
+	height: 98%;
+	border-radius: 8px;
+	padding: 0 0 16px 16px;
+	margin-right: 40px;
+	width: 70%;
+
+	background-color: $mediumGrey;
+	opacity: 0.4;
+	box-shadow: $defaultShadow;
+
+	@include breakpoint(small) {
+		width: 80%;
+	}
+}
+.developingOverlayDark {
+	background-color: black;
+	opacity: 0.1;
+}
+
+.columnWrapper {
+	width: 100%;
+	padding-right: 24px;
+
+	@include breakpoint(small) {
+		width: 175px;
+		padding-right: 0;
+	}
+}
+
+.title {
+	color: $defaultGreen;
+	cursor: pointer;
+
+	@include breakpoint(small) {
+		margin-bottom: -7px;
+	}
+}
+
+.columnContainer {
+	display: flex;
+	flex-direction: row;
+
+	@include breakpoint(small) {
+		display: block;
+	}
+}
+
+.column {
+	width: 150px;
+}
+
+.expandedColumnOnMobile {
+	display: in-line;
+
+	@include breakpoint(medium) {
+		display: none;
+	}
+}
+
+.expandPressed {
+	display: block;
+}
