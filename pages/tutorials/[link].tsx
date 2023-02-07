@@ -7,7 +7,7 @@ import { ExtendedRecordMap } from "notion-types";
 import { NotionRenderer } from "react-notion-x";
 import { getTutorialMetaDataByLink } from "../../src/tutorials/tutorialDataService";
 import { TutorialMetaData } from "../../src/tutorials/types";
-import { ErrorContent } from "../../utils/ErrorContent";
+import { ErrorContent } from "../../utils/error/ErrorContent";
 
 const Code = dynamic<any>(() =>
   import("react-notion-x/build/third-party/code").then((m) => m.Code)
