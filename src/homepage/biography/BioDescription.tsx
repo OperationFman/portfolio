@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 // @ts-ignore
 import ReactTypingEffect from "react-typing-effect";
+import { setDark } from "../../../utils/configureCss/configureCss";
 
 import color from "../../../themes/_colors.module.scss";
-import { setDark } from "../../../utils/configureCss/configureCss";
 import styles from "./BioDescription.module.scss";
 
 export const BioDescription = (): JSX.Element => {
@@ -36,7 +36,7 @@ export const BioDescription = (): JSX.Element => {
 		<div className={styles.container}>
 			<span className={styles.titleFont}>Franklin</span>
 			<span className={styles.titleFont}>{" V "}</span>
-			<span className={`${styles.titleFont} ${color.defaultDarkBlue}`}>
+			<span className={`${styles.titleFont} ${color.defaultBlueGradient}`}>
 				Moon
 			</span>
 

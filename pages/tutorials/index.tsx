@@ -76,7 +76,11 @@ const Tutorials: NextPage = () => {
 					<Grid container className={styles.gridContainer}>
 						{metaData.map((dataItem, index) => {
 							return (
-								<ScrollAnimation animateIn='fadeIn' animateOnce key={index}>
+								<ScrollAnimation
+									animateIn='fadeIn'
+									animateOnce
+									key={index}
+									delay={index * 50}>
 									<Grid item>
 										<TutorialCard cardData={dataItem} />
 									</Grid>

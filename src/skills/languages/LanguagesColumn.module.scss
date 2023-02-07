@@ -49,13 +49,14 @@
 }
 
 .title {
-	color: $defaultGreen;
 	cursor: pointer;
 	margin-top: 45px;
 
 	@include breakpoint(small) {
 		margin-bottom: -7px;
 	}
+
+	@extend .defaultGreenGradient;
 }
 
 .columnContainer {

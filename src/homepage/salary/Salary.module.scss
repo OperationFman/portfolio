@@ -20,14 +20,15 @@
 	margin-top: 40px;
 	font-size: 40px;
 	font-weight: bold;
-	color: $defaultDarkBlue;
+	@extend .defaultBlueGradient;
 }
 
 .salaryCurrency {
 	text-align: left;
 	margin-top: 65px;
 	font-weight: bolder;
-	color: $defaultDarkBlue;
+
+	color: $defaultBlue;
 }
 
 .subHeading {

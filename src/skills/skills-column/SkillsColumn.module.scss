@@ -24,5 +24,6 @@
 
 .skillsHeading {
 	margin-bottom: -6px;
-	color: $defaultGreen;
+
+	@extend .defaultGreenGradient;
 }

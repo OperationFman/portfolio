@@ -7,7 +7,7 @@
 	color: $darkGrey;
 
 	&:hover {
-		color: $defaultGreen;
+		@extend .defaultGreenGradient;
 	}
 }
 .rowItemDark {
