@@ -25,11 +25,12 @@ const PageContent = ({
 	notionPage,
 	metaData,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+	const darkMode = useContext(DarkMode);
+
 	if (!notionPage || notionPage === "undefined" || !metaData) {
 		return <ErrorContent />;
 	}
 
-	const darkMode = useContext(DarkMode);
 	const { title, subTitle, topic } = metaData as TutorialMetaData;
 
 	return (
