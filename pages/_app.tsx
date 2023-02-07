@@ -7,7 +7,7 @@ import "../themes/globals.css";
 import { GlobalTheme } from "../themes/GlobalTheme";
 
 function MyApp({ Component, pageProps }: AppProps) {
-	const [darkMode, setDarkMode] = useState(false);
+	const [darkMode, setDarkMode] = useState(true);
 
 	useEffect(() => {
 		setDarkMode(localStorage.getItem("dark-mode") === "true");

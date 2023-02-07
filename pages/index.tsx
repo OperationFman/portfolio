@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 
 import Head from "next/head";
-import { useContext } from "react";
 import { PageContainer } from "../src/global/PageContainer";
 import { Biography } from "../src/homepage/biography/Biography";
 import { Contact } from "../src/homepage/contact/Contact";
@@ -11,7 +10,6 @@ import { HomeFooterImage } from "../src/homepage/homeFooter/HomeFooterImage";
 import { ParallaxArt } from "../src/homepage/parallax-art/ParallaxArt";
 import { Qualifications } from "../src/homepage/qualifications/Qualifications";
 import { Salary } from "../src/homepage/salary/Salary";
-import { DarkMode } from "../themes/GlobalTheme";
 import { Footer } from "../utils/footer/Footer";
 
 const Home: NextPage = () => {

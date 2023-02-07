@@ -10,6 +10,8 @@ import { TutorialMetaData } from "../../src/tutorials/types";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 
 import styles from "../../src/tutorials/index.module.scss";
+import { useContext } from "react";
+import { DarkMode } from "../../themes/GlobalTheme";
 
 const Code = dynamic<any>(() =>
 	import("react-notion-x/build/third-party/code").then((m) => m.Code),
@@ -27,6 +29,7 @@ const PageContent = ({
 		return <ErrorContent />;
 	}
 
+	const darkMode = useContext(DarkMode);
 	const { title, subTitle, topic } = metaData as TutorialMetaData;
 
 	return (
@@ -41,7 +44,7 @@ const PageContent = ({
 					<NotionRenderer
 						recordMap={notionPage}
 						fullPage={true}
-						darkMode={true}
+						darkMode={darkMode}
 						components={{ Code }}
 					/>
 				</div>

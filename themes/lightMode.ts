@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-import { navBarGlobal } from "./legacyMUIStyles";
 
 declare module "@mui/material/styles" {
 	interface Palette {
@@ -32,6 +31,19 @@ export const lightTheme = createTheme({
 			contrastText: "#13181c",
 		},
 	},
-
-	components: navBarGlobal,
+	typography: {
+		button: {
+			textTransform: "none",
+		},
+	},
+	components: {
+		MuiTab: {
+			styleOverrides: {
+				root: {
+					color: "#fff",
+					transition: "linear 200ms",
+				},
+			},
+		},
+	},
 });

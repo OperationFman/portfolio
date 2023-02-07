@@ -9,7 +9,7 @@ type GlobalTheme = {
 	darkMode: boolean;
 };
 
-export const DarkMode = createContext(false);
+export const DarkMode = createContext(true);
 
 export const GlobalTheme = (props: GlobalTheme) => {
 	const { children, darkMode } = props;
