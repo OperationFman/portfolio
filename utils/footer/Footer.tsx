@@ -11,6 +11,7 @@ export const Footer = () => {
 			<Button
 				onClick={() => toPageTop()}
 				variant='text'
+				color='brightGrey'
 				className={styles.button}>
 				Back To Top
 			</Button>

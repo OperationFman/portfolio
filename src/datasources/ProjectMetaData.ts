@@ -12,7 +12,7 @@ export const projectMetaData: ProjectMetaData[] = [
 		],
 
 		subTitle:
-			"The site you're looking at right now. The goal was to create a beautiful front end application that I could use to sell myself and my skills but also be a repository of my knowledge to share freely with the world. Built using Typescript and the NEXTjs library with full TDD and deployed to Vercel through a full CI/CD pipeline using GitHub actions. It also has a focus on search engine optimization and uses Notion pages as a Content Management System",
+			"The site you're looking at right now. The goal was to create a beautiful front end application that I could use to sell myself and my skills but also be a repository of my knowledge to share freely with the world. Built using Typescript and the NEXTjs library with full TDD and deployed to Vercel through a full CI/CD pipeline using GitHub actions. It also has a focus on search engine optimization and uses Notion pages as a Content Management System.",
 		deployedURL: "https://www.franklin-v-moon.dev/",
 		repoURL: "https://github.com/OperationFman/portfolio",
 	},
@@ -27,7 +27,6 @@ export const projectMetaData: ProjectMetaData[] = [
 
 		subTitle:
 			"Visually simple single page application to track a single stock and display the value of your holdings in USD and AUD, ideal if your workplace offers equity. Built using Typescript with the React library and a focus on Terraform to automatically provision and deploy a tested application on an AWS EC2 instance, using a Docker fed into AWS ECR.",
-		// deployedURL: "http://tw-stock-tracker.franklinvmoon.com/",
 		repoURL: "https://github.com/OperationFman/Stock-Ticker-Overview",
 	},
 	{
@@ -43,8 +42,7 @@ export const projectMetaData: ProjectMetaData[] = [
 		],
 
 		subTitle:
-			"I simple management app that helps players select crew members to take on missions in the game series 'Mass Effect'. Users add and remove crew throughout the games and this tool shows you who you haven't brought on mission recently and randomly recommends them. Additionally, users can use Oauth to have their own account, saved across devices. Built using Javascript with the React Library and hosted on Heroku with Docker and a full 'deploy-to-prod-on-green' CI/CD pipeline in CircleCI",
-		// deployedURL: "https://mass-effect-crewed.herokuapp.com/",
+			"I simple management app that helps players select crew members to take on missions in the game series 'Mass Effect'. Users add and remove crew throughout the games and this tool shows you who you haven't brought on mission recently and randomly recommends them. Additionally, users can use Oauth to have their own account, saved across devices. Built using Javascript with the React Library and hosted on Heroku with Docker and a full 'deploy-to-prod-on-green' CI/CD pipeline in CircleCI.",
 		repoURL: "https://github.com/OperationFman/Mass-Effect-Crewed",
 		uxURL:
 			"https://www.figma.com/proto/XL7Gz06sz0iLn4hyVpGnRz/Mass-Effect-Crewed?node-id=0%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=0%3A3",
@@ -63,7 +61,7 @@ export const projectMetaData: ProjectMetaData[] = [
 		],
 
 		subTitle:
-			"Investment tracking tools suffer from one of three problems, they're too complex, too expensive or too useless to be used regularly. Glance is a tool that lets you easily keep an overview of your investments, dividends and performance across services without being overwhelming for the average user. The goal is to create an experience as easy to use as Microsoft Excel with the design of a modern website. The MVP UX was completed and it is planned to be built using React/NEXTjs with a separate BFF using C#",
+			"Investment tracking tools suffer from one of three problems, they're too complex, too expensive or too useless to be used regularly. Glance is a tool that lets you easily keep an overview of your investments, dividends and performance across services without being overwhelming for the average user. The goal is to create an experience as easy to use as Microsoft Excel with the design of a modern website. The MVP UX was completed and it is planned to be built using React/NEXTjs with a separate BFF using C#.",
 		uxURL:
 			"https://www.figma.com/proto/yfATxB2h0pjKwe1rdItWCC/Glance-Draft?node-id=0%3A3&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=0%3A3",
 	},
@@ -79,7 +77,7 @@ export const projectMetaData: ProjectMetaData[] = [
 		],
 
 		subTitle:
-			"Traveling the world is an important goal of mine, as I believe living, working and volunteering in other cultures is what can make you more open minded and receptive to new ideas. I built this site using Python with the Flask framework and Javascript with jquery for animations and automatic scaling. The focus is on design and presentation and uses external services like Google Drive for free video hosting and Mapbox for an interactive 3D map containing images",
+			"Traveling the world is an important goal of mine, as I believe living, working and volunteering in other cultures is what can make you more open minded and receptive to new ideas. I built this site using Python with the Flask framework and Javascript with jquery for animations and automatic scaling. The focus is on design and presentation and uses external services like Google Drive for free video hosting and Mapbox for an interactive 3D map containing images.",
 		deployedURL: "http://frankstravelblog.pythonanywhere.com/",
 		repoURL: "https://github.com/OperationFman/FranksTravelBlog",
 	},
@@ -94,7 +92,7 @@ export const projectMetaData: ProjectMetaData[] = [
 		],
 
 		subTitle:
-			"My first ever programming project. A tool to help my partner and I while we were stuck in Japan during the 2020 pandemic. The webapp is primarily designed for mobile and has a 'food roulette' mode to store a list of meals we like and randomly suggests one when tapping 'generate'. \n It also has a simple currency conversion tool that quickly shows purchasing power of other fx compared to AUD. \n It was built using Python with the Flask framework and deployed to PythonAnywhere.com",
+			"My first ever programming project. A tool to help my partner and I while we were stuck in Japan during the 2020 pandemic. The webapp is primarily designed for mobile and has a 'food roulette' mode to store a list of meals we like and randomly suggests one when tapping 'generate'. \n It also has a simple currency conversion tool that quickly shows purchasing power of other fx compared to AUD. \n It was built using Python with the Flask framework and deployed to PythonAnywhere.",
 		repoURL: "https://github.com/OperationFman/Krank",
 	},
 ];
