@@ -9,12 +9,15 @@ import { ProjectMetaData } from "./types";
 
 import styles from "./ProjectItem.module.scss";
 import { setDark } from "../../utils/configureCss/configureCss";
+import { splitStringAtFullStop } from "../../utils/split-string/splitStringAtFullStop";
 
 export const ProjectItem = ({
 	metaData,
 }: {
 	metaData: ProjectMetaData;
 }): JSX.Element => {
+	const subTitleArray = splitStringAtFullStop(metaData.subTitle);
+
 	return (
 		<div className={styles.container}>
 			<h1 className={styles.title}>{metaData.title}</h1>
@@ -48,7 +51,15 @@ export const ProjectItem = ({
 				))}
 			</Carousel>
 
-			<div className={styles.subTitle}>{metaData.subTitle}</div>
+			<div className={styles.subTitleContainer}>
+				{subTitleArray.map((sentence, index) => {
+					return (
+						<div className={setDark(styles, "subTitle")} key={index}>
+							{sentence}
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 };

@@ -20,8 +20,16 @@
 	padding: 0 50px;
 }
 
-.subTitle {
-	color: $brightGrey;
-	text-align: center;
+.subTitleContainer {
+	margin: 0 auto;
 	margin-top: 35px;
+	max-width: 850px;
+}
+
+.subTitle {
+	color: $darkGrey;
+	margin: 0 25px 15px 25px;
+}
+.subTitleDark {
+	color: $dimmerWhite;
 }

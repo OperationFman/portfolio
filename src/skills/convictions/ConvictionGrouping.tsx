@@ -1,4 +1,5 @@
 import ScrollAnimation from "react-animate-on-scroll";
+import { setDark } from "../../../utils/configureCss/configureCss";
 import { splitStringAtFullStop } from "../../../utils/split-string/splitStringAtFullStop";
 import { ConvictionsRow } from "../types";
 
@@ -22,7 +23,7 @@ export const ConvictionGrouping = ({
 			<h2 className={styles.title}>{grouping.title}</h2>
 			{blurbArray.map((sentence, index) => {
 				return (
-					<div className={styles.sentence} key={index}>
+					<div className={setDark(styles, "sentence")} key={index}>
 						{sentence}
 					</div>
 				);

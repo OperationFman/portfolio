@@ -1,6 +1,7 @@
+import { setDark } from "../../../utils/configureCss/configureCss";
 import { MetaData, SkillData } from "../types";
 
-import styles from "./SkillsGrouping.module.scss";
+import styles from "./SkillGrouping.module.scss";
 
 export const SkillsGrouping = ({
 	grouping,
@@ -22,7 +23,7 @@ export const SkillsGrouping = ({
 				};
 				return (
 					<div
-						className={styles.skillItem}
+						className={setDark(styles, "skillItem")}
 						onClick={() => handleOpenModal(modalPayload)}
 						key={index}>
 						{item.title}

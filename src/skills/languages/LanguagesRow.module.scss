@@ -4,9 +4,12 @@
 	padding-top: 12px;
 	cursor: pointer;
 
-	color: $brightGrey;
+	color: $darkGrey;
 
 	&:hover {
 		color: $defaultGreen;
 	}
+}
+.rowItemDark {
+	color: $dimmerWhite;
 }

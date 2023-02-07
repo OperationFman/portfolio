@@ -15,9 +15,12 @@
 	padding-right: 20px;
 	cursor: pointer;
 
-	color: $brightGrey;
+	color: $darkGrey;
 
 	&:hover {
 		color: $defaultGreen;
 	}
+}
+.skillItemDark {
+	color: $dimmerWhite;
 }

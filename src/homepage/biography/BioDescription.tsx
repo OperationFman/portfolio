@@ -1,4 +1,3 @@
-
 import { intervalToDuration } from "date-fns";
 import { useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -6,6 +5,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ReactTypingEffect from "react-typing-effect";
 
 import color from "../../../themes/_colors.module.scss";
+import { setDark } from "../../../utils/configureCss/configureCss";
 import styles from "./BioDescription.module.scss";
 
 export const BioDescription = (): JSX.Element => {
@@ -55,7 +55,7 @@ export const BioDescription = (): JSX.Element => {
 			/>
 
 			<ScrollAnimation animateIn='fadeIn' animateOnce>
-				<div className={styles.blurb}>
+				<div className={setDark(styles, "blurb")}>
 					Full-stack software developer with a passion for user centric design,
 					volunteering globally and advocating for social change
 					<br />
