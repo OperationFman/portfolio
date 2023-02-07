@@ -32,3 +32,15 @@
 .gridContainer {
 	justify-content: center;
 }
+
+.contentPageContainer {
+	overflow: hidden;
+}
+
+.contentPage {
+	margin: 0 auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(-100px);
+}

@@ -9,92 +9,85 @@ import { getTutorialMetaDataByLink } from "../../src/tutorials/tutorialDataServi
 import { TutorialMetaData } from "../../src/tutorials/types";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 
+import styles from "../../src/tutorials/index.module.scss";
+
 const Code = dynamic<any>(() =>
-  import("react-notion-x/build/third-party/code").then((m) => m.Code)
+	import("react-notion-x/build/third-party/code").then((m) => m.Code),
 );
 
 type ServerSideContext = {
-  params: { link: string | string[] | undefined };
+	params: { link: string | string[] | undefined };
 };
 
 const PageContent = ({
-  notionPage,
-  metaData,
+	notionPage,
+	metaData,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  if (!notionPage || notionPage === "undefined" || !metaData) {
-    return <ErrorContent />;
-  }
+	if (!notionPage || notionPage === "undefined" || !metaData) {
+		return <ErrorContent />;
+	}
 
-  const { title, subTitle, topic } = metaData as TutorialMetaData;
+	const { title, subTitle, topic } = metaData as TutorialMetaData;
 
-  return (
-    <>
-      <Head>
-        <title>{title} - Franklin V Moon</title>
-        <meta name={subTitle} content={topic} />
-      </Head>
+	return (
+		<>
+			<Head>
+				<title>{title} - Franklin V Moon</title>
+				<meta name={subTitle} content={topic} />
+			</Head>
 
-      <Container maxWidth={"md"} sx={{ overflow: "hidden" }}>
-        <div
-          style={{
-            marginLeft: "auto",
-            marginRight: "auto",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            transform: "translateY(-100px)",
-          }}
-        >
-          <NotionRenderer
-            recordMap={notionPage}
-            fullPage={true}
-            darkMode={true}
-            components={{ Code }}
-          />
-        </div>
-      </Container>
-    </>
-  );
+			<Container maxWidth={"md"} className={styles.contentPageContainer}>
+				<div className={styles.contentPage}>
+					<NotionRenderer
+						recordMap={notionPage}
+						fullPage={true}
+						darkMode={true}
+						components={{ Code }}
+					/>
+				</div>
+			</Container>
+		</>
+	);
 };
 
 export const getServerSideProps = async (context: ServerSideContext) => {
-  const notion = new NotionAPI();
+	const notion = new NotionAPI();
 
-  try {
-    const { link } = context.params;
-    if (typeof link !== "string") {
-      throw new Error("Link param is invalid");
-    }
+	try {
+		const { link } = context.params;
+		if (typeof link !== "string") {
+			throw new Error("Link param is invalid");
+		}
 
-    const metaData = getTutorialMetaDataByLink(link);
-    if (!metaData) {
-      throw new Error(
-        `Could not find Tutorial Meta Data with the link param: ${link}`
-      );
-    }
+		const metaData = getTutorialMetaDataByLink(link);
+		if (!metaData) {
+			throw new Error(
+				`Could not find Tutorial Meta Data with the link param: ${link}`,
+			);
+		}
 
-    const notionPage: ExtendedRecordMap = await notion.getPage(
-      metaData.notionPage
-    );
-    if (!notionPage) {
-      throw new Error(
-        `Could not find Notion Page with metaData notionPage value of: ${metaData.notionPage}`
-      );
-    }
+		const notionPage: ExtendedRecordMap = await notion.getPage(
+			metaData.notionPage,
+		);
+		if (!notionPage) {
+			throw new Error(
+				`Could not find Notion Page with metaData notionPage value of: ${metaData.notionPage}`,
+			);
+		}
 
-    return {
-      props: {
-        notionPage,
-        metaData,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        notionPage: "undefined",
-      },
-    };
-  }
+		return {
+			props: {
+				notionPage,
+				metaData,
+			},
+		};
+	} catch (error) {
+		return {
+			props: {
+				notionPage: "undefined",
+			},
+		};
+	}
 };
 
 export default PageContent;
