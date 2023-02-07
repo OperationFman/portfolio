@@ -8,6 +8,7 @@
 .headshot {
 	display: none;
 	align-items: center;
+	margin-bottom: 120px;
 
 	@include breakpoint(medium) {
 		display: flex;
