@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import { splitStringAtFullStop } from "../../../utils/splitStringAtFullStop";
+import { splitStringAtFullStop } from "../../../utils/split-string/splitStringAtFullStop";
 
 import styles from "./ForYouCard.module.scss";
 

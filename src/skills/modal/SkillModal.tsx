@@ -1,7 +1,7 @@
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { DialogTitle, Divider } from "@mui/material";
 import { Dispatch, SetStateAction } from "react";
-import { splitStringAtFullStop } from "../../../utils/splitStringAtFullStop";
+import { splitStringAtFullStop } from "../../../utils/split-string/splitStringAtFullStop";
 import { MetaData } from "../types";
 
 import styles from "./SkillModal.module.scss";

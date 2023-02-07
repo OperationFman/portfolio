@@ -1,5 +1,5 @@
 import ScrollAnimation from "react-animate-on-scroll";
-import { splitStringAtFullStop } from "../../../utils/splitStringAtFullStop";
+import { splitStringAtFullStop } from "../../../utils/split-string/splitStringAtFullStop";
 import { ConvictionsRow } from "../types";
 
 import styles from "./Convictions.module.scss";

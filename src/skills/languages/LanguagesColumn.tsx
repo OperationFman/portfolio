@@ -1,4 +1,4 @@
-import ShowIf from "../../../utils/ShowIf";
+import ShowIf from "../../../utils/show-if/ShowIf";
 import { ColumnData, MetaData } from "../types";
 import { LanguagesRow } from "./LanguagesRow";
 
