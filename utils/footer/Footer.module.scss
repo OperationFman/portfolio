@@ -1,0 +1,14 @@
+@import "../../themes/colors.module";
+
+.container {
+	display: flex;
+	justify-content: center;
+	margin-top: 200px;
+	height: 40px;
+	background-color: $darkGrey;
+}
+
+.button {
+	width: 100vw;
+	color: $brightGrey;
+}

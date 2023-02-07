@@ -1,5 +1,9 @@
 @import "../../themes/breakpoints";
 
+.pageContainer {
+	min-height: 100vh;
+}
+
 .filterContainer {
 	display: flex;
 	justify-content: center;

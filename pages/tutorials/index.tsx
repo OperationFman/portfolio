@@ -10,7 +10,7 @@ import { slideTransition } from "../../src/tutorials/components/filter/filterAni
 import { FilterModal } from "../../src/tutorials/components/filter/FilterModal";
 import { filterAndSortMetaData } from "../../src/tutorials/filter-sort/filterAndSortMetaData";
 import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
-import { Footer } from "../../utils/Footer";
+import { Footer } from "../../utils/footer/Footer";
 
 import styles from "../../src/tutorials/index.module.scss";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -39,53 +39,55 @@ const Tutorials: NextPage = () => {
 	const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
 	return (
-		<div>
-			<Head>
-				<title>Tutorials - Franklin V Moon</title>
-				<meta
-					name='Tutorials'
-					content='Comprehensive training, guides and useful code snippets'
-				/>
-			</Head>
+		<>
+			<div className={styles.pageContainer}>
+				<Head>
+					<title>Tutorials - Franklin V Moon</title>
+					<meta
+						name='Tutorials'
+						content='Comprehensive training, guides and useful code snippets'
+					/>
+				</Head>
 
-			<Dialog
-				open={showFilterMenu}
-				TransitionComponent={Transition}
-				keepMounted
-				onClose={() => setShowFilterMenu(false)}>
-				{FilterModal(
-					topicFilter,
-					setTopicFilter,
-					languagesFilter,
-					setFilteredLanguages,
-					tagsFilter,
-					setTagsFilter,
-					setShowFilterMenu,
-				)}
-			</Dialog>
+				<Dialog
+					open={showFilterMenu}
+					TransitionComponent={Transition}
+					keepMounted
+					onClose={() => setShowFilterMenu(false)}>
+					{FilterModal(
+						topicFilter,
+						setTopicFilter,
+						languagesFilter,
+						setFilteredLanguages,
+						tagsFilter,
+						setTagsFilter,
+						setShowFilterMenu,
+					)}
+				</Dialog>
 
-			<PageContainer>
-				<div className={styles.filterContainer}>
-					<div className={styles.filters}>
-						<FilterButton setShowFilterMenu={setShowFilterMenu} />
-						<SortButton setSortMetaDataBy={setSortBy} />
+				<PageContainer>
+					<div className={styles.filterContainer}>
+						<div className={styles.filters}>
+							<FilterButton setShowFilterMenu={setShowFilterMenu} />
+							<SortButton setSortMetaDataBy={setSortBy} />
+						</div>
 					</div>
-				</div>
 
-				<Grid container className={styles.gridContainer}>
-					{metaData.map((dataItem, index) => {
-						return (
-							<ScrollAnimation animateIn='fadeIn' animateOnce key={index}>
-								<Grid item>
-									<TutorialCard cardData={dataItem} />
-								</Grid>
-							</ScrollAnimation>
-						);
-					})}
-				</Grid>
-			</PageContainer>
+					<Grid container className={styles.gridContainer}>
+						{metaData.map((dataItem, index) => {
+							return (
+								<ScrollAnimation animateIn='fadeIn' animateOnce key={index}>
+									<Grid item>
+										<TutorialCard cardData={dataItem} />
+									</Grid>
+								</ScrollAnimation>
+							);
+						})}
+					</Grid>
+				</PageContainer>
+			</div>
 			<Footer />
-		</div>
+		</>
 	);
 };
 

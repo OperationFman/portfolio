@@ -12,10 +12,9 @@ import { ParallaxArt } from "../src/homepage/parallax-art/ParallaxArt";
 import { Qualifications } from "../src/homepage/qualifications/Qualifications";
 import { Salary } from "../src/homepage/salary/Salary";
 import { DarkMode } from "../themes/GlobalTheme";
-import { Footer } from "../utils/Footer";
+import { Footer } from "../utils/footer/Footer";
 
 const Home: NextPage = () => {
-
 	return (
 		<>
 			<Head>
@@ -35,7 +34,7 @@ const Home: NextPage = () => {
 				<Contact />
 			</PageContainer>
 			<HomeFooterImage />
-			<Footer margin={false} />
+			<Footer />
 		</>
 	);
 };

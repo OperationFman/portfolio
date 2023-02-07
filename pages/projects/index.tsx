@@ -4,7 +4,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { projectMetaData } from "../../src/datasources/ProjectMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { ProjectItem } from "../../src/projects/ProjectItem";
-import { Footer } from "../../utils/Footer";
+import { Footer } from "../../utils/footer/Footer";
 
 const Projects: NextPage = () => {
 	return (
