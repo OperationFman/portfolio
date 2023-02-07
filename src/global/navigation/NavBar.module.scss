@@ -49,7 +49,7 @@
 	display: flex;
 	justify-content: right;
 	border-radius: 0;
-
+	cursor: pointer;
 	padding-right: 10px;
 
 	@include breakpoint(small) {
@@ -60,6 +60,8 @@
 	@include breakpoint(medium) {
 		margin-left: 80px;
 	}
+
+	@extend .hover;
 }
 
 .spacer {
@@ -67,10 +69,12 @@
 }
 
 .iconDim {
+	margin-top: 23px;
 	color: $brightGrey;
 }
 
 .iconBright {
+	margin-top: 23px;
 	color: $white;
 }
 

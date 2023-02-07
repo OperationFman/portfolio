@@ -72,10 +72,10 @@ export const Navbar = ({
 			<div className={styles.spacer} style={{ order: 2 }} />
 			<div className={styles.spacer} style={{ order: 6 }} />
 
-			<IconButton
-				onClick={() => handleDarkModeToggle()}
+			<div
 				className={styles.darkModeToggle}
-				style={{ order: 7 }}>
+				style={{ order: 7 }}
+				onClick={() => handleDarkModeToggle()}>
 				<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
 					{darkMode ? (
 						<Brightness6Icon className={styles.iconDim} />
@@ -83,7 +83,7 @@ export const Navbar = ({
 						<Brightness3Icon className={styles.iconBright} />
 					)}
 				</Tooltip>
-			</IconButton>
+			</div>
 		</Tabs>
 	);
 };
