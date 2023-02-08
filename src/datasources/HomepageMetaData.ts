@@ -69,7 +69,6 @@ export const volunteeringMetaData = [
 		title: "PAX Aus Enforcer",
 		location: "Melbourne, Australia",
 		year: "2013 - 2018",
-		isLastElement: true,
 	},
 ];
 

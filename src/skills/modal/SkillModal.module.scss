@@ -35,6 +35,13 @@
 
 .knowledgeContainer {
 	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+
+	@include breakpoint(small) {
+		flex-direction: row;
+		margin-bottom: 0;
+	}
 }
 
 .knowledgeTitle {

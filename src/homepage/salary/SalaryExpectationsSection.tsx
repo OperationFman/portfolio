@@ -1,6 +1,14 @@
 import { Button, Card, FormGroup } from "@mui/material";
 import { useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
+import {
+	EXPECTED_SALARY_WITH_NO_BENEFITS,
+	GENERAL_ALLOWANCES,
+	MINIMUM_LIVABLE_SALARY,
+	salaryExpectations,
+	STOCK_REDUCTION,
+	TRAINING_ALLOWANCE,
+} from "../../datasources/SalaryExpectationMetaData";
 import { Gap } from "./components/Gap";
 import { MoneyInput as SalaryInput } from "./components/SalaryInput";
 import { SalarySwitch } from "./components/SalarySwitch";
@@ -12,22 +20,7 @@ export const SalaryExpectationsSection = () => {
 		return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	};
 
-	const EXPECTED_SALARY_WITH_NO_BENEFITS = 120000;
-	const MINIMUM_LIVABLE_SALARY = 60000;
-
-	const [values, setValues] = useState({
-		fullyRemote: 8000,
-		hybridRemote: 4000,
-		flatHierarchy: 1000,
-		teamBonding: 1000,
-		ethical: 2050,
-		workLifeBalance: 3000,
-		internationalTravel: 500,
-		stock: 0,
-		trainingAllowances: 2500,
-		otherAllowances: 4000,
-		internationalRelocation: 10000,
-	});
+	const [values, setValues] = useState(salaryExpectations);
 
 	const [expectedSalary, setExpectedSalary] = useState(MINIMUM_LIVABLE_SALARY);
 
@@ -135,9 +128,9 @@ export const SalaryExpectationsSection = () => {
 				baseSalary = baseSalary - values.internationalRelocation;
 			}
 
-			baseSalary = baseSalary - stock * 0.5; // 50% reduction
-			baseSalary = baseSalary - trainingAllowance * 0.9; // 10% reduction
-			baseSalary = baseSalary - otherAllowances * 0.8; // 20% reduction
+			baseSalary = baseSalary - stock * STOCK_REDUCTION; // 50% reduction
+			baseSalary = baseSalary - trainingAllowance * TRAINING_ALLOWANCE; // 10% reduction
+			baseSalary = baseSalary - otherAllowances * GENERAL_ALLOWANCES; // 20% reduction
 
 			if (baseSalary < MINIMUM_LIVABLE_SALARY) {
 				baseSalary = MINIMUM_LIVABLE_SALARY;
