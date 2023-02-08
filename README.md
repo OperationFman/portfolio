@@ -95,25 +95,25 @@ Dark mode support was also a consideration, adding an extra layer of complexity 
 1. Prerequisites:
   - Download and install Node version 18.12.0 or above from the official website: https://nodejs.org/en/download/
   - Download and install Git from the official website: https://git-scm.com/downloads
-  - Verify the installations by running the commands node -v and git --version in a terminal window.
+  - Verify the installations by running the commands `node -v` and git --version in a terminal window.
 
 &nbsp;
   
 2. Installing Yarn:
-  - Run the following command in a terminal window to install Yarn globally: npm install -g yarn
-  - Verify the installation by running the command yarn -v in a terminal window.
+  - Run the following command in a terminal window to install Yarn globally: `npm install -g yarn`
+  - Verify the installation by running the command `yarn -v` in a terminal window.
 
 &nbsp;
 
 3. Cloning the Repository:
-  - Use the following command to clone the repository to your local machine: git clone https://github.com/OperationFman/portfolio.git
+  - Use the following command to clone the repository to your local machine: `git clone https://github.com/OperationFman/portfolio.git`
   - This will save the repository files in the current directory of the terminal window.
 
 &nbsp;
 
 4. Running the Development Server:
   - Navigate to the repository directory using a terminal window and run the following command: yarn dev
-  - This will start the development server and make the application accessible at http://localhost:3000/ in a web browser.
+  - This will start the development server and make the application accessible at `http://localhost:3000/` in a web browser.
 
 &nbsp;
 
@@ -127,7 +127,7 @@ In the future, it is intended to implement a more efficient content updating pro
 
 ### Add A Tutorial
 
-1. Create a tutorial within any notion pages, ensure it has a cover image. It should be the same as the thumbnail but higher res (Minimum 1000px wide).
+1. Create a tutorial within any notion pages, ensure it has a cover image. It should be the same as the thumbnail but higher res (Ideal px width x height is 1500x850).
 
 ![Notion page](https://user-images.githubusercontent.com/42459707/217395178-a8891308-b9b9-44e7-93b9-d9afb5622581.png)
 
@@ -146,7 +146,7 @@ In the future, it is intended to implement a more efficient content updating pro
 
 5. Save a thumbnail in the repo path `~/src/public/tutorials` with a shortened name eg `heating-blockchain.png`
   - Ideal px width x height is 380x200
-  - .png, .jpg, .jpeg are all valid
+  - Only use .png
 
 &nbsp;
 
@@ -199,11 +199,15 @@ Notes: Do not add more than 3 'For You' or 6 'Qualification' items. You can have
 
 ### Update Projects
 
-1. Open `~/src/datasources/ProjectsMetaData.ts` in your favorite text editor
+1. Add a new folder under `~/public` with the name of the project
 
-2. Edit the content as desired
+2. Add all the images you can of the project
 
-3. Git push and after auto deployment you should see the changes reflected on the `https://www.franklin-v-moon.dev/projects` page
+3. Open `~/src/datasources/ProjectsMetaData.ts` in your favorite text editor
+
+4. Edit the content as desired, ensuring the images are referenced under the image key
+
+5. Git push and after auto deployment you should see the changes reflected on the `https://www.franklin-v-moon.dev/projects` page
 
 &nbsp;
 

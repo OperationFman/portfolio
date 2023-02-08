@@ -6,7 +6,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		link: "code-with-emojis",
 		notionPage: "f1c08c6df5ec4d9bbf99f4dc6a372540",
 		created: 1675825610,
-		thumbnail: "/tutorials/placeholder.jpeg",
+		thumbnail: "/tutorials/emoji.png",
 		subTitle:
 			"Most devs would lose their minds if you used an emoji in your code, how about we do it anyway?",
 		topic: Topic.Programming,
@@ -18,7 +18,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		link: "aws-run-scripts-on-startup",
 		notionPage: "dd5eea1afcb447e4b82dd5843ac0f662",
 		created: 1675825605,
-		thumbnail: "/tutorials/placeholder.jpeg",
+		thumbnail: "/tutorials/aws-script.png",
 		subTitle:
 			"Running scripts is fairly critical when you want to automatically configure you're EC2 Instances",
 		topic: Topic.Infrastructure,
@@ -271,9 +271,9 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		link: "rebuilding-infrastructure-in-nepal",
 		notionPage: "99cbe33175e34a5189dec42c9b95e3e5",
 		created: 1639982519,
-		thumbnail: "/tutorials/placeholder.jpeg",
+		thumbnail: "/tutorials/nepal.png",
 		subTitle:
-			"My experience working in Nepal, rebuilding copper networking exchanges and lines after the 2015 earthquakes",
+			"My experience working in Nepal, rebuilding copper networks after the 2015 earthquakes",
 		topic: Topic.Article,
 		languages: [],
 		tags: [Tags.Essay],
