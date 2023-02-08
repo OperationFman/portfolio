@@ -84,28 +84,6 @@ export const ParallaxArt = () => {
 							transform: `translateY(${offSetY * 0.1}px)`,
 						}}
 					/>
-					{/* <Image
-					src={`/homepage/parallax/dark/12 Star Destroyer Close.svg`}
-					alt='Star Destroyer nearby'
-					width='0'
-					height='0' className={styles.layer}
-					style={{
-						
-						zIndex: -6,
-						transform: `translateY(${offSetY * 0.5}px)`,
-					}}
-				/>
-				<Image
-					src={`/homepage/parallax/dark/11 Star Destroyer Far.svg`}
-					alt='Star Destroyer far away'
-					width='0'
-					height='0' className={styles.layer}
-					style={{
-						
-						zIndex: -7,
-						transform: `translateY(${offSetY * 0.7}px)`,
-					}}
-				/> */}
 
 					<Image
 						src={"/homepage/parallax/dark/10 Mountain Far.svg"}
