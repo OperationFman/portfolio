@@ -45,5 +45,13 @@ export const lightTheme = createTheme({
 				},
 			},
 		},
+		MuiCssBaseline: {
+			styleOverrides: {
+				body: {
+					backgroundColor: "#ffffff",
+					backgroundImage: `linear-gradient(180deg, #ffffff 50%, #f5f5f5 100%)`,
+				},
+			},
+		},
 	},
 });

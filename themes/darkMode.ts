@@ -44,7 +44,14 @@ export const darkTheme = createTheme({
 				},
 			},
 		},
-		
+		MuiCssBaseline: {
+			styleOverrides: {
+				body: {
+					backgroundColor: "#13181c",
+					backgroundImage: `linear-gradient(180deg, #13181c 50%, #0a0c0d 100%)`,
+				},
+			},
+		},
 	},
 	typography: {
 		button: {
