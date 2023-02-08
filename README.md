@@ -20,9 +20,7 @@
 
 ![Homepage](https://user-images.githubusercontent.com/42459707/217387931-7e98a3aa-8a43-4c44-8137-4ef341f43f64.png)
 
-Welcome to the repository for my portfolio website, here you can have a good
-look at my code and judge for yourself if you think my abilities are up to your
-expectations, or maybe you just want to see how it works.
+This repository is the host for my professional portfolio website, providing a comprehensive display of my coding abilities and showcasing the functionalities of the website.
 
 &nbsp;
 
@@ -30,20 +28,13 @@ expectations, or maybe you just want to see how it works.
 
 Why did I build this site?
 
-Portfolios are already a great thing for developers to build for two reasons,
-one of course is to make themselves more marketable in this competitive world
-and thus standout. The other is it's a great learning opportunity, to understand
-modern web development and build something from scratch. My goal was to learn
-and I can confidently say I have a solid grasp on front end programming after
-completing this project.
+The development of this site was motivated by two primary objectives. Firstly, it serves as a tool to increase marketability and differentiation in the competitive field of web development. Secondly, it provides a valuable learning opportunity, allowing for a deeper understanding of modern web development practices and the ability to create a project from scratch. The completion of this project has reinforced my proficiency in front-end programming.
 
 &nbsp;
 
 ![Projects Page](https://user-images.githubusercontent.com/42459707/217388229-01844266-8df8-486a-83e8-424e05de4544.png)
 
-In the future I hope to keep this updated not only with new content and
-resources, but also as the industry shifts I intend to keep refactoring the code
-as you would in most development careers.
+Going forward, this repository will be continually updated with fresh content and resources, and the code will be adapted to reflect the evolving industry standards.
 
 &nbsp;
 
@@ -75,36 +66,23 @@ Deployment
 
 ## Design Decisions
 
-One of my goals was actually to experiment while I built this project out,
-originally I came from a React Native background which lacks many web dev tools.
-So I experimented with various styling tools like default CSS, Tailwind and
-eventually settled on SASS for it's extremely ease of use and reliability.
+This project was created as an opportunity to experiment and explore new techniques in web development. Initially, I came from a React Native background and wanted to expand my skills by trying out various styling tools. After evaluating options such as default CSS and Tailwind, I ultimately decided to use SASS for its ease of use and reliability.
 
 &nbsp;
 
-Speed was a major focus, due to this site being a portfolio it's like recruiters
-and hirers would visit it most often. If they have to sit and wait for loading
-spinners and slow pop-in images, it reflects poorly on my abilities. So overall
-i've kep my usage of NPM packages to an absolute minimum, preferring to build
-code for my exact needs and to minimize the use of Javascript here possible,
-preferring raw CSS when possible..
+Performance was a primary concern as the website serves as my portfolio and is frequently visited by recruiters and potential employers. To ensure a smooth user experience, I kept the use of NPM packages to a minimum and wrote custom code to meet specific needs, opting for raw CSS whenever possible. The efforts to optimize performance are reflected in the high lighthouse score, as shown below.
 
 ![Lighthouse Score](https://user-images.githubusercontent.com/42459707/217158718-b1019176-005a-4f20-8c03-a5fedfdf1c4a.png)
 
 &nbsp;
 
-Test driven development was another major goal, I wanted to push myself to
-really get used to the development style and i feel I have, although i must note
-it's easiest for static pages. When dealing with complex APIs TDD will usually
-be much harder than the implementation itself.
+Test-driven development was another major focus during the project's development. I aimed to gain a strong understanding of this development style, although it proved to be easier to implement with static pages. Complex APIs presented a greater challenge in this regard. The results of these efforts are shown below.
 
 ![Yarn Test](https://user-images.githubusercontent.com/42459707/217159178-7104801d-195d-4262-b518-e8236a3b24a3.png)
 
 &nbsp;
 
-Dark mode support was a minor goal and a challenge, it adds some complexity but
-once configured I found it easy to develop with. I think it's important to
-accommodate user preferences for either.
+Dark mode support was also a consideration, adding an extra layer of complexity to the development process. However, once properly configured, it was easy to implement. I believe it is important to accommodate user preferences and provide a choice between light and dark modes.
 
 ![Homepage in Light Mode](https://user-images.githubusercontent.com/42459707/217158552-4cce377e-23ca-424a-88fb-7d4ac7d005d4.png)
 
@@ -114,24 +92,28 @@ accommodate user preferences for either.
 
 ## Running Locally
 
-1. Download and install:
-  - Node version `18.12.0` or above from here: https://nodejs.org/en/download/
-  - Git from here: https://git-scm.com/downloads
-  - You can test this worked by running `node -v` and `git --version` in a terminal 
+1. Prerequisites:
+  - Download and install Node version 18.12.0 or above from the official website: https://nodejs.org/en/download/
+  - Download and install Git from the official website: https://git-scm.com/downloads
+  - Verify the installations by running the commands node -v and git --version in a terminal window.
+
 &nbsp;
   
-2. Install yarn with `npm install -g yarn` in a terminal
-  - You can test this worked by running `yarn -v`
+2. Installing Yarn:
+  - Run the following command in a terminal window to install Yarn globally: npm install -g yarn
+  - Verify the installation by running the command yarn -v in a terminal window.
+
 &nbsp;
 
-3. Clone this repo by running this command in a terminal where you want the files saved: 
-`git clone https://github.com/OperationFman/portfolio.git`
+3. Cloning the Repository:
+  - Use the following command to clone the repository to your local machine: git clone https://github.com/OperationFman/portfolio.git
+  - This will save the repository files in the current directory of the terminal window.
+
 &nbsp;
 
-4. Within a terminal, navigate to the files and run `yarn dev`
-&nbsp;
-
-5. Within a browser, search this web address: `http://localhost:3000/`
+4. Running the Development Server:
+  - Navigate to the repository directory using a terminal window and run the following command: yarn dev
+  - This will start the development server and make the application accessible at http://localhost:3000/ in a web browser.
 
 &nbsp;
 
@@ -139,7 +121,7 @@ accommodate user preferences for either.
 
 ## How To Update Content
 
-Eventually I'd like to rework the content updating method to use a headless CMS service like [Strapi](https://strapi.io/) but for now tutorials are updated by changing content within [Notion Pages](https://www.notion.so/) and the rest of the page content is changed by updating .ts files within the repository `~/src/datasources`. So going forward, the following instructions expect that you have the repo running locally and are permitted to push changes.
+In the future, it is intended to implement a more efficient content updating process utilizing a headless CMS solution such as [Strapi](https://strapi.io/). Currently, updates to tutorial content are made directly within [Notion Pages](https://www.notion.so/) and modifications to other page elements are performed by updating the .ts files within the repository's `~/src/datasources directory`. Hence, the subsequent instructions assume that you have access to the local repository and are authorized to make and push changes.
 
 &nbsp;
 
