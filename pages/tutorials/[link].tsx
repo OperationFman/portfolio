@@ -12,6 +12,7 @@ import { ErrorContent } from "../../utils/error/ErrorContent";
 import styles from "../../src/tutorials/index.module.scss";
 import { useContext } from "react";
 import { DarkMode } from "../../themes/GlobalTheme";
+import { Footer } from "../../utils/footer/Footer";
 
 const Code = dynamic<any>(() =>
 	import("react-notion-x/build/third-party/code").then((m) => m.Code),
@@ -50,6 +51,7 @@ const PageContent = ({
 					/>
 				</div>
 			</Container>
+			<Footer />
 		</>
 	);
 };
