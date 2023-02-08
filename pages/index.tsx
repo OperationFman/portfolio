@@ -13,14 +13,20 @@ import { Salary } from "../src/homepage/salary/Salary";
 import { Footer } from "../utils/footer/Footer";
 
 const Home: NextPage = () => {
+	const description =
+		"Franklin is a full-stack software developer with a passion for user centric design, volunteering globally and advocating for social change";
 	return (
 		<>
 			<Head>
 				<title>Homepage - Franklin V Moon</title>
-				<meta
-					name='Homepage'
-					content="This guys name is Franklin and he's a full-stack software developer with a passion for user centric design, volunteering globally and advocating for social change"
-				/>
+				<link rel='icon' href='/favicon-blue.ico' />
+				<meta name='Franklin Von Moon Portfolio' content={description} />
+				<meta name='description' content={description} />
+				<meta property='og:title' content='Franklin Von Moon Portfolio' />
+				<meta property='og:description' content={description} />
+				<meta property='og:image' content='/homepage/preview.png' />
+				<meta property='og:url' content='https://www.franklin-v-moon.dev/' />
+				<meta property='og:type' content='website' />
 			</Head>
 			<ParallaxArt />
 			<PageContainer>

@@ -38,15 +38,26 @@ const Tutorials: NextPage = () => {
 
 	const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
+	const description = "Comprehensive training, guides and useful code snippets";
 	return (
 		<>
 			<div className={styles.pageContainer}>
 				<Head>
 					<title>Tutorials - Franklin V Moon</title>
+					<meta name='Tutorials' content={description} />
+					<link rel='icon' href='/favicon-purple.ico' />
+					<meta name='description' content={description} />
 					<meta
-						name='Tutorials'
-						content='Comprehensive training, guides and useful code snippets'
+						property='og:title'
+						content='Franklin Von Moon Portfolio Tutorials'
 					/>
+					<meta property='og:description' content={description} />
+					<meta property='og:image' content='/tutorials/preview.png' />
+					<meta
+						property='og:url'
+						content='https://www.franklin-v-moon.dev/tutorials'
+					/>
+					<meta property='og:type' content='website' />
 				</Head>
 
 				<Dialog

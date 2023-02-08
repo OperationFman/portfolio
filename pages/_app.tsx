@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 	const [darkMode, setDarkMode] = useState(true);
 
 	useEffect(() => {
-		setDarkMode(localStorage.getItem("dark-mode") === "true");
+		if (localStorage.getItem("dark-mode")) {
+			setDarkMode(localStorage.getItem("dark-mode") === "true");
+		}
 	}, []);
 
 	if (typeof window !== "undefined") {

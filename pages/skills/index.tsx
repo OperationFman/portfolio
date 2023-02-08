@@ -30,15 +30,27 @@ export const Skills: NextPage = () => {
 		setShowModal(true);
 	};
 
+	const description =
+		"Known Programming Languages, Cloud Tools and Convictions";
+
 	return (
 		<div>
 			<Head>
 				<title>Skills - Franklin V Moon</title>
+				<meta name='Skills' content={description} />
+				<link rel='icon' href='/favicon-green.ico' />
+				<meta name='description' content={description} />
 				<meta
-					name='Skills'
-					content='Known Programming Languages and Cloud Tools'
+					property='og:title'
+					content='Franklin Von Moon Portfolio Skills'
 				/>
-				<link rel='icon' href='/favicon.ico' />
+				<meta property='og:description' content={description} />
+				<meta property='og:image' content='/skills/preview.png' />
+				<meta
+					property='og:url'
+					content='https://www.franklin-v-moon.dev/skills'
+				/>
+				<meta property='og:type' content='website' />
 			</Head>
 
 			<div className={styles.modalContainer}>
