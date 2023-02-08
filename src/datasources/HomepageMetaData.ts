@@ -1,11 +1,11 @@
-import { ForYouMetaData, QualificationsMetaDataType } from "../homepage/types";
+import { ForYouMetaData } from "../homepage/types";
 
 export const forYouMetaData: ForYouMetaData[] = [
 	{
 		logo: "code",
 		title: "Programming",
 		paragraph:
-			"Champion best practices like TDD, SOLID principles, Object Oriented design and Pairing. See Skills for more.",
+			"I love solving new challenging problems. Championing working in pairs and endlessly learning. See Skills for more.",
 	},
 	{
 		logo: "design",

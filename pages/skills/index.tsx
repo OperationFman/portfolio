@@ -45,7 +45,10 @@ export const Skills: NextPage = () => {
 					content='Franklin Von Moon Portfolio Skills'
 				/>
 				<meta property='og:description' content={description} />
-				<meta property='og:image' content='/skills/preview.png' />
+				<meta
+					property='og:image'
+					content='https://user-images.githubusercontent.com/42459707/217668161-4be6af5c-4a57-4eb3-807e-d6f8ccb008ce.png'
+				/>
 				<meta
 					property='og:url'
 					content='https://www.franklin-v-moon.dev/skills'

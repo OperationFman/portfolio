@@ -52,7 +52,10 @@ const Tutorials: NextPage = () => {
 						content='Franklin Von Moon Portfolio Tutorials'
 					/>
 					<meta property='og:description' content={description} />
-					<meta property='og:image' content='/tutorials/preview.png' />
+					<meta
+						property='og:image'
+						content='https://user-images.githubusercontent.com/42459707/217668165-2975c163-f020-4a13-a8d9-3087d043f834.png'
+					/>
 					<meta
 						property='og:url'
 						content='https://www.franklin-v-moon.dev/tutorials'

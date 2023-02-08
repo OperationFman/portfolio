@@ -21,7 +21,10 @@ const Projects: NextPage = () => {
 					content='Franklin Von Moon Portfolio Projects'
 				/>
 				<meta property='og:description' content={description} />
-				<meta property='og:image' content='/projects/preview.png' />
+				<meta
+					property='og:image'
+					content='https://user-images.githubusercontent.com/42459707/217668169-6b20fc51-78f9-448c-adc2-84a498b779f6.png'
+				/>
 				<meta
 					property='og:url'
 					content='https://www.franklin-v-moon.dev/projects'

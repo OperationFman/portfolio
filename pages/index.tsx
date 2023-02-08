@@ -24,7 +24,10 @@ const Home: NextPage = () => {
 				<meta name='description' content={description} />
 				<meta property='og:title' content='Franklin Von Moon Portfolio' />
 				<meta property='og:description' content={description} />
-				<meta property='og:image' content='/homepage/preview.png' />
+				<meta
+					property='og:image'
+					content='https://user-images.githubusercontent.com/42459707/217668142-6ad58600-1713-40de-915d-caa035ea098a.png'
+				/>
 				<meta property='og:url' content='https://www.franklin-v-moon.dev/' />
 				<meta property='og:type' content='website' />
 			</Head>
