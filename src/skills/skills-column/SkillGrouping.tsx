@@ -22,12 +22,12 @@ export const SkillsGrouping = ({
 					description,
 				};
 				return (
-					<div
+					<button
 						className={setDark(styles, "skillItem")}
 						onClick={() => handleOpenModal(modalPayload)}
 						key={index}>
 						{item.title}
-					</div>
+					</button>
 				);
 			})}
 		</div>

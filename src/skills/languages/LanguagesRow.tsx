@@ -20,10 +20,10 @@ export const LanguagesRow = ({
 	};
 
 	return (
-		<div
+		<button
 			className={setDark(styles, "rowItem")}
 			onClick={() => handleOpenModal(modalPayload)}>
 			{item.title}
-		</div>
+		</button>
 	);
 };

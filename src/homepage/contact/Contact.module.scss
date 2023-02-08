@@ -24,7 +24,6 @@
 		height: 180px;
 	}
 }
-
 .cardContainerDark {
 	&:hover {
 		background-color: $mediumGrey;
@@ -32,6 +31,7 @@
 }
 
 .cardContent {
+	all: unset;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -45,17 +45,29 @@
 }
 
 .contactMethod {
+	all: unset;
 	width: 100%;
 	font-size: 24px;
 	text-align: center;
 	font-weight: bold;
 	margin-top: 15px;
+	border-radius: 22px;
+	margin: 0 10px;
+
+	color: $defaultLightBlue;
 
 	@include breakpoint(small) {
 		margin-top: 25px;
 	}
 
-	@extend .defaultLightBlueGradient;
+	&:focus {
+		background-color: $dimmerWhite;
+	}
+}
+.contactMethodDark {
+	&:focus {
+		background-color: rgba($brightGrey, 0.2);
+	}
 }
 
 .contactSubtitle {

@@ -27,7 +27,9 @@ export const ContactCard = ({
 			className={setDark(styles, "cardContainer")}>
 			<div className={styles.cardContent}>
 				{children}
-				<div className={styles.contactMethod}>{contactMethod}</div>
+				<button className={setDark(styles, "contactMethod")}>
+					{contactMethod}
+				</button>
 				<ShowIf condition={value}>
 					<div className={styles.contactSubtitle}>{value}</div>
 				</ShowIf>

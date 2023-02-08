@@ -63,6 +63,7 @@ export const Navbar = ({
 							className={styles.tab}
 							style={{ order: item.order }}
 							key={index}
+							tabIndex={index + 1}
 							onClick={() => {
 								handleTabClick(item.route, index);
 							}}
@@ -79,9 +80,13 @@ export const Navbar = ({
 					onClick={() => handleDarkModeToggle()}>
 					<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
 						{darkMode ? (
-							<Brightness6Icon className={styles.iconDim} />
+							<button className={styles.iconDim} tabIndex={5}>
+								<Brightness6Icon  />
+							</button>
 						) : (
-							<Brightness3Icon className={styles.iconBright} />
+							<button className={styles.iconBright} tabIndex={5}>
+								<Brightness3Icon  />
+							</button>
 						)}
 					</Tooltip>
 				</div>
