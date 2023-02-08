@@ -46,44 +46,46 @@ export const Navbar = ({
 	};
 
 	return (
-		<Tabs
-			value={tabIndex}
-			scrollButtons={true}
-			TabIndicatorProps={{ style: { background: tabsData[tabIndex].color } }}
-			textColor='inherit'
-			variant={"standard"}
-			centered
-			className={styles.container}>
-			{tabsData.map((item, index) => {
-				return (
-					<Tab
-						label={item.label}
-						icon={item.icon(tabIndex)}
-						className={styles.tab}
-						style={{ order: item.order }}
-						key={index}
-						onClick={() => {
-							handleTabClick(item.route, index);
-						}}
-					/>
-				);
-			})}
+		<nav>
+			<Tabs
+				value={tabIndex}
+				scrollButtons={true}
+				TabIndicatorProps={{ style: { background: tabsData[tabIndex].color } }}
+				textColor='inherit'
+				variant={"standard"}
+				centered
+				className={styles.container}>
+				{tabsData.map((item, index) => {
+					return (
+						<Tab
+							label={item.label}
+							icon={item.icon(tabIndex)}
+							className={styles.tab}
+							style={{ order: item.order }}
+							key={index}
+							onClick={() => {
+								handleTabClick(item.route, index);
+							}}
+						/>
+					);
+				})}
 
-			<div className={styles.spacer} style={{ order: 2 }} />
-			<div className={styles.spacer} style={{ order: 6 }} />
+				<div className={styles.spacer} style={{ order: 2 }} />
+				<div className={styles.spacer} style={{ order: 6 }} />
 
-			<div
-				className={styles.darkModeToggle}
-				style={{ order: 7 }}
-				onClick={() => handleDarkModeToggle()}>
-				<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
-					{darkMode ? (
-						<Brightness6Icon className={styles.iconDim} />
-					) : (
-						<Brightness3Icon className={styles.iconBright} />
-					)}
-				</Tooltip>
-			</div>
-		</Tabs>
+				<div
+					className={styles.darkModeToggle}
+					style={{ order: 7 }}
+					onClick={() => handleDarkModeToggle()}>
+					<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
+						{darkMode ? (
+							<Brightness6Icon className={styles.iconDim} />
+						) : (
+							<Brightness3Icon className={styles.iconBright} />
+						)}
+					</Tooltip>
+				</div>
+			</Tabs>
+		</nav>
 	);
 };

@@ -55,7 +55,7 @@ export const BioDescription = (): JSX.Element => {
 			/>
 
 			<ScrollAnimation animateIn='fadeIn' animateOnce>
-				<div className={setDark(styles, "blurb")}>
+				<main className={setDark(styles, "blurb")}>
 					Full-stack software developer with a passion for user centric design,
 					volunteering globally and advocating for social change
 					<br />
@@ -69,7 +69,7 @@ export const BioDescription = (): JSX.Element => {
 					{pluralTime("hour", periodWorked?.hours)}
 					{" and "}
 					{pluralTime("minute", periodWorked?.minutes)}{" "}
-				</div>
+				</main>
 			</ScrollAnimation>
 		</div>
 	);

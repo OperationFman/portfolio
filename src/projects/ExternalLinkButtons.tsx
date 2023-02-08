@@ -1,6 +1,6 @@
 import FormatPaintIcon from "@mui/icons-material/FormatPaint";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LanguageIcon from "@mui/icons-material/Language";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Button, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 import { ProjectMetaData } from "./types";
@@ -17,7 +17,7 @@ export const ExternalLinkButtons = ({
 			{metaData.deployedURL ? (
 				<Tooltip TransitionComponent={Zoom} title='Deployed Website'>
 					<Button
-						startIcon={<LanguageIcon />}
+						startIcon={<OpenInNewIcon />}
 						color='brightGrey'
 						target='_blank'
 						href={metaData.deployedURL}>

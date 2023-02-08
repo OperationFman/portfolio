@@ -51,12 +51,11 @@ export const Skills: NextPage = () => {
 			</div>
 
 			<PageContainer>
-				<ScrollAnimation
-					animateIn='fadeIn'
-					animateOnce
-					className={styles.heroText}>
-					Click any of the technologies listed below to learn more about my
-					current specific abilities, capabilities and level of involvement.
+				<ScrollAnimation animateIn='fadeIn' animateOnce>
+					<main className={styles.heroText}>
+						Select any of these languages or technologies listed to learn more
+						about my current capabilities and level of involvement.
+					</main>
 				</ScrollAnimation>
 
 				<Languages handleOpenModal={handleOpenModal} />

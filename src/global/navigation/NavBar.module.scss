@@ -61,6 +61,10 @@
 		margin-left: 80px;
 	}
 
+	@include breakpoint(large) {
+		margin-left: 120px;
+	}
+
 	@extend .hover;
 }
 

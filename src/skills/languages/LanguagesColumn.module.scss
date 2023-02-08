@@ -11,7 +11,7 @@
 	top: 44px;
 	text-align: center;
 	padding-right: 40px;
-	width: 80%;
+	width: 70%;
 
 	@include breakpoint(small) {
 		width: 95%;
@@ -23,7 +23,7 @@
 	border-radius: 8px;
 	padding: 0 0 16px 16px;
 	margin-right: 40px;
-	width: 70%;
+	width: 60%;
 
 	background-color: $mediumGrey;
 	opacity: 0.4;
