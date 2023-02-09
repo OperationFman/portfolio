@@ -1,6 +1,5 @@
 @import "../../../themes/breakpoints";
 
-
 $smallerHeight: 35vh;
 $largerHeight: 69vh;
 $darkBackgroundColor: #01456e;
@@ -33,6 +32,8 @@ $lightBackgroundColor: #90caf9;
 	width: 100%;
 	background-color: $lightBackgroundColor;
 	height: $smallerHeight;
+	animation-delay: 500ms;
+	transition: linear 1100ms;
 
 	@include breakpoint(small) {
 		height: $largerHeight;
@@ -53,113 +54,160 @@ $lightBackgroundColor: #90caf9;
 	}
 }
 
-
 @keyframes fadeInOutFast {
 	0% {
 		opacity: 0.1;
-	  }
-	  10% {
+	}
+	10% {
 		opacity: 0.5;
-	  }
-	  60% {
+	}
+	60% {
 		opacity: 1;
-	  }
-	  66% {
+	}
+	66% {
 		opacity: 0.5;
-	  }
-	  100% {
+	}
+	100% {
 		opacity: 0.1;
-	  }
+	}
 }
 
 .fadeInOutFast {
-  animation: fadeInOutFast 8s linear infinite;
+	animation: fadeInOutFast 8s linear infinite;
 }
 
 @keyframes fadeInOutSlow {
 	0% {
-	  opacity: 0.1;
+		opacity: 0.1;
 	}
 	5% {
-	  opacity: 0.5;
+		opacity: 0.5;
 	}
 	80% {
-	  opacity: 1;
+		opacity: 1;
 	}
 	85% {
-	  opacity: 0.5;
+		opacity: 0.5;
 	}
 	100% {
-	  opacity: 0.1;
+		opacity: 0.1;
 	}
-  }
-  
-  .fadeInOutSlow {
-	animation: fadeInOutSlow 45s linear infinite;
-  }
+}
 
-  @keyframes shootingStar {
+.fadeInOutSlow {
+	animation: fadeInOutSlow 45s linear infinite;
+}
+
+@keyframes shootingStar {
 	0% {
-	  transform: translate(-200vh, -200vh);
+		transform: translate(-200vh, -200vh);
 	}
 	100% {
-	  transform: translate(200vh, 200vh);
+		transform: translate(200vh, 200vh);
 	}
-  }
-  
-  .shootingStar {
+}
+
+.shootingStar {
 	animation-delay: 5s;
 	animation: shootingStar 4s linear forwards;
-  }
+}
 
-  @keyframes cloudLeftRightSlow {
+@keyframes cloudLeftRightSlow {
 	0% {
-	  transform: translateX(0);
+		transform: translateX(0);
 	}
 	50% {
-	  transform: translateX(100%);
+		transform: translateX(100%);
 	}
 	100% {
-	  transform: translateX(0);
+		transform: translateX(0);
 	}
-	
-  }
-  
-  .cloudLeftRightSlow {
+}
+
+.cloudLeftRightSlow {
 	animation: cloudLeftRightSlow 5000s infinite;
-  }
+}
 
-
-
-  @keyframes cloudLeftRightFast {
+@keyframes cloudLeftRightFast {
 	0% {
-	  transform: translateX(0);
+		transform: translateX(0);
 	}
 	50% {
-	  transform: translateX(100%);
+		transform: translateX(100%);
 	}
 	100% {
-	  transform: translateX(0);
+		transform: translateX(0);
 	}
-  }
-  
-  .cloudLeftRightFast {
+}
+
+.cloudLeftRightFast {
 	animation: cloudLeftRightFast 1500s infinite;
-  }
-  
+}
 
-  @keyframes trainLeftRight {
+@keyframes trainLeftRight {
 	0% {
-	  transform: translateX(-3%);
+		transform: translateX(-3%);
 	}
 	50% {
-	  transform: translateX(10%);
+		transform: translateX(10%);
 	}
 	100% {
-	  transform: translateX(-5%);
+		transform: translateX(-5%);
 	}
-  }
-  
-  .trainLeftRight {
+}
+
+.trainLeftRight {
 	animation: trainLeftRight 50s infinite;
-  }
+}
+
+@keyframes sunUp {
+	0% {
+		transform: translateY(20%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.sunUp {
+	animation: sunUp 1s linear forwards;
+}
+
+@keyframes sunDown {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(20%);
+	}
+}
+
+.sunDown {
+	animation: sunDown 1s ease-in forwards;
+}
+
+@keyframes moonUp {
+	0% {
+		transform: translateY(50%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.moonUp {
+	animation: moonUp 1s linear forwards;
+}
+
+@keyframes moonDown {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(50%);
+	}
+}
+
+.moonDown {
+	animation: moonDown 1s ease-in forwards;
+}
