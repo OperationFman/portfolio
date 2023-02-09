@@ -24,19 +24,14 @@
 	padding: 0 0 16px 16px;
 	margin-right: 40px;
 	width: 60%;
-
-	background-color: $mediumGrey;
-	opacity: 0.4;
-	box-shadow: $defaultShadow;
+	opacity: 0.3;
 
 	@include breakpoint(small) {
+		
 		width: 80%;
 	}
 }
-.developingOverlayDark {
-	background-color: $darkBackground;
-	opacity: 0.1;
-}
+
 
 .columnWrapper {
 	width: 100%;

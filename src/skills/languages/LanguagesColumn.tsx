@@ -2,7 +2,6 @@ import ShowIf from "../../../utils/show-if/ShowIf";
 import { ColumnData, MetaData } from "../types";
 import { LanguagesRow } from "./LanguagesRow";
 
-import { setDark } from "../../../utils/configureCss/configureCss";
 import styles from "./LanguagesColumn.module.scss";
 
 type LanguagesColumnProps = {
@@ -32,7 +31,7 @@ export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
 			<ShowIf condition={isDeveloping}>
 				<p className={styles.developingText}>Developing...</p>
 			</ShowIf>
-			<div className={isDeveloping ? setDark(styles, "developingOverlay") : ""}>
+			<div className={isDeveloping ? styles.developingOverlay : ""}>
 				<div className={styles.columnWrapper}>
 					<h2
 						className={styles.title}
