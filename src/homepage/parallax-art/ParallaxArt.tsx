@@ -18,6 +18,8 @@ export const ParallaxArt = () => {
 		}
 	};
 
+	const pageTop = offSetY === 0;
+
 	useEffect(() => {
 		const handleScrollAnimation = () => {
 			handleScroll();
@@ -36,24 +38,36 @@ export const ParallaxArt = () => {
 					<div className={setDark(styles, "background")} />
 
 					<Image
-						src={`/homepage/parallax/${theme}/15_moon_sun-01.svg`}
-						alt='Sun/Moon'
+						src={`/homepage/parallax/light/15_moon_sun-01.svg`}
+						alt='Sun'
+						width='0'
+						height='0'
+						className={styles.layer}
+						 style={{
+							zIndex: -8,
+							transform: `translateY(${offSetY * 0.6}px)`
+						}}
+					/>
+					<Image
+						src={`/homepage/parallax/dark/15_moon_sun-01.svg`}
+						alt='Moon'
 						width='0'
 						height='0'
 						className={styles.layer}
 						style={{
 							zIndex: -8,
-							transform: `translateY(${offSetY * 0.6}px)`,
+							transform: `translateY(${offSetY * 0.6}px)`
 						}}
 					/>
 					{darkMode && 
 						<>
+							
 							<Image
 								src={`/homepage/parallax/${theme}/14_stars-01.svg`}
 								alt='Minor amount of stars'
 								width='0'
 								height='0'
-								className={styles.layer}
+								className={`${styles.layer} ${pageTop && styles.fadeInOutFast}`}
 								style={{
 									zIndex: -7,
 									transform: `translateY(${offSetY * 0.8 - 50}px)`,
@@ -75,7 +89,7 @@ export const ParallaxArt = () => {
 								alt='Significant amount of stars'
 								width='0'
 								height='0'
-								className={styles.layer}
+								className={`${styles.layer} ${pageTop && styles.fadeInOutSlow}`}
 								style={{
 									zIndex: -7,
 									transform: `translateY(${offSetY * 0.88 - 20}px)`,
@@ -86,10 +100,9 @@ export const ParallaxArt = () => {
 								alt='Shooting Star'
 								width='0'
 								height='0'
-								className={styles.layer}
+								className={`${styles.layer} ${styles.shootingStar}`}
 								style={{
 									zIndex: -6,
-									transform: `translateY(${offSetY * 0.1}px)`,
 								}}
 							/>
 						</>
@@ -110,7 +123,7 @@ export const ParallaxArt = () => {
 						alt='Train'
 						width='0'
 						height='0'
-						className={styles.layer}
+						className={`${styles.layer} ${pageTop && styles.trainLeftRight}`}
 						style={{
 							zIndex: -5,
 							transform: `translateY(${offSetY * 0.4}px)`,
@@ -121,7 +134,7 @@ export const ParallaxArt = () => {
 						alt='Far clouds'
 						width='0'
 						height='0'
-						className={styles.layer}
+						className={`${styles.layer} ${pageTop &&  styles.cloudLeftRightSlow}`}
 						style={{
 							zIndex: -6,
 							transform: `translateY(${offSetY * 0.45}px)`,
@@ -154,7 +167,7 @@ export const ParallaxArt = () => {
 						alt='Close low clouds'
 						width='0'
 						height='0'
-						className={styles.layer}
+						className={`${styles.layer} ${pageTop &&  styles.cloudLeftRightFast}`}
 						style={{
 							zIndex: -3,
 							transform: `translateY(${offSetY * 0.25}px)`,

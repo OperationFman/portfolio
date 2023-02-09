@@ -52,3 +52,114 @@ $lightBackgroundColor: #90caf9;
 		height: $largerHeight;
 	}
 }
+
+
+@keyframes fadeInOutFast {
+	0% {
+		opacity: 0.1;
+	  }
+	  10% {
+		opacity: 0.5;
+	  }
+	  60% {
+		opacity: 1;
+	  }
+	  66% {
+		opacity: 0.5;
+	  }
+	  100% {
+		opacity: 0.1;
+	  }
+}
+
+.fadeInOutFast {
+  animation: fadeInOutFast 8s linear infinite;
+}
+
+@keyframes fadeInOutSlow {
+	0% {
+	  opacity: 0.1;
+	}
+	5% {
+	  opacity: 0.5;
+	}
+	80% {
+	  opacity: 1;
+	}
+	85% {
+	  opacity: 0.5;
+	}
+	100% {
+	  opacity: 0.1;
+	}
+  }
+  
+  .fadeInOutSlow {
+	animation: fadeInOutSlow 45s linear infinite;
+  }
+
+  @keyframes shootingStar {
+	0% {
+	  transform: translate(-200vh, -200vh);
+	}
+	100% {
+	  transform: translate(200vh, 200vh);
+	}
+  }
+  
+  .shootingStar {
+	animation-delay: 5s;
+	animation: shootingStar 4s linear forwards;
+  }
+
+  @keyframes cloudLeftRightSlow {
+	0% {
+	  transform: translateX(0);
+	}
+	50% {
+	  transform: translateX(100%);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+	
+  }
+  
+  .cloudLeftRightSlow {
+	animation: cloudLeftRightSlow 5000s infinite;
+  }
+
+
+
+  @keyframes cloudLeftRightFast {
+	0% {
+	  transform: translateX(0);
+	}
+	50% {
+	  transform: translateX(100%);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+  }
+  
+  .cloudLeftRightFast {
+	animation: cloudLeftRightFast 1500s infinite;
+  }
+  
+
+  @keyframes trainLeftRight {
+	0% {
+	  transform: translateX(-3%);
+	}
+	50% {
+	  transform: translateX(10%);
+	}
+	100% {
+	  transform: translateX(-5%);
+	}
+  }
+  
+  .trainLeftRight {
+	animation: trainLeftRight 50s infinite;
+  }
