@@ -3,7 +3,8 @@
 
 $smallerHeight: 35vh;
 $largerHeight: 69vh;
-$backgroundColor: #01456e;
+$darkBackgroundColor: #01456e;
+$lightBackgroundColor: #90caf9;
 
 .outerContainer {
 	height: $smallerHeight;
@@ -30,12 +31,15 @@ $backgroundColor: #01456e;
 .background {
 	z-index: -9;
 	width: 100%;
-	background-color: $backgroundColor;
+	background-color: $lightBackgroundColor;
 	height: $smallerHeight;
 
 	@include breakpoint(small) {
 		height: $largerHeight;
 	}
+}
+.backgroundDark {
+	background-color: $darkBackgroundColor;
 }
 
 .layer {
