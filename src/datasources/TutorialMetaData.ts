@@ -139,7 +139,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		tags: [Tags.QuickStart],
 	},
 	{
-		title: "Snippet: Test a thrown error",
+		title: "How to test a thrown error",
 		link: "test-thrown-error",
 		notionPage: "1ad3c64947224e5e9acf4a09e9086a5b",
 		created: 1639982639,
@@ -162,7 +162,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		tags: [Tags.StepByStep],
 	},
 	{
-		title: "Snippet: Repeat one test with new variables",
+		title: "How to repeat a single jest test with new variables",
 		link: "repeat-test-with-new-variables",
 		notionPage: "f5255703bba04229aafded995e423d25",
 		created: 1639982637,
@@ -174,7 +174,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "Project Wall: Single source of truth",
+		title: "The virtual project wall, a single source of truth",
 		link: "project-wall-single-source-of-truth",
 		notionPage: "a036e1f8f1d844a5a512dc6d7a011ccf",
 		created: 1639982636,
@@ -184,7 +184,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		tags: [Tags.Essay],
 	},
 	{
-		title: "Snippet: Create arrays with only truthy values",
+		title: "How to create a javascript array with only truthy values",
 		link: "filter-array-with-only-truthy-values",
 		notionPage: "f546bb620f29415ba0d9b3b6e5bac748",
 		created: 1639982635,
@@ -196,7 +196,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "Snippet: Retry any function recursively",
+		title: "How to retry any javascript function recursively",
 		link: "retry-recursively",
 		notionPage: "88e2d51cb8d74f9a9eb561185f16d322",
 		created: 1639982634,
@@ -219,7 +219,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "Snippet: Catch errors By type",
+		title: "How to catch javascript errors by type",
 		link: "try-catch-by-type",
 		notionPage: "898854cc62d84573807f8da823304ea0",
 		created: 1639982632,
@@ -243,7 +243,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		tags: [Tags.Essay],
 	},
 	{
-		title: "Estimation and pitfalls",
+		title: "Estimation and common pitfalls",
 		link: "estimation-and-pitfalls",
 		notionPage: "9835c35bb3e34d86b890d90fbb5c2599",
 		created: 1639982531,

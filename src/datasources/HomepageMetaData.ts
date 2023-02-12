@@ -5,7 +5,7 @@ export const forYouMetaData: ForYouMetaData[] = [
 		logo: "code",
 		title: "Programming",
 		paragraph:
-			"I love problem solving. Championing working in pairs and endlessly learning. See Skills for more.",
+			"I love new tech, solving problems, working in pairs and endlessly learning. See Skills for more.",
 	},
 	{
 		logo: "design",
