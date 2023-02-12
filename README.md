@@ -10,7 +10,7 @@
   - [Update Qualifications, Volunteering and Work Experience](#update-qualifications-volunteering-and-work-experience)
   - [Update Skills](#update-skills)
   - [Update Projects](#update-projects)
-  - [Update Salary Expectations](#adjust-salary-expectations)
+  - [Update Salary Expectations](#update-salary-expectations)
 - [Contact](#contact)
 
 &nbsp;
