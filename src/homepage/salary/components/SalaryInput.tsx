@@ -43,7 +43,7 @@ export const MoneyInput = ({
 			<div>
 				<InputLabel htmlFor='outlined-adornment-amount'>{title}</InputLabel>
 				<OutlinedInput
-					id='outlined-adornment-amount'
+					id={`${name} input field`}
 					name={name}
 					value={value}
 					onChange={onChange}

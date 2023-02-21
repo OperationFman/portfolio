@@ -23,10 +23,11 @@ export const SalarySwitch = ({
 				enterTouchDelay={0}
 				leaveTouchDelay={5000}>
 				<IconButton aria-label='Help'>
-					<HelpOutlineIcon />
+					<HelpOutlineIcon id={`${text} help icon`} />
 				</IconButton>
 			</Tooltip>{" "}
 			<Switch
+				id={text}
 				checked={checked}
 				onChange={onChange}
 				size='medium'

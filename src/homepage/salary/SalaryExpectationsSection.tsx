@@ -236,7 +236,7 @@ export const SalaryExpectationsSection = () => {
 							<Gap />
 						</div>
 						<div className={styles.rightColumn}>
-							<SalaryInput
+							<SalaryInput							
 								name={STOCK_OPTIONS}
 								title={"Stock Options & Shares"}
 								value={values.stock}

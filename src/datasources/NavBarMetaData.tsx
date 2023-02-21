@@ -16,7 +16,7 @@ export const tabsData: {
 	order: number;
 }[] = [
 	{
-		// Homepage label is updated and changed in SCSS
+		label: "",
 		color: "#90caf9",
 		route: "/",
 		icon: (tab: number) => (
