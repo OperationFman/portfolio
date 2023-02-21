@@ -9,12 +9,12 @@ export const SubHeading = ({ text }: { text: string }) => {
 			animateIn='fadeIn'
 			animateOnce
 			className={styles.container}>
-			<h1 className={styles.title}>
+			<h2 className={styles.title}>
 				{text}
 				<div className={styles.lineContainer}>
 					<div className={styles.line} />
 				</div>
-			</h1>
+			</h2>
 		</ScrollAnimation>
 	);
 };

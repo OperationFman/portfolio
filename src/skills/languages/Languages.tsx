@@ -16,7 +16,7 @@ export const Languages = ({
 
 	return (
 		<div className={styles.container}>
-			<h1 className={styles.sectionTitle}>Languages</h1>
+			<h2 className={styles.sectionTitle}>Languages</h2>
 
 			<Card>
 				<div className={styles.content}>

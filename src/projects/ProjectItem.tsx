@@ -20,7 +20,7 @@ export const ProjectItem = ({
 
 	return (
 		<div className={styles.container}>
-			<h1 className={styles.title}>{metaData.title}</h1>
+			<h2 className={styles.title}>{metaData.title}</h2>
 			<ExternalLinkButtons metaData={metaData} />
 			<Carousel
 				wrapAround={true}
