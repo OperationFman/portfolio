@@ -30,7 +30,7 @@ export const VolunteerListItem = ({
 				className={`${styles.itemContainer} ${volunteerStyles.itemContainer}`}>
 				<Image
 					src={`/homepage/companies/${logo}.png`}
-					alt={logo}
+					alt={`${logo} logo`}
 					width='200'
 					height='50'
 					className={`${styles.logo} ${volunteerStyles.logo}`}

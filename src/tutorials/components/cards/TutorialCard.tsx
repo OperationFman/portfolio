@@ -35,7 +35,7 @@ export const TutorialCard = ({
 					<CardMedia
 						component='img'
 						height='180'
-						alt={cardData.title}
+						alt={`${cardData.title} thumbnail`}
 						image={cardData.thumbnail}
 					/>
 					<CardContent>

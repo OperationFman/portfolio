@@ -45,7 +45,7 @@ export const ProjectItem = ({
 							src={item}
 							width={1280}
 							height={720}
-							alt={`Picture of my ${metaData.title} project`}
+							alt={`Image of my ${metaData.title} project`}
 						/>
 					</div>
 				))}

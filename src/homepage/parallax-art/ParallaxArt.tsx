@@ -92,7 +92,6 @@ export const ParallaxArt = () => {
 
 					<Image
 						src={"/homepage/parallax/light/15_moon_sun-01.svg"}
-						alt='Sun'
 						width='0'
 						height='0'
 						className={`${styles.layer} ${sunRising && styles.sunUp} ${
@@ -106,7 +105,6 @@ export const ParallaxArt = () => {
 					/>
 					<Image
 						src={"/homepage/parallax/dark/15_moon_sun-01.svg"}
-						alt='Moon'
 						width='0'
 						height='0'
 						className={`${styles.layer} ${moonRising && styles.moonUp} ${
@@ -122,7 +120,6 @@ export const ParallaxArt = () => {
 						<>
 							<Image
 								src={`/homepage/parallax/${theme}/14_stars-01.svg`}
-								alt='Minor amount of stars'
 								width='0'
 								height='0'
 								className={`${styles.layer} ${pageTop && styles.fadeInOutFast}`}
@@ -133,7 +130,6 @@ export const ParallaxArt = () => {
 							/>
 							<Image
 								src={`/homepage/parallax/${theme}/13_stars-01.svg`}
-								alt='Moderate amount of stars'
 								width='0'
 								height='0'
 								className={styles.layer}
@@ -144,7 +140,6 @@ export const ParallaxArt = () => {
 							/>
 							<Image
 								src={`/homepage/parallax/${theme}/12_stars-01.svg`}
-								alt='Significant amount of stars'
 								width='0'
 								height='0'
 								className={`${styles.layer} ${pageTop && styles.fadeInOutSlow}`}
@@ -155,7 +150,6 @@ export const ParallaxArt = () => {
 							/>
 							<Image
 								src={`/homepage/parallax/${theme}/11_shooting_star-01.svg`}
-								alt='Shooting Star'
 								width='0'
 								height='0'
 								className={`${styles.layer} ${styles.shootingStar}`}
@@ -167,7 +161,6 @@ export const ParallaxArt = () => {
 					)}
 					<Image
 						src={`/homepage/parallax/${theme}/10_far_mountain-01.svg`}
-						alt='Farthest Mountain'
 						width='0'
 						height='0'
 						className={styles.layer}
@@ -178,7 +171,6 @@ export const ParallaxArt = () => {
 					/>
 					<Image
 						src={`/homepage/parallax/${theme}/9_train-01.svg`}
-						alt='Train'
 						width='0'
 						height='0'
 						className={`${styles.layer} ${pageTop && styles.trainLeftRight}`}
@@ -189,7 +181,6 @@ export const ParallaxArt = () => {
 					/>
 					<Image
 						src={`/homepage/parallax/${theme}/8_clouds_far-01.svg`}
-						alt='Far clouds'
 						width='0'
 						height='0'
 						className={`${styles.layer} ${
@@ -202,7 +193,6 @@ export const ParallaxArt = () => {
 					/>
 					<Image
 						src={`/homepage/parallax/${theme}/7_middle_mountain-01.svg`}
-						alt='Mid Mountains'
 						width='0'
 						height='0'
 						className={styles.layer}
@@ -213,7 +203,6 @@ export const ParallaxArt = () => {
 					/>
 					<Image
 						src={`/homepage/parallax/${theme}/6_close_mountain-01.svg`}
-						alt='Nearest Mountain'
 						width='0'
 						height='0'
 						className={styles.layer}
@@ -224,7 +213,6 @@ export const ParallaxArt = () => {
 					/>
 					<Image
 						src={`/homepage/parallax/${theme}/5_clouds_near-01.svg`}
-						alt='Close low clouds'
 						width='0'
 						height='0'
 						className={`${styles.layer} ${
@@ -237,7 +225,6 @@ export const ParallaxArt = () => {
 					/>
 					<Image
 						src={`/homepage/parallax/${theme}/4_city-01.svg`}
-						alt='Farthest City'
 						width='0'
 						height='0'
 						className={styles.layer}
@@ -248,7 +235,6 @@ export const ParallaxArt = () => {
 					/>
 					<Image
 						src={`/homepage/parallax/${theme}/3_plane-01.svg`}
-						alt='Closest City'
 						width='0'
 						height='0'
 						className={styles.layer}
@@ -259,7 +245,6 @@ export const ParallaxArt = () => {
 					/>
 					<Image
 						src={`/homepage/parallax/${theme}/2_towns-01.svg`}
-						alt='Closest City'
 						width='0'
 						height='0'
 						className={styles.layer}
@@ -271,7 +256,6 @@ export const ParallaxArt = () => {
 
 					<Image
 						src={`/homepage/parallax/${theme}/1_motherboard-01.svg`}
-						alt='Motherboard I/O'
 						width='0'
 						height='0'
 						className={styles.layer}

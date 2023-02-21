@@ -23,49 +23,49 @@ export const forYouMetaData: ForYouMetaData[] = [
 
 export const volunteeringMetaData = [
 	{
-		logo: "badac",
+		logo: "ballarat-aboriginal-and-district-co-operative",
 		title: "B.A.D.A.C Website Developer, Photographer and Newsletter Producer",
 		location: "Ballarat, Australia",
 		year: "2021",
 	},
 	{
-		logo: "creative",
+		logo: "creative-city-ballarat",
 		title: "Ballarat Creative City Production Manager",
 		location: "Ballarat, Australia",
 		year: "2021",
 	},
 	{
-		logo: "outreach",
+		logo: "federation-university-regional-schools-outreach",
 		title: "Federation University: Regional Schools Outreach Exponent",
 		location: "Victoria, Australia",
 		year: "2018 - 2020",
 	},
 	{
-		logo: "senate",
+		logo: "federation-university-student-senate",
 		title: "Federation University Student Senate: Indigenous Representative",
 		location: "Ballarat, Australia",
 		year: "2019",
 	},
 	{
-		logo: "challenges",
+		logo: "challenges-abroad",
 		title: "Challenges Abroad Project Borneo: Media Literacy Trainer",
 		location: "East Kalimantan, Indonesia",
 		year: "2019",
 	},
 	{
-		logo: "navy",
+		logo: "australian-navy",
 		title: "Restoration of Rural Network Infrastructure Emergency Responder",
 		location: "Dhulikhel, Nepal",
 		year: "2018",
 	},
 	{
-		logo: "colombo",
+		logo: "new-colombo-plan",
 		title: "New Colombo Plan: Post-Production Project Videographer",
 		location: "Shaoguan, China",
 		year: "2017",
 	},
 	{
-		logo: "paxaus",
+		logo: "penny-arcade-expo-australia",
 		title: "PAX Aus Enforcer",
 		location: "Melbourne, Australia",
 		year: "2013 - 2018",
@@ -114,7 +114,7 @@ export const workExperienceMetaData = [
 		],
 	},
 	{
-		logo: "federation",
+		logo: "federation-university",
 		employer: "Federation University",
 		period: "2018 - 2020",
 		location: "Ballarat, Australia",

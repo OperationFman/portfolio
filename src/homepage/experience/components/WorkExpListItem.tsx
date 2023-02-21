@@ -33,7 +33,7 @@ export const WorkExpListItem = ({
 			<div className={styles.itemContainer}>
 				<Image
 					src={`/homepage/companies/${companyLogo}.png`}
-					alt={companyLogo}
+					alt={`${companyLogo} logo`}
 					width='200'
 					height='50'
 					className={styles.logo}

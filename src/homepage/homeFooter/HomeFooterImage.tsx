@@ -4,12 +4,7 @@ import styles from "./HomeFooterImage.module.scss";
 export const HomeFooterImage = () => {
 	return (
 		<div className={styles.container}>
-			<Image
-				src={"/homepage/moon-footer.svg"}
-				alt='Moon and Astronaut'
-				width={1920}
-				height={720}
-			/>
+			<Image src={"/homepage/moon-footer.svg"} width={1920} height={720} />
 		</div>
 	);
 };
