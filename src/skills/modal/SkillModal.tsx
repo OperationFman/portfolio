@@ -1,5 +1,5 @@
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { DialogTitle, Divider } from "@mui/material";
+import { DialogTitle, Divider, IconButton } from "@mui/material";
 import { Dispatch, SetStateAction } from "react";
 import { splitStringAtFullStop } from "../../../utils/split-string/splitStringAtFullStop";
 import { MetaData } from "../types";
@@ -30,12 +30,9 @@ export const SkillModal = (
 			<DialogTitle>
 				<div className={styles.titleContainer}>
 					<h3 className={styles.title}>{heading}</h3>
-					<div className={styles.closeButton}>
-						<CloseRoundedIcon
-							color='disabled'
-							onClick={() => setShowModal(false)}
-						/>
-					</div>
+					<IconButton aria-label='Close' onClick={() => setShowModal(false)}>
+						<CloseRoundedIcon color='disabled' />
+					</IconButton>
 				</div>
 			</DialogTitle>
 			<div className={styles.titleDivider} />

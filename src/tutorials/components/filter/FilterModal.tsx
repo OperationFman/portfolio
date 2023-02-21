@@ -1,10 +1,10 @@
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { DialogTitle, Divider } from "@mui/material";
+import { DialogTitle, Divider, IconButton } from "@mui/material";
 import { Dispatch, SetStateAction } from "react";
 import {
 	availableLanguages,
 	availableTags,
-	availableTopics
+	availableTopics,
 } from "../../tutorialDataService";
 import { Languages, Tags, Topic } from "../../types";
 import { MultiSelectFilterField } from "./multiselect/MultiSelectFilterField";
@@ -28,12 +28,11 @@ export const FilterModal = (
 			<DialogTitle>
 				<div className={styles.titleContainer}>
 					Filter
-					<div className={styles.closeButton}>
-						<CloseRoundedIcon
-							color='disabled'
-							onClick={() => setShowFilterMenu(false)}
-						/>
-					</div>
+					<IconButton
+						aria-label='Close'
+						onClick={() => setShowFilterMenu(false)}>
+						<CloseRoundedIcon color='disabled' />
+					</IconButton>
 				</div>
 			</DialogTitle>
 

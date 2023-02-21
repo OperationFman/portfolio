@@ -34,7 +34,11 @@ export const MoneyInput = ({
 				title={description}
 				enterTouchDelay={0}
 				leaveTouchDelay={5000}>
-				<HelpOutlineIcon className={styles.helpIcon} />
+				<div className={styles.helpIcon}>
+					<IconButton aria-label='Help'>
+						<HelpOutlineIcon />
+					</IconButton>
+				</div>
 			</Tooltip>{" "}
 			<div>
 				<InputLabel htmlFor='outlined-adornment-amount'>{title}</InputLabel>
@@ -48,13 +52,14 @@ export const MoneyInput = ({
 				/>
 			</div>
 			<Tooltip TransitionComponent={Zoom} title={"Clear"} enterTouchDelay={0}>
-				<IconButton
-					color='primary'
-					component='label'
-					onClick={() => onClear(name)}
-					className={styles.iconButton}>
-					<DeleteOutlineIcon />
-				</IconButton>
+				<div className={styles.deleteIcon}>
+					<IconButton
+						color='primary'
+						component='label'
+						onClick={() => onClear(name)}>
+						<DeleteOutlineIcon />
+					</IconButton>
+				</div>
 			</Tooltip>
 		</div>
 	);

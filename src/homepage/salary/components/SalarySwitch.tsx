@@ -1,5 +1,5 @@
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { Switch, Tooltip } from "@mui/material";
+import { IconButton, Switch, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 
 import styles from "./SalarySwitch.module.scss";
@@ -22,7 +22,9 @@ export const SalarySwitch = ({
 				title={description}
 				enterTouchDelay={0}
 				leaveTouchDelay={5000}>
-				<HelpOutlineIcon className={styles.helpIcon} />
+				<IconButton aria-label='Help'>
+					<HelpOutlineIcon />
+				</IconButton>
 			</Tooltip>{" "}
 			<Switch
 				checked={checked}
