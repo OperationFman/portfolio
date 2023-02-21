@@ -15,6 +15,7 @@ export const QualificationCard = ({
 		<div className={styles.container}>
 			<Image
 				src={`/homepage/qualifications/${logo}.svg`}
+				alt=''
 				width={50}
 				height={50}
 				className={styles.icon}

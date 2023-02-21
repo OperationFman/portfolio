@@ -31,6 +31,7 @@ export const ForYouCard = ({
 
 				<Image
 					src={`/homepage/foryou/${logo}.svg`}
+					alt=""
 					width={60}
 					height={60}
 					className={styles.logo}
