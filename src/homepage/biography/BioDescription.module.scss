@@ -14,6 +14,21 @@
 .autoType {
 	font-size: 80px;
 	font-weight: lighter;
+
+	@media (prefers-reduced-motion: reduce) {
+		display: none;
+	}
+}
+
+.backupAutoType {
+	display: none;
+	line-height: 0.6;
+	font-size: 80px;
+	font-weight: lighter;
+
+	@media (prefers-reduced-motion: reduce) {
+		display: block;
+	}
 }
 
 .blurb {

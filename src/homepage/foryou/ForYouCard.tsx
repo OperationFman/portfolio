@@ -17,7 +17,7 @@ export const ForYouCard = ({
 	return (
 		<div className={styles.container}>
 			<div className={styles.innerContainer}>
-				<div className={styles.title}>{title}</div>
+				<h2 className={styles.title}>{title}</h2>
 
 				<div className={styles.content}>
 					{paragraphArray.map((sentence, index) => {
@@ -31,7 +31,7 @@ export const ForYouCard = ({
 
 				<Image
 					src={`/homepage/foryou/${logo}.svg`}
-					alt=""
+					alt=''
 					width={60}
 					height={60}
 					className={styles.logo}

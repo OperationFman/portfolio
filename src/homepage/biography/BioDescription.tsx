@@ -54,6 +54,8 @@ export const BioDescription = (): JSX.Element => {
 				typingDelay='1500ms'
 			/>
 
+			<span className={styles.backupAutoType}>Developer</span>
+
 			<ScrollAnimation animateIn='fadeIn' animateOnce>
 				<main className={setDark(styles, "blurb")}>
 					Full-stack software developer with a passion for user centric design,
