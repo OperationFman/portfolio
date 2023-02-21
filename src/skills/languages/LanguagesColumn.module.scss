@@ -6,33 +6,6 @@
 	margin-bottom: 30px;
 }
 
-.developingText {
-	position: absolute;
-	top: 44px;
-	text-align: center;
-	padding-right: 40px;
-	width: 70%;
-
-	@include breakpoint(small) {
-		width: 95%;
-	}
-}
-
-.developingOverlay {
-	height: 98%;
-	border-radius: 8px;
-	padding: 0 0 16px 16px;
-	margin-right: 40px;
-	width: 60%;
-	opacity: 0.3;
-
-	@include breakpoint(small) {
-		
-		width: 80%;
-	}
-}
-
-
 .columnWrapper {
 	width: 100%;
 	padding-right: 24px;

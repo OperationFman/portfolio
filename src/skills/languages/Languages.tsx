@@ -31,7 +31,6 @@ export const Languages = ({
 										<LanguagesColumn
 											columnData={columnData}
 											isExpanded={expandLanguages}
-											isDeveloping={columnData.isDeveloping}
 											handleOpenModal={handleOpenModal}
 										/>
 									</ScrollAnimation>

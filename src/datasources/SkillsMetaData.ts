@@ -194,7 +194,6 @@ export const languagesMetaData: ColumnData[] = [
 			"C sharp is a modern and object-oriented language, which means it is well-suited for building robust and scalable backend systems. This can be particularly useful as I am interested in becoming a backend and infrastructure expert.",
 		proficiency: Learning,
 		description: Description.Learning,
-		isDeveloping: true,
 		data: [
 			{
 				title: "ASP .NET Core",

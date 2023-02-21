@@ -1,4 +1,3 @@
-import ShowIf from "../../../utils/show-if/ShowIf";
 import { ColumnData, MetaData } from "../types";
 import { LanguagesRow } from "./LanguagesRow";
 
@@ -7,12 +6,11 @@ import styles from "./LanguagesColumn.module.scss";
 type LanguagesColumnProps = {
 	columnData: ColumnData;
 	isExpanded: boolean;
-	isDeveloping: boolean | undefined;
 	handleOpenModal: (payload: MetaData) => void;
 };
 
 export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
-	const { columnData, isExpanded, isDeveloping, handleOpenModal } = props;
+	const { columnData, isExpanded, handleOpenModal } = props;
 	const { title, data, knowledge, proficiency, description } = columnData;
 
 	const TOTAL_PRIME_ITEMS = 6;
@@ -28,10 +26,7 @@ export const LanguagesColumn = (props: LanguagesColumnProps): JSX.Element => {
 
 	return (
 		<div className={styles.container}>
-			<ShowIf condition={isDeveloping}>
-				<p className={styles.developingText}>Developing...</p>
-			</ShowIf>
-			<div className={isDeveloping ? styles.developingOverlay : ""}>
+			<div>
 				<div className={styles.columnWrapper}>
 					<h2
 						className={styles.title}
