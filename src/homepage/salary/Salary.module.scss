@@ -22,13 +22,18 @@
 	font-weight: bold;
 	@extend .defaultBlueGradient;
 }
+.salaryNumberDark {
+	@extend .defaultDarkBlueGradient;
+}
 
 .salaryCurrency {
 	text-align: left;
 	margin-top: 65px;
 	font-weight: bolder;
-
-	color: $defaultBlue;
+	color: #1176d4;
+}
+.salaryCurrencyDark {
+	color: #90caf9;
 }
 
 .subHeading {

@@ -20,6 +20,9 @@
 
 	@extend .defaultBlueGradient;
 }
+.titleDark {
+	@extend .defaultDarkBlueGradient;
+}
 
 .content {
 	margin: 24px 20px;

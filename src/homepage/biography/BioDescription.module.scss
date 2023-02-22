@@ -11,6 +11,13 @@
 	font-weight: bold;
 }
 
+.gradient {
+	@extend .defaultBlueGradient;
+}
+.gradientDark {
+	@extend .defaultDarkBlueGradient;
+}
+
 .autoType {
 	font-size: 80px;
 	font-weight: lighter;

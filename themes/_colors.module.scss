@@ -19,7 +19,13 @@ $darkBackground: #13181c;
 $defaultShadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 
 .defaultBlueGradient {
-	background: linear-gradient(to bottom right, #4448b6, #42a5f5);
+	background: linear-gradient(to bottom right, #3d4eb8, #1176d4);
+	background-clip: $defaultDarkBlue;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.defaultDarkBlueGradient {
+	background: linear-gradient(to bottom right, #2781e7, #90caf9);
 	background-clip: $defaultDarkBlue;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;

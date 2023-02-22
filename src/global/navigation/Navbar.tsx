@@ -81,11 +81,11 @@ export const Navbar = ({
 					<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
 						{darkMode ? (
 							<button className={styles.iconDim} tabIndex={5}>
-								<Brightness6Icon  />
+								<Brightness6Icon />
 							</button>
 						) : (
 							<button className={styles.iconBright} tabIndex={5}>
-								<Brightness3Icon  />
+								<Brightness3Icon />
 							</button>
 						)}
 					</Tooltip>

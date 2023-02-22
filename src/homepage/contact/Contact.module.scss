@@ -54,7 +54,7 @@
 	border-radius: 22px;
 	margin: 0 10px;
 
-	color: $defaultLightBlue;
+	color: $defaultDarkBlue;
 
 	@include breakpoint(small) {
 		margin-top: 25px;
@@ -65,6 +65,8 @@
 	}
 }
 .contactMethodDark {
+	color: $defaultLightBlue;
+
 	&:focus {
 		background-color: rgba($brightGrey, 0.2);
 	}
@@ -79,6 +81,5 @@
 		font-weight: regular;
 		font-size: 11px;
 		text-align: center;
-		color: $brightGrey;
 	}
 }

@@ -1,6 +1,7 @@
 import { Button, Card, FormGroup } from "@mui/material";
 import { useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
+import { setDark } from "../../../utils/configureCss/configureCss";
 import {
 	EXPECTED_SALARY_WITH_NO_BENEFITS,
 	GENERAL_ALLOWANCES,
@@ -163,10 +164,10 @@ export const SalaryExpectationsSection = () => {
 		<Card className={styles.cardContainer}>
 			<ScrollAnimation animateIn='fadeIn' animateOnce>
 				<div className={styles.heading}>
-					<div className={styles.salaryNumber}>
+					<div className={setDark(styles, "salaryNumber")}>
 						${commaSeparate(expectedSalary)}
 					</div>
-					<div className={styles.salaryCurrency}>AUD</div>
+					<div className={setDark(styles, "salaryCurrency")}>AUD</div>
 				</div>
 
 				<div className={styles.subHeading}>Proposed Annual Salary</div>
@@ -236,7 +237,7 @@ export const SalaryExpectationsSection = () => {
 							<Gap />
 						</div>
 						<div className={styles.rightColumn}>
-							<SalaryInput							
+							<SalaryInput
 								name={STOCK_OPTIONS}
 								title={"Stock Options & Shares"}
 								value={values.stock}
