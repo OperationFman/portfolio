@@ -69,7 +69,7 @@ export const FilterModal = (
 					size='medium'
 					onClick={() => handleClearAll()}
 					disabled={disableClearAll}
-					className={styles.clearAllButton}>
+					>
 					Clear All
 				</Button>
 			</div>

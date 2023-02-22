@@ -2,6 +2,18 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Build a .NET REST API with C#",
+		link: "dotnet-rest-api",
+		notionPage: "d27ec236b7814b44a3f82051d1b973e4",
+		created: 1675825611,
+		thumbnail: "/tutorials/dotnet-rest-api.png",
+		subTitle:
+			"Learn common .NET patterns and conventions to build a simple rest API from scratch",
+		topic: Topic.Programming,
+		languages: [Languages.CSharp],
+		tags: [Tags.StepByStep, Tags.QuickStart],
+	},
+	{
 		title: "Code frontend with Emojis?",
 		link: "code-with-emojis",
 		notionPage: "f1c08c6df5ec4d9bbf99f4dc6a372540",

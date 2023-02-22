@@ -8,6 +8,7 @@ export enum Topic {
 export enum Languages {
 	Javascript = "Javascript",
 	Typescript = "Typescript",
+	CSharp = "C#",
 	Java = "Java",
 	Docker = "Docker",
 	Terraform = "Terraform",
