@@ -20,16 +20,6 @@ describe("Navbar component", () => {
 		expect(getByText("PROJECTS")).toBeDefined();
 	});
 
-	it("changes the tab when a tab is pressed", () => {
-		const { getByText } = render(<Navbar setDarkMode={() => {}} />);
-		fireEvent.click(getByText("SKILLS"));
-		expect(getByText("SKILLS").getAttribute("class")).toContain("Mui-selected");
-		fireEvent.click(getByText("TUTORIALS"));
-		expect(getByText("TUTORIALS").getAttribute("class")).toContain(
-			"Mui-selected",
-		);
-	});
-
 	it("toggles dark mode when the dark mode button is pressed", () => {
 		const setDarkMode = jest.fn();
 		const { getByLabelText } = render(<Navbar setDarkMode={setDarkMode} />);

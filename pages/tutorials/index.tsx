@@ -14,6 +14,7 @@ import { Footer } from "../../utils/footer/Footer";
 
 import styles from "../../src/tutorials/index.module.scss";
 import ScrollAnimation from "react-animate-on-scroll";
+import { getTutorialMetaData } from "../../src/tutorials/tutorialDataService";
 
 const Transition = slideTransition("right");
 
@@ -25,6 +26,13 @@ const Tutorials: NextPage = () => {
 	const [metaData, setMetaData] = useState(
 		filterAndSortMetaData(sortBy, topicFilter, languagesFilter, tagsFilter),
 	);
+	const [disableClearAll, setDisableClearAll] = useState(true);
+	
+	const handleClearAll = () => {
+		setTopicFilter(undefined);
+		setFilteredLanguages([])
+		setTagsFilter([])
+	}
 
 	useEffect(() => {
 		const preparedMetaData = filterAndSortMetaData(
@@ -34,6 +42,7 @@ const Tutorials: NextPage = () => {
 			tagsFilter,
 		);
 		setMetaData(preparedMetaData);
+		setDisableClearAll(preparedMetaData === getTutorialMetaData());
 	}, [sortBy, topicFilter, languagesFilter, tagsFilter]);
 
 	const [showFilterMenu, setShowFilterMenu] = React.useState(false);
@@ -76,6 +85,8 @@ const Tutorials: NextPage = () => {
 						tagsFilter,
 						setTagsFilter,
 						setShowFilterMenu,
+						disableClearAll,
+						handleClearAll
 					)}
 				</Dialog>
 

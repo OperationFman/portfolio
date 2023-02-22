@@ -1,5 +1,5 @@
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { DialogTitle, Divider, IconButton } from "@mui/material";
+import { Button, DialogTitle, Divider, IconButton } from "@mui/material";
 import { Dispatch, SetStateAction } from "react";
 import {
 	availableLanguages,
@@ -20,6 +20,8 @@ export const FilterModal = (
 	tagsFilter: Tags[],
 	setTagsFilter: React.Dispatch<React.SetStateAction<Tags[]>>,
 	setShowFilterMenu: Dispatch<SetStateAction<boolean>>,
+	disableClearAll: boolean,
+	handleClearAll: () => void,
 ) => {
 	const tutorialPurple = "#ce93d8";
 
@@ -59,6 +61,18 @@ export const FilterModal = (
 				dropDownData={availableTags}
 				highlightColor={tutorialPurple}
 			/>
+
+			<div className={styles.clearAllContainer}>
+				<Button
+					variant='outlined'
+					color='secondary'
+					size='medium'
+					onClick={() => handleClearAll()}
+					disabled={disableClearAll}
+					className={styles.clearAllButton}>
+					Clear All
+				</Button>
+			</div>
 		</div>
 	);
 };
