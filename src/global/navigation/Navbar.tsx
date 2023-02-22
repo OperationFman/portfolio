@@ -1,9 +1,9 @@
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import Brightness6Icon from "@mui/icons-material/Brightness6";
-import { IconButton, Tab, Tabs, Tooltip } from "@mui/material";
+import { Tab, Tabs, Tooltip } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
 import { useRouter } from "next/router";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
 
 import { tabsData } from "../../datasources/NavBarMetaData";
@@ -44,6 +44,10 @@ export const Navbar = ({
 		localStorage.setItem("dark-mode", `${!darkMode}`);
 		setDarkMode(!darkMode);
 	};
+
+	useEffect(() => {
+		setTabIndex(initialTab());
+	}, [router]);
 
 	return (
 		<nav>

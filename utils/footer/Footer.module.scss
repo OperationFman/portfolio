@@ -3,11 +3,26 @@
 .container {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	margin-top: 200px;
-	height: 40px;
 	background-color: $darkGrey;
 }
 
 .button {
+	height: 40px;
 	width: 100vw;
+}
+
+.sitemap {
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	color: $brightGrey;
+	font-size: 14px;
+}
+
+.divider {
+	margin-top: 10px;
 }
