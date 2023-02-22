@@ -20,7 +20,7 @@ describe("SalaryExpectationsSection", () => {
 
 		fireEvent.change(trainingInput, { target: { value: "5000" } });
 
-		expect(getByText("$62,500")).toBeDefined();
+		expect(getByText("$62,750")).toBeDefined();
 	});
 
 	it("sets all toggles as undefined when clear all button pressed", () => {

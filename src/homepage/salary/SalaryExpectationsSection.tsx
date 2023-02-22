@@ -259,7 +259,7 @@ export const SalaryExpectationsSection = () => {
 							/>
 							<SalaryInput
 								name={OTHER_ALLOWANCES}
-								title={"Other Allowances / Benefits"}
+								title={"Other Benefits"}
 								value={values.otherAllowances}
 								onChange={handleMoneyInputChange}
 								onClear={handleMoneyInputClear}

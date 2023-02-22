@@ -1,4 +1,5 @@
 import {
+	FormControl,
 	IconButton,
 	InputAdornment,
 	InputLabel,
@@ -40,17 +41,21 @@ export const MoneyInput = ({
 					</IconButton>
 				</div>
 			</Tooltip>{" "}
-			<div>
-				<InputLabel htmlFor='outlined-adornment-amount'>{title}</InputLabel>
+			<FormControl className={styles.form}>
+				<InputLabel
+					htmlFor={`${name}-input-field`}
+					className={styles.formLabel}>
+					{title}
+				</InputLabel>
 				<OutlinedInput
-					id={`${name} input field`}
+					id={`${name}-input-field`}
 					name={name}
 					value={value}
 					onChange={onChange}
 					startAdornment={<InputAdornment position='start'>$</InputAdornment>}
 					type={"number"}
 				/>
-			</div>
+			</FormControl>
 			<Tooltip TransitionComponent={Zoom} title={"Clear"} enterTouchDelay={0}>
 				<div className={styles.deleteIcon}>
 					<IconButton
