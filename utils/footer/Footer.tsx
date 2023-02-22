@@ -18,46 +18,48 @@ export const Footer = () => {
 				className={styles.button}>
 				Back To Top
 			</Button>
-			<Container maxWidth={"md"} className={styles.sitemap}>
-				<span>
-					<Button
-						color='brightGrey'
-						onClick={() => {
-							router.replace("/");
-						}}>
-						Homepage
-					</Button>
-				</span>
-				<span className={styles.divider}> | </span>
-				<span>
-					<Button
-						color='brightGrey'
-						onClick={() => {
-							router.replace("/skills");
-						}}>
-						Skills
-					</Button>
-				</span>
-				<span className={styles.divider}> | </span>
-				<span>
-					<Button
-						color='brightGrey'
-						onClick={() => {
-							router.replace("/tutorials");
-						}}>
-						Tutorials
-					</Button>
-				</span>
-				<span className={styles.divider}> | </span>
-				<span>
-					<Button
-						color='brightGrey'
-						onClick={() => {
-							router.replace("/projects");
-						}}>
-						Projects
-					</Button>
-				</span>
+			<Container maxWidth={"md"}>
+				<div className={styles.sitemap}>
+					<span>
+						<Button
+							color='brightGrey'
+							onClick={() => {
+								router.replace("/");
+							}}>
+							Homepage
+						</Button>
+					</span>
+					<span className={styles.divider}> | </span>
+					<span>
+						<Button
+							color='brightGrey'
+							onClick={() => {
+								router.replace("/skills");
+							}}>
+							Skills
+						</Button>
+					</span>
+					<span className={styles.divider}> | </span>
+					<span>
+						<Button
+							color='brightGrey'
+							onClick={() => {
+								router.replace("/tutorials");
+							}}>
+							Tutorials
+						</Button>
+					</span>
+					<span className={styles.divider}> | </span>
+					<span>
+						<Button
+							color='brightGrey'
+							onClick={() => {
+								router.replace("/projects");
+							}}>
+							Projects
+						</Button>
+					</span>
+				</div>
 			</Container>
 		</footer>
 	);
