@@ -47,7 +47,7 @@ export const Navbar = ({
 
 	useEffect(() => {
 		setTabIndex(initialTab());
-	}, [router]);
+	}, [router, initialTab]);
 
 	return (
 		<nav>

@@ -27,12 +27,12 @@ const Tutorials: NextPage = () => {
 		filterAndSortMetaData(sortBy, topicFilter, languagesFilter, tagsFilter),
 	);
 	const [disableClearAll, setDisableClearAll] = useState(true);
-	
+
 	const handleClearAll = () => {
 		setTopicFilter(undefined);
-		setFilteredLanguages([])
-		setTagsFilter([])
-	}
+		setFilteredLanguages([]);
+		setTagsFilter([]);
+	};
 
 	useEffect(() => {
 		const preparedMetaData = filterAndSortMetaData(
@@ -86,7 +86,7 @@ const Tutorials: NextPage = () => {
 						setTagsFilter,
 						setShowFilterMenu,
 						disableClearAll,
-						handleClearAll
+						handleClearAll,
 					)}
 				</Dialog>
 

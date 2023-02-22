@@ -82,7 +82,7 @@ export const ParallaxArt = () => {
 		}
 
 		darkMode ? transitionMoonUp() : transitionSunUp();
-	}, [darkMode]);
+	}, [darkMode, initialLoad]);
 
 	return (
 		<ScrollAnimation animateIn='fadeIn' animateOnce delay={100}>
