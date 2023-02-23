@@ -1,4 +1,4 @@
-import { Button, Container, IconButton } from "@mui/material";
+import { Button, Container } from "@mui/material";
 import { useRouter } from "next/router";
 import styles from "./Footer.module.scss";
 

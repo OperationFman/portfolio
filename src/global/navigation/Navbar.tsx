@@ -62,7 +62,13 @@ export const Navbar = ({
 				{tabsData.map((item, index) => {
 					return (
 						<Tab
-							label={item.label}
+							label={
+								item.label || (
+									<span className={styles.visuallyHidden}>
+										Franklin Von Moon
+									</span>
+								)
+							}
 							icon={item.icon(tabIndex)}
 							className={styles.tab}
 							style={{ order: item.order }}

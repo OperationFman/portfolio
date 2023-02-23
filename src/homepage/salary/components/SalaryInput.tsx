@@ -1,5 +1,6 @@
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import {
-	FormControl,
 	IconButton,
 	InputAdornment,
 	InputLabel,
@@ -7,8 +8,7 @@ import {
 	Tooltip,
 	Zoom,
 } from "@mui/material";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+
 import React from "react";
 
 import styles from "./SalaryInput.module.scss";
@@ -41,21 +41,17 @@ export const MoneyInput = ({
 					</IconButton>
 				</div>
 			</Tooltip>{" "}
-			<FormControl className={styles.form}>
-				<InputLabel
-					htmlFor={`${name}-input-field`}
-					className={styles.formLabel}>
-					{title}
-				</InputLabel>
+			<div>
+				<InputLabel htmlFor='outlined-adornment-amount'>{title}</InputLabel>
 				<OutlinedInput
-					id={`${name}-input-field`}
+					id='outlined-adornment-amount'
 					name={name}
 					value={value}
 					onChange={onChange}
 					startAdornment={<InputAdornment position='start'>$</InputAdornment>}
 					type={"number"}
 				/>
-			</FormControl>
+			</div>
 			<Tooltip TransitionComponent={Zoom} title={"Clear"} enterTouchDelay={0}>
 				<div className={styles.deleteIcon}>
 					<IconButton

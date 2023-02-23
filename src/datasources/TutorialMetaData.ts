@@ -6,7 +6,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		link: "dotnet-rest-api",
 		notionPage: "d27ec236b7814b44a3f82051d1b973e4",
 		created: 1675825611,
-		thumbnail: "/tutorials/dotnet-rest-api.png",
+		thumbnail: "/tutorials/Microsoft-C-Sharp.jpeg",
 		subTitle:
 			"Learn common .NET patterns and conventions to build a simple rest API from scratch",
 		topic: Topic.Programming,
