@@ -2,6 +2,17 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Top Travel Hacks",
+		link: "travel-hacks",
+		notionPage: "10b40f8350c345df9bde0eeda7822a21",
+		created: 1675825612,
+		thumbnail: "/tutorials/travel-hacks.png",
+		subTitle:
+			"Tips and tricks to help you backpacking, save money, fly smart, enjoy things more and meet people",
+		topic: Topic.Article,
+		tags: [Tags.Essay, Tags.StepByStep],
+	},
+	{
 		title: "Build a .NET REST API with C#",
 		link: "dotnet-rest-api",
 		notionPage: "d27ec236b7814b44a3f82051d1b973e4",
