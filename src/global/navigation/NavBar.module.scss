@@ -55,7 +55,7 @@
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
 	border: 0;
-  }
+}
 
 .darkModeToggle {
 	display: flex;
@@ -63,14 +63,14 @@
 	border-radius: 0;
 	cursor: pointer;
 	padding-right: 10px;
+	margin-left: 15px;
 
 	@include breakpoint(small) {
-		margin-left: 60px;
 		padding: 0 15px;
 	}
 
 	@include breakpoint(medium) {
-		margin-left: 80px;
+		margin-left: 70px;
 	}
 
 	@include breakpoint(xLarge) {
