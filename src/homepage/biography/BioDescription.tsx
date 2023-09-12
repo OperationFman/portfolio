@@ -33,46 +33,46 @@ export const BioDescription = (): JSX.Element => {
 	});
 
 	return (
-		<div className={styles.container}>
-			<span className={styles.titleFont}>Franklin</span>
-			<span className={styles.titleFont}>{" V "}</span>
-			<span className={`${styles.titleFont} ${setDark(styles, "gradient")}`}>
-				Moon
-			</span>
+		<div className={styles.outerContainer}>
+			<div className={styles.container}>
+				<span className={styles.titleFont}>Franklin</span>
+				<span className={styles.titleFont}>{" V "}</span>
+				<span className={`${styles.titleFont} ${setDark(styles, "gradient")}`}>
+					Moon
+				</span>
 
-			<br />
-			<ReactTypingEffect
-				text={["Developer", "Volunteer", "Designer"]}
-				cursorRenderer={(cursor: string) => (
-					<span className={`${styles.autoType} ${color.defaultDarkBlue}`}>
-						{cursor}
-					</span>
-				)}
-				displayTextRenderer={(text: string) => {
-					return <span className={styles.autoType}>{text}</span>;
-				}}
-				typingDelay='1500ms'
-			/>
+				<br />
+				<ReactTypingEffect
+					text={["Developer", "Volunteer", "Designer", "Backpacker"]}
+					cursorRenderer={(cursor: string) => (
+						<span className={`${styles.autoType} ${color.defaultDarkBlue}`}>
+							{cursor}
+						</span>
+					)}
+					displayTextRenderer={(text: string) => {
+						return <span className={styles.autoType}>{text}</span>;
+					}}
+					typingDelay='1500ms'
+				/>
 
-			<span className={styles.backupAutoType}>Developer</span>
+				<span className={styles.backupAutoType}>Developer</span>
 
-			<ScrollAnimation animateIn='fadeIn' animateOnce>
-				<main className={setDark(styles, "blurb")}>
-					Full-stack software developer with a passion for user centric design,
-					volunteering globally and advocating for social change
-					<br />
-					<br />
-					Practicing professional for {pluralTime(
-						"year",
-						periodWorked?.years,
-					)}{" "}
-					{pluralTime("month", periodWorked?.months)}{" "}
-					{pluralTime("day", periodWorked?.days)}{" "}
-					{pluralTime("hour", periodWorked?.hours)}
-					{" and "}
-					{pluralTime("minute", periodWorked?.minutes)}{" "}
-				</main>
-			</ScrollAnimation>
+				<ScrollAnimation animateIn='fadeIn' animateOnce>
+					<main className={setDark(styles, "blurb")}>
+						Full-stack software developer with a passion for user centric
+						design, volunteering globally and advocating for social change
+						<br />
+						<br />
+						Practicing professional for{" "}
+						{pluralTime("year", periodWorked?.years)}{" "}
+						{pluralTime("month", periodWorked?.months)}{" "}
+						{pluralTime("day", periodWorked?.days)}{" "}
+						{pluralTime("hour", periodWorked?.hours)}
+						{" and "}
+						{pluralTime("minute", periodWorked?.minutes)}{" "}
+					</main>
+				</ScrollAnimation>
+			</div>
 		</div>
 	);
 };

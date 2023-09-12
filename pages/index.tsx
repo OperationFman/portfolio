@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 
 import Head from "next/head";
 import { PageContainer } from "../src/global/PageContainer";
-import { Biography } from "../src/homepage/biography/Biography";
 import { Contact } from "../src/homepage/contact/Contact";
 import { Experience } from "../src/homepage/experience/Experience";
 import { ForYou } from "../src/homepage/foryou/ForYou";
@@ -11,6 +10,7 @@ import { ParallaxArt } from "../src/homepage/parallax-art/ParallaxArt";
 import { Qualifications } from "../src/homepage/qualifications/Qualifications";
 import { Salary } from "../src/homepage/salary/Salary";
 import { Footer } from "../utils/footer/Footer";
+import { BioDescription } from "../src/homepage/biography/BioDescription";
 
 const Home: NextPage = () => {
 	const description =
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
 			</Head>
 			<ParallaxArt />
 			<PageContainer>
-				<Biography />
+				<BioDescription />
 				<ForYou />
 				<Experience />
 				<Qualifications />
