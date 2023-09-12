@@ -167,7 +167,7 @@ export const SalaryExpectationsSection = () => {
 					<div className={setDark(styles, "salaryNumber")}>
 						${commaSeparate(expectedSalary)}
 					</div>
-					<div className={setDark(styles, "salaryCurrency")}>AUD</div>
+					<div className={setDark(styles, "salaryCurrency")}>USD</div>
 				</div>
 
 				<div className={styles.subHeading}>Proposed Annual Salary</div>

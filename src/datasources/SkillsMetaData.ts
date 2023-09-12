@@ -57,13 +57,6 @@ export const languagesMetaData: ColumnData[] = [
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
-			{
-				title: "React Testing Library",
-				knowledge:
-					"I've used RTL on various front end projects and have a good understanding of its benefits and drawbacks when compared to alternative libraries, and I'm able to effectively apply it when practicing effective TDD.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
 
 			{
 				title: "Node",

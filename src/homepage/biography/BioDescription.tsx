@@ -35,7 +35,10 @@ export const BioDescription = (): JSX.Element => {
 
 	return (
 		<div className={styles.outerContainer}>
-			<div className={styles.container}>
+			<ScrollAnimation
+				animateIn='fadeIn'
+				animateOnce
+				className={styles.container}>
 				<span className={styles.titleFont}>Franklin</span>
 				<span className={styles.titleFont}>{" V "}</span>
 				<span className={`${styles.titleFont} ${setDark(styles, "gradient")}`}>
@@ -58,7 +61,7 @@ export const BioDescription = (): JSX.Element => {
 
 				<span className={styles.backupAutoType}>Developer</span>
 
-				<ScrollAnimation animateIn='fadeIn' animateOnce>
+				<ScrollAnimation animateIn='fadeIn' animateOnce delay={250}>
 					<main className={setDark(styles, "blurb")}>
 						Full-stack software developer with a passion for user centric
 						design, volunteering globally and advocating for social change
@@ -73,10 +76,12 @@ export const BioDescription = (): JSX.Element => {
 						{pluralTime("minute", periodWorked?.minutes)}{" "}
 					</main>
 				</ScrollAnimation>
-				<KeyboardDoubleArrowDownRoundedIcon
-					className={styles.scrollIndicator}
-				/>
-			</div>
+				<ScrollAnimation animateIn='fadeIn' animateOnce delay={1000}>
+					<KeyboardDoubleArrowDownRoundedIcon
+						className={styles.scrollIndicator}
+					/>
+				</ScrollAnimation>
+			</ScrollAnimation>
 		</div>
 	);
 };
