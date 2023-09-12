@@ -31,8 +31,8 @@ export const VolunteerListItem = ({
 				<Image
 					src={`/homepage/companies/${logo}.png`}
 					alt={`${logo} logo`}
-					width='200'
-					height='50'
+					width='160'
+					height='40'
 					className={`${styles.logo} ${volunteerStyles.logo}`}
 				/>
 

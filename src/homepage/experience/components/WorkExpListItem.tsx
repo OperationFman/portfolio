@@ -34,8 +34,8 @@ export const WorkExpListItem = ({
 				<Image
 					src={`/homepage/companies/${companyLogo}.png`}
 					alt={`${companyLogo} logo`}
-					width='200'
-					height='50'
+					width='160'
+					height='40'
 					className={styles.logo}
 				/>
 
