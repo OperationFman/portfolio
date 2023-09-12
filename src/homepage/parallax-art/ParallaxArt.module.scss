@@ -1,42 +1,43 @@
 @import "../../../themes/breakpoints";
 
-$smallerHeight: 20vh;
-$largerHeight: 40vh;
+$height: 40vh;
 $darkBackgroundColor: #01456e;
 $lightBackgroundColor: #90caf9;
 
 .outerContainer {
-	height: $smallerHeight;
+	display: none;
+	height: $height;
 
-	@include breakpoint(small) {
-		height: $largerHeight;
+	@include breakpoint(medium) {
+		display: block;
 	}
 }
 
 .innerContainer {
 	position: absolute;
-	display: flex;
+	display: none;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	height: $smallerHeight;
+	height: $height;
 
-	@include breakpoint(small) {
-		height: $largerHeight;
+	@include breakpoint(medium) {
+		display: flex;
 	}
 }
 
 .background {
+	display: none;
 	z-index: -9;
 	width: 100%;
 	background-color: $lightBackgroundColor;
-	height: $smallerHeight;
+	height: $height;
 	animation-delay: 500ms;
 	transition: linear 1100ms;
 
-	@include breakpoint(small) {
-		height: $largerHeight;
+	@include breakpoint(medium) {
+		display: block;
 	}
 }
 .backgroundDark {
@@ -44,13 +45,14 @@ $lightBackgroundColor: #90caf9;
 }
 
 .layer {
+	display: none;
 	position: inherit;
 	width: auto;
 	overflow: hidden;
-	height: $smallerHeight;
+	height: $height;
 
-	@include breakpoint(small) {
-		height: $largerHeight;
+	@include breakpoint(medium) {
+		display: block;
 	}
 }
 

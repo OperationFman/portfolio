@@ -1,4 +1,5 @@
 @import "../../../themes/colors.module";
+@import "../../../themes/breakpoints";
 .outerContainer {
 	display: flex;
 	justify-content: center;
@@ -6,9 +7,14 @@
 .container {
 	text-align: center;
 	max-width: 850px;
-	margin-top: 20px;
-	margin-bottom: 100px;
+	margin-top: 50px;
+	margin-bottom: 40px;
 	line-height: 1;
+
+	@include breakpoint(medium) {
+		margin-top: 20px;
+		margin-bottom: 100px;
+	}
 }
 
 .titleFont {
@@ -24,11 +30,16 @@
 }
 
 .autoType {
+	display: none;
 	font-size: 80px;
 	font-weight: lighter;
 
 	@media (prefers-reduced-motion: reduce) {
 		display: none;
+	}
+
+	@include breakpoint(medium) {
+		display: block;
 	}
 }
 
@@ -45,9 +56,13 @@
 
 .blurb {
 	font-size: 18px;
-	margin-top: 75px;
+	margin-top: 45px;
 	line-height: 1.6;
 	color: $darkGrey;
+
+	@include breakpoint(medium) {
+		margin-top: 75px;
+	}
 }
 .blurbDark {
 	color: $dimmerWhite;
