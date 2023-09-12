@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 // @ts-ignore
 import ReactTypingEffect from "react-typing-effect";
+import KeyboardDoubleArrowDownRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowDownRounded";
 import { setDark } from "../../../utils/configureCss/configureCss";
 
 import color from "../../../themes/_colors.module.scss";
@@ -72,6 +73,9 @@ export const BioDescription = (): JSX.Element => {
 						{pluralTime("minute", periodWorked?.minutes)}{" "}
 					</main>
 				</ScrollAnimation>
+				<KeyboardDoubleArrowDownRoundedIcon
+					className={styles.scrollIndicator}
+				/>
 			</div>
 		</div>
 	);

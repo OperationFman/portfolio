@@ -7,13 +7,11 @@
 .container {
 	text-align: center;
 	max-width: 850px;
-	margin-top: 50px;
-	margin-bottom: 40px;
+	margin-top: 40px;
 	line-height: 1;
 
 	@include breakpoint(medium) {
 		margin-top: 20px;
-		margin-bottom: 100px;
 	}
 }
 
@@ -66,4 +64,9 @@
 }
 .blurbDark {
 	color: $dimmerWhite;
+}
+
+.scrollIndicator {
+	opacity: 70%;
+	margin-top: 125px;
 }
