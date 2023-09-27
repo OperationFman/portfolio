@@ -23,6 +23,13 @@ export const forYouMetaData: ForYouMetaData[] = [
 
 export const volunteeringMetaData = [
 	{
+		logo: "melbourne-amep",
+		title:
+			"Melbourne Adult Migrant English Program: Refugee Social Support Coach",
+		location: "Melbourne, Australia",
+		year: "2023",
+	},
+	{
 		logo: "ballarat-aboriginal-and-district-co-operative",
 		title: "B.A.D.A.C Website Developer, Photographer and Newsletter Producer",
 		location: "Ballarat, Australia",
@@ -77,7 +84,7 @@ export const workExperienceMetaData = [
 		logo: "thoughtworks",
 		employer: "Thoughtworks Australia",
 		period: "2019 - Present",
-		location: "Melbourne, Australia",
+		location: "Melbourne, Australia & Bangkok, Thailand",
 		experiences: [
 			{
 				title: "Software Developer",
