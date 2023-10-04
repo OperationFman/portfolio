@@ -19,7 +19,7 @@ export const Contact = () => {
 						<ScrollAnimation animateIn='fadeIn' animateOnce>
 							<ContactCard
 								contactMethod={"LinkedIn"}
-								link={"https://www.linkedin.com/in/franklin-moon-23572518a/"}>
+								link={"https://www.linkedin.com/in/franklin-von-moon-23572518a"}>
 								<LinkedInIcon color={"primary"} fontSize={"large"} />
 							</ContactCard>
 						</ScrollAnimation>

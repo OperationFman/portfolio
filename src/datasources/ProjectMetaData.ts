@@ -2,6 +2,20 @@ import { ProjectMetaData } from "../projects/types";
 
 export const projectMetaData: ProjectMetaData[] = [
 	{
+		title: "Budget 🎒 Sherpa",
+		created: 7,
+		images: [
+			"/projects/budget-sherpa/desktop1.png",
+			"/projects/budget-sherpa/desktop2.png",
+			"/projects/budget-sherpa/desktop3.png",
+		],
+
+		subTitle:
+			"Plan your next trip with confidence with this innovative travel budgeting app. The app combines data about countries' cost of living (food, activities, accommodation, etc.) with your preferences and travel style to give you a personalized overview of your 'financial runway.' This means you can avoid any surprises from expensive countries in your itinerary and travel with peace of mind. Currently a simple proof of concept built using a React frontend and .NET REST API on an SQLite database sourcing data from various external APIs and AI generated data.",
+		repoURL: "https://github.com/OperationFman/budget-sherpa",
+		uxURL: "https://www.figma.com/file/ApCULyiuQ1bLE5zNWAyJ6Y/Budget-Sherpa?type=design&node-id=0%3A1&mode=design&t=qT0PRFnojn70pu8m-1"
+	},
+	{
 		title: "Portfolio",
 		created: 6,
 		images: [
@@ -42,7 +56,7 @@ export const projectMetaData: ProjectMetaData[] = [
 		],
 
 		subTitle:
-			"A professional management application has been designed to assist players in selecting crew members for missions within the Mass Effect game series. The application enables players to add and remove crew members across various games, while providing insight into crew members who have not been utilized recently. The application also includes a feature that randomly recommends crew members for mission selection. Utilizing OAuth, players can access their account from multiple devices with ease, as the account is saved across devices. The application has been developed using Javascript and the React Library, and is hosted on Heroku, utilizing Docker, and maintained with a full CI/CD pipeline in CircleCI, using a 'deploy-to-prod-on-green' approach.",
+			"A professional management application designed to assist players in selecting crew members for missions within the Mass Effect game series. The application enables players to add and remove crew members across various games, while providing insight into crew members who have not been utilized recently. The application also includes a feature that randomly recommends crew members for mission selection. Utilizing OAuth, players can access their account from multiple devices with ease, as the account is saved across devices. The application has been developed using Javascript and the React Library, and is hosted on Heroku, utilizing Docker, and maintained with a full CI/CD pipeline in CircleCI, using a 'deploy-to-prod-on-green' approach.",
 		repoURL: "https://github.com/OperationFman/Mass-Effect-Crewed",
 		uxURL:
 			"https://www.figma.com/proto/XL7Gz06sz0iLn4hyVpGnRz/Mass-Effect-Crewed?node-id=0%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=0%3A3",
