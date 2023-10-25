@@ -2,6 +2,16 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Bash Scripting",
+		link: "bash-scripting",
+		notionPage: "039a3a1de59741639174939df0f4c20c",
+		created: 1698220136,
+		thumbnail: "/tutorials/scroll.png",
+		subTitle:
+			"Cheatsheet for bash, vim and some general terminal inputs",
+		topic: Topic.Programming,
+		tags: [Tags.CodeBlock],
+	},{
 		title: "Top Travel Hacks",
 		link: "travel-hacks",
 		notionPage: "10b40f8350c345df9bde0eeda7822a21",
