@@ -2,6 +2,28 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Backpackers Guide To Persia",
+		link: "persia-guide",
+		notionPage: "9248eed5462d41b9afac25112f7526b3",
+		created: 1698905456,
+		thumbnail: "/tutorials/iran.png",
+		subTitle:
+			"How to get to Iran and make the most of your time there. Covers challenges, concerns and things to do",
+		topic: Topic.Article,
+		tags: [Tags.Essay],
+	},
+	{
+		title: "Advanced Prompt Engineering",
+		link: "prompt-engineering",
+		notionPage: "1ec344d590fc4056b90328aaaf0f9663",
+		created: 1698905329,
+		thumbnail: "/tutorials/prompt.png",
+		subTitle:
+			"Construct prompts to guide large language models (LLMs) towards a desired outcome",
+		topic: Topic.Programming,
+		tags: [Tags.CodeBlock],
+	},
+	{
 		title: "Bash Scripting",
 		link: "bash-scripting",
 		notionPage: "039a3a1de59741639174939df0f4c20c",
@@ -11,7 +33,8 @@ export const tutorialMetaData: TutorialMetaData[] = [
 			"Cheatsheet for bash, vim and some general terminal inputs",
 		topic: Topic.Programming,
 		tags: [Tags.CodeBlock],
-	},{
+	},
+	{
 		title: "Top Travel Hacks",
 		link: "travel-hacks",
 		notionPage: "10b40f8350c345df9bde0eeda7822a21",
