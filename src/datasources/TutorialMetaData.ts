@@ -2,6 +2,16 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "AWS Cloud Practitioner Reference",
+		link: "aws-cloud-practitioner-reference",
+		notionPage: "e2836f55924d4582a22fe1c51b019a12",
+		created: 1699851048,
+		thumbnail: "/tutorials/cloud-prac.png",
+		subTitle:
+			"Overview of all the expected knowledge, ideal for the official Cloud Practitioner certificate exam",
+		topic: Topic.Infrastructure,
+		tags: [Tags.Essay],
+	}, {
 		title: "Backpackers Guide To Persia",
 		link: "persia-guide",
 		notionPage: "9248eed5462d41b9afac25112f7526b3",
