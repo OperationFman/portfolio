@@ -119,7 +119,7 @@ export const languagesMetaData: ColumnData[] = [
 			{
 				title: "PyTest",
 				knowledge:
-					" I find it to be a valuable tool for testing my code. PyTest makes it easy to write and execute tests, and the ability to run tests in parallel helps to speed up the testing process. In addition, the rich set of features offered by PyTest, such as fixture support and the ability to customize test discovery, make it a flexible and powerful testing framework.",
+					"I find it to be a valuable tool for testing my code. PyTest makes it easy to write and execute tests, and the ability to run tests in parallel helps to speed up the testing process. In addition, the rich set of features offered by PyTest, such as fixture support and the ability to customize test discovery, make it a flexible and powerful testing framework.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
@@ -147,7 +147,7 @@ export const languagesMetaData: ColumnData[] = [
 			{
 				title: "Django",
 				knowledge:
-					" I have a strong understanding of its capabilities and how it can be used to build powerful web applications. I have found it to be a valuable tool in my work as a developer because it provides a robust and flexible framework that makes it easy to build and maintain complex applications. In addition, the extensive library of tools and modules available for Django makes it possible to add a wide range of functionality to applications, further enhancing its value as a development platform.",
+					"I have a strong understanding of its capabilities and how it can be used to build powerful web applications. I have found it to be a valuable tool in my work as a developer because it provides a robust and flexible framework that makes it easy to build and maintain complex applications. In addition, the extensive library of tools and modules available for Django makes it possible to add a wide range of functionality to applications, further enhancing its value as a development platform.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
@@ -184,28 +184,35 @@ export const languagesMetaData: ColumnData[] = [
 	{
 		title: "C#",
 		knowledge:
-			"C sharp is a modern and object-oriented language, which means it is well-suited for building robust and scalable backend systems. This can be particularly useful as I am interested in becoming a backend and infrastructure expert.",
-		proficiency: Learning,
-		description: Description.Learning,
+			"C Sharp is my first choice when building modern and object-oriented scalable backend systems and for use in XR development.",
+		proficiency: Capable,
+		description: Description.Capable,
 		data: [
 			{
 				title: "ASP .NET Core",
 				knowledge:
 					"I'm excited to be prioritizing dotNET as my next major learning goal.",
-				proficiency: Learning,
-				description: Description.Learning,
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "XUnit",
 				knowledge:
-					"To compliment my learning of dotNET, I must ensure I'm writing maintainable reliable C# code with XUnit unit tests.",
-				proficiency: Learning,
-				description: Description.Learning,
+					"Xunit is my preferred tool for dotNet for writing maintainable reliable C# code via testing because it provides a higher level of extensibility through traits, custom attributes, and test case discovery extensibility.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "Unity",
 				knowledge:
-					"After I feel confident with C# and dotNET I hope to explore game development with Unity.",
+					"Focusing on AR, VR and XR to create new unique augmentented reality experiences and find niche solutions.",
+				proficiency: Learning,
+				description: Description.Learning,
+			},
+			{
+				title: "Godot",
+				knowledge:
+					"Complimenting my Unity knowledge, I'm also exploring Godot as a viable alternative",
 				proficiency: Learning,
 				description: Description.Learning,
 			},
@@ -219,30 +226,9 @@ export const languagesMetaData: ColumnData[] = [
 		description: Description.Proficient,
 		data: [
 			{
-				title: "HTML",
-				knowledge:
-					"In my experience, HTML has proven to be a core reliable and essential part of any web developers career. It allows me to create well-structured and visually appealing web pages, and I am comfortable using it to implement a wide range of design elements in various methods.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
-				title: "CSS",
-				knowledge:
-					"I have used CSS in numerous projects in the past and have found it to be an invaluable tool for styling and formatting the front-end of web applications. I appreciate the flexibility and control that CSS gives me as a developer, and I am confident in my ability to use it effectively to create visually appealing and user-friendly interfaces.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
 				title: "Docker",
 				knowledge:
 					"I understand the value it brings to projects. Docker allows for easy containerization of applications, which makes it easier to deploy and run applications in different environments. I have used Docker in a variety of projects, including deploying and scaling web applications and microservices.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
-				title: "Git",
-				knowledge:
-					"Git allows for version control of code, which means I can track changes made to my code over time and easily revert back to previous versions if necessary. It also makes it easy to collaborate with other developers by allowing us to work on the same codebase without overwriting each other's changes. Overall, I find Git to be an invaluable tool for any developer, as it helps to streamline the development process and make it more efficient and effective.",
 				proficiency: Proficient,
 				description: Description.Proficient,
 			},
@@ -261,6 +247,27 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Capable,
 			},
 			{
+				title: "HTML",
+				knowledge:
+					"In my experience, HTML has proven to be a core reliable and essential part of any web developers career. It allows me to create well-structured and visually appealing web pages, and I am comfortable using it to implement a wide range of design elements in various methods.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "CSS",
+				knowledge:
+					"I have used CSS in numerous projects in the past and have found it to be an invaluable tool for styling and formatting the front-end of web applications. I appreciate the flexibility and control that CSS gives me as a developer, and I am confident in my ability to use it effectively to create visually appealing and user-friendly interfaces.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "Git",
+				knowledge:
+					"Git allows for version control of code, which means I can track changes made to my code over time and easily revert back to previous versions if necessary. It also makes it easy to collaborate with other developers by allowing us to work on the same codebase without overwriting each other's changes. Overall, I find Git to be an invaluable tool for any developer, as it helps to streamline the development process and make it more efficient and effective.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
 				title: "Bash / Shell",
 				knowledge:
 					"BASH/Shell allows me to automate tasks and perform actions quickly and efficiently on the command line. I have used it to manage and manipulate files and directories, run scripts, and execute commands on remote servers.",
@@ -273,14 +280,7 @@ export const languagesMetaData: ColumnData[] = [
 					"I find it valuable because it is a utility-first CSS framework that allows me to rapidly build custom user interfaces with ease. Instead of having to write custom CSS for every design element, I can use the pre-defined utility classes provided by Tailwind to style my components quickly and consistently. This saves me a lot of time and effort when building and styling web applications, as I don't have to spend as much time writing custom CSS.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
-			},
-			{
-				title: "Bootstrap",
-				knowledge:
-					"One of the main reasons I find Bootstrap valuable is because it saves me a lot of time in the development process. With its pre-designed components and grid system, I can easily create a consistent and professional looking layout without having to write a lot of custom CSS.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
+			}
 		],
 	},
 ];
@@ -453,73 +453,47 @@ export const cloudMetaData: SkillData[] = [
 		title: "AWS",
 		data: [
 			{
-				title: "EC2",
+				title: "EC2 & ELBs",
 				knowledge:
-					"Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, scalable compute capacity in the cloud, allowing users to launch and manage virtual machines (known as EC2 instances) that can run a variety of applications. I regularly use this across almost every project for CI/CD pipelines and scalable cloud deployments.",
+					"Spinning up appropriately sized instances in various load balanced scenarios depending on the desired workload. I understand what instance type (On-demand, Spot, reserved etc.) is appropriate for the use case and when to use EBS, Instance store and file storage.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
 			{
-				title: "ECR",
+				title: "Cloudfront & Route53",
 				knowledge:
-					"AWS Elastic Container Registry (ECR) is a fully-managed Docker container registry that makes it easy to store, manage, and deploy Docker container images. I've used it on multiple projects as a step in our deployment automation process as it's highly secure and reliable.",
+					"I understand how to setup Cloudfront CDN to serve static files and accelerate delivery globally and act as an entry point to various Lambda functions.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
 			{
-				title: "Cloudfront",
+				title: "S3 & Glacier",
 				knowledge:
-					"AWS CloudFront is a content delivery network (CDN) that speeds up the delivery of static and dynamic web content, such as HTML, CSS, JavaScript, and images, to users by caching the content at edge locations around the world. It's an incredibly powerful tool that I've used to significantly improve the scalability of a web app.",
+					"I have experience using S3 for abroad range of purposes, storing blobs, as a repository for files undergoing processing and also as affordable redundant long term storage of large files.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "VPC, IAM, KMS",
+				knowledge:
+					"Experience with these various tools as a part of a broader skillset used to setup and manage AWS resources. Including an understanding of VPC Peering, Managed VPNs, Cloud HSMs, Shielf, WAF, certificate manager and of course the secrets manager.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
 			{
-				title: "DynoDB",
+				title: "Lambdas",
 				knowledge:
-					"Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability, allowing users to store and retrieve any amount of data, and serve any level of request traffic. It is frequently my go-to for simpler small apps that just require a key-value database solution.",
+					"I've setup various lambdas for many processes from simple repreatable tasks to larger analysis workloads/filtering/logging.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "DynamoDB & RDS",
+				knowledge:
+					"I've used DynoDB extensively as a fantastic noSQL solution for quickly setting up new projects in opposition to traditional RDS tools like Aurora and Postgres where the concerns have mainly been replication for data analysis with other AWS tools.",
 				proficiency: Proficient,
 				description: Description.Proficient,
-			},
-			{
-				title: "Route53",
-				knowledge:
-					"Amazon Web Services Route 53 is a highly available and scalable Domain Name System (DNS) web service that translates domain names into numerical IP addresses, allowing computers to connect to each other and access websites. Most of my personal domains were setup via R53.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
-				title: "S3",
-				knowledge:
-					"Amazon Simple Storage Service (S3) is a cloud storage service that enables users to store and retrieve large amounts of data from anywhere on the internet. like much of AWS services, it's an outstanding value option for storing blobs, apps destined for testing and release and also simply any user submitted documents.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-		],
-	},
-	{
-		title: "Google",
-		data: [
-			{
-				title: "GCS",
-				knowledge:
-					"Google Cloud Services is a suite of cloud computing services that allows users to build, test, and deploy applications and websites, store and analyze data, and manage infrastructure and resources using Google's network of servers and infrastructure. Along with C# this is a focus of mine currently to develop and become proficient in.",
-				proficiency: Learning,
-				description: Description.Learning,
-			},
-			{
-				title: "Firebase",
-				knowledge:
-					"Google Firebase is a platform that provides a variety of tools and services for building mobile and web applications, including a real-time database, user authentication, hosting, and analytics. I've used it to push data to client devices instead of using sockets and intend to keep learning it as it's an awesome solution for backend problems.",
-				proficiency: Learning,
-				description: Description.Learning,
-			},
-			{
-				title: "Android App Distribution",
-				knowledge:
-					"Android App Distribution is a process by which Android apps are made available for users to download and install on their devices via the google play store. I've worked on projects where it was an integral part of the release process and required me to understand how it functioned, how to use the provided indicators and also how to debug.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
+			}
 		],
 	},
 	{

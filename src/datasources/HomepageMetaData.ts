@@ -151,8 +151,13 @@ export const qualificationMetaData = [
 	},
 	{
 		logo: "certificate",
-		title: "Certificate of Communication Information & Design",
-		location: "theGordon",
+		title: "AWS Certified Cloud Practitioner",
+		location: "Amazon Web Services Training and Certifications",
+	},
+	{
+		logo: "certificate",
+		title: "Certificate IV of Communication Information & Design",
+		location: "The Gordon Institute ",
 	},
 	{
 		logo: "certificate",
@@ -160,13 +165,14 @@ export const qualificationMetaData = [
 		location: "LeWagon",
 	},
 	{
-		logo: "certificate",
-		title: "Certificate of Backend Development for the Metaverse",
-		location: "Decentraland, Gitex",
-	},
-	{
 		logo: "language",
 		title: "Certificate of Teaching English as a Second Language",
 		location: "Teflen College",
 	},
 ];
+
+// {
+// 	logo: "certificate",
+// 	title: "Certificate of Backend Development for the Metaverse",
+// 	location: "Decentraland, Gitex",
+// }
