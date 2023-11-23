@@ -2,6 +2,17 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Kubernetes Essentials",
+		link: "kubernetes-essentials",
+		notionPage: "36d077d40d5c4c809adecc1f13f4978c",
+		created: 1700712512,
+		thumbnail: "/tutorials/kubernetes.png",
+		subTitle:
+			"Getting started with Kubernetes, covering all the basic skills required by a Kubernetes Administrator",
+		topic: Topic.Infrastructure,
+		tags: [Tags.StepByStep, Tags.CodeBlock],
+	},
+	{
 		title: "AWS Cloud Practitioner Reference",
 		link: "aws-cloud-practitioner-reference",
 		notionPage: "e2836f55924d4582a22fe1c51b019a12",
@@ -11,7 +22,8 @@ export const tutorialMetaData: TutorialMetaData[] = [
 			"Overview of all the expected knowledge, ideal for the official Cloud Practitioner certificate exam",
 		topic: Topic.Infrastructure,
 		tags: [Tags.Essay],
-	}, {
+	},
+	{
 		title: "Backpackers Guide To Persia",
 		link: "persia-guide",
 		notionPage: "9248eed5462d41b9afac25112f7526b3",
