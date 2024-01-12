@@ -119,7 +119,7 @@ export const languagesMetaData: ColumnData[] = [
 			{
 				title: "PyTest",
 				knowledge:
-					"I find it to be a valuable tool for testing my code. PyTest makes it easy to write and execute tests, and the ability to run tests in parallel helps to speed up the testing process. In addition, the rich set of features offered by PyTest, such as fixture support and the ability to customize test discovery, make it a flexible and powerful testing framework.",
+					" I find it to be a valuable tool for testing my code. PyTest makes it easy to write and execute tests, and the ability to run tests in parallel helps to speed up the testing process. In addition, the rich set of features offered by PyTest, such as fixture support and the ability to customize test discovery, make it a flexible and powerful testing framework.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
@@ -147,7 +147,7 @@ export const languagesMetaData: ColumnData[] = [
 			{
 				title: "Django",
 				knowledge:
-					"I have a strong understanding of its capabilities and how it can be used to build powerful web applications. I have found it to be a valuable tool in my work as a developer because it provides a robust and flexible framework that makes it easy to build and maintain complex applications. In addition, the extensive library of tools and modules available for Django makes it possible to add a wide range of functionality to applications, further enhancing its value as a development platform.",
+					" I have a strong understanding of its capabilities and how it can be used to build powerful web applications. I have found it to be a valuable tool in my work as a developer because it provides a robust and flexible framework that makes it easy to build and maintain complex applications. In addition, the extensive library of tools and modules available for Django makes it possible to add a wide range of functionality to applications, further enhancing its value as a development platform.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
@@ -184,7 +184,7 @@ export const languagesMetaData: ColumnData[] = [
 	{
 		title: "C#",
 		knowledge:
-			"C Sharp is my first choice when building modern and object-oriented scalable backend systems and for use in XR development.",
+			"C sharp is a modern and object-oriented language, which means it is well-suited for building robust and scalable backend systems. This can be particularly useful as I am interested in becoming a backend and infrastructure expert.",
 		proficiency: Capable,
 		description: Description.Capable,
 		data: [
@@ -198,21 +198,14 @@ export const languagesMetaData: ColumnData[] = [
 			{
 				title: "XUnit",
 				knowledge:
-					"Xunit is my preferred tool for dotNet for writing maintainable reliable C# code via testing because it provides a higher level of extensibility through traits, custom attributes, and test case discovery extensibility.",
+					"To compliment my learning of dotNET, I must ensure I'm writing maintainable reliable C# code with XUnit unit tests.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
 			{
 				title: "Unity",
 				knowledge:
-					"Focusing on AR, VR and XR to create new unique augmentented reality experiences and find niche solutions.",
-				proficiency: Learning,
-				description: Description.Learning,
-			},
-			{
-				title: "Godot",
-				knowledge:
-					"Complimenting my Unity knowledge, I'm also exploring Godot as a viable alternative",
+					"After I feel confident with C# and dotNET I hope to explore game development with Unity.",
 				proficiency: Learning,
 				description: Description.Learning,
 			},
@@ -225,6 +218,13 @@ export const languagesMetaData: ColumnData[] = [
 		proficiency: Proficient,
 		description: Description.Proficient,
 		data: [
+			{
+				title: "Kubernetes",
+				knowledge:
+					"I'm comfortable using Kubernetes, configuring clusters using kubectl and deploying containerized applications across multiple environments for efficient scaling and resource management in various platforms including Minikube, k3ds, EKS and even EC2",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
 			{
 				title: "Docker",
 				knowledge:
@@ -240,9 +240,23 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Capable,
 			},
 			{
-				title: "SQL",
+				title: "CSS",
 				knowledge:
-					"I have used SQL to write queries to extract, manipulate, and analyze data, and you have gained a good understanding of its syntax and capabilities. ",
+					"I have used CSS in numerous projects in the past and have found it to be an invaluable tool for styling and formatting the front-end of web applications. I appreciate the flexibility and control that CSS gives me as a developer, and I am confident in my ability to use it effectively to create visually appealing and user-friendly interfaces.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "Git",
+				knowledge:
+					"Git allows for version control of code, which means I can track changes made to my code over time and easily revert back to previous versions if necessary. It also makes it easy to collaborate with other developers by allowing us to work on the same codebase without overwriting each other's changes. Overall, I find Git to be an invaluable tool for any developer, as it helps to streamline the development process and make it more efficient and effective.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Bash / Shell",
+				knowledge:
+					"BASH/Shell allows me to automate tasks and perform actions quickly and efficiently on the command line. I have used it to manage and manipulate files and directories, run scripts, and execute commands on remote servers.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
@@ -254,23 +268,9 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.HighlyProficient,
 			},
 			{
-				title: "CSS",
+				title: "SQL",
 				knowledge:
-					"I have used CSS in numerous projects in the past and have found it to be an invaluable tool for styling and formatting the front-end of web applications. I appreciate the flexibility and control that CSS gives me as a developer, and I am confident in my ability to use it effectively to create visually appealing and user-friendly interfaces.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
-				title: "Git",
-				knowledge:
-					"Git allows for version control of code, which means I can track changes made to my code over time and easily revert back to previous versions if necessary. It also makes it easy to collaborate with other developers by allowing us to work on the same codebase without overwriting each other's changes. Overall, I find Git to be an invaluable tool for any developer, as it helps to streamline the development process and make it more efficient and effective.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
-				title: "Bash / Shell",
-				knowledge:
-					"BASH/Shell allows me to automate tasks and perform actions quickly and efficiently on the command line. I have used it to manage and manipulate files and directories, run scripts, and execute commands on remote servers.",
+					"I have used SQL to write queries to extract, manipulate, and analyze data, and you have gained a good understanding of its syntax and capabilities. ",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
@@ -280,7 +280,14 @@ export const languagesMetaData: ColumnData[] = [
 					"I find it valuable because it is a utility-first CSS framework that allows me to rapidly build custom user interfaces with ease. Instead of having to write custom CSS for every design element, I can use the pre-defined utility classes provided by Tailwind to style my components quickly and consistently. This saves me a lot of time and effort when building and styling web applications, as I don't have to spend as much time writing custom CSS.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
-			}
+			},
+			{
+				title: "Bootstrap",
+				knowledge:
+					"One of the main reasons I find Bootstrap valuable is because it saves me a lot of time in the development process. With its pre-designed components and grid system, I can easily create a consistent and professional looking layout without having to write a lot of custom CSS.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
 		],
 	},
 ];
@@ -290,6 +297,20 @@ export const toolsMetaData: SkillData[] = [
 		title: "Dev",
 		data: [
 			{
+				title: "Linux Arch & Ubuntu",
+				knowledge:
+					"Daily experience using Linux-based operating systems for both personal use (Editing, gaming, daily productivity) and professional use (Servers, testing pipelines etc).",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "Insomnia & Postman",
+				knowledge:
+					"API platforms are tools that allows developers to test and debug APIs but many have not delved deeper into environment configuration, sharing and packaging like I have.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
 				title: "Github",
 				knowledge:
 					"I have used Github to host my own personal projects as well as contribute to open source projects. It's a core tool all devs need to know these days and im comfortable with it",
@@ -297,16 +318,9 @@ export const toolsMetaData: SkillData[] = [
 				description: Description.HighlyProficient,
 			},
 			{
-				title: "Insomnia",
+				title: "Webflow",
 				knowledge:
-					"Insomnia is a tool that allows developers to test and debug APIs by allowing them to make HTTP requests and view the responses. I prefer it over Postman as it's faster, simpler and more secure.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
-				title: "Postman",
-				knowledge:
-					"Postman is a tool that allows developers to test and debug APIs by making requests, receiving responses, and analyzing the results. I've used it for years on multiple code bases and am comfortable building out useful collections and automatic repetitive calls.",
+					"I have built, launched and handed off half a dozen custom websites using WebFlow. The no code solution allows me to very quickly bootstrap eCommerce and booking sites at rapid speed for demanding clients.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
@@ -318,18 +332,11 @@ export const toolsMetaData: SkillData[] = [
 				description: Description.Proficient,
 			},
 			{
-				title: "Ubuntu",
+				title: "AI Language Models",
 				knowledge:
-					"Ubuntu is a Linux-based operating system that can be used for hosting websites and other web applications. This is a foundational OS used for a huge portion of infrastructure and I've used it to varying levels to run cloud applications.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
-				title: "Debian",
-				knowledge:
-					"Debian is a free and open-source operating system that can be used for hosting websites and other applications. I've used to specifically for testing pipelines and as a remote great OS to work with remotely.",
-				proficiency: Capable,
-				description: Description.Capable,
+					"I'm confident using various tools like Chat-GPT, Bard and my own custom models to achieve greater development speed. I understand advanced prompt engineering including LLM patterns and handling hallucinations.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
 			},
 		],
 	},
@@ -453,52 +460,99 @@ export const cloudMetaData: SkillData[] = [
 		title: "AWS",
 		data: [
 			{
-				title: "EC2 & ELBs",
+				title: "EKS",
 				knowledge:
-					"Spinning up appropriately sized instances in various load balanced scenarios depending on the desired workload. I understand what instance type (On-demand, Spot, reserved etc.) is appropriate for the use case and when to use EBS, Instance store and file storage.",
+					"I'm comfortable setting up and interfacing with AWS Elastic Kubernetes Service including provisioning clusters, deploying containerized applications with Kubernetes manifests, and managing deployments and scaling using kubectl.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
 			{
-				title: "Cloudfront & Route53",
+				title: "EC2",
 				knowledge:
-					"I understand how to setup Cloudfront CDN to serve static files and accelerate delivery globally and act as an entry point to various Lambda functions.",
+					"My experience with EC2 covers all the essentials, from provisioning resources in diverse instance types and regions, to implementing auto-scaling for dynamic workloads, and configuring autoscaling groups for high availability.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
 			{
-				title: "S3 & Glacier",
+				title: "ECR",
 				knowledge:
-					"I have experience using S3 for abroad range of purposes, storing blobs, as a repository for files undergoing processing and also as affordable redundant long term storage of large files.",
+					"From crafting secure repositories to streamlining image management and automating deployments, I'm confident navigating the full spectrum of AWS ECR tasks",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "DynamoDB",
+				knowledge:
+					"I have a solid understanding of and experience with DynoDB for solving complex data storage and retrieval challenges using it's flexible schema and pay-per-use model.",
 				proficiency: Proficient,
 				description: Description.Proficient,
 			},
 			{
-				title: "VPC, IAM, KMS",
+				title: "Route53",
 				knowledge:
-					"Experience with these various tools as a part of a broader skillset used to setup and manage AWS resources. Including an understanding of VPC Peering, Managed VPNs, Cloud HSMs, Shielf, WAF, certificate manager and of course the secrets manager.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
-				title: "Lambdas",
-				knowledge:
-					"I've setup various lambdas for many processes from simple repreatable tasks to larger analysis workloads/filtering/logging.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
-				title: "DynamoDB & RDS",
-				knowledge:
-					"I've used DynoDB extensively as a fantastic noSQL solution for quickly setting up new projects in opposition to traditional RDS tools like Aurora and Postgres where the concerns have mainly been replication for data analysis with other AWS tools.",
+					"I'm confident using Route53 for domain registration, managing hosted zones, configuring record types and implementing health checks for higher availability.",
 				proficiency: Proficient,
 				description: Description.Proficient,
-			}
+			},
+			{
+				title: "S3",
+				knowledge:
+					"I'm confident in setting up and managing AWS S3 buckets, handling secure data upload and retrieval through CLI and various SDKs, and leveraging appropriate storage classes like Standard for frequently accessed data, Glacier for long-term archives, and Intelligent-Tiering for dynamic cost optimization.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "Billing & Cost Management",
+				knowledge:
+					"I can effectively setup price alerts and break down usage costs to determine what services are costing the most and identifying if changes could be implemented",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "Cloud Practitioner",
+				knowledge:
+					"I have acquired the official AWS CLoud practitioner certification: https://drive.google.com/file/d/1XCCeriFjS-4azodacsdhgw0GKV3G1xY9/view?usp=sharing",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "IAM",
+				knowledge:
+					"I have a decent understanding and ability to execute common IAM tasks including user creation, policy attachment, and secure resource access controls abiding by the principle of least privilege.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+		],
+	},
+	{
+		title: "Google",
+		data: [
+			{
+				title: "Firebase",
+				knowledge:
+					"Google Firebase is a platform that provides a variety of tools and services for building mobile and web applications, including a real-time database, user authentication, hosting, and analytics. I've used it to push data to client devices instead of using sockets and intend to keep learning it as it's an awesome solution for backend problems.",
+				proficiency: Learning,
+				description: Description.Learning,
+			},
+			{
+				title: "Android App Distribution",
+				knowledge:
+					"Android App Distribution is a process by which Android apps are made available for users to download and install on their devices via the google play store. I've worked on projects where it was an integral part of the release process and required me to understand how it functioned, how to use the provided indicators and also how to debug.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
 		],
 	},
 	{
 		title: "CI/CD",
 		data: [
+			{
+				title: "ArgoCD",
+				knowledge:
+					"Using ArgoCD to deploy manifests to various types of kubernetes clusters. Includes configuring the platform via HELMs and managing secrets upfront. I can use various debugging tools within ArgoCD to effectively diagnose issues in a cluster.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
 			{
 				title: "CircleCI",
 				knowledge:
