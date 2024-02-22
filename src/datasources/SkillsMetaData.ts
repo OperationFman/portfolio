@@ -16,16 +16,23 @@ const Description = {
 
 export const languagesMetaData: ColumnData[] = [
 	{
-		title: "Javascript",
+		title: "Frontend",
 		knowledge:
-			"I have a thorough understanding of the language and am proficient in using it effectively. My expertise in the syntax, modern concepts, and commonly used tools and frameworks of JavaScript is strong. I keep up-to-date with the latest developments in the language and have a genuine interest in its evolution.",
-		proficiency: HighlyProficient,
-		description: Description.HighlyProficient,
+			"Building user interfaces that sing, seamlessly merging modern design trends with rock-solid accessibility practices and clean, well-tested code in both Web and mobile applications for Android/iOS",
+		proficiency: Proficient,
+		description: Description.Proficient,
 		data: [
 			{
 				title: "Typescript",
 				knowledge:
 					"I have used Typescript in various projects, including web applications and mobile apps, and have found that it helps me catch errors early on in the development process, saving time spent on debugging and testing. Additionally, Typescript's type system allows me to write more modular and reusable code, increasing my efficiency and effectiveness.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "Javascript",
+				knowledge:
+					"I have a thorough understanding of the language and am proficient in using it effectively. My expertise in the syntax, modern concepts, and commonly used tools and frameworks of JavaScript is strong. I keep up-to-date with the latest developments in the language and have a genuine interest in its evolution.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
@@ -57,21 +64,6 @@ export const languagesMetaData: ColumnData[] = [
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
-
-			{
-				title: "Node",
-				knowledge:
-					"I have consistently utilized NodeJS in my professional capacity, and have gained a thorough understanding of its strengths and limitations. NodeJS boasts a high capacity for handling multiple concurrent connections and is known for its efficiency and lightweight design. It is particularly well-suited for developing real-time web applications. However, it should be noted that NodeJS operates on a single thread, which can potentially present certain challenges.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
-				title: "GraphQL",
-				knowledge:
-					"I've worked with GraphQL on various projects and am familiar with its benefits and drawbacks. For example, some benefits include the ability to request specific data from an API, usage of a single endpoint for all data queries, and the ability to easily update and evolve the API. Drawbacks include the need for a GraphQL server, the learning curve for developers who are new to the technology, and the potential for performance issues if not implemented correctly.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
 			{
 				title: "Redux",
 				knowledge:
@@ -94,27 +86,99 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Capable,
 			},
 			{
-				title: "Express",
-				knowledge:
-					"I find it to be a valuable tool in my work. I use it regularly in my projects and have a strong understanding of its features and capabilities. ExpressJS is a lightweight, flexible framework that makes it easy to build web applications and APIs. It provides a wide range of features and middleware that can be easily customized and integrated into any project. I appreciate the simplicity and power of ExpressJS, and find it to be an essential part of my toolkit as a developer.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-		],
-	},
-	{
-		title: "Python",
-		knowledge:
-			"I use Python to write scripts for automation, data processing, web development and other tasks that require quick and efficient execution. My favorite aspect of Python is the integration of hardware and software components that allow for physical inventions, automated tooling and robots.",
-		proficiency: Proficient,
-		description: Description.Proficient,
-		data: [
-			{
 				title: "Flask",
 				knowledge:
 					"I can confidently say that I am very familiar with it and use it regularly in my projects. I have a strong understanding of its features and capabilities, and am able to effectively apply them to build web applications. In my experience, Python Flask has proven to be a valuable tool for building web applications quickly and efficiently. Its simplicity and flexibility make it an excellent choice for a wide range of projects.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
+			},
+			{
+				title: "Django",
+				knowledge:
+					" I have a strong understanding of its capabilities and how it can be used to build powerful web applications. I have found it to be a valuable tool in my work as a developer because it provides a robust and flexible framework that makes it easy to build and maintain complex applications. In addition, the extensive library of tools and modules available for Django makes it possible to add a wide range of functionality to applications, further enhancing its value as a development platform.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "CSS/SASS",
+				knowledge:
+					"I have used CSS in numerous projects in the past and have found it to be an invaluable tool for styling and formatting the front-end of web applications. I appreciate the flexibility and control that CSS gives me as a developer, and I am confident in my ability to use it effectively to create visually appealing and user-friendly interfaces.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "Tailwind",
+				knowledge:
+					"I find it valuable because it is a utility-first CSS framework that allows me to rapidly build custom user interfaces with ease. Instead of having to write custom CSS for every design element, I can use the pre-defined utility classes provided by Tailwind to style my components quickly and consistently. This saves me a lot of time and effort when building and styling web applications, as I don't have to spend as much time writing custom CSS.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "HTML",
+				knowledge:
+					"In my experience, HTML has proven to be a core reliable and essential part of any web developers career. It allows me to create well-structured and visually appealing web pages, and I am comfortable using it to implement a wide range of design elements in various methods.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+
+		],
+	},
+	{
+		title: "Backend",
+		knowledge:
+			"Experienced building robust API's, micro-services and serverless backends that are highly tested and lightweight ensuring modern practices are adhered to. Also experienced working in and refactoring legacy monoliths.",
+		proficiency: Proficient,
+		description: Description.Proficient,
+		data: [
+			{
+				title: "C#",
+				knowledge:
+					"C sharp is a modern and object-oriented language, which means it is well-suited for building robust and scalable backend systems. This can be particularly useful as I am interested in becoming a backend and infrastructure expert.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "ASP .NET Core",
+				knowledge:
+					"I'm excited to be prioritizing dotNET as my next major learning goal.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "XUnit",
+				knowledge:
+					"To compliment my learning of dotNET, I must ensure I'm writing maintainable reliable C# code with XUnit unit tests.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "Python",
+				knowledge:
+					"I use Python to write scripts for automation, data processing, web development and other tasks that require quick and efficient execution. My favorite aspect of Python is the integration of hardware and software components that allow for physical inventions, automated tooling and robots.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Node",
+				knowledge:
+					"I have consistently utilized NodeJS in my professional capacity, and have gained a thorough understanding of its strengths and limitations. NodeJS boasts a high capacity for handling multiple concurrent connections and is known for its efficiency and lightweight design. It is particularly well-suited for developing real-time web applications. However, it should be noted that NodeJS operates on a single thread, which can potentially present certain challenges.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "GraphQL",
+				knowledge:
+					"I've worked with GraphQL on various projects and am familiar with its benefits and drawbacks. For example, some benefits include the ability to request specific data from an API, usage of a single endpoint for all data queries, and the ability to easily update and evolve the API. Drawbacks include the need for a GraphQL server, the learning curve for developers who are new to the technology, and the potential for performance issues if not implemented correctly.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+
+			{
+				title: "ExpressJS",
+				knowledge:
+					"I find it to be a valuable tool in my work. I use it regularly in my projects and have a strong understanding of its features and capabilities. ExpressJS is a lightweight, flexible framework that makes it easy to build web applications and APIs. It provides a wide range of features and middleware that can be easily customized and integrated into any project. I appreciate the simplicity and power of ExpressJS, and find it to be an essential part of my toolkit as a developer.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "PyTest",
@@ -145,13 +209,6 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Proficient,
 			},
 			{
-				title: "Django",
-				knowledge:
-					" I have a strong understanding of its capabilities and how it can be used to build powerful web applications. I have found it to be a valuable tool in my work as a developer because it provides a robust and flexible framework that makes it easy to build and maintain complex applications. In addition, the extensive library of tools and modules available for Django makes it possible to add a wide range of functionality to applications, further enhancing its value as a development platform.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
 				title: "NumPy",
 				knowledge:
 					"I have used NumPy in a variety of projects, including scientific computing and machine learning, and have come to appreciate its efficiency and versatility. Overall, I believe that my experience with NumPy has helped me to become a more effective and efficient developer, and I continue to find it valuable in my work.",
@@ -172,51 +229,14 @@ export const languagesMetaData: ColumnData[] = [
 				proficiency: Capable,
 				description: Description.Capable,
 			},
-			{
-				title: "PyGame",
-				knowledge:
-					"I am familiar with its capabilities and have experience applying it in a university project setting. I find Python PyGame to be a valuable tool for building interactive and visually appealing applications.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
 		],
 	},
 	{
-		title: "C#",
+		title: "Infrastructure",
 		knowledge:
-			"C sharp is a modern and object-oriented language, which means it is well-suited for building robust and scalable backend systems. This can be particularly useful as I am interested in becoming a backend and infrastructure expert.",
+			"Eager to stay ahead of the curve in cloud computing, working on some of the latest design paradigms like dockerization and serverless with a focus on availability and reliability across regions and availability zones.",
 		proficiency: Capable,
 		description: Description.Capable,
-		data: [
-			{
-				title: "ASP .NET Core",
-				knowledge:
-					"I'm excited to be prioritizing dotNET as my next major learning goal.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
-				title: "XUnit",
-				knowledge:
-					"To compliment my learning of dotNET, I must ensure I'm writing maintainable reliable C# code with XUnit unit tests.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
-				title: "Unity",
-				knowledge:
-					"After I feel confident with C# and dotNET I hope to explore game development with Unity.",
-				proficiency: Learning,
-				description: Description.Learning,
-			},
-		],
-	},
-	{
-		title: "Misc.",
-		knowledge:
-			"Various languages that I'm fully capable of working in. I understand them well and have significant real world world experience with each of them.",
-		proficiency: Proficient,
-		description: Description.Proficient,
 		data: [
 			{
 				title: "Kubernetes",
@@ -240,12 +260,20 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Capable,
 			},
 			{
-				title: "CSS",
-				knowledge:
-					"I have used CSS in numerous projects in the past and have found it to be an invaluable tool for styling and formatting the front-end of web applications. I appreciate the flexibility and control that CSS gives me as a developer, and I am confident in my ability to use it effectively to create visually appealing and user-friendly interfaces.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
+				title: "YAML",
+				knowledge: "I've used YAML files across various tools and applications crafting configurations and data structures that bring order and automation to projects with reliability and repeatability.",
+				proficiency: Capable,
+				description: Description.Capable,
+			}
+		],
+	},
+	{
+		title: "Misc.",
+		knowledge:
+			"Various languages that I'm fully capable of working in. I understand them well and have significant real world world experience with each of them.",
+		proficiency: Proficient,
+		description: Description.Proficient,
+		data: [
 			{
 				title: "Git",
 				knowledge:
@@ -261,13 +289,6 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Capable,
 			},
 			{
-				title: "HTML",
-				knowledge:
-					"In my experience, HTML has proven to be a core reliable and essential part of any web developers career. It allows me to create well-structured and visually appealing web pages, and I am comfortable using it to implement a wide range of design elements in various methods.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
 				title: "SQL",
 				knowledge:
 					"I have used SQL to write queries to extract, manipulate, and analyze data, and you have gained a good understanding of its syntax and capabilities. ",
@@ -275,18 +296,11 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Capable,
 			},
 			{
-				title: "Tailwind",
+				title: "Unity",
 				knowledge:
-					"I find it valuable because it is a utility-first CSS framework that allows me to rapidly build custom user interfaces with ease. Instead of having to write custom CSS for every design element, I can use the pre-defined utility classes provided by Tailwind to style my components quickly and consistently. This saves me a lot of time and effort when building and styling web applications, as I don't have to spend as much time writing custom CSS.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
-				title: "Bootstrap",
-				knowledge:
-					"One of the main reasons I find Bootstrap valuable is because it saves me a lot of time in the development process. With its pre-designed components and grid system, I can easily create a consistent and professional looking layout without having to write a lot of custom CSS.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
+					"After I feel confident with C# and dotNET I hope to explore game development with Unity.",
+				proficiency: Learning,
+				description: Description.Learning,
 			},
 		],
 	},
@@ -332,9 +346,9 @@ export const toolsMetaData: SkillData[] = [
 				description: Description.Proficient,
 			},
 			{
-				title: "AI Language Models",
+				title: "Strapi",
 				knowledge:
-					"I'm confident using various tools like Chat-GPT, Bard and my own custom models to achieve greater development speed. I understand advanced prompt engineering including LLM patterns and handling hallucinations.",
+					"Strapi is an open-source headless CMS built with JavaScript/TypeScript. It lets developers build custom frontends while editors manage content through a user-friendly interface. I've used it for various platforms deployed on multiple forms of infrastructure.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
