@@ -356,4 +356,16 @@ export const tutorialMetaData: TutorialMetaData[] = [
 		languages: [],
 		tags: [Tags.Essay],
 	},
+	{
+		title: "Generative AI with AWS",
+		link: "generative-ai-with-aws",
+		notionPage: "344cc552c784487a8ee7fa07426b6335",
+		created: 1711608576,
+		thumbnail: "/tutorials/generative-ai.jpeg",
+		subTitle:
+			"Understand generative AI tiers and learn how to build and deploy your own with AWS Bedrock",
+		topic: Topic.Infrastructure,
+		languages: [],
+		tags: [Tags.StepByStep, Tags.Essay],
+	}
 ];
