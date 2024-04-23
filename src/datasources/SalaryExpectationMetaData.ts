@@ -12,7 +12,7 @@ export const salaryExpectations = {
 	flatHierarchy: 500,
 	layoffFree: 2000,
 	ethical: 2000,
-	workLifeBalance: 2900,
+	workLifeBalance: 3100,
 	internationalTravel: 1000,
 	stock: 0,
 	trainingAllowances: 2000,
