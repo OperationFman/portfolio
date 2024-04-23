@@ -44,7 +44,7 @@ export const SalaryExpectationsSection = () => {
 	const [workLifeBalance, setWorkLifeBalance] = useState(true);
 	const [internationalTravel, setInternationalTravel] = useState(false);
 	const [fourDays, setFourDays] = useState(false);
-	const [internationalRelocation, setInternationalRelocation] = useState(true);
+	const [internationalRelocation, setInternationalRelocation] = useState(false);
 
 	const STOCK_OPTIONS = "stock";
 	const TRAINING_ALLOWANCES = "trainingAllowances";
