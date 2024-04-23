@@ -39,11 +39,11 @@ export const SalaryExpectationsSection = () => {
 	}, [hybridRemote]);
 
 	const [flatHierarchy, setFlatHierarchy] = useState(true);
-	const [teamBonding, setTeamBonding] = useState(true);
+	const [layoffFree, setLayoffFree] = useState(true);
 	const [ethical, setEthical] = useState(true);
 	const [workLifeBalance, setWorkLifeBalance] = useState(true);
-	const [internationalTravel, setInternationalTravel] = useState(true);
-	const [fourDays, setFourDays] = useState(true);
+	const [internationalTravel, setInternationalTravel] = useState(false);
+	const [fourDays, setFourDays] = useState(false);
 	const [internationalRelocation, setInternationalRelocation] = useState(true);
 
 	const STOCK_OPTIONS = "stock";
@@ -72,7 +72,7 @@ export const SalaryExpectationsSection = () => {
 		setFullyRemote(false);
 		setHybridRemote(false);
 		setFlatHierarchy(false);
-		setTeamBonding(false);
+		setLayoffFree(false);
 		setEthical(false);
 		setWorkLifeBalance(false);
 		setInternationalTravel(false);
@@ -109,8 +109,8 @@ export const SalaryExpectationsSection = () => {
 				baseSalary = baseSalary - values.flatHierarchy;
 			}
 
-			if (teamBonding) {
-				baseSalary = baseSalary - values.teamBonding;
+			if (layoffFree) {
+				baseSalary = baseSalary - values.layoffFree;
 			}
 
 			if (ethical) {
@@ -151,7 +151,7 @@ export const SalaryExpectationsSection = () => {
 		fullyRemote,
 		hybridRemote,
 		flatHierarchy,
-		teamBonding,
+		layoffFree,
 		ethical,
 		workLifeBalance,
 		internationalTravel,
@@ -211,11 +211,11 @@ export const SalaryExpectationsSection = () => {
 								}
 							/>
 							<SalarySwitch
-								text={"Reoccurring Team Bonding"}
-								checked={teamBonding}
-								onChange={() => setTeamBonding(!teamBonding)}
+								text={"No Recent Layoffs"}
+								checked={layoffFree}
+								onChange={() => setLayoffFree(!layoffFree)}
 								description={
-									"Team dinners, meetup activities, game sessions, company retreats, conferences, fun days etc"
+									"Has not laid off a large number of employees (>5% of the company) within the past 5 years"
 								}
 							/>
 							<SalarySwitch
