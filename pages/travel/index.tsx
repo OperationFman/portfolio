@@ -3,9 +3,16 @@ import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
 import { Footer } from "../../utils/footer/Footer";
 
+import styles from "../../src/travel/index.module.scss";
+import { Grid } from "@mui/material";
+import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
+import ScrollAnimation from "react-animate-on-scroll";
+
 const Travel: NextPage = () => {
 	const description =
 		"Travel related content including completion map and travel videos, some public and some private of my experiences.";
+
+	const metaData = travelVideoMetaData;
 
 	return (
 		<div>
@@ -28,7 +35,21 @@ const Travel: NextPage = () => {
 			</Head>
 
 			<PageContainer>
-				<h1>Hello traveller</h1>
+				<Grid container className={styles.gridContainer}>
+					{metaData.map((dataItem, index) => {
+						return (
+							<ScrollAnimation
+								animateIn='fadeIn'
+								animateOnce
+								key={index}
+								delay={index * 50}>
+								<Grid item>
+									<h1>{dataItem.title}</h1>
+								</Grid>
+							</ScrollAnimation>
+						);
+					})}
+				</Grid>
 			</PageContainer>
 			<Footer />
 		</div>
