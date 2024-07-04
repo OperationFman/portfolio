@@ -5,6 +5,7 @@ $defaultDarkBlue: #1565c0;
 $defaultGreen: #66bb6a;
 $defaultPurple: #ce93d8;
 $defaultRed: #f44336;
+$defaultYellow: #ffeb3b;
 
 $darkGrey: #212121;
 $mediumGrey: #2e2e2e;
@@ -48,11 +49,17 @@ $defaultShadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 .defaultGreen {
 	color: $defaultGreen;
 }
+
 .defaultPurple {
 	color: $defaultPurple;
 }
+
 .defaultRed {
 	color: $defaultRed;
+}
+
+.defaultYellow {
+	color: $defaultYellow;
 }
 
 .brightGrey {

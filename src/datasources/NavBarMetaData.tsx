@@ -2,6 +2,7 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
+import HikingOutlinedIcon from "@mui/icons-material/HikingOutlined";
 import colors from "../../themes/_colors.module.scss";
 
 const setColor = (tab: number, id: number, color: string) => {
@@ -56,5 +57,14 @@ export const tabsData: {
 			/>
 		),
 		order: 5,
+	},
+	{
+		label: "TRAVEL",
+		color: "#ffeb3b",
+		route: "/travel",
+		icon: (tab: number) => (
+			<HikingOutlinedIcon className={setColor(tab, 4, colors.defaultYellow)} />
+		),
+		order: 6,
 	},
 ];
