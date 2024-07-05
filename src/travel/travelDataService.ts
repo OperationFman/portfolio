@@ -1,11 +1,9 @@
 import { travelVideoMetaData } from "../datasources/TravelMetaData";
 import { TravelVideoMetaData } from "./types";
 
-export const getTravelMetaDatByLink = (
+export const getTravelMetaDataIndex = (
 	link: string,
 	metaData: TravelVideoMetaData[] = travelVideoMetaData,
-): TravelVideoMetaData | undefined => {
-	return metaData.find((item) => {
-		return item.link === link;
-	});
+): number => {
+	return metaData.findIndex((item) => item.link === link);
 };

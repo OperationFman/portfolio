@@ -1,9 +1,16 @@
+import Image from "next/future/image";
 import { InferGetServerSidePropsType } from "next";
 import { ErrorContent } from "../../utils/error/ErrorContent";
-import { Head } from "next/document";
 import { Footer } from "../../utils/footer/Footer";
 import { TravelVideoMetaData } from "../../src/travel/types";
-import { getTravelMetaDatByLink } from "../../src/travel/travelDataService";
+import { getTravelMetaDataIndex } from "../../src/travel/travelDataService";
+import styles from "../../src/travel/index.module.scss";
+import ReactPlayer from "react-player";
+import {
+	publicCDNVideoUrl,
+	travelVideoMetaData,
+} from "../../src/datasources/TravelMetaData";
+import { PageContainer } from "../../src/global/PageContainer";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -11,9 +18,11 @@ type ServerSideContext = {
 
 const VideoContent = ({
 	metaData,
+	upNext,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-	const { title, year, link, created, restricted } =
-		metaData as TravelVideoMetaData;
+	const { title, year, slug, restricted } = metaData as TravelVideoMetaData;
+
+	const upNextMetaData = upNext as TravelVideoMetaData[];
 
 	if (!metaData) {
 		return <ErrorContent />;
@@ -21,8 +30,26 @@ const VideoContent = ({
 
 	return (
 		<>
-            <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player"></script>
-			<h1>{title}</h1>
+			<PageContainer>
+				<ReactPlayer
+					url={`${publicCDNVideoUrl}${slug}.mp4`}
+					controls
+					pip
+					height='100%'
+					width='100%'
+				/>
+
+				<h1 className={styles.title}>{title}</h1>
+				<h2 className={styles.year}>{year}</h2>
+
+				{upNextMetaData ? (
+					upNextMetaData.map((dataItem) => {
+						return <h1>{dataItem.title}</h1>;
+					})
+				) : (
+					<h1>Thats it!</h1>
+				)}
+			</PageContainer>
 			<Footer />
 		</>
 	);
@@ -35,13 +62,12 @@ export const getServerSideProps = async (context: ServerSideContext) => {
 		throw new Error("Link param is invalid");
 	}
 
-	// Split the link and fid in the metaData
-
-	const metaData = getTravelMetaDatByLink(link) ?? false;
+	const metaDataIndex = getTravelMetaDataIndex(link);
 
 	return {
 		props: {
-			metaData,
+			metaData: travelVideoMetaData[metaDataIndex],
+			upNext: travelVideoMetaData.slice(metaDataIndex + 1),
 		},
 	};
 };

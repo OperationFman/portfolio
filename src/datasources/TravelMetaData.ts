@@ -1,6 +1,6 @@
 import { TravelVideoMetaData } from "../travel/types";
 
-export const publicUrl = "d3atatnx15erez.cloudfront.net/";
+export const publicCDNVideoUrl = "https://d3atatnx15erez.cloudfront.net/";
 
 export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
@@ -30,7 +30,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Cambodia, Laos and Vietnam",
 		year: 2023,
-		slug: "uae",
+		slug: "cambodialaosvietnam",
 		link: `cambodia-laos-vietnam`,
 		created: 4,
 		restricted: true,

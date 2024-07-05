@@ -1,3 +1,25 @@
+@import "../../themes/colors.module";
+@import "../../themes/breakpoints";
+
 .gridContainer {
 	justify-content: center;
+}
+
+.title {
+	margin-bottom: 0;
+}
+
+.year {
+	margin-top: 0;
+	color: $defaultYellow;
+}
+
+.upNext {
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+
+	@include breakpoint(medium) {
+		align-items: flex-start;
+	}
 }
