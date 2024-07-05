@@ -1,9 +1,8 @@
 export type TravelVideoMetaData = {
 	title: string;
 	year: number;
+	slug: string;
 	link: string;
-	subtitles?: string;
-	thumbnail: string;
 	created: number;
 	restricted: boolean;
 };
