@@ -80,7 +80,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		title: "Sri Lanka",
 		year: 2022,
 		slug: "srilanka",
-		link: `sri-lanka`,
+		link: "sri-lanka",
 		backupLink:
 			"https://drive.google.com/file/d/13gOi8XTHFCI-cInwD4hBGF1kblg0MJDa/view?usp=sharing",
 		restricted: true,
@@ -107,7 +107,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		title: "Cambodia, Laos and Vietnam",
 		year: 2023,
 		slug: "cambodialaosvietnam",
-		link: `cambodia-laos-vietnam`,
+		link: "cambodia-laos-vietnam",
 		backupLink:
 			"https://drive.google.com/file/d/1aurSN-frLRNGPnGkr7GXN3yz87dMCvh6/view?usp=sharing",
 		restricted: true,
