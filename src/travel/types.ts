@@ -3,6 +3,6 @@ export type TravelVideoMetaData = {
 	year: number;
 	slug: string;
 	link: string;
-	created: number;
+	backupLink: string;
 	restricted: boolean;
 };

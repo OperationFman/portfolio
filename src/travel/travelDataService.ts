@@ -1,9 +1,10 @@
 import router from "next/router";
 import { isClientSide } from "../../utils/isClientSide";
-import { travelVideoMetaData } from "../datasources/TravelMetaData";
+import {
+	insecureRestrictionKey,
+	travelVideoMetaData,
+} from "../datasources/TravelMetaData";
 import { TravelVideoMetaData } from "./types";
-
-const insecureRestrictionKey = "adventuretime";
 
 export const getTravelMetaDataIndex = (
 	link: string,
