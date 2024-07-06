@@ -24,7 +24,7 @@ export const VideoLibrary = ({
 								opacity: 1,
 							}}
 							key={`Video card of ${dataItem.title}`}>
-							<Grid item>
+							<Grid item className={styles.gridItem}>
 								<CardActionArea
 									className={styles.videoCardContainer}
 									onClick={() => {

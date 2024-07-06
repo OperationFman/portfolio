@@ -26,9 +26,12 @@
 	width: 60px;
 }
 
+.gridItem {
+	margin: 10px;
+}
+
 .videoCardContainer {
 	position: relative;
-	padding: 10px;
 	transition: linear 200ms;
 	cursor: pointer;
 	border-radius: 10px;
