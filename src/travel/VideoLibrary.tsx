@@ -17,11 +17,11 @@ export const VideoLibrary = ({
 		<Grid container className={styles.gridContainer}>
 			{videoMetaData.map((dataItem, videoIndex) => {
 				return (
-					<ScrollAnimation
-						animateIn='fadeIn'
-						animateOnce
-						key={videoIndex}
-						delay={videoIndex * 50}>
+					<div
+						style={{
+							animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
+							opacity: 1,
+						}}>
 						<Grid item>
 							<div
 								className={styles.videoCardContainer}
@@ -45,7 +45,7 @@ export const VideoLibrary = ({
 								/>
 							</div>
 						</Grid>
-					</ScrollAnimation>
+					</div>
 				);
 			})}
 		</Grid>
