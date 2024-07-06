@@ -3,7 +3,7 @@ import Image from "next/future/image";
 import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { TravelVideoMetaData } from "./types";
-import { Grid } from "@mui/material";
+import { CardActionArea, Grid } from "@mui/material";
 import styles from "./videolibrary.module.scss";
 import { hasRestrictionBypass, videoEnabled } from "./travelDataService";
 import router, { useRouter } from "next/router";
@@ -25,7 +25,7 @@ export const VideoLibrary = ({
 							}}
 							key={`Video card of ${dataItem.title}`}>
 							<Grid item>
-								<div
+								<CardActionArea
 									className={styles.videoCardContainer}
 									onClick={() => {
 										if (videoEnabled(dataItem)) {
@@ -50,7 +50,7 @@ export const VideoLibrary = ({
 										width='200'
 										className={styles.videoCardImage}
 									/>
-								</div>
+								</CardActionArea>
 							</Grid>
 						</div>
 					);
