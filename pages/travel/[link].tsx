@@ -35,6 +35,8 @@ const VideoContent = ({
 					url={`${publicCDNVideoUrl}${slug}.mp4`}
 					controls
 					pip
+					playing={true}
+					volume={0.3}
 					height='100%'
 					width='100%'
 				/>
