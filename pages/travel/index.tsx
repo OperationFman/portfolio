@@ -9,7 +9,11 @@ import styles from "../../src/travel/index.module.scss";
 import { Grid } from "@mui/material";
 import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
 import ScrollAnimation from "react-animate-on-scroll";
-import { groupVideosByYear } from "../../src/travel/travelDataService";
+import {
+	groupVideosByYear,
+	hasRestrictionBypass,
+	videoEnabled,
+} from "../../src/travel/travelDataService";
 import router from "next/router";
 
 const Travel: NextPage = () => {
@@ -56,11 +60,10 @@ const Travel: NextPage = () => {
 													<div
 														className={styles.videoCardContainer}
 														onClick={() => {
-															if (!dataItem.restricted) {
+															if (videoEnabled(dataItem))
 																router.push(`travel/${dataItem.link}`);
-															}
 														}}>
-														{dataItem.restricted ? (
+														{dataItem.restricted && !hasRestrictionBypass() ? (
 															<LockOutlinedIcon
 																className={styles.videoButton}
 															/>

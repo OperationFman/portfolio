@@ -1,5 +1,9 @@
+import router from "next/router";
+import { isClientSide } from "../../utils/isClientSide";
 import { travelVideoMetaData } from "../datasources/TravelMetaData";
 import { TravelVideoMetaData } from "./types";
+
+const insecureRestrictionKey = "adventuretime";
 
 export const getTravelMetaDataIndex = (
 	link: string,
@@ -23,4 +27,28 @@ export const groupVideosByYear = (
 	}
 
 	return Object.values(groupedVideos);
+};
+
+export const hasRestrictionBypass = () => {
+	if (isClientSide()) {
+		return localStorage.getItem("restriction-bypass") === "true";
+	}
+	return false;
+};
+
+export const videoEnabled = (videoMetaData: TravelVideoMetaData) => {
+	if (hasRestrictionBypass() || !videoMetaData.restricted) {
+		return true;
+	} else {
+		const prompt = window.prompt("Enter password", "");
+
+		if (prompt === insecureRestrictionKey) {
+			localStorage.setItem("restriction-bypass", "true");
+
+			return true;
+		} else {
+			window.alert("Password Incorrect");
+			return false;
+		}
+	}
 };
