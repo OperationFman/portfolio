@@ -3,12 +3,14 @@ import Head from "next/head";
 import Image from "next/future/image";
 import { PageContainer } from "../../src/global/PageContainer";
 import { Footer } from "../../utils/footer/Footer";
-
+import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import styles from "../../src/travel/index.module.scss";
 import { Grid } from "@mui/material";
 import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
 import ScrollAnimation from "react-animate-on-scroll";
 import { groupVideosByYear } from "../../src/travel/travelDataService";
+import router from "next/router";
 
 const Travel: NextPage = () => {
 	const description =
@@ -51,7 +53,22 @@ const Travel: NextPage = () => {
 												key={videoIndex}
 												delay={(groupIndex + videoIndex) * 50}>
 												<Grid item>
-													<div className={styles.videoCardContainer}>
+													<div
+														className={styles.videoCardContainer}
+														onClick={() => {
+															if (!dataItem.restricted) {
+																router.push(`travel/${dataItem.link}`);
+															}
+														}}>
+														{dataItem.restricted ? (
+															<LockOutlinedIcon
+																className={styles.videoButton}
+															/>
+														) : (
+															<PlayArrowTwoToneIcon
+																className={`${styles.videoButton} ${styles.videoButtonBigger}`}
+															/>
+														)}
 														<Image
 															src={`/travel/posters/${dataItem.slug}.png`}
 															alt={`${dataItem.title} poster`}
