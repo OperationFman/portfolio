@@ -15,39 +15,41 @@ export const VideoLibrary = ({
 }): JSX.Element => {
 	return (
 		<Grid container className={styles.gridContainer}>
-			{videoMetaData.map((dataItem, videoIndex) => {
-				return (
-					<div
-						style={{
-							animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
-							opacity: 1,
-						}}>
-						<Grid item>
-							<div
-								className={styles.videoCardContainer}
-								onClick={() => {
-									if (videoEnabled(dataItem))
-										router.push(`travel/${dataItem.link}`);
-								}}>
-								{dataItem.restricted && !hasRestrictionBypass() ? (
-									<LockOutlinedIcon className={styles.videoButton} />
-								) : (
-									<PlayArrowTwoToneIcon
-										className={`${styles.videoButton} ${styles.videoButtonBigger}`}
+			{videoMetaData
+				.map((dataItem, videoIndex) => {
+					return (
+						<div
+							style={{
+								animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
+								opacity: 1,
+							}}>
+							<Grid item>
+								<div
+									className={styles.videoCardContainer}
+									onClick={() => {
+										if (videoEnabled(dataItem))
+											router.push(`travel/${dataItem.link}`);
+									}}>
+									{dataItem.restricted && !hasRestrictionBypass() ? (
+										<LockOutlinedIcon className={styles.videoButton} />
+									) : (
+										<PlayArrowTwoToneIcon
+											className={`${styles.videoButton} ${styles.videoButtonBigger}`}
+										/>
+									)}
+									<Image
+										src={`/travel/posters/${dataItem.slug}.png`}
+										alt={`${dataItem.title} poster`}
+										height='300'
+										width='200'
+										className={styles.videoCardImage}
 									/>
-								)}
-								<Image
-									src={`/travel/posters/${dataItem.slug}.png`}
-									alt={`${dataItem.title} poster`}
-									height='300'
-									width='200'
-									className={styles.videoCardImage}
-								/>
-							</div>
-						</Grid>
-					</div>
-				);
-			})}
+								</div>
+							</Grid>
+						</div>
+					);
+				})
+				.reverse()}
 		</Grid>
 	);
 };
