@@ -27,6 +27,7 @@
 }
 
 .videoCardContainer {
+	position: relative;
 	margin: 10px;
 	transition: linear 200ms;
 	cursor: pointer;
@@ -36,6 +37,16 @@
 		.videoButton {
 			opacity: 0.7;
 		}
+	}
+}
+
+.lockButton {
+	top: 75%;
+	opacity: 1;
+
+	@include breakpoint(medium) {
+		top: 50%;
+		opacity: 0;
 	}
 }
 

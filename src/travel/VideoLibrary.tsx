@@ -35,7 +35,7 @@ export const VideoLibrary = ({
 									{dataItem.restricted && !hasRestrictionBypass() ? (
 										<LockOutlinedIcon
 											style={{ height: "50px", width: "50px" }}
-											className={styles.videoButton}
+											className={`${styles.videoButton} ${styles.lockButton}`}
 										/>
 									) : (
 										<PlayArrowTwoToneIcon

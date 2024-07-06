@@ -56,7 +56,7 @@ export const videoEnabled = (videoMetaData: TravelVideoMetaData) => {
 		return true;
 	} else {
 		const prompt = window.prompt(
-			"Sorry, This video is restricted \nEnter the password to unlock all content:",
+			"This video is restricted \nEnter the password to unlock all content:",
 			"",
 		);
 
