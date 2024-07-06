@@ -36,7 +36,9 @@
 }
 
 .embeddedPost {
-	margin-bottom: 30px;
+	margin: 0 0 30px 12px;
+	display: flex;
+	justify-content: center;
 }
 
 .reelWrapper {
