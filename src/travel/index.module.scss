@@ -29,6 +29,8 @@
 
 .socialContainer {
 	margin-top: 100px;
+	max-width: 100vw;
+	overflow: hidden;
 }
 
 .gridContainer {
@@ -36,30 +38,28 @@
 }
 
 .embeddedPost {
-	margin: 0 0 30px 12px;
+	margin-bottom: 30px;
 	display: flex;
 	justify-content: center;
+	max-width: 420px;
 }
 
 .reelWrapper {
-	width: 450px;
+	width: 420px;
 	display: flex;
 	justify-content: center;
-}
-
-.videoError {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	height: 480px;
-	width: 100%;
-	border: 3px solid $mediumGrey;
-	border-radius: 5px;
 }
 
 .backupLink {
-	margin-top: -15px;
+	margin-left: 10px;
 	color: $defaultBlue;
 	cursor: pointer;
+}
+
+.errorContainer {
+	margin: 5px 0 0 2px;
+}
+
+.hideElement {
+	border: 10px solid green;
 }

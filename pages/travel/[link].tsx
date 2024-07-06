@@ -14,7 +14,6 @@ import {
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Grid } from "@mui/material";
-import { setDark } from "../../utils/configureCss/configureCss";
 import { useState } from "react";
 
 type ServerSideContext = {
@@ -30,6 +29,7 @@ const VideoContent = ({
 
 	const upNextMetaData = upNext as TravelVideoMetaData[];
 
+	const [loading, setLoading] = useState(true);
 	const [videoError, setVideoError] = useState(false);
 
 	if (!metaData) {
@@ -42,28 +42,27 @@ const VideoContent = ({
 				<h1 className={styles.title}>{title}</h1>
 				<h2 className={styles.year}>{year}</h2>
 
-				{videoError ? (
-					<div className={styles.videoError}>
-						<h2>Direct stream is temporarily unavailable</h2>
+				<ReactPlayer
+					url={`${publicCDNVideoUrl}${slug}.mp4`}
+					controls
+					pip
+					playing={true}
+					volume={0.3}
+					height='100%'
+					width='100%'
+					onError={() => !loading && setVideoError(true)}
+					className={videoError && styles.hideVideo}
+				/>
 
-						<h3>You can still enjoy the video via Google Drive:</h3>
-						<h3
+				{videoError && (
+					<div className={styles.errorContainer}>
+						<span>Not working?</span>
+						<span
 							onClick={() => window.open(backupLink, "_blank")}
 							className={styles.backupLink}>
 							Click Here
-						</h3>
+						</span>
 					</div>
-				) : (
-					<ReactPlayer
-						url={`${publicCDNVideoUrl}${slug}.mp4`}
-						controls
-						pip
-						playing={true}
-						volume={0.3}
-						height='100%'
-						width='100%'
-						onError={() => setVideoError(true)}
-					/>
 				)}
 
 				{(instagramLinks || reelLinks) && (
@@ -75,7 +74,11 @@ const VideoContent = ({
 									return (
 										<Grid item key={reel} className={styles.embeddedPost}>
 											<div className={styles.reelWrapper}>
-												<InstagramEmbed url={reel} width={380} />
+												<InstagramEmbed
+													url={reel}
+													width={420}
+													onLoad={() => setLoading(false)}
+												/>
 											</div>
 										</Grid>
 									);
@@ -85,7 +88,11 @@ const VideoContent = ({
 								instagramLinks.map((link) => {
 									return (
 										<Grid item key={link} className={styles.embeddedPost}>
-											<InstagramEmbed url={link} width={450} />
+											<InstagramEmbed
+												url={link}
+												width={420}
+												onLoad={() => setLoading(false)}
+											/>
 										</Grid>
 									);
 								})}
