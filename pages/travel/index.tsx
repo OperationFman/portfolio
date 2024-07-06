@@ -12,15 +12,28 @@ import ScrollAnimation from "react-animate-on-scroll";
 import {
 	groupVideosByYear,
 	hasRestrictionBypass,
+	sortYears,
 	videoEnabled,
 } from "../../src/travel/travelDataService";
 import router from "next/router";
+import { useEffect, useState } from "react";
+import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
+import { SortOptions } from "../../src/tutorials/types";
 
 const Travel: NextPage = () => {
+	const metaDataGroupedByYear = groupVideosByYear(travelVideoMetaData);
+
+	const [sortBy, setSortBy] = useState<SortOptions>(SortOptions.Newest);
+	const [sortedMetaData, setSortedMetaData] = useState(
+		sortYears(sortBy, metaDataGroupedByYear),
+	);
+
 	const description =
 		"Travel related content including completion map and travel videos, some public and some private of my experiences.";
 
-	const metaDataGroupedByYear = groupVideosByYear(travelVideoMetaData);
+	useEffect(() => {
+		setSortedMetaData(sortYears(sortBy, metaDataGroupedByYear));
+	}, [sortBy]);
 
 	return (
 		<div>
@@ -43,7 +56,10 @@ const Travel: NextPage = () => {
 			</Head>
 
 			<PageContainer>
-				{metaDataGroupedByYear.map((metaData, groupIndex) => {
+				<div className={styles.sortContainer}>
+					<SortButton setSortMetaDataBy={setSortBy} alphabetical={false} />
+				</div>
+				{sortedMetaData.map((metaData, groupIndex) => {
 					{
 						return (
 							<>

@@ -1,6 +1,12 @@
 @import "../../themes/colors.module";
 @import "../../themes/breakpoints";
 
+.sortContainer {
+	display: flex;
+	justify-content: right;
+	padding: 10px 10px 0 0;
+}
+
 .gridContainer {
 	justify-content: left;
 }

@@ -5,6 +5,7 @@ import {
 	travelVideoMetaData,
 } from "../datasources/TravelMetaData";
 import { TravelVideoMetaData } from "./types";
+import { SortOptions } from "../tutorials/types";
 
 export const getTravelMetaDataIndex = (
 	link: string,
@@ -29,6 +30,19 @@ export const groupVideosByYear = (
 
 	return Object.values(groupedVideos);
 };
+
+export function sortYears(
+	sortBy: SortOptions,
+	metaData: TravelVideoMetaData[][],
+): TravelVideoMetaData[][] {
+	return [...metaData].sort((a, b) => {
+		if (sortBy === SortOptions.Newest) {
+			return b[0].year - a[0].year;
+		} else {
+			return a[0].year - b[0].year;
+		}
+	});
+}
 
 export const hasRestrictionBypass = () => {
 	if (isClientSide()) {

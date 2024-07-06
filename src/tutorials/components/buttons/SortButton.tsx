@@ -18,10 +18,11 @@ import { SortOptions } from "../../types";
 
 type SortButtonProps = {
 	setSortMetaDataBy: Dispatch<SetStateAction<SortOptions>>;
+	alphabetical?: boolean;
 };
 
 export const SortButton = (props: SortButtonProps) => {
-	const { setSortMetaDataBy: setSortOption } = props;
+	const { setSortMetaDataBy: setSortOption, alphabetical = true } = props;
 
 	const [open, setOpen] = React.useState(false);
 	const anchorRef = React.useRef<HTMLButtonElement>(null);
@@ -90,13 +91,15 @@ export const SortButton = (props: SortButtonProps) => {
 											<ArrowDownwardIcon />
 											ㅤOldest
 										</MenuItem>
-										<MenuItem
-											onClick={() => {
-												setSortOption(SortOptions.Alphabetical);
-											}}>
-											<SortByAlphaIcon />
-											ㅤAlphabetical
-										</MenuItem>
+										{alphabetical && (
+											<MenuItem
+												onClick={() => {
+													setSortOption(SortOptions.Alphabetical);
+												}}>
+												<SortByAlphaIcon />
+												ㅤAlphabetical
+											</MenuItem>
+										)}
 									</MenuList>
 								</ClickAwayListener>
 							</Paper>
