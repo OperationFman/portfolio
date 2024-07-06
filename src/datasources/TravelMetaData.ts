@@ -8,7 +8,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		title: "China",
 		year: 2017,
 		slug: "china",
-		link: "china",
+	link: "china",
 		backupLink:
 			"https://drive.google.com/file/d/1__yqFNE4pn1qb4HQaL8gVa0NptzwEXYm/view?usp=sharing",
 		restricted: false,

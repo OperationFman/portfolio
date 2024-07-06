@@ -11,6 +11,7 @@ import {
 	travelVideoMetaData,
 } from "../../src/datasources/TravelMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
+import { VideoLibrary } from "../../src/travel/VideoLibrary";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -20,7 +21,7 @@ const VideoContent = ({
 	metaData,
 	upNext,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-	const { title, year, slug, restricted } = metaData as TravelVideoMetaData;
+	const { title, year, slug } = metaData as TravelVideoMetaData;
 
 	const upNextMetaData = upNext as TravelVideoMetaData[];
 
@@ -44,13 +45,21 @@ const VideoContent = ({
 				<h1 className={styles.title}>{title}</h1>
 				<h2 className={styles.year}>{year}</h2>
 
-				{upNextMetaData ? (
-					upNextMetaData.map((dataItem) => {
-						return <h1 key={dataItem.title}>{dataItem.title}</h1>;
-					})
-				) : (
-					<h1>Thats it!</h1>
-				)}
+				<div className={styles.upNextContainer}>
+					{upNextMetaData.length >= 1 ? (
+						<>
+							<h2>Up Next:</h2>
+							<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
+						</>
+					) : (
+						<>
+							<h2>From The Start:</h2>
+							<VideoLibrary
+								videoMetaData={[...travelVideoMetaData].reverse()}
+							/>
+						</>
+					)}
+				</div>
 			</PageContainer>
 			<Footer />
 		</>

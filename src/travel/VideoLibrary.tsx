@@ -22,13 +22,14 @@ export const VideoLibrary = ({
 							style={{
 								animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
 								opacity: 1,
-							}}>
+							}}
+							key={`Video card of ${dataItem.title}`}>
 							<Grid item>
 								<div
 									className={styles.videoCardContainer}
 									onClick={() => {
 										if (videoEnabled(dataItem))
-											router.push(`travel/${dataItem.link}`);
+											router.replace(`/travel/${dataItem.link}`);
 									}}>
 									{dataItem.restricted && !hasRestrictionBypass() ? (
 										<LockOutlinedIcon className={styles.videoButton} />
