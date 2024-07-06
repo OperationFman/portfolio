@@ -44,7 +44,7 @@ const VideoContent = ({
 
 				{upNextMetaData ? (
 					upNextMetaData.map((dataItem) => {
-						return <h1>{dataItem.title}</h1>;
+						return <h1 key={dataItem.title}>{dataItem.title}</h1>;
 					})
 				) : (
 					<h1>Thats it!</h1>
