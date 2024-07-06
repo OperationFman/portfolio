@@ -8,7 +8,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		title: "China",
 		year: 2017,
 		slug: "china",
-	link: "china",
+		link: "china",
 		backupLink:
 			"https://drive.google.com/file/d/1__yqFNE4pn1qb4HQaL8gVa0NptzwEXYm/view?usp=sharing",
 		restricted: false,
@@ -111,6 +111,15 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1aurSN-frLRNGPnGkr7GXN3yz87dMCvh6/view?usp=sharing",
 		restricted: true,
+		instagramLinks: [
+			"https://www.instagram.com/p/Cph3kEdLXFh/?img_index=1",
+			"https://www.instagram.com/p/CpolhlDLS87/?img_index=1",
+			"https://www.instagram.com/p/CpvKryKr-qx/?img_index=1",
+			"https://www.instagram.com/p/Cpxt4mHJiwQ/?img_index=1",
+			"https://www.instagram.com/p/Cp23tBbPq61/?img_index=1",
+			"https://www.instagram.com/p/CqD9tCMBNH4/?img_index=1",
+			"https://www.instagram.com/p/CqJB8WLhyXZ/?img_index=1",
+		],
 	},
 	{
 		title: "Taiwan, Hong Kong and Macau",

@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import { InstagramEmbed } from "react-social-media-embed";
 import { InferGetServerSidePropsType } from "next";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 import { Footer } from "../../utils/footer/Footer";
@@ -12,6 +12,8 @@ import {
 } from "../../src/datasources/TravelMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
+import { Grid } from "@mui/material";
+import { setDark } from "../../utils/configureCss/configureCss";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -21,7 +23,7 @@ const VideoContent = ({
 	metaData,
 	upNext,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-	const { title, year, slug } = metaData as TravelVideoMetaData;
+	const { title, year, slug, instagramLinks } = metaData as TravelVideoMetaData;
 
 	const upNextMetaData = upNext as TravelVideoMetaData[];
 
@@ -45,15 +47,30 @@ const VideoContent = ({
 					width='100%'
 				/>
 
+				{instagramLinks && (
+					<div className={styles.socialContainer}>
+						<h2>Instagram</h2>
+						<Grid container className={setDark(styles, "gridContainer")}>
+							{instagramLinks.map((link) => {
+								return (
+									<Grid item key={link}>
+										<InstagramEmbed url={link} width={328} />
+									</Grid>
+								);
+							})}
+						</Grid>
+					</div>
+				)}
+
 				<div className={styles.upNextContainer}>
 					{upNextMetaData.length >= 1 ? (
 						<>
-							<h2>Up Next:</h2>
+							<h2>Up Next</h2>
 							<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
 						</>
 					) : (
 						<>
-							<h2>From The Start:</h2>
+							<h2>From The Start</h2>
 							<VideoLibrary
 								videoMetaData={[...travelVideoMetaData].reverse()}
 							/>

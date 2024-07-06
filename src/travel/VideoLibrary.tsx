@@ -14,7 +14,7 @@ export const VideoLibrary = ({
 	videoMetaData: TravelVideoMetaData[];
 }): JSX.Element => {
 	return (
-		<Grid container className={styles.gridContainer}>
+		<Grid container>
 			{videoMetaData
 				.map((dataItem, videoIndex) => {
 					return (

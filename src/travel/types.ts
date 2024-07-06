@@ -5,4 +5,5 @@ export type TravelVideoMetaData = {
 	link: string;
 	backupLink: string;
 	restricted: boolean;
+	instagramLinks?: string[];
 };

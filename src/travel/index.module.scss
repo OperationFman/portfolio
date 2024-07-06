@@ -15,7 +15,7 @@
 }
 
 .year {
-	margin-top: 0;
+	margin-top: -10px;
 	color: $defaultYellow;
 }
 
@@ -25,4 +25,18 @@
 
 .upNextContainer {
 	margin-top: 100px;
+}
+
+.socialContainer {
+	margin-top: 100px;
+}
+
+.gridContainer {
+	justify-content: space-evenly;
+	padding: 25px 0;
+	border-radius: 3px;
+}
+
+.gridContainerDark {
+	background-color: $mediumGrey;
 }
