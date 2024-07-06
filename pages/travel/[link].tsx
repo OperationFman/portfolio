@@ -5,6 +5,7 @@ import { Footer } from "../../utils/footer/Footer";
 import { TravelVideoMetaData } from "../../src/travel/types";
 import { getTravelMetaDataIndex } from "../../src/travel/travelDataService";
 import styles from "../../src/travel/index.module.scss";
+import AddToDriveIcon from "@mui/icons-material/AddToDrive";
 import ReactPlayer from "react-player";
 import {
 	publicCDNVideoUrl,
@@ -14,6 +15,7 @@ import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Grid } from "@mui/material";
 import { setDark } from "../../utils/configureCss/configureCss";
+import { useState } from "react";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -23,10 +25,12 @@ const VideoContent = ({
 	metaData,
 	upNext,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-	const { title, year, slug, instagramLinks, reelLinks } =
+	const { title, year, slug, instagramLinks, reelLinks, backupLink } =
 		metaData as TravelVideoMetaData;
 
 	const upNextMetaData = upNext as TravelVideoMetaData[];
+
+	const [videoError, setVideoError] = useState(false);
 
 	if (!metaData) {
 		return <ErrorContent />;
@@ -38,15 +42,29 @@ const VideoContent = ({
 				<h1 className={styles.title}>{title}</h1>
 				<h2 className={styles.year}>{year}</h2>
 
-				<ReactPlayer
-					url={`${publicCDNVideoUrl}${slug}.mp4`}
-					controls
-					pip
-					playing={true}
-					volume={0.3}
-					height='100%'
-					width='100%'
-				/>
+				{videoError ? (
+					<div className={styles.videoError}>
+						<h2>Direct stream is temporarily unavailable</h2>
+
+						<h3>You can still enjoy the video via Google Drive:</h3>
+						<h3
+							onClick={() => window.open(backupLink, "_blank")}
+							className={styles.backupLink}>
+							Click Here
+						</h3>
+					</div>
+				) : (
+					<ReactPlayer
+						url={`${publicCDNVideoUrl}${slug}.mp4`}
+						controls
+						pip
+						playing={true}
+						volume={0.3}
+						height='100%'
+						width='100%'
+						onError={() => setVideoError(true)}
+					/>
+				)}
 
 				{(instagramLinks || reelLinks) && (
 					<div className={styles.socialContainer}>
@@ -75,21 +93,23 @@ const VideoContent = ({
 					</div>
 				)}
 
-				<div className={styles.upNextContainer}>
-					{upNextMetaData.length >= 1 ? (
-						<>
-							<h2>Up Next...</h2>
-							<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
-						</>
-					) : (
-						<>
-							<h2>From The Start...</h2>
-							<VideoLibrary
-								videoMetaData={[...travelVideoMetaData].reverse()}
-							/>
-						</>
-					)}
-				</div>
+				{!videoError && (
+					<div className={styles.upNextContainer}>
+						{upNextMetaData.length >= 1 ? (
+							<>
+								<h2>Up Next...</h2>
+								<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
+							</>
+						) : (
+							<>
+								<h2>From The Start...</h2>
+								<VideoLibrary
+									videoMetaData={[...travelVideoMetaData].reverse()}
+								/>
+							</>
+						)}
+					</div>
+				)}
 			</PageContainer>
 			<Footer />
 		</>

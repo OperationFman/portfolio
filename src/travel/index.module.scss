@@ -46,3 +46,20 @@
 	display: flex;
 	justify-content: center;
 }
+
+.videoError {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 480px;
+	width: 100%;
+	border: 3px solid $mediumGrey;
+	border-radius: 5px;
+}
+
+.backupLink {
+	margin-top: -15px;
+	color: $defaultBlue;
+	cursor: pointer;
+}
