@@ -1,24 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/future/image";
 import { PageContainer } from "../../src/global/PageContainer";
 import { Footer } from "../../utils/footer/Footer";
-import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import styles from "../../src/travel/index.module.scss";
-import { Grid } from "@mui/material";
 import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
-import ScrollAnimation from "react-animate-on-scroll";
 import {
 	groupVideosByYear,
-	hasRestrictionBypass,
 	sortYears,
-	videoEnabled,
 } from "../../src/travel/travelDataService";
-import router from "next/router";
 import { useEffect, useState } from "react";
 import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
 import { SortOptions } from "../../src/tutorials/types";
+import { VideoLibrary } from "../../src/travel/VideoLibrary";
 
 const Travel: NextPage = () => {
 	const metaDataGroupedByYear = groupVideosByYear(travelVideoMetaData);
@@ -59,49 +52,15 @@ const Travel: NextPage = () => {
 				<div className={styles.sortContainer}>
 					<SortButton setSortMetaDataBy={setSortBy} alphabetical={false} />
 				</div>
-				{sortedMetaData.map((metaData, groupIndex) => {
+				{sortedMetaData.map((metaData) => {
 					{
+						const year = metaData[0].year;
+
 						return (
-							<>
-								<h2 className={styles.yearHeading}>{metaData[0].year}</h2>
-								<Grid container className={styles.gridContainer}>
-									{metaData.map((dataItem, videoIndex) => {
-										return (
-											<ScrollAnimation
-												animateIn='fadeIn'
-												animateOnce
-												key={videoIndex}
-												delay={(groupIndex + videoIndex) * 50}>
-												<Grid item>
-													<div
-														className={styles.videoCardContainer}
-														onClick={() => {
-															if (videoEnabled(dataItem))
-																router.push(`travel/${dataItem.link}`);
-														}}>
-														{dataItem.restricted && !hasRestrictionBypass() ? (
-															<LockOutlinedIcon
-																className={styles.videoButton}
-															/>
-														) : (
-															<PlayArrowTwoToneIcon
-																className={`${styles.videoButton} ${styles.videoButtonBigger}`}
-															/>
-														)}
-														<Image
-															src={`/travel/posters/${dataItem.slug}.png`}
-															alt={`${dataItem.title} poster`}
-															height='300'
-															width='200'
-															className={styles.videoCardImage}
-														/>
-													</div>
-												</Grid>
-											</ScrollAnimation>
-										);
-									})}
-								</Grid>
-							</>
+							<div key={`Videos from ${year}`}>
+								<h2 className={styles.yearHeading}>{year}</h2>
+								<VideoLibrary videoMetaData={metaData} />
+							</div>
 						);
 					}
 				})}
