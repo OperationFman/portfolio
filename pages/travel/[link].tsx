@@ -32,6 +32,9 @@ const VideoContent = ({
 	return (
 		<>
 			<PageContainer>
+				<h1 className={styles.title}>{title}</h1>
+				<h2 className={styles.year}>{year}</h2>
+
 				<ReactPlayer
 					url={`${publicCDNVideoUrl}${slug}.mp4`}
 					controls
@@ -41,9 +44,6 @@ const VideoContent = ({
 					height='100%'
 					width='100%'
 				/>
-
-				<h1 className={styles.title}>{title}</h1>
-				<h2 className={styles.year}>{year}</h2>
 
 				<div className={styles.upNextContainer}>
 					{upNextMetaData.length >= 1 ? (

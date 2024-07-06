@@ -6,7 +6,7 @@ import { TravelVideoMetaData } from "./types";
 import { Grid } from "@mui/material";
 import styles from "./videolibrary.module.scss";
 import { hasRestrictionBypass, videoEnabled } from "./travelDataService";
-import router from "next/router";
+import router, { useRouter } from "next/router";
 
 export const VideoLibrary = ({
 	videoMetaData,
@@ -28,14 +28,19 @@ export const VideoLibrary = ({
 								<div
 									className={styles.videoCardContainer}
 									onClick={() => {
-										if (videoEnabled(dataItem))
-											router.replace(`/travel/${dataItem.link}`);
+										if (videoEnabled(dataItem)) {
+											router.push(`/travel/${dataItem.link}`);
+										}
 									}}>
 									{dataItem.restricted && !hasRestrictionBypass() ? (
-										<LockOutlinedIcon className={styles.videoButton} />
+										<LockOutlinedIcon
+											style={{ height: "50px", width: "50px" }}
+											className={styles.videoButton}
+										/>
 									) : (
 										<PlayArrowTwoToneIcon
-											className={`${styles.videoButton} ${styles.videoButtonBigger}`}
+											style={{ height: "60px", width: "60px" }}
+											className={styles.videoButton}
 										/>
 									)}
 									<Image

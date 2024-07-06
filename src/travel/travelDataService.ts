@@ -55,7 +55,10 @@ export const videoEnabled = (videoMetaData: TravelVideoMetaData) => {
 	if (hasRestrictionBypass() || !videoMetaData.restricted) {
 		return true;
 	} else {
-		const prompt = window.prompt("Enter password", "");
+		const prompt = window.prompt(
+			"Sorry, This video is restricted. \nEnter the correct password to unlock all content:",
+			"",
+		);
 
 		if (prompt === insecureRestrictionKey) {
 			localStorage.setItem("restriction-bypass", "true");
