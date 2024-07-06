@@ -33,10 +33,14 @@
 
 .gridContainer {
 	justify-content: space-evenly;
-	padding: 25px 0;
-	border-radius: 3px;
 }
 
-.gridContainerDark {
-	background-color: $mediumGrey;
+.embeddedPost {
+	margin-bottom: 30px;
+}
+
+.reelWrapper {
+	width: 520px;
+	display: flex;
+	justify-content: center;
 }

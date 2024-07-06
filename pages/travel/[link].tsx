@@ -23,7 +23,8 @@ const VideoContent = ({
 	metaData,
 	upNext,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-	const { title, year, slug, instagramLinks } = metaData as TravelVideoMetaData;
+	const { title, year, slug, instagramLinks, reelLinks } =
+		metaData as TravelVideoMetaData;
 
 	const upNextMetaData = upNext as TravelVideoMetaData[];
 
@@ -47,17 +48,29 @@ const VideoContent = ({
 					width='100%'
 				/>
 
-				{instagramLinks && (
+				{(instagramLinks || reelLinks) && (
 					<div className={styles.socialContainer}>
 						<h2>Instagram</h2>
-						<Grid container className={setDark(styles, "gridContainer")}>
-							{instagramLinks.map((link) => {
-								return (
-									<Grid item key={link}>
-										<InstagramEmbed url={link} width={328} />
-									</Grid>
-								);
-							})}
+						<Grid container className={styles.gridContainer}>
+							{reelLinks &&
+								reelLinks.map((reel) => {
+									return (
+										<Grid item key={reel} className={styles.embeddedPost}>
+											<div className={styles.reelWrapper}>
+												<InstagramEmbed url={reel} width={370} captioned />
+											</div>
+										</Grid>
+									);
+								})}
+
+							{instagramLinks &&
+								instagramLinks.map((link) => {
+									return (
+										<Grid item key={link} className={styles.embeddedPost}>
+											<InstagramEmbed url={link} width={520} />
+										</Grid>
+									);
+								})}
 						</Grid>
 					</div>
 				)}
@@ -65,12 +78,12 @@ const VideoContent = ({
 				<div className={styles.upNextContainer}>
 					{upNextMetaData.length >= 1 ? (
 						<>
-							<h2>Up Next</h2>
+							<h2>Up Next...</h2>
 							<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
 						</>
 					) : (
 						<>
-							<h2>From The Start</h2>
+							<h2>From The Start...</h2>
 							<VideoLibrary
 								videoMetaData={[...travelVideoMetaData].reverse()}
 							/>
