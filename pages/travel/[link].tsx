@@ -57,7 +57,7 @@ const VideoContent = ({
 									return (
 										<Grid item key={reel} className={styles.embeddedPost}>
 											<div className={styles.reelWrapper}>
-												<InstagramEmbed url={reel} width={415} />
+												<InstagramEmbed url={reel} width={380} />
 											</div>
 										</Grid>
 									);
@@ -67,7 +67,7 @@ const VideoContent = ({
 								instagramLinks.map((link) => {
 									return (
 										<Grid item key={link} className={styles.embeddedPost}>
-											<InstagramEmbed url={link} width={494} />
+											<InstagramEmbed url={link} width={450} />
 										</Grid>
 									);
 								})}
