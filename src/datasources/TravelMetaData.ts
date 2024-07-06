@@ -29,7 +29,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		link: "indonesia",
 		backupLink:
 			"https://drive.google.com/file/d/161aw78gaH8lEHlF2H-NR6B4LHnPr6rqI/view?usp=sharing",
-		restricted: false,
+		restricted: true,
 	},
 	{
 		title: "Malaysia & Singapore",
@@ -74,7 +74,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		link: "south-korea",
 		backupLink:
 			"https://drive.google.com/file/d/1G2emPhFNvHV9JPtF_hyl0WbOzKLkTXOk/view?usp=sharing",
-		restricted: false,
+		restricted: true,
 	},
 	{
 		title: "Sri Lanka",
@@ -92,7 +92,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		link: "uae",
 		backupLink:
 			"https://drive.google.com/file/d/1_Xv-xTZ054zoTKmPaPVmQgc49qH-Exfv/view?usp=sharing",
-		restricted: false,
+		restricted: true,
 	},
 	{
 		title: "Fiji",
@@ -175,7 +175,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		link: "oman",
 		backupLink:
 			"https://drive.google.com/file/d/1FQux8SdlnL-idrPsbt2uF5OAfJW57CZa/view?usp=sharing",
-		restricted: false,
+		restricted: true,
 		reelLinks: ["https://www.instagram.com/reel/C4DkLuqJ3AR/"],
 		instagramLinks: [
 			"https://www.instagram.com/p/CsHbTJ8h78G/?img_index=1",
@@ -190,7 +190,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		link: "kuwait-iraqi-kurdistan",
 		backupLink:
 			"https://drive.google.com/file/d/1iEokNO7kkZfvBYcrbPfTI3Fag_mPc-3b/view?usp=sharing",
-		restricted: false,
+		restricted: true,
 		reelLinks: ["https://www.instagram.com/reel/C5OA27DJ5Tx/"],
 		instagramLinks: [
 			"https://www.instagram.com/p/CsW4lzgL_Ec/?img_index=1",
