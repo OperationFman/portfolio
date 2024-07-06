@@ -2,7 +2,26 @@
 @import "../../themes/breakpoints";
 
 .gridContainer {
-	justify-content: center;
+	justify-content: left;
+}
+
+.yearHeading {
+	display: inline-block;
+	margin-left: 10px;
+	padding-right: 15px;
+	border-bottom: 2px solid $defaultYellow;
+}
+
+.headingDash {
+	width: 80%;
+}
+
+.videoCardContainer {
+	margin: 10px;
+}
+
+.videoCardImage {
+	border-radius: 5px;
 }
 
 .title {
