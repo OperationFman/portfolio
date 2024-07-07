@@ -114,13 +114,13 @@ export const Navbar = ({
 						{darkMode ? (
 							<button className={styles.iconDim} tabIndex={5}>
 								<Brightness6Icon
-									style={{ height: "1.25rem", width: "2.5rem" }}
+									style={{ height: "1.25rem", width: "1.8rem" }}
 								/>
 							</button>
 						) : (
 							<button className={styles.iconBright} tabIndex={5}>
 								<Brightness3Icon
-									style={{ height: "1.25rem", width: "2.5rem" }}
+									style={{ height: "1.25rem", width: "1.8rem" }}
 								/>
 							</button>
 						)}
