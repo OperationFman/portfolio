@@ -50,10 +50,7 @@ const Travel: NextPage = () => {
 			</Head>
 
 			<PageContainer>
-				<div className={styles.sortButtonContainer}>
-					<SortButton setSortMetaDataBy={setSortBy} alphabetical={false} />
-				</div>
-				{sortedMetaData.map((metaData) => {
+				{sortedMetaData.map((metaData, index) => {
 					{
 						const year = metaData[0].year;
 
@@ -62,15 +59,22 @@ const Travel: NextPage = () => {
 								key={`Videos from ${year}`}
 								className={styles.libraryContainer}>
 								<div className={styles.yearHeadingContainer}>
-									<NavigateNextRoundedIcon
-										style={{
-											color: "yellow",
-											height: "2.5rem",
-											width: "2.5rem",
-										}}
-									/>
-
-									<h2 className={styles.yearHeading}>{year}</h2>
+									<div className={styles.yearHeading}>
+										<NavigateNextRoundedIcon
+											style={{
+												color: "yellow",
+												height: "2.5rem",
+												width: "2.5rem",
+											}}
+										/>
+										<h2 className={styles.yearHeadingText}>{year}</h2>
+									</div>
+									{index === 0 && (
+										<SortButton
+											setSortMetaDataBy={setSortBy}
+											alphabetical={false}
+										/>
+									)}
 								</div>
 								<VideoLibrary videoMetaData={metaData} />
 							</div>
