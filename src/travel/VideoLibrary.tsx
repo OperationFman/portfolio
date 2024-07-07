@@ -17,7 +17,7 @@ export const VideoLibrary = ({
 
 	useEffect(() => {
 		const checkScreenSize = () => {
-			setIsSmallScreen(window.innerWidth < 900);
+			setIsSmallScreen(window.innerWidth < 500);
 		};
 
 		checkScreenSize();
@@ -26,47 +26,51 @@ export const VideoLibrary = ({
 	}, []);
 
 	return (
-		<Grid container>
+		<Grid
+			container
+			spacing={1.25}
+			style={{
+				margin: 0,
+				padding: "0 40px 0 20px",
+				justifyContent: isSmallScreen ? "space-between" : "",
+			}}>
 			{videoMetaData
-				.map((dataItem, videoIndex) => {
-					return (
+				.map((dataItem, videoIndex) => (
+					<Grid item key={`Video card of ${dataItem.title}`}>
 						<div
 							style={{
 								animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
 								opacity: 1,
-							}}
-							key={`Video card of ${dataItem.title}`}>
-							<Grid item style={{ margin: "10px" }}>
-								<CardActionArea
-									className={styles.videoCardContainer}
-									onClick={() => {
-										if (videoEnabled(dataItem)) {
-											router.push(`/travel/${dataItem.link}`);
-										}
-									}}>
-									{dataItem.restricted && !hasRestrictionBypass() ? (
-										<LockOutlinedIcon
-											style={{ height: "50px", width: "50px" }}
-											className={`${styles.videoButton} ${styles.lockButton}`}
-										/>
-									) : (
-										<PlayArrowTwoToneIcon
-											style={{ height: "60px", width: "60px" }}
-											className={styles.videoButton}
-										/>
-									)}
-									<Image
-										src={`/travel/posters/${dataItem.slug}.png`}
-										alt={`${dataItem.title} poster`}
-										height={isSmallScreen ? "255" : "300"}
-										width={isSmallScreen ? "170" : "200"}
-										className={styles.videoCardImage}
+							}}>
+							<CardActionArea
+								className={styles.videoCardContainer}
+								onClick={() => {
+									if (videoEnabled(dataItem)) {
+										router.push(`/travel/${dataItem.link}`);
+									}
+								}}>
+								{dataItem.restricted && !hasRestrictionBypass() ? (
+									<LockOutlinedIcon
+										sx={{ height: "3.125rem", width: "3.125rem" }} // 50px
+										className={`${styles.videoButton} ${styles.lockButton}`}
 									/>
-								</CardActionArea>
-							</Grid>
+								) : (
+									<PlayArrowTwoToneIcon
+										sx={{ height: "3.75rem", width: "3.75rem" }} // 60px
+										className={styles.videoButton}
+									/>
+								)}
+								<Image
+									src={`/travel/posters/${dataItem.slug}.png`}
+									alt={`${dataItem.title} poster`}
+									height={isSmallScreen ? 240 : 300}
+									width={isSmallScreen ? 160 : 200}
+									className={styles.videoCardImage}
+								/>
+							</CardActionArea>
 						</div>
-					);
-				})
+					</Grid>
+				))
 				.reverse()}
 		</Grid>
 	);
