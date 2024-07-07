@@ -77,11 +77,7 @@ const VideoContent = ({
 							{instagramLinks &&
 								instagramLinks.map((link) => {
 									return (
-										<Grid
-											item
-											key={link}
-											className={styles.embeddedPost}
-											placeholderSpinner={<></>}>
+										<Grid item key={link} className={styles.embeddedPost}>
 											<InstagramEmbed url={link} width={350} />
 										</Grid>
 									);
