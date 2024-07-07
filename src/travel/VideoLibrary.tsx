@@ -63,8 +63,8 @@ export const VideoLibrary = ({
 								<Image
 									src={`/travel/posters/${dataItem.slug}.png`}
 									alt={`${dataItem.title} poster`}
-									height={isSmallScreen ? 238 : 300}
-									width={isSmallScreen ? 157 : 200}
+									height={isSmallScreen ? 232 : 300}
+									width={isSmallScreen ? 148 : 200}
 									className={styles.videoCardImage}
 								/>
 							</CardActionArea>
