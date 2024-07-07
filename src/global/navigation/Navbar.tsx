@@ -62,7 +62,7 @@ export const Navbar = ({
 	}, [router, initialTab]);
 
 	const ensureTabsFit = (index: number) => {
-		const largeScreenTab = index === 0 ? "160px" : "120px";
+		const largeScreenTab = index === 0 ? "150px" : "120px";
 		return { minWidth: isSmallScreen ? "60px" : largeScreenTab };
 	};
 

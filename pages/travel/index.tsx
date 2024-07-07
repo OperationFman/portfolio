@@ -62,7 +62,7 @@ const Travel: NextPage = () => {
 								className={styles.libraryContainer}>
 								<div className={styles.yearHeadingContainer}>
 									<NavigateNextRoundedIcon
-										style={{ color: "yellow", height: "50px", width: "50px" }}
+										style={{ color: "yellow", height: "40px", width: "40px" }}
 									/>
 
 									<h2 className={styles.yearHeading}>{year}</h2>

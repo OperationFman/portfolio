@@ -29,7 +29,6 @@
 
 	@include breakpoint(medium) {
 		&::after {
-			width: 500px;
 			margin: 5px 0 0 5px;
 			content: "FRANKLIN V MOON";
 		}
