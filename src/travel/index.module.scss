@@ -2,13 +2,11 @@
 @import "../../themes/breakpoints";
 
 .libraryContainer {
-	margin-bottom: 40px;
+	margin-bottom: 2.5rem;
 }
 
-.sortContainer {
-	display: flex;
-	justify-content: right;
-	padding: 10px 10px 0 0;
+.sortButtonContainer {
+	padding: 0.625rem 0 0.3125rem 1.875rem;
 }
 
 .yearHeadingContainer {
@@ -18,11 +16,11 @@
 
 .yearHeading {
 	display: inline-block;
-	margin: 2px 0 0 0;
+	margin: 0.125rem 0 0 0;
 }
 
 .year {
-	margin-top: -10px;
+	margin-top: -0.625rem;
 	color: $defaultYellow;
 }
 
@@ -31,11 +29,11 @@
 }
 
 .upNextContainer {
-	margin-top: 100px;
+	margin-top: 6.25rem;
 }
 
 .socialContainer {
-	margin-top: 100px;
+	margin-top: 6.25rem;
 	max-width: 100vw;
 	overflow: hidden;
 }
@@ -45,28 +43,24 @@
 }
 
 .embeddedPost {
-	margin-bottom: 30px;
+	margin-bottom: 1.875rem;
 	display: flex;
 	justify-content: center;
-	max-width: 420px;
+	max-width: 26.25rem;
 }
 
 .reelWrapper {
-	width: 420px;
+	width: 26.25rem;
 	display: flex;
 	justify-content: center;
 }
 
 .backupLink {
-	margin-left: 10px;
+	margin-left: 0.625rem;
 	color: $defaultBlue;
 	cursor: pointer;
 }
 
 .errorContainer {
-	margin: 5px 0 0 2px;
-}
-
-.hideElement {
-	border: 10px solid green;
+	margin: 0.3125rem 0 0 0.125rem;
 }

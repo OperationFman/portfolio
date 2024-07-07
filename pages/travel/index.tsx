@@ -50,8 +50,9 @@ const Travel: NextPage = () => {
 			</Head>
 
 			<PageContainer>
-				<SortButton setSortMetaDataBy={setSortBy} alphabetical={false} />
-
+				<div className={styles.sortButtonContainer}>
+					<SortButton setSortMetaDataBy={setSortBy} alphabetical={false} />
+				</div>
 				{sortedMetaData.map((metaData) => {
 					{
 						const year = metaData[0].year;
@@ -62,7 +63,11 @@ const Travel: NextPage = () => {
 								className={styles.libraryContainer}>
 								<div className={styles.yearHeadingContainer}>
 									<NavigateNextRoundedIcon
-										style={{ color: "yellow", height: "40px", width: "40px" }}
+										style={{
+											color: "yellow",
+											height: "2.5rem",
+											width: "2.5rem",
+										}}
 									/>
 
 									<h2 className={styles.yearHeading}>{year}</h2>

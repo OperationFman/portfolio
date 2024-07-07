@@ -63,7 +63,7 @@ export const Navbar = ({
 
 	const ensureTabsFit = (index: number) => {
 		const largeScreenTab = index === 0 ? "9.475rem" : "7.7rem";
-		return { minWidth: isSmallScreen ? "3.9rem" : largeScreenTab };
+		return { minWidth: isSmallScreen ? "5rem" : largeScreenTab };
 	};
 
 	return (
@@ -91,7 +91,7 @@ export const Navbar = ({
 							className={styles.tab}
 							style={{
 								order: item.order,
-								fontSize: "0.7rem",
+								fontSize: isSmallScreen ? "0.7rem" : "0.9rem",
 								padding: "0.4375rem",
 								...tabStyles,
 							}}
@@ -114,13 +114,13 @@ export const Navbar = ({
 						{darkMode ? (
 							<button className={styles.iconDim} tabIndex={5}>
 								<Brightness6Icon
-									style={{ height: "1.25rem", width: "1.25rem" }}
+									style={{ height: "1.25rem", width: "2.5rem" }}
 								/>
 							</button>
 						) : (
 							<button className={styles.iconBright} tabIndex={5}>
 								<Brightness3Icon
-									style={{ height: "1.25rem", width: "1.25rem" }}
+									style={{ height: "1.25rem", width: "2.5rem" }}
 								/>
 							</button>
 						)}
