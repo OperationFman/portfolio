@@ -23,6 +23,7 @@ export const tabsData: {
 		icon: (tab: number) => (
 			<AccountCircleOutlinedIcon
 				className={setColor(tab, 0, colors.defaultLightBlue)}
+				style={{ height: "20px", width: "20px" }}
 			/>
 		),
 		order: 0,
@@ -34,6 +35,7 @@ export const tabsData: {
 		icon: (tab: number) => (
 			<LightbulbOutlinedIcon
 				className={setColor(tab, 1, colors.defaultGreen)}
+				style={{ height: "20px", width: "20px" }}
 			/>
 		),
 		order: 3,
@@ -43,7 +45,10 @@ export const tabsData: {
 		color: "#ce93d8",
 		route: "/tutorials",
 		icon: (tab: number) => (
-			<SchoolOutlinedIcon className={setColor(tab, 2, colors.defaultPurple)} />
+			<SchoolOutlinedIcon
+				className={setColor(tab, 2, colors.defaultPurple)}
+				style={{ height: "20px", width: "20px" }}
+			/>
 		),
 		order: 4,
 	},
@@ -54,6 +59,7 @@ export const tabsData: {
 		icon: (tab: number) => (
 			<BookmarkBorderOutlinedIcon
 				className={setColor(tab, 3, colors.defaultRed)}
+				style={{ height: "20px", width: "20px" }}
 			/>
 		),
 		order: 5,
@@ -63,7 +69,10 @@ export const tabsData: {
 		color: "#ffeb3b",
 		route: "/travel",
 		icon: (tab: number) => (
-			<HikingOutlinedIcon className={setColor(tab, 4, colors.defaultYellow)} />
+			<HikingOutlinedIcon
+				className={setColor(tab, 4, colors.defaultYellow)}
+				style={{ height: "20px", width: "20px" }}
+			/>
 		),
 		order: 6,
 	},

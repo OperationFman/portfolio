@@ -17,9 +17,13 @@
 }
 
 .tab {
-	font-size: 12px;
+	width: 60px;
+	max-width: 10px;
+	font-size: 10px;
+	letter-spacing: 0;
 
 	@include breakpoint(medium) {
+		max-width: 140px;
 		font-size: 14px;
 	}
 
@@ -39,7 +43,8 @@
 
 	@include breakpoint(medium) {
 		&::after {
-			margin-top: 5px;
+			width: 500px;
+			margin: 5px 0 0 5px;
 			content: "FRANKLIN V MOON";
 		}
 	}

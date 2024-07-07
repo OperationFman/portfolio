@@ -17,6 +17,18 @@ export const Navbar = ({
 	const darkMode = useContext(DarkMode);
 	const router = useRouter();
 
+	const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+	useEffect(() => {
+		const checkScreenSize = () => {
+			setIsSmallScreen(window.innerWidth < 900);
+		};
+
+		checkScreenSize();
+		window.addEventListener("resize", checkScreenSize);
+		return () => window.removeEventListener("resize", checkScreenSize);
+	}, []);
+
 	const initialTab = () => {
 		const currentBrowserRoute = router.pathname;
 
@@ -49,6 +61,11 @@ export const Navbar = ({
 		setTabIndex(initialTab());
 	}, [router, initialTab]);
 
+	const ensureTabsFit = (index: number) => {
+		const largeScreenTab = index === 0 ? "160px" : "120px";
+		return { minWidth: isSmallScreen ? "70px" : largeScreenTab };
+	};
+
 	return (
 		<nav>
 			<Tabs
@@ -60,6 +77,7 @@ export const Navbar = ({
 				centered
 				className={styles.container}>
 				{tabsData.map((item, index) => {
+					const tabStyles = ensureTabsFit(index);
 					return (
 						<Tab
 							label={
@@ -71,7 +89,10 @@ export const Navbar = ({
 							}
 							icon={item.icon(tabIndex)}
 							className={styles.tab}
-							style={{ order: item.order }}
+							style={{
+								order: item.order,
+								...tabStyles,
+							}}
 							key={index}
 							tabIndex={index + 1}
 							onClick={() => {
@@ -91,11 +112,11 @@ export const Navbar = ({
 					<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
 						{darkMode ? (
 							<button className={styles.iconDim} tabIndex={5}>
-								<Brightness6Icon />
+								<Brightness6Icon style={{ height: "20px", width: "20px" }} />
 							</button>
 						) : (
 							<button className={styles.iconBright} tabIndex={5}>
-								<Brightness3Icon />
+								<Brightness3Icon style={{ height: "20px", width: "20px" }} />
 							</button>
 						)}
 					</Tooltip>
