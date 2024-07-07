@@ -3,7 +3,11 @@ import { InferGetServerSidePropsType } from "next";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 import { Footer } from "../../utils/footer/Footer";
 import { TravelVideoMetaData } from "../../src/travel/types";
-import { getTravelMetaDataIndex } from "../../src/travel/travelDataService";
+import {
+	getTravelMetaDataIndex,
+	hasRestrictionBypass,
+	videoEnabled,
+} from "../../src/travel/travelDataService";
 import styles from "../../src/travel/index.module.scss";
 import ReactPlayer from "react-player";
 import {
@@ -13,6 +17,7 @@ import {
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Grid } from "@mui/material";
+import { useState } from "react";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -31,80 +36,84 @@ const VideoContent = ({
 		return <ErrorContent />;
 	}
 
-	return (
-		<>
-			<PageContainer>
-				<h1 className={styles.title}>{title}</h1>
-				<h2 className={styles.year}>{year}</h2>
+	if (videoEnabled(metaData)) {
+		return (
+			<>
+				<PageContainer>
+					<h1 className={styles.title}>{title}</h1>
+					<h2 className={styles.year}>{year}</h2>
 
-				<ReactPlayer
-					url={`${publicCDNVideoUrl}${slug}.mp4`}
-					controls
-					pip
-					playing={true}
-					volume={0.3}
-					height='100%'
-					width='100%'
-				/>
+					<ReactPlayer
+						url={`${publicCDNVideoUrl}${slug}.mp4`}
+						controls
+						pip
+						playing={true}
+						volume={0.3}
+						height='100%'
+						width='100%'
+					/>
 
-				<div className={styles.errorContainer}>
-					<h5
-						onClick={() => window.open(backupLink, "_blank")}
-						className={styles.backupLink}>
-						Alternative Video Link
-					</h5>
-				</div>
-
-				{(instagramLinks || reelLinks) && (
-					<div className={styles.socialContainer}>
-						<h2>Instagram</h2>
-						<Grid container className={styles.gridContainer}>
-							{reelLinks &&
-								reelLinks.map((reel) => {
-									return (
-										<Grid item key={reel} className={styles.embeddedPost}>
-											<div className={styles.reelWrapper}>
-												<InstagramEmbed
-													url={reel}
-													width={350}
-													placeholderSpinner={<></>}
-												/>
-											</div>
-										</Grid>
-									);
-								})}
-
-							{instagramLinks &&
-								instagramLinks.map((link) => {
-									return (
-										<Grid item key={link} className={styles.embeddedPost}>
-											<InstagramEmbed url={link} width={350} />
-										</Grid>
-									);
-								})}
-						</Grid>
+					<div className={styles.errorContainer}>
+						<h5
+							onClick={() => window.open(backupLink, "_blank")}
+							className={styles.backupLink}>
+							Alternative Video Link
+						</h5>
 					</div>
-				)}
 
-				<div className={styles.upNextContainer}>
-					{upNextMetaData.length >= 1 ? (
-						<>
-							<h2>Up Next...</h2>
-							<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
-						</>
-					) : (
-						<>
-							<h2>From The Start...</h2>
-							<VideoLibrary
-								videoMetaData={[...travelVideoMetaData].reverse()}
-							/>
-						</>
+					{(instagramLinks || reelLinks) && (
+						<div className={styles.socialContainer}>
+							<h2>Instagram</h2>
+							<Grid container className={styles.gridContainer}>
+								{reelLinks &&
+									reelLinks.map((reel) => {
+										return (
+											<Grid item key={reel} className={styles.embeddedPost}>
+												<div className={styles.reelWrapper}>
+													<InstagramEmbed
+														url={reel}
+														width={350}
+														placeholderSpinner={<></>}
+													/>
+												</div>
+											</Grid>
+										);
+									})}
+
+								{instagramLinks &&
+									instagramLinks.map((link) => {
+										return (
+											<Grid item key={link} className={styles.embeddedPost}>
+												<InstagramEmbed url={link} width={350} />
+											</Grid>
+										);
+									})}
+							</Grid>
+						</div>
 					)}
-				</div>
-			</PageContainer>
-			<Footer />
-		</>
-	);
+
+					<div className={styles.upNextContainer}>
+						{upNextMetaData.length >= 1 ? (
+							<>
+								<h2>Up Next...</h2>
+								<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
+							</>
+						) : (
+							<>
+								<h2>From The Start...</h2>
+								<VideoLibrary
+									videoMetaData={[...travelVideoMetaData].reverse()}
+								/>
+							</>
+						)}
+					</div>
+				</PageContainer>
+				<Footer />
+			</>
+		);
+	} else {
+		return <ErrorContent />;
+	}
 };
 
 export const getServerSideProps = async (context: ServerSideContext) => {

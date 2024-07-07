@@ -1,4 +1,3 @@
-import router from "next/router";
 import { isClientSide } from "../../utils/isClientSide";
 import {
 	insecureRestrictionKey,
@@ -52,6 +51,10 @@ export const hasRestrictionBypass = () => {
 };
 
 export const videoEnabled = (videoMetaData: TravelVideoMetaData) => {
+	if (!isClientSide()) {
+		return false;
+	}
+
 	if (hasRestrictionBypass() || !videoMetaData.restricted) {
 		return true;
 	} else {
