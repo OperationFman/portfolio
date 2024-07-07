@@ -19,17 +19,17 @@
 .tab:first-child {
 	display: flex;
 	flex-direction: column;
-	min-width: 40px;
-	padding: 0 15px;
+	min-width: 2.5rem;
+	padding: 0 0.9375rem;
 
 	&::after {
-		margin-top: 5px;
+		margin-top: 0.3125rem;
 		content: "FVM";
 	}
 
 	@include breakpoint(medium) {
 		&::after {
-			margin: 5px 0 0 5px;
+			margin: 0.3125rem 0 0 0.3125rem;
 			content: "FRANKLIN V MOON";
 		}
 	}
@@ -37,10 +37,10 @@
 
 .visuallyHidden {
 	position: absolute;
-	width: 1px;
-	height: 1px;
+	width: 0.0625rem;
+	height: 0.0625rem;
 	padding: 0;
-	margin: -1px;
+	margin: -0.0625rem;
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
@@ -52,19 +52,19 @@
 	justify-content: right;
 	border-radius: 0;
 	cursor: pointer;
-	padding-right: 10px;
-	margin-left: 15px;
+	padding-right: 0.625rem;
+	margin-left: 0.9375rem;
 
 	@include breakpoint(small) {
-		padding: 0 15px;
+		padding: 0 0.9375rem;
 	}
 
 	@include breakpoint(medium) {
-		margin-left: 70px;
+		margin-left: 4.375rem;
 	}
 
 	@include breakpoint(xLarge) {
-		margin-left: 120px;
+		margin-left: 7.5rem;
 	}
 
 	@extend .hover;
@@ -74,15 +74,17 @@
 	flex-grow: 1;
 }
 
-.iconDim {
+.iconDim,
+.iconBright {
 	all: unset;
-	margin-top: 8px;
+	margin-top: 0.5rem;
+}
+
+.iconDim {
 	color: $brightGrey;
 }
 
 .iconBright {
-	all: unset;
-	margin-top: 8px;
 	color: $white;
 }
 

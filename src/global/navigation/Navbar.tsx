@@ -62,8 +62,8 @@ export const Navbar = ({
 	}, [router, initialTab]);
 
 	const ensureTabsFit = (index: number) => {
-		const largeScreenTab = index === 0 ? "150px" : "120px";
-		return { minWidth: isSmallScreen ? "60px" : largeScreenTab };
+		const largeScreenTab = index === 0 ? "9.375rem" : "7.5rem";
+		return { minWidth: isSmallScreen ? "3.75rem" : largeScreenTab };
 	};
 
 	return (
@@ -73,7 +73,7 @@ export const Navbar = ({
 				scrollButtons={true}
 				TabIndicatorProps={{ style: { background: tabsData[tabIndex].color } }}
 				textColor='inherit'
-				variant={"standard"}
+				variant='standard'
 				centered
 				className={styles.container}>
 				{tabsData.map((item, index) => {
@@ -91,7 +91,8 @@ export const Navbar = ({
 							className={styles.tab}
 							style={{
 								order: item.order,
-								fontSize: "12px",
+								fontSize: "0.7rem",
+								padding: "0.4375rem",
 								...tabStyles,
 							}}
 							key={index}
@@ -102,7 +103,6 @@ export const Navbar = ({
 						/>
 					);
 				})}
-
 				<div className={styles.spacer} style={{ order: 2 }} />
 				<div className={styles.spacer} style={{ order: 6 }} />
 
@@ -113,11 +113,15 @@ export const Navbar = ({
 					<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
 						{darkMode ? (
 							<button className={styles.iconDim} tabIndex={5}>
-								<Brightness6Icon style={{ height: "20px", width: "20px" }} />
+								<Brightness6Icon
+									style={{ height: "1.25rem", width: "1.25rem" }}
+								/>
 							</button>
 						) : (
 							<button className={styles.iconBright} tabIndex={5}>
-								<Brightness3Icon style={{ height: "20px", width: "20px" }} />
+								<Brightness3Icon
+									style={{ height: "1.25rem", width: "1.25rem" }}
+								/>
 							</button>
 						)}
 					</Tooltip>
