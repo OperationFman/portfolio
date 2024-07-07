@@ -1,17 +1,24 @@
 @import "../../themes/colors.module";
 @import "../../themes/breakpoints";
 
+.libraryContainer {
+	margin-bottom: 40px;
+}
+
 .sortContainer {
 	display: flex;
 	justify-content: right;
 	padding: 10px 10px 0 0;
 }
 
+.yearHeadingContainer {
+	display: flex;
+	flex-direction: row;
+}
+
 .yearHeading {
 	display: inline-block;
-	margin-left: 10px;
-	padding-right: 15px;
-	border-bottom: 2px solid $defaultYellow;
+	margin: 7px 0 0 0;
 }
 
 .year {

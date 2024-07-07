@@ -10,6 +10,7 @@ import {
 } from "../../src/travel/travelDataService";
 import { useEffect, useState } from "react";
 import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
+import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import { SortOptions } from "../../src/tutorials/types";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 
@@ -49,16 +50,23 @@ const Travel: NextPage = () => {
 			</Head>
 
 			<PageContainer>
-				<div className={styles.sortContainer}>
-					<SortButton setSortMetaDataBy={setSortBy} alphabetical={false} />
-				</div>
+				<SortButton setSortMetaDataBy={setSortBy} alphabetical={false} />
+
 				{sortedMetaData.map((metaData) => {
 					{
 						const year = metaData[0].year;
 
 						return (
-							<div key={`Videos from ${year}`}>
-								<h2 className={styles.yearHeading}>{year}</h2>
+							<div
+								key={`Videos from ${year}`}
+								className={styles.libraryContainer}>
+								<div className={styles.yearHeadingContainer}>
+									<NavigateNextRoundedIcon
+										style={{ color: "yellow", height: "50px", width: "50px" }}
+									/>
+
+									<h2 className={styles.yearHeading}>{year}</h2>
+								</div>
 								<VideoLibrary videoMetaData={metaData} />
 							</div>
 						);

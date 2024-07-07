@@ -26,7 +26,7 @@ export const VideoLibrary = ({
 	}, []);
 
 	return (
-		<Grid container className={styles.gridContainer}>
+		<Grid container>
 			{videoMetaData
 				.map((dataItem, videoIndex) => {
 					return (
@@ -58,8 +58,8 @@ export const VideoLibrary = ({
 									<Image
 										src={`/travel/posters/${dataItem.slug}.png`}
 										alt={`${dataItem.title} poster`}
-										height={isSmallScreen ? "225" : "300"}
-										width={isSmallScreen ? "150" : "200"}
+										height={isSmallScreen ? "255" : "300"}
+										width={isSmallScreen ? "170" : "200"}
 										className={styles.videoCardImage}
 									/>
 								</CardActionArea>
