@@ -16,20 +16,6 @@
 	}
 }
 
-.tab {
-	width: 60px;
-	max-width: 10px;
-	font-size: 10px;
-	letter-spacing: 0;
-
-	@include breakpoint(medium) {
-		max-width: 140px;
-		font-size: 14px;
-	}
-
-	@extend .hover;
-}
-
 .tab:first-child {
 	display: flex;
 	flex-direction: column;

@@ -63,7 +63,7 @@ export const Navbar = ({
 
 	const ensureTabsFit = (index: number) => {
 		const largeScreenTab = index === 0 ? "160px" : "120px";
-		return { minWidth: isSmallScreen ? "70px" : largeScreenTab };
+		return { minWidth: isSmallScreen ? "10px" : largeScreenTab };
 	};
 
 	return (
@@ -91,6 +91,7 @@ export const Navbar = ({
 							className={styles.tab}
 							style={{
 								order: item.order,
+								fontSize: "12px",
 								...tabStyles,
 							}}
 							key={index}

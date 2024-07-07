@@ -14,7 +14,8 @@ export const projectMetaData: ProjectMetaData[] = [
 			"Plan your next trip with confidence with this innovative travel budgeting app. The app combines data about countries' cost of living (food, activities, accommodation, etc) with your preferences and travel style to give you a personalized overview of your 'financial runway'. This means you can avoid any surprises from expensive countries in your itinerary and travel with peace of mind. Currently a simple proof of concept built using a React frontend and dotNET REST API on an SQLite database sourcing data from various external APIs.",
 		deployedURL: "https://budget-sherpa-ui.onrender.com/",
 		repoURL: "https://github.com/OperationFman/budget-sherpa",
-		uxURL: "https://www.figma.com/file/ApCULyiuQ1bLE5zNWAyJ6Y/Budget-Sherpa?type=design&node-id=0%3A1&mode=design&t=qT0PRFnojn70pu8m-1"
+		uxURL:
+			"https://www.figma.com/file/ApCULyiuQ1bLE5zNWAyJ6Y/Budget-Sherpa?type=design&node-id=0%3A1&mode=design&t=qT0PRFnojn70pu8m-1",
 	},
 	{
 		title: "Portfolio",
@@ -107,7 +108,7 @@ export const projectMetaData: ProjectMetaData[] = [
 		],
 		deployedURL: "https://opfman.pythonanywhere.com/",
 		subTitle:
-			"As a novice programmer, I embarked on my first programming project, which aimed to provide assistance to my partner and I during the COVID-19 pandemic in Japan. The web application, designed primarily for mobile devices, features a 'food roulette' mode, which allows us to store a list of our preferred meals and generates a random suggestion upon tapping the 'generate' button. Additionally, the app includes a straightforward currency conversion tool, which provides an instant comparison of purchasing power in different currencies relative to the Australian dollar. The application was constructed using Python and the Flask framework, and was hosted on PythonAnywhere.",
+			"As a novice programmer, I embarked on my first programming project, which aimed to provide assistance to us during the COVID-19 pandemic in Japan. The web application, designed primarily for mobile devices, features a 'food roulette' mode, which allows us to store a list of our preferred meals and generates a random suggestion upon tapping the 'generate' button. Additionally, the app includes a straightforward currency conversion tool, which provides an instant comparison of purchasing power in different currencies relative to the Australian dollar. The application was constructed using Python and the Flask framework, and was hosted on PythonAnywhere.",
 		repoURL: "https://github.com/OperationFman/Krank",
 	},
 ];
