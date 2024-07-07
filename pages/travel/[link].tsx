@@ -13,7 +13,6 @@ import {
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Grid } from "@mui/material";
-import { useState } from "react";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -27,9 +26,6 @@ const VideoContent = ({
 		metaData as TravelVideoMetaData;
 
 	const upNextMetaData = upNext as TravelVideoMetaData[];
-
-	const [loading, setLoading] = useState(true);
-	const [videoError, setVideoError] = useState(false);
 
 	if (!metaData) {
 		return <ErrorContent />;
@@ -49,20 +45,15 @@ const VideoContent = ({
 					volume={0.3}
 					height='100%'
 					width='100%'
-					onError={() => !loading && setVideoError(true)}
-					className={videoError && styles.hideVideo}
 				/>
 
-				{videoError && (
-					<div className={styles.errorContainer}>
-						<span>Not working?</span>
-						<span
-							onClick={() => window.open(backupLink, "_blank")}
-							className={styles.backupLink}>
-							Click Here
-						</span>
-					</div>
-				)}
+				<div className={styles.errorContainer}>
+					<h5
+						onClick={() => window.open(backupLink, "_blank")}
+						className={styles.backupLink}>
+						Alternative Video Link
+					</h5>
+				</div>
 
 				{(instagramLinks || reelLinks) && (
 					<div className={styles.socialContainer}>
@@ -75,8 +66,8 @@ const VideoContent = ({
 											<div className={styles.reelWrapper}>
 												<InstagramEmbed
 													url={reel}
-													width={420}
-													onLoad={() => setLoading(false)}
+													width={350}
+													placeholderSpinner={<></>}
 												/>
 											</div>
 										</Grid>
@@ -86,12 +77,12 @@ const VideoContent = ({
 							{instagramLinks &&
 								instagramLinks.map((link) => {
 									return (
-										<Grid item key={link} className={styles.embeddedPost}>
-											<InstagramEmbed
-												url={link}
-												width={420}
-												onLoad={() => setLoading(false)}
-											/>
+										<Grid
+											item
+											key={link}
+											className={styles.embeddedPost}
+											placeholderSpinner={<></>}>
+											<InstagramEmbed url={link} width={350} />
 										</Grid>
 									);
 								})}
@@ -99,23 +90,21 @@ const VideoContent = ({
 					</div>
 				)}
 
-				{!videoError && (
-					<div className={styles.upNextContainer}>
-						{upNextMetaData.length >= 1 ? (
-							<>
-								<h2>Up Next...</h2>
-								<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
-							</>
-						) : (
-							<>
-								<h2>From The Start...</h2>
-								<VideoLibrary
-									videoMetaData={[...travelVideoMetaData].reverse()}
-								/>
-							</>
-						)}
-					</div>
-				)}
+				<div className={styles.upNextContainer}>
+					{upNextMetaData.length >= 1 ? (
+						<>
+							<h2>Up Next...</h2>
+							<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
+						</>
+					) : (
+						<>
+							<h2>From The Start...</h2>
+							<VideoLibrary
+								videoMetaData={[...travelVideoMetaData].reverse()}
+							/>
+						</>
+					)}
+				</div>
 			</PageContainer>
 			<Footer />
 		</>
