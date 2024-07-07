@@ -5,7 +5,6 @@ import { Footer } from "../../utils/footer/Footer";
 import { TravelVideoMetaData } from "../../src/travel/types";
 import { getTravelMetaDataIndex } from "../../src/travel/travelDataService";
 import styles from "../../src/travel/index.module.scss";
-import AddToDriveIcon from "@mui/icons-material/AddToDrive";
 import ReactPlayer from "react-player";
 import {
 	publicCDNVideoUrl,

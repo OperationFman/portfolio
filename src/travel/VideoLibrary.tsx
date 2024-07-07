@@ -1,4 +1,3 @@
-import ScrollAnimation from "react-animate-on-scroll";
 import Image from "next/future/image";
 import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -6,15 +5,28 @@ import { TravelVideoMetaData } from "./types";
 import { CardActionArea, Grid } from "@mui/material";
 import styles from "./videolibrary.module.scss";
 import { hasRestrictionBypass, videoEnabled } from "./travelDataService";
-import router, { useRouter } from "next/router";
+import router from "next/router";
+import { useEffect, useState } from "react";
 
 export const VideoLibrary = ({
 	videoMetaData,
 }: {
 	videoMetaData: TravelVideoMetaData[];
 }): JSX.Element => {
+	const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+	useEffect(() => {
+		const checkScreenSize = () => {
+			setIsSmallScreen(window.innerWidth < 900);
+		};
+
+		checkScreenSize();
+		window.addEventListener("resize", checkScreenSize);
+		return () => window.removeEventListener("resize", checkScreenSize);
+	}, []);
+
 	return (
-		<Grid container>
+		<Grid container className={styles.gridContainer}>
 			{videoMetaData
 				.map((dataItem, videoIndex) => {
 					return (
@@ -46,8 +58,8 @@ export const VideoLibrary = ({
 									<Image
 										src={`/travel/posters/${dataItem.slug}.png`}
 										alt={`${dataItem.title} poster`}
-										height='300'
-										width='200'
+										height={isSmallScreen ? "225" : "300"}
+										width={isSmallScreen ? "150" : "200"}
 										className={styles.videoCardImage}
 									/>
 								</CardActionArea>
