@@ -2,10 +2,9 @@ import Image from "next/future/image";
 import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { TravelVideoMetaData } from "./types";
-import { CardActionArea, Grid } from "@mui/material";
+import { CardActionArea, Grid, LinearProgress } from "@mui/material";
 import styles from "./videolibrary.module.scss";
 import { hasRestrictionBypass, videoEnabled } from "./travelDataService";
-import router from "next/router";
 import { useEffect, useState } from "react";
 
 export const VideoLibrary = ({
@@ -14,6 +13,7 @@ export const VideoLibrary = ({
 	videoMetaData: TravelVideoMetaData[];
 }): JSX.Element => {
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
+	const [loading, setLoading] = useState({ state: false, index: -1 });
 
 	useEffect(() => {
 		const checkScreenSize = () => {
@@ -46,7 +46,8 @@ export const VideoLibrary = ({
 								className={styles.videoCardContainer}
 								onClick={() => {
 									if (videoEnabled(dataItem)) {
-										router.push(`/travel/${dataItem.link}`);
+										setLoading({ state: true, index: videoIndex });
+										// router.push(`/travel/${dataItem.link}`);
 									}
 								}}>
 								{dataItem.restricted && !hasRestrictionBypass() ? (
@@ -67,6 +68,11 @@ export const VideoLibrary = ({
 									width={isSmallScreen ? 148 : 200}
 									className={styles.videoCardImage}
 								/>
+								<div className={styles.loadingContainer}>
+									{loading.state && loading.index === videoIndex && (
+										<LinearProgress color='inherit' />
+									)}
+								</div>
 							</CardActionArea>
 						</div>
 					</Grid>

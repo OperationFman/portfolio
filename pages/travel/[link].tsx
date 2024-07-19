@@ -5,7 +5,6 @@ import { Footer } from "../../utils/footer/Footer";
 import { TravelVideoMetaData } from "../../src/travel/types";
 import {
 	getTravelMetaDataIndex,
-	hasRestrictionBypass,
 	videoEnabled,
 } from "../../src/travel/travelDataService";
 import styles from "../../src/travel/index.module.scss";
