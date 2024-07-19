@@ -17,7 +17,6 @@ import {
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Grid } from "@mui/material";
-import { useState } from "react";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
