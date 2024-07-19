@@ -41,7 +41,7 @@ const Home: NextPage = () => {
 				<Contact />
 			</PageContainer>
 			<HomeFooterImage />
-			<Footer />
+			<Footer isHomepage />
 		</>
 	);
 };
