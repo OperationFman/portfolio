@@ -39,6 +39,7 @@ const PageContent = ({
 			<Head>
 				<title>{title} - Franklin V Moon</title>
 				<meta name={subTitle} content={topic} />
+				<link rel='icon' href='/favicon-purple.ico' />
 			</Head>
 
 			<Container maxWidth={"md"} className={styles.contentPageContainer}>

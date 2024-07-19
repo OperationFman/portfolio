@@ -37,6 +37,12 @@ const VideoContent = ({
 	if (videoEnabled(metaData)) {
 		return (
 			<>
+			<Head>
+				<title>{title} - {year} - Franklin V Moon</title>
+				<meta name={title} content={title} />
+				<link rel='icon' href='/favicon-yellow.ico' />
+			</Head>
+
 				<PageContainer>
 					<h1 className={styles.title}>{title}</h1>
 					<h2 className={styles.year}>{year}</h2>

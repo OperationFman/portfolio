@@ -47,7 +47,7 @@ export const VideoLibrary = ({
 								onClick={() => {
 									if (videoEnabled(dataItem)) {
 										setLoading({ state: true, index: videoIndex });
-										// router.push(`/travel/${dataItem.link}`);
+										router.push(`/travel/${dataItem.link}`);
 									}
 								}}>
 								{dataItem.restricted && !hasRestrictionBypass() ? (
