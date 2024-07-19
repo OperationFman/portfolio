@@ -1,5 +1,6 @@
 import { InstagramEmbed } from "react-social-media-embed";
 import { InferGetServerSidePropsType } from "next";
+import Head from "next/head";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 import { Footer } from "../../utils/footer/Footer";
 import { TravelVideoMetaData } from "../../src/travel/types";
