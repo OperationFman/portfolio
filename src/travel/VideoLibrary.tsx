@@ -6,6 +6,7 @@ import { CardActionArea, Grid, LinearProgress } from "@mui/material";
 import styles from "./videolibrary.module.scss";
 import { hasRestrictionBypass, videoEnabled } from "./travelDataService";
 import { useEffect, useState } from "react";
+import router from "next/router";
 
 export const VideoLibrary = ({
 	videoMetaData,
