@@ -63,7 +63,7 @@ export const VideoLibrary = ({
 									/>
 								)}
 								<Image
-									src={`/travel/posters/${dataItem.slug}.png`}
+									src={`/travel/posters/${dataItem.hostedLink}.png`}
 									alt={`${dataItem.title} poster`}
 									height={isSmallScreen ? 232 : 300}
 									width={isSmallScreen ? 148 : 200}

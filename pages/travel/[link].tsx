@@ -26,8 +26,14 @@ const VideoContent = ({
 	metaData,
 	upNext,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-	const { title, year, slug, instagramLinks, reelLinks, backupLink } =
-		metaData as TravelVideoMetaData;
+	const {
+		title,
+		year,
+		hostedLink: slug,
+		instagramLinks,
+		reelLinks,
+		backupLink,
+	} = metaData as TravelVideoMetaData;
 
 	const upNextMetaData = upNext as TravelVideoMetaData[];
 
@@ -38,33 +44,41 @@ const VideoContent = ({
 	if (videoEnabled(metaData)) {
 		return (
 			<>
-			<Head>
-				<title>{title} - {year} - Franklin V Moon</title>
-				<meta name={title} content={title} />
-				<link rel='icon' href='/favicon-yellow.ico' />
-			</Head>
+				<Head>
+					<title>
+						{title} - {year} - Franklin V Moon
+					</title>
+					<meta name={title} content={title} />
+					<link rel='icon' href='/favicon-yellow.ico' />
+				</Head>
 
 				<PageContainer>
 					<h1 className={styles.title}>{title}</h1>
 					<h2 className={styles.year}>{year}</h2>
 
-					<ReactPlayer
-						url={`${publicCDNVideoUrl}${slug}.mp4`}
-						controls
-						pip
-						playing={true}
-						volume={0.3}
-						height='100%'
-						width='100%'
-					/>
+					{backupLink ? (
+						<>
+							<ReactPlayer
+								url={`${publicCDNVideoUrl}${slug}.mp4`}
+								controls
+								pip
+								playing={true}
+								volume={0.3}
+								height='100%'
+								width='100%'
+							/>
 
-					<div className={styles.errorContainer}>
-						<h5
-							onClick={() => window.open(backupLink, "_blank")}
-							className={styles.backupLink}>
-							Alternative Video Link
-						</h5>
-					</div>
+							<div className={styles.errorContainer}>
+								<h5
+									onClick={() => window.open(backupLink, "_blank")}
+									className={styles.backupLink}>
+									Alternative Video Link
+								</h5>
+							</div>
+						</>
+					) : (
+						<h2 className={styles.comingSoon}>Full-Length Video Coming Soon</h2>
+					)}
 
 					{(instagramLinks || reelLinks) && (
 						<div className={styles.socialContainer}>

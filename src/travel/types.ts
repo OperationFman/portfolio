@@ -1,9 +1,9 @@
 export type TravelVideoMetaData = {
 	title: string;
 	year: number;
-	slug: string;
+	hostedLink?: string;
 	link: string;
-	backupLink: string;
+	backupLink?: string;
 	restricted: boolean;
 	reelLinks?: string[];
 	instagramLinks?: string[];

@@ -7,7 +7,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "China",
 		year: 2017,
-		slug: "china",
+		hostedLink: "china",
 		link: "china",
 		backupLink:
 			"https://drive.google.com/file/d/1__yqFNE4pn1qb4HQaL8gVa0NptzwEXYm/view?usp=sharing",
@@ -16,7 +16,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Nepal",
 		year: 2018,
-		slug: "nepal",
+		hostedLink: "nepal",
 		link: "nepal",
 		backupLink:
 			"https://drive.google.com/file/d/146q73zYYICz71NWoRBZuaVU5cln0VilL/view?usp=sharing",
@@ -25,7 +25,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Indonesia",
 		year: 2019,
-		slug: "indonesia",
+		hostedLink: "indonesia",
 		link: "indonesia",
 		backupLink:
 			"https://drive.google.com/file/d/161aw78gaH8lEHlF2H-NR6B4LHnPr6rqI/view?usp=sharing",
@@ -34,7 +34,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Malaysia & Singapore",
 		year: 2019,
-		slug: "malaysiasingapore",
+		hostedLink: "malaysiasingapore",
 		link: "malaysia-singapore",
 		backupLink:
 			"https://drive.google.com/file/d/1slogZWzJDTvzFp7atsPj9UJZuhclFuuR/view?usp=sharing",
@@ -43,7 +43,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "New Zealand",
 		year: 2019,
-		slug: "newzealand",
+		hostedLink: "newzealand",
 		link: "new-zealand",
 		backupLink:
 			"https://drive.google.com/file/d/19qBZyyqC0jIHyHRFw33ROyMerbqalOJ1/view?usp=sharing",
@@ -52,7 +52,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Japan",
 		year: 2020,
-		slug: "japan",
+		hostedLink: "japan",
 		link: "japan",
 		backupLink:
 			"https://drive.google.com/file/d/1HYxY0t2p0f8vABavBfSSj2pGUW05x7Y6/view?usp=sharing",
@@ -61,7 +61,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Thailand",
 		year: 2022,
-		slug: "thailand",
+		hostedLink: "thailand",
 		link: "thailand",
 		backupLink:
 			"https://drive.google.com/file/d/1ib8sK0NSWDo4NMRhqlJIHqwD6iu7xI6O/view?usp=sharing",
@@ -70,7 +70,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "South Korea",
 		year: 2022,
-		slug: "southkorea",
+		hostedLink: "southkorea",
 		link: "south-korea",
 		backupLink:
 			"https://drive.google.com/file/d/1G2emPhFNvHV9JPtF_hyl0WbOzKLkTXOk/view?usp=sharing",
@@ -79,7 +79,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Sri Lanka",
 		year: 2022,
-		slug: "srilanka",
+		hostedLink: "srilanka",
 		link: "sri-lanka",
 		backupLink:
 			"https://drive.google.com/file/d/13gOi8XTHFCI-cInwD4hBGF1kblg0MJDa/view?usp=sharing",
@@ -88,7 +88,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "United Arab Emirates",
 		year: 2022,
-		slug: "uae",
+		hostedLink: "uae",
 		link: "uae",
 		backupLink:
 			"https://drive.google.com/file/d/1_Xv-xTZ054zoTKmPaPVmQgc49qH-Exfv/view?usp=sharing",
@@ -97,7 +97,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Fiji",
 		year: 2022,
-		slug: "fiji",
+		hostedLink: "fiji",
 		link: "fiji",
 		backupLink:
 			"https://drive.google.com/file/d/1tNjLg89P1bEa-q9rQu0_cCDQqCk7t9me/view?usp=sharing",
@@ -106,7 +106,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Cambodia, Laos and Vietnam",
 		year: 2023,
-		slug: "cambodialaosvietnam",
+		hostedLink: "cambodialaosvietnam",
 		link: "cambodia-laos-vietnam",
 		backupLink:
 			"https://drive.google.com/file/d/1aurSN-frLRNGPnGkr7GXN3yz87dMCvh6/view?usp=sharing",
@@ -126,7 +126,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Taiwan, Hong Kong and Macau",
 		year: 2023,
-		slug: "taiwanhongkongmacau",
+		hostedLink: "taiwanhongkongmacau",
 		link: "taiwan-hong-kong-macau",
 		backupLink:
 			"https://drive.google.com/file/d/1nriFFLbIwip3znUctlaBzX_eu-MyBe-R/view?usp=sharing",
@@ -147,7 +147,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "India",
 		year: 2023,
-		slug: "india",
+		hostedLink: "india",
 		link: "india",
 		backupLink:
 			"https://drive.google.com/file/d/1oIID6SrD0xK-EJ0l0aWIfGi4gdUwq9Ky/view?usp=sharing",
@@ -171,7 +171,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Oman",
 		year: 2023,
-		slug: "oman",
+		hostedLink: "oman",
 		link: "oman",
 		backupLink:
 			"https://drive.google.com/file/d/1FQux8SdlnL-idrPsbt2uF5OAfJW57CZa/view?usp=sharing",
@@ -186,7 +186,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Kuwait and Iraqi Kurdistan",
 		year: 2023,
-		slug: "kuwaitiraq",
+		hostedLink: "kuwaitiraq",
 		link: "kuwait-iraqi-kurdistan",
 		backupLink:
 			"https://drive.google.com/file/d/1iEokNO7kkZfvBYcrbPfTI3Fag_mPc-3b/view?usp=sharing",
@@ -203,7 +203,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Jordan",
 		year: 2023,
-		slug: "jordan",
+		hostedLink: "jordan",
 		link: "jordan",
 		backupLink:
 			"https://drive.google.com/file/d/1lSx97jlDxrnmCy6zBw649LKZPN7zh0-v/view?usp=sharing",
@@ -221,7 +221,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Saudi Arabia and Bahrain",
 		year: 2023,
-		slug: "saudiarabia",
+		hostedLink: "saudiarabia",
 		link: "saudi-arabia-bahrain",
 		backupLink:
 			"https://drive.google.com/file/d/1AWtoY6ESbq3ekar6CTzBr9NDTL6x9C2K/view?usp=sharing",
@@ -236,7 +236,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Iran",
 		year: 2023,
-		slug: "iran",
+		hostedLink: "iran",
 		link: "iran",
 		backupLink:
 			"https://drive.google.com/file/d/16QMDQAyduOzPYYQLAOPydbsKMXfNIZmD/view?usp=sharing",
@@ -255,7 +255,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
 		title: "Armenia, Georgia & Azerbaijan",
 		year: 2023,
-		slug: "armeniageorgiaazerbaijan",
+		hostedLink: "armeniageorgiaazerbaijan",
 		link: "armenia-georgia-azerbaijan",
 		backupLink:
 			"https://drive.google.com/file/d/13rY-ZUhIRiefPmC3LsovSL7DLvyl2MU_/view?usp=sharing",
@@ -274,7 +274,23 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CuWSIkQMRzy/?hl=en",
 			"https://www.instagram.com/p/CuWWQVoM7FU/?hl=en",
 			"https://www.instagram.com/p/CubhrkpMmYm/?hl=en",
-			
+		],
+	},
+	{
+		title: "Greece",
+		year: 2023,
+		hostedLink: "greece",
+		link: "greece",
+		restricted: true,
+		instagramLinks: [
+			"https://www.instagram.com/p/CufoGNOsExu/?hl=en",
+			"https://www.instagram.com/p/CuklIluLnZE/?hl=en",
+			"https://www.instagram.com/p/CuknIYYrTRi/?hl=en",
+			"https://www.instagram.com/p/Cup18pisDpr/?hl=en",
+			"https://www.instagram.com/p/CutX6yNsmrW/?hl=en",
+			"https://www.instagram.com/p/CuxVBypLGrt/?hl=en",
+			"https://www.instagram.com/p/CuxaFY_rTD3/?hl=en",
+			"https://www.instagram.com/p/Cu1rOL5M2B5/?hl=en",
 		],
 	},
 ];
