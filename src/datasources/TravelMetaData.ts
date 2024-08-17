@@ -252,4 +252,30 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CtrhaHNr2J9/?img_index=1",
 		],
 	},
+	{
+		title: "Armenia, Georgia & Azerbaijan",
+		year: 2023,
+		slug: "armeniageorgiaazerbaijan",
+		link: "armenia-georgia-azerbaijan",
+		backupLink:
+			"https://drive.google.com/file/d/13rY-ZUhIRiefPmC3LsovSL7DLvyl2MU_/view?usp=sharing",
+		restricted: false,
+		reelLinks: ["https://www.instagram.com/reel/C89yh6IS-3R/"],
+		instagramLinks: [
+			"https://www.instagram.com/reel/C-w6PVhib9V/?hl=en",
+			"https://www.instagram.com/p/CtupJTxLpN2/?hl=en",
+			"https://www.instagram.com/p/CtxSF9Isjco/?hl=en",
+			"https://www.instagram.com/p/Ct4xNkmrOpm/?hl=en",
+			"https://www.instagram.com/p/Ct7HgwUr25t/?hl=en",
+			"https://www.instagram.com/p/Ct-JkPVsuaU/?hl=en",
+			"https://www.instagram.com/p/CuDSxN0shnk/?hl=en",
+			"https://www.instagram.com/p/CuFqXixr8ES/?hl=en",
+			"https://www.instagram.com/p/CuKiuoBLq6p/?hl=en",
+			"https://www.instagram.com/p/CuQET6trR_g/?hl=en",
+			"https://www.instagram.com/p/CuWSIkQMRzy/?hl=en",
+			"https://www.instagram.com/p/CuWWQVoM7FU/?hl=en",
+			"https://www.instagram.com/p/CubhrkpMmYm/?hl=en",
+			
+		],
+	},
 ];
