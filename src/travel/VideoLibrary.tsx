@@ -1,6 +1,7 @@
 import Image from "next/future/image";
 import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import PlayDisabledOutlinedIcon from "@mui/icons-material/PlayDisabledOutlined";
 import { TravelVideoMetaData } from "./types";
 import { CardActionArea, Grid, LinearProgress } from "@mui/material";
 import styles from "./videolibrary.module.scss";
@@ -25,6 +26,29 @@ export const VideoLibrary = ({
 		window.addEventListener("resize", checkScreenSize);
 		return () => window.removeEventListener("resize", checkScreenSize);
 	}, []);
+
+	const posterIcon = (dataItem: TravelVideoMetaData) => {
+		if (dataItem.restricted && !hasRestrictionBypass()) {
+			return (
+				<LockOutlinedIcon
+					sx={{ height: "3.125rem", width: "3.125rem" }}
+					className={`${styles.videoButton} ${styles.lockButton}`}
+				/>
+			);
+		}
+
+		return dataItem.backupLink ? (
+			<PlayArrowTwoToneIcon
+				sx={{ height: "3.75rem", width: "3.75rem" }}
+				className={styles.videoButton}
+			/>
+		) : (
+			<PlayDisabledOutlinedIcon
+				sx={{ height: "3.75rem", width: "3.75rem" }}
+				className={styles.videoButton}
+			/>
+		);
+	};
 
 	return (
 		<Grid
@@ -51,17 +75,7 @@ export const VideoLibrary = ({
 										router.push(`/travel/${dataItem.link}`);
 									}
 								}}>
-								{dataItem.restricted && !hasRestrictionBypass() ? (
-									<LockOutlinedIcon
-										sx={{ height: "3.125rem", width: "3.125rem" }} // 50px
-										className={`${styles.videoButton} ${styles.lockButton}`}
-									/>
-								) : (
-									<PlayArrowTwoToneIcon
-										sx={{ height: "3.75rem", width: "3.75rem" }} // 60px
-										className={styles.videoButton}
-									/>
-								)}
+								{posterIcon(dataItem)}
 								<Image
 									src={`/travel/posters/${dataItem.hostedLink}.png`}
 									alt={`${dataItem.title} poster`}
