@@ -4,7 +4,6 @@ import { setDark } from "../../../../utils/configureCss/configureCss";
 
 import color from "../../../../themes/_colors.module.scss";
 import styles from "../Experience.module.scss";
-import ScrollAnimation from "react-animate-on-scroll";
 
 export const WorkExpListItem = ({
 	companyLogo,
@@ -39,24 +38,22 @@ export const WorkExpListItem = ({
 					className={styles.logo}
 				/>
 
-				<ScrollAnimation animateIn='fadeIn' animateOnce delay={index * 100}>
-					<div>{employerName}</div>
+				<div>{employerName}</div>
 
-					<div className={styles.location}>{employerLocation}</div>
-					<div className={`${styles.periodText} ${color.brightGrey}`}>
-						{periodWithEmployer}
-					</div>
-					{employerExperiences.map((experienceItem, index) => {
-						return (
-							<div key={index} className={styles.roles}>
-								<div className={styles.roleTitle}>{experienceItem.title}</div>
-								<div className={`${styles.rolePeriod}  ${color.brightGrey}`}>
-									{experienceItem.period}
-								</div>
+				<div className={styles.location}>{employerLocation}</div>
+				<div className={`${styles.periodText} ${color.brightGrey}`}>
+					{periodWithEmployer}
+				</div>
+				{employerExperiences.map((experienceItem, index) => {
+					return (
+						<div key={index} className={styles.roles}>
+							<div className={styles.roleTitle}>{experienceItem.title}</div>
+							<div className={`${styles.rolePeriod}  ${color.brightGrey}`}>
+								{experienceItem.period}
 							</div>
-						);
-					})}
-				</ScrollAnimation>
+						</div>
+					);
+				})}
 			</div>
 		</>
 	);

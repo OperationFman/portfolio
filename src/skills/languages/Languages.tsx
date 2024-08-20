@@ -1,6 +1,5 @@
 import { Button, Card, Grid } from "@mui/material";
 import { useState } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
 import { languagesMetaData } from "../../datasources/SkillsMetaData";
 import { MetaData } from "../types";
 import { LanguagesColumn } from "./LanguagesColumn";
@@ -24,16 +23,11 @@ export const Languages = ({
 						{languagesMetaData.map((columnData, index) => {
 							return (
 								<Grid item key={index}>
-									<ScrollAnimation
-										animateIn='fadeIn'
-										animateOnce
-										delay={index * 100}>
-										<LanguagesColumn
-											columnData={columnData}
-											isExpanded={expandLanguages}
-											handleOpenModal={handleOpenModal}
-										/>
-									</ScrollAnimation>
+									<LanguagesColumn
+										columnData={columnData}
+										isExpanded={expandLanguages}
+										handleOpenModal={handleOpenModal}
+									/>
 								</Grid>
 							);
 						})}

@@ -62,11 +62,7 @@ export const VideoLibrary = ({
 			{videoMetaData
 				.map((dataItem, videoIndex) => (
 					<Grid item key={`Video card of ${dataItem.title}`}>
-						<div
-							style={{
-								animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
-								opacity: 1,
-							}}>
+						<div>
 							<CardActionArea
 								className={styles.videoCardContainer}
 								onClick={() => {

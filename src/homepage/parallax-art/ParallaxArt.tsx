@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
 import { DarkMode } from "../../../themes/GlobalTheme";
 import { setDark } from "../../../utils/configureCss/configureCss";
 import styles from "./ParallaxArt.module.scss";
@@ -85,7 +84,7 @@ export const ParallaxArt = () => {
 	}, [darkMode, initialLoad]);
 
 	return (
-		<ScrollAnimation animateIn='fadeIn' animateOnce delay={100}>
+		<>
 			<div className={styles.outerContainer}>
 				<div className={styles.innerContainer}>
 					<div className={setDark(styles, "background")} />
@@ -281,6 +280,6 @@ export const ParallaxArt = () => {
 					/>
 				</div>
 			</div>
-		</ScrollAnimation>
+		</>
 	);
 };

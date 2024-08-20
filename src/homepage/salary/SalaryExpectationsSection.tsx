@@ -1,6 +1,5 @@
 import { Button, Card, FormGroup } from "@mui/material";
 import { useEffect, useState } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
 import { setDark } from "../../../utils/configureCss/configureCss";
 import {
 	EXPECTED_SALARY_WITH_NO_BENEFITS,
@@ -162,145 +161,143 @@ export const SalaryExpectationsSection = () => {
 
 	return (
 		<Card className={styles.cardContainer}>
-			<ScrollAnimation animateIn='fadeIn' animateOnce>
-				<div className={styles.heading}>
-					<div className={setDark(styles, "salaryNumber")}>
-						${commaSeparate(expectedSalary)}
-					</div>
-					<div className={setDark(styles, "salaryCurrency")}>USD</div>
+			<div className={styles.heading}>
+				<div className={setDark(styles, "salaryNumber")}>
+					${commaSeparate(expectedSalary)}
 				</div>
+				<div className={setDark(styles, "salaryCurrency")}>USD</div>
+			</div>
 
-				<div className={styles.subHeading}>Proposed Annual Salary</div>
+			<div className={styles.subHeading}>Proposed Annual Salary</div>
 
-				<FormGroup>
-					<div className={styles.formGroup}>
-						<div className={styles.leftColumn}>
-							<Gap />
-							<SalarySwitch
-								text={"Fully Remote"}
-								checked={fullyRemote}
-								onChange={() => setFullyRemote(!fullyRemote)}
-								description={
-									"Allows the employee complete flexibility to work from home or the office"
-								}
-							/>
-							<SalarySwitch
-								text={"Hybrid Remote"}
-								checked={hybridRemote}
-								onChange={() => setHybridRemote(!hybridRemote)}
-								description={
-									"The employee is mandated to work at the office some days of the week"
-								}
-							/>
-							<Gap />
+			<FormGroup>
+				<div className={styles.formGroup}>
+					<div className={styles.leftColumn}>
+						<Gap />
+						<SalarySwitch
+							text={"Fully Remote"}
+							checked={fullyRemote}
+							onChange={() => setFullyRemote(!fullyRemote)}
+							description={
+								"Allows the employee complete flexibility to work from home or the office"
+							}
+						/>
+						<SalarySwitch
+							text={"Hybrid Remote"}
+							checked={hybridRemote}
+							onChange={() => setHybridRemote(!hybridRemote)}
+							description={
+								"The employee is mandated to work at the office some days of the week"
+							}
+						/>
+						<Gap />
 
-							<SalarySwitch
-								text={"Ethical & Socially Aware"}
-								checked={ethical}
-								onChange={() => setEthical(!ethical)}
-								description={
-									"The company prioritizes fair hiring & promoting. Works to improve quality of life for the world and makes morally 'good' decisions"
-								}
-							/>
-							<SalarySwitch
-								text={"Strong Work-Life Balance"}
-								checked={workLifeBalance}
-								onChange={() => setWorkLifeBalance(!workLifeBalance)}
-								description={
-									"Employees are not expected to work outside of salaried hours and are encouraged to take breaks & holidays"
-								}
-							/>
-							<SalarySwitch
-								text={"No Recent Layoffs"}
-								checked={layoffFree}
-								onChange={() => setLayoffFree(!layoffFree)}
-								description={
-									"Has not laid off a large number of employees (>5% of the company) within the past 5 years"
-								}
-							/>
-							<SalarySwitch
-								text={"Flat Organizational Hierarchy"}
-								checked={flatHierarchy}
-								onChange={() => setFlatHierarchy(!flatHierarchy)}
-								description={
-									"An organization with few or no levels of management between staff and executives"
-								}
-							/>
-							<SalarySwitch
-								text={"Travel Opportunities"}
-								checked={internationalTravel}
-								onChange={() => setInternationalTravel(!internationalTravel)}
-								description={
-									"Opportunity to travel abroad short-term as a part of the role"
-								}
-							/>
-							<Gap />
-						</div>
-						<div className={styles.rightColumn}>
-							<SalaryInput
-								name={STOCK_OPTIONS}
-								title={"Stock Options & Shares"}
-								value={values.stock}
-								onChange={handleMoneyInputChange}
-								onClear={handleMoneyInputClear}
-								description={
-									"The value of public or private shares given to the employee, including restricted units"
-								}
-							/>
-							<SalaryInput
-								name={TRAINING_ALLOWANCES}
-								title={"Training Allowance"}
-								value={values.trainingAllowances}
-								onChange={handleMoneyInputChange}
-								onClear={handleMoneyInputClear}
-								description={
-									"Conferences, courses, course material, books and classes (Annually)"
-								}
-							/>
-							<SalaryInput
-								name={OTHER_ALLOWANCES}
-								title={"Other Benefits"}
-								value={values.otherAllowances}
-								onChange={handleMoneyInputChange}
-								onClear={handleMoneyInputClear}
-								description={
-									"Standing desk, Ergonomic chair, Gym membership, Public transport card, Therapy, Friday lunch etc (Annually)"
-								}
-							/>
-							<Gap />
-							<SalarySwitch
-								text={"International Relocation"}
-								checked={internationalRelocation}
-								onChange={() =>
-									setInternationalRelocation(!internationalRelocation)
-								}
-								description={
-									"Opportunities to relocate abroad long term or permanently"
-								}
-							/>
-							<SalarySwitch
-								text={"4-Day Work Week Allowed"}
-								checked={fourDays}
-								onChange={() => setFourDays(!fourDays)}
-								description={
-									"For a 20% reduction in pay the employee can work one less day each week"
-								}
-							/>
-						</div>
+						<SalarySwitch
+							text={"Ethical & Socially Aware"}
+							checked={ethical}
+							onChange={() => setEthical(!ethical)}
+							description={
+								"The company prioritizes fair hiring & promoting. Works to improve quality of life for the world and makes morally 'good' decisions"
+							}
+						/>
+						<SalarySwitch
+							text={"Strong Work-Life Balance"}
+							checked={workLifeBalance}
+							onChange={() => setWorkLifeBalance(!workLifeBalance)}
+							description={
+								"Employees are not expected to work outside of salaried hours and are encouraged to take breaks & holidays"
+							}
+						/>
+						<SalarySwitch
+							text={"No Recent Layoffs"}
+							checked={layoffFree}
+							onChange={() => setLayoffFree(!layoffFree)}
+							description={
+								"Has not laid off a large number of employees (>5% of the company) within the past 5 years"
+							}
+						/>
+						<SalarySwitch
+							text={"Flat Organizational Hierarchy"}
+							checked={flatHierarchy}
+							onChange={() => setFlatHierarchy(!flatHierarchy)}
+							description={
+								"An organization with few or no levels of management between staff and executives"
+							}
+						/>
+						<SalarySwitch
+							text={"Travel Opportunities"}
+							checked={internationalTravel}
+							onChange={() => setInternationalTravel(!internationalTravel)}
+							description={
+								"Opportunity to travel abroad short-term as a part of the role"
+							}
+						/>
+						<Gap />
 					</div>
-				</FormGroup>
-				<div className={styles.clearAllContainer}>
-					<Button
-						variant='outlined'
-						size='medium'
-						onClick={() => handleClearAll()}
-						disabled={disableClearAll}
-						className={styles.clearAllButton}>
-						Clear All
-					</Button>
+					<div className={styles.rightColumn}>
+						<SalaryInput
+							name={STOCK_OPTIONS}
+							title={"Stock Options & Shares"}
+							value={values.stock}
+							onChange={handleMoneyInputChange}
+							onClear={handleMoneyInputClear}
+							description={
+								"The value of public or private shares given to the employee, including restricted units"
+							}
+						/>
+						<SalaryInput
+							name={TRAINING_ALLOWANCES}
+							title={"Training Allowance"}
+							value={values.trainingAllowances}
+							onChange={handleMoneyInputChange}
+							onClear={handleMoneyInputClear}
+							description={
+								"Conferences, courses, course material, books and classes (Annually)"
+							}
+						/>
+						<SalaryInput
+							name={OTHER_ALLOWANCES}
+							title={"Other Benefits"}
+							value={values.otherAllowances}
+							onChange={handleMoneyInputChange}
+							onClear={handleMoneyInputClear}
+							description={
+								"Standing desk, Ergonomic chair, Gym membership, Public transport card, Therapy, Friday lunch etc (Annually)"
+							}
+						/>
+						<Gap />
+						<SalarySwitch
+							text={"International Relocation"}
+							checked={internationalRelocation}
+							onChange={() =>
+								setInternationalRelocation(!internationalRelocation)
+							}
+							description={
+								"Opportunities to relocate abroad long term or permanently"
+							}
+						/>
+						<SalarySwitch
+							text={"4-Day Work Week Allowed"}
+							checked={fourDays}
+							onChange={() => setFourDays(!fourDays)}
+							description={
+								"For a 20% reduction in pay the employee can work one less day each week"
+							}
+						/>
+					</div>
 				</div>
-				<Gap />
-			</ScrollAnimation>
+			</FormGroup>
+			<div className={styles.clearAllContainer}>
+				<Button
+					variant='outlined'
+					size='medium'
+					onClick={() => handleClearAll()}
+					disabled={disableClearAll}
+					className={styles.clearAllButton}>
+					Clear All
+				</Button>
+			</div>
+			<Gap />
 		</Card>
 	);
 };

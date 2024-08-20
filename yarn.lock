@@ -2267,13 +2267,6 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-animate-on-scroll@^2.1.8":
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/@types/react-animate-on-scroll/-/react-animate-on-scroll-2.1.8.tgz#6b0405226513297fad72692c3e242d1a2608a3ca"
-  integrity sha512-Lyd1hb1aY9T0bOUL3VE7bKuOlAv2nBziJg5piDLqW+jxzy5jCa/nIftsOpYxZ0+Sdo0wFXuI6tpLo6B0Q288IQ==
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-dom@^18.3.0":
   version "18.3.0"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.3.0.tgz#0cbc818755d87066ab6ca74fbedb2547d74a82b0"
@@ -5571,11 +5564,6 @@ lodash.merge@^4.6.2:
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
-lodash.throttle@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
-  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
-
 lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
@@ -5925,10 +5913,10 @@ nth-check@^2.0.1:
   dependencies:
     boolbase "^1.0.0"
 
-nuka-carousel@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-8.0.1.tgz#57e35f3b1507e3d746ed8afd897ff479e6c028fe"
-  integrity sha512-dnJBBU6psWT590GQwXApJlZQ5yReVwav4c+LImLaUwgzSZhDT6f1l/bGGOTzU9HqC70wZaHiZ/pWk0BJ+4VGZQ==
+nuka-carousel@^5.4.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-5.6.0.tgz#dec49c87d36a007056a5394b58f7ae99482e486e"
+  integrity sha512-pELQHcOTJ5yJvs7wtXD5J5pqBMHDfdI667V9jaEhJVr9VQKMwq87xXv5P1cXiNamJuT3g2zw30ic6Y4eII4ofA==
 
 object-assign@^4.1.1:
   version "4.1.1"
@@ -6248,7 +6236,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@15.8.1, prop-types@^15.5.9, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@15.8.1, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -6284,14 +6272,6 @@ quick-lru@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
-
-react-animate-on-scroll@^2.1.9:
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/react-animate-on-scroll/-/react-animate-on-scroll-2.1.9.tgz#feddee4c2881375df24af59c1c9fdacca4ab4467"
-  integrity sha512-E4PZLX6RDLLn+/iIMhnQrC1xU74ixGcCQ5/TBX8fBsaO+SnaU9VFoZLvIfUqVf3mH5HUNzO8wAqA11niot5Obw==
-  dependencies:
-    lodash.throttle "^4.1.1"
-    prop-types "^15.5.9"
 
 react-dom@^16.13.1:
   version "16.14.0"

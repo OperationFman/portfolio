@@ -13,7 +13,6 @@ import { Languages, SortOptions, Tags, Topic } from "../../src/tutorials/types";
 import { Footer } from "../../utils/footer/Footer";
 
 import styles from "../../src/tutorials/index.module.scss";
-import ScrollAnimation from "react-animate-on-scroll";
 import { getTutorialMetaData } from "../../src/tutorials/tutorialDataService";
 
 const Transition = slideTransition("right");
@@ -101,15 +100,9 @@ const Tutorials: NextPage = () => {
 					<Grid container className={styles.gridContainer}>
 						{metaData.map((dataItem, index) => {
 							return (
-								<ScrollAnimation
-									animateIn='fadeIn'
-									animateOnce
-									key={index}
-									delay={index * 50}>
-									<Grid item>
-										<TutorialCard cardData={dataItem} />
-									</Grid>
-								</ScrollAnimation>
+								<Grid item key={index}>
+									<TutorialCard cardData={dataItem} />
+								</Grid>
 							);
 						})}
 					</Grid>

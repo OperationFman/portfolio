@@ -5,7 +5,6 @@ import { setDark } from "../../../../utils/configureCss/configureCss";
 import color from "../../../../themes/_colors.module.scss";
 import styles from "../Experience.module.scss";
 import volunteerStyles from "./VolunteerListItem.module.scss";
-import ScrollAnimation from "react-animate-on-scroll";
 
 export const VolunteerListItem = ({
 	logo,
@@ -36,17 +35,15 @@ export const VolunteerListItem = ({
 					className={`${styles.logo} ${volunteerStyles.logo}`}
 				/>
 
-				<ScrollAnimation animateIn='fadeIn' animateOnce delay={index * 10}>
-					<div className={`${volunteerStyles.title}`}>{title}</div>
-					<div
-						className={`${styles.roleLocation} ${volunteerStyles.roleLocation} ${color.brightGrey}`}>
-						{location}
-					</div>
-					<div
-						className={`${styles.rolePeriod} ${volunteerStyles.rolePeriod} ${color.brightGrey}`}>
-						{year}
-					</div>
-				</ScrollAnimation>
+				<div className={`${volunteerStyles.title}`}>{title}</div>
+				<div
+					className={`${styles.roleLocation} ${volunteerStyles.roleLocation} ${color.brightGrey}`}>
+					{location}
+				</div>
+				<div
+					className={`${styles.rolePeriod} ${volunteerStyles.rolePeriod} ${color.brightGrey}`}>
+					{year}
+				</div>
 			</div>
 		</>
 	);

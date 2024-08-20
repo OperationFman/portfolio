@@ -1,6 +1,5 @@
-import { intervalToDuration } from "date-fns";
+import { Duration, intervalToDuration } from "date-fns";
 import { useEffect, useState } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
 // @ts-ignore
 import ReactTypingEffect from "react-typing-effect";
 import KeyboardDoubleArrowDownRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowDownRounded";
@@ -35,10 +34,7 @@ export const BioDescription = (): JSX.Element => {
 
 	return (
 		<div className={styles.outerContainer}>
-			<ScrollAnimation
-				animateIn='fadeIn'
-				animateOnce
-				className={styles.container}>
+			<div className={styles.container}>
 				<span className={styles.titleFont}>Franklin</span>
 				<span className={styles.titleFont}>{" V "}</span>
 				<span className={`${styles.titleFont} ${setDark(styles, "gradient")}`}>
@@ -61,27 +57,26 @@ export const BioDescription = (): JSX.Element => {
 
 				<span className={styles.backupAutoType}>Developer</span>
 
-				<ScrollAnimation animateIn='fadeIn' animateOnce delay={250}>
-					<main className={setDark(styles, "blurb")}>
-						Full-stack software developer with a passion for user centric
-						design, volunteering globally and advocating for social change
-						<br />
-						<br />
-						Practicing professional for{" "}
-						{pluralTime("year", periodWorked?.years)}{" "}
-						{pluralTime("month", periodWorked?.months)}{" "}
-						{pluralTime("day", periodWorked?.days)}{" "}
-						{pluralTime("hour", periodWorked?.hours)}
-						{" and "}
-						{pluralTime("minute", periodWorked?.minutes)}{" "}
-					</main>
-				</ScrollAnimation>
-				<ScrollAnimation animateIn='fadeIn' animateOnce delay={1000}>
-					<KeyboardDoubleArrowDownRoundedIcon
-						className={styles.scrollIndicator}
-					/>
-				</ScrollAnimation>
-			</ScrollAnimation>
+				<main className={setDark(styles, "blurb")}>
+					Full-stack software developer with a passion for user centric design,
+					volunteering globally and advocating for social change
+					<br />
+					<br />
+					Practicing professional for {pluralTime(
+						"year",
+						periodWorked?.years,
+					)}{" "}
+					{pluralTime("month", periodWorked?.months)}{" "}
+					{pluralTime("day", periodWorked?.days)}{" "}
+					{pluralTime("hour", periodWorked?.hours)}
+					{" and "}
+					{pluralTime("minute", periodWorked?.minutes)}{" "}
+				</main>
+
+				<KeyboardDoubleArrowDownRoundedIcon
+					className={styles.scrollIndicator}
+				/>
+			</div>
 		</div>
 	);
 };

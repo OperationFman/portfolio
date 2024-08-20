@@ -1,5 +1,4 @@
 import { Grid } from "@mui/material";
-import ScrollAnimation from "react-animate-on-scroll";
 import { qualificationMetaData } from "../../datasources/HomepageMetaData";
 import { SubHeading } from "../SubHeading";
 import { QualificationCard } from "./QualificationCard";
@@ -13,16 +12,11 @@ export const Qualifications = () => {
 				{qualificationMetaData.map((item, index) => {
 					return (
 						<Grid item key={index}>
-							<ScrollAnimation
-								animateIn='fadeIn'
-								animateOnce
-								delay={index * 100}>
-								<QualificationCard
-									logo={item.logo}
-									title={item.title}
-									location={item.location}
-								/>
-							</ScrollAnimation>
+							<QualificationCard
+								logo={item.logo}
+								title={item.title}
+								location={item.location}
+							/>
 						</Grid>
 					);
 				})}

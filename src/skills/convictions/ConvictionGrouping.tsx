@@ -1,4 +1,3 @@
-import ScrollAnimation from "react-animate-on-scroll";
 import { setDark } from "../../../utils/configureCss/configureCss";
 import { splitStringAtFullStop } from "../../../utils/split-string/splitStringAtFullStop";
 import { ConvictionsRow } from "../types";
@@ -15,11 +14,7 @@ export const ConvictionGrouping = ({
 	const blurbArray = splitStringAtFullStop(grouping.blurb);
 
 	return (
-		<ScrollAnimation
-			animateIn='fadeIn'
-			animateOnce
-			delay={index * 100}
-			className={styles.grouping}>
+		<div className={styles.grouping}>
 			<h2 className={styles.title}>{grouping.title}</h2>
 			{blurbArray.map((sentence, index) => {
 				return (
@@ -28,6 +23,6 @@ export const ConvictionGrouping = ({
 					</div>
 				);
 			})}
-		</ScrollAnimation>
+		</div>
 	);
 };
