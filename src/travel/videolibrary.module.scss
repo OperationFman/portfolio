@@ -14,11 +14,26 @@
 	border-radius: 50%;
 	transform: translate(-50%, -50%);
 	transition: linear 150ms;
-	opacity: 0;
+	opacity: 0.8;
+
+	@include breakpoint(medium) {
+		opacity: 0;
+	}
 
 	&:hover {
 		filter: brightness(0.8);
 	}
+}
+
+.newestVideo {
+	position: absolute;
+	text-align: center;
+	top: -0.625rem;
+	padding: 0.25rem 0;
+	width: 100%;
+	background-color: $defaultYellow;
+	color: black;
+	opacity: 0.9;
 }
 
 .videoCardContainer {
@@ -47,7 +62,8 @@
 }
 
 .videoCardImage {
-	border-radius: 0.325rem; /* 5px */
+	border-radius: 0.325rem;
+	box-shadow: $defaultShadow;
 }
 
 .loadingContainer {

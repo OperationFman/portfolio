@@ -7,4 +7,5 @@ export type TravelVideoMetaData = {
 	restricted: boolean;
 	reelLinks?: string[];
 	instagramLinks?: string[];
+	newestVideo?: boolean;
 };

@@ -275,6 +275,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CuWWQVoM7FU/?hl=en",
 			"https://www.instagram.com/p/CubhrkpMmYm/?hl=en",
 		],
+		newestVideo: true,
 	},
 	{
 		title: "Greece",
