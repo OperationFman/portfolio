@@ -1,8 +1,7 @@
 import Image from "next/image";
 import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import PlayDisabledOutlinedIcon from "@mui/icons-material/PlayDisabledOutlined";
-import NewReleasesRoundedIcon from "@mui/icons-material/NewReleasesRounded";
+import NoPhotographyRoundedIcon from "@mui/icons-material/NoPhotographyRounded";
 import { TravelVideoMetaData } from "./types";
 import { CardActionArea, Grid, LinearProgress } from "@mui/material";
 import styles from "./videolibrary.module.scss";
@@ -44,8 +43,8 @@ export const VideoLibrary = ({
 				className={styles.videoButton}
 			/>
 		) : (
-			<PlayDisabledOutlinedIcon
-				sx={{ height: "3.75rem", width: "3.75rem" }}
+			<NoPhotographyRoundedIcon
+				sx={{ height: "2.75rem", width: "2.75rem" }}
 				className={styles.videoButton}
 			/>
 		);
@@ -62,7 +61,10 @@ export const VideoLibrary = ({
 			}}>
 			{videoMetaData
 				.map((dataItem, videoIndex) => (
-					<Grid item key={`Video card of ${dataItem.title}`}>
+					<Grid
+						item
+						key={`Video card of ${dataItem.title}`}
+						xs={isSmallScreen && 6}>
 						<div>
 							<CardActionArea
 								className={styles.videoCardContainer}
@@ -74,14 +76,15 @@ export const VideoLibrary = ({
 								}}>
 								{posterIcon(dataItem)}
 								{dataItem.newestVideo && (
-									<h4 className={styles.newestVideo}>LATEST VIDEO</h4>
+									<h5 className={styles.newestVideo}>LATEST VIDEO</h5>
 								)}
 								<Image
 									src={`/travel/posters/${dataItem.hostedLink}.png`}
 									alt={`${dataItem.title} poster`}
-									height={isSmallScreen ? 232 : 300}
-									width={isSmallScreen ? 148 : 200}
 									className={styles.videoCardImage}
+									height={300}
+									width={200}
+									layout='responsive'
 								/>
 								<div className={styles.loadingContainer}>
 									{loading.state && loading.index === videoIndex && (

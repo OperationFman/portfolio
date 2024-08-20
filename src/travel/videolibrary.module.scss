@@ -7,8 +7,8 @@
 
 .videoButton {
 	position: absolute;
-	height: 3.125rem; /* 50px */
-	width: 3.125rem; /* 50px */
+	height: 3.125rem;
+	width: 3.125rem;
 	top: 50%;
 	left: 50%;
 	border-radius: 50%;
@@ -28,12 +28,13 @@
 .newestVideo {
 	position: absolute;
 	text-align: center;
-	top: -0.625rem;
+	margin: 0;
 	padding: 0.25rem 0;
 	width: 100%;
 	background-color: $defaultYellow;
 	color: black;
-	opacity: 0.9;
+	opacity: 0.85;
+	border-radius: 4px 4px 0 0;
 }
 
 .videoCardContainer {
@@ -64,6 +65,7 @@
 .videoCardImage {
 	border-radius: 0.325rem;
 	box-shadow: $defaultShadow;
+	max-height: 300px;
 }
 
 .loadingContainer {

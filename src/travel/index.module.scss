@@ -73,3 +73,19 @@
 	color: $defaultBlue;
 	cursor: pointer;
 }
+
+.comingSoon {
+	text-align: center;
+
+	@include breakpoint(medium) {
+		padding: 0 200px 0 200px;
+	}
+}
+
+.noVideoImage {
+	opacity: 0.8;
+
+	&:hover {
+		filter: brightness(0.8);
+	}
+}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { InstagramEmbed } from "react-social-media-embed";
 import { InferGetServerSidePropsType } from "next";
 import Head from "next/head";
@@ -77,7 +78,19 @@ const VideoContent = ({
 							</div>
 						</>
 					) : (
-						<h2 className={styles.comingSoon}>Full-Length Video Coming Soon</h2>
+						<div className={styles.comingSoon}>
+							<Image
+								src={"/travel/editingAstronaut.png"}
+								alt={"No video placeholder image"}
+								height={300}
+								width={640}
+								object-fit='cover'
+								layout='responsive'
+								className={styles.noVideoImage}
+							/>
+
+							<h2>Video Coming Soon</h2>
+						</div>
 					)}
 
 					{(instagramLinks || reelLinks) && (
