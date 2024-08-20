@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import { DarkMode } from "../../../themes/GlobalTheme";

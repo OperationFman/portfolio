@@ -1,5 +1,5 @@
 import CommitIcon from "@mui/icons-material/Commit";
-import Image from "next/future/image";
+import Image from "next/image";
 import { setDark } from "../../../../utils/configureCss/configureCss";
 
 import color from "../../../../themes/_colors.module.scss";

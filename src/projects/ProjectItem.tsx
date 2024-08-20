@@ -19,7 +19,7 @@ export const ProjectItem = ({
 	const subTitleArray = splitStringAtFullStop(metaData.subTitle);
 
 	return (
-		<div className={styles.container}>
+        <div className={styles.container}>
 			<h2 className={styles.title}>{metaData.title}</h2>
 			<ExternalLinkButtons metaData={metaData} />
 			<Carousel
@@ -42,11 +42,14 @@ export const ProjectItem = ({
 				{metaData.images.map((item, index) => (
 					<div className={styles.image} key={index}>
 						<Image
-							src={item}
-							width={1280}
-							height={720}
-							alt={`Image of my ${metaData.title} project`}
-						/>
+                            src={item}
+                            width={1280}
+                            height={720}
+                            alt={`Image of my ${metaData.title} project`}
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
 					</div>
 				))}
 			</Carousel>
@@ -61,5 +64,5 @@ export const ProjectItem = ({
 				})}
 			</div>
 		</div>
-	);
+    );
 };

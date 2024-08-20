@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import PlayDisabledOutlinedIcon from "@mui/icons-material/PlayDisabledOutlined";
