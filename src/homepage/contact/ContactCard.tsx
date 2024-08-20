@@ -30,9 +30,7 @@ export const ContactCard = ({
 				<button className={setDark(styles, "contactMethod")}>
 					{contactMethod}
 				</button>
-				<ShowIf condition={value}>
-					<div className={styles.contactSubtitle}>{value}</div>
-				</ShowIf>
+				{value && <div className={styles.contactSubtitle}>{value}</div>}
 			</div>
 		</Card>
 	);
