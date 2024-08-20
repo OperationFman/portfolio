@@ -1,6 +1,5 @@
 import { Card } from "@mui/material";
 import { setDark } from "../../../utils/configureCss/configureCss";
-import ShowIf from "../../../utils/show-if/ShowIf";
 
 import styles from "./Contact.module.scss";
 

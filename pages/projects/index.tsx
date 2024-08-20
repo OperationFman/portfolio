@@ -33,7 +33,7 @@ const Projects: NextPage = () => {
 
 			<PageContainer>
 				{projectMetaData.map((dataItem, index) => {
-					return <ProjectItem metaData={dataItem} />;
+					return <ProjectItem metaData={dataItem} key={index} />;
 				})}
 			</PageContainer>
 			<Footer />

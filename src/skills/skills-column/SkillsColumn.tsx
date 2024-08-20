@@ -20,7 +20,7 @@ export const SkillsColumn = ({
 			<div className={styles.dataContainer}>
 				{metaData.map((grouping, index) => {
 					return (
-						<div className={styles.skillsGroupingContainer}>
+						<div key={index} className={styles.skillsGroupingContainer}>
 							<h2 className={styles.skillsHeading}>{grouping.title}</h2>
 							<SkillsGrouping
 								grouping={grouping}
