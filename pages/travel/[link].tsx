@@ -9,6 +9,7 @@ import { TravelVideoMetaData } from "../../src/travel/types";
 import {
 	getTravelMetaDataIndex,
 	videoEnabled,
+	filterTravelVideosWithBackupLink,
 } from "../../src/travel/travelDataService";
 import styles from "../../src/travel/index.module.scss";
 import ReactPlayer from "react-player";
@@ -44,7 +45,9 @@ const VideoContent = ({
 		setIsLoading(false);
 	}, 5000);
 
-	const upNextMetaData = upNext as TravelVideoMetaData[];
+	const upNextMetaData = filterTravelVideosWithBackupLink(
+		upNext as TravelVideoMetaData[],
+	);
 
 	if (!metaData) {
 		return <ErrorContent />;
@@ -155,7 +158,9 @@ const VideoContent = ({
 							<>
 								<h2>From The Start...</h2>
 								<VideoLibrary
-									videoMetaData={[...travelVideoMetaData].reverse()}
+									videoMetaData={[
+										...filterTravelVideosWithBackupLink(travelVideoMetaData),
+									].reverse()}
 								/>
 							</>
 						)}
