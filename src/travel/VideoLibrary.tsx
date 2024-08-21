@@ -67,7 +67,7 @@ export const VideoLibrary = ({
 						xs={isSmallScreen && 6}>
 						<div
 							style={{
-								animation: `fadeIn ${videoIndex}000ms ease-in-out`,
+								animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
 								opacity: 1,
 							}}>
 							<CardActionArea
