@@ -5,10 +5,20 @@
 	margin-bottom: 2.5rem;
 }
 
-.sortButtonContainer {
+.sortToggleContainer {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	align-items: center;
+}
+
+.videoToggleContainer {
+	color: $brightGrey;
+
+	&:hover,
+	&:focus {
+		color: $defaultYellow;
+		cursor: pointer;
+	}
 }
 
 .yearHeadingContainer {
@@ -17,7 +27,7 @@
 	justify-content: space-between;
 
 	@include breakpoint(small) {
-		padding-right: 75px;
+		padding-right: 4.688rem;
 	}
 }
 
@@ -88,7 +98,7 @@
 	text-align: center;
 
 	@include breakpoint(medium) {
-		padding: 0 200px 0 200px;
+		padding: 0 12.5rem 0 12.5rem;
 	}
 }
 

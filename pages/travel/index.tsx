@@ -1,21 +1,32 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
+import VideocamOffRoundedIcon from "@mui/icons-material/VideocamOffRounded";
+import VideocamRoundedIcon from "@mui/icons-material/VideocamRounded";
 import { Footer } from "../../utils/footer/Footer";
 import styles from "../../src/travel/index.module.scss";
 import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
 import {
+	filterTravelVideosWithBackupLink,
 	groupVideosByYear,
 	sortYears,
 } from "../../src/travel/travelDataService";
+import Zoom from "@mui/material/Zoom";
 import { useEffect, useState } from "react";
 import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import { SortOptions } from "../../src/tutorials/types";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
+import { Button, Tooltip } from "@mui/material";
 
 const Travel: NextPage = () => {
-	const metaDataGroupedByYear = groupVideosByYear(travelVideoMetaData);
+	const [videoReadyOnly, setVideoReadyOnly] = useState(false);
+
+	const filteredTravelVideos = videoReadyOnly
+		? filterTravelVideosWithBackupLink(travelVideoMetaData)
+		: travelVideoMetaData;
+
+	const metaDataGroupedByYear = groupVideosByYear(filteredTravelVideos);
 
 	const [sortBy, setSortBy] = useState<SortOptions>(SortOptions.Newest);
 	const [sortedMetaData, setSortedMetaData] = useState(
@@ -27,7 +38,7 @@ const Travel: NextPage = () => {
 
 	useEffect(() => {
 		setSortedMetaData(sortYears(sortBy, metaDataGroupedByYear));
-	}, [sortBy]);
+	}, [sortBy, videoReadyOnly]);
 
 	return (
 		<div>
@@ -70,10 +81,25 @@ const Travel: NextPage = () => {
 										<h2 className={styles.yearHeadingText}>{year}</h2>
 									</div>
 									{index === 0 && (
-										<SortButton
-											setSortMetaDataBy={setSortBy}
-											alphabetical={false}
-										/>
+										<div className={styles.sortToggleContainer}>
+											<Tooltip
+												TransitionComponent={Zoom}
+												title='Show only countries with playable videos'>
+												<Button
+													className={styles.videoToggleContainer}
+													onClick={() => setVideoReadyOnly(!videoReadyOnly)}>
+													{videoReadyOnly ? (
+														<VideocamRoundedIcon />
+													) : (
+														<VideocamOffRoundedIcon />
+													)}
+												</Button>
+											</Tooltip>
+											<SortButton
+												setSortMetaDataBy={setSortBy}
+												alphabetical={false}
+											/>
+										</div>
 									)}
 								</div>
 								<VideoLibrary videoMetaData={metaData} />

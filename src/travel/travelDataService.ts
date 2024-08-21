@@ -73,3 +73,9 @@ export const videoEnabled = (videoMetaData: TravelVideoMetaData) => {
 		}
 	}
 };
+
+export const filterTravelVideosWithBackupLink = (
+	travelVideoMetaData: TravelVideoMetaData[],
+) => {
+	return travelVideoMetaData.filter((data) => data.backupLink !== undefined);
+};

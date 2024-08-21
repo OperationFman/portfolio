@@ -1,7 +1,7 @@
 import Image from "next/image";
 import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import NoPhotographyRoundedIcon from "@mui/icons-material/NoPhotographyRounded";
+import VideocamOffRoundedIcon from "@mui/icons-material/VideocamOffRounded";
 import { TravelVideoMetaData } from "./types";
 import { CardActionArea, Grid, LinearProgress } from "@mui/material";
 import styles from "./videolibrary.module.scss";
@@ -43,7 +43,7 @@ export const VideoLibrary = ({
 				className={styles.videoButton}
 			/>
 		) : (
-			<NoPhotographyRoundedIcon
+			<VideocamOffRoundedIcon
 				sx={{ height: "2.75rem", width: "2.75rem" }}
 				className={styles.videoButton}
 			/>
@@ -65,7 +65,11 @@ export const VideoLibrary = ({
 						item
 						key={`Video card of ${dataItem.title}`}
 						xs={isSmallScreen && 6}>
-						<div>
+						<div
+							style={{
+								animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
+								opacity: 1,
+							}}>
 							<CardActionArea
 								className={styles.videoCardContainer}
 								onClick={() => {
