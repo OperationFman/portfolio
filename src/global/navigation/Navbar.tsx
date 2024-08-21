@@ -88,7 +88,7 @@ export const Navbar = ({
 								)
 							}
 							icon={item.icon(tabIndex)}
-							className={styles.tab}
+							className={`${styles.tab} ${styles.hover}`}
 							style={{
 								order: item.order,
 								fontSize: isSmallScreen ? "0.7rem" : "0.9rem",

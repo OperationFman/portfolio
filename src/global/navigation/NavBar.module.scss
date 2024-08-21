@@ -12,7 +12,7 @@
 .hover {
 	&:hover {
 		background-color: $mediumGrey;
-		transition: linear 400ms;
+		transition: linear 500ms ease-in-out;
 	}
 }
 
