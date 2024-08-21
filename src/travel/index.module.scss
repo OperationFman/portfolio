@@ -48,7 +48,17 @@
 	margin-top: 6.25rem;
 	max-width: 100vw;
 	overflow: hidden;
-	display: hidden;
+	flex-shrink: 0;
+}
+
+.loadingSpinner {
+	color: $defaultYellow;
+	display: flex;
+	justify-content: center;
+}
+
+.loadingEmbed {
+	display: none;
 }
 
 .gridContainer {

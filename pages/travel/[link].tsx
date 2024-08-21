@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { InstagramEmbed } from "react-social-media-embed";
 import { InferGetServerSidePropsType } from "next";
+import CircularProgress from "@mui/material/CircularProgress";
 import Head from "next/head";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 import { Footer } from "../../utils/footer/Footer";
@@ -18,6 +19,7 @@ import {
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Grid } from "@mui/material";
+import { useState } from "react";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -35,6 +37,12 @@ const VideoContent = ({
 		reelLinks,
 		backupLink,
 	} = metaData as TravelVideoMetaData;
+
+	const [isLoading, setIsLoading] = useState(true);
+
+	setTimeout(() => {
+		setIsLoading(false);
+	}, 5000);
 
 	const upNextMetaData = upNext as TravelVideoMetaData[];
 
@@ -96,7 +104,16 @@ const VideoContent = ({
 					{(instagramLinks || reelLinks) && (
 						<div className={styles.socialContainer}>
 							<h2>Instagram</h2>
-							<Grid container className={styles.gridContainer}>
+							{isLoading && (
+								<div className={styles.loadingSpinner}>
+									<CircularProgress color='inherit' />
+								</div>
+							)}
+							<Grid
+								container
+								className={`${styles.gridContainer} ${
+									isLoading ? styles.loadingEmbed : ""
+								}`}>
 								{reelLinks &&
 									reelLinks.map((reel) => {
 										return (
@@ -116,7 +133,11 @@ const VideoContent = ({
 									instagramLinks.map((link) => {
 										return (
 											<Grid item key={link} className={styles.embeddedPost}>
-												<InstagramEmbed url={link} width={350} />
+												<InstagramEmbed
+													url={link}
+													width={350}
+													onLoad={() => setIsLoading(false)}
+												/>
 											</Grid>
 										);
 									})}
