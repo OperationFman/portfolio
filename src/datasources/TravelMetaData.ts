@@ -258,7 +258,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "armeniageorgiaazerbaijan",
 		link: "armenia-georgia-azerbaijan",
 		backupLink:
-			"https://drive.google.com/file/d/13rY-ZUhIRiefPmC3LsovSL7DLvyl2MU_/view?usp=sharing",
+			"https://drive.google.com/file/d/1z3K7_CSrSVdOv3YAqw0nva_I9IJVbRB6/view?usp=sharing",
 		restricted: false,
 		reelLinks: ["https://www.instagram.com/reel/C-w6PVhib9V/?hl=en"],
 		instagramLinks: [
