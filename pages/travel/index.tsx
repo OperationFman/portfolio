@@ -68,7 +68,11 @@ const Travel: NextPage = () => {
 						return (
 							<div
 								key={`Videos from ${year}`}
-								className={styles.libraryContainer}>
+								className={styles.libraryContainer}
+								style={{
+									animation: `fadeIn ${index}00ms ease-in-out`,
+									opacity: 1,
+								}}>
 								<div className={styles.yearHeadingContainer}>
 									<div className={styles.yearHeading}>
 										<NavigateNextRoundedIcon
@@ -84,7 +88,7 @@ const Travel: NextPage = () => {
 										<div className={styles.sortToggleContainer}>
 											<Tooltip
 												TransitionComponent={Zoom}
-												title='Only show countries with videos'>
+												title='Show all countries, including those without videos'>
 												<Button
 													className={styles.videoToggleContainer}
 													onClick={() => setVideoReadyOnly(!videoReadyOnly)}>
