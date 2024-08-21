@@ -46,8 +46,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "newzealand",
 		link: "new-zealand",
 		backupLink:
-			"https://drive.google.com/file/d/19qBZyyqC0jIHyHRFw33ROyMerbqalOJ1/view?usp=sharing",
-		restricted: true,
+			"https://drive.google.com/file/d/1LGP1-IFj6axNRF2Kmw3WAiThw4CevFjs/view?usp=sharing",
+		restricted: false,
 	},
 	{
 		title: "Japan",
