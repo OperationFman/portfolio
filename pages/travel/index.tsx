@@ -20,7 +20,7 @@ import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Button, Tooltip } from "@mui/material";
 
 const Travel: NextPage = () => {
-	const [videoReadyOnly, setVideoReadyOnly] = useState(false);
+	const [videoReadyOnly, setVideoReadyOnly] = useState(true);
 
 	const filteredTravelVideos = videoReadyOnly
 		? filterTravelVideosWithBackupLink(travelVideoMetaData)
@@ -84,7 +84,7 @@ const Travel: NextPage = () => {
 										<div className={styles.sortToggleContainer}>
 											<Tooltip
 												TransitionComponent={Zoom}
-												title='Show only countries with playable videos'>
+												title='Only show countries with videos'>
 												<Button
 													className={styles.videoToggleContainer}
 													onClick={() => setVideoReadyOnly(!videoReadyOnly)}>
