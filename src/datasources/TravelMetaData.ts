@@ -275,13 +275,14 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CuWWQVoM7FU/?hl=en",
 			"https://www.instagram.com/p/CubhrkpMmYm/?hl=en",
 		],
-		newestVideo: true,
 	},
 	{
 		title: "Greece",
 		year: 2023,
 		hostedLink: "greece",
 		link: "greece",
+		backupLink: 
+			"https://drive.google.com/file/d/1MeR97lcIr9pICYWFPE2JrSuLcSnFD88z/view?usp=sharing",
 		restricted: false,
 		instagramLinks: [
 			"https://www.instagram.com/p/CufoGNOsExu/?hl=en",
@@ -294,6 +295,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Cu1rOL5M2B5/?hl=en",
 			"https://www.instagram.com/p/Cu5JTCbrApq/?hl=en"
 		],
+		newestVideo: true
 	},
 	{
 		title: "Turkey",
