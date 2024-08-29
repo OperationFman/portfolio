@@ -161,8 +161,8 @@ export const qualificationMetaData = [
 	},
 	{
 		logo: "certificate",
-		title: "Certificate of Advanced Web Scraping using Python",
-		location: "LeWagon",
+		title: "Certificate of Web Design Accessibility",
+		location: "Anxiety Leeds Non-Profit",
 	},
 	{
 		logo: "language",
@@ -170,9 +170,3 @@ export const qualificationMetaData = [
 		location: "Teflen College",
 	},
 ];
-
-// {
-// 	logo: "certificate",
-// 	title: "Certificate of Backend Development for the Metaverse",
-// 	location: "Decentraland, Gitex",
-// }
