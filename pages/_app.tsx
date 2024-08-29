@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import "prismjs/themes/prism-tomorrow.css";
+import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
 import "react-notion-x/src/styles.css";
 import { Navbar } from "../src/global/navigation/Navbar";
@@ -23,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<>
 			<GlobalTheme darkMode={darkMode}>
 				<Navbar setDarkMode={setDarkMode} />
-
+				<Analytics />
 				<Component {...pageProps} />
 			</GlobalTheme>
 		</>
