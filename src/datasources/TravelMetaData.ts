@@ -284,6 +284,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink: 
 			"https://drive.google.com/file/d/1MeR97lcIr9pICYWFPE2JrSuLcSnFD88z/view?usp=sharing",
 		restricted: false,
+		reelLinks: ["https://www.instagram.com/reel/C_PcOfOCX4E/?hl=en"],
 		instagramLinks: [
 			"https://www.instagram.com/p/CufoGNOsExu/?hl=en",
 			"https://www.instagram.com/p/CuklIluLnZE/?hl=en",
