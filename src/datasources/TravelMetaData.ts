@@ -296,7 +296,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Cu1rOL5M2B5/?hl=en",
 			"https://www.instagram.com/p/Cu5JTCbrApq/?hl=en"
 		],
-		newestVideo: true
 	},
 	{
 		title: "Turkey",
@@ -304,7 +303,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "turkey",
 		link: "turkey",
 		restricted: false,
-		reelLinks: ["https://www.instagram.com/reel/CveBa-rIGe-/?hl=en"],
 		instagramLinks: [
 			"https://www.instagram.com/p/Cu9PmFaLhfp/?hl=en",
 			"https://www.instagram.com/p/CvFEUc1sqd7/?hl=en",
@@ -315,6 +313,10 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CvcCKJzMUAD/?hl=en",
 			"https://www.instagram.com/p/CviNxqQrVSL/?hl=en",
 		],
+		backupLink: 
+			"https://drive.google.com/file/d/1z3NA6uaGaobUKxNo6YB3QSyt5HI2IbwJ/view?usp=sharing",
+		reelLinks: ["https://www.instagram.com/reel/C_cuUwoigGb/?hl=en"],
+		newestVideo: true
 	},
 	{
 		title: "Lebanon",
@@ -371,7 +373,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	},
 	{
 		title: "Philippines & Brunei",
-		year: 2023,
+		year: 2024,
 		hostedLink: "philippinesbrunei",
 		link: "philippines-and-brunei",
 		restricted: false,
