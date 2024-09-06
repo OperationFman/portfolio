@@ -316,7 +316,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink: 
 			"https://drive.google.com/file/d/1z3NA6uaGaobUKxNo6YB3QSyt5HI2IbwJ/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/C_cuUwoigGb/?hl=en"],
-		newestVideo: true
 	},
 	{
 		title: "Lebanon",
@@ -330,6 +329,10 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CvzO2Pxs0os/?hl=en",
 			"https://www.instagram.com/p/Cv0gI5yLV3q/?hl=en",
 		],
+		backupLink: 
+			"https://drive.google.com/file/d/1sws85Id_mvwW912qfsNSxLvd2099TZwp/view?usp=sharing",
+		reelLinks: ["https://www.instagram.com/reel/C_lNBtKCH0H/?hl=en"],
+		newestVideo: true
 	},
 	{
 		title: "Syria",
