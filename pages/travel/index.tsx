@@ -48,7 +48,7 @@ const Travel: NextPage = () => {
 	useEffect(() => {
 		const searchParams = new URLSearchParams(window.location.search);
 		const rankedParam = searchParams.get("ranked");
-		const showAllParam = searchParams.get("show-all");
+		const showAllParam = searchParams.get("ShowAll");
 		setRankedVideos(rankedParam === "true");
 		setVideoReadyOnly(showAllParam !== "true");
 	}, []);
