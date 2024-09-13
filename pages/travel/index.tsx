@@ -3,11 +3,17 @@ import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
 import VideocamOffRoundedIcon from "@mui/icons-material/VideocamOffRounded";
 import VideocamRoundedIcon from "@mui/icons-material/VideocamRounded";
+import StarIcon from "@mui/icons-material/Star";
+import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import { Footer } from "../../utils/footer/Footer";
 import styles from "../../src/travel/index.module.scss";
-import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
+import {
+	tierTitles,
+	travelVideoMetaData,
+} from "../../src/datasources/TravelMetaData";
 import {
 	filterTravelVideosWithBackupLink,
+	groupVideosByRanked,
 	groupVideosByYear,
 	hasAtLeastOneMissingVideoLink,
 	sortYears,
@@ -19,9 +25,12 @@ import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import { SortOptions } from "../../src/tutorials/types";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Button, Tooltip } from "@mui/material";
+import { setDark } from "../../utils/configureCss/configureCss";
 
 const Travel: NextPage = () => {
 	const [videoReadyOnly, setVideoReadyOnly] = useState(true);
+	const [rankedVideos, setRankedVideos] = useState(false);
+	const [rankCounter, setRankCounter] = useState(1);
 
 	const filteredTravelVideos = videoReadyOnly
 		? filterTravelVideosWithBackupLink(travelVideoMetaData)
@@ -38,8 +47,15 @@ const Travel: NextPage = () => {
 		"Travel related content including completion map and travel videos, some public and some private of my experiences.";
 
 	useEffect(() => {
-		setSortedMetaData(sortYears(sortBy, metaDataGroupedByYear));
-	}, [sortBy, videoReadyOnly]);
+		setSortedMetaData([]);
+		setTimeout(() => {
+			if (rankedVideos) {
+				setSortedMetaData(groupVideosByRanked());
+			} else {
+				setSortedMetaData(sortYears(sortBy, metaDataGroupedByYear));
+			}
+		}, 50);
+	}, [videoReadyOnly, sortBy, rankedVideos]);
 
 	return (
 		<div>
@@ -83,29 +99,57 @@ const Travel: NextPage = () => {
 												width: "2.5rem",
 											}}
 										/>
-										<h2 className={styles.yearHeadingText}>{year}</h2>
+										<h2 className={styles.yearHeadingText}>
+											{rankedVideos ? tierTitles[index] : year}
+										</h2>
 									</div>
 									{index === 0 && (
 										<div className={styles.sortToggleContainer}>
-											{hasAtLeastOneMissingVideoLink() && (
-												<Tooltip
-													TransitionComponent={Zoom}
-													title='Show all countries, including those without videos'>
-													<Button
-														className={styles.videoToggleContainer}
-														onClick={() => setVideoReadyOnly(!videoReadyOnly)}>
-														{videoReadyOnly ? (
-															<VideocamRoundedIcon />
-														) : (
-															<VideocamOffRoundedIcon />
-														)}
-													</Button>
-												</Tooltip>
-											)}
-											<SortButton
-												setSortMetaDataBy={setSortBy}
-												alphabetical={false}
-											/>
+											<Tooltip
+												TransitionComponent={Zoom}
+												title='Ranked Best to Worst'>
+												<Button
+													className={styles.videoToggleContainer}
+													onClick={() => setRankedVideos(!rankedVideos)}>
+													{rankedVideos ? (
+														<StarIcon className={styles.defaultYellow} />
+													) : (
+														<StarBorderOutlinedIcon />
+													)}
+												</Button>
+											</Tooltip>
+											<div className={styles.sortToggleContainer}>
+												{hasAtLeastOneMissingVideoLink() && (
+													<Tooltip
+														TransitionComponent={Zoom}
+														title='Show All Countries (Includes those without videos)'>
+														<Button
+															className={styles.videoToggleContainer}
+															onClick={() =>
+																setVideoReadyOnly(!videoReadyOnly)
+															}>
+															{videoReadyOnly ? (
+																<VideocamRoundedIcon />
+															) : (
+																<VideocamOffRoundedIcon
+																	className={styles.defaultYellow}
+																/>
+															)}
+														</Button>
+													</Tooltip>
+												)}
+												<div className={styles.sortContainer}>
+													<SortButton
+														setSortMetaDataBy={
+															rankedVideos ? () => {} : setSortBy
+														}
+														alphabetical={false}
+													/>
+												</div>
+												{rankedVideos && (
+													<div className={setDark(styles, "greyout")} />
+												)}
+											</div>
 										</div>
 									)}
 								</div>

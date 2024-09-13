@@ -2,6 +2,7 @@
 
 .container {
 	margin-top: 20px;
+	min-height: 100vh;
 
 	@include breakpoint(small) {
 		margin-top: 50px;

@@ -400,4 +400,35 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	},
 ];
 
-const rankedTravelVideos = [];
+export const rankedTravelVideos = [
+	//S Tier
+	["greece", "syria", "armenia-georgia-azerbaijan", "turkey", "japan"],
+	//A Tier
+	["iran", "jordan", "india", "israel-and-palestine", "timor-leste"],
+	//B Tier
+	[
+		"south-korea",
+		"new-zealand",
+		"taiwan-hong-kong-macau",
+		"cambodia-laos-vietnam",
+		"cyprus",
+	],
+	//C Tier
+	["china", "nepal", "uae", "malaysia-singapore", "philippines-and-brunei"],
+	//D Tier
+	["lebanon", "kuwait-iraqi-kurdistan", "oman", "fiji", "sri-lanka"],
+	//E Tier
+	// None
+	//F Tier
+	["saudi-arabia-bahrain"],
+];
+
+export const tierTitles = [
+	"S Tier 🥇",
+	"A Tier 🥈",
+	"B Tier 🥉",
+	"C Tier",
+	"D Tier",
+	// "E Tier",
+	"F Tier 💩",
+];

@@ -1,5 +1,6 @@
 import { isClientSide } from "../../utils/isClientSide";
 import {
+	rankedTravelVideos,
 	insecureRestrictionKey,
 	travelVideoMetaData,
 } from "../datasources/TravelMetaData";
@@ -43,7 +44,25 @@ export const sortYears = (
 	});
 };
 
-export const groupVideosByRanked = () => {};
+export const groupVideosByRanked = () => {
+	const completeArray = [];
+
+	for (const tier of rankedTravelVideos) {
+		const tierData = [];
+
+		for (const link of tier) {
+			const fullVideoData = travelVideoMetaData[getTravelMetaDataIndex(link)];
+
+			if (fullVideoData) {
+				tierData.push(fullVideoData);
+			}
+		}
+		tierData.reverse();
+		completeArray.push(tierData);
+	}
+
+	return completeArray;
+};
 
 export const hasAtLeastOneMissingVideoLink = () => {
 	return travelVideoMetaData.some((obj) => !obj.hasOwnProperty("backupLink"));
