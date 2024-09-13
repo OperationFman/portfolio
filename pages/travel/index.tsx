@@ -64,6 +64,10 @@ const Travel: NextPage = () => {
 		}, 50);
 	}, [videoReadyOnly, sortBy, rankedVideos]);
 
+	useEffect(() => {
+		setSortedMetaData(sortYears(sortBy, metaDataGroupedByYear));
+	}, [videoReadyOnly, sortBy]);
+
 	const toggleRanked = () => {
 		setRankedVideos(!rankedVideos);
 		setVideoReadyOnly(true);
