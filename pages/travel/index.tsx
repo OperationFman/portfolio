@@ -30,7 +30,6 @@ import { setDark } from "../../utils/configureCss/configureCss";
 const Travel: NextPage = () => {
 	const [videoReadyOnly, setVideoReadyOnly] = useState(true);
 	const [rankedVideos, setRankedVideos] = useState(false);
-	const [rankCounter, setRankCounter] = useState(1);
 
 	const filteredTravelVideos = videoReadyOnly
 		? filterTravelVideosWithBackupLink(travelVideoMetaData)
@@ -47,6 +46,14 @@ const Travel: NextPage = () => {
 		"Travel related content including completion map and travel videos, some public and some private of my experiences.";
 
 	useEffect(() => {
+		const searchParams = new URLSearchParams(window.location.search);
+		const rankedParam = searchParams.get("ranked");
+		const showAllParam = searchParams.get("show-all");
+		setRankedVideos(rankedParam === "true");
+		setVideoReadyOnly(showAllParam !== "true");
+	}, []);
+
+	useEffect(() => {
 		setSortedMetaData([]);
 		setTimeout(() => {
 			if (rankedVideos) {
@@ -56,6 +63,38 @@ const Travel: NextPage = () => {
 			}
 		}, 50);
 	}, [videoReadyOnly, sortBy, rankedVideos]);
+
+	const toggleRanked = () => {
+		setRankedVideos(!rankedVideos);
+		setVideoReadyOnly(true);
+		const searchParams = new URLSearchParams(window.location.search);
+		if (rankedVideos) {
+			searchParams.delete("ranked");
+		} else {
+			searchParams.delete("ShowAll");
+			searchParams.set("ranked", "true");
+		}
+		window.history.replaceState(
+			null,
+			"",
+			`${window.location.pathname}?${searchParams.toString()}`,
+		);
+	};
+
+	const toggleShowAll = () => {
+		setVideoReadyOnly(!videoReadyOnly);
+		const searchParams = new URLSearchParams(window.location.search);
+		if (!videoReadyOnly) {
+			searchParams.delete("ShowAll");
+		} else {
+			searchParams.set("ShowAll", "true");
+		}
+		window.history.replaceState(
+			null,
+			"",
+			`${window.location.pathname}?${searchParams.toString()}`,
+		);
+	};
 
 	return (
 		<div>
@@ -110,7 +149,7 @@ const Travel: NextPage = () => {
 												title='Ranked Best to Worst'>
 												<Button
 													className={styles.videoToggleContainer}
-													onClick={() => setRankedVideos(!rankedVideos)}>
+													onClick={() => toggleRanked()}>
 													{rankedVideos ? (
 														<StarIcon className={styles.defaultYellow} />
 													) : (
@@ -125,9 +164,7 @@ const Travel: NextPage = () => {
 														title='Show All Countries (Includes those without videos)'>
 														<Button
 															className={styles.videoToggleContainer}
-															onClick={() =>
-																setVideoReadyOnly(!videoReadyOnly)
-															}>
+															onClick={() => toggleShowAll()}>
 															{videoReadyOnly ? (
 																<VideocamRoundedIcon />
 															) : (
