@@ -55,7 +55,7 @@ export const ParallaxArt = () => {
 
 			setSunSetting(false);
 			setSunInvisible(true);
-		}, 1000);
+		}, 3000);
 	};
 
 	const transitionSunUp = () => {
@@ -71,7 +71,7 @@ export const ParallaxArt = () => {
 
 			setSunRising(false);
 			setSunAnchored(true);
-		}, 1000);
+		}, 3000);
 	};
 
 	useEffect(() => {

@@ -11,6 +11,8 @@ $lightBackgroundColor: #90caf9;
 	@include breakpoint(medium) {
 		display: block;
 	}
+
+	animation: 1s ease-in-out infinite;
 }
 
 .innerContainer {
@@ -34,7 +36,7 @@ $lightBackgroundColor: #90caf9;
 	background-color: $lightBackgroundColor;
 	height: $height;
 	animation-delay: 500ms;
-	transition: linear 1100ms;
+	transition: ease-in-out 1100ms;
 
 	@include breakpoint(medium) {
 		display: block;
@@ -75,7 +77,7 @@ $lightBackgroundColor: #90caf9;
 }
 
 .fadeInOutFast {
-	animation: fadeInOutFast 8s linear infinite;
+	animation: fadeInOutFast 8s ease-in-out infinite;
 }
 
 @keyframes fadeInOutSlow {
@@ -97,7 +99,7 @@ $lightBackgroundColor: #90caf9;
 }
 
 .fadeInOutSlow {
-	animation: fadeInOutSlow 45s linear infinite;
+	animation: fadeInOutSlow 45s ease-in-out infinite;
 }
 
 @keyframes shootingStar {
@@ -110,8 +112,8 @@ $lightBackgroundColor: #90caf9;
 }
 
 .shootingStar {
-	animation-delay: 5s;
-	animation: shootingStar 4s linear forwards;
+	animation-delay: 20s;
+	animation: shootingStar 16s ease-in-out forwards;
 }
 
 @keyframes cloudLeftRightSlow {
@@ -172,7 +174,7 @@ $lightBackgroundColor: #90caf9;
 }
 
 .sunUp {
-	animation: sunUp 1s linear forwards;
+	animation: sunUp 3s ease-in-out forwards;
 }
 
 @keyframes sunDown {
@@ -185,7 +187,7 @@ $lightBackgroundColor: #90caf9;
 }
 
 .sunDown {
-	animation: sunDown 1s ease-in forwards;
+	animation: sunDown 3s ease-in-out forwards;
 }
 
 @keyframes moonUp {
@@ -198,7 +200,7 @@ $lightBackgroundColor: #90caf9;
 }
 
 .moonUp {
-	animation: moonUp 1s linear forwards;
+	animation: moonUp 3s ease-in-out forwards;
 }
 
 @keyframes moonDown {
@@ -211,5 +213,5 @@ $lightBackgroundColor: #90caf9;
 }
 
 .moonDown {
-	animation: moonDown 1s ease-in forwards;
+	animation: moonDown 3s ease-in-out forwards;
 }
