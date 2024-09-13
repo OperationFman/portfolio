@@ -9,6 +9,7 @@ import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
 import {
 	filterTravelVideosWithBackupLink,
 	groupVideosByYear,
+	hasAtLeastOneMissingVideoLink,
 	sortYears,
 } from "../../src/travel/travelDataService";
 import Zoom from "@mui/material/Zoom";
@@ -86,19 +87,21 @@ const Travel: NextPage = () => {
 									</div>
 									{index === 0 && (
 										<div className={styles.sortToggleContainer}>
-											<Tooltip
-												TransitionComponent={Zoom}
-												title='Show all countries, including those without videos'>
-												<Button
-													className={styles.videoToggleContainer}
-													onClick={() => setVideoReadyOnly(!videoReadyOnly)}>
-													{videoReadyOnly ? (
-														<VideocamRoundedIcon />
-													) : (
-														<VideocamOffRoundedIcon />
-													)}
-												</Button>
-											</Tooltip>
+											{hasAtLeastOneMissingVideoLink() && (
+												<Tooltip
+													TransitionComponent={Zoom}
+													title='Show all countries, including those without videos'>
+													<Button
+														className={styles.videoToggleContainer}
+														onClick={() => setVideoReadyOnly(!videoReadyOnly)}>
+														{videoReadyOnly ? (
+															<VideocamRoundedIcon />
+														) : (
+															<VideocamOffRoundedIcon />
+														)}
+													</Button>
+												</Tooltip>
+											)}
 											<SortButton
 												setSortMetaDataBy={setSortBy}
 												alphabetical={false}

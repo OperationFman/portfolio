@@ -281,7 +281,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		year: 2023,
 		hostedLink: "greece",
 		link: "greece",
-		backupLink: 
+		backupLink:
 			"https://drive.google.com/file/d/1MeR97lcIr9pICYWFPE2JrSuLcSnFD88z/view?usp=sharing",
 		restricted: false,
 		reelLinks: ["https://www.instagram.com/reel/C_PcOfOCX4E/?hl=en"],
@@ -294,7 +294,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CuxVBypLGrt/?hl=en",
 			"https://www.instagram.com/p/CuxaFY_rTD3/?hl=en",
 			"https://www.instagram.com/p/Cu1rOL5M2B5/?hl=en",
-			"https://www.instagram.com/p/Cu5JTCbrApq/?hl=en"
+			"https://www.instagram.com/p/Cu5JTCbrApq/?hl=en",
 		],
 	},
 	{
@@ -313,7 +313,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CvcCKJzMUAD/?hl=en",
 			"https://www.instagram.com/p/CviNxqQrVSL/?hl=en",
 		],
-		backupLink: 
+		backupLink:
 			"https://drive.google.com/file/d/1z3NA6uaGaobUKxNo6YB3QSyt5HI2IbwJ/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/C_cuUwoigGb/?hl=en"],
 	},
@@ -329,10 +329,10 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CvzO2Pxs0os/?hl=en",
 			"https://www.instagram.com/p/Cv0gI5yLV3q/?hl=en",
 		],
-		backupLink: 
+		backupLink:
 			"https://drive.google.com/file/d/1sws85Id_mvwW912qfsNSxLvd2099TZwp/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/C_lNBtKCH0H/?hl=en"],
-		newestVideo: true
+		newestVideo: true,
 	},
 	{
 		title: "Syria",
@@ -399,3 +399,5 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		],
 	},
 ];
+
+const rankedTravelVideos = [];

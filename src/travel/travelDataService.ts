@@ -30,10 +30,10 @@ export const groupVideosByYear = (
 	return Object.values(groupedVideos);
 };
 
-export function sortYears(
+export const sortYears = (
 	sortBy: SortOptions,
 	metaData: TravelVideoMetaData[][],
-): TravelVideoMetaData[][] {
+): TravelVideoMetaData[][] => {
 	return [...metaData].sort((a, b) => {
 		if (sortBy === SortOptions.Newest) {
 			return b[0].year - a[0].year;
@@ -41,7 +41,13 @@ export function sortYears(
 			return a[0].year - b[0].year;
 		}
 	});
-}
+};
+
+export const groupVideosByRanked = () => {};
+
+export const hasAtLeastOneMissingVideoLink = () => {
+	return travelVideoMetaData.some((obj) => !obj.hasOwnProperty("backupLink"));
+};
 
 export const hasRestrictionBypass = () => {
 	if (isClientSide()) {
