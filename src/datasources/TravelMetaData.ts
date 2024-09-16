@@ -446,23 +446,23 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 
 export const rankedTravelVideos = [
 	//S Tier
-	["greece", "syria", "armenia-georgia-azerbaijan", "turkey", "japan"],
+	["greece", "thailand-2", "syria", "armenia-georgia-azerbaijan", "japan"],
 	//A Tier
-	["iran", "jordan", "india", "israel-and-palestine", "timor-leste"],
+	["turkey", "iran", "jordan", "india", "timor-leste"],
 	//B Tier
 	[
+		"israel-and-palestine",
 		"south-korea",
 		"new-zealand",
-		"taiwan-hong-kong-macau",
 		"cambodia-laos-vietnam",
 		"cyprus",
 	],
 	//C Tier
-	["china", "nepal", "uae", "malaysia-singapore", "philippines-and-brunei"],
+	["china", "nepal", "taiwan-hong-kong-macau", "uae", "malaysia-singapore"],
 	//D Tier
-	["lebanon", "kuwait-iraqi-kurdistan", "oman", "fiji", "sri-lanka"],
+	["lebanon", "philippines-and-brunei", "kuwait-iraqi-kurdistan", "oman", "fiji"],
 	//E Tier
-	// None
+	["australia", "sri-lanka"],
 	//F Tier
 	["saudi-arabia-bahrain"],
 ];
@@ -473,6 +473,6 @@ export const tierTitles = [
 	"B Tier 🥉",
 	"C Tier",
 	"D Tier",
-	// "E Tier",
+	"E Tier",
 	"F Tier 💩",
 ];
