@@ -385,6 +385,30 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		],
 	},
 	{
+		title: "Philippines & Brunei",
+		year: 2024,
+		hostedLink: "philippinesbrunei",
+		link: "philippines-and-brunei",
+		restricted: false,
+		instagramLinks: [
+			"https://www.instagram.com/p/C0qMrfyrRhi/?hl=en",
+			"https://www.instagram.com/p/C1EZPPPrN87/?hl=en",
+			"https://www.instagram.com/p/C1Q2UQcLqS-/?hl=en",
+		],
+	},
+	{
+		title: "Timor-Leste",
+		year: 2024,
+		hostedLink: "timorleste",
+		link: "timor-leste",
+		restricted: false,
+		instagramLinks: [
+			"https://www.instagram.com/p/C-RGiELTbxA/?hl=en",
+			"https://www.instagram.com/p/C-U4hPnzsoJ/?hl=en",
+			"https://www.instagram.com/p/C-ZpKlvzLk3/?hl=en",
+		],
+	},
+	{
 		title: "Thailand 2",
 		year: 2024,
 		hostedLink: "thailand2",
@@ -416,30 +440,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/C8r1bCISBje/?hl=en",
 			"https://www.instagram.com/p/C9w2JPtzGcm/?hl=en",
 			"https://www.instagram.com/p/C-mRiXHzW4i/?hl=en"	
-		],
-	},
-	{
-		title: "Philippines & Brunei",
-		year: 2024,
-		hostedLink: "philippinesbrunei",
-		link: "philippines-and-brunei",
-		restricted: false,
-		instagramLinks: [
-			"https://www.instagram.com/p/C0qMrfyrRhi/?hl=en",
-			"https://www.instagram.com/p/C1EZPPPrN87/?hl=en",
-			"https://www.instagram.com/p/C1Q2UQcLqS-/?hl=en",
-		],
-	},
-	{
-		title: "Timor-Leste",
-		year: 2024,
-		hostedLink: "timorleste",
-		link: "timor-leste",
-		restricted: false,
-		instagramLinks: [
-			"https://www.instagram.com/p/C-RGiELTbxA/?hl=en",
-			"https://www.instagram.com/p/C-U4hPnzsoJ/?hl=en",
-			"https://www.instagram.com/p/C-ZpKlvzLk3/?hl=en",
 		],
 	},
 ];

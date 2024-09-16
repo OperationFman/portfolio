@@ -39,7 +39,7 @@ export const VideoLibrary = ({
 
 		return dataItem.backupLink ? (
 			<PlayArrowTwoToneIcon
-				sx={{ height: "4rem", width: "4rem", color: "white" }}
+				sx={{ height: "4.2rem", width: "4.2rem", color: "white" }}
 				className={styles.videoButton}
 			/>
 		) : (
