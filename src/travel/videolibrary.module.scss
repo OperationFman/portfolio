@@ -16,13 +16,8 @@
 	transition: linear 150ms;
 	opacity: 0.8;
 
-	@include breakpoint(medium) {
-		top: 50%;
-		opacity: 0;
-	}
-
 	&:hover {
-		filter: brightness(0.8);
+		filter: brightness(0.7);
 	}
 }
 

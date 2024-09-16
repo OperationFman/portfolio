@@ -1,7 +1,7 @@
 import Image from "next/image";
 import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import VideocamOffRoundedIcon from "@mui/icons-material/VideocamOffRounded";
+import ExtensionOffIcon from "@mui/icons-material/ExtensionOff";
 import { TravelVideoMetaData } from "./types";
 import { CardActionArea, Grid, LinearProgress } from "@mui/material";
 import styles from "./videolibrary.module.scss";
@@ -31,7 +31,7 @@ export const VideoLibrary = ({
 		if (dataItem.restricted && !hasRestrictionBypass()) {
 			return (
 				<LockOutlinedIcon
-					sx={{ height: "3.125rem", width: "3.125rem" }}
+					sx={{ height: "3.125rem", width: "3.125rem", color: "white" }}
 					className={`${styles.videoButton} ${styles.lockButton}`}
 				/>
 			);
@@ -39,12 +39,12 @@ export const VideoLibrary = ({
 
 		return dataItem.backupLink ? (
 			<PlayArrowTwoToneIcon
-				sx={{ height: "3.75rem", width: "3.75rem" }}
+				sx={{ height: "3.75rem", width: "3.75rem", color: "white" }}
 				className={styles.videoButton}
 			/>
 		) : (
-			<VideocamOffRoundedIcon
-				sx={{ height: "2.75rem", width: "2.75rem" }}
+			<ExtensionOffIcon
+				sx={{ height: "2.75rem", width: "2.75rem", color: "white" }}
 				className={styles.videoButton}
 			/>
 		);

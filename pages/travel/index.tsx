@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
-import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
-import ExtensionIcon from '@mui/icons-material/Extension';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
+import ExtensionOutlinedIcon from "@mui/icons-material/ExtensionOutlined";
+import ExtensionIcon from "@mui/icons-material/Extension";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 import { Footer } from "../../utils/footer/Footer";
 import styles from "../../src/travel/index.module.scss";
 import {
