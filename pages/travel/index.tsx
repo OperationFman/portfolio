@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
-import VideocamOffRoundedIcon from "@mui/icons-material/VideocamOffRounded";
-import VideocamRoundedIcon from "@mui/icons-material/VideocamRounded";
-import StarIcon from "@mui/icons-material/Star";
-import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
+import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
+import ExtensionIcon from '@mui/icons-material/Extension';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import { Footer } from "../../utils/footer/Footer";
 import styles from "../../src/travel/index.module.scss";
 import {
@@ -155,9 +155,9 @@ const Travel: NextPage = () => {
 													className={styles.videoToggleContainer}
 													onClick={() => toggleRanked()}>
 													{rankedVideos ? (
-														<StarIcon className={styles.defaultYellow} />
+														<EmojiEventsIcon className={styles.defaultYellow} />
 													) : (
-														<StarBorderOutlinedIcon />
+														<EmojiEventsOutlinedIcon />
 													)}
 												</Button>
 											</Tooltip>
@@ -165,14 +165,14 @@ const Travel: NextPage = () => {
 												{hasAtLeastOneMissingVideoLink() && (
 													<Tooltip
 														TransitionComponent={Zoom}
-														title='Show All Countries (Includes those without videos)'>
+														title='Show Incomplete Videos'>
 														<Button
 															className={styles.videoToggleContainer}
 															onClick={() => toggleShowAll()}>
 															{videoReadyOnly ? (
-																<VideocamRoundedIcon />
+																<ExtensionIcon />
 															) : (
-																<VideocamOffRoundedIcon
+																<ExtensionOutlinedIcon
 																	className={styles.defaultYellow}
 																/>
 															)}
