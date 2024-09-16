@@ -31,8 +31,13 @@
 	margin-left: 6px;
 }
 
+.returnContainer {
+	color: $brightGrey;
+}
+
 .videoToggleContainer {
 	color: $brightGrey;
+	filter: drop-shadow(0px 0px 0.5px #000000);
 
 	&:hover,
 	&:focus {
@@ -64,6 +69,7 @@
 .year {
 	margin-top: -0.625rem;
 	color: $defaultYellow;
+	filter: drop-shadow(0 0 0.7px $darkBackground);
 }
 
 .title {

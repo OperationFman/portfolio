@@ -51,7 +51,8 @@ export const groupVideosByRanked = () => {
 		const tierData = [];
 
 		for (const link of tier) {
-			const fullVideoData = travelVideoMetaData[getTravelMetaDataIndex(link)];
+			const travelMetaData = enhancedTravelVideoMetaData();
+			const fullVideoData = travelMetaData[getTravelMetaDataIndex(link)];
 
 			if (fullVideoData) {
 				tierData.push(fullVideoData);
@@ -103,4 +104,32 @@ export const filterTravelVideosWithBackupLink = (
 	travelVideoMetaData: TravelVideoMetaData[],
 ) => {
 	return travelVideoMetaData.filter((data) => data.backupLink !== undefined);
+};
+
+export const addToWatchedVideosStorage = (link: string) => {
+	if (!isClientSide()) return false;
+
+	const watchedVideos = JSON.parse(
+		localStorage.getItem("watchedVideos") || "[]",
+	) as string[];
+
+	if (!watchedVideos.includes(link)) {
+		watchedVideos.push(link);
+		localStorage.setItem("watchedVideos", JSON.stringify(watchedVideos));
+	}
+};
+
+export const enhancedTravelVideoMetaData = () => {
+	if (!isClientSide()) return travelVideoMetaData;
+
+	const watchedVideos = JSON.parse(
+		localStorage.getItem("watchedVideos") || "[]",
+	) as string[];
+
+	const enhancedMetaData = travelVideoMetaData.map((item) => ({
+		...item,
+		previouslyWatched: watchedVideos.includes(item.link),
+	}));
+
+	return enhancedMetaData;
 };

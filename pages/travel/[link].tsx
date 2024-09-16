@@ -2,6 +2,7 @@ import Image from "next/image";
 import { InstagramEmbed } from "react-social-media-embed";
 import { InferGetServerSidePropsType } from "next";
 import CircularProgress from "@mui/material/CircularProgress";
+import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
 import Head from "next/head";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 import { Footer } from "../../utils/footer/Footer";
@@ -10,6 +11,7 @@ import {
 	getTravelMetaDataIndex,
 	videoEnabled,
 	filterTravelVideosWithBackupLink,
+	addToWatchedVideosStorage,
 } from "../../src/travel/travelDataService";
 import styles from "../../src/travel/index.module.scss";
 import ReactPlayer from "react-player";
@@ -19,8 +21,9 @@ import {
 } from "../../src/datasources/TravelMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { useState } from "react";
+import router from "next/router";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -43,7 +46,7 @@ const VideoContent = ({
 
 	setTimeout(() => {
 		setIsLoading(false);
-	}, 5000);
+	}, 3000 + (instagramLinks?.length || 1) * 500);
 
 	const upNextMetaData = filterTravelVideosWithBackupLink(
 		upNext as TravelVideoMetaData[],
@@ -54,6 +57,10 @@ const VideoContent = ({
 	}
 
 	if (videoEnabled(metaData)) {
+		if (metaData.backupLink) {
+			addToWatchedVideosStorage(metaData.link);
+		}
+
 		return (
 			<>
 				<Head>
@@ -65,6 +72,16 @@ const VideoContent = ({
 				</Head>
 
 				<PageContainer>
+					<div className={styles.returnContainer}>
+						<Button
+							variant='text'
+							color='inherit'
+							startIcon={<KeyboardBackspaceOutlinedIcon />}
+							onClick={() => router.replace("/travel")}>
+							Video Library
+						</Button>
+					</div>
+
 					<h1 className={styles.title}>{title}</h1>
 					<h2 className={styles.year}>{year}</h2>
 
@@ -80,13 +97,11 @@ const VideoContent = ({
 								width='100%'
 							/>
 
-							<div className={styles.errorContainer}>
-								<h5
-									onClick={() => window.open(backupLink, "_blank")}
-									className={styles.backupLink}>
-									Alternative Video Link
-								</h5>
-							</div>
+							<h5
+								onClick={() => window.open(backupLink, "_blank")}
+								className={styles.backupLink}>
+								Alternative Video Link
+							</h5>
 						</>
 					) : (
 						<div className={styles.comingSoon}>

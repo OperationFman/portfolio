@@ -1,22 +1,20 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
-import ExtensionOffOutlinedIcon from "@mui/icons-material/ExtensionOutlined";
-import ExtensionOffIcon from "@mui/icons-material/Extension";
+import ExtensionOffOutlinedIcon from "@mui/icons-material/ExtensionOffOutlined";
+import ExtensionOffIcon from "@mui/icons-material/ExtensionOff";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 import { Footer } from "../../utils/footer/Footer";
 import styles from "../../src/travel/index.module.scss";
-import {
-	tierTitles,
-	travelVideoMetaData,
-} from "../../src/datasources/TravelMetaData";
+import { tierTitles } from "../../src/datasources/TravelMetaData";
 import {
 	filterTravelVideosWithBackupLink,
 	groupVideosByRanked,
 	groupVideosByYear,
 	hasAtLeastOneMissingVideoLink,
 	sortYears,
+	enhancedTravelVideoMetaData,
 } from "../../src/travel/travelDataService";
 import Zoom from "@mui/material/Zoom";
 import { useEffect, useState } from "react";
@@ -31,9 +29,11 @@ const Travel: NextPage = () => {
 	const [videoReadyOnly, setVideoReadyOnly] = useState(true);
 	const [rankedVideos, setRankedVideos] = useState(false);
 
+	const enhancedMetaData = enhancedTravelVideoMetaData();
+
 	const filteredTravelVideos = videoReadyOnly
-		? filterTravelVideosWithBackupLink(travelVideoMetaData)
-		: travelVideoMetaData;
+		? filterTravelVideosWithBackupLink(enhancedMetaData)
+		: enhancedMetaData;
 
 	const metaDataGroupedByYear = groupVideosByYear(filteredTravelVideos);
 

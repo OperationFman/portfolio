@@ -1,7 +1,8 @@
 import Image from "next/image";
-import PlayArrowTwoToneIcon from "@mui/icons-material/PlayArrowTwoTone";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import ExtensionOffIcon from "@mui/icons-material/ExtensionOff";
+import DoneRoundedIcon from "@mui/icons-material/DoneRounded";
 import { TravelVideoMetaData } from "./types";
 import { CardActionArea, Grid, LinearProgress } from "@mui/material";
 import styles from "./videolibrary.module.scss";
@@ -31,20 +32,29 @@ export const VideoLibrary = ({
 		if (dataItem.restricted && !hasRestrictionBypass()) {
 			return (
 				<LockOutlinedIcon
-					sx={{ height: "2.8rem", width: "2.8rem", color: "white" }}
+					sx={{
+						height: "2.8rem",
+						width: "2.8rem",
+					}}
 					className={`${styles.videoButton} ${styles.lockButton}`}
 				/>
 			);
 		}
 
 		return dataItem.backupLink ? (
-			<PlayArrowTwoToneIcon
-				sx={{ height: "4.2rem", width: "4.2rem", color: "white" }}
+			<PlayArrowIcon
+				sx={{
+					height: "3.8rem",
+					width: "3.8rem",
+				}}
 				className={styles.videoButton}
 			/>
 		) : (
 			<ExtensionOffIcon
-				sx={{ height: "2.4rem", width: "2.4rem", color: "white" }}
+				sx={{
+					height: "2.8rem",
+					width: "2.8rem",
+				}}
 				className={styles.videoButton}
 			/>
 		);
@@ -81,6 +91,13 @@ export const VideoLibrary = ({
 								{posterIcon(dataItem)}
 								{dataItem.newestVideo && (
 									<h5 className={styles.newestVideo}>LATEST VIDEO</h5>
+								)}
+								{dataItem.previouslyWatched && dataItem.backupLink && (
+									<div className={styles.watched}>
+										<DoneRoundedIcon
+											style={{ height: "2.5rem", width: "2.5rem" }}
+										/>
+									</div>
 								)}
 								<Image
 									src={`/travel/posters/${dataItem.hostedLink}.png`}
