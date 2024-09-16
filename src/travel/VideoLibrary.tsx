@@ -31,7 +31,7 @@ export const VideoLibrary = ({
 		if (dataItem.restricted && !hasRestrictionBypass()) {
 			return (
 				<LockOutlinedIcon
-					sx={{ height: "3.125rem", width: "3.125rem", color: "white" }}
+					sx={{ height: "2.8rem", width: "2.8rem", color: "white" }}
 					className={`${styles.videoButton} ${styles.lockButton}`}
 				/>
 			);
@@ -39,12 +39,12 @@ export const VideoLibrary = ({
 
 		return dataItem.backupLink ? (
 			<PlayArrowTwoToneIcon
-				sx={{ height: "3.75rem", width: "3.75rem", color: "white" }}
+				sx={{ height: "3.8rem", width: "3.8rem", color: "white" }}
 				className={styles.videoButton}
 			/>
 		) : (
 			<ExtensionOffIcon
-				sx={{ height: "2.75rem", width: "2.75rem", color: "white" }}
+				sx={{ height: "2.4rem", width: "2.4rem", color: "white" }}
 				className={styles.videoButton}
 			/>
 		);

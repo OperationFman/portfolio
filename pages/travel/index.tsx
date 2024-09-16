@@ -170,9 +170,9 @@ const Travel: NextPage = () => {
 															className={styles.videoToggleContainer}
 															onClick={() => toggleShowAll()}>
 															{videoReadyOnly ? (
-																<ExtensionIcon />
+																<ExtensionOutlinedIcon />
 															) : (
-																<ExtensionOutlinedIcon
+																<ExtensionIcon
 																	className={styles.defaultYellow}
 																/>
 															)}
