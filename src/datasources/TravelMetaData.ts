@@ -342,7 +342,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1sws85Id_mvwW912qfsNSxLvd2099TZwp/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/C_lNBtKCH0H/?hl=en"],
-		newestVideo: true,
 	},
 	{
 		title: "Syria",
@@ -357,6 +356,10 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CwF09q0spyl/?hl=en",
 			"https://www.instagram.com/p/CwNnPkVMIUc/?hl=en",
 		],
+		backupLink:
+			"https://drive.google.com/file/d/1KSppj46GrOOuXNs2mB_uVOZTWlwzZAc5/view?usp=sharing",
+		reelLinks: ["https://www.instagram.com/reel/DAGBpdVCaEJ/?hl=en"],
+		newestVideo: true,
 	},
 	{
 		title: "Cyprus",
@@ -446,7 +449,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 
 export const rankedTravelVideos = [
 	//S Tier
-	["greece", "thailand-2", "syria", "armenia-georgia-azerbaijan", "japan"],
+	["syria", "greece", "japan", "armenia-georgia-azerbaijan", "thailand-2"],
 	//A Tier
 	["turkey", "iran", "jordan", "india", "timor-leste"],
 	//B Tier
