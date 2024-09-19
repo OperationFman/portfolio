@@ -69,6 +69,10 @@ const VideoContent = ({
 					</title>
 					<meta name={title} content={title} />
 					<link rel='icon' href='/favicon-yellow.ico' />
+					<meta
+					property='og:image'
+					content={`/travel/posters/${metaData.hostedLink}.png`}
+					/>
 				</Head>
 
 				<PageContainer>
