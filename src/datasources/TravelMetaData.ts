@@ -359,7 +359,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1KSppj46GrOOuXNs2mB_uVOZTWlwzZAc5/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/DAGBpdVCaEJ/?hl=en"],
-		newestVideo: true,
 	},
 	{
 		title: "Cyprus",
@@ -367,10 +366,13 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "cyprus",
 		link: "cyprus",
 		restricted: false,
+		reelLinks: ["https://www.instagram.com/reel/DAIpVj3iUJI/?igsh=MXY5cjUzZHF3bmFvcA=="]
+		backupLink: "https://drive.google.com/file/d/1dusLihNSLBlF4pNG6yn16Dcx7R2yivPK/view?usp=drivesdk",
 		instagramLinks: [
 			"https://www.instagram.com/p/CwTBSZ8rP6c/?hl=en",
 			"https://www.instagram.com/p/CwVuLVvrgWP/?hl=en",
 		],
+		newestVideo: true,
 	},
 	{
 		title: "Israel & Palestine",
