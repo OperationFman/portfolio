@@ -375,14 +375,13 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CwTBSZ8rP6c/?hl=en",
 			"https://www.instagram.com/p/CwVuLVvrgWP/?hl=en",
 		],
-		newestVideo: true,
 	},
 	{
 		title: "Israel & Palestine",
 		year: 2023,
 		hostedLink: "israelpalestine",
 		link: "israel-and-palestine",
-		restricted: false,
+		restricted: true,
 		instagramLinks: [
 			"https://www.instagram.com/p/CwYWLKNr2nj/?hl=en",
 			"https://www.instagram.com/p/CwfOOKisfk6/?hl=en",
@@ -391,6 +390,10 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CwuCqhUMNAd/?hl=en",
 			"https://www.instagram.com/p/Cwzr9nZLCDu/?hl=en",
 		],
+		backupLink:
+			"https://drive.google.com/file/d/1PmnN0FXR1uafWe40V07R6D7PK2NynlpM/view?usp=sharing",
+		reelLinks: ["https://www.instagram.com/reel/DASgqv-CzW-/?hl=en"],
+		newestVideo: true,
 	},
 	{
 		title: "Philippines & Brunei",
