@@ -18,7 +18,7 @@ export const Navbar = ({
 	const router = useRouter();
 
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
-	const [darkModeLoading, setDarkModeLoading] = useState(false);
+	const [darkModeLoading, setDarkModeLoading] = useState(true);
 
 	useEffect(() => {
 		const checkScreenSize = () => {
@@ -27,6 +27,11 @@ export const Navbar = ({
 
 		checkScreenSize();
 		window.addEventListener("resize", checkScreenSize);
+
+		setTimeout(() => {
+			setDarkModeLoading(false);
+		}, 3000);
+
 		return () => window.removeEventListener("resize", checkScreenSize);
 	}, []);
 
@@ -58,7 +63,7 @@ export const Navbar = ({
 			localStorage.setItem("dark-mode", `${!darkMode}`);
 			setDarkMode(!darkMode);
 
-			if (tabIndex === 0) {
+			if (tabIndex === 0 && !isSmallScreen) {
 				setDarkModeLoading(true);
 
 				setTimeout(() => {
