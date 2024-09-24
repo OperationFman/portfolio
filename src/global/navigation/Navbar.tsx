@@ -18,6 +18,7 @@ export const Navbar = ({
 	const router = useRouter();
 
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
+	const [darkModeLoading, setDarkModeLoading] = useState(false);
 
 	useEffect(() => {
 		const checkScreenSize = () => {
@@ -53,8 +54,18 @@ export const Navbar = ({
 	};
 
 	const handleDarkModeToggle = () => {
-		localStorage.setItem("dark-mode", `${!darkMode}`);
-		setDarkMode(!darkMode);
+		if (!darkModeLoading) {
+			localStorage.setItem("dark-mode", `${!darkMode}`);
+			setDarkMode(!darkMode);
+
+			if (tabIndex === 0) {
+				setDarkModeLoading(true);
+
+				setTimeout(() => {
+					setDarkModeLoading(false);
+				}, 3000);
+			}
+		}
 	};
 
 	useEffect(() => {
@@ -108,7 +119,11 @@ export const Navbar = ({
 
 				<div
 					className={styles.darkModeToggle}
-					style={{ order: 7 }}
+					style={{
+						order: 7,
+						opacity: darkModeLoading ? "0.1" : "1",
+						cursor: darkModeLoading ? "default" : "pointer",
+					}}
 					onClick={() => handleDarkModeToggle()}>
 					<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
 						{darkMode ? (

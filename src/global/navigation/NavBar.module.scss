@@ -54,6 +54,7 @@
 	cursor: pointer;
 	padding-right: 0.625rem;
 	margin-left: 0.9375rem;
+	transition: ease-in-out 500ms;
 
 	@include breakpoint(small) {
 		padding: 0 0.9375rem;
