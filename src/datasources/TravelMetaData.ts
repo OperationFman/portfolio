@@ -366,9 +366,11 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "cyprus",
 		link: "cyprus",
 		restricted: false,
-		reelLinks: ["https://www.instagram.com/reel/DAIpVj3iUJI/?igsh=MXY5cjUzZHF3bmFvcA=="],
-		backupLink: 
-		    "https://drive.google.com/file/d/1dusLihNSLBlF4pNG6yn16Dcx7R2yivPK/view?usp=drivesdk",
+		reelLinks: [
+			"https://www.instagram.com/reel/DAIpVj3iUJI/?igsh=MXY5cjUzZHF3bmFvcA==",
+		],
+		backupLink:
+			"https://drive.google.com/file/d/1dusLihNSLBlF4pNG6yn16Dcx7R2yivPK/view?usp=drivesdk",
 		instagramLinks: [
 			"https://www.instagram.com/p/CwTBSZ8rP6c/?hl=en",
 			"https://www.instagram.com/p/CwVuLVvrgWP/?hl=en",
@@ -445,42 +447,51 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/C7n9BygJuDh/?hl=en",
 			"https://www.instagram.com/p/C8r1bCISBje/?hl=en",
 			"https://www.instagram.com/p/C9w2JPtzGcm/?hl=en",
-			"https://www.instagram.com/p/C-mRiXHzW4i/?hl=en"	
+			"https://www.instagram.com/p/C-mRiXHzW4i/?hl=en",
 		],
 	},
 ];
 
 export const rankedTravelVideos = [
+	//S Tier
+	["syria", "greece", "japan"],
 	//A Tier
-	["syria", "greece", "japan", "armenia-georgia-azerbaijan", "thailand-2"],
+	[
+		"turkey",
+		"israel-and-palestine",
+		"armenia-georgia-azerbaijan",
+		"iran",
+		"jordan",
+		"india",
+		"timor-leste",
+		"thailand-2",
+	],
 	//B Tier
-	["turkey", "iran", "jordan", "india", "timor-leste"],
+	["south-korea", "new-zealand", "cambodia-laos-vietnam"],
 	//C Tier
 	[
-		"israel-and-palestine",
-		"south-korea",
-		"new-zealand",
-		"cambodia-laos-vietnam",
+		"taiwan-hong-kong-macau",
+		"oman",
+		"uae",
+		"malaysia-singapore",
+		"china",
+		"nepal",
 		"cyprus",
-		"china", 
-		"nepal", 
-		"taiwan-hong-kong-macau", 
-		"uae", "malaysia-singapore", 
-		"lebanon", 
-		"philippines-and-brunei", 
-		"kuwait-iraqi-kurdistan", 
-		"oman", 
-		"fiji", 
-		"australia", 
-		"sri-lanka"
 	],
-	//S Tier
+	//D Tier
+	["lebanon", "philippines-and-brunei", "kuwait-iraqi-kurdistan", "fiji"],
+	//E Tier
+	["australia", "sri-lanka"],
+	//F Tier
 	["saudi-arabia-bahrain"],
 ];
 
 export const tierTitles = [
-	"A Tier 🥇",
-	"B Tier 🥈",
-	"C Tier 🥉",
-	"S Tier 💩",
+	"S Tier 🥇",
+	"A Tier 🥈",
+	"B Tier 🥉",
+	"C Tier",
+	"D Tier",
+	"E Tier",
+	"F Tier 💩",
 ];
