@@ -393,19 +393,21 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1PmnN0FXR1uafWe40V07R6D7PK2NynlpM/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/DASgqv-CzW-/?hl=en"],
-		newestVideo: true,
 	},
 	{
 		title: "Philippines & Brunei",
 		year: 2024,
 		hostedLink: "philippinesbrunei",
 		link: "philippines-and-brunei",
-		restricted: false,
+		restricted: true,
 		instagramLinks: [
 			"https://www.instagram.com/p/C0qMrfyrRhi/?hl=en",
 			"https://www.instagram.com/p/C1EZPPPrN87/?hl=en",
 			"https://www.instagram.com/p/C1Q2UQcLqS-/?hl=en",
 		],
+		reelLinks: ["https://www.instagram.com/reel/DAWBdOpC00S/?hl=en"],
+		backupLink: "https://drive.google.com/file/d/1-lC6yL-FcgwMUpZXmrzMRVOV4EbLDjVi/view?usp=sharing",
+		newestVideo: true,
 	},
 	{
 		title: "Timor-Leste",
@@ -418,6 +420,9 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/C-U4hPnzsoJ/?hl=en",
 			"https://www.instagram.com/p/C-ZpKlvzLk3/?hl=en",
 		],
+		// reelLinks: [""],
+		// backupLink: "",
+		// newestVideo: true,
 	},
 	{
 		title: "Thailand 2",
@@ -452,7 +457,26 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/C9w2JPtzGcm/?hl=en",
 			"https://www.instagram.com/p/C-mRiXHzW4i/?hl=en",
 		],
+		// reelLinks: [""],
+		// backupLink: "",
+		// newestVideo: true,
 	},
+	// {
+	// 	title: "",
+	// 	year: ,
+	// 	hostedLink: ",
+	// 	link: "",
+	// 	restricted: false,
+	// 	instagramLinks: [
+	// 		"",
+	//      "",
+	// 		"",
+	//      "",
+	// 	],
+	// 	reelLinks: [""],
+	// 	backupLink: "",
+	// 	newestVideo: true,
+	// },
 ];
 
 export const rankedTravelVideos = [
