@@ -2,6 +2,17 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "Design for Accessibility (WCAG 2.0)",
+		link: "design-for-accessibility",
+		notionPage: "10de32d00811807e9725e006d6c6a830",
+		created: 1727343784,
+		thumbnail: "/tutorials/accessibility.png",
+		subTitle:
+			"Primary important tools with a realistic web coding checklist to improve your sites a11y",
+		topic: Topic.Article,
+		tags: [Tags.StepByStep, Tags.QuickStart],
+	},
+	{
 		title: "How I Edit My Videos",
 		link: "how-I-edit-my-videos",
 		notionPage: "10de32d00811807e9725e006d6c6a830",
