@@ -4,7 +4,7 @@ export const tutorialMetaData: TutorialMetaData[] = [
 	{
 		title: "Design for Accessibility (WCAG 2.0)",
 		link: "design-for-accessibility",
-		notionPage: "10de32d00811807e9725e006d6c6a830",
+		notionPage: "10de32d00811801494d5ffb767dba40f",
 		created: 1727343784,
 		thumbnail: "/tutorials/accessibility.png",
 		subTitle:
