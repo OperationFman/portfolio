@@ -2,6 +2,17 @@ import { Languages, Tags, Topic, TutorialMetaData } from "../tutorials/types";
 
 export const tutorialMetaData: TutorialMetaData[] = [
 	{
+		title: "How I Edit My Videos",
+		link: "how-I-edit-my-videos",
+		notionPage: "10de32d00811807e9725e006d6c6a830",
+		created: 1727326347,
+		thumbnail: "/tutorials/davinci-resolve.png",
+		subTitle:
+			"My ever improving process for travel post production thats high quality and efficient",
+		topic: Topic.Article,
+		tags: [Tags.StepByStep, Tags.QuickStart],
+	},
+	{
 		title: "Kubernetes Essentials",
 		link: "kubernetes-essentials",
 		notionPage: "36d077d40d5c4c809adecc1f13f4978c",
