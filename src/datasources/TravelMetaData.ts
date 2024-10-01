@@ -407,7 +407,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		],
 		reelLinks: ["https://www.instagram.com/reel/DAWBdOpC00S/?hl=en"],
 		backupLink: "https://drive.google.com/file/d/1-lC6yL-FcgwMUpZXmrzMRVOV4EbLDjVi/view?usp=sharing",
-		newestVideo: true,
 	},
 	{
 		title: "Timor-Leste",
@@ -420,9 +419,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/C-U4hPnzsoJ/?hl=en",
 			"https://www.instagram.com/p/C-ZpKlvzLk3/?hl=en",
 		],
-		// reelLinks: [""],
-		// backupLink: "",
-		// newestVideo: true,
+		reelLinks: ["https://www.instagram.com/reel/DAkVgM9i5tf/?hl=en"],
+		backupLink: "https://drive.google.com/file/d/1puWBm8F3ejCGtT5oOsqTXunjZwA_5bto/view?usp=sharing",
 	},
 	{
 		title: "Thailand 2",
@@ -459,7 +457,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		],
 		// reelLinks: [""],
 		// backupLink: "",
-		// newestVideo: true,
 	},
 	// {
 	// 	title: "",
