@@ -119,10 +119,10 @@ export const Navbar = ({
 						/>
 					);
 				})}
-				<div className={styles.spacer} style={{ order: 2 }} />
-				<div className={styles.spacer} style={{ order: 6 }} />
+				{/* <div className={styles.spacer} style={{ order: 0 }} />
+				<div className={styles.spacer} style={{ order: 4 }} /> */}
 
-				<div
+				{/* <div
 					className={styles.darkModeToggle}
 					style={{
 						order: 7,
@@ -145,7 +145,7 @@ export const Navbar = ({
 							</button>
 						)}
 					</Tooltip>
-				</div>
+				</div> */}
 			</Tabs>
 		</nav>
 	);

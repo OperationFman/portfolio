@@ -26,19 +26,7 @@ export const tabsData: {
 				style={{ height: "20px", width: "20px" }}
 			/>
 		),
-		order: 0,
-	},
-	{
-		label: "FOLIO",
-		color: "#66bb6a",
-		route: "/folio",
-		icon: (tab: number) => (
-			<WorkOutlineOutlinedIcon
-				className={setColor(tab, 1, colors.defaultLightBlue)}
-				style={{ height: "18px", width: "18px" }}
-			/>
-		),
-		order: 3,
+		order: 1,
 	},
 	{
 		label: "GUIDES",
@@ -46,23 +34,11 @@ export const tabsData: {
 		route: "/guides",
 		icon: (tab: number) => (
 			<SchoolOutlinedIcon
-				className={setColor(tab, 2, colors.defaultPurple)}
+				className={setColor(tab, 1, colors.defaultPurple)}
 				style={{ height: "20px", width: "20px" }}
 			/>
 		),
-		order: 4,
-	},
-	{
-		label: "PROJECTS",
-		color: "#f44336",
-		route: "/projects",
-		icon: (tab: number) => (
-			<BookmarkBorderOutlinedIcon
-				className={setColor(tab, 3, colors.defaultRed)}
-				style={{ height: "20px", width: "20px" }}
-			/>
-		),
-		order: 5,
+		order: 2,
 	},
 	{
 		label: "TRAVEL",
@@ -70,10 +46,10 @@ export const tabsData: {
 		route: "/travel",
 		icon: (tab: number) => (
 			<HikingOutlinedIcon
-				className={setColor(tab, 4, colors.defaultYellow)}
+				className={setColor(tab, 2, colors.defaultYellow)}
 				style={{ height: "20px", width: "20px" }}
 			/>
 		),
-		order: 6,
+		order: 3,
 	},
 ];
