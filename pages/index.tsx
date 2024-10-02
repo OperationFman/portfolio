@@ -7,7 +7,7 @@ import { ParallaxArt } from "../src/homepage/parallax-art/ParallaxArt";
 import { Footer } from "../utils/footer/Footer";
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import styles from "../src/homepage/homepage.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BioDescription } from "../src/homepage/biography/BioDescription";
 import { projectMetaData } from "../src/datasources/ProjectMetaData";
 import { ProjectItem } from "../src/projects/ProjectItem";
@@ -15,13 +15,42 @@ import Portfolio from "../src/homepage/Portfolio";
 import Folio from "../src/folio/Skills";
 
 const Home: NextPage = () => {
+	const enum FolioKey {
+		Portfolio = "portfolio",
+		Skills = "skills",
+		Projects = "projects",
+	}
+
+	const portfolioOptions = [
+		FolioKey.Portfolio,
+		FolioKey.Skills,
+		FolioKey.Projects,
+	];
+
 	const [alignment, setAlignment] = useState("portfolio");
+
+	useEffect(() => {
+		const searchParams = new URLSearchParams(window.location.search);
+		const optionParam = searchParams.get("option");
+		if (optionParam && portfolioOptions.includes(optionParam as FolioKey)) {
+			setAlignment(optionParam);
+		}
+	}, []);
 
 	const handleChange = (
 		event: React.MouseEvent<HTMLElement>,
 		newAlignment: string,
 	) => {
 		setAlignment(newAlignment);
+
+		const searchParams = new URLSearchParams(window.location.search);
+		searchParams.set("option", newAlignment);
+
+		window.history.replaceState(
+			null,
+			"",
+			`${window.location.pathname}?${searchParams.toString()}`,
+		);
 	};
 
 	const description =
