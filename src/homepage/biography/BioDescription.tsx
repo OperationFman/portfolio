@@ -73,9 +73,6 @@ export const BioDescription = (): JSX.Element => {
 					{pluralTime("minute", periodWorked?.minutes)}{" "}
 				</main>
 
-				<KeyboardDoubleArrowDownRoundedIcon
-					className={styles.scrollIndicator}
-				/>
 			</div>
 		</div>
 	);

@@ -7,3 +7,4 @@ Host: https://franklin-v-moon.dev
 
 # Sitemaps
 Sitemap: https://franklin-v-moon.dev/sitemap-0.xml
+Sitemap: https://franklin-v-moon.dev/sitemap.xml

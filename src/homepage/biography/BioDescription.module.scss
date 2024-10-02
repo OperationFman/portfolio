@@ -3,6 +3,8 @@
 .outerContainer {
 	display: flex;
 	justify-content: center;
+
+	margin-bottom: 70px;
 }
 .container {
 	text-align: center;
@@ -64,9 +66,4 @@
 }
 .blurbDark {
 	color: $dimmerWhite;
-}
-
-.scrollIndicator {
-	opacity: 70%;
-	margin-top: 125px;
 }

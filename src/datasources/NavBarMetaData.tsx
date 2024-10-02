@@ -34,7 +34,7 @@ export const tabsData: {
 		route: "/folio",
 		icon: (tab: number) => (
 			<WorkOutlineOutlinedIcon
-				className={setColor(tab, 1, colors.defaultGreen)}
+				className={setColor(tab, 1, colors.defaultLightBlue)}
 				style={{ height: "18px", width: "18px" }}
 			/>
 		),

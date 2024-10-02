@@ -8,8 +8,8 @@ import { ExternalLinkButtons } from "./ExternalLinkButtons";
 import { ProjectMetaData } from "./types";
 
 import styles from "./ProjectItem.module.scss";
-import { setDark } from "../../../utils/configureCss/configureCss";
-import { splitStringAtFullStop } from "../../../utils/split-string/splitStringAtFullStop";
+import { setDark } from "../../utils/configureCss/configureCss";
+import { splitStringAtFullStop } from "../../utils/split-string/splitStringAtFullStop";
 
 export const ProjectItem = ({
 	metaData,

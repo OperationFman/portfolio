@@ -1,7 +1,7 @@
 {
 	"name": "portfolio",
-	"version": "1.0.0",
-	"private": true,
+	"version": "3.0.0",
+	"private": false,
 	"scripts": {
 		"dev": "yarn && next dev",
 		"test": "jest",

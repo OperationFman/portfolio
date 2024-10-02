@@ -2,27 +2,56 @@ import type { NextPage } from "next";
 
 import Head from "next/head";
 import { PageContainer } from "../src/global/PageContainer";
-import { Contact } from "../src/homepage/contact/Contact";
-import { Experience } from "../src/homepage/experience/Experience";
-import { ForYou } from "../src/homepage/foryou/ForYou";
 import { HomeFooterImage } from "../src/homepage/homeFooter/HomeFooterImage";
 import { ParallaxArt } from "../src/homepage/parallax-art/ParallaxArt";
-import { Qualifications } from "../src/homepage/qualifications/Qualifications";
-import { Salary } from "../src/homepage/salary/Salary";
 import { Footer } from "../utils/footer/Footer";
+import { ToggleButton, ToggleButtonGroup } from "@mui/material";
+import styles from "../src/homepage/homepage.module.scss";
+import { useState } from "react";
 import { BioDescription } from "../src/homepage/biography/BioDescription";
+import { projectMetaData } from "../src/datasources/ProjectMetaData";
+import { ProjectItem } from "../src/projects/ProjectItem";
+import Portfolio from "../src/homepage/Portfolio";
+import Folio from "../src/folio/Skills";
 
 const Home: NextPage = () => {
+	const [alignment, setAlignment] = useState("portfolio");
+
+	const handleChange = (
+		event: React.MouseEvent<HTMLElement>,
+		newAlignment: string,
+	) => {
+		setAlignment(newAlignment);
+	};
+
 	const description =
 		"Franklin is a full-stack software developer with a passion for user centric design, volunteering globally and advocating for social change";
+
+	const SubPage = () => {
+		switch (alignment) {
+			case "portfolio":
+				return <Portfolio />;
+			case "skills":
+				return <Folio />;
+			case "projects":
+				return (
+					<div className={styles.projects}>
+						{projectMetaData.map((dataItem, index) => {
+							return <ProjectItem metaData={dataItem} key={index} />;
+						})}
+					</div>
+				);
+		}
+	};
+
 	return (
 		<>
 			<Head>
 				<title>Homepage - Franklin V Moon</title>
 				<link rel='icon' href='/favicon-blue.ico' />
-				<meta name='Franklin Von Moon Portfolio' content={description} />
+				<meta name='Franklin Moon' content={description} />
 				<meta name='description' content={description} />
-				<meta property='og:title' content='Franklin Von Moon Portfolio' />
+				<meta property='og:title' content='Franklin Moon Portfolio' />
 				<meta property='og:description' content={description} />
 				<meta
 					property='og:image'
@@ -33,12 +62,21 @@ const Home: NextPage = () => {
 			</Head>
 			<ParallaxArt />
 			<PageContainer>
-				<BioDescription />
-				<ForYou />
-				<Experience />
-				<Qualifications />
-				<Salary />
-				<Contact />
+				<>
+					<BioDescription />
+					<div className={styles.pageToggle}>
+						<ToggleButtonGroup
+							color='primary'
+							value={alignment}
+							exclusive
+							onChange={handleChange}>
+							<ToggleButton value='portfolio'>Portfolio</ToggleButton>
+							<ToggleButton value='skills'>Skills</ToggleButton>
+							<ToggleButton value='projects'>Projects</ToggleButton>
+						</ToggleButtonGroup>
+					</div>
+					<SubPage />
+				</>
 			</PageContainer>
 			<HomeFooterImage />
 			<Footer isHomepage />

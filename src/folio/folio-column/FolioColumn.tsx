@@ -1,5 +1,5 @@
 import { FolioGrouping } from "./FolioGrouping";
-import { FolioSubHeading } from "../folio-heading/FolioSubHeading";
+import { FolioSubHeading } from "../sub-heading/FolioSubHeading";
 import { MetaData, FolioData } from "../types";
 
 import styles from "./FolioColumn.module.scss";

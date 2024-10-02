@@ -1,5 +1,5 @@
 import { ConvictionGrouping } from "./ConvictionGrouping";
-import { FolioSubHeading } from "../folio-heading/FolioSubHeading";
+import { FolioSubHeading } from "../sub-heading/FolioSubHeading";
 import { ConvictionsRow } from "../types";
 
 import styles from "./Convictions.module.scss";
