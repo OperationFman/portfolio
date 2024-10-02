@@ -23,14 +23,12 @@
 	padding: 0 0.9375rem;
 
 	&::after {
-		margin-top: 0.3125rem;
-		content: "FVM";
+		content: "FOLIO";
 	}
 
 	@include breakpoint(medium) {
 		&::after {
-			margin: 0.3125rem 0 0 0.3125rem;
-			content: "FRANKLIN V MOON";
+			content: "PORTFOLIO";
 		}
 	}
 }

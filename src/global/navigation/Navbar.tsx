@@ -98,9 +98,7 @@ export const Navbar = ({
 						<Tab
 							label={
 								item.label || (
-									<span className={styles.visuallyHidden}>
-										Franklin Von Moon
-									</span>
+									<span className={styles.visuallyHidden}>PORTFOLIO</span>
 								)
 							}
 							icon={item.icon(tabIndex)}
@@ -119,15 +117,16 @@ export const Navbar = ({
 						/>
 					);
 				})}
-				{/* <div className={styles.spacer} style={{ order: 0 }} />
-				<div className={styles.spacer} style={{ order: 4 }} /> */}
 
-				{/* <div
+				<div
 					className={styles.darkModeToggle}
 					style={{
-						order: 7,
+						order: 5,
 						opacity: darkModeLoading ? "0.1" : "1",
 						cursor: darkModeLoading ? "default" : "pointer",
+						position: "absolute",
+						right: 0,
+						height: "100%",
 					}}
 					onClick={() => handleDarkModeToggle()}>
 					<Tooltip TransitionComponent={Zoom} title='Dark Mode'>
@@ -145,7 +144,7 @@ export const Navbar = ({
 							</button>
 						)}
 					</Tooltip>
-				</div> */}
+				</div>
 			</Tabs>
 		</nav>
 	);
