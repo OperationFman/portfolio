@@ -16,7 +16,7 @@ describe("Navbar component", () => {
 	it("renders the navbar correctly", () => {
 		const { getByText } = render(<Navbar setDarkMode={() => {}} />);
 		expect(getByText("SKILLS")).toBeDefined();
-		expect(getByText("TUTORIALS")).toBeDefined();
+		expect(getByText("GUIDES")).toBeDefined();
 		expect(getByText("PROJECTS")).toBeDefined();
 	});
 

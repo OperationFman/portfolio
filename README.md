@@ -6,7 +6,7 @@
 - [Tech Stack](#tech-stack)
 - [Running Locally](#running-locally)
 - [How To Update Content](#how-to-update-content)
-  - [Add A Tutorial](#add-a-tutorial)
+  - [Add A Guide](#add-a-guide)
   - [Update Qualifications, Volunteering and Work Experience](#update-qualifications-volunteering-and-work-experience)
   - [Update Skills](#update-skills)
   - [Update Projects](#update-projects)
@@ -25,7 +25,7 @@ of the website.
 
 &nbsp;
 
-![Tutorial Page](https://user-images.githubusercontent.com/42459707/217388236-cbb442a9-e8c8-4675-9686-6a37ea1512be.png)
+![Guide Page](https://user-images.githubusercontent.com/42459707/217388236-cbb442a9-e8c8-4675-9686-6a37ea1512be.png)
 
 Why did I build this site?
 
@@ -175,7 +175,7 @@ a choice between light and dark modes.
 
 In the future, it is intended to implement a more efficient content updating
 process utilizing a headless CMS solution such as [Strapi](https://strapi.io/).
-Currently, updates to tutorial content are made directly within
+Currently, updates to guide content are made directly within
 [Notion Pages](https://www.notion.so/) and modifications to other page elements
 are performed by updating the .ts files within the repository's
 `~/src/datasources directory`. Hence, the subsequent instructions assume that
@@ -184,9 +184,9 @@ changes.
 
 &nbsp;
 
-### Add A Tutorial
+### Add A Guide
 
-1. Create a tutorial within any notion pages, ensure it has a cover image. It
+1. Create a guide within any notion pages, ensure it has a cover image. It
    should be the same as the thumbnail but higher res (Ideal px width x height
    is 1500x850).
 
@@ -204,33 +204,33 @@ changes.
 
 &nbsp;
 
-5. Save a thumbnail in the repo path `~/src/public/tutorials` with a shortened
-   name eg `heating-blockchain.png`
+5. Save a thumbnail in the repo path `~/src/public/guides` with a shortened name
+   eg `heating-blockchain.png`
 
 - Ideal px width x height is 380x200
 - Only use .png
 
 &nbsp;
 
-6. Open `~/src/datasources/TutorialMetaData.ts` in your favorite text editor and
+6. Open `~/src/datasources/GuideMetaData.ts` in your favorite text editor and
    add a key-value object to the top following this type:
 
 ```typescript
 {
-  title: string; // Title for the tutorial page
-  link: string; // Will appear in the url, keep it short, e.g "self-heating-blockchain-tutorial"
+  title: string; // Title for the guide page
+  link: string; // Will appear in the url, keep it short, e.g "self-heating-blockchain-guide"
   notionPage: string; // Copy only the numbers section from the notion pages link
   created: number; // Epoch number for the date the notion page was made
-  thumbnail: string; // The ending path to the thumbnail, eg "/tutorials/heating-blockchain.png"
-  subTitle: string; // Sub title for the tutorial page - Will be shortened above 50 characters
-  topic: Topic; // Programming, Agile or Infrastructure etc, this shows on the tutorial page
-  languages?: Languages[]; // Optional: If one or multiple programming languages, add them here. You can add new ones in `~src/tutorials/types.ts`
-  tags?: Tags[]; // Optional: Tags convey the content, e.g 'tutorial', 'blog post' etc. You can add new ones in `~src/tutorials/types.ts`
+  thumbnail: string; // The ending path to the thumbnail, eg "/guides/heating-blockchain.png"
+  subTitle: string; // Sub title for the guide page - Will be shortened above 50 characters
+  topic: Topic; // Programming, Agile or Infrastructure etc, this shows on the guide page
+  languages?: Languages[]; // Optional: If one or multiple programming languages, add them here. You can add new ones in `~src/guides/types.ts`
+  tags?: Tags[]; // Optional: Tags convey the content, e.g 'guide', 'blog post' etc. You can add new ones in `~src/guides/types.ts`
 }
 ```
 
-7. Git push and after auto deployment you should see the tutorial card on the
-   `https://www.franklin-v-moon.dev/tutorials` page
+7. Git push and after auto deployment you should see the guide card on the
+   `https://www.franklin-v-moon.dev/guides` page
 
 &nbsp;
 

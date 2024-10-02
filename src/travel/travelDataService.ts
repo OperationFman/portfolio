@@ -5,7 +5,7 @@ import {
 	travelVideoMetaData,
 } from "../datasources/TravelMetaData";
 import { TravelVideoMetaData } from "./types";
-import { SortOptions } from "../tutorials/types";
+import { SortOptions } from "../guides/types";
 
 export const getTravelMetaDataIndex = (
 	link: string,

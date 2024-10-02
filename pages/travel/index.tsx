@@ -18,9 +18,9 @@ import {
 } from "../../src/travel/travelDataService";
 import Zoom from "@mui/material/Zoom";
 import { useEffect, useState } from "react";
-import { SortButton } from "../../src/tutorials/components/buttons/SortButton";
+import { SortButton } from "../../src/guides/components/buttons/SortButton";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
-import { SortOptions } from "../../src/tutorials/types";
+import { SortOptions } from "../../src/guides/types";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Button, Tooltip } from "@mui/material";
 import { setDark } from "../../utils/configureCss/configureCss";

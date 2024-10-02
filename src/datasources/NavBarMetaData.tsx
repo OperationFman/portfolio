@@ -41,9 +41,9 @@ export const tabsData: {
 		order: 3,
 	},
 	{
-		label: "TUTORIALS",
+		label: "GUIDES",
 		color: "#ce93d8",
-		route: "/tutorials",
+		route: "/guides",
 		icon: (tab: number) => (
 			<SchoolOutlinedIcon
 				className={setColor(tab, 2, colors.defaultPurple)}
