@@ -28,7 +28,7 @@ export const Footer = ({ isHomepage = false }: { isHomepage?: boolean }) => {
 			</div>
 
 			<footer className={styles.bottomNav}>
-				<Container maxWidth={"md"}>
+				<Container maxWidth={"xs"}>
 					<div className={styles.sitemap}>
 						{links.map((link, index) => (
 							<span key={index}>
