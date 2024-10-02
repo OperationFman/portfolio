@@ -99,7 +99,7 @@ const Home: NextPage = () => {
 							value={alignment}
 							exclusive
 							onChange={handleChange}>
-							<ToggleButton value='portfolio'>Portfolio</ToggleButton>
+							<ToggleButton value='portfolio'>Resume</ToggleButton>
 							<ToggleButton value='skills'>Skills</ToggleButton>
 							<ToggleButton value='projects'>Projects</ToggleButton>
 						</ToggleButtonGroup>
