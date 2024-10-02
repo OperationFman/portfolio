@@ -4,9 +4,9 @@ import { Dispatch, SetStateAction } from "react";
 import { splitStringAtFullStop } from "../../../utils/split-string/splitStringAtFullStop";
 import { MetaData } from "../types";
 
-import styles from "./SkillModal.module.scss";
+import styles from "./FolioModal.module.scss";
 
-export const SkillModal = (
+export const FolioModal = (
 	setShowModal: Dispatch<SetStateAction<boolean>>,
 	payload: MetaData | undefined,
 ) => {

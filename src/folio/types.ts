@@ -17,7 +17,7 @@ export interface ColumnData extends MetaData {
 	data: MetaData[];
 }
 
-export type SkillData = {
+export type FolioData = {
 	title: string;
 	data: MetaData[];
 };

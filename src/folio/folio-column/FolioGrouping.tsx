@@ -1,13 +1,13 @@
 import { setDark } from "../../../utils/configureCss/configureCss";
-import { MetaData, SkillData } from "../types";
+import { MetaData, FolioData } from "../types";
 
-import styles from "./SkillGrouping.module.scss";
+import styles from "./FolioGrouping.module.scss";
 
-export const SkillsGrouping = ({
+export const FolioGrouping = ({
 	grouping,
 	handleOpenModal,
 }: {
-	grouping: SkillData;
+	grouping: FolioData;
 	handleOpenModal: (payload: MetaData) => void;
 }) => {
 	return (
@@ -23,7 +23,7 @@ export const SkillsGrouping = ({
 				};
 				return (
 					<button
-						className={setDark(styles, "skillItem")}
+						className={setDark(styles, "folioItem")}
 						onClick={() => handleOpenModal(modalPayload)}
 						key={index}>
 						{item.title}

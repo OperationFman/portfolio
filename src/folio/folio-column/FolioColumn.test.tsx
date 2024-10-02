@@ -1,9 +1,9 @@
 import { render } from "@testing-library/react";
-import { SkillsColumn } from "./SkillsColumn";
+import { FolioColumn } from "./FolioColumn";
 import { Proficiency } from "../types";
 
-describe("SkillsColumn component", () => {
-	const title = "Skills Column Title";
+describe("FolioColumn component", () => {
+	const title = "Folio Column Title";
 	const metaData = [
 		{
 			title: "Group 1",
@@ -44,7 +44,7 @@ describe("SkillsColumn component", () => {
 
 	it("should render the component correctly", () => {
 		const { getByText } = render(
-			<SkillsColumn
+			<FolioColumn
 				title={title}
 				metaData={metaData}
 				handleOpenModal={handleOpenModal}
@@ -59,17 +59,17 @@ describe("SkillsColumn component", () => {
 		expect(handleOpenModal).toHaveBeenCalledTimes(0);
 	});
 
-	it("should call the handleOpenModal function when SkillsGrouping component is clicked", () => {
+	it("should call the handleOpenModal function when FolioGrouping component is clicked", () => {
 		const { getByText } = render(
-			<SkillsColumn
+			<FolioColumn
 				title={title}
 				metaData={metaData}
 				handleOpenModal={handleOpenModal}
 			/>,
 		);
 
-		const skill = getByText(metaData[0].data[0].title);
-		skill.click();
+		const folio = getByText(metaData[0].data[0].title);
+		folio.click();
 
 		expect(handleOpenModal).toHaveBeenCalledWith(metaData[0].data[0]);
 		expect(handleOpenModal).toHaveBeenCalledTimes(1);

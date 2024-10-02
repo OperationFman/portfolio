@@ -1,6 +1,6 @@
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
-import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
+import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import HikingOutlinedIcon from "@mui/icons-material/HikingOutlined";
 import colors from "../../themes/_colors.module.scss";
@@ -29,13 +29,13 @@ export const tabsData: {
 		order: 0,
 	},
 	{
-		label: "SKILLS",
+		label: "FOLIO",
 		color: "#66bb6a",
-		route: "/skills",
+		route: "/folio",
 		icon: (tab: number) => (
-			<LightbulbOutlinedIcon
+			<WorkOutlineOutlinedIcon
 				className={setColor(tab, 1, colors.defaultGreen)}
-				style={{ height: "20px", width: "20px" }}
+				style={{ height: "18px", width: "18px" }}
 			/>
 		),
 		order: 3,

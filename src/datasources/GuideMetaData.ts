@@ -30,7 +30,7 @@ export const guideMetaData: GuideMetaData[] = [
 		created: 1700712512,
 		thumbnail: "/guides/kubernetes.png",
 		subTitle:
-			"Getting started with Kubernetes, covering all the basic skills required by a Kubernetes Administrator",
+			"Getting started with Kubernetes, covering all the basic folio required by a Kubernetes Administrator",
 		topic: Topic.Infrastructure,
 		tags: [Tags.StepByStep, Tags.CodeBlock],
 	},

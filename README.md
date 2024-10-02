@@ -8,7 +8,7 @@
 - [How To Update Content](#how-to-update-content)
   - [Add A Guide](#add-a-guide)
   - [Update Qualifications, Volunteering and Work Experience](#update-qualifications-volunteering-and-work-experience)
-  - [Update Skills](#update-skills)
+  - [Update Folio](#update-folio)
   - [Update Projects](#update-projects)
   - [Update Salary Expectations](#update-salary-expectations)
 - [Contact](#contact)
@@ -92,7 +92,7 @@ Deployment
 
 This project was created as an opportunity to experiment and explore new
 techniques in web development. Initially, I came from a React Native background
-and wanted to expand my skills by trying out various styling tools. After
+and wanted to expand my folio by trying out various styling tools. After
 evaluating options such as default CSS and Tailwind, I ultimately decided to use
 SASS for its ease of use and reliability.
 
@@ -252,14 +252,14 @@ unlimited Volunteering or Work Experience items
 
 &nbsp;
 
-### Update Skills
+### Update Folio
 
-1. Open `~/src/datasources/SkillsMetaData.ts` in your favorite text editor
+1. Open `~/src/datasources/FolioMetaData.ts` in your favorite text editor
 
 2. Edit the content as desired
 
 3. Git push and after auto deployment you should see the changes reflected on
-   the `https://www.franklin-v-moon.dev/skills` page
+   the `https://www.franklin-v-moon.dev/folio` page
 
 &nbsp;
 

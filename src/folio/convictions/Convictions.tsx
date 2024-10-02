@@ -1,5 +1,5 @@
 import { ConvictionGrouping } from "./ConvictionGrouping";
-import { SkillsSubHeading } from "../sub-heading/SkillsSubHeading";
+import { FolioSubHeading } from "../folio-heading/FolioSubHeading";
 import { ConvictionsRow } from "../types";
 
 import styles from "./Convictions.module.scss";
@@ -13,10 +13,12 @@ export const Convictions = ({
 }) => {
 	return (
 		<div className={styles.container}>
-			<SkillsSubHeading title={title} />
+			<FolioSubHeading title={title} />
 			<div className={styles.dataContainer}>
 				{metaData.map((grouping, index) => {
-					return <ConvictionGrouping grouping={grouping} key={index} index={index}/>;
+					return (
+						<ConvictionGrouping grouping={grouping} key={index} index={index} />
+					);
 				})}
 			</div>
 		</div>

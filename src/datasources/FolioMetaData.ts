@@ -1,5 +1,5 @@
-import { ColumnData, Proficiency, SkillData } from "../skills/types";
-import { ConvictionsRow } from "./../skills/types";
+import { ColumnData, Proficiency, FolioData } from "../folio/types";
+import { ConvictionsRow } from "./../folio/types";
 
 const { Learning, Capable, Proficient, HighlyProficient } = Proficiency;
 
@@ -11,7 +11,7 @@ const Description = {
 	Proficient:
 		"I've worked with it, I've gone into depth, and I'm comfortable guiding others. I can pair with other developers and influence at my peer level and with folks I'm guiding.",
 	HighlyProficient:
-		"Can lead pairing on a project no matter who the pair is. Very comfortable with the language/tool and can teach others at different skill levels and in different project situations.",
+		"Can lead pairing on a project no matter who the pair is. Very comfortable with the language/tool and can teach others at different folio levels and in different project situations.",
 };
 
 export const languagesMetaData: ColumnData[] = [
@@ -120,7 +120,6 @@ export const languagesMetaData: ColumnData[] = [
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
-
 		],
 	},
 	{
@@ -261,10 +260,11 @@ export const languagesMetaData: ColumnData[] = [
 			},
 			{
 				title: "YAML",
-				knowledge: "I've used YAML files across various tools and applications crafting configurations and data structures that bring order and automation to projects with reliability and repeatability.",
+				knowledge:
+					"I've used YAML files across various tools and applications crafting configurations and data structures that bring order and automation to projects with reliability and repeatability.",
 				proficiency: Capable,
 				description: Description.Capable,
-			}
+			},
 		],
 	},
 	{
@@ -306,7 +306,7 @@ export const languagesMetaData: ColumnData[] = [
 	},
 ];
 
-export const toolsMetaData: SkillData[] = [
+export const toolsMetaData: FolioData[] = [
 	{
 		title: "Dev",
 		data: [
@@ -469,7 +469,7 @@ export const toolsMetaData: SkillData[] = [
 	},
 ];
 
-export const cloudMetaData: SkillData[] = [
+export const cloudMetaData: FolioData[] = [
 	{
 		title: "AWS",
 		data: [
@@ -650,7 +650,7 @@ export const convictionMetaData: ConvictionsRow[] = [
 	{
 		title: "Pair Programming",
 		blurb:
-			"A developer's productivity should be evaluated based on the problems they solve. Pair programming enables developers to solve problems more efficiently, share knowledge, and improve their skills.",
+			"A developer's productivity should be evaluated based on the problems they solve. Pair programming enables developers to solve problems more efficiently, share knowledge, and improve their folio.",
 	},
 	{
 		title: "Automated Testing",

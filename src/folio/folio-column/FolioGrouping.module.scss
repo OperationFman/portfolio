@@ -8,7 +8,7 @@
 	margin-bottom: 24px;
 }
 
-.skillItem {
+.folioItem {
 	background: none;
 	color: inherit;
 	border: none;
@@ -26,10 +26,11 @@
 
 	color: $darkGrey;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		@extend .defaultGreenGradient;
 	}
 }
-.skillItemDark {
+.folioItemDark {
 	color: $dimmerWhite;
 }

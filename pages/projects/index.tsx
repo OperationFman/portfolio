@@ -7,7 +7,7 @@ import { Footer } from "../../utils/footer/Footer";
 
 const Projects: NextPage = () => {
 	const description =
-		"Built projects, from front-end web apps demonstrating design skills to auto-scaling infrastructure deployments";
+		"Built projects, from front-end web apps demonstrating design folio to auto-scaling infrastructure deployments";
 	return (
 		<div>
 			<Head>

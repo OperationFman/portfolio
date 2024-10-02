@@ -12,7 +12,7 @@ export const Footer = ({ isHomepage = false }: { isHomepage?: boolean }) => {
 
 	const links = [
 		{ label: "Home", path: "/" },
-		{ label: "Skills", path: "/skills" },
+		{ label: "Folio", path: "/folio" },
 		{ label: "Guides", path: "/guides" },
 		{ label: "Projects", path: "/projects" },
 		{ label: "Travel", path: "/travel" },

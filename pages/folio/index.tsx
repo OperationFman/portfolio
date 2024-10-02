@@ -6,21 +6,21 @@ import {
 	cloudMetaData,
 	convictionMetaData,
 	toolsMetaData,
-} from "../../src/datasources/SkillsMetaData";
+} from "../../src/datasources/FolioMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
-import { SkillModal } from "../../src/skills/modal/SkillModal";
-import { Convictions } from "../../src/skills/convictions/Convictions";
-import { Languages } from "../../src/skills/languages/Languages";
-import { SkillsColumn } from "../../src/skills/skills-column/SkillsColumn";
-import { MetaData } from "../../src/skills/types";
+import { FolioModal } from "../../src/folio/modal/FolioModal";
+import { Convictions } from "../../src/folio/convictions/Convictions";
+import { Languages } from "../../src/folio/languages/Languages";
+import { FolioColumn } from "../../src/folio/folio-column/FolioColumn";
+import { MetaData } from "../../src/folio/types";
 import { slideTransition } from "../../src/guides/components/filter/filterAnimations";
 import { Footer } from "../../utils/footer/Footer";
 
-import styles from "../../src/skills/index.module.scss";
+import styles from "../../src/folio/index.module.scss";
 
 const Transition: any = slideTransition("right");
 
-export const Skills: NextPage = () => {
+export const Folio: NextPage = () => {
 	const [showModal, setShowModal] = useState(false);
 	const [modalPayload, setModalPayload] = useState<MetaData>();
 
@@ -35,14 +35,11 @@ export const Skills: NextPage = () => {
 	return (
 		<div>
 			<Head>
-				<title>Skills - Franklin V Moon</title>
-				<meta name='Skills' content={description} />
+				<title>Folio - Franklin V Moon</title>
+				<meta name='Folio' content={description} />
 				<link rel='icon' href='/favicon-green.ico' />
 				<meta name='description' content={description} />
-				<meta
-					property='og:title'
-					content='Franklin Von Moon Portfolio Skills'
-				/>
+				<meta property='og:title' content='Franklin Von Moon Portfolio Folio' />
 				<meta property='og:description' content={description} />
 				<meta
 					property='og:image'
@@ -50,7 +47,7 @@ export const Skills: NextPage = () => {
 				/>
 				<meta
 					property='og:url'
-					content='https://www.franklin-v-moon.dev/skills'
+					content='https://www.franklin-v-moon.dev/folio'
 				/>
 				<meta property='og:type' content='website' />
 			</Head>
@@ -60,7 +57,7 @@ export const Skills: NextPage = () => {
 					open={showModal}
 					TransitionComponent={Transition}
 					onClose={() => setShowModal(false)}>
-					{SkillModal(setShowModal, modalPayload)}
+					{FolioModal(setShowModal, modalPayload)}
 				</Dialog>
 			</div>
 
@@ -72,12 +69,12 @@ export const Skills: NextPage = () => {
 
 				<Languages handleOpenModal={handleOpenModal} />
 				<div className={styles.columnsContainer}>
-					<SkillsColumn
+					<FolioColumn
 						title='Tools'
 						metaData={toolsMetaData}
 						handleOpenModal={handleOpenModal}
 					/>
-					<SkillsColumn
+					<FolioColumn
 						title='Cloud'
 						metaData={cloudMetaData}
 						handleOpenModal={handleOpenModal}
@@ -90,4 +87,4 @@ export const Skills: NextPage = () => {
 	);
 };
 
-export default Skills;
+export default Folio;
