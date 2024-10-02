@@ -1,4 +1,4 @@
-import { Dialog } from "@mui/material";
+import { Dialog, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
@@ -17,16 +17,26 @@ import { slideTransition } from "../../src/guides/components/filter/filterAnimat
 import { Footer } from "../../utils/footer/Footer";
 
 import styles from "../../src/folio/index.module.scss";
+import { projectMetaData } from "../../src/datasources/ProjectMetaData";
+import { ProjectItem } from "../../src/folio/projects/ProjectItem";
 
 const Transition: any = slideTransition("right");
 
 export const Folio: NextPage = () => {
 	const [showModal, setShowModal] = useState(false);
 	const [modalPayload, setModalPayload] = useState<MetaData>();
+	const [alignment, setAlignment] = useState("skills");
 
 	const handleOpenModal = (payload: MetaData) => {
 		setModalPayload(payload);
 		setShowModal(true);
+	};
+
+	const handleChange = (
+		event: React.MouseEvent<HTMLElement>,
+		newAlignment: string,
+	) => {
+		setAlignment(newAlignment);
 	};
 
 	const description =
@@ -62,25 +72,50 @@ export const Folio: NextPage = () => {
 			</div>
 
 			<PageContainer>
-				<main className={styles.heroText}>
-					Select any of these languages or technologies listed to learn more
-					about my current capabilities and level of involvement.
-				</main>
-
-				<Languages handleOpenModal={handleOpenModal} />
-				<div className={styles.columnsContainer}>
-					<FolioColumn
-						title='Tools'
-						metaData={toolsMetaData}
-						handleOpenModal={handleOpenModal}
-					/>
-					<FolioColumn
-						title='Cloud'
-						metaData={cloudMetaData}
-						handleOpenModal={handleOpenModal}
-					/>
+				<div className={styles.pageToggle}>
+					<ToggleButtonGroup
+						color='success'
+						value={alignment}
+						exclusive
+						onChange={handleChange}>
+						<ToggleButton value='skills'>Skills</ToggleButton>
+						<ToggleButton value='projects'>Projects</ToggleButton>
+					</ToggleButtonGroup>
 				</div>
-				<Convictions title='Convictions' metaData={convictionMetaData} />
+
+				{alignment === "projects" ? (
+					<>
+						<main className={styles.heroText}>
+							Below is some of the projects I've built or largely collaborated
+							on with links to designs, repositories and deployments
+						</main>
+						{projectMetaData.map((dataItem, index) => {
+							return <ProjectItem metaData={dataItem} key={index} />;
+						})}
+					</>
+				) : (
+					<>
+						<main className={styles.heroText}>
+							Select any of these languages or technologies listed to learn more
+							about my current capabilities and level of involvement.
+						</main>
+
+						<Languages handleOpenModal={handleOpenModal} />
+						<div className={styles.columnsContainer}>
+							<FolioColumn
+								title='Tools'
+								metaData={toolsMetaData}
+								handleOpenModal={handleOpenModal}
+							/>
+							<FolioColumn
+								title='Cloud'
+								metaData={cloudMetaData}
+								handleOpenModal={handleOpenModal}
+							/>
+						</div>
+						<Convictions title='Convictions' metaData={convictionMetaData} />
+					</>
+				)}
 			</PageContainer>
 			<Footer />
 		</div>
