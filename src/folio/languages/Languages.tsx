@@ -1,6 +1,6 @@
 import { Button, Card, Grid } from "@mui/material";
 import { useState } from "react";
-import { languagesMetaData } from "../../datasources/FolioMetaData";
+import { languagesMetaData } from "../../datasources/SkillsMetaData";
 import { MetaData } from "../types";
 import { LanguagesColumn } from "./LanguagesColumn";
 

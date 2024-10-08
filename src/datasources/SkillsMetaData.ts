@@ -133,15 +133,15 @@ export const languagesMetaData: ColumnData[] = [
 				title: "C#",
 				knowledge:
 					"C sharp is a modern and object-oriented language, which means it is well-suited for building robust and scalable backend systems. This can be particularly useful as I am interested in becoming a backend and infrastructure expert.",
-				proficiency: Capable,
-				description: Description.Capable,
+				proficiency: Proficiency,
+				description: Description.Proficient,
 			},
 			{
 				title: "ASP .NET Core",
 				knowledge:
 					"I'm excited to be prioritizing dotNET as my next major learning goal.",
-				proficiency: Capable,
-				description: Description.Capable,
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "XUnit",
@@ -301,6 +301,20 @@ export const languagesMetaData: ColumnData[] = [
 					"After I feel confident with C# and dotNET I hope to explore game development with Unity.",
 				proficiency: Learning,
 				description: Description.Learning,
+			},
+			{
+				title: "USS",
+				knowledge:
+					"Along with unity I have a strong understanding of the UI Toolkit and have used it to build scalable extensible user interfaces",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "UXML",
+				knowledge:
+					"Along with unity I have a strong understanding of the UI Toolkit and have used UXMLto build scalable extensible user interfaces ",
+				proficiency: Proficiency,
+				description: Description.Proficient,
 			},
 		],
 	},

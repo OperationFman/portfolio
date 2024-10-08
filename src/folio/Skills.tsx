@@ -5,7 +5,7 @@ import {
 	cloudMetaData,
 	convictionMetaData,
 	toolsMetaData,
-} from "../datasources/FolioMetaData";
+} from "../datasources/SkillsMetaData";
 import { FolioModal } from "./modal/FolioModal";
 import { Convictions } from "./convictions/Convictions";
 import { Languages } from "./languages/Languages";

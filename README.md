@@ -254,7 +254,7 @@ unlimited Volunteering or Work Experience items
 
 ### Update Folio
 
-1. Open `~/src/datasources/FolioMetaData.ts` in your favorite text editor
+1. Open `~/src/datasources/SkillsMetaData.ts` in your favorite text editor
 
 2. Edit the content as desired
 
