@@ -313,7 +313,7 @@ export const languagesMetaData: ColumnData[] = [
 				title: "UXML",
 				knowledge:
 					"Along with unity I have a strong understanding of the UI Toolkit and have used UXMLto build scalable extensible user interfaces ",
-				proficiency: Proficiency,
+				proficiency: Proficient,
 				description: Description.Proficient,
 			},
 		],
