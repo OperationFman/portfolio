@@ -231,7 +231,7 @@ export const languagesMetaData: ColumnData[] = [
 		],
 	},
 	{
-		title: "Infrastructure",
+		title: "Infra",
 		knowledge:
 			"Eager to stay ahead of the curve in cloud computing, working on some of the latest design paradigms like dockerization and serverless with a focus on availability and reliability across regions and availability zones.",
 		proficiency: Capable,
@@ -530,11 +530,25 @@ export const cloudMetaData: FolioData[] = [
 				description: Description.HighlyProficient,
 			},
 			{
+				title: "Lambda",
+				knowledge:
+					"I've used lambda functions to solve a range or challenges including for small repetitive pipeline build tasks all the way to using it as an entire backend to avoid cold starts for infrequently used webapps.",
+				proficiency: Proficient,
+				description: Description.Capable,
+			},
+			{
 				title: "Billing & Cost Management",
 				knowledge:
 					"I can effectively setup price alerts and break down usage costs to determine what services are costing the most and identifying if changes could be implemented",
 				proficiency: Capable,
 				description: Description.Capable,
+			},
+			{
+				title: "CloudFront",
+				knowledge:
+					"I have a solid understanding of what Cloudfront is capable of and how to best utilise its features. Primarily used it as a front end for APIs and video streaming services",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 			{
 				title: "Cloud Practitioner",
