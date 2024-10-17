@@ -12,6 +12,8 @@ export enum Languages {
 	Java = "Java",
 	Docker = "Docker",
 	Terraform = "Terraform",
+	CloudFormation = "CloudFormation",
+	Lambda = "Lambda",
 	BashShell = "Bash / Shell",
 	HTML = "HTML",
 	CSS = "CSS",

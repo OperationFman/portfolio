@@ -2,6 +2,18 @@ import { Languages, Tags, Topic, GuideMetaData } from "../guides/types";
 
 export const guideMetaData: GuideMetaData[] = [
 	{
+		title: "Serverless API with AWS Lambda, Cloudformation and C# Dotnet",
+		link: "serverless-dotnet-api",
+		notionPage: "122e32d00811803b824edbb51bed4b6e",
+		created: 1729158240,
+		thumbnail: "/guides/lambda-dotnet.png",
+		subTitle:
+			"Lambda Annotations are a simpler way to write serverless APIs in C#. They offer a balance of serverless benefits and traditional API coding.",
+		topic: Topic.Infrastructure,
+		languages: [Languages.CSharp, Languages.CloudFormation, Languages.Lambda],
+		tags: [Tags.StepByStep, Tags.QuickStart],
+	},
+	{
 		title: "Design for Accessibility (WCAG 2.0)",
 		link: "design-for-accessibility",
 		notionPage: "10de32d00811801494d5ffb767dba40f",
