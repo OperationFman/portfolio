@@ -423,6 +423,24 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink: "https://drive.google.com/file/d/1puWBm8F3ejCGtT5oOsqTXunjZwA_5bto/view?usp=sharing",
 	},
 	{
+		title: "Bangladesh",
+		year: 2024,
+		hostedLink: "bangladesh",
+		link: "bangladesh",
+		restricted: false,
+		instagramLinks: [
+			"https://www.instagram.com/p/DCOMqWmJ4X5/?hl=en&img_index=1",
+	    	"https://www.instagram.com/p/DCUWQ4ohBra/?hl=en&img_index=1",
+		],
+	},
+		{
+		title: "Bhutan & East India",
+		year: 2024,
+		hostedLink: "bhutan",
+		link: "bhutan-and-east-india",
+		restricted: false,
+	},
+	{
 		title: "Thailand 2",
 		year: 2024,
 		hostedLink: "thailand2",
@@ -455,13 +473,11 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/C9w2JPtzGcm/?hl=en",
 			"https://www.instagram.com/p/C-mRiXHzW4i/?hl=en",
 		],
-		// reelLinks: [""],
-		// backupLink: "",
 	},
 	// {
 	// 	title: "",
 	// 	year: ,
-	// 	hostedLink: ",
+	// 	hostedLink: "",
 	// 	link: "",
 	// 	restricted: false,
 	// 	instagramLinks: [
@@ -494,14 +510,16 @@ export const rankedTravelVideos = [
 	],
 	//B Tier
 	[
+		"bangladesh",
 		"philippines-and-brunei", 
 		"timor-leste",
 		"south-korea", 
 		"new-zealand", 
-		"cambodia-laos-vietnam"	
 	],
 	//C Tier
 	[
+		"bhutan-and-east-india",
+		"cambodia-laos-vietnam"	
 		"taiwan-hong-kong-macau",
 		"oman",
 		"uae",
@@ -509,10 +527,11 @@ export const rankedTravelVideos = [
 		"china",
 		"nepal",
 		"thailand",
-		"cyprus"
+
 	],
 	//D Tier
 	[
+		"cyprus",
 		"lebanon", 
 		"kuwait-iraqi-kurdistan", 
 		"fiji"],
