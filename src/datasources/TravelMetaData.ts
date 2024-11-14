@@ -519,7 +519,7 @@ export const rankedTravelVideos = [
 	//C Tier
 	[
 		"bhutan-and-east-india",
-		"cambodia-laos-vietnam"	
+		"cambodia-laos-vietnam",
 		"taiwan-hong-kong-macau",
 		"oman",
 		"uae",
