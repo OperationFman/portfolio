@@ -5,6 +5,14 @@
 	margin-bottom: 2.5rem;
 }
 
+.worldMap {
+	padding: 0 0 25px 0;
+
+	@include breakpoint(medium) {
+		padding: 0 50px 70px 50px;
+	}
+}
+
 .sortToggleContainer {
 	display: flex;
 	flex-direction: row;

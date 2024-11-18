@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
 import ExtensionOffOutlinedIcon from "@mui/icons-material/ExtensionOffOutlined";
@@ -121,6 +122,16 @@ const Travel: NextPage = () => {
 			</Head>
 
 			<PageContainer>
+				<Tooltip title='Places Ive Been' followCursor placement='bottom-end'>
+					<Image
+						src='/travel/WorldDotted.png'
+						alt='A map of the world with everywhere Ive been marked'
+						width='3840'
+						height='1878'
+						layout='responsive'
+						className={styles.worldMap}
+					/>
+				</Tooltip>
 				{sortedMetaData.map((metaData, index) => {
 					{
 						const year = metaData[0].year;
