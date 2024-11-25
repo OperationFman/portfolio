@@ -431,6 +431,9 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		instagramLinks: [
 			"https://www.instagram.com/p/DCOMqWmJ4X5/?hl=en&img_index=1",
 	    	"https://www.instagram.com/p/DCUWQ4ohBra/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DCWDQIBp3e8/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DCYTMYWJ4s6/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DCbE7AzJtvw/?hl=en&img_index=1",
 		],
 	},
 		{
@@ -439,6 +442,13 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "bhutan",
 		link: "bhutan-and-east-india",
 		restricted: false,
+		instagramLinks: [
+			"https://www.instagram.com/p/DCdj2OeJbW9/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DCmM-vNh-Dt/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DCnqTo-pa5L/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DCqHnMPBcUE/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DCxxx0aBJBv/?hl=en&img_index=1",	
+		],
 	},
 	{
 		title: "Thailand 2",
