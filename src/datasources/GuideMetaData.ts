@@ -8,7 +8,7 @@ export const guideMetaData: GuideMetaData[] = [
 		created: 1732799279,
 		thumbnail: "/guides/akamai.png",
 		subTitle:
-			"Lambda Annotations are a simpler way to write serverless APIs in C#. They offer a balance of serverless benefits and traditional API coding.",
+			"Basic guide setting up Akamai CDN infront of your existing server for various benefits",
 		topic: Topic.Infrastructure,
 		tags: [Tags.StepByStep, Tags.QuickStart],
 	},
