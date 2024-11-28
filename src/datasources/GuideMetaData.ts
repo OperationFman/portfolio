@@ -2,6 +2,17 @@ import { Languages, Tags, Topic, GuideMetaData } from "../guides/types";
 
 export const guideMetaData: GuideMetaData[] = [
 	{
+		title: "Getting Started With Akamai",
+		link: "akamai-guide",
+		notionPage: "144e32d008118021b9e3c1cf8b542ec6",
+		created: 1732799279,
+		thumbnail: "/guides/akamai.png",
+		subTitle:
+			"Lambda Annotations are a simpler way to write serverless APIs in C#. They offer a balance of serverless benefits and traditional API coding.",
+		topic: Topic.Infrastructure,
+		tags: [Tags.StepByStep, Tags.QuickStart],
+	},
+	{
 		title: "Serverless API with AWS Lambda, Cloudformation and C# Dotnet",
 		link: "serverless-dotnet-api",
 		notionPage: "122e32d00811803b824edbb51bed4b6e",
