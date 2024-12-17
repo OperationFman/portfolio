@@ -2,6 +2,17 @@ import { Languages, Tags, Topic, GuideMetaData } from "../guides/types";
 
 export const guideMetaData: GuideMetaData[] = [
 	{
+		title: "Github Actions Self-Hosted Runners with AWS EKS",
+		link: "github-actions-self-hosted-with-aws-eks,
+		notionPage: "15fe32d0081180899f0ee76bde4416e4",
+		created: 1734448244,
+		thumbnail: "/guides/actionsrunner.png",
+		subTitle:
+			"Automatically scale GitHub Actions runners on AWS EKS for faster workflows.",
+		topic: Topic.Infrastructure,
+		tags: [Tags.StepByStep, Tags.QuickStart],
+	},
+	{
 		title: "Getting Started With Akamai",
 		link: "akamai-guide",
 		notionPage: "144e32d008118021b9e3c1cf8b542ec6",
