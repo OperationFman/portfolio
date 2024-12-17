@@ -24,7 +24,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep, Tags.QuickStart],
 	},
 	{
-		title: "Serverless API with AWS Lambda, Cloudformation and C# Dotnet",
+		title: "Serverless API with AWS Lambda, CF & C# Dotnet",
 		link: "serverless-dotnet-api",
 		notionPage: "122e32d00811803b824edbb51bed4b6e",
 		created: 1729158240,
