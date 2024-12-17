@@ -3,7 +3,7 @@ import { Languages, Tags, Topic, GuideMetaData } from "../guides/types";
 export const guideMetaData: GuideMetaData[] = [
 	{
 		title: "Github Actions Self-Hosted Runners with AWS EKS",
-		link: "github-actions-self-hosted-with-aws-eks,
+		link: "github-actions-self-hosted-with-aws-eks",
 		notionPage: "15fe32d0081180899f0ee76bde4416e4",
 		created: 1734448244,
 		thumbnail: "/guides/actionsrunner.png",
