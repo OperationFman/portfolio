@@ -30,7 +30,7 @@ export const guideMetaData: GuideMetaData[] = [
 		created: 1729158240,
 		thumbnail: "/guides/lambda-dotnet.png",
 		subTitle:
-			"Lambda Annotations are a simpler way to write serverless APIs in C#. They offer a balance of serverless benefits and traditional API coding.",
+			"Lambda Annotations are a simpler way to write serverless APIs in C#",
 		topic: Topic.Infrastructure,
 		languages: [Languages.CSharp, Languages.CloudFormation, Languages.Lambda],
 		tags: [Tags.StepByStep, Tags.QuickStart],
@@ -47,7 +47,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep, Tags.QuickStart],
 	},
 	{
-		title: "How I Edit My Videos",
+		title: "My Post-Production Process for Davinci Resolve",
 		link: "how-I-edit-my-videos",
 		notionPage: "10de32d00811807e9725e006d6c6a830",
 		created: 1727326347,
@@ -56,6 +56,18 @@ export const guideMetaData: GuideMetaData[] = [
 			"My ever improving process for travel post production thats high quality and efficient",
 		topic: Topic.Article,
 		tags: [Tags.StepByStep, Tags.QuickStart],
+	},
+	{
+		title: "Generative AI with AWS Bedrock",
+		link: "generative-ai-with-aws",
+		notionPage: "344cc552c784487a8ee7fa07426b6335",
+		created: 1711608576,
+		thumbnail: "/guides/generative-ai.jpeg",
+		subTitle:
+			"Understand the various options provided by AWS to build yopur own GenAI",
+		topic: Topic.Infrastructure,
+		languages: [],
+		tags: [Tags.StepByStep, Tags.Essay],
 	},
 	{
 		title: "Kubernetes Essentials",
@@ -135,7 +147,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep, Tags.QuickStart],
 	},
 	{
-		title: "Code frontend with Emojis?",
+		title: "Code Frontend with Emojis?",
 		link: "code-with-emojis",
 		notionPage: "f1c08c6df5ec4d9bbf99f4dc6a372540",
 		created: 1675825610,
@@ -147,7 +159,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep],
 	},
 	{
-		title: "Run scripts on AWS EC2 instance startup",
+		title: "Run Scripts on AWS EC2 Instance Startup",
 		link: "aws-run-scripts-on-startup",
 		notionPage: "dd5eea1afcb447e4b82dd5843ac0f662",
 		created: 1675825605,
@@ -159,7 +171,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "React-Redux refresher",
+		title: "React-Redux Refresher",
 		link: "react-redux-refresher",
 		notionPage: "b2b95c4552a24526ba3fec209cb1eb4a",
 		created: 1667982722,
@@ -171,7 +183,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.QuickStart],
 	},
 	{
-		title: "Calmly revert a git commit",
+		title: "Calmly Revert a Git Commit",
 		link: "revert-commit",
 		notionPage: "9d8e0e3197544913af8ab782a011d4f2",
 		created: 1664495954,
@@ -183,7 +195,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep],
 	},
 	{
-		title: "Provider wrapping with Souvlaki",
+		title: "Provider Wrapping with Souvlaki",
 		link: "provider-wrapping-with-souvlaki",
 		notionPage: "5bd25204d97e4e8aa6e5946619973ba3",
 		created: 1663809960,
@@ -194,7 +206,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep],
 	},
 	{
-		title: "Cleaner React conditional component rendering",
+		title: "Cleaner React Conditional Component Rendering",
 		link: "clearer-conditional-rendering",
 		notionPage: "578b462fff1b45f89a064d5eafe61c5f",
 		created: 1663151345,
@@ -217,17 +229,17 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep],
 	},
 	{
-		title: "Manipulate images using ImageMagick",
+		title: "Manipulate Images with Code Using ImageMagick",
 		link: "convert-resize-with-imagemagick",
 		notionPage: "0a6b86c59ce54c5480c67e7edd5b59ba",
 		created: 1656459369,
 		thumbnail: "/guides/convert-resize.png",
-		subTitle: "Easy tool to rescale & change image file types",
+		subTitle: "Easy tool to rescale & change image file types, sizes and metadata",
 		topic: Topic.Programming,
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "Dockerize your repository",
+		title: "Dockerize Your Repositories",
 		link: "dockerize-your-repo",
 		notionPage: "c4ca92237cc4434cbc30119b104e9e87",
 		created: 1639982643,
@@ -238,7 +250,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep],
 	},
 	{
-		title: "Terminal commands cheat sheet",
+		title: "Terminal Commands Cheat Sheet",
 		link: "command-cheat-sheet",
 		notionPage: "ea55e3b6a5f54b50abdc456bedc4b80a",
 		created: 1639982642,
@@ -249,7 +261,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [],
 	},
 	{
-		title: "Deploy containers to AWS with Terraform",
+		title: "Deploy Containers to AWS ECR with Terraform",
 		link: "deploy-to-aws-ec2-using-terraform-and-docker",
 		notionPage: "4d5154f6347a46d280c19f2d8ad9de4f",
 		created: 1639982641,
@@ -261,7 +273,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep],
 	},
 	{
-		title: "NextJS quickstart guide",
+		title: "NextJS Quickstart Guide",
 		link: "quickly-setup-next-js-with-typescript",
 		notionPage: "eb6acd5b26d3416c9372be89cae2b05d",
 		created: 1639982640,
@@ -272,7 +284,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.QuickStart],
 	},
 	{
-		title: "How to test a thrown error",
+		title: "How to Test a Thrown Error",
 		link: "test-thrown-error",
 		notionPage: "1ad3c64947224e5e9acf4a09e9086a5b",
 		created: 1639982639,
@@ -283,31 +295,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "Override props for UI tests",
-		link: "override-props-for-ui-tests",
-		notionPage: "c5923b0c20964128be7178d42d7e884b",
-		created: 1639982638,
-		thumbnail: "/guides/override-test-props.png",
-		subTitle:
-			"Using a single source for test data and changing only whats needed",
-		topic: Topic.Programming,
-		languages: [Languages.Typescript, Languages.Javascript],
-		tags: [Tags.StepByStep],
-	},
-	{
-		title: "How to repeat a single jest test with new variables",
-		link: "repeat-test-with-new-variables",
-		notionPage: "f5255703bba04229aafded995e423d25",
-		created: 1639982637,
-		thumbnail: "/guides/repeat-test.png",
-		subTitle:
-			"Using it.each you can pass new values, to test various combinations of inputs and outputs",
-		topic: Topic.Programming,
-		languages: [Languages.Typescript, Languages.Javascript],
-		tags: [Tags.CodeBlock],
-	},
-	{
-		title: "The virtual project wall, a single source of truth",
+		title: "The Virtual Project Wall, a Single Source of Truth",
 		link: "project-wall-single-source-of-truth",
 		notionPage: "a036e1f8f1d844a5a512dc6d7a011ccf",
 		created: 1639982636,
@@ -317,30 +305,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.Essay],
 	},
 	{
-		title: "How to create a javascript array with only truthy values",
-		link: "filter-array-with-only-truthy-values",
-		notionPage: "f546bb620f29415ba0d9b3b6e5bac748",
-		created: 1639982635,
-		thumbnail: "/guides/array-filter.png",
-		subTitle:
-			"Generate an array of values but only include ones that exists, excluding undefined",
-		topic: Topic.Programming,
-		languages: [Languages.Javascript],
-		tags: [Tags.CodeBlock],
-	},
-	{
-		title: "How to retry any javascript function recursively",
-		link: "retry-recursively",
-		notionPage: "88e2d51cb8d74f9a9eb561185f16d322",
-		created: 1639982634,
-		thumbnail: "/guides/retry-recursively.png",
-		subTitle: "Rerun Function n number of times or handle a thrown error",
-		topic: Topic.Programming,
-		languages: [Languages.Typescript],
-		tags: [Tags.CodeBlock],
-	},
-	{
-		title: "Run GraphQL and Express in one Node instance",
+		title: "Run GraphQL and Express Together in One Node Instance",
 		link: "run-graphql-and-express",
 		notionPage: "0e6becfb9fb64c6b96f4ef66742ac3e9",
 		created: 1639982633,
@@ -352,43 +317,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "How to catch javascript errors by type",
-		link: "try-catch-by-type",
-		notionPage: "898854cc62d84573807f8da823304ea0",
-		created: 1639982632,
-		thumbnail: "/guides/try-catch.png",
-		subTitle:
-			"Handle showing an error to your backend or UI via a simple try/catch",
-		topic: Topic.Programming,
-		languages: [Languages.Typescript],
-		tags: [Tags.CodeBlock],
-	},
-	{
-		title: "RESTful API design",
-		link: "restful-api-design",
-		notionPage: "77d91ff0c0274cb7aeeb3491221b8952",
-		created: 1639982532,
-		thumbnail: "/guides/rest-api.png",
-		subTitle:
-			"Basic REST API concepts, including resource design, HTTP Codes, Headers etc",
-		topic: Topic.Programming,
-		languages: [],
-		tags: [Tags.Essay],
-	},
-	{
-		title: "Estimation and common pitfalls",
-		link: "estimation-and-pitfalls",
-		notionPage: "9835c35bb3e34d86b890d90fbb5c2599",
-		created: 1639982531,
-		thumbnail: "/guides/estimation-pitfalls.png",
-		subTitle:
-			"A discussion on the realities of estimation and common pitfalls teams may find themselves in",
-		topic: Topic.Agile,
-		languages: [],
-		tags: [Tags.Essay],
-	},
-	{
-		title: "Core React JS concepts",
+		title: "React Cheat Sheet",
 		link: "core-react-concepts",
 		notionPage: "6b07a4eeb9e44def926307fa42a38a66",
 		created: 1639982520,
@@ -400,7 +329,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.Essay],
 	},
 	{
-		title: "Rebuilding communication infrastructure in Nepal",
+		title: "Rebuilding Communication Infrastructure in Nepal",
 		link: "rebuilding-infrastructure-in-nepal",
 		notionPage: "99cbe33175e34a5189dec42c9b95e3e5",
 		created: 1639982519,
@@ -410,17 +339,5 @@ export const guideMetaData: GuideMetaData[] = [
 		topic: Topic.Article,
 		languages: [],
 		tags: [Tags.Essay],
-	},
-	{
-		title: "Generative AI with AWS",
-		link: "generative-ai-with-aws",
-		notionPage: "344cc552c784487a8ee7fa07426b6335",
-		created: 1711608576,
-		thumbnail: "/guides/generative-ai.jpeg",
-		subTitle:
-			"Understand generative AI tiers and learn how to build and deploy your own with AWS Bedrock",
-		topic: Topic.Infrastructure,
-		languages: [],
-		tags: [Tags.StepByStep, Tags.Essay],
-	},
+	}
 ];
