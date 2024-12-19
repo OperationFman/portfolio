@@ -435,6 +435,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/DCYTMYWJ4s6/?hl=en&img_index=1",
 			"https://www.instagram.com/p/DCbE7AzJtvw/?hl=en&img_index=1",
 		],
+		reelLinks: ["https://www.instagram.com/reel/DDwCngSJmuq/?hl=en"],
+		backupLink: "https://drive.google.com/file/d/11pxbcoNcNhkHh-CEFpwS7H20_-NPqNzT/view?usp=sharing",
 	},
 		{
 		title: "Bhutan & East India",
