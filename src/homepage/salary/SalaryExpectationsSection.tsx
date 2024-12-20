@@ -275,9 +275,11 @@ export const SalaryExpectationsSection = () => {
 						<SalarySwitch
 							text={"International Relocation"}
 							checked={internationalRelocation}
-							onChange={() =>
-								setInternationalRelocation(!internationalRelocation)
-							}
+							onChange={() => {
+								setInternationalRelocation(!internationalRelocation);
+								setCountryScaleName("Australia");
+								setCountryScaleValue(countryScaler.Australia);
+							}}
 							description={
 								"Opportunities to relocate abroad long term or permanently. Note: Some countries are discounted because they are more desirable or have difficult visa processes"
 							}
