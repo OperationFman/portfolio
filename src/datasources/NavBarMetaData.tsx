@@ -12,6 +12,7 @@ const setColor = (tab: number, id: number, color: string) => {
 export const tabsData: {
 	label?: string;
 	color: string;
+	gradient: string;
 	route: string;
 	icon: (tab: number) => JSX.Element;
 	order: number;
@@ -19,6 +20,7 @@ export const tabsData: {
 	{
 		label: "",
 		color: "#90caf9",
+		gradient: "defaultDarkBlueGradient",
 		route: "/",
 		icon: (tab: number) => (
 			<AccountCircleOutlinedIcon
@@ -31,6 +33,7 @@ export const tabsData: {
 	{
 		label: "GUIDES",
 		color: "#ce93d8",
+		gradient: "defaultPurpleGradient",
 		route: "/guides",
 		icon: (tab: number) => (
 			<SchoolOutlinedIcon
@@ -43,6 +46,7 @@ export const tabsData: {
 	{
 		label: "TRAVEL",
 		color: "#ffeb3b",
+		gradient: "defaultYellowGradient",
 		route: "/travel",
 		icon: (tab: number) => (
 			<HikingOutlinedIcon

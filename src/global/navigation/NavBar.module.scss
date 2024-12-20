@@ -43,13 +43,12 @@
 	}
 }
 
-.logoTypeText {
+.logoTypeAlignDesktop {
 	margin: -3.5px;
-	color: $white;
 }
 
-.logoTypeText2 {
-	@extend .defaultDarkBlueGradient;
+.logoTypeText {
+	color: $white;
 }
 
 .tab:first-child {

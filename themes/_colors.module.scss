@@ -32,9 +32,16 @@ $defaultShadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 	-webkit-text-fill-color: transparent;
 }
 
-.defaultGreenGradient {
-	background: linear-gradient(to bottom right, #55a052, #3ccc3a);
-	background-clip: $defaultBlue;
+.defaultPurpleGradient {
+	background: linear-gradient(to bottom right, #cf32eb, #ce93d8);
+	background-clip: $defaultPurple;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.defaultYellowGradient {
+	background: linear-gradient(to bottom right, #f7df07, #ffeb3b);
+	background-clip: $defaultYellow;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
