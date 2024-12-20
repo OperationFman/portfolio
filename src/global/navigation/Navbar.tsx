@@ -5,7 +5,7 @@ import Zoom from "@mui/material/Zoom";
 import { useRouter } from "next/router";
 import React, { useContext, useEffect, useState } from "react";
 import { DarkMode } from "../../../themes/GlobalTheme";
-
+import { setDark } from "../../../utils/configureCss/configureCss";
 import { tabsData } from "../../datasources/NavBarMetaData";
 import styles from "./NavBar.module.scss";
 
@@ -84,6 +84,19 @@ export const Navbar = ({
 
 	return (
 		<nav>
+			<div className={styles.logotypeDesktopContainer}>
+				<h5 className={styles.logoTypeText}>Franklin</h5>
+				<h5 className={`${styles.logoTypeText} ${styles.logoTypeText2}`}>
+					V Moon
+				</h5>
+			</div>
+
+			<div className={styles.logotypeMobileContainer}>
+				<span>F</span>
+				<span className={`${styles.logoTypeText2}`}>V</span>
+				<span>M</span>
+			</div>
+
 			<Tabs
 				value={tabIndex}
 				scrollButtons={true}

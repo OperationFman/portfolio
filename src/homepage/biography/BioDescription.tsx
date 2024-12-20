@@ -2,7 +2,6 @@ import { Duration, intervalToDuration } from "date-fns";
 import { useEffect, useState } from "react";
 // @ts-ignore
 import ReactTypingEffect from "react-typing-effect";
-import KeyboardDoubleArrowDownRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowDownRounded";
 import { setDark } from "../../../utils/configureCss/configureCss";
 
 import color from "../../../themes/_colors.module.scss";
@@ -72,7 +71,6 @@ export const BioDescription = (): JSX.Element => {
 					{" and "}
 					{pluralTime("minute", periodWorked?.minutes)}{" "}
 				</main>
-
 			</div>
 		</div>
 	);
