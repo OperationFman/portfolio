@@ -140,8 +140,10 @@ export const SalaryExpectationsSection = () => {
 
 			baseSalary = baseSalary * countryScaleValue;
 
-			if (!internationalRelocation && baseSalary < MINIMUM_LIVABLE_SALARY) {
-				baseSalary = MINIMUM_LIVABLE_SALARY;
+			const minimumSalary = MINIMUM_LIVABLE_SALARY * countryScaleValue;
+
+			if (baseSalary <= minimumSalary) {
+				baseSalary = minimumSalary;
 			}
 
 			setDisableClearAll(baseSalary === EXPECTED_SALARY_WITH_NO_BENEFITS);
