@@ -30,6 +30,6 @@ export const countryScaler = {
 	Canada: 0.8,
 	Germany: 0.95,
 	Australia: 1,
-	Switzerland: 1.2,
-	USA: 1.5,
+	USA: 1.3,
+	Switzerland: 1.35,
 };
