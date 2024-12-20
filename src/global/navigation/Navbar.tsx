@@ -85,26 +85,26 @@ export const Navbar = ({
 	return (
 		<nav>
 			<div className={styles.logotypeDesktopContainer}>
-				<h5 className={`${styles.logoTypeText} ${styles.logoTypeAlignDesktop}`}>
+				<h5 className={`${styles.logotypeText} ${styles.logotypeAlignDesktop}`}>
 					Franklin
 				</h5>
 				<h5
-					className={`${styles.logoTypeText} ${styles.logoTypeAlignDesktop} ${
+					className={`${styles.logotypeText} ${styles.logotypeAlignDesktop} ${
 						styles[tabsData[tabIndex].gradient]
-					}`}>
+					} ${styles.logotypeGradientSize}`}>
 					V Moon
 				</h5>
 			</div>
 
 			<div className={styles.logotypeMobileContainer}>
-				<span className={styles.logoTypeText}>F</span>
+				<span className={styles.logotypeText}>F</span>
 				<span
-					className={`${styles.logoTypeText} ${
+					className={`${styles.logotypeText} ${
 						styles[tabsData[tabIndex].gradient]
 					}`}>
 					V
 				</span>
-				<span className={styles.logoTypeText}>M</span>
+				<span className={styles.logotypeText}>M</span>
 			</div>
 
 			<Tabs
