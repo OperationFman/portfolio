@@ -36,7 +36,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep, Tags.QuickStart],
 	},
 	{
-		title: "Design for Accessibility (WCAG 2.0)",
+		title: "Design and Code for Accessibility (WCAG 2.0)",
 		link: "design-for-accessibility",
 		notionPage: "10de32d00811801494d5ffb767dba40f",
 		created: 1727343784,
@@ -47,7 +47,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep, Tags.QuickStart],
 	},
 	{
-		title: "My Post-Production Process for Davinci Resolve",
+		title: "My Post-Production Process using DaVinci Resolve",
 		link: "how-I-edit-my-videos",
 		notionPage: "10de32d00811807e9725e006d6c6a830",
 		created: 1727326347,
@@ -64,13 +64,13 @@ export const guideMetaData: GuideMetaData[] = [
 		created: 1711608576,
 		thumbnail: "/guides/generative-ai.jpeg",
 		subTitle:
-			"Understand the various options provided by AWS to build yopur own GenAI",
+			"Understand the various options provided by AWS to build your own GenAI",
 		topic: Topic.Infrastructure,
 		languages: [],
 		tags: [Tags.StepByStep, Tags.Essay],
 	},
 	{
-		title: "Kubernetes Essentials",
+		title: "Kubernetes Reference",
 		link: "kubernetes-essentials",
 		notionPage: "36d077d40d5c4c809adecc1f13f4978c",
 		created: 1700712512,
@@ -92,7 +92,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.Essay],
 	},
 	{
-		title: "Backpackers Guide To Persia",
+		title: "A Guide To Persia",
 		link: "persia-guide",
 		notionPage: "9248eed5462d41b9afac25112f7526b3",
 		created: 1698905456,
@@ -114,7 +114,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "Bash Scripting",
+		title: "Bash Scripting Reference",
 		link: "bash-scripting",
 		notionPage: "039a3a1de59741639174939df0f4c20c",
 		created: 1698220136,
@@ -124,7 +124,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "Top Travel Hacks",
+		title: "My Travel Hacks",
 		link: "travel-hacks",
 		notionPage: "10b40f8350c345df9bde0eeda7822a21",
 		created: 1675825612,
@@ -195,7 +195,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep],
 	},
 	{
-		title: "Provider Wrapping with Souvlaki",
+		title: "Javascript Provider Wrapping with Souvlaki",
 		link: "provider-wrapping-with-souvlaki",
 		notionPage: "5bd25204d97e4e8aa6e5946619973ba3",
 		created: 1663809960,
@@ -206,35 +206,13 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep],
 	},
 	{
-		title: "Cleaner React Conditional Component Rendering",
-		link: "clearer-conditional-rendering",
-		notionPage: "578b462fff1b45f89a064d5eafe61c5f",
-		created: 1663151345,
-		thumbnail: "/guides/showif.png",
-		subTitle:
-			"Efficient and reusable provider wrappers to meet all of your unit testing requirements.",
-		topic: Topic.Programming,
-		languages: [Languages.Typescript],
-		tags: [Tags.CodeBlock],
-	},
-	{
-		title: "Type Validate an API Fetch Call",
-		link: "fetch-api-type-validation",
-		notionPage: "44f4f50236114c078b83e55a4fb8e9c5",
-		created: 1659149375,
-		thumbnail: "/guides/api-validation.png",
-		subTitle: "Implement the use of io-ts to validate incoming data",
-		topic: Topic.Programming,
-		languages: [Languages.Typescript],
-		tags: [Tags.StepByStep],
-	},
-	{
 		title: "Manipulate Images with Code Using ImageMagick",
 		link: "convert-resize-with-imagemagick",
 		notionPage: "0a6b86c59ce54c5480c67e7edd5b59ba",
 		created: 1656459369,
 		thumbnail: "/guides/convert-resize.png",
-		subTitle: "Easy tool to rescale & change image file types, sizes and metadata",
+		subTitle:
+			"Easy tool to rescale & change image file types, sizes and metadata",
 		topic: Topic.Programming,
 		tags: [Tags.CodeBlock],
 	},
@@ -284,17 +262,6 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.QuickStart],
 	},
 	{
-		title: "How to Test a Thrown Error",
-		link: "test-thrown-error",
-		notionPage: "1ad3c64947224e5e9acf4a09e9086a5b",
-		created: 1639982639,
-		thumbnail: "/guides/test-thrown-error.png",
-		subTitle: "Easiest way to test your thrown errors are behaving correctly",
-		topic: Topic.Programming,
-		languages: [Languages.Typescript, Languages.Javascript],
-		tags: [Tags.CodeBlock],
-	},
-	{
 		title: "The Virtual Project Wall, a Single Source of Truth",
 		link: "project-wall-single-source-of-truth",
 		notionPage: "a036e1f8f1d844a5a512dc6d7a011ccf",
@@ -317,7 +284,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "React Cheat Sheet",
+		title: "React Reference",
 		link: "core-react-concepts",
 		notionPage: "6b07a4eeb9e44def926307fa42a38a66",
 		created: 1639982520,
@@ -339,5 +306,5 @@ export const guideMetaData: GuideMetaData[] = [
 		topic: Topic.Article,
 		languages: [],
 		tags: [Tags.Essay],
-	}
+	},
 ];
