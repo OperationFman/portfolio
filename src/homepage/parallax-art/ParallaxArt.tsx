@@ -85,7 +85,12 @@ export const ParallaxArt = () => {
 
 	return (
 		<>
-			<div className={styles.outerContainer}>
+			<div
+				className={styles.outerContainer}
+				style={{
+					animation: "fadeIn 1000ms ease-in-out",
+					opacity: 1,
+				}}>
 				<div className={styles.innerContainer}>
 					<div className={setDark(styles, "background")} />
 
