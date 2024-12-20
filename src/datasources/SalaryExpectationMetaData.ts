@@ -1,9 +1,9 @@
-export const EXPECTED_SALARY_WITH_NO_BENEFITS = 110000; // $120,000 AUD
-export const MINIMUM_LIVABLE_SALARY = 60000; // $60,000 AUD - Final total cannot go lower than this value
+export const EXPECTED_SALARY_WITH_NO_BENEFITS = 100000;
+export const MINIMUM_LIVABLE_SALARY = 50000;
 
-export const STOCK_REDUCTION = 0.5; // 50% reduction on the value of stocks, shares and options
-export const TRAINING_ALLOWANCE = 0.9; // 10% reduction on the value of training allowances
-export const GENERAL_ALLOWANCES = 0.8; // 20% reduction on the value of general allowances
+export const STOCK_REDUCTION = 0.5;
+export const TRAINING_ALLOWANCE = 0.9;
+export const GENERAL_ALLOWANCES = 0.8;
 
 // Numbers represent AUD, e.g 8000 = $8,000aud
 export const salaryExpectations = {
@@ -20,4 +20,16 @@ export const salaryExpectations = {
 	internationalRelocation: 15000,
 };
 
-// Edit button test and labels in ~/src/homepage/salary/SalaryExpectationsSection.tsx
+// Country cost of living multipliers
+export const countryScaler = {
+	India: 0.35,
+	Romania: 0.45,
+	Brazil: 0.5,
+	Ireland: 0.65,
+	Japan: 0.7,
+	Canada: 0.8,
+	Germany: 0.95,
+	Australia: 1,
+	Switzerland: 1.2,
+	USA: 1.5,
+};

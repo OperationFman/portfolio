@@ -1,7 +1,8 @@
-import { Button, Card, FormGroup } from "@mui/material";
+import { Button, Card, FormGroup, InputLabel } from "@mui/material";
 import { useEffect, useState } from "react";
 import { setDark } from "../../../utils/configureCss/configureCss";
 import {
+	countryScaler,
 	EXPECTED_SALARY_WITH_NO_BENEFITS,
 	GENERAL_ALLOWANCES,
 	MINIMUM_LIVABLE_SALARY,
@@ -12,6 +13,7 @@ import {
 import { Gap } from "./components/Gap";
 import { MoneyInput as SalaryInput } from "./components/SalaryInput";
 import { SalarySwitch } from "./components/SalarySwitch";
+import Slider from "@mui/material/Slider";
 
 import styles from "./Salary.module.scss";
 
@@ -42,8 +44,11 @@ export const SalaryExpectationsSection = () => {
 	const [ethical, setEthical] = useState(true);
 	const [workLifeBalance, setWorkLifeBalance] = useState(true);
 	const [internationalTravel, setInternationalTravel] = useState(false);
-	const [fourDays, setFourDays] = useState(false);
 	const [internationalRelocation, setInternationalRelocation] = useState(false);
+	const [countryScaleName, setCountryScaleName] = useState("Australia");
+	const [countryScaleValue, setCountryScaleValue] = useState(
+		countryScaler.Australia,
+	);
 
 	const STOCK_OPTIONS = "stock";
 	const TRAINING_ALLOWANCES = "trainingAllowances";
@@ -67,6 +72,16 @@ export const SalaryExpectationsSection = () => {
 		});
 	};
 
+	const handleCountryChange = (event: Event, index: number | any) => {
+		const countryScalers = Object.entries(countryScaler);
+		const targetCountry = countryScalers[index];
+
+		if (targetCountry) {
+			setCountryScaleName(targetCountry[0]);
+			setCountryScaleValue(targetCountry[1]);
+		}
+	};
+
 	const handleClearAll = () => {
 		setFullyRemote(false);
 		setHybridRemote(false);
@@ -75,7 +90,6 @@ export const SalaryExpectationsSection = () => {
 		setEthical(false);
 		setWorkLifeBalance(false);
 		setInternationalTravel(false);
-		setFourDays(false);
 		setInternationalRelocation(false);
 		setValues({
 			...values,
@@ -91,10 +105,6 @@ export const SalaryExpectationsSection = () => {
 			const stock = values.stock;
 			const trainingAllowance = values.trainingAllowances;
 			const otherAllowances = values.otherAllowances;
-
-			if (fourDays) {
-				baseSalary = baseSalary * 0.8; // 20% reduction for 4 day work weeks
-			}
 
 			if (fullyRemote) {
 				baseSalary = baseSalary - values.fullyRemote;
@@ -124,25 +134,19 @@ export const SalaryExpectationsSection = () => {
 				baseSalary = baseSalary - values.internationalTravel;
 			}
 
-			if (internationalRelocation) {
-				baseSalary = baseSalary - values.internationalRelocation;
-			}
-
 			baseSalary = baseSalary - stock * STOCK_REDUCTION; // 50% reduction
 			baseSalary = baseSalary - trainingAllowance * TRAINING_ALLOWANCE; // 10% reduction
 			baseSalary = baseSalary - otherAllowances * GENERAL_ALLOWANCES; // 20% reduction
 
-			if (baseSalary < MINIMUM_LIVABLE_SALARY) {
+			baseSalary = baseSalary * countryScaleValue;
+
+			if (!internationalRelocation && baseSalary < MINIMUM_LIVABLE_SALARY) {
 				baseSalary = MINIMUM_LIVABLE_SALARY;
 			}
 
-			if (baseSalary === EXPECTED_SALARY_WITH_NO_BENEFITS) {
-				setDisableClearAll(true);
-			} else {
-				setDisableClearAll(false);
-			}
+			setDisableClearAll(baseSalary === EXPECTED_SALARY_WITH_NO_BENEFITS);
 
-			return baseSalary;
+			return Math.round(baseSalary);
 		};
 
 		setExpectedSalary(calculateExpectedSalary());
@@ -154,9 +158,9 @@ export const SalaryExpectationsSection = () => {
 		ethical,
 		workLifeBalance,
 		internationalTravel,
-		fourDays,
 		values,
 		internationalRelocation,
+		countryScaleValue,
 	]);
 
 	return (
@@ -273,17 +277,29 @@ export const SalaryExpectationsSection = () => {
 								setInternationalRelocation(!internationalRelocation)
 							}
 							description={
-								"Opportunities to relocate abroad long term or permanently"
+								"Opportunities to relocate abroad long term or permanently. Note: Some countries are discounted because they are more desirable or have difficult visa processes"
 							}
 						/>
-						<SalarySwitch
-							text={"4-Day Work Week Allowed"}
-							checked={fourDays}
-							onChange={() => setFourDays(!fourDays)}
-							description={
-								"For a 20% reduction in pay the employee can work one less day each week"
-							}
-						/>
+						{internationalRelocation && (
+							<div className={styles.internationalSliderContainer}>
+								<InputLabel htmlFor='outlined-adornment-amount'>
+									Scale by cost of living
+								</InputLabel>
+								<Slider
+									aria-label='Countries'
+									size='small'
+									defaultValue={7}
+									valueLabelDisplay='off'
+									shiftStep={1}
+									step={1}
+									marks
+									min={0}
+									max={9}
+									onChange={handleCountryChange}
+								/>
+								<h4 className={styles.countryScaleName}>{countryScaleName}</h4>
+							</div>
+						)}
 					</div>
 				</div>
 			</FormGroup>

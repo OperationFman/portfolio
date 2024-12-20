@@ -52,7 +52,7 @@
 .leftColumn {
 	@include breakpoint(small) {
 		flex: 1;
-		margin-left: 50px;
+		margin: 0 0 10px 50px;
 	}
 }
 
@@ -69,6 +69,19 @@
 	margin: 40px 0 10px 0;
 	color: $defaultBlue;
 	border-color: $defaultDarkBlue;
+}
+
+.internationalSliderContainer {
+	padding: 0 70px;
+
+	@include breakpoint(small) {
+		padding: 0 170px 0 90px;
+	}
+}
+
+.countryScaleName {
+	margin: 0;
+	text-align: center;
 }
 
 .gap {
