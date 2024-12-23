@@ -25,7 +25,7 @@ export const countryScaler = {
 	India: 0.35,
 	Romania: 0.45,
 	Brazil: 0.5,
-	Ireland: 0.65,
+	Spain: 0.65,
 	Japan: 0.7,
 	Canada: 0.8,
 	Germany: 0.95,
