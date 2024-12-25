@@ -451,6 +451,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/DCqHnMPBcUE/?hl=en&img_index=1",
 			"https://www.instagram.com/p/DCxxx0aBJBv/?hl=en&img_index=1",	
 		],
+		reelLinks: ["https://www.instagram.com/reel/DEAUDrrJPIk/?hl=en"],
+		backupLink: "https://drive.google.com/file/d/1IYr1i33XaUeldP6BQiDMDC6XIZEpzbbM/view?usp=sharing"
 	},
 	{
 		title: "Thailand 2",
