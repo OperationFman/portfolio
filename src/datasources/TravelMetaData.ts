@@ -87,15 +87,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		restricted: true,
 	},
 	{
-		title: "Sri Lanka",
-		year: 2022,
-		hostedLink: "srilanka",
-		link: "sri-lanka",
-		backupLink:
-			"https://drive.google.com/file/d/13gOi8XTHFCI-cInwD4hBGF1kblg0MJDa/view?usp=sharing",
-		restricted: true,
-	},
-	{
 		title: "United Arab Emirates",
 		year: 2022,
 		hostedLink: "uae",
@@ -455,6 +446,18 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink: "https://drive.google.com/file/d/1IYr1i33XaUeldP6BQiDMDC6XIZEpzbbM/view?usp=sharing"
 	},
 	{
+		title: "Maldives & Sri Lanka",
+		year: 2024,
+		hostedLink: "maldivessrilanka",
+		link: "maldives-and-sri-lanka",
+		restricted: false,
+		instagramLinks: [
+			"https://www.instagram.com/p/DEyptuVJGbk/?hl=en&img_index=1",
+	     	"https://www.instagram.com/p/DE6s6JFpJ6L/?hl=en&img_index=1",
+		],
+		backupLink: "https://drive.google.com/file/d/1NDLcgySrd3NrAnbx3rp40wxyMCF13N3h/view?usp=sharing",
+	},
+	{
 		title: "Thailand 2",
 		year: 2024,
 		hostedLink: "thailand2",
@@ -545,14 +548,12 @@ export const rankedTravelVideos = [
 	],
 	//D Tier
 	[
+		"maldives-and-sri-lanka",
 		"cyprus",
 		"lebanon", 
 		"kuwait-iraqi-kurdistan", 
-		"fiji"],
-	//E Tier
-	[
-		"australia", 
-		"sri-lanka"],
+		"fiji",
+		"australia"],
 	//F Tier
 	["saudi-arabia-bahrain"],
 ];
@@ -563,6 +564,5 @@ export const tierTitles = [
 	"B Tier 🥉",
 	"C Tier",
 	"D Tier",
-	"E Tier",
 	"F Tier 💩",
 ];
