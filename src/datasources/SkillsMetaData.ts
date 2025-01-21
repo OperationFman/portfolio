@@ -151,13 +151,6 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Capable,
 			},
 			{
-				title: "Python",
-				knowledge:
-					"I use Python to write scripts for automation, data processing, web development and other tasks that require quick and efficient execution. My favorite aspect of Python is the integration of hardware and software components that allow for physical inventions, automated tooling and robots.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
 				title: "Node",
 				knowledge:
 					"I have consistently utilized NodeJS in my professional capacity, and have gained a thorough understanding of its strengths and limitations. NodeJS boasts a high capacity for handling multiple concurrent connections and is known for its efficiency and lightweight design. It is particularly well-suited for developing real-time web applications. However, it should be noted that NodeJS operates on a single thread, which can potentially present certain challenges.",
@@ -231,7 +224,7 @@ export const languagesMetaData: ColumnData[] = [
 		],
 	},
 	{
-		title: "Infra",
+		title: "DevOps",
 		knowledge:
 			"Eager to stay ahead of the curve in cloud computing, working on some of the latest design paradigms like dockerization and serverless with a focus on availability and reliability across regions and availability zones.",
 		proficiency: Capable,
@@ -245,9 +238,16 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Capable,
 			},
 			{
-				title: "Docker",
+				title: "Docker/Containers",
 				knowledge:
 					"I understand the value it brings to projects. Docker allows for easy containerization of applications, which makes it easier to deploy and run applications in different environments. I have used Docker in a variety of projects, including deploying and scaling web applications and microservices.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Python",
+				knowledge:
+					"I use Python to write scripts for automation, data processing, web development and other tasks that require quick and efficient execution. My favorite aspect of Python is the integration of hardware and software components that allow for physical inventions, automated tooling and robots.",
 				proficiency: Proficient,
 				description: Description.Proficient,
 			},
@@ -259,9 +259,23 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Capable,
 			},
 			{
-				title: "YAML",
+				title: "Ansible",
 				knowledge:
-					"I've used YAML files across various tools and applications crafting configurations and data structures that bring order and automation to projects with reliability and repeatability.",
+					"Similar usage as Terraform, Im comfortable provisioning new resources and know when to refactor or look out for drift.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "Action Runners",
+				knowledge:
+					"I've experience setting up and maintaining action runners across different contexts including Github Actions to self hosted runners operating on AWS EKS with and without Auto-mode.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "Bash / Shell",
+				knowledge:
+					"BASH/Shell allows me to automate tasks and perform actions quickly and efficiently on the command line. I have used it to manage and manipulate files and directories, run scripts, and execute commands on remote servers.",
 				proficiency: Capable,
 				description: Description.Capable,
 			},
@@ -280,13 +294,6 @@ export const languagesMetaData: ColumnData[] = [
 					"Git allows for version control of code, which means I can track changes made to my code over time and easily revert back to previous versions if necessary. It also makes it easy to collaborate with other developers by allowing us to work on the same codebase without overwriting each other's changes. Overall, I find Git to be an invaluable tool for any developer, as it helps to streamline the development process and make it more efficient and effective.",
 				proficiency: Proficient,
 				description: Description.Proficient,
-			},
-			{
-				title: "Bash / Shell",
-				knowledge:
-					"BASH/Shell allows me to automate tasks and perform actions quickly and efficiently on the command line. I have used it to manage and manipulate files and directories, run scripts, and execute commands on remote servers.",
-				proficiency: Capable,
-				description: Description.Capable,
 			},
 			{
 				title: "SQL",
@@ -481,11 +488,44 @@ export const toolsMetaData: FolioData[] = [
 			},
 		],
 	},
+	{
+		title: "Other",
+		data: [
+			{
+				title: "Python Anywhere",
+				knowledge:
+					"Python Anywhere is a cloud-based platform that allows users to run and host Python applications, as well as access a web-based integrated development environment (IDE) and other tools for developing and managing Python code. I've used it to deploy my first websites ever made in addition to my travel blog.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Apple Developer",
+				knowledge:
+					"Apple Developer is a suite of tools and resources provided by Apple for developing and distributing software for the company's platforms, including iOS, iPadOS, macOS, watchOS, and tvOS. used alongside Android App Distribution where I've worked on projects where it was an integral part of the release process and required me to understand how it functioned, how to use the provided indicators and also how to debug.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Heroku",
+				knowledge:
+					"Heroku is a cloud platform that enables developers to build, run, and operate applications entirely in the cloud. I've used it to deploy various backends and micro services as it's super simple to get started with and reliable.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "Vercel",
+				knowledge:
+					"Vercel is a cloud platform for hosting websites and web applications, allowing developers to deploy their projects with a global network of edge servers for low latency and high performance. I have used it to deploy this very site as it meshes well with NextJS, also maintained by Vercel",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+		],
+	},
 ];
 
 export const cloudMetaData: FolioData[] = [
 	{
-		title: "AWS",
+		title: "Amazon AWS",
 		data: [
 			{
 				title: "EKS",
@@ -567,7 +607,7 @@ export const cloudMetaData: FolioData[] = [
 		],
 	},
 	{
-		title: "Google",
+		title: "Google Cloud",
 		data: [
 			{
 				title: "Firebase",
@@ -575,6 +615,25 @@ export const cloudMetaData: FolioData[] = [
 					"Google Firebase is a platform that provides a variety of tools and services for building mobile and web applications, including a real-time database, user authentication, hosting, and analytics. I've used it to push data to client devices instead of using sockets and intend to keep learning it as it's an awesome solution for backend problems.",
 				proficiency: Learning,
 				description: Description.Learning,
+			},
+			{
+				title: "Android App Distribution",
+				knowledge:
+					"Android App Distribution is a process by which Android apps are made available for users to download and install on their devices via the google play store. I've worked on projects where it was an integral part of the release process and required me to understand how it functioned, how to use the provided indicators and also how to debug.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+		],
+	},
+	{
+		title: "Microsoft Azure",
+		data: [
+			{
+				title: "Azure DevOps",
+				knowledge:
+					"Comfortable understanding and utilizing its CI/CD pipelines for automating builds, testing, and deployments across specific domains particularly legacy and window exclusive workloads.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 			{
 				title: "Android App Distribution",
@@ -639,46 +698,13 @@ export const cloudMetaData: FolioData[] = [
 			},
 		],
 	},
-	{
-		title: "Other",
-		data: [
-			{
-				title: "Python Anywhere",
-				knowledge:
-					"Python Anywhere is a cloud-based platform that allows users to run and host Python applications, as well as access a web-based integrated development environment (IDE) and other tools for developing and managing Python code. I've used it to deploy my first websites ever made in addition to my travel blog.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
-				title: "Apple Developer",
-				knowledge:
-					"Apple Developer is a suite of tools and resources provided by Apple for developing and distributing software for the company's platforms, including iOS, iPadOS, macOS, watchOS, and tvOS. used alongside Android App Distribution where I've worked on projects where it was an integral part of the release process and required me to understand how it functioned, how to use the provided indicators and also how to debug.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
-				title: "Heroku",
-				knowledge:
-					"Heroku is a cloud platform that enables developers to build, run, and operate applications entirely in the cloud. I've used it to deploy various backends and micro services as it's super simple to get started with and reliable.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
-				title: "Vercel",
-				knowledge:
-					"Vercel is a cloud platform for hosting websites and web applications, allowing developers to deploy their projects with a global network of edge servers for low latency and high performance. I have used it to deploy this very site as it meshes well with NextJS, also maintained by Vercel",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-		],
-	},
 ];
 
 export const convictionMetaData: ConvictionsRow[] = [
 	{
 		title: "Pair Programming",
 		blurb:
-			"A developer's productivity should be evaluated based on the problems they solve. Pair programming enables developers to solve problems more efficiently, share knowledge, and improve their folio.",
+			"A developer's productivity should be evaluated based on the problems they solve. Pair programming enables developers to solve problems more efficiently, share knowledge, and improve their skills.",
 	},
 	{
 		title: "Automated Testing",

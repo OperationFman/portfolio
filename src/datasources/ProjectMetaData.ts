@@ -94,7 +94,7 @@ export const projectMetaData: ProjectMetaData[] = [
 
 		subTitle:
 			"One of my paramount objectives is to traverse the globe, as I am of the belief that exposure to diverse cultures through living, working, and volunteering can foster greater open-mindedness and receptiveness to novel concepts. To achieve this, I developed this website utilizing Python with the Flask framework and Javascript with jquery for dynamic animations and adaptive scaling. The emphasis has been placed on the design and visual presentation of the site, utilizing external resources such as Google Drive for video hosting and Mapbox for an immersive 3D map with embedded images.",
-		deployedURL: "https://frankstravelblog.pythonanywhere.com/",
+		// deployedURL: "https://frankstravelblog.pythonanywhere.com/",
 		repoURL: "https://github.com/OperationFman/FranksTravelBlog",
 	},
 	{
@@ -106,7 +106,7 @@ export const projectMetaData: ProjectMetaData[] = [
 			"/projects/krank/desktop3.png",
 			"/projects/krank/desktop4.png",
 		],
-		deployedURL: "https://opfman.pythonanywhere.com/",
+		// deployedURL: "https://opfman.pythonanywhere.com/",
 		subTitle:
 			"As a novice programmer, I embarked on my first programming project, which aimed to provide assistance to us during the COVID-19 pandemic in Japan. The web application, designed primarily for mobile devices, features a 'food roulette' mode, which allows us to store a list of our preferred meals and generates a random suggestion upon tapping the 'generate' button. Additionally, the app includes a straightforward currency conversion tool, which provides an instant comparison of purchasing power in different currencies relative to the Australian dollar. The application was constructed using Python and the Flask framework, and was hosted on PythonAnywhere.",
 		repoURL: "https://github.com/OperationFman/Krank",
