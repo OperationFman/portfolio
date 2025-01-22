@@ -19,6 +19,7 @@ export type Extras = {
 		safety: number;
 		accessibility: number;
 		video: number;
+		finalScore: number;
 	};
 	summary?: string[];
 	dos?: string[];

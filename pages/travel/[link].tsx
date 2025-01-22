@@ -70,7 +70,16 @@ const VideoContent = ({
 			title: "Video",
 			tooltip: "How well the final edited video turned out (See above)",
 		},
+		finalScore: {
+			title: "Final Score",
+			tooltip:
+				"Final result with all other scores considered plus my luck, friends made & unique experiences",
+		},
 	};
+
+	const scoreCardArray = extras?.scorecard
+		? Object.entries(extras?.scorecard)
+		: [];
 
 	if (!metaData) {
 		return <ErrorContent />;
@@ -161,15 +170,20 @@ const VideoContent = ({
 							{extras.scorecard && (
 								<div className={styles.scorecardContainer}>
 									<h2>Scorecard</h2>
-									{Object.entries(extras.scorecard).map(([title, score]) => (
+									{scoreCardArray.map(([title, score], index) => (
 										<Tooltip
 											TransitionComponent={Zoom}
 											title={scoreKeyData[title].tooltip}
 											followCursor>
-											<div className={styles.scoreItemContainer}>
+											<div
+												className={`${styles.scoreItemContainer} ${
+													index === scoreCardArray.length - 1
+														? styles.totalScore
+														: ""
+												}`}>
 												<LinearProgress
 													variant='determinate'
-													value={score === 1 ? 14 : score * 10}
+													value={score === 1 ? 12 : score * 10}
 													className={styles.scoreBar}
 													sx={{
 														"& .MuiLinearProgress-bar": {
@@ -182,7 +196,10 @@ const VideoContent = ({
 														},
 													}}
 												/>
-												<h4 className={styles.scoreDigit}>{score}</h4>
+												<h4 className={styles.scoreDigit}>
+													{score}
+													{index === scoreCardArray.length - 1 ? " / 10" : ""}
+												</h4>
 
 												<h4 className={styles.scoreTitle}>
 													{scoreKeyData[title].title}

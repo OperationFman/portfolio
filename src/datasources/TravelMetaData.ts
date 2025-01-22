@@ -19,6 +19,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				safety: 8,
 				accessibility: 2,
 				video: 1,
+				finalScore: 4,
 			},
 			summary: [
 				"I spent a semester studying web development at Shaoguan University, we traveled the south from Guangzhou to Changsha, cultivating my initial love for travel.",
