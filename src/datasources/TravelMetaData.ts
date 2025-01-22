@@ -2,6 +2,12 @@ import { TravelVideoMetaData } from "../travel/types";
 
 export const publicCDNVideoUrl = "https://d3atatnx15erez.cloudfront.net/";
 export const insecureRestrictionKey = "adventuretime";
+export const scorecardColorsPrimary = ["#ffeb3b", "#2781e7", "#cf32eb"];
+export const scorecardColorsSecondary = [
+	"rgb(255, 232, 59)",
+	"rgb(39 129 231)",
+	"rgb(206 147 216)",
+];
 
 export const travelVideoMetaData: TravelVideoMetaData[] = [
 	{
@@ -13,7 +19,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://drive.google.com/file/d/1__yqFNE4pn1qb4HQaL8gVa0NptzwEXYm/view?usp=sharing",
 		restricted: false,
 		extras: {
-			countries: ["China"],
+			countries: ["China", "West Taiwan"],
 			scorecard: {
 				affordability: [9, 5],
 				food: [2, 5],

@@ -18,6 +18,7 @@ import styles from "../../src/travel/index.module.scss";
 import ReactPlayer from "react-player";
 import {
 	publicCDNVideoUrl,
+	scorecardColorsPrimary,
 	travelVideoMetaData,
 } from "../../src/datasources/TravelMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
@@ -148,6 +149,22 @@ const VideoContent = ({
 							{extras.scorecard && (
 								<div className={styles.scorecardContainer}>
 									<h2>Scorecard</h2>
+									{extras.countries && extras.countries.length > 1 && (
+										<div className={styles.scorecardLegend}>
+											{extras.countries.map((country, index) => (
+												<div className={styles.legendItem}>
+													<h5
+														style={{
+															color: `${scorecardColorsPrimary[index]}`,
+															padding: "0 20px 12px 0",
+															margin: 0,
+														}}>
+														{country}
+													</h5>
+												</div>
+											))}
+										</div>
+									)}
 									{scoreCardArray.map(([title, scores]) => (
 										<ProgressBar title={title} scores={scores} key={title} />
 									))}

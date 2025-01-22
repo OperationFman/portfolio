@@ -1,5 +1,9 @@
 import { LinearProgress, Tooltip, Zoom } from "@mui/material";
 import styles from "../index.module.scss";
+import {
+	scorecardColorsPrimary,
+	scorecardColorsSecondary,
+} from "../../datasources/TravelMetaData";
 
 export const ProgressBar = ({
 	title,
@@ -30,13 +34,6 @@ export const ProgressBar = ({
 				"Final result with all other scores considered plus my luck, friends made & unique experiences",
 		},
 	};
-
-	const scorecardColorsPrimary = ["#ffeb3b", "#2781e7", "#cf32eb"];
-	const scorecardColorsSecondary = [
-		"rgb(255, 232, 59)",
-		"rgb(39 129 231)",
-		"rgb(206 147 216)",
-	];
 
 	return (
 		<>
