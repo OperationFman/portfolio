@@ -207,7 +207,9 @@ const VideoContent = ({
 										<>
 											<h2 style={{ margin: "0" }}>Do</h2>
 											{extras.dos.map((doItem) => (
-												<div className={styles.doDontIconContainer}>
+												<div
+													className={styles.doDontIconContainer}
+													key={doItem}>
 													<ThumbUpIcon style={{ color: "66bb6a" }} />
 													<h4 className={styles.doDontText}>{doItem}</h4>
 												</div>
@@ -218,7 +220,9 @@ const VideoContent = ({
 										<>
 											<h2 style={{ margin: "40px 0 0 0" }}>Dont</h2>
 											{extras.donts.map((dontItem) => (
-												<div className={styles.doDontIconContainer}>
+												<div
+													className={styles.doDontIconContainer}
+													key={dontItem}>
 													<ThumbDownIcon style={{ color: "f44336" }} />
 													<h4 className={styles.doDontText}>{dontItem}</h4>
 												</div>
