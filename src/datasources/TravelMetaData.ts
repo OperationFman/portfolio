@@ -12,6 +12,21 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1__yqFNE4pn1qb4HQaL8gVa0NptzwEXYm/view?usp=sharing",
 		restricted: false,
+		extras: {
+			scorecard: {
+				affordability: 10,
+				food: 100,
+				safety: 40,
+				accessibility: 20,
+				videoOutcome: 90,
+			},
+			tips: {
+				dos: ["foo"],
+				donts: ["foo"],
+				currency: "CNY",
+				travelAdvisoryISO3166: "CH",
+			},
+		},
 	},
 	{
 		title: "Nepal",
@@ -397,7 +412,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/C1Q2UQcLqS-/?hl=en",
 		],
 		reelLinks: ["https://www.instagram.com/reel/DAWBdOpC00S/?hl=en"],
-		backupLink: "https://drive.google.com/file/d/1-lC6yL-FcgwMUpZXmrzMRVOV4EbLDjVi/view?usp=sharing",
+		backupLink:
+			"https://drive.google.com/file/d/1-lC6yL-FcgwMUpZXmrzMRVOV4EbLDjVi/view?usp=sharing",
 	},
 	{
 		title: "Timor-Leste",
@@ -411,7 +427,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/C-ZpKlvzLk3/?hl=en",
 		],
 		reelLinks: ["https://www.instagram.com/reel/DAkVgM9i5tf/?hl=en"],
-		backupLink: "https://drive.google.com/file/d/1puWBm8F3ejCGtT5oOsqTXunjZwA_5bto/view?usp=sharing",
+		backupLink:
+			"https://drive.google.com/file/d/1puWBm8F3ejCGtT5oOsqTXunjZwA_5bto/view?usp=sharing",
 	},
 	{
 		title: "Bangladesh",
@@ -421,15 +438,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		restricted: false,
 		instagramLinks: [
 			"https://www.instagram.com/p/DCOMqWmJ4X5/?hl=en&img_index=1",
-	    	"https://www.instagram.com/p/DCUWQ4ohBra/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DCUWQ4ohBra/?hl=en&img_index=1",
 			"https://www.instagram.com/p/DCWDQIBp3e8/?hl=en&img_index=1",
 			"https://www.instagram.com/p/DCYTMYWJ4s6/?hl=en&img_index=1",
 			"https://www.instagram.com/p/DCbE7AzJtvw/?hl=en&img_index=1",
 		],
 		reelLinks: ["https://www.instagram.com/reel/DDwCngSJmuq/?hl=en"],
-		backupLink: "https://drive.google.com/file/d/11pxbcoNcNhkHh-CEFpwS7H20_-NPqNzT/view?usp=sharing",
+		backupLink:
+			"https://drive.google.com/file/d/11pxbcoNcNhkHh-CEFpwS7H20_-NPqNzT/view?usp=sharing",
 	},
-		{
+	{
 		title: "Bhutan & East India",
 		year: 2024,
 		hostedLink: "bhutan",
@@ -440,10 +458,11 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/DCmM-vNh-Dt/?hl=en&img_index=1",
 			"https://www.instagram.com/p/DCnqTo-pa5L/?hl=en&img_index=1",
 			"https://www.instagram.com/p/DCqHnMPBcUE/?hl=en&img_index=1",
-			"https://www.instagram.com/p/DCxxx0aBJBv/?hl=en&img_index=1",	
+			"https://www.instagram.com/p/DCxxx0aBJBv/?hl=en&img_index=1",
 		],
 		reelLinks: ["https://www.instagram.com/reel/DEAUDrrJPIk/?hl=en"],
-		backupLink: "https://drive.google.com/file/d/1IYr1i33XaUeldP6BQiDMDC6XIZEpzbbM/view?usp=sharing"
+		backupLink:
+			"https://drive.google.com/file/d/1IYr1i33XaUeldP6BQiDMDC6XIZEpzbbM/view?usp=sharing",
 	},
 	{
 		title: "Maldives & Sri Lanka",
@@ -453,9 +472,10 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		restricted: false,
 		instagramLinks: [
 			"https://www.instagram.com/p/DEyptuVJGbk/?hl=en&img_index=1",
-	     	"https://www.instagram.com/p/DE6s6JFpJ6L/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DE6s6JFpJ6L/?hl=en&img_index=1",
 		],
-		backupLink: "https://drive.google.com/file/d/1NDLcgySrd3NrAnbx3rp40wxyMCF13N3h/view?usp=sharing",
+		backupLink:
+			"https://drive.google.com/file/d/1NDLcgySrd3NrAnbx3rp40wxyMCF13N3h/view?usp=sharing",
 	},
 	{
 		title: "Thailand 2",
@@ -511,11 +531,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 
 export const rankedTravelVideos = [
 	//S Tier
-	[
-		"syria", 
-		"greece", 
-		"japan", 
-		"israel-and-palestine"],
+	["syria", "greece", "japan", "israel-and-palestine"],
 	//A Tier
 	[
 		"turkey",
@@ -523,15 +539,15 @@ export const rankedTravelVideos = [
 		"iran",
 		"jordan",
 		"india",
-		"thailand-2"
+		"thailand-2",
 	],
 	//B Tier
 	[
 		"bangladesh",
-		"philippines-and-brunei", 
+		"philippines-and-brunei",
 		"timor-leste",
-		"south-korea", 
-		"new-zealand", 
+		"south-korea",
+		"new-zealand",
 	],
 	//C Tier
 	[
@@ -544,16 +560,16 @@ export const rankedTravelVideos = [
 		"china",
 		"nepal",
 		"thailand",
-
 	],
 	//D Tier
 	[
 		"maldives-and-sri-lanka",
 		"cyprus",
-		"lebanon", 
-		"kuwait-iraqi-kurdistan", 
+		"lebanon",
+		"kuwait-iraqi-kurdistan",
 		"fiji",
-		"australia"],
+		"australia",
+	],
 	//F Tier
 	["saudi-arabia-bahrain"],
 ];

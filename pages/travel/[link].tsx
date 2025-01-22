@@ -21,7 +21,7 @@ import {
 } from "../../src/datasources/TravelMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, LinearProgress, Rating } from "@mui/material";
 import { useState } from "react";
 import router from "next/router";
 
@@ -40,6 +40,7 @@ const VideoContent = ({
 		instagramLinks,
 		reelLinks,
 		backupLink,
+		extras,
 	} = metaData as TravelVideoMetaData;
 
 	const [isLoading, setIsLoading] = useState(true);
@@ -51,6 +52,14 @@ const VideoContent = ({
 	const upNextMetaData = filterTravelVideosWithBackupLink(
 		upNext as TravelVideoMetaData[],
 	);
+
+	const scoreKeyToTitle: any = {
+		affordability: "Affordability",
+		food: "Food",
+		safety: "Safety",
+		accessibility: "Accessibility",
+		videoOutcome: "Video",
+	};
 
 	if (!metaData) {
 		return <ErrorContent />;
@@ -70,8 +79,8 @@ const VideoContent = ({
 					<meta name={title} content={title} />
 					<link rel='icon' href='/favicon-yellow.ico' />
 					<meta
-					property='og:image'
-					content={`/travel/posters/${metaData.hostedLink}.png`}
+						property='og:image'
+						content={`/travel/posters/${metaData.hostedLink}.png`}
 					/>
 				</Head>
 
@@ -120,6 +129,39 @@ const VideoContent = ({
 							/>
 
 							<h2>Video Coming Soon</h2>
+						</div>
+					)}
+
+					{extras && (
+						<div className={styles.essentialExtrasContainer}>
+							{extras.scorecard && (
+								<div className={styles.scorecardContainer}>
+									{Object.entries(extras.scorecard).map(([title, score]) => (
+										<div className={styles.scoreItemContainer}>
+											<LinearProgress
+												variant='determinate'
+												value={score === 10 ? 14 : score}
+												className={styles.scoreBar}
+												sx={{
+													backgroundColor: "transparent",
+													"& .MuiLinearProgress-bar": {
+														background:
+															"linear-gradient(to right,  #f7df07, #ffeb3b)",
+														clipPath: `polygon(0 0, 100% 0, ${
+															score > 97 ? 100 : 97
+														}% 100%, 0 100%)`,
+													},
+												}}
+											/>
+											<h4 className={styles.scoreDigit}>{score / 10}</h4>
+											<h4 className={styles.scoreTitle}>
+												{scoreKeyToTitle[title]}
+											</h4>
+										</div>
+									))}
+								</div>
+							)}
+							{extras.tips && <div className={styles.tipsContainer}></div>}
 						</div>
 					)}
 

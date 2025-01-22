@@ -93,6 +93,59 @@
 	margin-bottom: 0;
 }
 
+.essentialExtrasContainer {
+	display: flex;
+	flex-direction: column;
+	padding-top: 80px;
+	@include breakpoint(medium) {
+		flex-direction: row;
+	}
+}
+
+.scorecardContainer {
+	width: 100%;
+	height: 300px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.tipsContainer {
+	width: 100%;
+	height: 300px;
+}
+
+.scoreItemContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+.scoreDigit {
+	position: absolute;
+	height: 40px;
+	padding: 1px 0 0 25px;
+	margin: 0;
+	white-space: nowrap;
+	color: $mediumGrey;
+}
+
+.scoreBar {
+	width: 60%;
+	height: 25px;
+	border-radius: 20px;
+	color: $defaultYellow;
+	margin-left: 10px;
+}
+
+.scoreTitle {
+	height: 40px;
+	padding: 0 0 0 20px;
+	margin: 0;
+	white-space: nowrap;
+}
+
 .upNextContainer {
 	margin-top: 6.25rem;
 }
