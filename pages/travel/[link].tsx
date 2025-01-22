@@ -145,6 +145,19 @@ const VideoContent = ({
 
 					{extras && (
 						<div className={styles.essentialExtrasContainer}>
+							{extras.summary && (
+								<div className={styles.summaryContainer}>
+									<h2>Summary</h2>
+									{extras.summary.map((sentence, index) => (
+										<p
+											key={`Paragraph ${index + 1}`}
+											className={styles.summaryParagraph}>
+											{sentence}
+										</p>
+									))}
+								</div>
+							)}
+
 							{extras.scorecard && (
 								<div className={styles.scorecardContainer}>
 									<h2>Scorecard</h2>
@@ -179,7 +192,6 @@ const VideoContent = ({
 									))}
 								</div>
 							)}
-							{extras.tips && <div className={styles.tipsContainer}></div>}
 						</div>
 					)}
 

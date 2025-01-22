@@ -96,7 +96,7 @@
 .essentialExtrasContainer {
 	display: flex;
 	flex-direction: column;
-	padding-top: 60px;
+	padding-top: 50px;
 	@include breakpoint(medium) {
 		flex-direction: row;
 	}
@@ -104,15 +104,23 @@
 
 .scorecardContainer {
 	width: 100%;
-	height: 300px;
-
+	margin-bottom: 50px;
 	display: flex;
 	flex-direction: column;
 }
 
-.tipsContainer {
+.summaryContainer {
 	width: 100%;
-	height: 300px;
+	margin-bottom: 50px;
+	padding-right: 20px;
+}
+
+.summaryParagraph {
+	padding-left: 15px;
+
+	@include breakpoint(medium) {
+		padding-right: 50px;
+	}
 }
 
 .scoreItemContainer {

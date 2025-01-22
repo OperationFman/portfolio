@@ -20,13 +20,11 @@ export type Extras = {
 		accessibility: number;
 		video: number;
 	};
-	tips?: {
-		dos?: string[];
-		donts?: string[];
-		currency?: string;
-		travelAdvisoryISO3166?: string;
-	};
-	bio?: string[];
+	summary?: string[];
+	dos?: string[];
+	donts?: string[];
+	currency?: string;
+	travelAdvisoryISO3166?: string;
 	music?: [
 		{
 			title: string;
