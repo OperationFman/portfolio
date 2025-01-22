@@ -7,7 +7,8 @@ import Head from "next/head";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 import { Footer } from "../../utils/footer/Footer";
 import { TravelVideoMetaData } from "../../src/travel/types";
-import Zoom from "@mui/material/Zoom";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import {
 	getTravelMetaDataIndex,
 	videoEnabled,
@@ -132,71 +133,101 @@ const VideoContent = ({
 					)}
 
 					{extras && (
-						<div className={styles.essentialExtrasContainer}>
-							{extras.summary && (
-								<div className={styles.summaryContainer}>
-									<h2>Summary</h2>
-									{extras.summary.map((sentence, index) => (
-										<p
-											key={`Paragraph ${index + 1}`}
-											className={styles.summaryParagraph}>
-											{sentence}
-										</p>
-									))}
-								</div>
-							)}
+						<>
+							<div className={styles.extrasContainer}>
+								{extras.summary && (
+									<div className={styles.summaryContainer}>
+										<h2>Summary</h2>
+										{extras.summary.map((sentence, index) => (
+											<p
+												key={`Paragraph ${index + 1}`}
+												className={styles.summaryParagraph}>
+												{sentence}
+											</p>
+										))}
+									</div>
+								)}
 
-							{extras.scorecard && (
-								<div className={styles.scorecardContainer}>
-									<h2>Scorecard</h2>
-									{extras.countries && extras.countries.length > 1 && (
-										<div className={styles.scorecardLegend}>
-											{extras.countries.map((country, index) => (
-												<div className={styles.legendItem}>
-													<h5
-														style={{
-															color: `${scorecardColorsPrimary[index]}`,
-															padding: "0 20px 12px 0",
-															margin: 0,
-														}}>
-														{country}
-													</h5>
+								{extras.scorecard && extras.finalScore && (
+									<div className={styles.scorecardContainer}>
+										<h2>Scores</h2>
+										{extras.countries && extras.countries.length > 1 && (
+											<div className={styles.scorecardLegend}>
+												{extras.countries.map((country, index) => (
+													<div className={styles.legendItem}>
+														<h5
+															style={{
+																color: `${scorecardColorsPrimary[index]}`,
+																padding: "0 20px 12px 0",
+																margin: 0,
+															}}>
+															{country}
+														</h5>
+													</div>
+												))}
+											</div>
+										)}
+										{scoreCardArray.map(([title, scores]) => (
+											<ProgressBar title={title} scores={scores} key={title} />
+										))}
+										<div className={styles.finalScoreContainer}>
+											<LinearProgress
+												variant='determinate'
+												value={
+													extras.finalScore === 1 ? 12 : extras.finalScore * 10
+												}
+												className={`${styles.scoreBar} ${styles.finalScore}`}
+												sx={{
+													"& .MuiLinearProgress-bar": {
+														background:
+															"linear-gradient(to right,  #f7df07,rgb(255, 232, 59))",
+														borderRadius: "20px",
+														borderTop: "0.5px solid white",
+													},
+												}}
+											/>
+
+											<h4 className={styles.finalScoreDigit}>
+												{extras.finalScore} / 10
+											</h4>
+
+											<h4
+												className={`${styles.scoreTitle} ${styles.finalScoreTitle}`}>
+												Final Score
+											</h4>
+										</div>
+									</div>
+								)}
+							</div>
+
+							<div className={styles.extrasContainer}>
+								<div className={styles.moneyAndAdvisoryContainer}></div>
+								<div className={styles.doesAndDontsContainer}>
+									{extras.dos && (
+										<>
+											<h2 style={{ margin: "0" }}>Do</h2>
+											{extras.dos.map((doItem) => (
+												<div className={styles.doDontIconContainer}>
+													<ThumbUpIcon style={{ color: "66bb6a" }} />
+													<h4 className={styles.doDontText}>{doItem}</h4>
 												</div>
 											))}
-										</div>
+										</>
 									)}
-									{scoreCardArray.map(([title, scores]) => (
-										<ProgressBar title={title} scores={scores} key={title} />
-									))}
-									<div className={styles.finalScoreContainer}>
-										<LinearProgress
-											variant='determinate'
-											value={
-												extras.finalScore === 1 ? 12 : extras.finalScore * 10
-											}
-											className={`${styles.scoreBar} ${styles.finalScore}`}
-											sx={{
-												"& .MuiLinearProgress-bar": {
-													background:
-														"linear-gradient(to right,  #f7df07,rgb(255, 232, 59))",
-													borderRadius: "20px",
-													borderTop: "0.5px solid white",
-												},
-											}}
-										/>
-
-										<h4 className={styles.finalScoreDigit}>
-											{extras.finalScore} / 10
-										</h4>
-
-										<h4
-											className={`${styles.scoreTitle} ${styles.finalScoreTitle}`}>
-											Final Score
-										</h4>
-									</div>
+									{extras.donts && (
+										<>
+											<h2 style={{ margin: "40px 0 0 0" }}>Dont</h2>
+											{extras.donts.map((dontItem) => (
+												<div className={styles.doDontIconContainer}>
+													<ThumbDownIcon style={{ color: "f44336" }} />
+													<h4 className={styles.doDontText}>{dontItem}</h4>
+												</div>
+											))}
+										</>
+									)}
 								</div>
-							)}
-						</div>
+							</div>
+						</>
 					)}
 
 					{(instagramLinks || reelLinks) && (

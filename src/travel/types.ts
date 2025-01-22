@@ -13,7 +13,7 @@ export type TravelVideoMetaData = {
 };
 
 export type Extras = {
-	countries: string[];
+	countries?: string[];
 	scorecard?: {
 		affordability: number[];
 		food: number[];
@@ -21,12 +21,8 @@ export type Extras = {
 		accessibility: number[];
 		video: number[];
 	};
-	finalScore: number;
+	finalScore?: number;
 	summary?: string[];
-	dos?: string[];
-	donts?: string[];
-	currency?: string;
-	travelAdvisoryISO3166?: string;
 	music?: [
 		{
 			title: string;
@@ -39,6 +35,7 @@ export type Extras = {
 			link: string;
 		},
 	];
+	dos?: string[];
+	donts?: string[];
 	extraVideos?: string[];
-	imageStrip?: string;
 };

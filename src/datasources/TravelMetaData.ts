@@ -19,13 +19,13 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://drive.google.com/file/d/1__yqFNE4pn1qb4HQaL8gVa0NptzwEXYm/view?usp=sharing",
 		restricted: false,
 		extras: {
-			countries: ["China", "West Taiwan"],
+			countries: ["China"],
 			scorecard: {
-				affordability: [9, 5],
-				food: [2, 5],
-				safety: [8, 5],
-				accessibility: [2, 5],
-				video: [1, 5],
+				affordability: [9],
+				food: [2],
+				safety: [8],
+				accessibility: [3],
+				video: [1],
 			},
 			finalScore: 4,
 			summary: [
@@ -33,10 +33,11 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				"China is one of those few countries which are absolutely enormous, you could travel it for years and still barely scratch the surface.",
 				"Each province boasts a unique history and culture spanning millennia. However, I found food quality concerning and the Great Firewall significantly hindered basic tasks like travel planning.",
 			],
-			dos: ["foo"],
-			donts: ["foo"],
-			currency: "CNY",
-			travelAdvisoryISO3166: "CH",
+			dos: ["Install a VPN on your phone before arriving"],
+			donts: [
+				"Visit only major (Tier 1) cities",
+				"Attempt a 'hookup', China generally has strong traditional/conservative values",
+			],
 		},
 	},
 	{
