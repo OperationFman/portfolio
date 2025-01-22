@@ -13,12 +13,13 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://drive.google.com/file/d/1__yqFNE4pn1qb4HQaL8gVa0NptzwEXYm/view?usp=sharing",
 		restricted: false,
 		extras: {
+			countries: ["China"],
 			scorecard: {
-				affordability: [9],
-				food: [2],
-				safety: [8],
-				accessibility: [2],
-				video: [1],
+				affordability: [9, 5],
+				food: [2, 5],
+				safety: [8, 5],
+				accessibility: [2, 5],
+				video: [1, 5],
 			},
 			finalScore: 4,
 			summary: [

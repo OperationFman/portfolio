@@ -31,7 +31,12 @@ export const ProgressBar = ({
 		},
 	};
 
-	const scorecardColorsPrimary = ["#ffeb3b", "#1565c0", "#ce93d8"];
+	const scorecardColorsPrimary = ["#ffeb3b", "#2781e7", "#cf32eb"];
+	const scorecardColorsSecondary = [
+		"rgb(255, 232, 59)",
+		"rgb(39 129 231)",
+		"rgb(206 147 216)",
+	];
 
 	return (
 		<>
@@ -50,7 +55,7 @@ export const ProgressBar = ({
 								sx={{
 									height: `${24 / scores.length}px`,
 									"& .MuiLinearProgress-bar": {
-										background: `linear-gradient(to right, ${scorecardColorsPrimary[countryIndex]}, ${scorecardColorsPrimary[countryIndex]})`,
+										background: `linear-gradient(to right, ${scorecardColorsPrimary[countryIndex]}, ${scorecardColorsSecondary[countryIndex]})`,
 										borderRadius: "20px",
 									},
 								}}
