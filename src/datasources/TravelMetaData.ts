@@ -14,13 +14,13 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		restricted: false,
 		extras: {
 			scorecard: {
-				affordability: 8,
-				food: 2,
-				safety: 8,
-				accessibility: 2,
-				video: 1,
-				finalScore: 4,
+				affordability: [9],
+				food: [2],
+				safety: [8],
+				accessibility: [2],
+				video: [1],
 			},
+			finalScore: 4,
 			summary: [
 				"I spent a semester studying at Shaoguan University, we traveled the south from Guangzhou to Changsha, cultivating my initial love for travel.",
 				"China is one of those few countries which are absolutely enormous, you could travel it for years and still barely scratch the surface.",

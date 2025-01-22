@@ -14,13 +14,13 @@ export type TravelVideoMetaData = {
 
 export type Extras = {
 	scorecard?: {
-		affordability: number;
-		food: number;
-		safety: number;
-		accessibility: number;
-		video: number;
-		finalScore: number;
+		affordability: number[];
+		food: number[];
+		safety: number[];
+		accessibility: number[];
+		video: number[];
 	};
+	finalScore: number;
 	summary?: string[];
 	dos?: string[];
 	donts?: string[];

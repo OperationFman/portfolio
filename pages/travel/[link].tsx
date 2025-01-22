@@ -25,6 +25,7 @@ import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Button, Grid, LinearProgress, Rating, Tooltip } from "@mui/material";
 import { useState } from "react";
 import router from "next/router";
+import { ProgressBar } from "../../src/travel/components/ProgressBar";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -53,29 +54,6 @@ const VideoContent = ({
 	const upNextMetaData = filterTravelVideosWithBackupLink(
 		upNext as TravelVideoMetaData[],
 	);
-
-	const scoreKeyData: any = {
-		affordability: {
-			title: "Affordability",
-			tooltip: "How expensive is the country to travel",
-		},
-		food: { title: "Food", tooltip: "How good is the cuisine" },
-		safety: { title: "Safety", tooltip: "How safe as a solo traveler" },
-		accessibility: {
-			title: "Accessibility",
-			tooltip:
-				"How easy is it to get around and operate independently without a guide",
-		},
-		video: {
-			title: "Video",
-			tooltip: "How well the final edited video turned out (See above)",
-		},
-		finalScore: {
-			title: "Final Score",
-			tooltip:
-				"Final result with all other scores considered plus my luck, friends made & unique experiences",
-		},
-	};
 
 	const scoreCardArray = extras?.scorecard
 		? Object.entries(extras?.scorecard)
@@ -170,44 +148,35 @@ const VideoContent = ({
 							{extras.scorecard && (
 								<div className={styles.scorecardContainer}>
 									<h2>Scorecard</h2>
-									{scoreCardArray.map(([title, score], index) => (
-										<Tooltip
-											TransitionComponent={Zoom}
-											title={scoreKeyData[title].tooltip}
-											followCursor
-											key={`score item ${title}`}>
-											<div
-												className={`${styles.scoreItemContainer} ${
-													index === scoreCardArray.length - 1
-														? styles.totalScore
-														: ""
-												}`}>
-												<LinearProgress
-													variant='determinate'
-													value={score === 1 ? 12 : score * 10}
-													className={styles.scoreBar}
-													sx={{
-														"& .MuiLinearProgress-bar": {
-															background:
-																"linear-gradient(to right,  #f7df07,rgb(255, 232, 59))",
-															clipPath: `polygon(0 0, 100% 0, ${
-																score === 10 ? 100 : 97
-															}% 100%, 0 100%)`,
-															borderTop: "0.5px solid white",
-														},
-													}}
-												/>
-												<h4 className={styles.scoreDigit}>
-													{score}
-													{index === scoreCardArray.length - 1 ? " / 10" : ""}
-												</h4>
-
-												<h4 className={styles.scoreTitle}>
-													{scoreKeyData[title].title}
-												</h4>
-											</div>
-										</Tooltip>
+									{scoreCardArray.map(([title, scores]) => (
+										<ProgressBar title={title} scores={scores} key={title} />
 									))}
+									<div className={styles.finalScoreContainer}>
+										<LinearProgress
+											variant='determinate'
+											value={
+												extras.finalScore === 1 ? 12 : extras.finalScore * 10
+											}
+											className={`${styles.scoreBar} ${styles.finalScore}`}
+											sx={{
+												"& .MuiLinearProgress-bar": {
+													background:
+														"linear-gradient(to right,  #f7df07,rgb(255, 232, 59))",
+													borderRadius: "20px",
+													borderTop: "0.5px solid white",
+												},
+											}}
+										/>
+
+										<h4 className={styles.finalScoreDigit}>
+											{extras.finalScore} / 10
+										</h4>
+
+										<h4
+											className={`${styles.scoreTitle} ${styles.finalScoreTitle}`}>
+											Final Score
+										</h4>
+									</div>
 								</div>
 							)}
 						</div>
