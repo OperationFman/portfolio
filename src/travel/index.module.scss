@@ -96,7 +96,7 @@
 .essentialExtrasContainer {
 	display: flex;
 	flex-direction: column;
-	padding-top: 80px;
+	padding-top: 60px;
 	@include breakpoint(medium) {
 		flex-direction: row;
 	}
@@ -137,6 +137,8 @@
 	border-radius: 20px;
 	color: $defaultYellow;
 	margin-left: 10px;
+	background-color: transparent;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px;
 }
 
 .scoreTitle {
@@ -144,6 +146,7 @@
 	padding: 0 0 0 20px;
 	margin: 0;
 	white-space: nowrap;
+	cursor: pointer;
 }
 
 .upNextContainer {

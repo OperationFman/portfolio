@@ -7,6 +7,7 @@ import Head from "next/head";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 import { Footer } from "../../utils/footer/Footer";
 import { TravelVideoMetaData } from "../../src/travel/types";
+import Zoom from "@mui/material/Zoom";
 import {
 	getTravelMetaDataIndex,
 	videoEnabled,
@@ -21,7 +22,7 @@ import {
 } from "../../src/datasources/TravelMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
-import { Button, Grid, LinearProgress, Rating } from "@mui/material";
+import { Button, Grid, LinearProgress, Rating, Tooltip } from "@mui/material";
 import { useState } from "react";
 import router from "next/router";
 
@@ -53,12 +54,22 @@ const VideoContent = ({
 		upNext as TravelVideoMetaData[],
 	);
 
-	const scoreKeyToTitle: any = {
-		affordability: "Affordability",
-		food: "Food",
-		safety: "Safety",
-		accessibility: "Accessibility",
-		videoOutcome: "Video",
+	const scoreKeyData: any = {
+		affordability: {
+			title: "Affordability",
+			tooltip: "How expensive is the country to travel",
+		},
+		food: { title: "Food", tooltip: "How good is the cuisine" },
+		safety: { title: "Safety", tooltip: "How safe as a solo traveler" },
+		accessibility: {
+			title: "Accessibility",
+			tooltip:
+				"How easy is it to get around and operate independently without a guide",
+		},
+		video: {
+			title: "Video",
+			tooltip: "How well the final edited video turned out (See above)",
+		},
 	};
 
 	if (!metaData) {
@@ -136,28 +147,35 @@ const VideoContent = ({
 						<div className={styles.essentialExtrasContainer}>
 							{extras.scorecard && (
 								<div className={styles.scorecardContainer}>
+									<h2>Scorecard</h2>
 									{Object.entries(extras.scorecard).map(([title, score]) => (
-										<div className={styles.scoreItemContainer}>
-											<LinearProgress
-												variant='determinate'
-												value={score === 10 ? 14 : score}
-												className={styles.scoreBar}
-												sx={{
-													backgroundColor: "transparent",
-													"& .MuiLinearProgress-bar": {
-														background:
-															"linear-gradient(to right,  #f7df07, #ffeb3b)",
-														clipPath: `polygon(0 0, 100% 0, ${
-															score > 97 ? 100 : 97
-														}% 100%, 0 100%)`,
-													},
-												}}
-											/>
-											<h4 className={styles.scoreDigit}>{score / 10}</h4>
-											<h4 className={styles.scoreTitle}>
-												{scoreKeyToTitle[title]}
-											</h4>
-										</div>
+										<Tooltip
+											TransitionComponent={Zoom}
+											title={scoreKeyData[title].tooltip}
+											followCursor>
+											<div className={styles.scoreItemContainer}>
+												<LinearProgress
+													variant='determinate'
+													value={score === 1 ? 14 : score * 10}
+													className={styles.scoreBar}
+													sx={{
+														"& .MuiLinearProgress-bar": {
+															background:
+																"linear-gradient(to right,  #f7df07,rgb(255, 232, 59))",
+															clipPath: `polygon(0 0, 100% 0, ${
+																score === 10 ? 100 : 97
+															}% 100%, 0 100%)`,
+															borderTop: "0.5px solid white",
+														},
+													}}
+												/>
+												<h4 className={styles.scoreDigit}>{score}</h4>
+
+												<h4 className={styles.scoreTitle}>
+													{scoreKeyData[title].title}
+												</h4>
+											</div>
+										</Tooltip>
 									))}
 								</div>
 							)}

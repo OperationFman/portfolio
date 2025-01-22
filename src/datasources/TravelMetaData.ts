@@ -14,11 +14,11 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		restricted: false,
 		extras: {
 			scorecard: {
-				affordability: 10,
-				food: 100,
-				safety: 40,
-				accessibility: 20,
-				videoOutcome: 90,
+				affordability: 8,
+				food: 2,
+				safety: 8,
+				accessibility: 3,
+				video: 1,
 			},
 			tips: {
 				dos: ["foo"],

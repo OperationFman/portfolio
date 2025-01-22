@@ -18,7 +18,7 @@ export type Extras = {
 		food: number;
 		safety: number;
 		accessibility: number;
-		videoOutcome: number;
+		video: number;
 	};
 	tips?: {
 		dos?: string[];
