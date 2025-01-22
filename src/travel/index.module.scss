@@ -116,7 +116,8 @@
 }
 
 .summaryParagraph {
-	padding-left: 15px;
+	padding-left: 10px;
+	margin-top: -5px;
 
 	@include breakpoint(medium) {
 		padding-right: 50px;

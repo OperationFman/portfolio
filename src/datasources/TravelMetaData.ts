@@ -22,7 +22,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				finalScore: 4,
 			},
 			summary: [
-				"I spent a semester studying web development at Shaoguan University, we traveled the south from Guangzhou to Changsha, cultivating my initial love for travel.",
+				"I spent a semester studying at Shaoguan University, we traveled the south from Guangzhou to Changsha, cultivating my initial love for travel.",
 				"China is one of those few countries which are absolutely enormous, you could travel it for years and still barely scratch the surface.",
 				"Each province boasts a unique history and culture spanning millennia. However, I found food quality concerning and the Great Firewall significantly hindered basic tasks like travel planning.",
 			],
