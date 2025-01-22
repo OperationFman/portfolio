@@ -174,7 +174,8 @@ const VideoContent = ({
 										<Tooltip
 											TransitionComponent={Zoom}
 											title={scoreKeyData[title].tooltip}
-											followCursor>
+											followCursor
+											key={`score item ${title}`}>
 											<div
 												className={`${styles.scoreItemContainer} ${
 													index === scoreCardArray.length - 1
