@@ -59,6 +59,7 @@ export const ProgressBar = ({
 									"& .MuiLinearProgress-bar": {
 										background: `linear-gradient(to right, ${scorecardColorsPrimary[countryIndex]}, ${scorecardColorsSecondary[countryIndex]})`,
 										borderRadius: "20px",
+										borderTop: "0.5px solid white",
 									},
 								}}
 								key={`country score index ${countryIndex}`}
