@@ -56,6 +56,7 @@ export const ProgressBar = ({
 										borderRadius: "20px",
 									},
 								}}
+								key={`country score index ${countryIndex}`}
 							/>
 						))}
 					</div>

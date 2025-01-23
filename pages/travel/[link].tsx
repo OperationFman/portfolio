@@ -154,7 +154,7 @@ const VideoContent = ({
 										{extras.countries && extras.countries.length > 1 && (
 											<div className={styles.scorecardLegend}>
 												{extras.countries.map((country, index) => (
-													<div className={styles.legendItem}>
+													<div className={styles.legendItem} key={country}>
 														<h5
 															style={{
 																color: `${scorecardColorsPrimary[index]}`,
