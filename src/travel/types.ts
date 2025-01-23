@@ -30,18 +30,6 @@ export type Extras = {
 	};
 	finalScore?: number;
 	summary?: string[];
-	music?: [
-		{
-			title: string;
-			link: string;
-		},
-	];
-	extraLinks?: [
-		{
-			title: string;
-			link: string;
-		},
-	];
 	challenges?: string[];
 	dos?: string[];
 	donts?: string[];
@@ -55,6 +43,13 @@ export type Extras = {
 		link: string;
 		advice: Advisory;
 	};
-	extraVideos?: string[];
-	imageStrip?: string;
+	music: {
+		title: string;
+		link: string;
+	}[];
+	extraLinks?: {
+		title: string;
+		link: string;
+	}[];
+	extraVideos?: { title: string; hostedLink: string }[];
 };

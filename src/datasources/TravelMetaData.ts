@@ -55,6 +55,52 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/china",
 				advice: Advisory.Level2,
 			},
+			music: [
+				{
+					title: "Lay It On Me - Vance Joy",
+					link: "https://music.youtube.com/watch?v=pbMWNMB2u7Y&si=ZMJv0TGBG9bXV3Oz",
+				},
+				{
+					title: "La Da Dee - Cody Simpson",
+					link: "https://music.youtube.com/watch?v=Qo9YPK4-IEQ&si=lSap8-n8r3vzOAcO",
+				},
+				{
+					title: "I'm Born To Run - American Authors",
+					link: "https://music.youtube.com/watch?v=TTvWhWZPrZs&si=o5ayxDdnHZs73ikA",
+				},
+				{
+					title: "Chinatown - Liam Gallagher",
+					link: "https://music.youtube.com/watch?v=1yh8sp12U58&si=n1nISGoMYRatztdb",
+				},
+				{
+					title: "Pandora - James Horner AVATAR",
+					link: "https://music.youtube.com/watch?v=qGV7o3wiadg&si=QmF5VQxVok9P1_oP",
+				},
+				{
+					title: "Me and Juliet Down By The Schoolyard - Paul Simon",
+					link: "https://music.youtube.com/watch?v=1cs6U097kNQ&si=ZMXN6ZM4X83LWb4H",
+				},
+			],
+			// extraLinks: [
+			// 	{
+			// 		title: "Rick Roll Example",
+			// 		link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+			// 	},
+			// 	{
+			// 		title: "Rick Roll Example",
+			// 		link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+			// 	},
+			// ],
+			extraVideos: [
+				{
+					title: "New Colombo Plan Official Presentation",
+					hostedLink: "chinancp",
+				},
+				{
+					title: "Bloopers and Funny Moments",
+					hostedLink: "chinabloopers",
+				},
+			],
 		},
 	},
 	{

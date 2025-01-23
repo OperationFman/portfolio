@@ -130,7 +130,7 @@ const VideoContent = ({
 							<h5
 								onClick={() => window.open(backupLink, "_blank")}
 								className={styles.backupLink}>
-								Alternative Video Link
+								Download
 							</h5>
 						</>
 					) : (
@@ -191,7 +191,7 @@ const VideoContent = ({
 											<LinearProgress
 												variant='determinate'
 												value={
-													extras.finalScore === 1 ? 12 : extras.finalScore * 10
+													extras.finalScore === 1 ? 16 : extras.finalScore * 10
 												}
 												className={`${styles.scoreBar} ${styles.finalScore}`}
 												sx={{
@@ -204,7 +204,11 @@ const VideoContent = ({
 												}}
 											/>
 
-											<h4 className={styles.finalScoreDigit}>
+											<h4
+												className={styles.finalScoreDigit}
+												style={{
+													paddingLeft: `${(extras.finalScore * 5) / 2}%`,
+												}}>
 												{extras.finalScore} / 10
 											</h4>
 
@@ -276,7 +280,7 @@ const VideoContent = ({
 															margin: "0 0 0 -4px",
 														}}
 													/>
-													<h4 className={styles.doDontText}>{challengeItem}</h4>
+													<p className={styles.doDontText}>{challengeItem}</p>
 												</div>
 											))}
 										</>
@@ -289,7 +293,7 @@ const VideoContent = ({
 													className={styles.doDontIconContainer}
 													key={doItem}>
 													<ThumbUpIcon style={{ color: "66bb6a" }} />
-													<h4 className={styles.doDontText}>{doItem}</h4>
+													<p className={styles.doDontText}>{doItem}</p>
 												</div>
 											))}
 										</>
@@ -302,13 +306,79 @@ const VideoContent = ({
 													className={styles.doDontIconContainer}
 													key={dontItem}>
 													<ThumbDownIcon style={{ color: "f44336" }} />
-													<h4 className={styles.doDontText}>{dontItem}</h4>
+													<p className={styles.doDontText}>{dontItem}</p>
 												</div>
 											))}
 										</>
 									)}
 								</div>
 							</div>
+
+							<div className={styles.extrasContainer}>
+								{extras.music && (
+									<div className={styles.extraInfoContainer}>
+										<div className={styles.songsContainer}>
+											<h2 className={styles.extraInfoHeading}>Music Used</h2>
+											{extras.music.map((song) => (
+												<div key={song.title} className={styles.songItem}>
+													<a
+														className={styles.musicItem}
+														href={song.link}
+														target='_blank'>
+														♫ ‎ {song.title}
+													</a>
+												</div>
+											))}
+										</div>
+									</div>
+								)}
+								{extras.extraLinks && (
+									<div className={styles.extraInfoContainer}>
+										<>
+											<h2 className={styles.extraInfoHeading}>Links</h2>
+											{extras.extraLinks.map((linkItem) => (
+												<div
+													key={linkItem.title}
+													className={styles.extraLinksWrapper}>
+													<h4 className={styles.extraLinkItem}>
+														{linkItem.title}
+													</h4>
+													<a
+														className={styles.extraLinkItemLink}
+														href={linkItem.link}
+														target='_blank'>
+														{linkItem.link}
+													</a>
+												</div>
+											))}
+										</>
+									</div>
+								)}
+							</div>
+
+							{extras.extraVideos && (
+								<div className={styles.extraVideos}>
+									<h2>Bonus Videos</h2>
+									<div className={styles.videoCardsContainer}>
+										{extras.extraVideos.map((linkItem) => (
+											<div key={linkItem.title} className={styles.videoCard}>
+												<h4 className={styles.videoCardTitle}>
+													{linkItem.title}
+												</h4>
+												<ReactPlayer
+													url={`${publicCDNVideoUrl}${linkItem.hostedLink}.mp4`}
+													controls
+													pip
+													playing={false}
+													volume={0.3}
+													height='100%'
+													width='100%'
+												/>
+											</div>
+										))}
+									</div>
+								</div>
+							)}
 						</>
 					)}
 

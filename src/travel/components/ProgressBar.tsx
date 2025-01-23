@@ -61,7 +61,7 @@ export const ProgressBar = ({
 						))}
 					</div>
 
-					<h4 className={styles.scoreTitle}>{scoreKeyData[title].title}</h4>
+					<h4 className={styles.scoreTitle}> {scoreKeyData[title].title}</h4>
 				</div>
 			</Tooltip>
 		</>
