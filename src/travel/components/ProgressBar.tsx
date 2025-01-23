@@ -15,23 +15,28 @@ export const ProgressBar = ({
 	const scoreKeyData: any = {
 		affordability: {
 			title: "Affordability",
-			tooltip: "How expensive is the country to travel",
+			tooltip:
+				"How far does each dollar go, higher affordability means the country is cheaper",
 		},
-		food: { title: "Food", tooltip: "How good is the cuisine" },
+		food: {
+			title: "Food",
+			tooltip: "How good is the cuisine. Higher means better",
+		},
 		safety: { title: "Safety", tooltip: "How safe as a solo traveler" },
 		accessibility: {
 			title: "Accessibility",
 			tooltip:
-				"How easy is it to get around and operate independently without a guide",
+				"How easy is it to get around and operate independently without a guide. Higher means its easy to get around and book hotels",
 		},
 		video: {
 			title: "Video",
-			tooltip: "How well the final edited video turned out (See above)",
+			tooltip:
+				"How well the final edited video turned out (See above). Low means I don't like it",
 		},
 		finalScore: {
 			title: "Final Score",
 			tooltip:
-				"Final result with all other scores considered plus my luck, friends made & unique experiences",
+				"Final result with all other scores considered plus my personal luck, friends made & unique experiences",
 		},
 	};
 

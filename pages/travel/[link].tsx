@@ -430,7 +430,9 @@ const VideoContent = ({
 						{upNextMetaData.length >= 1 ? (
 							<>
 								<h2>Up Next...</h2>
-								<VideoLibrary videoMetaData={[...upNextMetaData].reverse()} />
+								<VideoLibrary
+									videoMetaData={[...upNextMetaData].slice(0, 5).reverse()}
+								/>
 							</>
 						) : (
 							<>
@@ -438,7 +440,9 @@ const VideoContent = ({
 								<VideoLibrary
 									videoMetaData={[
 										...filterTravelVideosWithBackupLink(travelVideoMetaData),
-									].reverse()}
+									]
+										.slice(0, 5)
+										.reverse()}
 								/>
 							</>
 						)}
