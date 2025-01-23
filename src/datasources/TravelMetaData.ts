@@ -33,10 +33,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				"China is one of those few countries which are absolutely enormous, you could travel it for years and still barely scratch the surface.",
 				"Each province boasts a unique history and culture spanning millennia. However, I found food quality concerning and the Great Firewall significantly hindered basic tasks like travel planning.",
 			],
-			dos: ["Install a VPN on your phone before arriving"],
+			challenges: [
+				"Many hotels refuse to check foreigners in, often based on skin color",
+				"Google and Facebook services are blocked by the government which includes Gmail, Play Store, Maps, Instagram and Youtube",
+			],
+			dos: [
+				"Install a VPN on your phone before arriving to access Google & Facebook services",
+			],
 			donts: [
 				"Visit only major (Tier 1) cities",
-				"Attempt a 'hookup', China generally has strong traditional/conservative values",
+				"Attempt a 'hookup', Chinese people generally has strong traditional/conservative values",
 			],
 		},
 	},

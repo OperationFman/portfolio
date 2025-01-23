@@ -35,6 +35,7 @@ export type Extras = {
 			link: string;
 		},
 	];
+	challenges?: string[];
 	dos?: string[];
 	donts?: string[];
 	extraVideos?: string[];

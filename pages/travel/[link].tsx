@@ -9,6 +9,7 @@ import { Footer } from "../../utils/footer/Footer";
 import { TravelVideoMetaData } from "../../src/travel/types";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
+import HeartBrokenIcon from "@mui/icons-material/HeartBroken";
 import {
 	getTravelMetaDataIndex,
 	videoEnabled,
@@ -203,9 +204,28 @@ const VideoContent = ({
 							<div className={styles.extrasContainer}>
 								<div className={styles.moneyAndAdvisoryContainer}></div>
 								<div className={styles.doesAndDontsContainer}>
+									{extras.challenges && (
+										<>
+											<h2 style={{ margin: "0" }}>Challenges</h2>
+											{extras.challenges.map((challengeItem) => (
+												<div
+													className={styles.doDontIconContainer}
+													key={challengeItem}>
+													<HeartBrokenIcon
+														style={{
+															color: "ffeb3b",
+															fontSize: 30,
+															margin: "0 0 0 -4px",
+														}}
+													/>
+													<h4 className={styles.doDontText}>{challengeItem}</h4>
+												</div>
+											))}
+										</>
+									)}
 									{extras.dos && (
 										<>
-											<h2 style={{ margin: "0" }}>Do</h2>
+											<h2 style={{ margin: "40px 0 0 0" }}>Do</h2>
 											{extras.dos.map((doItem) => (
 												<div
 													className={styles.doDontIconContainer}
