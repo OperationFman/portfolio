@@ -12,6 +12,13 @@ export type TravelVideoMetaData = {
 	extras?: Extras;
 };
 
+export enum Advisory {
+	Level1 = "Exercise normal safety precautions",
+	Level2 = "Exercise a high degree of caution",
+	Level3 = "Reconsider your need to travel",
+	Level4 = "Do not travel",
+}
+
 export type Extras = {
 	countries?: string[];
 	scorecard?: {
@@ -38,5 +45,16 @@ export type Extras = {
 	challenges?: string[];
 	dos?: string[];
 	donts?: string[];
+	advice?: {
+		travelLength: string;
+		currency: string;
+		season: string;
+		dailyBudget: string;
+	};
+	travelAdvisory?: {
+		link: string;
+		advice: Advisory;
+	};
 	extraVideos?: string[];
+	imageStrip?: string;
 };

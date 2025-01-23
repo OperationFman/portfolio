@@ -6,7 +6,7 @@ import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspace
 import Head from "next/head";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 import { Footer } from "../../utils/footer/Footer";
-import { TravelVideoMetaData } from "../../src/travel/types";
+import { Advisory, TravelVideoMetaData } from "../../src/travel/types";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import HeartBrokenIcon from "@mui/icons-material/HeartBroken";
@@ -26,7 +26,7 @@ import {
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Button, Grid, LinearProgress, Rating, Tooltip } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import router from "next/router";
 import { ProgressBar } from "../../src/travel/components/ProgressBar";
 
@@ -48,6 +48,13 @@ const VideoContent = ({
 		extras,
 	} = metaData as TravelVideoMetaData;
 
+	const adviceKeyData: any = {
+		travelLength: "Trip Duration",
+		currency: "Currencies Used",
+		season: "Best Months",
+		dailyBudget: "Daily Budget",
+	};
+
 	const [isLoading, setIsLoading] = useState(true);
 
 	setTimeout(() => {
@@ -61,6 +68,15 @@ const VideoContent = ({
 	const scoreCardArray = extras?.scorecard
 		? Object.entries(extras?.scorecard)
 		: [];
+
+	const adviceArray = extras?.advice ? Object.entries(extras?.advice) : [];
+
+	const adviceColors = {
+		[Advisory.Level1]: "#5cbc60",
+		[Advisory.Level2]: "#f9d34e",
+		[Advisory.Level3]: "#f6902d",
+		[Advisory.Level4]: "#f44041",
+	};
 
 	if (!metaData) {
 		return <ErrorContent />;
@@ -202,8 +218,50 @@ const VideoContent = ({
 							</div>
 
 							<div className={styles.extrasContainer}>
-								<div className={styles.moneyAndAdvisoryContainer}></div>
-								<div className={styles.doesAndDontsContainer}>
+								<div className={styles.extraInfoContainer}>
+									<>
+										{extras.advice && (
+											<>
+												<h2 style={{ margin: "0 0 -10px 0" }}>Advice</h2>
+												{adviceArray.map(([adviceTitle, adviceValue]) => (
+													<div
+														key={adviceTitle}
+														className={styles.adviceWrapper}>
+														<h4 className={styles.adviceHeader}>
+															{adviceKeyData[adviceTitle]}
+														</h4>
+														<p className={styles.adviceParagraph}>
+															{adviceValue}
+														</p>
+													</div>
+												))}
+											</>
+										)}
+										{extras.travelAdvisory && (
+											<div className={styles.adviceWrapper}>
+												<h4 className={styles.adviceHeader}>
+													Official Travel Advice
+												</h4>
+												<a
+													href={extras.travelAdvisory.link}
+													className={styles.dfatSubtext}
+													target='_blank'>
+													From the Australian DFAT Smartraveller
+												</a>
+												<div
+													className={styles.advisoryContainer}
+													style={{
+														backgroundColor:
+															adviceColors[extras.travelAdvisory.advice],
+													}}>
+													<h4>{extras.travelAdvisory.advice}</h4>
+												</div>
+											</div>
+										)}
+									</>
+								</div>
+
+								<div className={styles.extraInfoContainer}>
 									{extras.challenges && (
 										<>
 											<h2 style={{ margin: "0" }}>Challenges</h2>

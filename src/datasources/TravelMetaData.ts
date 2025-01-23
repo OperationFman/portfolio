@@ -1,3 +1,4 @@
+import { Advisory } from "./../travel/types";
 import { TravelVideoMetaData } from "../travel/types";
 
 export const publicCDNVideoUrl = "https://d3atatnx15erez.cloudfront.net/";
@@ -42,8 +43,18 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 			donts: [
 				"Visit only major (Tier 1) cities",
-				"Attempt a 'hookup', Chinese people generally has strong traditional/conservative values",
+				"Attempt a 'hookup', Chinese people generally have strong traditional/conservative values",
 			],
+			advice: {
+				travelLength: "1 - 3 Months",
+				currency: "CN¥",
+				season: "April - October",
+				dailyBudget: "¥300 ($40 USD)",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/china",
+				advice: Advisory.Level2,
+			},
 		},
 	},
 	{
