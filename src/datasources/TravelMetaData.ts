@@ -81,16 +81,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=1cs6U097kNQ&si=ZMXN6ZM4X83LWb4H",
 				},
 			],
-			// extraLinks: [
-			// 	{
-			// 		title: "Rick Roll Example",
-			// 		link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-			// 	},
-			// 	{
-			// 		title: "Rick Roll Example",
-			// 		link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-			// 	},
-			// ],
+			extraLinks: [
+				{
+					title: "38 countries can now visit China visa-free",
+					link: "https://www.euronews.com/travel/2024/11/22/china-aims-to-boost-tourism-by-giving-visa-free-entry-to-these-five-european-countries",
+				},
+			],
 			extraVideos: [
 				{
 					title: "New Colombo Plan Official Presentation",
@@ -366,6 +362,75 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CuWWQVoM7FU/?hl=en",
 			"https://www.instagram.com/p/CubhrkpMmYm/?hl=en",
 		],
+		extras: {
+			countries: ["Armenia", "Georgia", "Azerbaijan"],
+			scorecard: {
+				affordability: [8, 8, 4],
+				food: [6, 10, 3],
+				safety: [7, 7, 7],
+				accessibility: [6, 6, 3],
+				video: [7, 7, 7],
+			},
+			finalScore: 7,
+			summary: [
+				"I spent a solid month exploring the 3 countries of the South-Caucasus, it was a surprise how good Georgia was  with it's outstanding food and wine.",
+				"These 3 nations have a complex history, under Soviet rule they co-existed relatively peacefully. But today Armenia and Azerbaijan regularly clash and Georgia is currently partially occupied by Russia.",
+				"Azerbaijan feels like any other gulf petro state and in many ways is proud to be a Turkish puppet. Armenia has a tragic history but some of the most hopeful people you'll ever meet.",
+			],
+			challenges: [
+				"Getting around Azerbaijan can be quite a challenge, similar to Turkey the taxi drivers are very likely to scam and misdirect you at every chance",
+			],
+			dos: [
+				"If you're heading to Kazakhstan you can take a ferry from Baku to Aktau over the Caspian Sea",
+				"Make sure you visit as many of the abandoned palaces in Georgia's Tskaltubo before they're all blocked off, renovated or demolished. You can always find a way in if you search hard enough.",
+			],
+			donts: [
+				"If visiting Georgia's Tskaltubo, do not force your way into any locked apartments as they are likely occupied.",
+			],
+			advice: {
+				travelLength: "1 - 1.5 months",
+				currency: "Armenian DRAM, Georgian Lati GEL, Azerbaijani Manat AZN",
+				season: "July & August",
+				dailyBudget: "$30-50 USD",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/Europe",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "Kaleidoscope - A Great Big World",
+					link: "https://music.youtube.com/watch?v=V7JMJPhO5LA&si=eKTTgWDY5QHZh6Q3",
+				},
+				{
+					title: "Enjoy The Ride - Krewella",
+					link: "https://music.youtube.com/watch?v=MU8vEVDuR_M&si=6_V6BPI3ub4QYiQK",
+				},
+				{
+					title: "No Stress - Molly Moore",
+					link: "https://music.youtube.com/watch?v=9fsaUjUkhqI&si=2B4NLzMOJuJzkTRG",
+				},
+				{
+					title: "Georgia - Vance Joy",
+					link: "https://music.youtube.com/watch?v=H8MJ63XScKc&si=0NGNazF6fyFxM2cS",
+				},
+				{
+					title: "Don't Stop Me Now - Queen",
+					link: "https://music.youtube.com/watch?v=CczcMarUoVk&si=W_ka2l6DbDU6J_Uy",
+				},
+			],
+			extraVideos: [
+				{
+					title:
+						"Meeting Aengus Neaves On his Cycling from Mongolia to Scotland",
+					hostedLink: "angusneavesAzerbaijan",
+				},
+				{
+					title: "Endorsing a Random Mobile Store",
+					hostedLink: "azerbaijanStoreEndoresment",
+				},
+			],
+		},
 	},
 	{
 		title: "Greece",

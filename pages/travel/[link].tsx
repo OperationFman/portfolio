@@ -314,6 +314,30 @@ const VideoContent = ({
 								</div>
 							</div>
 
+							{extras.extraVideos && (
+								<div className={styles.extraVideos}>
+									<h2>Bonus Videos</h2>
+									<div className={styles.videoCardsContainer}>
+										{extras.extraVideos.map((linkItem) => (
+											<div key={linkItem.title} className={styles.videoCard}>
+												<h4 className={styles.videoCardTitle}>
+													{linkItem.title}
+												</h4>
+												<ReactPlayer
+													url={`${publicCDNVideoUrl}${linkItem.hostedLink}.mp4`}
+													controls
+													pip
+													playing={false}
+													volume={0.3}
+													height='100%'
+													width='100%'
+												/>
+											</div>
+										))}
+									</div>
+								</div>
+							)}
+
 							<div className={styles.extrasContainer}>
 								{extras.music && (
 									<div className={styles.extraInfoContainer}>
@@ -355,30 +379,6 @@ const VideoContent = ({
 									</div>
 								)}
 							</div>
-
-							{extras.extraVideos && (
-								<div className={styles.extraVideos}>
-									<h2>Bonus Videos</h2>
-									<div className={styles.videoCardsContainer}>
-										{extras.extraVideos.map((linkItem) => (
-											<div key={linkItem.title} className={styles.videoCard}>
-												<h4 className={styles.videoCardTitle}>
-													{linkItem.title}
-												</h4>
-												<ReactPlayer
-													url={`${publicCDNVideoUrl}${linkItem.hostedLink}.mp4`}
-													controls
-													pip
-													playing={false}
-													volume={0.3}
-													height='100%'
-													width='100%'
-												/>
-											</div>
-										))}
-									</div>
-								</div>
-							)}
 						</>
 					)}
 
