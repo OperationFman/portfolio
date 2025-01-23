@@ -369,7 +369,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				food: [6, 10, 3],
 				safety: [7, 7, 7],
 				accessibility: [6, 6, 3],
-				video: [7, 7, 7],
+				video: [6, 8, 7],
 			},
 			finalScore: 7,
 			summary: [
@@ -421,12 +421,11 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 			extraVideos: [
 				{
-					title:
-						"Meeting Aengus Neaves On his Cycling from Mongolia to Scotland",
+					title: "Meeting Aengus Neaves - Cycling Mongolia to Scotland",
 					hostedLink: "angusneavesAzerbaijan",
 				},
 				{
-					title: "Endorsing a Random Mobile Store",
+					title: "Endorsing a Random Baku Mobile Store",
 					hostedLink: "azerbaijanStoreEndoresment",
 				},
 			],
@@ -603,6 +602,64 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		reelLinks: ["https://www.instagram.com/reel/DEAUDrrJPIk/?hl=en"],
 		backupLink:
 			"https://drive.google.com/file/d/1IYr1i33XaUeldP6BQiDMDC6XIZEpzbbM/view?usp=sharing",
+		extras: {
+			countries: ["East India", "Bhutan"],
+			scorecard: {
+				affordability: [9, 1],
+				food: [1, 2],
+				safety: [5, 10],
+				accessibility: [6, 1],
+				video: [5, 8],
+			},
+			finalScore: 5,
+			summary: [
+				"We hiked and rode our way through a less-traveled section of the Himalayas, everywhere you look is stunning architecture and color.",
+				"There are few countries like Bhutan. Nestled 2500m in the mountains it's a bastion of peace and long term thinking. They impose an expensive daily Sustainable Development Fee (SDF) on tourists which is what makes it one of the least visited countries on earth.",
+				"We also got to enjoy the celebrations of Diwali in the East-Indian region of Darjeerling, surprisingly it felt more like new years with endless screaming fireworks and fire crackers.",
+			],
+			challenges: [
+				"Bhutan essentially forces tourists to hire a guide and driver. Technically you can explore Paro and Thimphu without one but you MUST fly in to the airport, don't try to get there via car.",
+			],
+			dos: [
+				"Travel Bhutan in the off or shoulder season when the SDF is $100 per day instead of $250.",
+				"Rent a Himalayan motorbike and enjoy the pure peace that is the twisting yet safe and clean roads of Dochula Pass.",
+			],
+			donts: [
+				"Try to avoid hiring a guide. They kind of suck and make the experience worse but without one many things become locked off and locals still won't engage with you.",
+			],
+			advice: {
+				travelLength: "5 days or 2 weeks if hiking",
+				currency: "Bhutanese Ngultrum BTN & Indian Rupee (Accepted in Bhutan)",
+				season: "March - May",
+				dailyBudget: "$20USD + $100/250USD Daily SDF",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/bhutan",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "Jag Changa - Raghu Dixit",
+					link: "https://music.youtube.com/watch?v=8LIk4sHswiM&si=PZrhB6F95D7F6hgg",
+				},
+				{
+					title: "Send Me On My Way - Rusted Root",
+					link: "https://music.youtube.com/watch?v=ZS4m67ElJzU&si=6H-gtf5tsV7Jc9yt",
+				},
+				{
+					title: "A Little Bit Happy - TALK",
+					link: "https://music.youtube.com/watch?v=Dr74mEbAtL4&si=ImwQlgw7gKKEzNDF",
+				},
+				{
+					title: "Just A Simple Monk - Jeremy Zuckerman",
+					link: "https://music.youtube.com/watch?v=qPw89MgOBvw&si=AHZ0qrVz-ZcFfNLT",
+				},
+				{
+					title: "Avatar The Last Airbender Theme - Samuem Kim",
+					link: "https://music.youtube.com/watch?v=BToxRk8X3n8&si=lyKeDvD2I5AUoluq",
+				},
+			],
+		},
 	},
 	{
 		title: "Maldives & Sri Lanka",
@@ -613,9 +670,59 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		instagramLinks: [
 			"https://www.instagram.com/p/DEyptuVJGbk/?hl=en&img_index=1",
 			"https://www.instagram.com/p/DE6s6JFpJ6L/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DFE9V62J79b/?hl=en&img_index=1",
 		],
 		backupLink:
 			"https://drive.google.com/file/d/1NDLcgySrd3NrAnbx3rp40wxyMCF13N3h/view?usp=sharing",
+		extras: {
+			countries: ["Maldives", "Sri Lanka"],
+			scorecard: {
+				affordability: [4, 8],
+				food: [1, 4],
+				safety: [7, 7],
+				accessibility: [2, 8],
+				video: [5, 4],
+			},
+			finalScore: 3,
+			summary: [
+				"We joined a friend for 2025 New Years, enroute had a stopover in The Maldives for a bit sun and aquatic fun.",
+				"The Maldives was once an expensive and exclusive destination but since 2022 they allow tourists to lodge on the normal non-resort islands which dramatically cuts costs. Multiple budget friendly tour companies have emerged since but the food remains deplorable.",
+				"After their credit default, Sri Lanka has focused intensely on its tourism industry which has made it a fantastic attractive destination to backpack. It's affordable and beautiful. Safety is top notch making it the ideal first taste of South Asia.",
+			],
+			challenges: [
+				"The Maldives is exceptionally hard to travel freely, there are many 'gotchas' like ferries needing pre-booking or not running on certain days.",
+			],
+			dos: [
+				"Leave an extra day or two in The Maldives free as weather and unforeseen circumstances can make it impossible to see certain ocean life, e.g the whale sharks and manta rays.",
+			],
+			donts: [
+				"Never trust your host/hotel in The Maldives. Whenever they say 'no problem', you're going to have a big problem. Ensure you make your own plans with receipts or guarantees.",
+			],
+			advice: {
+				travelLength: "Maldives: 1 week / Sri Lanka: 3 weeks",
+				currency: "Maldivian Rufiyaa MVR & Sri Lankan Rupee LKR",
+				season: "December - March",
+				dailyBudget: "Maldives: $150USD / Sri Lanka: $30USD",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/Asia",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Sharks - Imagine Dragons",
+					link: "https://music.youtube.com/watch?v=jvwDooKFMLk&si=P1RAIQ4WdxL_ydzP",
+				},
+				{
+					title: "I'm With You - Matthew Mole",
+					link: "https://music.youtube.com/watch?v=mjX1Ywh0p-E&si=2u4fnZHto1HzVI5Z",
+				},
+				{
+					title: "Good Grief - Bastille",
+					link: "https://music.youtube.com/watch?v=LDY4Bf8Zwn8&si=deEik0xGNb1S3WIQ",
+				},
+			],
+		},
 	},
 	{
 		title: "Thailand 2",

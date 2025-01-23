@@ -31,7 +31,7 @@ export const ProgressBar = ({
 		video: {
 			title: "Video",
 			tooltip:
-				"How well the final edited video turned out (See above). Low means I don't like it",
+				"How well the final edited video turned out (See above). Low means I don't like it. Each country gets it's own rating within one video",
 		},
 		finalScore: {
 			title: "Final Score",
