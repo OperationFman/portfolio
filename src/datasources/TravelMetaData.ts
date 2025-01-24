@@ -126,6 +126,14 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1slogZWzJDTvzFp7atsPj9UJZuhclFuuR/view?usp=sharing",
 		restricted: false,
+		extras: {
+			extraVideos: [
+				{
+					title: "Aengus Bowers - Registered Shape Cutter",
+					hostedLink: "registeredShapeCutter",
+				},
+			],
+		},
 	},
 	{
 		title: "New Zealand",

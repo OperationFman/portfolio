@@ -43,7 +43,7 @@ export type Extras = {
 		link: string;
 		advice: Advisory;
 	};
-	music: {
+	music?: {
 		title: string;
 		link: string;
 	}[];
