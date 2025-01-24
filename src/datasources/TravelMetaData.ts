@@ -1,5 +1,6 @@
 import { Advisory } from "./../travel/types";
 import { TravelVideoMetaData } from "../travel/types";
+import { title } from "process";
 
 export const publicCDNVideoUrl = "https://d3atatnx15erez.cloudfront.net/";
 export const insecureRestrictionKey = "adventuretime";
@@ -338,6 +339,87 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CtmgnktJcUn/?img_index=1",
 			"https://www.instagram.com/p/CtrhaHNr2J9/?img_index=1",
 		],
+		extras: {
+			countries: ["Iran"],
+			scorecard: {
+				affordability: [10],
+				food: [6],
+				safety: [3],
+				accessibility: [5],
+				video: [9],
+			},
+			finalScore: 7,
+			summary: [
+				"Iran has a reputation for being a regional destabilizing power, known to regularly detain tourists and violently cracking down on protests.",
+				"These are all valid concerns, but if you can stomach the fear and overcome these challenges, you'll get to formulate your own opinion and make up your own mind about the realities on the ground.",
+				"It's actually a fascinating land of ancient history, vibrant culture, and surprising hospitality, I experienced some incredible moments like being on German national TV, the friendliness of the soldiers and understood the hardships that come from a powerful nation ruled by an oppressive regime under debilitating sanctions.",
+			],
+			challenges: [
+				"Due to Sanctions you cannot use a visa card here, bring crisp USD/EUR and ensure you're getting the black market rate",
+				"Americans and brits must have a guide and be under constant supervision while traveling. other nationalities are completely free however",
+			],
+			dos: [
+				"Bring an android phone and install the app 'ShareIt'. In Iran the VPNs are regularly blocked by the government so locals constantly build and share new clients in person to stay ahead and remain connected",
+				"Apply for a visa from SurfIran, GetIranVisa & CIBTvisas in advance. The length of stay you can be granted is generally down to your countries relationship with Iran",
+			],
+			donts: [
+				"Even mention Israel. Many people get offended and will report you if overhearing it. Similarly, don;t visit Iran if theirs even a trace of you having been to israel",
+				"Stick around if theirs a crowd forming, ie protests. They quickly turn dangerous and it's largely accepted that unfortunate individuals caught in a bad situation are hurt or killed, simply to make an example",
+			],
+			advice: {
+				travelLength: "1 - 1.5 months",
+				currency:
+					"Iranian Rial & Toman (1 Tommen = 10 Rials), United States Dollar $USD & Eu Euro €EUR",
+				season: "March - May & September - November",
+				dailyBudget: "$2-5USD (I'm not kidding)",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/middle-east/iran",
+				advice: Advisory.Level4,
+			},
+			music: [
+				{
+					title: "Take A Walk - Passion Pit",
+					link: "https://music.youtube.com/watch?v=v_5P26wMiAo&si=CAs4sE6Q2sJwNqWt",
+				},
+				{
+					title: "All We Know - The Chainsmokers",
+					link: "https://music.youtube.com/watch?v=iObcSzYLQQw&si=Gx8m0Epa36XlkVLc",
+				},
+				{
+					title: "Roam - Ryan Harris",
+					link: "https://music.youtube.com/watch?v=zlX0bwZCD0k&si=3cZ0PeEMgeazeqVO",
+				},
+				{
+					title: "The Right Attitude",
+					link: "https://music.youtube.com/watch?v=yvZwfRhucSU&si=5PGZbqKVZ83Xlq29",
+				},
+			],
+			extraLinks: [
+				{
+					title: "My Complete Backpacking Persia Guide",
+					link: "https://www.franklin-v-moon.dev/guides/persia-guide",
+				},
+				{
+					title: "Blackmarket USD to Rial Rate",
+					link: "https://www.bonbast.com/",
+				},
+				{
+					title: "Travel Insurance",
+					link: "https://www.iatitravelinsurance.co.uk/",
+				},
+				{
+					title: "Prior Israel Travel Ban List",
+					link: "https://igoogledisrael.com/can-i-visit-arab-countries-with-an-israeli-visa-stamp-in-my-passport/",
+				},
+			],
+			extraVideos: [
+				{
+					title: "German ZDF Esfahan Interview",
+					hostedLink: "iranInterview",
+				},
+			],
+		},
 	},
 	{
 		title: "Armenia, Georgia & Azerbaijan",
