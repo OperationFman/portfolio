@@ -127,6 +127,60 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://drive.google.com/file/d/1slogZWzJDTvzFp7atsPj9UJZuhclFuuR/view?usp=sharing",
 		restricted: false,
 		extras: {
+			countries: ["Malaysia", "Singapore"],
+			scorecard: {
+				affordability: [7, 4],
+				food: [4, 7],
+				safety: [7, 10],
+				accessibility: [7, 10],
+				video: [3, 3],
+			},
+			finalScore: 4,
+			summary: [
+				"Malaysia is a simple yet multi-cultural destination blending Chinese, Indian and Arabic cultures all into one fairly unassuming package.",
+				"Singapore is an impressive hub of commerce and efficiency you don,t see often. It is what Hong Kong wishes it still was and continues to thrive and attracts the best minds from asia into one concentrated pinhead.",
+				"We had a very short vacation but we made the most of it by drinking, hanging out and checking out the local attractions from the rainbow steps in Kuala Lumpur to the Gardens By the Bay.",
+			],
+			challenges: [
+				"Malaysia is fairly boring over all, nothing really happens so it's good to travel fast and bring some buddies.",
+			],
+			donts: ["Chewing gum publically is illegal in Singapore."],
+			advice: {
+				travelLength: "Malaysia: 1 week / Singapore: 1 week",
+				currency: "Malaysia Ringit MYR / Singapore dollar SGD",
+				season: "February - April",
+				dailyBudget: "Malaysia: $30usd / Singapore $60-100usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/Asia",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "Thrills - Space Primates",
+					link: "https://music.youtube.com/watch?v=UuSepF0OT9E&si=gc-Yq-yP-vYJ-mjw",
+				},
+				{
+					title: "Sleeping At Night - Caught a Ghost",
+					link: "https://music.youtube.com/watch?v=uH7jG5aI82g&si=Rk59Itgv3KN8Gw4U",
+				},
+				{
+					title: "Sleepless Nights - Ayokay",
+					link: "https://music.youtube.com/watch?v=uH7jG5aI82g&si=Cnc7tF2cWqscK9-1",
+				},
+				{
+					title: "Open My Mouth - Kiiara",
+					link: "https://music.youtube.com/watch?v=GrioYGaPRUM&si=qzP9xc_2eDUzuJjN",
+				},
+				{
+					title: "High - Sir Sly",
+					link: "https://music.youtube.com/watch?v=Zrck6SV6T4M&si=mmf7j7jw7Ei4tk_o",
+				},
+				{
+					title: "Vodka Nation - DJ Blyatman",
+					link: "https://music.youtube.com/watch?v=rI_SOnt4KwY&si=ynSECMNdzLVZy9bo",
+				},
+			],
 			extraVideos: [
 				{
 					title: "Aengus Bowers - Registered Shape Cutter",
@@ -643,6 +697,49 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		reelLinks: ["https://www.instagram.com/reel/DAWBdOpC00S/?hl=en"],
 		backupLink:
 			"https://drive.google.com/file/d/1-lC6yL-FcgwMUpZXmrzMRVOV4EbLDjVi/view?usp=sharing",
+		extras: {
+			countries: ["Philippines", "Brunei"],
+			scorecard: {
+				affordability: [7, 4],
+				food: [1, 2],
+				safety: [7, 7],
+				accessibility: [6, 6],
+				video: [7, 4],
+			},
+			finalScore: 6,
+			summary: [
+				"The Philippines, an archipelago of over 7,000 islands offering a diverse landscape of beaches, volcanoes, rain forests and infinite diving.",
+				"Nearby Brunei is a tiny oil-rich sultanate known for it's mosques, tree canopies and Venetian-style river villages.",
+				"Steering clear of Manila due to it's scammy and congested nature, we explored chaotic Cebu by scooter and snorkelled around its gorgeous coast. While the food in both countries is quite bad (philippines voted worst in the world recently) we did enjoy the nightlife and punchy red horse beers.",
+			],
+			challenges: [
+				"Manilla is a hellish city with some truly awful congestion. Many taxi scams exist, particularly the 'airport bus' that you can never rely on.",
+			],
+			dos: [
+				"Give the Philippines a huge amount of time. Each island has so much to offer, think of it like a much bigger Greek archipelago.",
+			],
+			donts: ["Eat the eggs called 'Balut. Or do, it's your life."],
+			advice: {
+				travelLength: "Philippines: 1 - 2 months / Brunei 2 - 3 days",
+				currency: "Philippine Peso PHP / Brunei Dollar BND",
+				season: "December - February",
+				dailyBudget: "Philippines: $20usd / Brunei: $40usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/Asia",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Manila - Ray Dalton",
+					link: "https://music.youtube.com/watch?v=qHhQwoDIDTI&si=uT-MgUZBD9bSeo0S",
+				},
+				{
+					title: "Small Talk - Call Security",
+					link: "https://music.youtube.com/watch?v=x-97hc4kIlE&si=xRSvnyP26t4ClH6V",
+				},
+			],
+		},
 	},
 	{
 		title: "Timor-Leste",
@@ -661,15 +758,15 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Timor-Leste"],
 			scorecard: {
-				affordability: [5],
+				affordability: [6],
 				food: [4],
 				safety: [7],
-				accessibility: [4],
+				accessibility: [3],
 				video: [7],
 			},
 			finalScore: 6,
 			summary: [
-				"Timor-Leste, one of the world's youngest countries, least traveled and with a truly tragic recent history. Riding through the street you attract a lot of eyeballs followed with a constant stream of 'hello''s, 'hi's and 'where are you from?'.",
+				"One of the world's youngest countries, least traveled and with a truly tragic recent history. Riding through the street you attract a lot of eyeballs followed with a constant stream of 'hello''s, 'hi's and 'where are you from?'.",
 				"The infrastructure here is extremely basic with most roads made of only dirt/mud and the 4th slowest cellular network globally.",
 				"What it lacks in amenities it makes up for in ecology, by being relatively untouched it has the worlds most bio-diverse coral reefs surrounding the ex-prison island of Atauro.",
 			],
@@ -737,15 +834,15 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [9],
 				food: [1],
-				safety: [5],
+				safety: [2],
 				accessibility: [1],
 				video: [10],
 			},
 			finalScore: 6,
 			summary: [
 				"Bangladesh is a very unique country, blending some of the best and worst of experiences into a captivating yet daunting adventure.",
+				"Home to the world's largest mangrove forest, the Sundarbans. The worlds longest uninterrupted sea beach, Cox bazaar and a fascinating textiles industry, we had a blast but also, would never go back.",
 				"If you're into 'Yes theory' then this is the country for you, it has stunning nature and a type of local you've never met before, Everything here is a challenge but rewarding nonetheless.",
-				"Home to the world's largest mangrove forest, the Sundarbans. The worlds longest uninterrupted sea beach, Cox bazaar and and fascinating textiles industry we had a blast but also, would never go back.",
 			],
 			challenges: [
 				"The food is straight-up not fit for animal nor human consumption. Everything, even KFC, gave me food poisoning. Stick to Oreos and potato crisps.",
@@ -761,7 +858,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				travelLength: "2 weeks",
 				currency: "Bangladeshi Taka BDT",
 				season: "December - March",
-				dailyBudget: "$10usd",
+				dailyBudget: "$25usd",
 			},
 			travelAdvisory: {
 				link: "https://www.smartraveller.gov.au/destinations/asia/bangladesh",
