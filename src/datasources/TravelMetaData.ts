@@ -658,6 +658,63 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		reelLinks: ["https://www.instagram.com/reel/DAkVgM9i5tf/?hl=en"],
 		backupLink:
 			"https://drive.google.com/file/d/1puWBm8F3ejCGtT5oOsqTXunjZwA_5bto/view?usp=sharing",
+		extras: {
+			countries: ["Timor-Leste"],
+			scorecard: {
+				affordability: [5],
+				food: [4],
+				safety: [7],
+				accessibility: [4],
+				video: [7],
+			},
+			finalScore: 6,
+			summary: [
+				"Timor-Leste, one of the world's youngest countries, least traveled and with a truly tragic recent history. Riding through the street you attract a lot of eyeballs followed with a constant stream of 'hello''s, 'hi's and 'where are you from?'.",
+				"The infrastructure here is extremely basic with most roads made of only dirt/mud and the 4th slowest cellular network globally.",
+				"What it lacks in amenities it makes up for in ecology, by being relatively untouched it has the worlds most bio-diverse coral reefs surrounding the ex-prison island of Atauro.",
+			],
+			challenges: [
+				"There is almost no tourism infrastructure except for dive centers.",
+				"The roads are almost nonexistent with potholes regularly swallowing up whole motorbikes. It's fun but ensure ample time and energy",
+			],
+			dos: [
+				"Spend a few days at 'Barry's Place' in Atauro. He's amazing and theirs a lot to do surprisingly",
+			],
+			advice: {
+				travelLength: "1 week",
+				currency: "United States Dollar $USD",
+				season: "May - November",
+				dailyBudget: "$20usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/timor-leste",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "C'est La Vie - Yung Gravy",
+					link: "https://music.youtube.com/watch?v=lHMzHNxkcfE&si=mpjqGMSLjCm4Ie41",
+				},
+				{
+					title: "Married Life - Michael Giacchino",
+					link: "https://music.youtube.com/watch?v=S3jmcjyzRI0&si=JLhIzS2EhqnZbeX8",
+				},
+				{
+					title: "The Nosebleed Section - Hilltop Hoods",
+					link: "https://music.youtube.com/watch?v=1PgvxPCLQzw&si=vgyrqO9FUsA3sEWN",
+				},
+				{
+					title: "I Don't Wanna Wait - David Ghuetta & One Republic",
+					link: "https://music.youtube.com/watch?v=yjNJLr0nX6U&si=_b5mufidUj6lOgtA",
+				},
+			],
+			extraLinks: [
+				{
+					title: "Days and Ways to Atauro",
+					link: "https://ataurotourism.org/plan-your-trip/getting-here/",
+				},
+			],
+		},
 	},
 	{
 		title: "Bangladesh",
@@ -675,6 +732,66 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		reelLinks: ["https://www.instagram.com/reel/DDwCngSJmuq/?hl=en"],
 		backupLink:
 			"https://drive.google.com/file/d/11pxbcoNcNhkHh-CEFpwS7H20_-NPqNzT/view?usp=sharing",
+		extras: {
+			countries: ["Bangladesh"],
+			scorecard: {
+				affordability: [9],
+				food: [1],
+				safety: [5],
+				accessibility: [1],
+				video: [10],
+			},
+			finalScore: 6,
+			summary: [
+				"Bangladesh is a very unique country, blending some of the best and worst of experiences into a captivating yet daunting adventure.",
+				"If you're into 'Yes theory' then this is the country for you, it has stunning nature and a type of local you've never met before, Everything here is a challenge but rewarding nonetheless.",
+				"Home to the world's largest mangrove forest, the Sundarbans. The worlds longest uninterrupted sea beach, Cox bazaar and and fascinating textiles industry we had a blast but also, would never go back.",
+			],
+			challenges: [
+				"The food is straight-up not fit for animal nor human consumption. Everything, even KFC, gave me food poisoning. Stick to Oreos and potato crisps.",
+				"Getting around is very hard, you can't really book anything online and theirs no such thing as a schedule. Just ask around until a solution presents itself but that does mean you can commute in crazy unexpected ways.",
+			],
+			dos: [
+				"Train surf in Dhaka. It's a thrilling experience and nearing it's expected end. Simply try to sneak on the roof when no guards are watching and enjoy the ride.",
+			],
+			donts: [
+				"Solo travel as a woman, even a group of women I would not suggest. Many of the locals have no concept of personal space, they will crowd around you and stare, touch, help themselves to whats in your pocket and even I, a 6-foot man, was sexually harassed multiple times",
+			],
+			advice: {
+				travelLength: "2 weeks",
+				currency: "Bangladeshi Taka BDT",
+				season: "December - March",
+				dailyBudget: "$10usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/bangladesh",
+				advice: Advisory.Level3,
+			},
+			music: [
+				{
+					title: "It Is What It Is - Jenna Raine",
+					link: "https://music.youtube.com/watch?v=VLObcolZ6jI&si=8ScTUtHWCfNM7Qjn",
+				},
+				{
+					title: "Beautiful Life - Now United",
+					link: "https://music.youtube.com/watch?v=CuOJOtbw0vs&si=Sa_cBseJU6RbI3rd",
+				},
+				{
+					title: "Modern Art - Black Lips",
+					link: "https://music.youtube.com/watch?v=9Od7tvXYx60&si=HB5Zuoc9NfGqBRUm",
+				},
+				{
+					title: "We Like To Party - Vengaboys",
+					link: "https://music.youtube.com/watch?v=KRQPDlKoaWk&si=2TGZKXw_tebJ7ukn",
+				},
+			],
+			extraLinks: [
+				{
+					title: "Guest Speaking At Barishal University",
+					link: "https://www.facebook.com/share/p/18bAX5KRd2/",
+				},
+			],
+		},
 	},
 	{
 		title: "Bhutan & East India",
@@ -863,6 +980,57 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	// 	reelLinks: [""],
 	// 	backupLink: "",
 	// 	newestVideo: true,
+	// 	extras: {
+	// 		countries: [ ""],
+	// 		scorecard: {
+	// 			affordability: [],
+	// 			food: [],
+	// 			safety: [],
+	// 			accessibility: [],
+	// 			video: [],
+	// 		},
+	// 		finalScore: 7,
+	// 		summary: [ "" ],
+	// 		challenges: [ "" ],
+	// 		dos: [ "" ],
+	// 		donts: [ "" ],
+	// 		advice: {
+	// 			travelLength: "",
+	// 			currency: "",
+	// 			season: "",
+	// 			dailyBudget: "",
+	// 		},
+	// 		travelAdvisory: {
+	// 			link: "",
+	// 			advice: Advisory.Level1,
+	// 		},
+	// 		music: [
+	// 			{
+	// 				title: "",
+	// 				link: "",
+	// 			},
+	// 			{
+	// 				title: "",
+	// 				link: "",
+	// 			},
+	// 		],
+	// 		extraLinks: [
+	// 			{
+	// 				title: "",
+	// 				link: "",
+	// 			},
+	// 			{
+	// 				title: "",
+	// 				link: "",
+	// 			},
+	// 		],
+	// 		extraVideos: [
+	// 			{
+	// 				title: "",
+	// 				hostedLink: "",
+	// 			},
+	// 		],
+	// 	},
 	// },
 ];
 
