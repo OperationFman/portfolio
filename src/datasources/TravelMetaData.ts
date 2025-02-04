@@ -648,6 +648,71 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1KSppj46GrOOuXNs2mB_uVOZTWlwzZAc5/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/DAGBpdVCaEJ/?hl=en"],
+		extras: {
+			countries: ["Syria"],
+			scorecard: {
+				affordability: [10],
+				food: [10],
+				safety: [5],
+				accessibility: [7],
+				video: [10],
+			},
+			finalScore: 10,
+			summary: [
+				"Experiencing Syria during the Assad regime was an actual unforgettable experience, the week I spent in Syria might be the most impactful week of my life.",
+				"Each and every aspect of this tragic yet resilient country stands out. THe people still have so much pride and hope, everyone is wonderful, the history immense and the food to die for.",
+				"Damascus has gone down as my favorite city, its so rich and vibrant. Homs and Hama while devastated from decades of war still have so much to offer. Aleppo alone could be traveled for weeks without learning everything. THis truly is a one of a kind nation.",
+			],
+			challenges: [
+				"Avoid interfering Russian and Iranian soldiers. Both (At the time I visited, pre-Assad fall) regularly bullied locals and it can be tough to watch helplessly.",
+			],
+			dos: ["Eat and drink everything."],
+			donts: [
+				"The Kim Jong-Ill park while fascinating is literally just a patch of grass.",
+			],
+			advice: {
+				travelLength: "3 - 5 weeks",
+				currency: "Syrian pound SYP",
+				season: "March - May",
+				dailyBudget: "$5usd (Not joking)",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/middle-east/syria",
+				advice: Advisory.Level4,
+			},
+			music: [
+				{
+					title: "",
+					link: "",
+				},
+				{
+					title: "",
+					link: "",
+				},
+			],
+			extraLinks: [
+				{
+					title: "Viva La Vida - Coldplay",
+					link: "https://music.youtube.com/watch?v=3a-q7vPa-UU&si=Hf-IwDnXrKqdy_pv",
+				},
+				{
+					title: "Rasputin - Boney M",
+					link: "https://music.youtube.com/watch?v=5Z0dxsFmX7c&si=3jhbv2Jfa5yxyZmo",
+				},
+				{
+					title: "Castle On The Hill - Ed Sheeren",
+					link: "https://music.youtube.com/watch?v=wqlTrBCNRiY&si=RYn0NlDrbIZBujp8",
+				},
+				{
+					title: "Hard Sometimes - Ruel",
+					link: "https://music.youtube.com/watch?v=OA_Auja3wNQ&si=pcy6uEIeHjJ_pM7c",
+				},
+				{
+					title: "Blank Space - Taylor Swift",
+					link: "https://music.youtube.com/watch?v=dC9QIUKviJU&si=Z0Jx7lHOe3mJh0-o",
+				},
+			],
+		},
 	},
 	{
 		title: "Cyprus",
@@ -664,6 +729,41 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CwTBSZ8rP6c/?hl=en",
 			"https://www.instagram.com/p/CwVuLVvrgWP/?hl=en",
 		],
+		extras: {
+			countries: ["Cyprus"],
+			scorecard: {
+				affordability: [5],
+				food: [8],
+				safety: [8],
+				accessibility: [6],
+				video: [3],
+			},
+			finalScore: 7,
+			summary: [
+				"An island nation divided, where ancient ruins meet sun-drenched coastlines with everything you love and hate from it's nearest neighbors.",
+				"The Greek Cypriot and Turkish Cypriot communities of Cyprus are a living testament to the island's complex recent history where the UN buffer lines creates an incredibly strange atmosphere yet life goes on in paradise.",
+				"I explored a few cities and mostly 'lied it up', the south feels much more like a Greek island and the north more like a forgotten wasteland from Fallout.",
+			],
+			challenges: [
+				"Each side of Cyprus uses different currencies, the south uses Euros and the north the Turkish Lira.",
+			],
+			advice: {
+				travelLength: "2 weeks",
+				currency: "South: European Union Euro EUR / North: Turkish Lira TL",
+				season: "May - July",
+				dailyBudget: "$80usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/europe/cyprus",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Gone - Jr Jr",
+					link: "https://music.youtube.com/watch?v=uQp8xxBp4Pw&si=iY7EUR_z4qMO4m-I",
+				},
+			],
+		},
 	},
 	{
 		title: "Israel & Palestine",
@@ -682,6 +782,66 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1PmnN0FXR1uafWe40V07R6D7PK2NynlpM/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/DASgqv-CzW-/?hl=en"],
+		extras: {
+			countries: ["Israel", "Palestine"],
+			scorecard: {
+				affordability: [5, 5],
+				food: [8, 3],
+				safety: [7, 6],
+				accessibility: [8, 3],
+				video: [9, 9],
+			},
+			finalScore: 8,
+			summary: [
+				"We witnessed firsthand the tangible realities of the Israeli-Palestinian conflict, including the separation barrier and its impact on daily life.",
+				"Israel & Palestine have diverse religious and political narratives shaping the region's complex recent history, understanding the inherent risks and challenges alongside the rich cultural heritage",
+				"It's a surreal experience to travel this region, with so many concerning and surprising facts it can be heart breaking to visit but something I believe everyone should try at-least once.",
+			],
+			challenges: [
+				"Israeli border security is fierce. Many travelers are fine, but if you're solo it's likely you will be searched and questioned for hours.",
+			],
+			dos: [
+				"Cross into Bethlehem on foot and get a day trip with any taxi drivers. First and foremost they want you to understand their circumstances.",
+			],
+			donts: [
+				"Cross the Jordanian border if you plan to visit a long list of other arab countries. Even though Israel does not stamp your passport, the land border stamp will indicate you visited Israel - In Lebanon for example, this would get you arrested.",
+				"Rent a car and drive it into Palestine. THe Israeli numberplate will get your car targeted.",
+			],
+			advice: {
+				travelLength: "2 - 4 weeks",
+				currency: "Israeli Shekel (both)",
+				season: "April - November",
+				dailyBudget: "$100usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/middle-east/israel-and-occupied-palestinian-territories",
+				advice: Advisory.Level4,
+			},
+			music: [
+				{
+					title: "Bad Liar",
+					link: "https://music.youtube.com/watch?v=I203G1sMGDg&si=C9OVxBqSS-ey6T5l",
+				},
+				{
+					title: "5 Foot 9",
+					link: "https://music.youtube.com/watch?v=K0y8z5jIm3U&si=GmWovi4l1HwiRngf",
+				},
+				{
+					title: "Chemical",
+					link: "https://music.youtube.com/watch?v=cEGG77nmrTI&si=O6YFTXRcS8ZwVoux",
+				},
+				{
+					title: "Purple",
+					link: "https://music.youtube.com/watch?v=KQR03L13SkI&si=RMj3p-kBL51BPmju",
+				},
+			],
+			extraLinks: [
+				{
+					title: "Countries You Cannot Visit After Israel",
+					link: "https://www.quora.com/What-countries-can-you-not-visit-after-going-to-Israel",
+				},
+			],
+		},
 	},
 	{
 		title: "Philippines & Brunei",
@@ -1133,19 +1293,19 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 
 export const rankedTravelVideos = [
 	//S Tier
-	["syria", "greece", "japan", "israel-and-palestine"],
+	["syria", "greece", "japan"],
 	//A Tier
 	[
-		"turkey",
+		"israel-and-palestine",
 		"armenia-georgia-azerbaijan",
 		"iran",
 		"jordan",
 		"india",
-		"thailand-2",
 	],
 	//B Tier
 	[
 		"bangladesh",
+		"turkey",
 		"philippines-and-brunei",
 		"timor-leste",
 		"south-korea",
