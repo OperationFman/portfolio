@@ -653,44 +653,31 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [10],
 				food: [10],
-				safety: [5],
+				safety: [6],
 				accessibility: [7],
 				video: [10],
 			},
 			finalScore: 10,
 			summary: [
 				"Experiencing Syria during the Assad regime was an actual unforgettable experience, the week I spent in Syria might be the most impactful week of my life.",
-				"Each and every aspect of this tragic yet resilient country stands out. THe people still have so much pride and hope, everyone is wonderful, the history immense and the food to die for.",
-				"Damascus has gone down as my favorite city, its so rich and vibrant. Homs and Hama while devastated from decades of war still have so much to offer. Aleppo alone could be traveled for weeks without learning everything. THis truly is a one of a kind nation.",
-			],
-			challenges: [
-				"Avoid interfering Russian and Iranian soldiers. Both (At the time I visited, pre-Assad fall) regularly bullied locals and it can be tough to watch helplessly.",
+				"Each and every aspect of this tragic yet resilient country stands out. The people still have so much pride and hope, everyone is wonderful, the history immense and the food to die for.",
+				"Damascus has gone down as my favorite city, its so rich and vibrant. Homs and Hama while devastated from decades of war still have so much to offer. Aleppo and Palmyra with it's recent ISIS occupation could alone could be traveled for weeks without learning everything that's just happened.",
 			],
 			dos: ["Eat and drink everything."],
 			donts: [
-				"The Kim Jong-Ill park while fascinating is literally just a patch of grass.",
+				"The Kim Jong-il park while fascinating is literally just a patch of grass.",
 			],
 			advice: {
 				travelLength: "3 - 5 weeks",
 				currency: "Syrian pound SYP",
 				season: "March - May",
-				dailyBudget: "$5usd (Not joking)",
+				dailyBudget: "$5 - 10usd",
 			},
 			travelAdvisory: {
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/syria",
 				advice: Advisory.Level4,
 			},
 			music: [
-				{
-					title: "",
-					link: "",
-				},
-				{
-					title: "",
-					link: "",
-				},
-			],
-			extraLinks: [
 				{
 					title: "Viva La Vida - Coldplay",
 					link: "https://music.youtube.com/watch?v=3a-q7vPa-UU&si=Hf-IwDnXrKqdy_pv",
@@ -742,7 +729,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			summary: [
 				"An island nation divided, where ancient ruins meet sun-drenched coastlines with everything you love and hate from it's nearest neighbors.",
 				"The Greek Cypriot and Turkish Cypriot communities of Cyprus are a living testament to the island's complex recent history where the UN buffer lines creates an incredibly strange atmosphere yet life goes on in paradise.",
-				"I explored a few cities and mostly 'lied it up', the south feels much more like a Greek island and the north more like a forgotten wasteland from Fallout.",
+				"I explored a few cities and mostly 'lived it up' aboard cruises and wind surfing, the south feels much more like a Greek island and the north more like a forgotten wasteland from Fallout with countless ghost towns covered in bullet holes.",
 			],
 			challenges: [
 				"Each side of Cyprus uses different currencies, the south uses Euros and the north the Turkish Lira.",
@@ -794,18 +781,18 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			finalScore: 8,
 			summary: [
 				"We witnessed firsthand the tangible realities of the Israeli-Palestinian conflict, including the separation barrier and its impact on daily life.",
-				"Israel & Palestine have diverse religious and political narratives shaping the region's complex recent history, understanding the inherent risks and challenges alongside the rich cultural heritage",
+				"Israel & Palestine have diverse religious and political narratives shaping the region's complex recent history. growing up a christian, it was fascinating to see the real locations from the bible and even more so, that they always had a gift shop next door.",
 				"It's a surreal experience to travel this region, with so many concerning and surprising facts it can be heart breaking to visit but something I believe everyone should try at-least once.",
 			],
 			challenges: [
-				"Israeli border security is fierce. Many travelers are fine, but if you're solo it's likely you will be searched and questioned for hours.",
+				"Israeli border security is fierce. Many travelers are fine, but if you're solo it's likely you will be searched and questioned for hours. Leave extra time.",
 			],
 			dos: [
 				"Cross into Bethlehem on foot and get a day trip with any taxi drivers. First and foremost they want you to understand their circumstances.",
 			],
 			donts: [
-				"Cross the Jordanian border if you plan to visit a long list of other arab countries. Even though Israel does not stamp your passport, the land border stamp will indicate you visited Israel - In Lebanon for example, this would get you arrested.",
-				"Rent a car and drive it into Palestine. THe Israeli numberplate will get your car targeted.",
+				"Cross the Jordanian border if you plan to visit a long list of other arab countries. Even though Israel does not stamp your passport, the Jordanian land border stamp will indicate you visited Israel - In Lebanon for example, this would get you arrested.",
+				"Rent a car in israel then drive it into Palestine. The Israeli numberplate will get your car targeted.",
 			],
 			advice: {
 				travelLength: "2 - 4 weeks",
@@ -819,19 +806,19 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			},
 			music: [
 				{
-					title: "Bad Liar",
+					title: "Bad Liar - Imagine Dragons",
 					link: "https://music.youtube.com/watch?v=I203G1sMGDg&si=C9OVxBqSS-ey6T5l",
 				},
 				{
-					title: "5 Foot 9",
+					title: "5 Foot 9 - Tyler Hubbard",
 					link: "https://music.youtube.com/watch?v=K0y8z5jIm3U&si=GmWovi4l1HwiRngf",
 				},
 				{
-					title: "Chemical",
+					title: "Chemical - Post Malone",
 					link: "https://music.youtube.com/watch?v=cEGG77nmrTI&si=O6YFTXRcS8ZwVoux",
 				},
 				{
-					title: "Purple",
+					title: "Purple - Hollow Coves",
 					link: "https://music.youtube.com/watch?v=KQR03L13SkI&si=RMj3p-kBL51BPmju",
 				},
 			],
