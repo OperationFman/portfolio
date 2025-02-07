@@ -18,7 +18,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "china",
 		link: "china",
 		backupLink:
-			"https://drive.google.com/file/d/1__yqFNE4pn1qb4HQaL8gVa0NptzwEXYm/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1aeSnxyDpaxbATvXgPq0CGKsVMvzYYCIp?usp=sharing",
 		restricted: false,
 		extras: {
 			countries: ["China"],
@@ -106,7 +106,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "nepal",
 		link: "nepal",
 		backupLink:
-			"https://drive.google.com/file/d/146q73zYYICz71NWoRBZuaVU5cln0VilL/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1o683sYupSphrD9cv-SHIXUILJ_NJNy1W?usp=sharing",
 		restricted: false,
 	},
 	{
@@ -115,7 +115,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "indonesia",
 		link: "indonesia",
 		backupLink:
-			"https://drive.google.com/file/d/161aw78gaH8lEHlF2H-NR6B4LHnPr6rqI/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1xwYqAdgA8zi0T_mJ2ulkJ9iHIRlxRz8n?usp=sharing",
 		restricted: true,
 	},
 	{
@@ -124,7 +124,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "malaysiasingapore",
 		link: "malaysia-singapore",
 		backupLink:
-			"https://drive.google.com/file/d/1slogZWzJDTvzFp7atsPj9UJZuhclFuuR/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1PZPEkze3XtwuziX6-Caz3x5M3C8uxKsU?usp=sharing",
 		restricted: false,
 		extras: {
 			countries: ["Malaysia", "Singapore"],
@@ -195,7 +195,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "newzealand",
 		link: "new-zealand",
 		backupLink:
-			"https://drive.google.com/file/d/1LGP1-IFj6axNRF2Kmw3WAiThw4CevFjs/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1q-5yyEWifu1rdyHtk5leUm_JDaIoEpFO?usp=sharing",
 		restricted: false,
 	},
 	{
@@ -204,7 +204,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "japan",
 		link: "japan",
 		backupLink:
-			"https://drive.google.com/file/d/1HYxY0t2p0f8vABavBfSSj2pGUW05x7Y6/view?usp=sharing",
+			"https://drive.google.com/drive/folders/16ekQGT90_76BCrX_mbiN3JDhnKrMG1-2?usp=sharing",
 		restricted: false,
 	},
 	{
@@ -223,7 +223,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "thailand",
 		link: "thailand",
 		backupLink:
-			"https://drive.google.com/file/d/1ib8sK0NSWDo4NMRhqlJIHqwD6iu7xI6O/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1MMl5yLAUNf9t-nBdIVktxjwQbfo385ZV?usp=sharing",
 		restricted: false,
 	},
 	{
@@ -232,7 +232,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "southkorea",
 		link: "south-korea",
 		backupLink:
-			"https://drive.google.com/file/d/1G2emPhFNvHV9JPtF_hyl0WbOzKLkTXOk/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1-qXArc3DWxqAKXxQfIAWwwtha53Qcn0O?usp=sharing",
 		restricted: true,
 	},
 	{
@@ -241,7 +241,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "uae",
 		link: "uae",
 		backupLink:
-			"https://drive.google.com/file/d/1_Xv-xTZ054zoTKmPaPVmQgc49qH-Exfv/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1u6-BtdvLQ8E-azD-iOX8b7aM1ngCuiMH?usp=sharing",
 		restricted: true,
 	},
 	{
@@ -250,7 +250,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "fiji",
 		link: "fiji",
 		backupLink:
-			"https://drive.google.com/file/d/1tNjLg89P1bEa-q9rQu0_cCDQqCk7t9me/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1lDzBYAhye2L7cbIM8hsbkKXxNSsyeDEH?usp=sharing",
 		restricted: true,
 	},
 	{
@@ -259,7 +259,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "cambodialaosvietnam",
 		link: "cambodia-laos-vietnam",
 		backupLink:
-			"https://drive.google.com/file/d/1aurSN-frLRNGPnGkr7GXN3yz87dMCvh6/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1hSYkYe8KtrLiVZ2CoGtXjDogpRE4gakY?usp=sharing",
 		restricted: true,
 		reelLinks: ["https://www.instagram.com/reel/Cy-7c3yLFuE/"],
 		instagramLinks: [
@@ -279,7 +279,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "taiwanhongkongmacau",
 		link: "taiwan-hong-kong-macau",
 		backupLink:
-			"https://drive.google.com/file/d/1nriFFLbIwip3znUctlaBzX_eu-MyBe-R/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1hLeWb-uJVG9k68lyrJZ1ambmJcBgAFOA?usp=sharing",
 		restricted: false,
 		reelLinks: ["https://www.instagram.com/reel/CzTjUurL-5y/"],
 		instagramLinks: [
@@ -300,7 +300,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "india",
 		link: "india",
 		backupLink:
-			"https://drive.google.com/file/d/1oIID6SrD0xK-EJ0l0aWIfGi4gdUwq9Ky/view?usp=sharing",
+			"https://drive.google.com/drive/folders/19qhQX8VIgFv8KlzSQCSH8FuyI6S9Nj52?usp=sharing",
 		restricted: false,
 		reelLinks: ["https://www.instagram.com/reel/C2uwpY2LGcS/"],
 		instagramLinks: [
@@ -324,7 +324,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "oman",
 		link: "oman",
 		backupLink:
-			"https://drive.google.com/file/d/1FQux8SdlnL-idrPsbt2uF5OAfJW57CZa/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1mdXFgZrV2yYX82CafSYsISD47124teHg?usp=sharing",
 		restricted: true,
 		reelLinks: ["https://www.instagram.com/reel/C4DkLuqJ3AR/"],
 		instagramLinks: [
@@ -339,7 +339,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "kuwaitiraq",
 		link: "kuwait-iraqi-kurdistan",
 		backupLink:
-			"https://drive.google.com/file/d/1iEokNO7kkZfvBYcrbPfTI3Fag_mPc-3b/view?usp=sharing",
+			"https://drive.google.com/drive/folders/13wel5RbzFYBiv4QTA_zgZCtGC07ZrSix?usp=sharing",
 		restricted: true,
 		reelLinks: ["https://www.instagram.com/reel/C5OA27DJ5Tx/"],
 		instagramLinks: [
@@ -356,7 +356,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "jordan",
 		link: "jordan",
 		backupLink:
-			"https://drive.google.com/file/d/1lSx97jlDxrnmCy6zBw649LKZPN7zh0-v/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1S3pw5ULJD0MWQ_Ro-B9EHt1bdvAGy-S_?usp=sharing",
 		restricted: false,
 		reelLinks: ["https://www.instagram.com/reel/C750R5uphGc/"],
 		instagramLinks: [
@@ -374,7 +374,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "saudiarabia",
 		link: "saudi-arabia-bahrain",
 		backupLink:
-			"https://drive.google.com/file/d/1AWtoY6ESbq3ekar6CTzBr9NDTL6x9C2K/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1w-woly9RgbllBBRgjj79PMf2RK-_vKzQ?usp=sharing",
 		restricted: true,
 		reelLinks: ["https://www.instagram.com/reel/C8L4ml_JkSf/"],
 		instagramLinks: [
@@ -443,7 +443,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "iran",
 		link: "iran",
 		backupLink:
-			"https://drive.google.com/file/d/16QMDQAyduOzPYYQLAOPydbsKMXfNIZmD/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1qGisn3RuCffmTbKW4LCR46ZgjYhyneo3?usp=sharing",
 		restricted: false,
 		reelLinks: ["https://www.instagram.com/reel/C89yh6IS-3R/"],
 		instagramLinks: [
@@ -543,7 +543,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "armeniageorgiaazerbaijan",
 		link: "armenia-georgia-azerbaijan",
 		backupLink:
-			"https://drive.google.com/file/d/1z3K7_CSrSVdOv3YAqw0nva_I9IJVbRB6/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1DogVS8g4liONTD51KvcaVu2XfBrnC_3V?usp=sharing",
 		restricted: false,
 		reelLinks: ["https://www.instagram.com/reel/C-w6PVhib9V/?hl=en"],
 		instagramLinks: [
@@ -635,7 +635,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "greece",
 		link: "greece",
 		backupLink:
-			"https://drive.google.com/file/d/1MeR97lcIr9pICYWFPE2JrSuLcSnFD88z/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1fESHg-DLWm-QOZhkmBkepQAUaapIG_ku?usp=sharing",
 		restricted: false,
 		reelLinks: ["https://www.instagram.com/reel/C_PcOfOCX4E/?hl=en"],
 		instagramLinks: [
@@ -722,7 +722,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CviNxqQrVSL/?hl=en",
 		],
 		backupLink:
-			"https://drive.google.com/file/d/1z3NA6uaGaobUKxNo6YB3QSyt5HI2IbwJ/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1XCmnocL818puHIMOQHp2jxK0YomOn8Nd?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/C_cuUwoigGb/?hl=en"],
 		extras: {
 			countries: ["Turkey"],
@@ -792,7 +792,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Cv0gI5yLV3q/?hl=en",
 		],
 		backupLink:
-			"https://drive.google.com/file/d/1sws85Id_mvwW912qfsNSxLvd2099TZwp/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1OToOEBqXkFSJTHRliyt8B2o-LqUKgKqO?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/C_lNBtKCH0H/?hl=en"],
 		extras: {
 			countries: ["Lebanon"],
@@ -855,7 +855,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CwNnPkVMIUc/?hl=en",
 		],
 		backupLink:
-			"https://drive.google.com/file/d/1KSppj46GrOOuXNs2mB_uVOZTWlwzZAc5/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1SvQ3x2YGW2ibSM3t-kx_gRMiAYf_cPsi?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/DAGBpdVCaEJ/?hl=en"],
 		extras: {
 			countries: ["Syria"],
@@ -920,7 +920,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/reel/DAIpVj3iUJI/?igsh=MXY5cjUzZHF3bmFvcA==",
 		],
 		backupLink:
-			"https://drive.google.com/file/d/1dusLihNSLBlF4pNG6yn16Dcx7R2yivPK/view?usp=drivesdk",
+			"https://drive.google.com/drive/folders/1U8dmbaKFVANjIbDswF4bD-JIwKgraJw3?usp=sharing",
 		instagramLinks: [
 			"https://www.instagram.com/p/CwTBSZ8rP6c/?hl=en",
 			"https://www.instagram.com/p/CwVuLVvrgWP/?hl=en",
@@ -976,7 +976,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Cwzr9nZLCDu/?hl=en",
 		],
 		backupLink:
-			"https://drive.google.com/file/d/1PmnN0FXR1uafWe40V07R6D7PK2NynlpM/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1_CFYkAQu2S0a26A0V6vibE6-t94rZSOW?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/DASgqv-CzW-/?hl=en"],
 		extras: {
 			countries: ["Israel", "Palestine"],
@@ -1052,7 +1052,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		],
 		reelLinks: ["https://www.instagram.com/reel/DAWBdOpC00S/?hl=en"],
 		backupLink:
-			"https://drive.google.com/file/d/1-lC6yL-FcgwMUpZXmrzMRVOV4EbLDjVi/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1B2LnxZODyNkqD3TKdZg9PBc0qe0fvXbA?usp=sharing",
 		extras: {
 			countries: ["Philippines", "Brunei"],
 			scorecard: {
@@ -1095,6 +1095,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=x-97hc4kIlE&si=xRSvnyP26t4ClH6V",
 				},
 			],
+			extraVideos: [
+				{
+					title: "Original Philippines 2020 Travel Video",
+					hostedLink: "philippines",
+				},
+			],
 		},
 	},
 	{
@@ -1110,7 +1116,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		],
 		reelLinks: ["https://www.instagram.com/reel/DAkVgM9i5tf/?hl=en"],
 		backupLink:
-			"https://drive.google.com/file/d/1puWBm8F3ejCGtT5oOsqTXunjZwA_5bto/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1maUl4djBYlTRbgBo7WrUQYfB8Xdc0mrT?usp=sharing",
 		extras: {
 			countries: ["Timor-Leste"],
 			scorecard: {
@@ -1184,7 +1190,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		],
 		reelLinks: ["https://www.instagram.com/reel/DDwCngSJmuq/?hl=en"],
 		backupLink:
-			"https://drive.google.com/file/d/11pxbcoNcNhkHh-CEFpwS7H20_-NPqNzT/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1_D1GjrhBz6rtuw8-4xNWFXlxmUi5axpZ?usp=sharing",
 		extras: {
 			countries: ["Bangladesh"],
 			scorecard: {
@@ -1261,7 +1267,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		],
 		reelLinks: ["https://www.instagram.com/reel/DEAUDrrJPIk/?hl=en"],
 		backupLink:
-			"https://drive.google.com/file/d/1IYr1i33XaUeldP6BQiDMDC6XIZEpzbbM/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1p724j3uqLAlkelWtiekMf1LUhbpzw-Jb?usp=sharing",
 		extras: {
 			countries: ["East India", "Bhutan"],
 			scorecard: {
@@ -1333,7 +1339,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/DFE9V62J79b/?hl=en&img_index=1",
 		],
 		backupLink:
-			"https://drive.google.com/file/d/1NDLcgySrd3NrAnbx3rp40wxyMCF13N3h/view?usp=sharing",
+			"https://drive.google.com/drive/folders/1z5GgatabgWeQEKrbZkZZDSOCS_xuEV6r?usp=sharing",
 		extras: {
 			countries: ["Maldives", "Sri Lanka"],
 			scorecard: {
