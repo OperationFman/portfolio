@@ -382,6 +382,60 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CtMUbqlprRL/?img_index=1",
 			"https://www.instagram.com/p/CtRlrampitt/?img_index=1",
 		],
+		extras: {
+			countries: ["Saudi Arabia", "Bahrain"],
+			scorecard: {
+				affordability: [1, 2],
+				food: [1, 2],
+				safety: [4, 6],
+				accessibility: [1, 2],
+				video: [5, 5],
+			},
+			finalScore: 1,
+			summary: [
+				"Saudi Arabia, what a mess. I've never really disliked a country let alone hated one but Arabia somehow managed to be one of the worst weeks of travel in my life.",
+				"From the local men who openly beat their wives to having a rock thrown at my head for simply whistling while I walked down the highway (Apparently I was noise polluting the 8 lane freeway). I've never been to a place so hostile and closed off.",
+				"I'm still not sure if I liked Bahrain or not, but compared to Saudi it was like paradise. Here at least you're allowed to drink, theirs fun things to do and people actually follow through when they say they'll do something. It's a cute little petro-state where fun can be found, compared to it's neighbors.",
+			],
+			challenges: ["Everything in Saudi is a challenge"],
+			donts: [
+				"Book anything, they will just cancel 10 minutes before it's supposed to happen.",
+				"Visit any tourist attractions, they'll most likely just be closed even if it's a lone rock in a desert. Most sites aren't really real and haven't been built yet.",
+				"Be adventurous, someone will tell you off. You're not even allowed to walk anti-clockwise around a building.",
+				"Expect to get around via taxi, they will just drop you wherever they want if they even come to pick you up in the first place.",
+				"Rely on your hotels even being real. Most exist just to route you to a much more expensive one that's the only choice in the area, ie Al Ula",
+				"Rely on information from Google Maps, most data like opening hours/days or links are just broken or lies.",
+				"Eat the food, it's disgusting unflavored slop.",
+				"Take the trains, the windows are completely frosted so you're basically in a submarine",
+				"Hike in the desert, it's super easy to get lost even if you can read the stars.",
+				"Even go. The Visa alone was $250.",
+			],
+			advice: {
+				travelLength: "Saudi Arabia: 0 days / Bahrain: 2 days",
+				currency: "Saudi Riyal SAR / Bahraini Dinar BHD",
+				season: "November - February",
+				dailyBudget: "$200usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/Middle%20East",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "People I Don't Like - UPSAHL",
+					link: "https://music.youtube.com/watch?v=EGne6NU1rCc&si=VmokutUeeFlEXM2u",
+				},
+				{
+					title: "Don't Stare At the Sun - Bad Lip Reading",
+					link: "https://music.youtube.com/watch?v=kJK-KGbAk_Q&si=w24psaLAakyHXCsC",
+				},
+
+				{
+					title: "The Fox - Ylvis",
+					link: "https://music.youtube.com/watch?v=W20gcM6_UtQ&si=sAzxoeEzviVOOjat",
+				},
+			],
+		},
 	},
 	{
 		title: "Iran",
@@ -595,6 +649,61 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Cu1rOL5M2B5/?hl=en",
 			"https://www.instagram.com/p/Cu5JTCbrApq/?hl=en",
 		],
+		extras: {
+			countries: ["Greece"],
+			scorecard: {
+				affordability: [4],
+				food: [10],
+				safety: [10],
+				accessibility: [9],
+				video: [10],
+			},
+			finalScore: 9,
+			summary: [
+				"One of the most relaxed and gorgeous regions in the world. From the immense back alleys of Athens to the blue and white cliffs of the many islands, Greece is the perfect place to have fun, kick back and just enjoy life.",
+				"While not cheap or easy I managed to squeeze in a wonderful trip where I met some of the loveliest travelers and went on countless little adventures.",
+				"Everyone has an idea of what greece will be, somehow it exceeds those expectations and shows you new things you never knew you wanted.",
+			],
+			dos: [
+				"Checkout Crete. Raki here is untaxed and therefore cheaper than water, they literally give it away with every meal.",
+			],
+			donts: [
+				"Spend too much time in Santorini. You can do most of it in a day but it's extremely expensive and theirs better places",
+				"Never eat at a restaurant where theirs someone out the front trying to lure you in. If it's good they don't need to do that",
+			],
+			advice: {
+				travelLength: "1 - 3 months",
+				currency: "European Euro EUR",
+				season: "April - June",
+				dailyBudget: "",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/europe/greece",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "Greased Lightnin' - John Travolta & Jeff Conaway",
+					link: "https://music.youtube.com/watch?v=Y1ChbwFlyuE&si=v2IzEFOWG0Dg4JPy",
+				},
+				{
+					title: "Yakety Yak - The Coasters",
+					link: "https://music.youtube.com/watch?v=zokNDFo1z7I&si=8BdR2fc6OHwrl2G_",
+				},
+				{
+					title: "Johnny B Goode - Chuck Berry",
+					link: "https://music.youtube.com/watch?v=-k2q31pWZzg&si=umA9UzsxnbI_snaK",
+				},
+				{
+					title: "Mamma Mia - ABBA",
+					link: "https://music.youtube.com/watch?v=KMViJKmAV4M&si=qN_ll38hcDWR8NK6",
+				},
+				{
+					title: "Crocodile Rock - Elton John",
+					link: "https://music.youtube.com/watch?v=75r0nQu-hMs&si=sNEeLlhpJ_K0CQJ3",
+				},
+			],
+		},
 	},
 	{
 		title: "Turkey",
@@ -615,6 +724,60 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1z3NA6uaGaobUKxNo6YB3QSyt5HI2IbwJ/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/C_cuUwoigGb/?hl=en"],
+		extras: {
+			countries: ["Turkey"],
+			scorecard: {
+				affordability: [6],
+				food: [4],
+				safety: [6],
+				accessibility: [7],
+				video: [5],
+			},
+			finalScore: 5,
+			summary: [
+				"The bridge between worlds, Türkiye. Meeting and mixing Europe, the Middle East and the Caucuses.",
+				"Honestly I didn't spend enough time in Turkey and what I did do and see was a bit 'touristy'. Istanbul is one of those cities you could spend weeks alone, from it's 'Europe side' and it's 'Asia Side' you can experience a great mesh of foods, lifestyles and fun experiences.",
+			],
+			challenges: [
+				"Taxi drivers in Turkey are something else. Never trust the driver, if you know they're going the wrong way don't be afraid to jump out and if they decide to double the agreed-upon price after you've arrived, expect the confrontation to become physical.",
+			],
+			dos: [
+				"Find accommodation on the 'Asia' side of Istanbul, the district of Kadikoy. You can still see all the famous things of the 'Europe' side but save so much on money and the nightlife is best on the Asia anyway.",
+				"Negotiate locally for the hot air balloons in Cappadocia. You can secure a half price discount the night before if theirs been a string of good weather days",
+			],
+			advice: {
+				travelLength: "1 month",
+				currency: "Turkish Lira TRY",
+				season: "March - May",
+				dailyBudget: "$50 - 150usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/europe/turkiye",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Yarina Kalir, Yanina Kalmaz - Ugur Isilak",
+					link: "https://music.youtube.com/watch?v=Q9eyUK5uCDs&si=KKal9phcleMA82dj",
+				},
+				{
+					title: "Bangir Bangir - Gulsen",
+					link: "https://music.youtube.com/watch?v=hXJGmGZMV84&si=Ho8pm-5xjyAv0jC2",
+				},
+				{
+					title: "It's a Long Way To Tipperary - Nathan Lay",
+					link: "https://music.youtube.com/watch?v=gs5IH76mwCM&si=Uak4Azo-CJZMBrYq",
+				},
+				{
+					title: "Won't Let This Moment Pass Us By - Benji Jackson",
+					link: "https://music.youtube.com/watch?v=YUdx9FgId0A&si=Od7XrgsOnVP-39Dk",
+				},
+				{
+					title: "Into a Fantasy - Alexander Rybak",
+					link: "https://music.youtube.com/watch?v=tU7C8od6eSk&si=Do4KW0VTc57Dcn7P",
+				},
+			],
+		},
 	},
 	{
 		title: "Lebanon",
@@ -631,6 +794,52 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/file/d/1sws85Id_mvwW912qfsNSxLvd2099TZwp/view?usp=sharing",
 		reelLinks: ["https://www.instagram.com/reel/C_lNBtKCH0H/?hl=en"],
+		extras: {
+			countries: ["Lebanon"],
+			scorecard: {
+				affordability: [8],
+				food: [9],
+				safety: [5],
+				accessibility: [5],
+				video: [2],
+			},
+			finalScore: 3,
+			summary: [
+				"Heading through to Syria I had to checkout Lebanon, sometimes nicknamed 'The Switzerland of the Middle East' for it's previous reputation to discreetly store one's wealth.",
+				"Sadly at time of filming Lebanon has fallen far. Infested with Hezbollah, an Iran-backed terror organization that sudo-controls the government without any of the benefits a functioning government would provide. They destabilize the whole nation and ensure it's stuck in constant conflict internally and externally.",
+				"Even so, the Lebanese press on as some of the kindest and most hospital folks you'll ever meet. Kind, open-minded and fantastic cooks.",
+			],
+			challenges: [
+				"Hezbollah forces are dotted around the country and in Beirut. Generally they'll leave you alone but you'll find that their presence gets in the way of whatever you're trying to do.",
+			],
+			dos: [
+				"Go clubbing. Lebanon has one of the most fun and exciting night life's out there, everyone interacts and has fun together.",
+			],
+			donts: [
+				"Use the ATMs. The official conversion rate of Lebanese pounds is atrocious. Instead bring cash and exchange with stores directly at the black market rate.",
+				"Discuss sensitive topics if you're unfamiliar with the person. Lebanon is outrageously diverse in terms of religion and nationality. There are floods of Syrian refugees and struggling folks so you never know who's been affected by what.",
+			],
+			advice: {
+				travelLength: "1 - 2 weeks",
+				currency: "Lebanese Pound LPB",
+				season: "April - November",
+				dailyBudget: "$10 - 15usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/middle-east/lebanon",
+				advice: Advisory.Level4,
+			},
+			music: [
+				{
+					title: "New Perspective - Noah Kahan",
+					link: "https://music.youtube.com/watch?v=9u3OuJTS4hc&si=oqnbNVCkUC85tH9y",
+				},
+				{
+					title: "Shotgun - George Ezra",
+					link: "https://music.youtube.com/watch?v=nS7Yoj8qOwU&si=qG8EhiRjc3NxUjRO",
+				},
+			],
+		},
 	},
 	{
 		title: "Syria",
