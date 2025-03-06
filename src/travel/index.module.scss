@@ -149,6 +149,14 @@
 	display: flex;
 	flex-direction: row;
 	position: relative;
+	border-top: 1px solid $brightGrey;
+	border-radius: 21x;
+	margin: 10px 0 0 -10px;
+	padding-top: 10px;
+
+	@include breakpoint(medium) {
+		margin: 10px 0 0 0;
+	}
 }
 
 .finalScoreDigit {
@@ -156,35 +164,39 @@
 	height: 40px;
 	white-space: nowrap;
 	color: $mediumGrey;
-	padding: 10px 0 0 25px;
+	padding: 11px 0 0 25px;
 	margin: 0;
+	left: 125px;
 
 	@include breakpoint(medium) {
 		padding: 0 0 0 20px;
-		margin-top: 15px;
+		margin-top: 16px;
 	}
 }
 
 .finalScore {
-	width: 61.5%;
+	width: 59.1%;
 	height: 24px;
 	margin-top: 10px;
 
 	@include breakpoint(medium) {
-		margin: 15px 0 0 5px;
+		margin: 15px 0 0 0;
 	}
 }
 
 .scoreTitle {
 	height: 40px;
-	padding: 0 0 0 20px;
+	padding: 0 0 0 0;
 	margin: 0;
 	white-space: nowrap;
 	cursor: pointer;
+
+	width: 120px;
 }
 
 .finalScoreTitle {
 	padding: 10px 0 0 0;
+	margin-left: 10px;
 
 	@include breakpoint(medium) {
 		padding: 14px 0 0 5px;

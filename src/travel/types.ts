@@ -24,6 +24,7 @@ export type Extras = {
 	scorecard?: {
 		affordability: number[];
 		food: number[];
+		hospitality: number[];
 		safety: number[];
 		accessibility: number[];
 		video: number[];

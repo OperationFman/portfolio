@@ -188,6 +188,11 @@ const VideoContent = ({
 											<ProgressBar title={title} scores={scores} key={title} />
 										))}
 										<div className={styles.finalScoreContainer}>
+											<h4
+												className={`${styles.scoreTitle} ${styles.finalScoreTitle}`}>
+												Final Score
+											</h4>
+
 											<LinearProgress
 												variant='determinate'
 												value={
@@ -197,9 +202,9 @@ const VideoContent = ({
 												sx={{
 													"& .MuiLinearProgress-bar": {
 														background:
-															"linear-gradient(to right,  #f7df07,rgb(255, 232, 59))",
+															"linear-gradient(to right,  #f7df07,rgb(255, 215, 59))",
 														borderRadius: "20px",
-														borderTop: "0.5px solid white",
+														borderTop: "1.9px solid white",
 													},
 												}}
 											/>
@@ -210,11 +215,6 @@ const VideoContent = ({
 													paddingLeft: `${(extras.finalScore * 5) / 2}%`,
 												}}>
 												{extras.finalScore} / 10
-											</h4>
-
-											<h4
-												className={`${styles.scoreTitle} ${styles.finalScoreTitle}`}>
-												Final Score
 											</h4>
 										</div>
 									</div>
@@ -382,7 +382,7 @@ const VideoContent = ({
 						</>
 					)}
 
-					{(instagramLinks || reelLinks) && (
+					{/* {(instagramLinks || reelLinks) && (
 						<div className={styles.socialContainer}>
 							<h2>Instagram</h2>
 							{isLoading && (
@@ -424,7 +424,7 @@ const VideoContent = ({
 									})}
 							</Grid>
 						</div>
-					)}
+					)} */}
 
 					<div className={styles.upNextContainer}>
 						{upNextMetaData.length >= 1 ? (

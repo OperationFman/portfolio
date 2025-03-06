@@ -25,6 +25,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [9],
 				food: [2],
+				hospitality: [5],
 				safety: [8],
 				accessibility: [3],
 				video: [1],
@@ -131,6 +132,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [7, 4],
 				food: [4, 7],
+				hospitality: [5, 5],
 				safety: [7, 10],
 				accessibility: [7, 10],
 				video: [3, 3],
@@ -387,6 +389,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [1, 2],
 				food: [1, 2],
+				hospitality: [1, 4],
 				safety: [4, 6],
 				accessibility: [1, 2],
 				video: [5, 5],
@@ -460,6 +463,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [10],
 				food: [6],
+				hospitality: [9],
 				safety: [3],
 				accessibility: [5],
 				video: [9],
@@ -565,6 +569,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [8, 8, 4],
 				food: [6, 10, 3],
+				hospitality: [8, 6, 6],
 				safety: [7, 7, 7],
 				accessibility: [6, 6, 3],
 				video: [6, 8, 7],
@@ -654,6 +659,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [4],
 				food: [10],
+				hospitality: [6],
 				safety: [10],
 				accessibility: [9],
 				video: [10],
@@ -729,6 +735,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [6],
 				food: [4],
+				hospitality: [5],
 				safety: [6],
 				accessibility: [7],
 				video: [5],
@@ -799,6 +806,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [8],
 				food: [9],
+				hospitality: [6],
 				safety: [5],
 				accessibility: [5],
 				video: [2],
@@ -862,6 +870,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [10],
 				food: [10],
+				hospitality: [8],
 				safety: [6],
 				accessibility: [7],
 				video: [10],
@@ -930,6 +939,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [5],
 				food: [8],
+				hospitality: [7],
 				safety: [8],
 				accessibility: [6],
 				video: [3],
@@ -983,6 +993,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [5, 5],
 				food: [8, 3],
+				hospitality: [3, 6],
 				safety: [7, 6],
 				accessibility: [8, 3],
 				video: [9, 9],
@@ -1058,6 +1069,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [7, 4],
 				food: [1, 2],
+				hospitality: [6, 4],
 				safety: [7, 7],
 				accessibility: [6, 6],
 				video: [7, 4],
@@ -1122,6 +1134,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [6],
 				food: [4],
+				hospitality: [7],
 				safety: [7],
 				accessibility: [3],
 				video: [7],
@@ -1196,6 +1209,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [9],
 				food: [1],
+				hospitality: [8],
 				safety: [2],
 				accessibility: [1],
 				video: [10],
@@ -1273,6 +1287,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [9, 1],
 				food: [1, 2],
+				hospitality: [6, 4],
 				safety: [5, 10],
 				accessibility: [6, 1],
 				video: [5, 8],
@@ -1345,6 +1360,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			scorecard: {
 				affordability: [4, 8],
 				food: [1, 4],
+				hospitality: [5, 6],
 				safety: [7, 7],
 				accessibility: [2, 8],
 				video: [5, 4],
@@ -1444,6 +1460,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	// 		scorecard: {
 	// 			affordability: [],
 	// 			food: [],
+	//			hospitality: [],
 	// 			safety: [],
 	// 			accessibility: [],
 	// 			video: [],

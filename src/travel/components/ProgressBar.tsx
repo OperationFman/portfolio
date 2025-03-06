@@ -22,6 +22,11 @@ export const ProgressBar = ({
 			title: "Food",
 			tooltip: "How good is the cuisine. Higher means better",
 		},
+		hospitality: {
+			title: "Hospitality",
+			tooltip:
+				"How kind and engaging the locals are and how easy it is to meet them. Low means locals often scam, manipulate or abuse, high score means they're welcoming and helpful",
+		},
 		safety: { title: "Safety", tooltip: "How safe as a solo traveler" },
 		accessibility: {
 			title: "Accessibility",
@@ -48,6 +53,8 @@ export const ProgressBar = ({
 				followCursor
 				key={`score item ${title}`}>
 				<div className={styles.scoreItemContainer}>
+					<h4 className={styles.scoreTitle}> {scoreKeyData[title].title}</h4>
+
 					<div className={styles.scoreBarsWrapper}>
 						{scores.map((countryScore, countryIndex) => (
 							<LinearProgress
@@ -66,8 +73,6 @@ export const ProgressBar = ({
 							/>
 						))}
 					</div>
-
-					<h4 className={styles.scoreTitle}> {scoreKeyData[title].title}</h4>
 				</div>
 			</Tooltip>
 		</>
