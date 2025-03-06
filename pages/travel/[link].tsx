@@ -187,6 +187,7 @@ const VideoContent = ({
 										{scoreCardArray.map(([title, scores]) => (
 											<ProgressBar title={title} scores={scores} key={title} />
 										))}
+										<div className={styles.finalScoreDiv} />
 										<div className={styles.finalScoreContainer}>
 											<h4
 												className={`${styles.scoreTitle} ${styles.finalScoreTitle}`}>

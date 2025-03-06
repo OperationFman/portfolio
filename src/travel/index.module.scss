@@ -145,14 +145,21 @@
 	box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 15px;
 }
 
+.finalScoreDiv {
+	margin-top: 10px;
+	border-top: 1px solid $brightGrey;
+
+	@include breakpoint(medium) {
+		width: 83%;
+	}
+}
+
 .finalScoreContainer {
 	display: flex;
 	flex-direction: row;
 	position: relative;
-	border-top: 1px solid $brightGrey;
-	border-radius: 21x;
 	margin: 10px 0 0 -10px;
-	padding-top: 10px;
+	width: 102%;
 
 	@include breakpoint(medium) {
 		margin: 10px 0 0 0;
@@ -166,7 +173,7 @@
 	color: $mediumGrey;
 	padding: 11px 0 0 25px;
 	margin: 0;
-	left: 125px;
+	left: 120px;
 
 	@include breakpoint(medium) {
 		padding: 0 0 0 20px;
