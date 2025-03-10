@@ -130,7 +130,7 @@ const VideoContent = ({
 							<h5
 								onClick={() => window.open(backupLink, "_blank")}
 								className={styles.backupLink}>
-								Download
+								Downloads
 							</h5>
 						</>
 					) : (
