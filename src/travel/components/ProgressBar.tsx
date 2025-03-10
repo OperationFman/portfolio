@@ -59,7 +59,7 @@ export const ProgressBar = ({
 						{scores.map((countryScore, countryIndex) => (
 							<LinearProgress
 								variant='determinate'
-								value={countryScore === 1 ? 7 : countryScore * 10}
+								value={countryScore === 1 ? 10 : countryScore * 10}
 								className={styles.scoreBar}
 								sx={{
 									height: `${24 / scores.length}px`,

@@ -1440,13 +1440,14 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/C-mRiXHzW4i/?hl=en",
 		],
 	},
-		{
+	{
 		title: "Pakistan",
 		year: 2025,
 		hostedLink: "pakistan",
 		link: "pakistan",
 		restricted: false,
-		backupLink: "https://drive.google.com/drive/folders/14vEAX2n-dlTqZ59ywDNLbIte6FeClEV4?usp=sharing",
+		backupLink:
+			"https://drive.google.com/drive/folders/14vEAX2n-dlTqZ59ywDNLbIte6FeClEV4?usp=sharing",
 		extras: {
 			countries: ["pakistan"],
 			scorecard: {
@@ -1459,13 +1460,22 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			},
 			finalScore: 7,
 			summary: [
-				"Pakistan is a culturally rich, predominantly Muslim nation with a complex history, currently navigating extremely challenging economic and political headwinds, but somehow manages to break the scale on what hospitality can be", 
-				"We visited the 4 major cities to discover an alarming amount of diversity from the Punjabs to the Pashtuns with endless languages in-between", 
-				"This country is not for new travellers but if you're seeking one of the most rewarding and enriching experiences, you'll probably never find a better option"
+				"Pakistan is a culturally rich, predominantly Muslim nation with a complex history, currently navigating extremely challenging economic and political headwinds, but somehow manages to break the scale on what hospitality can be",
+				"We visited the 4 major cities to discover an alarming amount of diversity from the Punjabs to the Pashtuns with endless languages in-between",
+				"This country is not for new travellers but if you're seeking one of the most rewarding and enriching experiences, you'll probably never find a better option",
 			],
-			challenges: ["Due to security concerns it's common local police forces will try to 'escort' you around. In reality they will nag you to just go back to your hotel so they can play on their phones. It's free but a highly annoying 'service' that you cant opt out of once they start following you", "Getting cash is hard, the only bank tat reliably worke dfor me was Standard Charter", "Islamabad airport has no SIM services and a virtually non existant ATM, so bring cash if arriving here"],
-			dos: [ "Accept people offering you food and services, if you engage them long enough you'll usually find a way to repay them, its okay to say yes", "Make sure to visit in the warmer months, Skardu and Gilget close in the winter and they're arguably the best places to be as a tourist" ],
-			donts: [ "Cross into Afghanistan at the Torkham border. it frequently closes without notice and is hell to navigate, taking hours" ],
+			challenges: [
+				"Due to security concerns it's common local police forces will try to 'escort' you around. In reality they will nag you to just go back to your hotel so they can play on their phones. It's free but a highly annoying 'service' that you cant opt out of once they start following you",
+				"Getting cash is hard, the only bank tat reliably worke dfor me was Standard Charter",
+				"Islamabad airport has no SIM services and a virtually non existant ATM, so bring cash if arriving here",
+			],
+			dos: [
+				"Accept people offering you food and services, if you engage them long enough you'll usually find a way to repay them, its okay to say yes",
+				"Make sure to visit in the warmer months, Skardu and Gilget close in the winter and they're arguably the best places to be as a tourist",
+			],
+			donts: [
+				"Cross into Afghanistan at the Torkham border. it frequently closes without notice and is hell to navigate, taking hours",
+			],
 			advice: {
 				travelLength: "2 - 6 weeks",
 				currency: "Pakistani Rupee Rs",
@@ -1486,7 +1496,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=kU8UxfpQvO0&si=XIBNbOi_bNIKl1q-",
 				},
 				{
-					title: "An End Once And For All 9Extended Cut) - Sam Hulick & Clint Mansell",
+					title:
+						"An End Once And For All 9Extended Cut) - Sam Hulick & Clint Mansell",
 					link: "https://music.youtube.com/watch?v=fcuzMLMZNYc&si=cQ9qBDByK4O9BEqA",
 				},
 				{
@@ -1521,6 +1532,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				},
 			],
 		},
+	},
 	// {
 	// 	title: "",
 	// 	year: ,
