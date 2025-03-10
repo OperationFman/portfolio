@@ -1496,8 +1496,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=kU8UxfpQvO0&si=XIBNbOi_bNIKl1q-",
 				},
 				{
-					title:
-						"An End Once And For All 9Extended Cut) - Sam Hulick & Clint Mansell",
+					title: "An End Once And For All - ME3",
 					link: "https://music.youtube.com/watch?v=fcuzMLMZNYc&si=cQ9qBDByK4O9BEqA",
 				},
 				{
