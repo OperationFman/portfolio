@@ -1479,7 +1479,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			advice: {
 				travelLength: "2 - 6 weeks",
 				currency: "Pakistani Rupee Rs",
-				season: "May - Oct",
+				season: "May - October",
 				dailyBudget: "$10 USD",
 			},
 			travelAdvisory: {
@@ -1532,6 +1532,74 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 		},
 	},
+		{
+			title: "Afghanistan",
+			year: 2025,
+			hostedLink: "afghanistan",
+			link: "afghanistan",
+			restricted: false,
+			backupLink: "https://drive.google.com/drive/folders/13u7UC_NTr1cXDKtclfhxyl-nokepTDjW?usp=sharing",
+			extras: {
+				countries: ["afghanistan"],
+				scorecard: {
+					affordability: [8],
+					food: [3],
+					hospitality: [9],
+					safety: [5],
+					accessibility: [4],
+					video: [7],
+				},
+				finalScore: 6,
+				summary: [ 
+					"Afghanistan is a country caught betweeen worlds. On the one hand, you have the overbearing Taliban with strict sharia law and frankly nonsense rulings.",
+					"On the other, you have the wonderful people just trying to survive in a failing economy, where education is no longer available and their rights are eroded day by day.",
+					"A country is not it's headlines, these people each have a story that will squeeze your heart but also a personality that will put a smile on your face."
+				],
+				challenges: [ 
+					"The Visa for Afghanistan is a huge headache with ever changes requirements. The easiest way currently is at the Peshawar consulate or on arrival at the Tajik border.",
+					"It's illegal for foreigners to take a bus or enter a locals home, the loophole is to hitchike where you can get both experiences.",
+					"Due to sanctions you cannot use any ATM. Bring crisp USD with you, it can be exchanged in almost every town centre easily."
+				],
+				donts: [ 
+					"Bring a drone, they are exteremely illegal to even have on you.", 
+					"Give to beggars. It's always better to give to charities, in Afghanistan begging is one of it's primary industries and harmful to fuel." 
+				],
+				advice: {
+					travelLength: "2 - 3 weeks",
+					currency: "Afghan Afghani AFN",
+					season: "March - November",
+					dailyBudget: "$20 USD",
+				},
+				travelAdvisory: {
+					link: "https://www.smartraveller.gov.au/destinations/asia/afghanistan",
+					advice: Advisory.Level4,
+				},
+				music: [
+					{
+						title: "Back In Black - AC/DC",
+						link: "https://music.youtube.com/watch?v=9vWNauaZAgg&si=PrM-rN2ClGrZyjGH",
+					},
+					{
+						title: "Kiss The Sky - Maren Morris",
+						link: "https://music.youtube.com/watch?v=yDeG2SI5R_8&si=YUSja0aFx8vbjGgg",
+					},
+					{
+						title: "Sweet Disaster - DREAMERS",
+						link: "https://music.youtube.com/watch?v=2k5W-j9eHcY&si=3r7wRLmAa2WuVtUZ",
+					},
+					{
+						title: "That's So True - Gracie Abrams",
+						link: "https://music.youtube.com/watch?v=W_YOJWZIjxo&si=8PtrcNBQiYgZqgVf",
+					},
+				],
+				extraLinks: [
+					{
+						title: "Paris Hailwood - Afghanistan Beyond the Headlines",
+						link: "https://www.instagram.com/reel/DHCCI8-tDIo/?hl=en",
+					},
+				],
+			},
+		},
 	// {
 	// 	title: "",
 	// 	year: ,
@@ -1617,6 +1685,7 @@ export const rankedTravelVideos = [
 	[
 		"bangladesh",
 		"turkey",
+		"pakistan",
 		"philippines-and-brunei",
 		"timor-leste",
 		"south-korea",
@@ -1625,6 +1694,7 @@ export const rankedTravelVideos = [
 	//C Tier
 	[
 		"bhutan-and-east-india",
+		"afghanistan",
 		"cambodia-laos-vietnam",
 		"taiwan-hong-kong-macau",
 		"oman",
