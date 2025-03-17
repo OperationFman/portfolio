@@ -1557,12 +1557,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				],
 				challenges: [ 
 					"The Visa for Afghanistan is a huge headache with ever changes requirements. The easiest way currently is at the Peshawar consulate or on arrival at the Tajik border.",
-					"It's illegal for foreigners to take a bus or enter a locals home, the loophole is to hitchike where you can get both experiences.",
+					"It's illegal for foreigners to take a bus or enter a locals home, the loophole is to hitchike where you can still get close with locals and also where you need to be.",
 					"Due to sanctions you cannot use any ATM. Bring crisp USD with you, it can be exchanged in almost every town centre easily."
+				],
+				dos : [
+					"Wear local clothing. You can easily buy what you need on arrival in Kabul.",
+					"If you're a woman, cover your hair at all times."
 				],
 				donts: [ 
 					"Bring a drone, they are exteremely illegal to even have on you.", 
-					"Give to beggars. It's always better to give to charities, in Afghanistan begging is one of it's primary industries and harmful to fuel." 
+					"If you're a man, take photos of or approach women, especially in the conservative centres like Mazar-i-Sharif and Kandahar. If they approach you it's fine."
 				],
 				advice: {
 					travelLength: "2 - 3 weeks",

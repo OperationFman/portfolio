@@ -203,7 +203,7 @@ const VideoContent = ({
 												sx={{
 													"& .MuiLinearProgress-bar": {
 														background:
-															"linear-gradient(to right,  #f7df07,rgb(255, 215, 59))",
+															"linear-gradient(to right,  #f7df07,rgb(254, 222, 93))",
 														borderRadius: "20px",
 														borderTop: "1.9px solid white",
 													},
