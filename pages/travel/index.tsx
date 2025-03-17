@@ -5,6 +5,10 @@ import { PageContainer } from "../../src/global/PageContainer";
 import { Footer } from "../../utils/footer/Footer";
 import styles from "../../src/travel/index.module.scss";
 import {
+	allByBest,
+	allByDanger,
+	allByFood,
+	allByWorst,
 	allNewestFirst,
 	allOldestFirst,
 } from "../../src/travel/travelDataService";
@@ -23,20 +27,30 @@ const Travel: NextPage = () => {
 	// 	const searchParams = new URLSearchParams(window.location.search);
 	// 	const rankedParam = searchParams.get("ranked");
 	// 	const showAllParam = searchParams.get("ShowAll");
-	// 	setRankedVideos(rankedParam === "true");
-	// 	setVideoReadyOnly(showAllParam !== "true");
+	// 	// setRankedVideos(rankedParam === "true");
 	// }, []);
 
 	useEffect(() => {
-		setTimeout(() => {
-			switch (sortSelection) {
-				case SortBy.Newest:
-					setSortedMetaData(allNewestFirst());
-					break;
-				case SortBy.Oldest:
-					setSortedMetaData(allOldestFirst());
-			}
-		}, 50);
+		switch (sortSelection) {
+			case SortBy.Newest:
+				setSortedMetaData(allNewestFirst());
+				break;
+			case SortBy.Oldest:
+				setSortedMetaData(allOldestFirst());
+				break;
+			case SortBy.Best:
+				setSortedMetaData(allByBest());
+				break;
+			case SortBy.Worst:
+				setSortedMetaData(allByWorst());
+				break;
+			case SortBy.Food:
+				setSortedMetaData(allByFood());
+				break;
+			case SortBy.Danger:
+				setSortedMetaData(allByDanger());
+				break;
+		}
 	}, [sortSelection]);
 
 	// const toggleRanked = () => {
@@ -48,21 +62,6 @@ const Travel: NextPage = () => {
 	// 	} else {
 	// 		searchParams.delete("ShowAll");
 	// 		searchParams.set("ranked", "true");
-	// 	}
-	// 	window.history.replaceState(
-	// 		null,
-	// 		"",
-	// 		`${window.location.pathname}?${searchParams.toString()}`,
-	// 	);
-	// };
-
-	// const toggleShowAll = () => {
-	// 	setVideoReadyOnly(!videoReadyOnly);
-	// 	const searchParams = new URLSearchParams(window.location.search);
-	// 	if (!videoReadyOnly) {
-	// 		searchParams.delete("ShowAll");
-	// 	} else {
-	// 		searchParams.set("ShowAll", "true");
 	// 	}
 	// 	window.history.replaceState(
 	// 		null,

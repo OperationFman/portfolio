@@ -1,3 +1,19 @@
+export enum Advisory {
+	Level1 = "Exercise normal safety precautions",
+	Level2 = "Exercise a high degree of caution",
+	Level3 = "Reconsider your need to travel",
+	Level4 = "Do not travel",
+}
+
+export enum SortBy {
+	Newest = "Newest",
+	Oldest = "Oldest",
+	Best = "Best",
+	Worst = "Worst",
+	Food = "Food",
+	Danger = "Danger",
+}
+
 export type TravelVideoMetaData = {
 	title: string;
 	year: number;
@@ -11,18 +27,6 @@ export type TravelVideoMetaData = {
 	previouslyWatched?: boolean;
 	extras?: Extras;
 };
-
-export enum SortBy {
-	Newest = 'Newest',
-	Oldest = "Oldest"
-}
-
-export enum Advisory {
-	Level1 = "Exercise normal safety precautions",
-	Level2 = "Exercise a high degree of caution",
-	Level3 = "Reconsider your need to travel",
-	Level4 = "Do not travel",
-}
 
 export type Extras = {
 	countries?: string[];

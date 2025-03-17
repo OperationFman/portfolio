@@ -1,7 +1,4 @@
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import FilterListIcon from "@mui/icons-material/FilterList";
-import SortByAlphaIcon from "@mui/icons-material/SortByAlpha";
 import {
 	ClickAwayListener,
 	Grow,
@@ -59,7 +56,7 @@ export const TravelSort = ({
 					onClick={handleToggle}
 					endIcon={<FilterListIcon />}
 					color='brightGrey'>
-					Sort
+					Sort By
 				</Button>
 				<Popper
 					open={open}
@@ -77,14 +74,25 @@ export const TravelSort = ({
 							<Paper>
 								<ClickAwayListener onClickAway={handleClose}>
 									<MenuList autoFocusItem={open} onKeyDown={handleListKeyDown}>
-										{Object.values(SortBy).map((value) => (
-											<MenuItem
-												onClick={() => {
-													setSortMetaDataBy(value);
-												}}
-												key={value}>
-												<ArrowUpwardIcon />ㅤ{value}
-											</MenuItem>
+										{Object.values(SortBy).map((value, index) => (
+											<>
+												<MenuItem
+													onClick={() => {
+														setSortMetaDataBy(value);
+													}}
+													key={value}>
+													{value}
+												</MenuItem>
+												{index % 2 === 1 &&
+													index < Object.keys(SortBy).length - 1 && (
+														<div
+															style={{
+																borderBottom: "1px solid #ccc",
+																margin: "10px",
+															}}
+														/>
+													)}
+											</>
 										))}
 									</MenuList>
 								</ClickAwayListener>

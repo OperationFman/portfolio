@@ -4,7 +4,7 @@ import {
 	insecureRestrictionKey,
 	travelVideoMetaData,
 } from "../datasources/TravelMetaData";
-import { TravelVideoMetaData } from "./types";
+import { Advisory, TravelVideoMetaData } from "./types";
 import { SortOptions } from "../guides/types";
 
 export const enhancedTravelVideoMetaData = () => {
@@ -21,53 +21,6 @@ export const enhancedTravelVideoMetaData = () => {
 	}));
 
 	return enhancedMetaData;
-};
-
-export const getTravelMetaDataIndex = (
-	link: string,
-	metaData: TravelVideoMetaData[] = travelVideoMetaData,
-): number => {
-	return metaData.findIndex((item) => item.link === link);
-};
-
-export const allOldestFirst = () => {
-	const groupedVideos: { [year: number]: TravelVideoMetaData[] } = {};
-
-	for (const video of enhancedTravelVideoMetaData()) {
-		const year = video.year;
-
-		if (!groupedVideos[year]) {
-			groupedVideos[year] = [];
-		}
-		groupedVideos[year].push(video);
-	}
-
-	const result = Object.entries(groupedVideos).map(([year, grouping]) => ({
-		heading: year,
-		grouping: grouping,
-	}));
-
-	return result;
-};
-
-export const allNewestFirst = () => {
-	const groupedVideos: { [year: number]: TravelVideoMetaData[] } = {};
-
-	for (const video of enhancedTravelVideoMetaData()) {
-		const year = video.year;
-
-		if (!groupedVideos[year]) {
-			groupedVideos[year] = [];
-		}
-		groupedVideos[year].push(video);
-	}
-
-	const result = Object.entries(groupedVideos).map(([year, grouping]) => ({
-		heading: year,
-		grouping: grouping,
-	}));
-
-	return result.reverse();
 };
 
 export const hasRestrictionBypass = () => {
@@ -112,4 +65,147 @@ export const addToWatchedVideosStorage = (link: string) => {
 		watchedVideos.push(link);
 		localStorage.setItem("watchedVideos", JSON.stringify(watchedVideos));
 	}
+};
+
+export const getTravelMetaDataIndex = (
+	link: string,
+	metaData: TravelVideoMetaData[] = travelVideoMetaData,
+): number => {
+	return metaData.findIndex((item) => item.link === link);
+};
+
+// ~~~~~~~~~~~~~~~~
+// Premixed Filters:
+// ~~~~~~~~~~~~~~~~
+
+export const allNewestFirst = () => {
+	const groupedVideos: { [year: number]: TravelVideoMetaData[] } = {};
+
+	for (const video of enhancedTravelVideoMetaData()) {
+		const year = video.year;
+
+		if (!groupedVideos[year]) {
+			groupedVideos[year] = [];
+		}
+		groupedVideos[year].push(video);
+	}
+
+	const result = Object.entries(groupedVideos).map(([year, grouping]) => ({
+		heading: year,
+		grouping: grouping,
+	}));
+
+	return result.reverse();
+};
+
+export const allOldestFirst = () => {
+	return allNewestFirst().reverse();
+};
+
+export const allByBest = () => {
+	const tierGroups: { heading: string; grouping: TravelVideoMetaData[] }[] = [];
+
+	const tierRanges: { heading: string; range: number[] }[] = [
+		{ heading: "🥇 S Tier", range: [9, 10] },
+		{ heading: "🥈 A Tier", range: [7, 8] },
+		{ heading: "🥉 B Tier", range: [5, 6] },
+		{ heading: "C Tier", range: [3, 4] },
+		{ heading: "💩 F Tier", range: [1, 2] },
+	];
+
+	for (const tier of tierRanges) {
+		const grouping: TravelVideoMetaData[] = [];
+
+		for (const video of enhancedTravelVideoMetaData()) {
+			const finalScore = video.extras?.finalScore;
+
+			if (finalScore == null) {
+				continue;
+			}
+
+			if (tier.range.includes(finalScore)) {
+				grouping.push(video);
+			}
+		}
+
+		if (grouping.length > 0) {
+			tierGroups.push({ heading: tier.heading, grouping });
+		}
+	}
+
+	return tierGroups;
+};
+
+export const allByWorst = () => {
+	return allByBest().reverse();
+};
+
+export const allByFood = () => {
+	const foodScoreGroups: {
+		heading: string;
+		grouping: TravelVideoMetaData[];
+	}[] = [];
+
+	const foodScoreRanges: { heading: string; range: number[] }[] = [
+		{ heading: "Delicious", range: [9, 10] },
+		{ heading: "Enjoyable", range: [7, 8] },
+		{ heading: "Tasty", range: [5, 6] },
+		{ heading: "Edible", range: [3, 4] },
+		{ heading: "Disgusting", range: [1, 2] },
+	];
+
+	for (const scoreRange of foodScoreRanges) {
+		const grouping: TravelVideoMetaData[] = [];
+
+		for (const video of enhancedTravelVideoMetaData()) {
+			const foodScores = video.extras?.scorecard?.food;
+
+			if (!foodScores || foodScores.length === 0) {
+				continue;
+			}
+
+			const averageFoodScore =
+				foodScores.reduce((sum, score) => sum + score, 0) / foodScores.length;
+
+			if (scoreRange.range.includes(Math.round(averageFoodScore))) {
+				grouping.push(video);
+			}
+		}
+
+		if (grouping.length > 0) {
+			foodScoreGroups.push({ heading: scoreRange.heading, grouping });
+		}
+	}
+
+	return foodScoreGroups;
+};
+
+export const allByDanger = () => {
+	const advisoryGroups: { heading: string; grouping: TravelVideoMetaData[] }[] =
+		[];
+
+	const advisoryLevels: { heading: string; level: Advisory }[] = [
+		{ heading: "Safe", level: Advisory.Level1 },
+		{ heading: "Be Alert", level: Advisory.Level2 },
+		{ heading: "Unsafe", level: Advisory.Level3 },
+		{ heading: "Dangerous", level: Advisory.Level4 },
+	];
+
+	for (const advisory of advisoryLevels) {
+		const grouping: TravelVideoMetaData[] = [];
+
+		for (const video of enhancedTravelVideoMetaData()) {
+			const advice = video.extras?.travelAdvisory?.advice;
+
+			if (advice === advisory.level) {
+				grouping.push(video);
+			}
+		}
+
+		if (grouping.length > 0) {
+			advisoryGroups.push({ heading: advisory.heading, grouping });
+		}
+	}
+
+	return advisoryGroups;
 };
