@@ -209,16 +209,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://drive.google.com/drive/folders/16ekQGT90_76BCrX_mbiN3JDhnKrMG1-2?usp=sharing",
 		restricted: false,
 	},
-	{
-		title: "Australia",
-		year: 2021,
-		hostedLink: "australia",
-		link: "australia",
-		restricted: false,
-		instagramLinks: [
-			"https://www.instagram.com/p/C-ccDuVToNn/?hl=en&img_index=1",
-		],
-	},
+	// {
+	// 	title: "Australia",
+	// 	year: 2021,
+	// 	hostedLink: "australia",
+	// 	link: "australia",
+	// 	restricted: false,
+	// 	instagramLinks: [
+	// 		"https://www.instagram.com/p/C-ccDuVToNn/?hl=en&img_index=1",
+	// 	],
+	// },
 	{
 		title: "Thailand",
 		year: 2022,
@@ -1406,40 +1406,40 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 		},
 	},
-	{
-		title: "Thailand 2",
-		year: 2024,
-		hostedLink: "thailand2",
-		link: "thailand-2",
-		restricted: false,
-		instagramLinks: [
-			"https://www.instagram.com/p/CyasF5_rtLn/?hl=en",
-			"https://www.instagram.com/p/C1eWSFRL36K/?hl=en",
-			"https://www.instagram.com/p/C4U0p9jr5WA/?hl=en",
-			"https://www.instagram.com/p/C4s0esMJkUU/?hl=en",
-			"https://www.instagram.com/p/C5ESnw0S7F4/?hl=en",
-			"https://www.instagram.com/p/C5oEtdJp60R/?hl=en",
-			"https://www.instagram.com/p/C5qQMkhJXJY/?hl=en",
-			"https://www.instagram.com/p/C52q31MJEuK/?hl=en",
-			"https://www.instagram.com/p/C55IykNJlLO/?hl=en",
-			"https://www.instagram.com/p/C5_B99MJq5h/?hl=en",
-			"https://www.instagram.com/p/C6BpSSMJ7zT/?hl=en",
-			"https://www.instagram.com/p/C6BwrTnJNvM/?hl=en",
-			"https://www.instagram.com/p/C6ioC21LNqh/?hl=en",
-			"https://www.instagram.com/p/C6rcbsuyXP_/?hl=en",
-			"https://www.instagram.com/p/C6x3PapLWaB/?hl=en",
-			"https://www.instagram.com/p/C68-j4Up45C/?hl=en",
-			"https://www.instagram.com/p/C7AwcDPpTKa/?hl=en",
-			"https://www.instagram.com/p/C7I7WJzLR-H/?hl=en",
-			"https://www.instagram.com/p/C7TXuGQL4iI/?hl=en",
-			"https://www.instagram.com/p/C7hO0S9Jaca/?hl=en",
-			"https://www.instagram.com/p/C7j1aAcvwrb/?hl=en",
-			"https://www.instagram.com/p/C7n9BygJuDh/?hl=en",
-			"https://www.instagram.com/p/C8r1bCISBje/?hl=en",
-			"https://www.instagram.com/p/C9w2JPtzGcm/?hl=en",
-			"https://www.instagram.com/p/C-mRiXHzW4i/?hl=en",
-		],
-	},
+	// {
+	// 	title: "Thailand 2",
+	// 	year: 2024,
+	// 	hostedLink: "thailand2",
+	// 	link: "thailand-2",
+	// 	restricted: false,
+	// 	instagramLinks: [
+	// 		"https://www.instagram.com/p/CyasF5_rtLn/?hl=en",
+	// 		"https://www.instagram.com/p/C1eWSFRL36K/?hl=en",
+	// 		"https://www.instagram.com/p/C4U0p9jr5WA/?hl=en",
+	// 		"https://www.instagram.com/p/C4s0esMJkUU/?hl=en",
+	// 		"https://www.instagram.com/p/C5ESnw0S7F4/?hl=en",
+	// 		"https://www.instagram.com/p/C5oEtdJp60R/?hl=en",
+	// 		"https://www.instagram.com/p/C5qQMkhJXJY/?hl=en",
+	// 		"https://www.instagram.com/p/C52q31MJEuK/?hl=en",
+	// 		"https://www.instagram.com/p/C55IykNJlLO/?hl=en",
+	// 		"https://www.instagram.com/p/C5_B99MJq5h/?hl=en",
+	// 		"https://www.instagram.com/p/C6BpSSMJ7zT/?hl=en",
+	// 		"https://www.instagram.com/p/C6BwrTnJNvM/?hl=en",
+	// 		"https://www.instagram.com/p/C6ioC21LNqh/?hl=en",
+	// 		"https://www.instagram.com/p/C6rcbsuyXP_/?hl=en",
+	// 		"https://www.instagram.com/p/C6x3PapLWaB/?hl=en",
+	// 		"https://www.instagram.com/p/C68-j4Up45C/?hl=en",
+	// 		"https://www.instagram.com/p/C7AwcDPpTKa/?hl=en",
+	// 		"https://www.instagram.com/p/C7I7WJzLR-H/?hl=en",
+	// 		"https://www.instagram.com/p/C7TXuGQL4iI/?hl=en",
+	// 		"https://www.instagram.com/p/C7hO0S9Jaca/?hl=en",
+	// 		"https://www.instagram.com/p/C7j1aAcvwrb/?hl=en",
+	// 		"https://www.instagram.com/p/C7n9BygJuDh/?hl=en",
+	// 		"https://www.instagram.com/p/C8r1bCISBje/?hl=en",
+	// 		"https://www.instagram.com/p/C9w2JPtzGcm/?hl=en",
+	// 		"https://www.instagram.com/p/C-mRiXHzW4i/?hl=en",
+	// 	],
+	// },
 	{
 		title: "Pakistan",
 		year: 2025,
@@ -1532,78 +1532,79 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 		},
 	},
-		{
-			title: "Afghanistan",
-			year: 2025,
-			hostedLink: "afghanistan",
-			link: "afghanistan",
-			restricted: false,
-			backupLink: "https://drive.google.com/drive/folders/13u7UC_NTr1cXDKtclfhxyl-nokepTDjW?usp=sharing",
-			extras: {
-				countries: ["afghanistan"],
-				scorecard: {
-					affordability: [8],
-					food: [3],
-					hospitality: [9],
-					safety: [5],
-					accessibility: [4],
-					video: [7],
-				},
-				finalScore: 6,
-				summary: [ 
-					"Afghanistan is a country caught between worlds. On the one hand, you have the overbearing Taliban with strict sharia law and frankly nonsense rulings.",
-					"On the other, you have the wonderful people, each have a story that will squeeze your heart but also a personality that will put a smile on your face.",
-					"Beyond the government, Afghanistan has an incredible amount of history and unique traditions to experience, it's somewhere every seasoned traveller should attempt to visit."
-				],
-				challenges: [ 
-					"The Visa for Afghanistan is a huge headache with ever changes requirements. The easiest way currently is at the Peshawar consulate or on arrival at the Tajik border.",
-					"It's illegal for foreigners to take a bus or enter a locals home, the loophole is to hitchike where you can still get close with locals and also where you need to be.",
-					"Due to sanctions you cannot use any ATM. Bring crisp USD with you, it can be exchanged in almost every town centre easily."
-				],
-				dos : [
-					"Wear local clothing. You can easily buy what you need on arrival in Kabul.",
-					"If you're a woman, cover your hair at all times."
-				],
-				donts: [ 
-					"Bring a drone, they are exteremely illegal to even have on you.", 
-					"If you're a man, take photos of or approach women, especially in the conservative centres like Mazar-i-Sharif and Kandahar. If they approach you it's fine."
-				],
-				advice: {
-					travelLength: "2 - 3 weeks",
-					currency: "Afghan Afghani AFN",
-					season: "March - November",
-					dailyBudget: "$20 USD",
-				},
-				travelAdvisory: {
-					link: "https://www.smartraveller.gov.au/destinations/asia/afghanistan",
-					advice: Advisory.Level4,
-				},
-				music: [
-					{
-						title: "Back In Black - AC/DC",
-						link: "https://music.youtube.com/watch?v=9vWNauaZAgg&si=PrM-rN2ClGrZyjGH",
-					},
-					{
-						title: "Kiss The Sky - Maren Morris",
-						link: "https://music.youtube.com/watch?v=yDeG2SI5R_8&si=YUSja0aFx8vbjGgg",
-					},
-					{
-						title: "Sweet Disaster - DREAMERS",
-						link: "https://music.youtube.com/watch?v=2k5W-j9eHcY&si=3r7wRLmAa2WuVtUZ",
-					},
-					{
-						title: "That's So True - Gracie Abrams",
-						link: "https://music.youtube.com/watch?v=W_YOJWZIjxo&si=8PtrcNBQiYgZqgVf",
-					},
-				],
-				extraLinks: [
-					{
-						title: "Paris Hailwood - Afghanistan Beyond the Headlines",
-						link: "https://www.instagram.com/reel/DHCCI8-tDIo/?hl=en",
-					},
-				],
+	{
+		title: "Afghanistan",
+		year: 2025,
+		hostedLink: "afghanistan",
+		link: "afghanistan",
+		restricted: false,
+		backupLink:
+			"https://drive.google.com/drive/folders/13u7UC_NTr1cXDKtclfhxyl-nokepTDjW?usp=sharing",
+		extras: {
+			countries: ["afghanistan"],
+			scorecard: {
+				affordability: [8],
+				food: [3],
+				hospitality: [9],
+				safety: [5],
+				accessibility: [4],
+				video: [7],
 			},
+			finalScore: 6,
+			summary: [
+				"Afghanistan is a country caught between worlds. On the one hand, you have the overbearing Taliban with strict sharia law and frankly nonsense rulings.",
+				"On the other, you have the wonderful people, each have a story that will squeeze your heart but also a personality that will put a smile on your face.",
+				"Beyond the government, Afghanistan has an incredible amount of history and unique traditions to experience, it's somewhere every seasoned traveller should attempt to visit.",
+			],
+			challenges: [
+				"The Visa for Afghanistan is a huge headache with ever changes requirements. The easiest way currently is at the Peshawar consulate or on arrival at the Tajik border.",
+				"It's illegal for foreigners to take a bus or enter a locals home, the loophole is to hitchike where you can still get close with locals and also where you need to be.",
+				"Due to sanctions you cannot use any ATM. Bring crisp USD with you, it can be exchanged in almost every town centre easily.",
+			],
+			dos: [
+				"Wear local clothing. You can easily buy what you need on arrival in Kabul.",
+				"If you're a woman, cover your hair at all times.",
+			],
+			donts: [
+				"Bring a drone, they are exteremely illegal to even have on you.",
+				"If you're a man, take photos of or approach women, especially in the conservative centres like Mazar-i-Sharif and Kandahar. If they approach you it's fine.",
+			],
+			advice: {
+				travelLength: "2 - 3 weeks",
+				currency: "Afghan Afghani AFN",
+				season: "March - November",
+				dailyBudget: "$20 USD",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/afghanistan",
+				advice: Advisory.Level4,
+			},
+			music: [
+				{
+					title: "Back In Black - AC/DC",
+					link: "https://music.youtube.com/watch?v=9vWNauaZAgg&si=PrM-rN2ClGrZyjGH",
+				},
+				{
+					title: "Kiss The Sky - Maren Morris",
+					link: "https://music.youtube.com/watch?v=yDeG2SI5R_8&si=YUSja0aFx8vbjGgg",
+				},
+				{
+					title: "Sweet Disaster - DREAMERS",
+					link: "https://music.youtube.com/watch?v=2k5W-j9eHcY&si=3r7wRLmAa2WuVtUZ",
+				},
+				{
+					title: "That's So True - Gracie Abrams",
+					link: "https://music.youtube.com/watch?v=W_YOJWZIjxo&si=8PtrcNBQiYgZqgVf",
+				},
+			],
+			extraLinks: [
+				{
+					title: "Paris Hailwood - Afghanistan Beyond the Headlines",
+					link: "https://www.instagram.com/reel/DHCCI8-tDIo/?hl=en",
+				},
+			],
 		},
+	},
 	// {
 	// 	title: "",
 	// 	year: ,

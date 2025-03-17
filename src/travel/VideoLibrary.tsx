@@ -1,12 +1,8 @@
 import Image from "next/image";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import ExtensionOffIcon from "@mui/icons-material/ExtensionOff";
 import DoneRoundedIcon from "@mui/icons-material/DoneRounded";
 import { TravelVideoMetaData } from "./types";
 import { CardActionArea, Grid, LinearProgress } from "@mui/material";
 import styles from "./videolibrary.module.scss";
-import { hasRestrictionBypass, videoEnabled } from "./travelDataService";
 import { useEffect, useState } from "react";
 import router from "next/router";
 
@@ -27,38 +23,6 @@ export const VideoLibrary = ({
 		window.addEventListener("resize", checkScreenSize);
 		return () => window.removeEventListener("resize", checkScreenSize);
 	}, []);
-
-	const posterIcon = (dataItem: TravelVideoMetaData) => {
-		if (dataItem.restricted && !hasRestrictionBypass()) {
-			return (
-				<LockOutlinedIcon
-					sx={{
-						height: "2.8rem",
-						width: "2.8rem",
-					}}
-					className={`${styles.videoButton} ${styles.lockButton}`}
-				/>
-			);
-		}
-
-		return dataItem.backupLink ? (
-			<PlayArrowIcon
-				sx={{
-					height: "3.8rem",
-					width: "3.8rem",
-				}}
-				className={styles.videoButton}
-			/>
-		) : (
-			<ExtensionOffIcon
-				sx={{
-					height: "2.8rem",
-					width: "2.8rem",
-				}}
-				className={styles.videoButton}
-			/>
-		);
-	};
 
 	return (
 		<Grid
@@ -83,12 +47,9 @@ export const VideoLibrary = ({
 							<CardActionArea
 								className={styles.videoCardContainer}
 								onClick={() => {
-									if (videoEnabled(dataItem)) {
-										setLoading({ state: true, index: videoIndex });
-										router.push(`/travel/${dataItem.link}`);
-									}
+									setLoading({ state: true, index: videoIndex });
+									router.push(`/travel/${dataItem.link}`);
 								}}>
-								{posterIcon(dataItem)}
 								{dataItem.newestVideo && (
 									<h5 className={styles.newestVideo}>LATEST VIDEO</h5>
 								)}

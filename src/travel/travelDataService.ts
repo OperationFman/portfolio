@@ -8,7 +8,6 @@ import { Advisory, TravelVideoMetaData } from "./types";
 import { SortOptions } from "../guides/types";
 
 export const enhancedTravelVideoMetaData = () => {
-	// Add any data that all sorts might need here
 	if (!isClientSide()) return travelVideoMetaData;
 
 	const watchedVideos = JSON.parse(
@@ -45,11 +44,9 @@ export const videoEnabled = (videoMetaData: TravelVideoMetaData) => {
 
 		if (prompt === insecureRestrictionKey) {
 			localStorage.setItem("restriction-bypass", "true");
-
-			return true;
+			window.location.reload();
 		} else {
 			window.alert("Password Incorrect");
-			return false;
 		}
 	}
 };
@@ -148,8 +145,7 @@ export const allByFood = () => {
 
 	const foodScoreRanges: { heading: string; range: number[] }[] = [
 		{ heading: "Delicious", range: [9, 10] },
-		{ heading: "Enjoyable", range: [7, 8] },
-		{ heading: "Tasty", range: [5, 6] },
+		{ heading: "Tasty", range: [5, 6, 7, 8] },
 		{ heading: "Edible", range: [3, 4] },
 		{ heading: "Disgusting", range: [1, 2] },
 	];
@@ -185,9 +181,9 @@ export const allByDanger = () => {
 		[];
 
 	const advisoryLevels: { heading: string; level: Advisory }[] = [
-		{ heading: "Safe", level: Advisory.Level1 },
-		{ heading: "Be Alert", level: Advisory.Level2 },
-		{ heading: "Unsafe", level: Advisory.Level3 },
+		{ heading: "Super Safe", level: Advisory.Level1 },
+		{ heading: "Safe", level: Advisory.Level2 },
+		{ heading: "Be Alert", level: Advisory.Level3 },
 		{ heading: "Dangerous", level: Advisory.Level4 },
 	];
 

@@ -173,11 +173,12 @@
 	color: $mediumGrey;
 	padding: 11px 0 0 25px;
 	margin: 0;
-	left: 120px;
+	left: 123px;
 
 	@include breakpoint(medium) {
 		padding: 0 0 0 20px;
 		margin-top: 15px;
+		left: 118px;
 	}
 }
 
@@ -374,22 +375,26 @@
 	justify-content: center;
 }
 
-.backupLink {
-	margin: 0.5rem 0 0 0.25rem;
-	color: $defaultBlue;
-	cursor: pointer;
+.protectedVideoContainer {
+	justify-content: center;
+	display: flex;
+	width: 100%;
 }
 
-.comingSoon {
-	text-align: center;
+.backupLink {
+	color: $defaultBlue;
+	cursor: pointer;
+	display: inline;
+}
 
-	@include breakpoint(medium) {
-		padding: 0 12.5rem 0 12.5rem;
-	}
+.restrictedVideo {
+	display: inline;
+	margin-right: 8px;
 }
 
 .noVideoImage {
 	opacity: 0.8;
+	padding: 0 10%;
 
 	&:hover {
 		filter: brightness(0.8);

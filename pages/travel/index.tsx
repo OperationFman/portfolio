@@ -23,12 +23,10 @@ const Travel: NextPage = () => {
 	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
 	const [sortSelection, setSortSelection] = useState(SortBy.Newest);
 
-	// useEffect(() => {
-	// 	const searchParams = new URLSearchParams(window.location.search);
-	// 	const rankedParam = searchParams.get("ranked");
-	// 	const showAllParam = searchParams.get("ShowAll");
-	// 	// setRankedVideos(rankedParam === "true");
-	// }, []);
+	useEffect(() => {
+		const searchParams = new URLSearchParams(window.location.search);
+		searchParams.get("ranked") && setSortedMetaData(allByBest());
+	}, []);
 
 	useEffect(() => {
 		switch (sortSelection) {
@@ -52,23 +50,6 @@ const Travel: NextPage = () => {
 				break;
 		}
 	}, [sortSelection]);
-
-	// const toggleRanked = () => {
-	// 	setRankedVideos(!rankedVideos);
-	// 	setVideoReadyOnly(true);
-	// 	const searchParams = new URLSearchParams(window.location.search);
-	// 	if (rankedVideos) {
-	// 		searchParams.delete("ranked");
-	// 	} else {
-	// 		searchParams.delete("ShowAll");
-	// 		searchParams.set("ranked", "true");
-	// 	}
-	// 	window.history.replaceState(
-	// 		null,
-	// 		"",
-	// 		`${window.location.pathname}?${searchParams.toString()}`,
-	// 	);
-	// };
 
 	const description =
 		"Travel related content including completion map and travel videos, some public and some private of my experiences.";
