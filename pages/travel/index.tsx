@@ -11,9 +11,13 @@ import {
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Tooltip } from "@mui/material";
+import { useEffect, useState } from "react";
+import { SortBy } from "../../src/travel/types";
+import { TravelSort } from "../../src/travel/components/TravelSort";
 
 const Travel: NextPage = () => {
-	const sortedMetaData = allOldestFirst();
+	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
+	const [sortSelection, setSortSelection] = useState(SortBy.Newest);
 
 	// useEffect(() => {
 	// 	const searchParams = new URLSearchParams(window.location.search);
@@ -23,16 +27,17 @@ const Travel: NextPage = () => {
 	// 	setVideoReadyOnly(showAllParam !== "true");
 	// }, []);
 
-	// useEffect(() => {
-	// 	setSortedMetaData([]);
-	// 	setTimeout(() => {
-	// 		if (rankedVideos) {
-	// 			setSortedMetaData(groupVideosByRanked());
-	// 		} else {
-	// 			setSortedMetaData(sortYears(sortBy, metaDataGroupedByYear));
-	// 		}
-	// 	}, 50);
-	// }, [videoReadyOnly, sortBy, rankedVideos]);
+	useEffect(() => {
+		setTimeout(() => {
+			switch (sortSelection) {
+				case SortBy.Newest:
+					setSortedMetaData(allNewestFirst());
+					break;
+				case SortBy.Oldest:
+					setSortedMetaData(allOldestFirst());
+			}
+		}, 50);
+	}, [sortSelection]);
 
 	// const toggleRanked = () => {
 	// 	setRankedVideos(!rankedVideos);
@@ -125,7 +130,7 @@ const Travel: NextPage = () => {
 									</div>
 									{index === 0 && (
 										<div className={styles.sortToggleContainer}>
-											<>[Toggle Container]</>
+											<TravelSort setSortMetaDataBy={setSortSelection} />
 										</div>
 									)}
 								</div>

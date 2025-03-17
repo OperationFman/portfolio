@@ -12,6 +12,11 @@ export type TravelVideoMetaData = {
 	extras?: Extras;
 };
 
+export enum SortBy {
+	Newest = 'Newest',
+	Oldest = "Oldest"
+}
+
 export enum Advisory {
 	Level1 = "Exercise normal safety precautions",
 	Level2 = "Exercise a high degree of caution",
