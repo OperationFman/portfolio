@@ -1551,9 +1551,9 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				},
 				finalScore: 6,
 				summary: [ 
-					"Afghanistan is a country caught betweeen worlds. On the one hand, you have the overbearing Taliban with strict sharia law and frankly nonsense rulings.",
-					"On the other, you have the wonderful people just trying to survive in a failing economy, where education is no longer available and their rights are eroded day by day.",
-					"A country is not it's headlines, these people each have a story that will squeeze your heart but also a personality that will put a smile on your face."
+					"Afghanistan is a country caught between worlds. On the one hand, you have the overbearing Taliban with strict sharia law and frankly nonsense rulings.",
+					"On the other, you have the wonderful people, each have a story that will squeeze your heart but also a personality that will put a smile on your face.",
+					"Beyond the government, Afghanistan has an incredible amount of history and unique traditions to experience, it's somewhere every seasoned traveller should attempt to visit."
 				],
 				challenges: [ 
 					"The Visa for Afghanistan is a huge headache with ever changes requirements. The easiest way currently is at the Peshawar consulate or on arrival at the Tajik border.",
