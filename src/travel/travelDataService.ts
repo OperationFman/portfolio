@@ -100,3 +100,16 @@ export const videoEnabled = (videoMetaData: TravelVideoMetaData) => {
 		}
 	}
 };
+
+export const addToWatchedVideosStorage = (link: string) => {
+	if (!isClientSide()) return false;
+
+	const watchedVideos = JSON.parse(
+		localStorage.getItem("watchedVideos") || "[]",
+	) as string[];
+
+	if (!watchedVideos.includes(link)) {
+		watchedVideos.push(link);
+		localStorage.setItem("watchedVideos", JSON.stringify(watchedVideos));
+	}
+};

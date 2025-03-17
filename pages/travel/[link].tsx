@@ -13,7 +13,6 @@ import HeartBrokenIcon from "@mui/icons-material/HeartBroken";
 import {
 	getTravelMetaDataIndex,
 	videoEnabled,
-	filterTravelVideosWithBackupLink,
 	addToWatchedVideosStorage,
 } from "../../src/travel/travelDataService";
 import styles from "../../src/travel/index.module.scss";
@@ -61,9 +60,7 @@ const VideoContent = ({
 		setIsLoading(false);
 	}, 3000 + (instagramLinks?.length || 1) * 500);
 
-	const upNextMetaData = filterTravelVideosWithBackupLink(
-		upNext as TravelVideoMetaData[],
-	);
+	const upNextMetaData = upNext as TravelVideoMetaData[];
 
 	const scoreCardArray = extras?.scorecard
 		? Object.entries(extras?.scorecard)
@@ -439,11 +436,7 @@ const VideoContent = ({
 							<>
 								<h2>From The Start...</h2>
 								<VideoLibrary
-									videoMetaData={[
-										...filterTravelVideosWithBackupLink(travelVideoMetaData),
-									]
-										.slice(0, 5)
-										.reverse()}
+									videoMetaData={[...travelVideoMetaData].slice(0, 5).reverse()}
 								/>
 							</>
 						)}
