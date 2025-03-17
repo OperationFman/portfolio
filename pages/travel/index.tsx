@@ -4,13 +4,16 @@ import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
 import { Footer } from "../../utils/footer/Footer";
 import styles from "../../src/travel/index.module.scss";
-import { groupVideosByYear } from "../../src/travel/travelDataService";
+import {
+	allNewestFirst,
+	allOldestFirst,
+} from "../../src/travel/travelDataService";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Tooltip } from "@mui/material";
 
 const Travel: NextPage = () => {
-	const sortedMetaData = groupVideosByYear();
+	const sortedMetaData = allOldestFirst();
 
 	// useEffect(() => {
 	// 	const searchParams = new URLSearchParams(window.location.search);
@@ -99,11 +102,9 @@ const Travel: NextPage = () => {
 				</Tooltip>
 				{sortedMetaData.map((metaData, index) => {
 					{
-						const year = "Heading";
-
 						return (
 							<div
-								key={`Videos from ${year}`}
+								key={`Videos from ${metaData.heading}`}
 								className={styles.libraryContainer}
 								style={{
 									animation: `fadeIn ${index}00ms ease-in-out`,
@@ -118,7 +119,9 @@ const Travel: NextPage = () => {
 												width: "2.5rem",
 											}}
 										/>
-										<h2 className={styles.yearHeadingText}>{year}</h2>
+										<h2 className={styles.yearHeadingText}>
+											{metaData.heading}
+										</h2>
 									</div>
 									{index === 0 && (
 										<div className={styles.sortToggleContainer}>
@@ -126,7 +129,7 @@ const Travel: NextPage = () => {
 										</div>
 									)}
 								</div>
-								<VideoLibrary videoMetaData={metaData} />
+								<VideoLibrary videoMetaData={metaData.grouping} />
 							</div>
 						);
 					}

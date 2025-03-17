@@ -8,6 +8,7 @@ import { TravelVideoMetaData } from "./types";
 import { SortOptions } from "../guides/types";
 
 export const enhancedTravelVideoMetaData = () => {
+	// Add any data that all sorts might need here
 	if (!isClientSide()) return travelVideoMetaData;
 
 	const watchedVideos = JSON.parse(
@@ -29,7 +30,7 @@ export const getTravelMetaDataIndex = (
 	return metaData.findIndex((item) => item.link === link);
 };
 
-export const groupVideosByYear = () => {
+export const allOldestFirst = () => {
 	const groupedVideos: { [year: number]: TravelVideoMetaData[] } = {};
 
 	for (const video of enhancedTravelVideoMetaData()) {
@@ -41,45 +42,32 @@ export const groupVideosByYear = () => {
 		groupedVideos[year].push(video);
 	}
 
-	return Object.values(groupedVideos);
+	const result = Object.entries(groupedVideos).map(([year, grouping]) => ({
+		heading: year,
+		grouping: grouping,
+	}));
+
+	return result;
 };
 
-export const sortYears = (
-	sortBy: SortOptions,
-	metaData: TravelVideoMetaData[][],
-): TravelVideoMetaData[][] => {
-	return [...metaData].sort((a, b) => {
-		if (sortBy === SortOptions.Newest) {
-			return b[0].year - a[0].year;
-		} else {
-			return a[0].year - b[0].year;
+export const allNewestFirst = () => {
+	const groupedVideos: { [year: number]: TravelVideoMetaData[] } = {};
+
+	for (const video of enhancedTravelVideoMetaData()) {
+		const year = video.year;
+
+		if (!groupedVideos[year]) {
+			groupedVideos[year] = [];
 		}
-	});
-};
-
-export const groupVideosByRanked = () => {
-	const completeArray = [];
-
-	for (const tier of rankedTravelVideos) {
-		const tierData = [];
-
-		for (const link of tier) {
-			const travelMetaData = enhancedTravelVideoMetaData();
-			const fullVideoData = travelMetaData[getTravelMetaDataIndex(link)];
-
-			if (fullVideoData) {
-				tierData.push(fullVideoData);
-			}
-		}
-		tierData.reverse();
-		completeArray.push(tierData);
+		groupedVideos[year].push(video);
 	}
 
-	return completeArray;
-};
+	const result = Object.entries(groupedVideos).map(([year, grouping]) => ({
+		heading: year,
+		grouping: grouping,
+	}));
 
-export const hasAtLeastOneMissingVideoLink = () => {
-	return travelVideoMetaData.some((obj) => !obj.hasOwnProperty("backupLink"));
+	return result.reverse();
 };
 
 export const hasRestrictionBypass = () => {
