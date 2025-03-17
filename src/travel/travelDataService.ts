@@ -7,6 +7,21 @@ import {
 import { TravelVideoMetaData } from "./types";
 import { SortOptions } from "../guides/types";
 
+export const enhancedTravelVideoMetaData = () => {
+	if (!isClientSide()) return travelVideoMetaData;
+
+	const watchedVideos = JSON.parse(
+		localStorage.getItem("watchedVideos") || "[]",
+	) as string[];
+
+	const enhancedMetaData = travelVideoMetaData.map((item) => ({
+		...item,
+		previouslyWatched: watchedVideos.includes(item.link),
+	}));
+
+	return enhancedMetaData;
+};
+
 export const getTravelMetaDataIndex = (
 	link: string,
 	metaData: TravelVideoMetaData[] = travelVideoMetaData,
@@ -14,12 +29,10 @@ export const getTravelMetaDataIndex = (
 	return metaData.findIndex((item) => item.link === link);
 };
 
-export const groupVideosByYear = (
-	metadata: TravelVideoMetaData[],
-): TravelVideoMetaData[][] => {
+export const groupVideosByYear = () => {
 	const groupedVideos: { [year: number]: TravelVideoMetaData[] } = {};
 
-	for (const video of metadata) {
+	for (const video of enhancedTravelVideoMetaData()) {
 		const year = video.year;
 
 		if (!groupedVideos[year]) {
@@ -98,38 +111,4 @@ export const videoEnabled = (videoMetaData: TravelVideoMetaData) => {
 			return false;
 		}
 	}
-};
-
-export const filterTravelVideosWithBackupLink = (
-	travelVideoMetaData: TravelVideoMetaData[],
-) => {
-	return travelVideoMetaData.filter((data) => data.backupLink !== undefined);
-};
-
-export const addToWatchedVideosStorage = (link: string) => {
-	if (!isClientSide()) return false;
-
-	const watchedVideos = JSON.parse(
-		localStorage.getItem("watchedVideos") || "[]",
-	) as string[];
-
-	if (!watchedVideos.includes(link)) {
-		watchedVideos.push(link);
-		localStorage.setItem("watchedVideos", JSON.stringify(watchedVideos));
-	}
-};
-
-export const enhancedTravelVideoMetaData = () => {
-	if (!isClientSide()) return travelVideoMetaData;
-
-	const watchedVideos = JSON.parse(
-		localStorage.getItem("watchedVideos") || "[]",
-	) as string[];
-
-	const enhancedMetaData = travelVideoMetaData.map((item) => ({
-		...item,
-		previouslyWatched: watchedVideos.includes(item.link),
-	}));
-
-	return enhancedMetaData;
 };

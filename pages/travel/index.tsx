@@ -2,104 +2,69 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
-import ExtensionOffOutlinedIcon from "@mui/icons-material/ExtensionOffOutlined";
-import ExtensionOffIcon from "@mui/icons-material/ExtensionOff";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 import { Footer } from "../../utils/footer/Footer";
 import styles from "../../src/travel/index.module.scss";
-import { tierTitles } from "../../src/datasources/TravelMetaData";
-import {
-	filterTravelVideosWithBackupLink,
-	groupVideosByRanked,
-	groupVideosByYear,
-	hasAtLeastOneMissingVideoLink,
-	sortYears,
-	enhancedTravelVideoMetaData,
-} from "../../src/travel/travelDataService";
-import Zoom from "@mui/material/Zoom";
-import { useEffect, useState } from "react";
-import { SortButton } from "../../src/guides/components/buttons/SortButton";
+import { groupVideosByYear } from "../../src/travel/travelDataService";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
-import { SortOptions } from "../../src/guides/types";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
-import { Button, Tooltip } from "@mui/material";
-import { setDark } from "../../utils/configureCss/configureCss";
+import { Tooltip } from "@mui/material";
 
 const Travel: NextPage = () => {
-	const [videoReadyOnly, setVideoReadyOnly] = useState(true);
-	const [rankedVideos, setRankedVideos] = useState(false);
+	const sortedMetaData = groupVideosByYear();
 
-	const enhancedMetaData = enhancedTravelVideoMetaData();
+	// useEffect(() => {
+	// 	const searchParams = new URLSearchParams(window.location.search);
+	// 	const rankedParam = searchParams.get("ranked");
+	// 	const showAllParam = searchParams.get("ShowAll");
+	// 	setRankedVideos(rankedParam === "true");
+	// 	setVideoReadyOnly(showAllParam !== "true");
+	// }, []);
 
-	const filteredTravelVideos = videoReadyOnly
-		? filterTravelVideosWithBackupLink(enhancedMetaData)
-		: enhancedMetaData;
+	// useEffect(() => {
+	// 	setSortedMetaData([]);
+	// 	setTimeout(() => {
+	// 		if (rankedVideos) {
+	// 			setSortedMetaData(groupVideosByRanked());
+	// 		} else {
+	// 			setSortedMetaData(sortYears(sortBy, metaDataGroupedByYear));
+	// 		}
+	// 	}, 50);
+	// }, [videoReadyOnly, sortBy, rankedVideos]);
 
-	const metaDataGroupedByYear = groupVideosByYear(filteredTravelVideos);
+	// const toggleRanked = () => {
+	// 	setRankedVideos(!rankedVideos);
+	// 	setVideoReadyOnly(true);
+	// 	const searchParams = new URLSearchParams(window.location.search);
+	// 	if (rankedVideos) {
+	// 		searchParams.delete("ranked");
+	// 	} else {
+	// 		searchParams.delete("ShowAll");
+	// 		searchParams.set("ranked", "true");
+	// 	}
+	// 	window.history.replaceState(
+	// 		null,
+	// 		"",
+	// 		`${window.location.pathname}?${searchParams.toString()}`,
+	// 	);
+	// };
 
-	const [sortBy, setSortBy] = useState<SortOptions>(SortOptions.Newest);
-	const [sortedMetaData, setSortedMetaData] = useState(
-		sortYears(sortBy, metaDataGroupedByYear),
-	);
+	// const toggleShowAll = () => {
+	// 	setVideoReadyOnly(!videoReadyOnly);
+	// 	const searchParams = new URLSearchParams(window.location.search);
+	// 	if (!videoReadyOnly) {
+	// 		searchParams.delete("ShowAll");
+	// 	} else {
+	// 		searchParams.set("ShowAll", "true");
+	// 	}
+	// 	window.history.replaceState(
+	// 		null,
+	// 		"",
+	// 		`${window.location.pathname}?${searchParams.toString()}`,
+	// 	);
+	// };
 
 	const description =
 		"Travel related content including completion map and travel videos, some public and some private of my experiences.";
-
-	useEffect(() => {
-		const searchParams = new URLSearchParams(window.location.search);
-		const rankedParam = searchParams.get("ranked");
-		const showAllParam = searchParams.get("ShowAll");
-		setRankedVideos(rankedParam === "true");
-		setVideoReadyOnly(showAllParam !== "true");
-	}, []);
-
-	useEffect(() => {
-		setSortedMetaData([]);
-		setTimeout(() => {
-			if (rankedVideos) {
-				setSortedMetaData(groupVideosByRanked());
-			} else {
-				setSortedMetaData(sortYears(sortBy, metaDataGroupedByYear));
-			}
-		}, 50);
-	}, [videoReadyOnly, sortBy, rankedVideos]);
-
-	useEffect(() => {
-		setSortedMetaData(sortYears(sortBy, metaDataGroupedByYear));
-	}, [videoReadyOnly, sortBy]);
-
-	const toggleRanked = () => {
-		setRankedVideos(!rankedVideos);
-		setVideoReadyOnly(true);
-		const searchParams = new URLSearchParams(window.location.search);
-		if (rankedVideos) {
-			searchParams.delete("ranked");
-		} else {
-			searchParams.delete("ShowAll");
-			searchParams.set("ranked", "true");
-		}
-		window.history.replaceState(
-			null,
-			"",
-			`${window.location.pathname}?${searchParams.toString()}`,
-		);
-	};
-
-	const toggleShowAll = () => {
-		setVideoReadyOnly(!videoReadyOnly);
-		const searchParams = new URLSearchParams(window.location.search);
-		if (!videoReadyOnly) {
-			searchParams.delete("ShowAll");
-		} else {
-			searchParams.set("ShowAll", "true");
-		}
-		window.history.replaceState(
-			null,
-			"",
-			`${window.location.pathname}?${searchParams.toString()}`,
-		);
-	};
 
 	return (
 		<div>
@@ -134,7 +99,7 @@ const Travel: NextPage = () => {
 				</Tooltip>
 				{sortedMetaData.map((metaData, index) => {
 					{
-						const year = metaData[0].year;
+						const year = "Heading";
 
 						return (
 							<div
@@ -153,55 +118,11 @@ const Travel: NextPage = () => {
 												width: "2.5rem",
 											}}
 										/>
-										<h2 className={styles.yearHeadingText}>
-											{rankedVideos ? tierTitles[index] : year}
-										</h2>
+										<h2 className={styles.yearHeadingText}>{year}</h2>
 									</div>
 									{index === 0 && (
 										<div className={styles.sortToggleContainer}>
-											<Tooltip
-												TransitionComponent={Zoom}
-												title='Ranked Best to Worst'>
-												<Button
-													className={styles.videoToggleContainer}
-													onClick={() => toggleRanked()}>
-													{rankedVideos ? (
-														<EmojiEventsIcon className={styles.defaultYellow} />
-													) : (
-														<EmojiEventsOutlinedIcon />
-													)}
-												</Button>
-											</Tooltip>
-											<div className={styles.sortToggleContainer}>
-												{hasAtLeastOneMissingVideoLink() && (
-													<Tooltip
-														TransitionComponent={Zoom}
-														title='Show Incomplete Videos'>
-														<Button
-															className={styles.videoToggleContainer}
-															onClick={() => toggleShowAll()}>
-															{videoReadyOnly ? (
-																<ExtensionOffOutlinedIcon />
-															) : (
-																<ExtensionOffIcon
-																	className={styles.defaultYellow}
-																/>
-															)}
-														</Button>
-													</Tooltip>
-												)}
-												<div className={styles.sortContainer}>
-													<SortButton
-														setSortMetaDataBy={
-															rankedVideos ? () => {} : setSortBy
-														}
-														alphabetical={false}
-													/>
-												</div>
-												{rankedVideos && (
-													<div className={setDark(styles, "greyout")} />
-												)}
-											</div>
+											<>[Toggle Container]</>
 										</div>
 									)}
 								</div>
