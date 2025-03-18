@@ -1,6 +1,5 @@
 import { Advisory } from "./../travel/types";
 import { TravelVideoMetaData } from "../travel/types";
-import { title } from "process";
 
 export const publicCDNVideoUrl = "https://d3atatnx15erez.cloudfront.net/";
 export const insecureRestrictionKey = "adventuretime";
@@ -24,7 +23,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["China"],
 			scorecard: {
 				affordability: [9],
-				food: [2],
+				food: [3],
 				hospitality: [5],
 				safety: [8],
 				accessibility: [3],
@@ -466,7 +465,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				hospitality: [9],
 				safety: [3],
 				accessibility: [5],
-				video: [9],
+				video: [8],
 			},
 			finalScore: 7,
 			summary: [
@@ -871,7 +870,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				affordability: [10],
 				food: [10],
 				hospitality: [8],
-				safety: [6],
+				safety: [7],
 				accessibility: [7],
 				video: [10],
 			},
@@ -1072,7 +1071,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				hospitality: [6, 4],
 				safety: [7, 7],
 				accessibility: [6, 6],
-				video: [7, 4],
+				video: [6, 6],
 			},
 			finalScore: 6,
 			summary: [
@@ -1290,7 +1289,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				hospitality: [6, 4],
 				safety: [5, 10],
 				accessibility: [6, 1],
-				video: [5, 8],
+				video: [7, 7],
 			},
 			finalScore: 5,
 			summary: [
@@ -1363,7 +1362,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				hospitality: [5, 6],
 				safety: [7, 7],
 				accessibility: [2, 8],
-				video: [5, 4],
+				video: [5, 5],
 			},
 			finalScore: 3,
 			summary: [
@@ -1673,60 +1672,4 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	// 		],
 	// 	},
 	// },
-];
-
-export const rankedTravelVideos = [
-	//S Tier
-	["syria", "greece", "japan"],
-	//A Tier
-	[
-		"israel-and-palestine",
-		"armenia-georgia-azerbaijan",
-		"iran",
-		"jordan",
-		"india",
-	],
-	//B Tier
-	[
-		"bangladesh",
-		"turkey",
-		"pakistan",
-		"philippines-and-brunei",
-		"timor-leste",
-		"south-korea",
-		"new-zealand",
-	],
-	//C Tier
-	[
-		"bhutan-and-east-india",
-		"afghanistan",
-		"cambodia-laos-vietnam",
-		"taiwan-hong-kong-macau",
-		"oman",
-		"uae",
-		"malaysia-singapore",
-		"china",
-		"nepal",
-		"thailand",
-	],
-	//D Tier
-	[
-		"maldives-and-sri-lanka",
-		"cyprus",
-		"lebanon",
-		"kuwait-iraqi-kurdistan",
-		"fiji",
-		"australia",
-	],
-	//F Tier
-	["saudi-arabia-bahrain"],
-];
-
-export const tierTitles = [
-	"S Tier 🥇",
-	"A Tier 🥈",
-	"B Tier 🥉",
-	"C Tier",
-	"D Tier",
-	"F Tier 💩",
 ];

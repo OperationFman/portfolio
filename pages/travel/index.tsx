@@ -11,6 +11,7 @@ import {
 	allByWorst,
 	allNewestFirst,
 	allOldestFirst,
+	funniestOnly,
 } from "../../src/travel/travelDataService";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
@@ -47,6 +48,9 @@ const Travel: NextPage = () => {
 				break;
 			case SortBy.Danger:
 				setSortedMetaData(allByDanger());
+				break;
+			case SortBy.Funniest:
+				setSortedMetaData(funniestOnly());
 				break;
 		}
 	}, [sortSelection]);

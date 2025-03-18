@@ -12,6 +12,7 @@ export enum SortBy {
 	Worst = "Worst",
 	Food = "Food",
 	Danger = "Danger",
+	Funniest = "Funniest",
 }
 
 export type TravelVideoMetaData = {

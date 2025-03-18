@@ -1,11 +1,9 @@
 import { isClientSide } from "../../utils/isClientSide";
 import {
-	rankedTravelVideos,
 	insecureRestrictionKey,
 	travelVideoMetaData,
 } from "../datasources/TravelMetaData";
 import { Advisory, TravelVideoMetaData } from "./types";
-import { SortOptions } from "../guides/types";
 
 export const enhancedTravelVideoMetaData = () => {
 	if (!isClientSide()) return travelVideoMetaData;
@@ -204,4 +202,37 @@ export const allByDanger = () => {
 	}
 
 	return advisoryGroups;
+};
+
+export const funniestOnly = () => {
+	const videoScoreGroups: {
+		heading: string;
+		grouping: TravelVideoMetaData[];
+	}[] = [];
+
+	const topHitsRange = { heading: "Top Hits", range: [9, 10] };
+
+	const grouping: TravelVideoMetaData[] = [];
+
+	for (const video of enhancedTravelVideoMetaData()) {
+		const videoScores = video.extras?.scorecard?.video;
+
+		if (!videoScores || videoScores.length === 0) {
+			continue;
+		}
+
+		const averageVideoScore =
+			videoScores.reduce((sum, score) => sum + score, 0) / videoScores.length;
+		const roundedAverageVideoScore = Math.round(averageVideoScore);
+
+		if (topHitsRange.range.includes(roundedAverageVideoScore)) {
+			grouping.push(video);
+		}
+	}
+
+	if (grouping.length > 0) {
+		videoScoreGroups.push({ heading: topHitsRange.heading, grouping });
+	}
+
+	return videoScoreGroups;
 };
