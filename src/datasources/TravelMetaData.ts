@@ -254,6 +254,51 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/drive/folders/1lDzBYAhye2L7cbIM8hsbkKXxNSsyeDEH?usp=sharing",
 		restricted: true,
+		extras: {
+			countries: ["Fiji"],
+			scorecard: {
+				affordability: [4],
+				food: [3],
+				hospitality: [4],
+				safety: [8],
+				accessibility: [6],
+				video: [3],
+			},
+			finalScore: 3,
+			summary: [
+				"Fiji, a South Pacific paradise, offers a unique blend of vibrant culture and stunning natural beauty. .",
+				"From the warm, welcoming smiles of the locals to the breathtaking coral reefs and lush rainforests, Fiji provides an escape into a world of tranquility and adventure. Whether you're seeking relaxation on pristine beaches or thrilling water sports,",
+				"Fiji's diverse islands promise an unforgettable experience steeped in rich traditions and breathtaking landscapes.",
+			],
+			challenges: [
+				"It's quite difficult getting around without a guide or tour especially the main island, which is why most people buy a package holiday.",
+			],
+			dos: [
+				"Day trips to various resorts, they often cover your transport fees in the hopes you buy food/alcohol.",
+				"Wear strong sunscreen and apply often, it's incredibly easy to get burnt in Fiji",
+			],
+			donts: ["Visit during rainy season."],
+			advice: {
+				travelLength: "1 week",
+				currency: "Fijian dollar FJD",
+				season: "June - September",
+				dailyBudget: "$150usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/pacific/fiji",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "Mona Lisa - Mxmtoon",
+					link: "https://music.youtube.com/watch?v=sGgKlhi1_6M&si=olJ4Hp7yiLNQGKrK",
+				},
+				{
+					title: "My Mind",
+					link: "https://music.youtube.com/watch?v=SfYCVetiL30&si=w9zfpQakvakeaBFl",
+				},
+			],
+		},
 	},
 	{
 		title: "Cambodia, Laos and Vietnam",
@@ -285,39 +330,53 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				video: [5, 5, 5],
 			},
 			finalScore: 6,
-			summary: [""],
-			challenges: [""],
-			dos: [""],
+			summary: [
+				"Cambodia, Laos, and Vietnam, each a jewel of Southeast Asia, bear the marks of tumultuous histories, yet today offer distinct and captivating experiences.",
+				"From the serene temples of Angkor Wat in Cambodia to the tranquil Mekong River flowing through Laos, and the bustling streets of Hanoi in Vietnam, these nations present a tapestry of cultural richness and natural beauty.",
+				"While each country carries the weight of past conflicts, they now extend warm hospitality, inviting travelers to explore their diverse landscapes, savor their unique cuisines, and witness the resilience of their people.",
+			],
+			challenges: [
+				"Travellers often don't realize you need a visa for Vietnam. Try to get it early, if not you can pay for corrupt officials to expedite your application but its often a few hundred USD.",
+				"It can be a headache to get to train street in Hanoi, keep trying. Theirs always a cop looking away if you pick your moment.",
+			],
+			dos: [
+				"Spend a few days in Siem Reap (Angkor Wat) Theirs an insane amount to see so take it slow.",
+				"Checkout 'Katze' in Hanoi, no spoilers (Unless you watch the video).",
+			],
+			donts: [
+				"You can probably skip Cat Ba island as they've filled the bay in to be replaced with a mall.",
+			],
 			advice: {
-				travelLength: "",
-				currency: "",
-				season: "",
-				dailyBudget: "",
+				travelLength: "Each 2 weeks",
+				currency:
+					"Cambodian Riel KHR / Laotian Kip LAK (USD preferred) / Vietnamese Dong VND",
+				season: "March - November",
+				dailyBudget: "Cambodia/Laos $15usd / Vietnam $30usd",
 			},
 			travelAdvisory: {
-				link: "",
-				advice: Advisory.Level2,
+				link: "https://www.smartraveller.gov.au/destinations/Asia",
+				advice: Advisory.Level1,
 			},
 			music: [
 				{
-					title: "",
-					link: "",
+					title: "Sympathy for the Devil - The Rolling Stones",
+					link: "https://music.youtube.com/watch?v=uWepTCBBnLo&si=jIhgH9y8TyrGEoXL",
 				},
 				{
-					title: "",
-					link: "",
+					title: "Fortunate Son - Creedance Clearwater",
+					link: "https://music.youtube.com/watch?v=r5NzAksjfDI&si=Y32ZC_TEuC5SVn_C",
 				},
 				{
-					title: "",
-					link: "",
+					title: "Paint It, Black - The Rolling Stones",
+					link: "https://music.youtube.com/watch?v=170sceOWWXc&si=M1bNjhSe19-jnFdj",
 				},
 				{
-					title: "",
-					link: "",
+					title: "Khe Sanh - Cold Chisel",
+					link: "https://music.youtube.com/watch?v=ckYN_D1W-Pg&si=NdtlWtblWMrwW-rX",
 				},
 				{
-					title: "",
-					link: "",
+					title: "We Didn't Start the Fire - Billy Joel",
+					link: "https://music.youtube.com/watch?v=55q6jrfBDdk&si=YDoG-rDH4I7Olijb",
 				},
 			],
 		},
@@ -368,7 +427,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				travelLength: "Taiwan: 2 - 3 weeks / HK/Macau: 3 days - 1 week",
 				currency: "Taiwan Dollar TWD / Kong Kong Dollar HKD / Macanese Palaca",
 				season: "February to November",
-				dailyBudget: "Taiwan: $40usd / HK/Macau $150usd per day",
+				dailyBudget: "Taiwan: $40usd / HK/Macau $150usd",
 			},
 			travelAdvisory: {
 				link: "https://www.smartraveller.gov.au/destinations/Asia",
@@ -448,7 +507,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				travelLength: "3 - 6 months",
 				currency: "Indian Rupee",
 				season: "November - March",
-				dailyBudget: "$20usd per day",
+				dailyBudget: "$20usd",
 			},
 			travelAdvisory: {
 				link: "https://www.smartraveller.gov.au/destinations/asia/india",
@@ -523,7 +582,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				travelLength: "2 weeks",
 				currency: "Omani Rial OMR",
 				season: "October - April",
-				dailyBudget: "$200usd per day",
+				dailyBudget: "$200usd",
 			},
 			travelAdvisory: {
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/oman",
@@ -591,7 +650,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				travelLength: "Kuwait: 1 day / Iraqi kurdistan: 2 weeks",
 				currency: "Kuwaiti Dinar KWD / Iraqi Dinar IQD",
 				season: "November - February",
-				dailyBudget: "Kuwait: $200usd / Iraqi kurdistan: $40usd per day",
+				dailyBudget: "Kuwait: $200usd / Iraqi kurdistan: $40usd",
 			},
 			travelAdvisory: {
 				link: "https://www.smartraveller.gov.au/destinations/Middle%20East",
@@ -660,7 +719,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				travelLength: "2 weeks",
 				currency: "Jordan Jordanian Dinar",
 				season: "March - May or September - November",
-				dailyBudget: "$60usd per day",
+				dailyBudget: "$60usd",
 			},
 			travelAdvisory: {
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/jordan",
@@ -1170,7 +1229,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=nS7Yoj8qOwU&si=qG8EhiRjc3NxUjRO",
 				},
 			],
-			tags: ["Paris Hailwood"],
 		},
 	},
 	{
@@ -1241,6 +1299,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=dC9QIUKviJU&si=Z0Jx7lHOe3mJh0-o",
 				},
 			],
+			tags: ["Paris Hailwood"],
 		},
 	},
 	{
