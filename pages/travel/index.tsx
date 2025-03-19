@@ -19,6 +19,7 @@ import { Tooltip } from "@mui/material";
 import { useEffect, useState } from "react";
 import { SortBy } from "../../src/travel/types";
 import { TravelSort } from "../../src/travel/components/TravelSort";
+import { SearchBar } from "../../src/travel/components/SearchBar";
 
 const Travel: NextPage = () => {
 	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
@@ -114,6 +115,9 @@ const Travel: NextPage = () => {
 									</div>
 									{index === 0 && (
 										<div className={styles.sortToggleContainer}>
+											<div className={styles.searchContainer}>
+												<SearchBar />
+											</div>
 											<TravelSort setSortMetaDataBy={setSortSelection} />
 										</div>
 									)}
