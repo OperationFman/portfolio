@@ -64,4 +64,5 @@ export type Extras = {
 		link: string;
 	}[];
 	extraVideos?: { title: string; hostedLink: string }[];
+	tags?: string[];
 };

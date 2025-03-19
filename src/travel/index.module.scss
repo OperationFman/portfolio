@@ -17,11 +17,62 @@
 	}
 }
 
+.directoryContainer {
+	width: 100%;
+	padding: 0 3px 15px 0;
+	display: flex;
+	align-items: center;
+
+	@include breakpoint(medium) {
+		padding: 0 27px;
+	}
+}
+
+.countriesBeenContainer {
+	width: 30%;
+	font-size: 88%;
+
+	margin: 0 0 6px 18px;
+
+	@include breakpoint(medium) {
+		display: inline;
+		margin: 0 0 10px 0;
+	}
+}
+
+.directorySubtextDivider {
+	display: none;
+
+	@include breakpoint(medium) {
+		display: inline;
+		margin: 0 10px;
+	}
+}
+
+.directorySubText {
+	color: $brightGrey;
+	margin: -3px;
+
+	display: block;
+
+	@include breakpoint(medium) {
+		display: inline;
+		margin: 0;
+	}
+}
+
 .sortToggleContainer {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
+	flex-direction: row-reverse;
+	align-items: right;
 	position: relative;
+	width: 70%;
+
+	padding-right: 12px;
+
+	@include breakpoint(medium) {
+		padding: 0;
+	}
 }
 
 .greyout {

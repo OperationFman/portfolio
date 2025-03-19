@@ -12,6 +12,8 @@ import {
 	allCountriesList,
 	allNewestFirst,
 	allOldestFirst,
+	countTotalCountries,
+	enhancedTravelVideoMetaData,
 	funniestOnly,
 	searchResult,
 } from "../../src/travel/travelDataService";
@@ -22,6 +24,7 @@ import { useEffect, useState } from "react";
 import { SortBy } from "../../src/travel/types";
 import { TravelSort } from "../../src/travel/components/TravelSort";
 import { SearchBar } from "../../src/travel/components/SearchBar";
+import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
 
 const Travel: NextPage = () => {
 	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
@@ -102,13 +105,33 @@ const Travel: NextPage = () => {
 						className={styles.worldMap}
 					/>
 				</Tooltip>
-				<div className={styles.searchContainer}>
-					<SearchBar
-						searchArray={allCountriesList()}
-						searchingText={searchingText}
-						setSearchingText={setSearchingText}
-					/>
+				<div className={styles.directoryContainer}>
+					<div className={styles.countriesBeenContainer}>
+						{!searchingText && (
+							<>
+								<p className={styles.directorySubText}>
+									{travelVideoMetaData.length} Videos
+								</p>
+								<div className={styles.directorySubtextDivider}>|</div>
+								<p className={styles.directorySubText}>
+									{countTotalCountries()} Countries
+								</p>
+							</>
+						)}
+					</div>
+
+					<div className={styles.sortToggleContainer}>
+						<TravelSort setSortMetaDataBy={setSortSelection} />
+						<div className={styles.searchContainer}>
+							<SearchBar
+								searchArray={allCountriesList()}
+								searchingText={searchingText}
+								setSearchingText={setSearchingText}
+							/>
+						</div>
+					</div>
 				</div>
+
 				{sortedMetaData.map((metaData, index) => {
 					{
 						return (
@@ -132,11 +155,6 @@ const Travel: NextPage = () => {
 											{metaData.heading}
 										</h2>
 									</div>
-									{index === 0 && (
-										<div className={styles.sortToggleContainer}>
-											<TravelSort setSortMetaDataBy={setSortSelection} />
-										</div>
-									)}
 								</div>
 								<VideoLibrary videoMetaData={metaData.grouping} />
 							</div>

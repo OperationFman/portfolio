@@ -85,6 +85,18 @@ export function allCountriesList() {
 	return countries;
 }
 
+export const countTotalCountries = () => {
+	let totalCountries = 0;
+
+	travelVideoMetaData.forEach((video) => {
+		if (video.extras && video.extras.countries) {
+			totalCountries += video.extras.countries.length;
+		}
+	});
+
+	return totalCountries;
+};
+
 // ~~~~~~~~~~~~~~~~
 // Premixed Filters:
 // ~~~~~~~~~~~~~~~~
@@ -226,7 +238,7 @@ export const funniestOnly = () => {
 		grouping: TravelVideoMetaData[];
 	}[] = [];
 
-	const topHitsRange = { heading: "Top Hits", range: [9, 10] };
+	const topHitsRange = { heading: "Funniest", range: [9, 10] };
 
 	const grouping: TravelVideoMetaData[] = [];
 
@@ -257,11 +269,12 @@ export const searchResult = (searchTerm: string) => {
 	const results: { heading: string; grouping: TravelVideoMetaData[] }[] = [
 		{ heading: "Countries", grouping: [] },
 		{ heading: "Music", grouping: [] },
-		{ heading: "Other", grouping: [] },
+		{ heading: "Tags", grouping: [] },
+		{ heading: "Misc.", grouping: [] },
 	];
 
 	if (!searchTerm) {
-		return results;
+		return results.filter((result) => result.grouping.length > 0);
 	}
 
 	const lowerSearchTerm = searchTerm.toLowerCase();
@@ -292,11 +305,21 @@ export const searchResult = (searchTerm: string) => {
 			}
 		}
 
+		if (!matched && video.extras?.tags) {
+			for (const tag of video.extras.tags) {
+				if (tag.toLowerCase().includes(lowerSearchTerm)) {
+					results[2].grouping.push(video);
+					matched = true;
+					break;
+				}
+			}
+		}
+
 		if (
 			!matched &&
 			JSON.stringify(video).toLowerCase().includes(lowerSearchTerm)
 		) {
-			results[2].grouping.push(video);
+			results[3].grouping.push(video);
 		}
 	});
 
