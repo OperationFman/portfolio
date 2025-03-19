@@ -6,6 +6,7 @@ export enum Advisory {
 }
 
 export enum SortBy {
+	Searching = "Searching",
 	Newest = "Newest",
 	Oldest = "Oldest",
 	Best = "Best",

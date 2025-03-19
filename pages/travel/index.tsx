@@ -9,9 +9,11 @@ import {
 	allByDanger,
 	allByFood,
 	allByWorst,
+	allCountriesList,
 	allNewestFirst,
 	allOldestFirst,
 	funniestOnly,
+	searchResult,
 } from "../../src/travel/travelDataService";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
@@ -24,6 +26,7 @@ import { SearchBar } from "../../src/travel/components/SearchBar";
 const Travel: NextPage = () => {
 	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
 	const [sortSelection, setSortSelection] = useState(SortBy.Newest);
+	const [searchingText, setSearchingText] = useState<string>("");
 
 	useEffect(() => {
 		const searchParams = new URLSearchParams(window.location.search);
@@ -53,8 +56,17 @@ const Travel: NextPage = () => {
 			case SortBy.Funniest:
 				setSortedMetaData(funniestOnly());
 				break;
+			case SortBy.Searching:
+				setSortedMetaData(searchResult(searchingText));
+				break;
 		}
-	}, [sortSelection]);
+	}, [sortSelection, searchingText]);
+
+	useEffect(() => {
+		searchingText
+			? setSortSelection(SortBy.Searching)
+			: setSortSelection(SortBy.Newest);
+	}, [searchingText]);
 
 	const description =
 		"Travel related content including completion map and travel videos, some public and some private of my experiences.";
@@ -90,6 +102,13 @@ const Travel: NextPage = () => {
 						className={styles.worldMap}
 					/>
 				</Tooltip>
+				<div className={styles.searchContainer}>
+					<SearchBar
+						searchArray={allCountriesList()}
+						searchingText={searchingText}
+						setSearchingText={setSearchingText}
+					/>
+				</div>
 				{sortedMetaData.map((metaData, index) => {
 					{
 						return (
@@ -115,9 +134,6 @@ const Travel: NextPage = () => {
 									</div>
 									{index === 0 && (
 										<div className={styles.sortToggleContainer}>
-											<div className={styles.searchContainer}>
-												<SearchBar />
-											</div>
 											<TravelSort setSortMetaDataBy={setSortSelection} />
 										</div>
 									)}

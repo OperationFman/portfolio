@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Generated from UIVerse.io
 
@@ -93,7 +93,15 @@ Input.defaultProps = {};
 
 Input.displayName = "Input";
 
-export const SearchBar = () => {
+export const SearchBar = ({
+	searchArray,
+	searchingText,
+	setSearchingText,
+}: {
+	searchArray: string[];
+	searchingText: string;
+	setSearchingText: React.Dispatch<React.SetStateAction<string>>;
+}) => {
 	const inputRef = React.useRef<HTMLInputElement>(null);
 	const [isFocused, setIsFocused] = React.useState(false);
 
@@ -105,6 +113,11 @@ export const SearchBar = () => {
 		if (inputRef.current?.value === "") {
 			setIsFocused(false);
 		}
+	};
+
+	const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const term = event.target.value;
+		setSearchingText(term);
 	};
 
 	return (
@@ -121,6 +134,8 @@ export const SearchBar = () => {
 					placeholder='Search...'
 					onFocus={handleFocus}
 					onBlur={handleBlur}
+					onChange={handleSearchChange}
+					value={searchingText}
 				/>
 				<div
 					style={isFocused ? { ...iconStyle, ...focusedIconStyle } : iconStyle}>

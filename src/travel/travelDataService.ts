@@ -69,6 +69,22 @@ export const getTravelMetaDataIndex = (
 	return metaData.findIndex((item) => item.link === link);
 };
 
+export function allCountriesList() {
+	const countries: string[] = [];
+
+	enhancedTravelVideoMetaData().forEach((video) => {
+		if (video.extras && video.extras.countries) {
+			video.extras.countries.forEach((country) => {
+				if (!countries.includes(country)) {
+					countries.push(country);
+				}
+			});
+		}
+	});
+
+	return countries;
+}
+
 // ~~~~~~~~~~~~~~~~
 // Premixed Filters:
 // ~~~~~~~~~~~~~~~~
@@ -235,4 +251,54 @@ export const funniestOnly = () => {
 	}
 
 	return videoScoreGroups;
+};
+
+export const searchResult = (searchTerm: string) => {
+	const results: { heading: string; grouping: TravelVideoMetaData[] }[] = [
+		{ heading: "Countries", grouping: [] },
+		{ heading: "Music", grouping: [] },
+		{ heading: "Other", grouping: [] },
+	];
+
+	if (!searchTerm) {
+		return results;
+	}
+
+	const lowerSearchTerm = searchTerm.toLowerCase();
+
+	enhancedTravelVideoMetaData().forEach((video) => {
+		let matched = false;
+
+		if (video.extras?.countries) {
+			for (const country of video.extras.countries) {
+				if (country.toLowerCase().includes(lowerSearchTerm)) {
+					results[0].grouping.push(video);
+					matched = true;
+					break;
+				}
+			}
+		}
+
+		if (!matched && video.extras?.music) {
+			for (const music of video.extras.music) {
+				if (
+					music.title.toLowerCase().includes(lowerSearchTerm) ||
+					music.link.toLowerCase().includes(lowerSearchTerm)
+				) {
+					results[1].grouping.push(video);
+					matched = true;
+					break;
+				}
+			}
+		}
+
+		if (
+			!matched &&
+			JSON.stringify(video).toLowerCase().includes(lowerSearchTerm)
+		) {
+			results[2].grouping.push(video);
+		}
+	});
+
+	return results.filter((result) => result.grouping.length > 0);
 };
