@@ -63,8 +63,9 @@
 
 .sortToggleContainer {
 	display: flex;
-	flex-direction: row-reverse;
-	align-items: right;
+	flex-direction: row;
+	align-self: right;
+	justify-content: right;
 	position: relative;
 	width: 70%;
 

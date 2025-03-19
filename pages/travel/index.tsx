@@ -121,7 +121,6 @@ const Travel: NextPage = () => {
 					</div>
 
 					<div className={styles.sortToggleContainer}>
-						<TravelSort setSortMetaDataBy={setSortSelection} />
 						<div className={styles.searchContainer}>
 							<SearchBar
 								searchArray={allCountriesList()}
@@ -129,6 +128,7 @@ const Travel: NextPage = () => {
 								setSearchingText={setSearchingText}
 							/>
 						</div>
+						<TravelSort setSortMetaDataBy={setSortSelection} />
 					</div>
 				</div>
 

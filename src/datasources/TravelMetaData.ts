@@ -1,5 +1,6 @@
 import { Advisory } from "./../travel/types";
 import { TravelVideoMetaData } from "../travel/types";
+import { title } from "process";
 
 export const publicCDNVideoUrl = "https://d3atatnx15erez.cloudfront.net/";
 export const insecureRestrictionKey = "adventuretime";
@@ -273,6 +274,53 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CqD9tCMBNH4/?img_index=1",
 			"https://www.instagram.com/p/CqJB8WLhyXZ/?img_index=1",
 		],
+		extras: {
+			countries: ["Cambodia", "Laos", "Vietnam"],
+			scorecard: {
+				affordability: [9, 10, 8],
+				food: [3, 3, 3],
+				hospitality: [7, 6, 5],
+				safety: [7, 8, 7],
+				accessibility: [6, 7, 8],
+				video: [5, 5, 5],
+			},
+			finalScore: 6,
+			summary: [""],
+			challenges: [""],
+			dos: [""],
+			advice: {
+				travelLength: "",
+				currency: "",
+				season: "",
+				dailyBudget: "",
+			},
+			travelAdvisory: {
+				link: "",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "",
+					link: "",
+				},
+				{
+					title: "",
+					link: "",
+				},
+				{
+					title: "",
+					link: "",
+				},
+				{
+					title: "",
+					link: "",
+				},
+				{
+					title: "",
+					link: "",
+				},
+			],
+		},
 	},
 	{
 		title: "Taiwan, Hong Kong and Macau",
@@ -294,6 +342,61 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Cq8lp99BCD3/?img_index=1",
 			"https://www.instagram.com/p/Cq-ILXzrnjp/?img_index=1",
 		],
+		extras: {
+			countries: ["Taiwan", "Hong Kong", "Macau"],
+			scorecard: {
+				affordability: [7, 3, 3],
+				food: [5, 5, 5],
+				hospitality: [5, 5, 5],
+				safety: [9, 8, 9],
+				accessibility: [10, 9, 6],
+				video: [6, 6, 6],
+			},
+			finalScore: 6,
+			summary: [
+				"These 3 nations makeup not-China, each has had a controversial recent history and could be the flashpoint for future conflict but today they stand still with a unique chinese twist worth experiencing.",
+				"Taiwan is a wonderful place worth taking it slow and simply enjoying, from hiking to biking, from drinking to festivals - It has plenty to do and see.",
+				"Hong Kong is sadly losing it's identity but still has much to offer, the night life is incredible and it's recent history easy to get lost in.",
+			],
+			challenges: [
+				"Due to the expensive housing, many of the hostels are filled with locals which leads to a hostel culture devoid of friendship and connections",
+			],
+			dos: [
+				"Hong Kong has some remarkably amazing hiking, due to the unique zoning laws which keep true vegetation on the cusp of dense civilization.",
+			],
+			advice: {
+				travelLength: "Taiwan: 2 - 3 weeks / HK/Macau: 3 days - 1 week",
+				currency: "Taiwan Dollar TWD / Kong Kong Dollar HKD / Macanese Palaca",
+				season: "February to November",
+				dailyBudget: "Taiwan: $40usd / HK/Macau $150usd per day",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/Asia",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Xiao Zao Lei (Removed from streaming)",
+					link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+				},
+				{
+					title: "小城夏天 -  小城夏天",
+					link: "https://music.youtube.com/watch?v=iWnPpPjxmbw&si=ICMGQ9vBcMNm8pdU",
+				},
+				{
+					title: "Alive - Warbly Jets",
+					link: "https://music.youtube.com/watch?v=ESAYXP2YMB0&si=3xiMEOmIxu1dd3OV",
+				},
+				{
+					title: "Kung Fu Fighting - Cee Lo",
+					link: "https://music.youtube.com/watch?v=QspjKVTMlL8&si=Nw3Iu4jnKGZ1vQHy",
+				},
+				{
+					title: "Jackie Chan - Tiesto & Dzeko",
+					link: "https://music.youtube.com/watch?v=t6vBhvlKxMA&si=wU04dQ9eTMDneJ6C",
+				},
+			],
+		},
 	},
 	{
 		title: "India",
@@ -318,6 +421,66 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Cr884JABum8/?img_index=1",
 			"https://www.instagram.com/p/Cr_1nIPhkw1/?img_index=1",
 		],
+		extras: {
+			countries: ["India"],
+			scorecard: {
+				affordability: [9],
+				food: [2],
+				hospitality: [6],
+				safety: [3],
+				accessibility: [5],
+				video: [7],
+			},
+			finalScore: 7,
+			summary: [
+				"What a brilliant a diverse nation, no two areas here are the same so it's impossible to speak about any culture or rule for the entire nation as it varies completely.",
+				"If you want nature, peace and safety head south to Kerala. If you're after urban sprawl and endless activities, hit up Delhi in the north. Do you like mountains? head east to Darjeerling.",
+				"No two india experiences are the same and it's almost endless with places to go and things to see.",
+			],
+			challenges: [
+				"Safety is a concern depending on where you are. For example, in the denser poorer north i would recommend traveling alone as a woman. However in the south you'll find the population is dominantly women and so services and culture revolve more around keeping you safe.",
+				"You are guaranteed to get food poisoned at some point, simply allow flexibility in your schedule and pack plenty of medicine.",
+			],
+			dos: [
+				"Take the night trains, they're surprisingly comfy and are a great way to cover long distances without needing to check into a hotel.",
+			],
+			advice: {
+				travelLength: "3 - 6 months",
+				currency: "Indian Rupee",
+				season: "November - March",
+				dailyBudget: "$20usd per day",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/india",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Shugal Laga le - Raghu Dixit",
+					link: "https://music.youtube.com/watch?v=VOaZTJDRTLI&si=QNR2s1CSVj4V482j",
+				},
+				{
+					title: "ILAHI - Arijit Singh",
+					link: "https://music.youtube.com/watch?v=fs_nC2NjzqA&si=nt3ZZyg-h9puMyIt",
+				},
+				{
+					title: "MASTA - Vishal Dadlani",
+					link: "https://music.youtube.com/watch?v=S6DhdT0NAzI&si=tg89pvT5S56y3rLD",
+				},
+				{
+					title: "The Jawaani Song - Vishal Shekar",
+					link: "https://music.youtube.com/watch?v=S6DhdT0NAzI&si=u2H7XRRXh__TcHjM",
+				},
+				{
+					title: "BIBA - Marshmellow",
+					link: "https://music.youtube.com/watch?v=PRsDgXrfNxY&si=r9mzQQM4FQ3XuGKA",
+				},
+				{
+					title: "Billi Billi - Sukhbir & Kumaar",
+					link: "https://music.youtube.com/watch?v=A-13hzmVN90&si=u_Lt-08LWLR-srj8",
+				},
+			],
+		},
 	},
 	{
 		title: "Oman",
@@ -333,6 +496,54 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/CsNvb55M2t8/?img_index=1",
 			"https://www.instagram.com/p/CsTFmJHMw5w/?img_index=1",
 		],
+		extras: {
+			countries: ["Oman"],
+			scorecard: {
+				affordability: [2],
+				food: [2],
+				hospitality: [2],
+				safety: [10],
+				accessibility: [6],
+				video: [4],
+			},
+			finalScore: 4,
+			summary: [
+				"As far as rich petro-states go oman is probably the only great one. Rather than going the glitzy luxury fake route they decided to go for a more modest, comfortable and enriching feeling fo their nation.",
+				"Getting around Oman is such a lovely therapeutic experience, it feels almost like meditating to drive along the 4 lane silky smooth highways with not a soul in sight.",
+				"If you want a Middle East experience that feels like it came from a disney movie, this is it.",
+			],
+			challenges: [
+				"getting around by public transport is honestly an un-fun miserable experience, I highly recommend hiring a car.",
+			],
+			dos: [
+				"Try hiking in a wadi. It's combines a mix of shallow swimming and walking, just dont forget to bring plenty of drinking water.",
+				"Stay in a dome along the desert, its a relatively affordable and peaceful experience.",
+			],
+			advice: {
+				travelLength: "2 weeks",
+				currency: "Omani Rial OMR",
+				season: "October - April",
+				dailyBudget: "$200usd per day",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/middle-east/oman",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "Coastline - Hollow Coves",
+					link: "https://music.youtube.com/watch?v=f5ydCBPLT4Y&si=sRyqyokBdRQ9fnrO",
+				},
+				{
+					title: "Faster Car - Loving Caliber",
+					link: "https://music.youtube.com/watch?v=JI6vIsMu37c&si=Eg4tPw5FygAB4E1w",
+				},
+				{
+					title: "Mess Is Mine - Vance Joy",
+					link: "https://music.youtube.com/watch?v=KAh3A_4GVp8&si=cXDFYhva0vu9x3wg",
+				},
+			],
+		},
 	},
 	{
 		title: "Kuwait and Iraqi Kurdistan",
@@ -350,6 +561,58 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Csjuc4SrOXF/?img_index=1",
 			"https://www.instagram.com/p/CsrDDjhv8s4/?img_index=1",
 		],
+		extras: {
+			countries: ["Kuwait", "Iraqi Kurdistan"],
+			scorecard: {
+				affordability: [1, 8],
+				food: [1, 1],
+				hospitality: [4, 8],
+				safety: [7, 5],
+				accessibility: [8, 5],
+				video: [2, 2],
+			},
+			finalScore: 3,
+			summary: [
+				"Kuwait is a classic Persian Gulf petro-state with all the things you'd expect from luxury malls to car dependant transport. But at-least the artificial islands they're building don't completely destroy the marine life.",
+				"Next door you'll find Iraq and the autonomous region of iraqi Kurdistan which for all intents and purposes is a defacto independent country protected by the Peshmerga.",
+				"Recently ravaged by ISIS, the nation is still reeling and trying to find it's footing, the Kurds in the north continue to fight for independence but even so you'll find them warm, inviting and above all relatively safe.",
+			],
+			challenges: [
+				"The Kuwaiti Dinar is the most expensive currency in the world due to their oil exports, don't come poor",
+				"The food is some of the worst I've ever experienced, getting a decent feed is hard and the chance of sickness quite high",
+			],
+			dos: [
+				"Speak with the locals in Iraqi Kurdistan. They're incredibly friendly and willing to host. Just make sure to share the love",
+			],
+			donts: [
+				"Don't stay in the Kuwaiti sun too long, it's one of the easiest places in the world to suddenly die of dehydration without ever feeling thirsty",
+			],
+			advice: {
+				travelLength: "Kuwait: 1 day / Iraqi kurdistan: 2 weeks",
+				currency: "Kuwaiti Dinar KWD / Iraqi Dinar IQD",
+				season: "November - February",
+				dailyBudget: "Kuwait: $200usd / Iraqi kurdistan: $40usd per day",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/Middle%20East",
+				advice: Advisory.Level4,
+			},
+			music: [
+				{
+					title: "Never Ending Song - Conan Gray",
+					link: "https://music.youtube.com/watch?v=0KVo9zCPNMY&si=_9CdCeJKb4FYjmlq",
+				},
+				{
+					title: "Mirage - OneRepublic",
+					link: "https://music.youtube.com/watch?v=VQYpJc8iq2g&si=FuoUnbgx-MMN-A-g",
+				},
+				{
+					title: "Texas - Magic Man",
+					link: "https://music.youtube.com/watch?v=FfG-encCbNA&si=0DwlXQf6Szorxhsq",
+				},
+			],
+			tags: ["Paris Hailwood"],
+		},
 	},
 	{
 		title: "Jordan",
@@ -368,6 +631,66 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Cs8X9kSLP7_/?img_index=1",
 			"https://www.instagram.com/p/Cs_0-aRPvG5/?img_index=1",
 		],
+		extras: {
+			countries: ["Jordan"],
+			scorecard: {
+				affordability: [7],
+				food: [6],
+				hospitality: [8],
+				safety: [10],
+				accessibility: [7],
+				video: [7],
+			},
+			finalScore: 7,
+			summary: [
+				"The safest place in the Middle East, with something for literally everyone Jordan is a wonderful country to visit and have a lovely holiday",
+				"Sitting between several hostile powers you'd think Jordan to be dangerous but for decades now it's managed to remain a safe haven for refugees and tourists with plenty of warmth and hospitality to go around",
+				"It boasts some of the most attractive photogenic sites in the world from Wadi Rum with it's heritage train experience to Petra, the great Nabataean city lost in time",
+			],
+			challenges: [
+				"Getting between major cities can be a struggle and bus time tables dont always align. I'd recommend hiring a car, not a tour guide",
+			],
+			dos: [
+				"Apply for the Jordan Pass, it comes with entry to most attractions, historical sites and includes your visa for the country",
+				"Don't miss the north, plenty of quiet castles and forts from history to explore",
+				"Ensure you give Wadi Rum and Petra at least 2 full days each - It's easy to underestimate what you can do",
+				"Petra has a back entrance, start here at the 'Monastery' and you'll proceed to work down hill and finish at the famous treasury",
+			],
+			advice: {
+				travelLength: "2 weeks",
+				currency: "Jordan Jordanian Dinar",
+				season: "March - May or September - November",
+				dailyBudget: "$60usd per day",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/middle-east/jordan",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Since You Been Gone - Rainbow",
+					link: "https://music.youtube.com/watch?v=EGlZ2OPt_b8&si=ef2N94ssvn_CHB2J",
+				},
+				{
+					title: "Life on Mars? - David Bowie",
+					link: "https://music.youtube.com/watch?v=Enzxdvo8NOk&si=GCtRpIWCcnyppvbA",
+				},
+				{
+					title: "Scherzo for motorcycle and orchestra - John Williams",
+					link: "https://music.youtube.com/watch?v=1IFmRniWa0U&si=odN7pUpca3Yd8YFW",
+				},
+				{
+					title: "Finale & End Credits - Conan Gray",
+					link: "https://music.youtube.com/watch?v=l_VfjEmeUWk&si=wEWAb2jDWNi9hcR6",
+				},
+			],
+			extraLinks: [
+				{
+					title: "Jordan Pass",
+					link: "https://www.jordanpass.jo/",
+				},
+			],
+		},
 	},
 	{
 		title: "Saudi Arabia and Bahrain",
@@ -631,6 +954,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					hostedLink: "azerbaijanStoreEndoresment",
 				},
 			],
+			tags: ["Adam Melander"],
 		},
 	},
 	{
@@ -846,6 +1170,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=nS7Yoj8qOwU&si=qG8EhiRjc3NxUjRO",
 				},
 			],
+			tags: ["Paris Hailwood"],
 		},
 	},
 	{
@@ -1112,6 +1437,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					hostedLink: "philippines",
 				},
 			],
+			tags: ["Adam Melander"],
 		},
 	},
 	{
@@ -1263,6 +1589,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://www.facebook.com/share/p/18bAX5KRd2/",
 				},
 			],
+			tags: ["Adam Melander"],
 		},
 	},
 	{
@@ -1339,6 +1666,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=BToxRk8X3n8&si=lyKeDvD2I5AUoluq",
 				},
 			],
+			tags: ["Adam Melander"],
 		},
 	},
 	{
@@ -1602,6 +1930,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://www.instagram.com/reel/DHCCI8-tDIo/?hl=en",
 				},
 			],
+			tags: ["Paris Hailwood"],
 		},
 	},
 	// {
