@@ -13,7 +13,6 @@ import {
 	allNewestFirst,
 	allOldestFirst,
 	countTotalCountries,
-	enhancedTravelVideoMetaData,
 	funniestOnly,
 	searchResult,
 } from "../../src/travel/travelDataService";
@@ -25,51 +24,48 @@ import { SortBy } from "../../src/travel/types";
 import { TravelSort } from "../../src/travel/components/TravelSort";
 import { SearchBar } from "../../src/travel/components/SearchBar";
 import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
+import { isClientSide } from "../../utils/isClientSide";
 
 const Travel: NextPage = () => {
 	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
 	const [sortSelection, setSortSelection] = useState(SortBy.Newest);
 	const [searchingText, setSearchingText] = useState<string>("");
 
-	useEffect(() => {
-		const searchParams = new URLSearchParams(window.location.search);
-		searchParams.get("ranked") && setSortedMetaData(allByBest());
-	}, []);
+	const sortFunctions = {
+		[SortBy.Newest]: allNewestFirst,
+		[SortBy.Oldest]: allOldestFirst,
+		[SortBy.Best]: allByBest,
+		[SortBy.Worst]: allByWorst,
+		[SortBy.Food]: allByFood,
+		[SortBy.Danger]: allByDanger,
+		[SortBy.Funniest]: funniestOnly,
+		[SortBy.Searching]: () => searchResult(searchingText),
+	};
 
 	useEffect(() => {
-		switch (sortSelection) {
-			case SortBy.Newest:
-				setSortedMetaData(allNewestFirst());
-				break;
-			case SortBy.Oldest:
-				setSortedMetaData(allOldestFirst());
-				break;
-			case SortBy.Best:
-				setSortedMetaData(allByBest());
-				break;
-			case SortBy.Worst:
-				setSortedMetaData(allByWorst());
-				break;
-			case SortBy.Food:
-				setSortedMetaData(allByFood());
-				break;
-			case SortBy.Danger:
-				setSortedMetaData(allByDanger());
-				break;
-			case SortBy.Funniest:
-				setSortedMetaData(funniestOnly());
-				break;
-			case SortBy.Searching:
-				setSortedMetaData(searchResult(searchingText));
-				break;
-		}
+		setSortedMetaData(sortFunctions[sortSelection]());
 	}, [sortSelection, searchingText]);
 
 	useEffect(() => {
-		searchingText
-			? setSortSelection(SortBy.Searching)
-			: setSortSelection(SortBy.Newest);
+		setSortSelection(searchingText ? SortBy.Searching : SortBy.Newest);
 	}, [searchingText]);
+
+	useEffect(() => {
+		if (isClientSide()) {
+			const searchParams = new URLSearchParams(window.location.search);
+			const sortParam = searchParams.get("SortBy");
+
+			if (sortParam) {
+				const sortEnum = Object.values(SortBy).find(
+					(enumValue) => enumValue.toLowerCase() === sortParam.toLowerCase(),
+				);
+
+				if (sortEnum) {
+					setSortSelection(sortEnum);
+				}
+			}
+		}
+	}, []);
 
 	const description =
 		"Travel related content including completion map and travel videos, some public and some private of my experiences.";

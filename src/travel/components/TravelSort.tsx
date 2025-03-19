@@ -74,26 +74,28 @@ export const TravelSort = ({
 							<Paper>
 								<ClickAwayListener onClickAway={handleClose}>
 									<MenuList autoFocusItem={open} onKeyDown={handleListKeyDown}>
-										{Object.values(SortBy).map((value, index) => (
-											<>
-												<MenuItem
-													onClick={() => {
-														setSortMetaDataBy(value);
-													}}
-													key={value}>
-													{value}
-												</MenuItem>
-												{index % 2 === 1 &&
-													index < Object.keys(SortBy).length - 1 && (
-														<div
-															style={{
-																borderBottom: "1px solid #ccc",
-																margin: "10px",
-															}}
-														/>
-													)}
-											</>
-										))}
+										{Object.values(SortBy)
+											.slice(1)
+											.map((value, index) => (
+												<>
+													<MenuItem
+														onClick={() => {
+															setSortMetaDataBy(value);
+														}}
+														key={value}>
+														{value}
+													</MenuItem>
+													{index % 2 === 1 &&
+														index < Object.keys(SortBy).length - 1 && (
+															<div
+																style={{
+																	borderBottom: "1px solid #ccc",
+																	margin: "10px",
+																}}
+															/>
+														)}
+												</>
+											))}
 									</MenuList>
 								</ClickAwayListener>
 							</Paper>

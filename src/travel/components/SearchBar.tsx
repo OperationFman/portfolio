@@ -48,7 +48,7 @@ const containerStyle: React.CSSProperties = {
 	position: "relative",
 	"--size-button": "35px",
 	color: "white",
-};
+} as React.CSSProperties;
 
 const inputStyle: React.CSSProperties = {
 	paddingLeft: "var(--size-button)",
