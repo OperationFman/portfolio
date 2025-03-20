@@ -227,6 +227,60 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/drive/folders/1MMl5yLAUNf9t-nBdIVktxjwQbfo385ZV?usp=sharing",
 		restricted: false,
+		extras: {
+			countries: ["Thailand"],
+			scorecard: {
+				affordability: [8],
+				food: [7],
+				hospitality: [7],
+				safety: [8],
+				accessibility: [8],
+				video: [5],
+			},
+			finalScore: 8,
+			summary: [
+				"Thailand is a land of vibrant contrasts, where ancient temples stand alongside bustling modern cities, and tranquil beaches meet lush jungles.",
+				"From the serene northern hills dotted with elephant sanctuaries and traditional villages to the lively southern islands offering world-class diving and nightlife, the country offers a diverse tapestry of experiences.",
+				"While known for its warm hospitality and delicious cuisine, Thailand also grapples with complex political dynamics and social issues, making it a fascinating destination that blends cultural richness with contemporary challenges.",
+			],
+			challenges: [
+				"Police corruption is rampant and sometimes unavoidable. Always be ready to pay a bribe or get done for something you didn't do.",
+			],
+			dos: [
+				"Don't miss some of the offbeat 'ancient' places like Ayutthaya, Nan and Sukhothai.",
+				"Take a grab/bolt bike places, you order them like any Uber but ride on the back. They're actually quite skilled so don't stress too much about danger.",
+				"Got any broken tech? Take it to MBK in Bangkok for a very cheap once-over and enjoy the experience.",
+			],
+			donts: [
+				"Avoid the Full Moon Party, it's really not any different to an average walking street except the drinks are super strong and its a logistical nightmare to get in/out.",
+				"When visiting Phuket, ensure you leave the island and explore the surrounds like Phi Phi and Krabi - Phuket itself is very underwhelming.",
+			],
+			advice: {
+				travelLength: "1 - 2 months",
+				currency: "Thai Baht THB",
+				season: "November - April",
+				dailyBudget: "$30usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/thailand",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "As It Was - Harry Styles",
+					link: "https://music.youtube.com/watch?v=wa5gkHMqbls&si=KriK0ouY6Qm_r3NI",
+				},
+				{
+					title: "What You Do To Me - Blanks",
+					link: "https://music.youtube.com/watch?v=kb9fbX2Ahpc&si=fyHA-81HGhEOsPbi",
+				},
+				{
+					title: "Live A Little - Chaz Cardigan",
+					link: "https://music.youtube.com/watch?v=kb9fbX2Ahpc&si=axlYM6lCJLlmjJSU",
+				},
+			],
+			tags: ["Phillip Sgardelis"],
+		},
 	},
 	{
 		title: "South Korea",
@@ -236,6 +290,60 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/drive/folders/1-qXArc3DWxqAKXxQfIAWwwtha53Qcn0O?usp=sharing",
 		restricted: true,
+		extras: {
+			countries: ["South Korea"],
+			scorecard: {
+				affordability: [6],
+				food: [5],
+				hospitality: [3],
+				safety: [9],
+				accessibility: [7],
+				video: [7],
+			},
+			finalScore: 7,
+			summary: [
+				"South Korea is a nation of rapid transformation, where ancient traditions meet a hyper-modern, tech-driven society, creating a captivating blend of experiences.",
+				"From the bustling streets of Seoul, a city that never sleeps, to the serene beauty of its mountainous landscapes and historic temples, South Korea offers a diverse tapestry of culture and adventure.",
+				"While it navigates the complexities of its geopolitical position, the warmth and resilience of its people, coupled with its dynamic cultural scene, make it a truly compelling destination.",
+			],
+			challenges: [
+				"Hostels can be a bit hit or miss, make sure to remain flexible if the scene isn't for you.",
+				"The night life in Seoul is amazing but getting home late can be a real slog, make sure to plan ahead.",
+			],
+			dos: [
+				"Checkout Yongma land, a completely abandoned theme park built before the 2008 recession which feels like a real horror movie.",
+				"Don't miss the DMZ, it's so accessible from Seoul and fascinating.",
+			],
+			advice: {
+				travelLength: "2 weeks",
+				currency: "Korean Won KRW",
+				season: "April - June & September - October",
+				dailyBudget: "$100usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/south-korea-republic-korea",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "LIKEY - Twice",
+					link: "https://music.youtube.com/watch?v=5gZl0PYC2Ho&si=8M9l7X8k08WBUvO6",
+				},
+				{
+					title: "Dolphin - Oh My Girl",
+					link: "https://music.youtube.com/watch?v=bac9H_DxQ6g&si=TP6uhr51HxsajVrs",
+				},
+				{
+					title: "Dynamite - BTS",
+					link: "https://music.youtube.com/watch?v=DHycmwZxQ0w&si=oe1_CRnsHc3oWxLZ",
+				},
+				{
+					title: "Dirty Little Animals - Bones UK",
+					link: "https://music.youtube.com/watch?v=jRU9L45V1Qo&si=YJ-Ye1GX2BCWGiak",
+				},
+			],
+			tags: ["Phillip Sgardelis"],
+		},
 	},
 	{
 		title: "United Arab Emirates",
@@ -245,6 +353,54 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/drive/folders/1u6-BtdvLQ8E-azD-iOX8b7aM1ngCuiMH?usp=sharing",
 		restricted: true,
+		extras: {
+			countries: ["United Arab Emirates"],
+			scorecard: {
+				affordability: [2],
+				food: [3],
+				hospitality: [3],
+				safety: [9],
+				accessibility: [5],
+				video: [4],
+			},
+			finalScore: 4,
+			summary: [
+				"The United Arab Emirates presents a fascinating blend of futuristic ambition and traditional Arabian heritage, crafting an experience that feels both luxurious and culturally rich.",
+				"From the towering skyscrapers of Dubai to the serene deserts of Abu Dhabi, the nation offers a diverse array of experiences, where opulent malls and cutting-edge architecture coexist with ancient forts and Bedouin traditions.",
+				"While the rapid development and artificial islands might raise questions about sustainability, the UAE still manages to showcase a unique vision of a modern Arabian nation, offering a glimpse into a region where innovation and tradition intertwine.",
+			],
+			challenges: [
+				"Getting around can be a challenge as the cities are completely built around cars. There is a metro but it's cramped and expensive.",
+			],
+			dos: [
+				"If visiting Dubai, Book tickets for the 'museum of the future' in advance, well worth it.",
+				"Try out indoor skiing, it's surprisingly fun and good value compared to regular skiing.",
+			],
+			advice: {
+				travelLength: "1 week",
+				currency: "UAE Dirham AED",
+				season: "November - April",
+				dailyBudget: "$200usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/middle-east/united-arab-emirates",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "I Really Want to Stay At Your House - Cyberpunk 2077",
+					link: "https://music.youtube.com/watch?v=Rbgw_rduQpM&si=xxR5jsqkmccjxhpA",
+				},
+				{
+					title: "I Ain't Worried - OneRepublic",
+					link: "https://music.youtube.com/watch?v=NF7oYY7Lhq4&si=3mJgkypiK4RLD23d",
+				},
+				{
+					title: "Sunshine - OneRepublic",
+					link: "https://music.youtube.com/watch?v=THZfYYSReDs&si=8Du2gNMahs-f5VTo",
+				},
+			],
+		},
 	},
 	{
 		title: "Fiji",
@@ -379,6 +535,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=55q6jrfBDdk&si=YDoG-rDH4I7Olijb",
 				},
 			],
+			tags: ["Phillip Sgardelis"],
 		},
 	},
 	{
@@ -484,7 +641,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["India"],
 			scorecard: {
 				affordability: [9],
-				food: [2],
+				food: [3],
 				hospitality: [6],
 				safety: [3],
 				accessibility: [5],
@@ -559,7 +716,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Oman"],
 			scorecard: {
 				affordability: [2],
-				food: [2],
+				food: [3],
 				hospitality: [2],
 				safety: [10],
 				accessibility: [6],
@@ -1091,6 +1248,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=75r0nQu-hMs&si=sNEeLlhpJ_K0CQJ3",
 				},
 			],
+			tags: ["Phillip Sgardelis"],
 		},
 	},
 	{
@@ -1166,6 +1324,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=tU7C8od6eSk&si=Do4KW0VTc57Dcn7P",
 				},
 			],
+			tags: ["Phillip Sgardelis"],
 		},
 	},
 	{
@@ -1327,7 +1486,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				accessibility: [6],
 				video: [3],
 			},
-			finalScore: 7,
+			finalScore: 4,
 			summary: [
 				"An island nation divided, where ancient ruins meet sun-drenched coastlines with everything you love and hate from it's nearest neighbors.",
 				"The Greek Cypriot and Turkish Cypriot communities of Cyprus are a living testament to the island's complex recent history where the UN buffer lines creates an incredibly strange atmosphere yet life goes on in paradise.",
@@ -1671,7 +1830,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["East India", "Bhutan"],
 			scorecard: {
 				affordability: [9, 1],
-				food: [1, 2],
+				food: [3, 3],
 				hospitality: [6, 4],
 				safety: [5, 10],
 				accessibility: [6, 1],
