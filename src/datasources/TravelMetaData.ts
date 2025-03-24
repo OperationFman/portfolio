@@ -1,6 +1,5 @@
 import { Advisory } from "./../travel/types";
 import { TravelVideoMetaData } from "../travel/types";
-import { title } from "process";
 
 export const publicCDNVideoUrl = "https://d3atatnx15erez.cloudfront.net/";
 export const insecureRestrictionKey = "adventuretime";
@@ -109,6 +108,61 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/drive/folders/1o683sYupSphrD9cv-SHIXUILJ_NJNy1W?usp=sharing",
 		restricted: false,
+		extras: {
+			countries: ["Nepal"],
+			scorecard: {
+				affordability: [9],
+				food: [4],
+				hospitality: [7],
+				safety: [7],
+				accessibility: [7],
+				video: [1],
+			},
+			finalScore: 5,
+			summary: [
+				"Nepal, a landlocked nation nestled in the Himalayas, offers a breathtaking blend of natural beauty and cultural richness.",
+				"From the towering peaks of Everest to the serene temples of Kathmandu, the country provides a diverse experience that captivates every traveler.",
+				"While its political landscape has faced challenges and its infrastructure can be demanding, the warmth of the Nepali people and the profound spiritual atmosphere make it a truly unforgettable destination.",
+			],
+			challenges: [
+				"Getting around is difficult, except flying. Dont drive cross country unless you're mentally prepared for it.",
+			],
+			donts: [
+				"I strongly suggest you don't do Everest Basecamp. It's not beautiful or fun compared to other more beautiful and rewarding mountains like Annapurna.",
+			],
+			dos: [
+				"Pack plenty of food poisoning medication.",
+				"Try out some of the refreshments in Pokhara and hangout on the lake.",
+			],
+			advice: {
+				travelLength: "1 month",
+				currency: "Nepalese Rupee NPR",
+				season: "September - May",
+				dailyBudget: "$20usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/nepal",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Zero - Imagine Dragons",
+					link: "https://music.youtube.com/watch?v=Du1-glzUBZk&si=QC6z3X38dJzCk8fI",
+				},
+				{
+					title: "Paradise - Ofenbach",
+					link: "https://music.youtube.com/watch?v=Rz-pEgjwxwc&si=CXhaMvs5boBXvexZ",
+				},
+				{
+					title: "Lemon To A Knife Fight - The Wombats",
+					link: "https://music.youtube.com/watch?v=PSP-K2d-qRU&si=ue4j0sR4AtgPUNDn",
+				},
+				{
+					title: "False Confidence - Noah Kahan",
+					link: "https://music.youtube.com/watch?v=ePSEafF0K5k&si=AtP7rvYps5i1HHaV",
+				},
+			],
+		},
 	},
 	{
 		title: "Indonesia",
@@ -118,6 +172,52 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/drive/folders/1xwYqAdgA8zi0T_mJ2ulkJ9iHIRlxRz8n?usp=sharing",
 		restricted: true,
+		extras: {
+			countries: ["Indonesia"],
+			scorecard: {
+				affordability: [8],
+				food: [6],
+				hospitality: [5],
+				safety: [6],
+				accessibility: [9],
+				video: [4],
+			},
+			finalScore: 5,
+			summary: [
+				"Bali, an Indonesian gem, offers a unique blend of serene landscapes and vibrant cultural experiences.",
+				"From the tranquil rice terraces of Ubud to the bustling beaches of Seminyak, the island caters to both relaxation and adventure. ",
+				"Though tourism has brought significant changes, the island's deep-rooted Hindu traditions and artistic heritage remain palpable, offering a glimpse into a culture that gracefully balances modernity and tradition.",
+			],
+			challenges: [
+				"Taxis are really scammy and scummy. Don't trust them, secure a price in advance and avoid at all costs..",
+			],
+			donts: [
+				"Carry any illicit substances around, they're hyper illegal and tourists are often made examples of.",
+			],
+			dos: [
+				"Carry a sarong wherever you go, many temples require your knees/shoulders to be covered but if you have your own you won't have to rent one.",
+			],
+			advice: {
+				travelLength: "Indonesia 1 - 2 months / Bali 1 weeks",
+				currency: "Indonesian Rupiah IDR",
+				season: "April - October",
+				dailyBudget: "$50usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/indonesia",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Boom Boom Boom - The Outhere Brothers",
+					link: "https://music.youtube.com/watch?v=TnT0-zACewU&si=vMZ76leFunzIn_OX",
+				},
+				{
+					title: "Rainy Zurich - The Fray",
+					link: "https://music.youtube.com/watch?v=yp1OfqMGktk&si=9L3Z9FM4UWS4OWV2",
+				},
+			],
+		},
 	},
 	{
 		title: "Malaysia & Singapore",
@@ -199,6 +299,61 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/drive/folders/1q-5yyEWifu1rdyHtk5leUm_JDaIoEpFO?usp=sharing",
 		restricted: false,
+		extras: {
+			countries: ["New Zealand"],
+			scorecard: {
+				affordability: [2],
+				food: [7],
+				hospitality: [2],
+				safety: [9],
+				accessibility: [4],
+				video: [6],
+			},
+			finalScore: 4,
+			summary: [
+				"New Zealand offers a breathtaking escape into nature's grandeur, from the soaring peaks of the Southern Alps to the serene shores of its countless lakes and fjords.",
+				"This island nation, far removed from the world's geopolitical fray, provides a tranquil and immersive experience, where Maori culture and modern Kiwi life blend seamlessly.",
+				"Whether you're seeking adrenaline-pumping adventures or quiet moments of reflection amidst stunning landscapes, New Zealand delivers a unique and unforgettable journey.",
+			],
+			challenges: [
+				"Renting a car when you're under 25 is a headache. Double check you can hire it ahead of time.",
+			],
+			dos: [
+				"Checkout the Antarctic centre and try a ride in the Haagland.",
+				"Rent a vehicle, publish transport is a huge hassle",
+			],
+			donts: [
+				"Skip the chance to go Skiing, it's a beautiful country and shredding powder in the southern hemisphere is wonderful.",
+			],
+			advice: {
+				travelLength: "2 weeks",
+				currency: "New Zealand Dollar NZD",
+				season: "October - February",
+				dailyBudget: "$200usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/pacific/new-zealand",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "If You Wanna - The Vaccines",
+					link: "https://music.youtube.com/watch?v=hOkeNOlKfo8&si=8WvhRoNBcdJ819OF",
+				},
+				{
+					title: "The Bridge of Khazad Dum - Howard Shore",
+					link: "https://music.youtube.com/watch?v=vbKy6FuACKg&si=D8RUMbOJCBamZ14y",
+				},
+				{
+					title: "Where No One Goes - John Powell",
+					link: "https://music.youtube.com/watch?v=BM8gC3Oj0OA&si=Fzx_xXlYuwC0_6z9",
+				},
+				{
+					title: "Time In A Bottle - YUNGBLUD",
+					link: "https://music.youtube.com/watch?v=7pRh9JqmMU0&si=GUVh8QRMbJjfdMmH",
+				},
+			],
+		},
 	},
 	{
 		title: "Japan",
@@ -208,6 +363,81 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/drive/folders/16ekQGT90_76BCrX_mbiN3JDhnKrMG1-2?usp=sharing",
 		restricted: false,
+		extras: {
+			countries: ["Japan"],
+			scorecard: {
+				affordability: [4],
+				food: [8],
+				hospitality: [4],
+				safety: [10],
+				accessibility: [10],
+				video: [8],
+			},
+			finalScore: 9,
+			summary: [
+				"Japan, a land of captivating contrasts, seamlessly blends ancient traditions with futuristic innovation.",
+				"From serene temples nestled amidst cherry blossoms to the neon-lit streets of bustling Tokyo, the island nation offers a unique cultural tapestry.",
+				"Whether you're drawn to the tranquility of a traditional tea ceremony, the exhilarating energy of anime culture, or the sublime beauty of its natural landscapes, Japan promises an unforgettable journey into a world where harmony and dynamism coexist.",
+			],
+			dos: [
+				"Make your own custom cup of noodles in Osaka.",
+				"Hit up a PokeStore if you're into Pokemon.",
+				"Take advantage of the Japan Rail Pass, allowing you access to unlimited high speed trains for as long as you need.",
+			],
+			donts: [
+				"Just do the classic Osaka > Kyoto > Tokyo route. It's extremely touristy and you'll miss much of what makes Japan feel special.",
+			],
+			advice: {
+				travelLength: "1 month",
+				currency: "Japanese Yen JPY",
+				season: "March - September",
+				dailyBudget: "$150usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/japan",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "Tokyo - Owl City",
+					link: "https://music.youtube.com/watch?v=46y8D7b0Fow&si=B0hoNdcAJny-Q5pO",
+				},
+				{
+					title: "Lost In Japan - Shawn Mendes & Zedd",
+					link: "https://music.youtube.com/watch?v=3744JiYOeFw&si=MhkJe4o5T-qdnVlG",
+				},
+				{
+					title: "Mr. Blue Sky - Electric Light Orchestra",
+					link: "https://music.youtube.com/watch?v=wuJIqmha2Hk&si=k0jGJJ06HDGWZju5",
+				},
+				{
+					title: "PONPONPON - Kyary Pamyu",
+					link: "https://music.youtube.com/watch?v=T_Rn8TAIL2w&si=PWuqi2saCs6XUjyb",
+				},
+				{
+					title: "Level Of Concern - Twenty One Pilots",
+					link: "https://music.youtube.com/watch?v=lXYZSDled4c&si=Z_W5oB7r18boek_M",
+				},
+				{
+					title: "Tokyo Drift - Teriyaki Boyz",
+					link: "https://music.youtube.com/watch?v=_SVxbdQR6Eg&si=TSsRBFisN2NW8dEQ",
+				},
+				{
+					title: "Re:Re: - Asian Kung-Fu Generation",
+					link: "https://music.youtube.com/watch?v=_v_Voe5KD1M&si=MMDUOT0chnogCoVe",
+				},
+				{
+					title: "Nintendo Mii Theme",
+					link: "https://music.youtube.com/watch?v=SZBV-rEltpk&si=7x-h5LiUur5os2aw",
+				},
+			],
+			extraLinks: [
+				{
+					title: "Japan Rail Pass",
+					link: "https://japanrailpass.net/en/",
+				},
+			],
+		},
 	},
 	// {
 	// 	title: "Australia",
@@ -253,7 +483,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 			donts: [
 				"Avoid the Full Moon Party, it's really not any different to an average walking street except the drinks are super strong and its a logistical nightmare to get in/out.",
-				"When visiting Phuket, ensure you leave the island and explore the surrounds like Phi Phi and Krabi - Phuket itself is very underwhelming.",
+				"Just stick to Phuket island, ensure you leave the island and explore the surrounds like Phi Phi and Krabi - Phuket itself is very underwhelming.",
 			],
 			advice: {
 				travelLength: "1 - 2 months",
@@ -1021,7 +1251,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				"Apply for a visa from SurfIran, GetIranVisa & CIBTvisas in advance. The length of stay you can be granted is generally down to your countries relationship with Iran",
 			],
 			donts: [
-				"Even mention Israel. Many people get offended and will report you if overhearing it. Similarly, don;t visit Iran if theirs even a trace of you having been to israel",
+				"Even mention Israel. Many people get offended and will report you if overhearing it. Similarly, don't visit Iran if theirs even a trace of you having been to israel",
 				"Stick around if theirs a crowd forming, ie protests. They quickly turn dangerous and it's largely accepted that unfortunate individuals caught in a bad situation are hurt or killed, simply to make an example",
 			],
 			advice: {

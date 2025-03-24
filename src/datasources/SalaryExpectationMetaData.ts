@@ -5,7 +5,7 @@ export const STOCK_REDUCTION = 0.5;
 export const TRAINING_ALLOWANCE = 0.9;
 export const GENERAL_ALLOWANCES = 0.8;
 
-// Numbers represent AUD, e.g 8000 = $8,000aud
+// Numbers represent USD, e.g 8000 = $8,000aud
 export const salaryExpectations = {
 	fullyRemote: 6000,
 	hybridRemote: 3000,
@@ -22,7 +22,7 @@ export const salaryExpectations = {
 
 // Country cost of living multipliers
 export const countryScaler = {
-	India: 0.35,
+	Nepal: 0.35,
 	Romania: 0.45,
 	Brazil: 0.5,
 	Spain: 0.65,
@@ -30,6 +30,6 @@ export const countryScaler = {
 	Canada: 0.8,
 	Germany: 0.95,
 	Australia: 1,
-	USA: 1.3,
-	Switzerland: 1.35,
+	USA: 1.2,
+	Switzerland: 1.3,
 };
