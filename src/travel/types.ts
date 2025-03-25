@@ -32,6 +32,7 @@ export type TravelVideoMetaData = {
 
 export type Extras = {
 	countries?: string[];
+	deductCountryCount?: number;
 	scorecard?: {
 		affordability: number[];
 		food: number[];

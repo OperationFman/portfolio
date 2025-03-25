@@ -2058,6 +2058,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://drive.google.com/drive/folders/1p724j3uqLAlkelWtiekMf1LUhbpzw-Jb?usp=sharing",
 		extras: {
 			countries: ["East India", "Bhutan"],
+			deductCountryCount: 1,
 			scorecard: {
 				affordability: [9, 1],
 				food: [3, 3],

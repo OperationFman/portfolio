@@ -91,6 +91,10 @@ export const countTotalCountries = () => {
 	travelVideoMetaData.forEach((video) => {
 		if (video.extras && video.extras.countries) {
 			totalCountries += video.extras.countries.length;
+
+			if (video.extras?.deductCountryCount) {
+				totalCountries -= video.extras?.deductCountryCount;
+			}
 		}
 	});
 
