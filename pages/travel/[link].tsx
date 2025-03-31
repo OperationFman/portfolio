@@ -46,6 +46,8 @@ const VideoContent = ({
 		extras,
 	} = metaData as TravelVideoMetaData;
 
+	const playerRef = useRef<ReactPlayer | null>(null);
+
 	const adviceKeyData: any = {
 		travelLength: "Trip Duration",
 		currency: "Currencies Used",
@@ -71,8 +73,6 @@ const VideoContent = ({
 	if (!metaData) {
 		return <ErrorContent />;
 	}
-
-	const playerRef = useRef<ReactPlayer | null>(null);
 
 	if (metaData.backupLink) {
 		addToWatchedVideosStorage(metaData.link);
