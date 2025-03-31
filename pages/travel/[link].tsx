@@ -72,11 +72,11 @@ const VideoContent = ({
 		return <ErrorContent />;
 	}
 
+	const playerRef = useRef<ReactPlayer | null>(null);
+
 	if (metaData.backupLink) {
 		addToWatchedVideosStorage(metaData.link);
 	}
-
-	const playerRef = useRef<ReactPlayer | null>(null);
 
 	const skipTo = (timecode: number) => {
 		if (playerRef.current) {
