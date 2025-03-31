@@ -8,6 +8,8 @@ import { Advisory, TravelVideoMetaData } from "../../src/travel/types";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import HeartBrokenIcon from "@mui/icons-material/HeartBroken";
+import FastForwardIcon from "@mui/icons-material/FastForward";
+import LaunchIcon from "@mui/icons-material/Launch";
 import {
 	getTravelMetaDataIndex,
 	addToWatchedVideosStorage,
@@ -26,6 +28,7 @@ import { VideoLibrary } from "../../src/travel/VideoLibrary";
 import { Button, LinearProgress } from "@mui/material";
 import router from "next/router";
 import { ProgressBar } from "../../src/travel/components/ProgressBar";
+import { useRef } from "react";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -73,6 +76,14 @@ const VideoContent = ({
 		addToWatchedVideosStorage(metaData.link);
 	}
 
+	const playerRef = useRef<ReactPlayer | null>(null);
+
+	const skipTo = (timecode: number) => {
+		if (playerRef.current) {
+			playerRef.current.seekTo(timecode, "seconds");
+		}
+	};
+
 	return (
 		<>
 			<Head>
@@ -107,17 +118,46 @@ const VideoContent = ({
 							url={`${publicCDNVideoUrl}${slug}.mp4`}
 							controls
 							pip
+							ref={playerRef}
 							playing={true}
 							volume={0.3}
 							height='100%'
 							width='100%'
 						/>
-
-						<h5
-							onClick={() => window.open(backupLink, "_blank")}
-							className={styles.backupLink}>
-							Downloads
-						</h5>
+						<div className={styles.subVideoInteraction}>
+							<div className={styles.skipToContainer}>
+								{extras && extras.highlights && (
+									<>
+										<h5 className={styles.skipToText}>
+											Highlight{extras.highlights.length > 1 ? "s" : ""}:
+										</h5>
+										<div>
+											{extras.highlights.map((item) => (
+												<Button
+													variant='outlined'
+													color='inherit'
+													key={`Button to skip to ${item}`}
+													startIcon={<FastForwardIcon />}
+													className={styles.skipToButton}
+													onClick={() => skipTo(item.timecode)}>
+													{item.title}
+												</Button>
+											))}
+										</div>
+									</>
+								)}
+							</div>
+							<div className={styles.backupLink}>
+								<Button
+									variant='text'
+									sx={{ fontWeight: "bold" }}
+									color='inherit'
+									size='small'
+									onClick={() => window.open(backupLink, "_blank")}>
+									Downloads
+								</Button>
+							</div>
+						</div>
 					</>
 				) : (
 					<div className={styles.comingSoon}>

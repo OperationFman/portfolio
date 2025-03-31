@@ -165,6 +165,10 @@
 	flex-direction: column;
 }
 
+.scoreHeader {
+	margin-top: 0;
+}
+
 .summaryContainer {
 	width: 100%;
 	margin-bottom: 50px;
@@ -274,6 +278,10 @@
 
 .upNextContainer {
 	margin-top: 6.25rem;
+}
+
+.scoreWrapper {
+	padding-left: 12px;
 }
 
 .scorecardLegend {
@@ -437,10 +445,33 @@
 	width: 100%;
 }
 
+.subVideoInteraction {
+	display: flex;
+	margin-bottom: -10px;
+
+	@include breakpoint(medium) {
+		margin-bottom: -20px;
+	}
+}
+
 .backupLink {
-	color: $defaultBlue;
 	cursor: pointer;
 	display: inline;
+	margin: 0;
+	color: $defaultBlue;
+}
+
+.skipToContainer {
+	width: 100%;
+}
+
+.skipToText {
+	margin: 5px 0 5px 10px;
+}
+
+.skipToButton {
+	color: $defaultYellow;
+	margin: 5px 10px;
 }
 
 .restrictedVideo {

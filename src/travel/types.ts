@@ -56,6 +56,10 @@ export type Extras = {
 		link: string;
 		advice: Advisory;
 	};
+	highlights?: {
+		title: string;
+		timecode: number;
+	}[];
 	music?: {
 		title: string;
 		link: string;

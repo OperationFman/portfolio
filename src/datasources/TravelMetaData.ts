@@ -2355,6 +2355,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/afghanistan",
 				advice: Advisory.Level4,
 			},
+			highlights: [
+				{
+					title: "Interviewed By The Taliban (4m 42s)",
+					timecode: 282,
+				},
+				{
+					title: "Rocking Mascara (8m 54s)",
+					timecode: 534,
+				},
+			],
 			music: [
 				{
 					title: "Back In Black - AC/DC",
