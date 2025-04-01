@@ -743,6 +743,20 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/Asia",
 				advice: Advisory.Level1,
 			},
+			highlights: [
+				{
+					title: "Romantic Duck (7m 1s)",
+					timecode: 421,
+				},
+				{
+					title: "Train Street (8m 13s)",
+					timecode: 493,
+				},
+				{
+					title: "Chu Chi Tunnels (12m 41s)",
+					timecode: 761,
+				},
+			],
 			music: [
 				{
 					title: "Sympathy for the Devil - The Rolling Stones",
@@ -820,6 +834,24 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/Asia",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "Chinese Lantern (2m 46s)",
+					timecode: 166,
+				},
+				{
+					title: "Sun Moon Lake (6m 6s)",
+					timecode: 366,
+				},
+				{
+					title: "25th Birthday (8m 14s)",
+					timecode: 494,
+				},
+				{
+					title: "Worlds Longest Escalator (12m 37s)",
+					timecode: 757,
+				},
+			],
 			music: [
 				{
 					title: "Xiao Zao Lei (Removed from streaming)",
@@ -900,6 +932,40 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/india",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "Organic Spice Farm (3m 10s)",
+					timecode: 190,
+				},
+				{
+					title: "Safari (3m 31s)",
+					timecode: 211,
+				},
+				{
+					title: "Kalaripayattu Martial Arts (4m 31s)",
+					timecode: 271,
+				},
+				{
+					title: "Cooking Class (5m 6s)",
+					timecode: 306,
+				},
+				{
+					title: "Tollywood Movie (6m 15s)",
+					timecode: 375,
+				},
+				{
+					title: "Monkey Chase (8m 26s)",
+					timecode: 506,
+				},
+				{
+					title: "Taj Mahal (14m 25s)",
+					timecode: 865,
+				},
+				{
+					title: "Ant Soldier (14m 50s)",
+					timecode: 890,
+				},
+			],
 			music: [
 				{
 					title: "Shugal Laga le - Raghu Dixit",
@@ -975,6 +1041,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/oman",
 				advice: Advisory.Level1,
 			},
+			highlights: [
+				{
+					title: "How To Turban (1m 48s)",
+					timecode: 108,
+				},
+				{
+					title: "Desert Dome (6m 24s)",
+					timecode: 384,
+				},
+			],
 			music: [
 				{
 					title: "Coastline - Hollow Coves",
@@ -1043,6 +1119,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/Middle%20East",
 				advice: Advisory.Level4,
 			},
+			highlights: [
+				{
+					title: "Meet the Kurdish Democratic Party (2m 35s)",
+					timecode: 155,
+				},
+				{
+					title: "Still Call Australia Home (7m 45s)",
+					timecode: 465,
+				},
+			],
 			music: [
 				{
 					title: "Never Ending Song - Conan Gray",
@@ -1112,6 +1198,20 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/jordan",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "Wadi Rum (3m 16s)",
+					timecode: 196,
+				},
+				{
+					title: "Arab Freedom Fighters Attack Heritage Train (5m 55s)",
+					timecode: 355,
+				},
+				{
+					title: "Petra (8m 31s)",
+					timecode: 511,
+				},
+			],
 			music: [
 				{
 					title: "Since You Been Gone - Rainbow",
@@ -1191,6 +1291,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/Middle%20East",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "Desert Hike (3m 25s)",
+					timecode: 205,
+				},
+				{
+					title: "Indoor Skydiving (12m 5s)",
+					timecode: 725,
+				},
+			],
 			music: [
 				{
 					title: "People I Don't Like - UPSAHL",
@@ -1265,6 +1375,20 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/iran",
 				advice: Advisory.Level4,
 			},
+			highlights: [
+				{
+					title: "Pro-Hijab Protests (1m 51s)",
+					timecode: 111,
+				},
+				{
+					title: "6 Cents Per Litre (6m 13s)",
+					timecode: 373,
+				},
+				{
+					title: "ZDF Interview (15m 29s)",
+					timecode: 929,
+				},
+			],
 			music: [
 				{
 					title: "Take A Walk - Passion Pit",
@@ -1368,6 +1492,28 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/Europe",
 				advice: Advisory.Level1,
 			},
+			highlights: [
+				{
+					title: "Bad Date (2m 31s)",
+					timecode: 151,
+				},
+				{
+					title: "Palestine & Australian National Anthems (6m 7s)",
+					timecode: 367,
+				},
+				{
+					title: "Stalin's House (10m 27s)",
+					timecode: 627,
+				},
+				{
+					title: "Tskaltubo - Abandoned Palaces (15m 27s)",
+					timecode: 927,
+				},
+				{
+					title: "Mud Volcanoes (18m 54s)",
+					timecode: 1134,
+				},
+			],
 			music: [
 				{
 					title: "Kaleidoscope - A Great Big World",
@@ -1456,6 +1602,20 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/europe/greece",
 				advice: Advisory.Level1,
 			},
+			highlights: [
+				{
+					title: "Crete Nightlife (4m 39s)",
+					timecode: 279,
+				},
+				{
+					title: "Frankie Jr. (6m 17s)",
+					timecode: 377,
+				},
+				{
+					title: "Santorini (9m 50s)",
+					timecode: 590,
+				},
+			],
 			music: [
 				{
 					title: "Greased Lightnin' - John Travolta & Jeff Conaway",
@@ -1532,6 +1692,28 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/europe/turkiye",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "Hagia Sophia (1m 09s)",
+					timecode: 69,
+				},
+				{
+					title: "Taxi Driver Brawl (4m 10s)",
+					timecode: 250,
+				},
+				{
+					title: "Gallipoli (6m 42s)",
+					timecode: 402,
+				},
+				{
+					title: "Antalya Extreme Activities (8m 55s)",
+					timecode: 535,
+				},
+				{
+					title: "Hot Air Balloons (11m 17s)",
+					timecode: 677,
+				},
+			],
 			music: [
 				{
 					title: "Yarina Kalir, Yanina Kalmaz - Ugur Isilak",
@@ -1608,6 +1790,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/lebanon",
 				advice: Advisory.Level4,
 			},
+			highlights: [
+				{
+					title: "Meet Hezbollah (4m 16s)",
+					timecode: 256,
+				},
+			],
 			music: [
 				{
 					title: "New Perspective - Noah Kahan",
@@ -1666,6 +1854,28 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/syria",
 				advice: Advisory.Level4,
 			},
+			highlights: [
+				{
+					title: "Lost in Damascus (3m 34s)",
+					timecode: 214,
+				},
+				{
+					title: "Aramaic - Jesus Native Language (5m 59s)",
+					timecode: 359,
+				},
+				{
+					title: "Maramarita Festival (7m 42s)",
+					timecode: 462,
+				},
+				{
+					title: "Aleppo (9m 31s)",
+					timecode: 571,
+				},
+				{
+					title: "Taylor Swift Concert (12m 10s)",
+					timecode: 730,
+				},
+			],
 			music: [
 				{
 					title: "Viva La Vida - Coldplay",
@@ -1735,6 +1945,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/europe/cyprus",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "Wind Surfing (36s)",
+					timecode: 36,
+				},
+				{
+					title: "Ghost City (1m 52s)",
+					timecode: 112,
+				},
+			],
 			music: [
 				{
 					title: "Gone - Jr Jr",
@@ -1796,6 +2016,24 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/israel-and-occupied-palestinian-territories",
 				advice: Advisory.Level4,
 			},
+			highlights: [
+				{
+					title: "Bethlehem (2m 14s)",
+					timecode: 134,
+				},
+				{
+					title: "Why Is The Dead Sea Cold? (6m 5s)",
+					timecode: 365,
+				},
+				{
+					title: "Mount Temptation (8m 15s)",
+					timecode: 495,
+				},
+				{
+					title: "Nazareth (14m 42s)",
+					timecode: 882,
+				},
+			],
 			music: [
 				{
 					title: "Bad Liar - Imagine Dragons",
