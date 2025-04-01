@@ -1869,6 +1869,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/Asia",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "Hungover Harp (2m 52s)",
+					timecode: 172,
+				},
+				{
+					title: "N-Word (5m 55s)",
+					timecode: 355,
+				},
+			],
 			music: [
 				{
 					title: "Manila - Ray Dalton",
@@ -1935,6 +1945,20 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/timor-leste",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "Breakdown (5m 18s)",
+					timecode: 318,
+				},
+				{
+					title: "Atauro Flight (6m 59s)",
+					timecode: 419,
+				},
+				{
+					title: "Crab Rave (8m 15s)",
+					timecode: 495,
+				},
+			],
 			music: [
 				{
 					title: "C'est La Vie - Yung Gravy",
@@ -2013,6 +2037,32 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/bangladesh",
 				advice: Advisory.Level3,
 			},
+			highlights: [
+				{
+					title: "Sexually Harassed (5m 31s)",
+					timecode: 331,
+				},
+				{
+					title: "Truck Hitchhiking (6m 13s)",
+					timecode: 373,
+				},
+				{
+					title: "Tile Floor Beds (7m 39s)",
+					timecode: 459,
+				},
+				{
+					title: "Barishal University Presentation (8m 34s)",
+					timecode: 514,
+				},
+				{
+					title: "Cockroach Genocide (12m 18s)",
+					timecode: 738,
+				},
+				{
+					title: "Train Surfing (14m 26s)",
+					timecode: 866,
+				},
+			],
 			music: [
 				{
 					title: "It Is What It Is - Jenna Raine",
@@ -2093,6 +2143,32 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/bhutan",
 				advice: Advisory.Level1,
 			},
+			highlights: [
+				{
+					title: "Diwali Festival (3m 39s)",
+					timecode: 219,
+				},
+				{
+					title: "National Archery Competition (8m 31s)",
+					timecode: 511,
+				},
+				{
+					title: "Bhutanese Nightlife (10m 15s)",
+					timecode: 615,
+				},
+				{
+					title: "Royal Enfield in the Himalayas (10m 50s)",
+					timecode: 650,
+				},
+				{
+					title: "First Tattoo (12m 53s)",
+					timecode: 773,
+				},
+				{
+					title: "Tigers Nest Monastary (16m 50s)",
+					timecode: 1010,
+				},
+			],
 			music: [
 				{
 					title: "Jag Changa - Raghu Dixit",
@@ -2166,6 +2242,20 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/Asia",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "Swimming with Sharks (3m 9s)",
+					timecode: 189,
+				},
+				{
+					title: "Eating a Fly (9m 28s)",
+					timecode: 568,
+				},
+				{
+					title: "Excessive Fireworks (12m 6s)",
+					timecode: 726,
+				},
+			],
 			music: [
 				{
 					title: "Sharks - Imagine Dragons",
@@ -2262,6 +2352,20 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/pakistan",
 				advice: Advisory.Level3,
 			},
+			highlights: [
+				{
+					title: "Rohtas Fort (5m 24s)",
+					timecode: 324,
+				},
+				{
+					title: "Car Crash (7m 13s)",
+					timecode: 433,
+				},
+				{
+					title: "Wagah Border Ceremony (14m 49s)",
+					timecode: 889,
+				},
+			],
 			music: [
 				{
 					title: "Growing Pains - Layup",
@@ -2357,12 +2461,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			},
 			highlights: [
 				{
-					title: "Interviewed By The Taliban (4m 42s)",
+					title: "Taliban Interview (4m 42s)",
 					timecode: 282,
 				},
 				{
-					title: "Rocking Mascara (8m 54s)",
+					title: "Trying Mascara (8m 54s)",
 					timecode: 534,
+				},
+				{
+					title: "Buddhas of Bamyan (13m 56s)",
+					timecode: 836,
 				},
 			],
 			music: [
