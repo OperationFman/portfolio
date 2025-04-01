@@ -176,7 +176,7 @@ const VideoContent = ({
 							</h5>
 							<h5
 								onClick={() => videoEnabled(metaData)}
-								className={styles.backupLink}>
+								className={styles.loginButton}>
 								Click Here
 							</h5>
 						</div>
