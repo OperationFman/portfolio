@@ -2751,12 +2751,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["myanmar"],
 			scorecard: {
-				affordability: [9],
+				affordability: [8],
 				food: [3],
 				hospitality: [6],
-				safety: [4],
-				accessibility: [3],
-				video: [9],
+				safety: [5],
+				accessibility: [2],
+				video: [8],
 			},
 			finalScore: 8,
 			summary: [
@@ -2811,15 +2811,15 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 			extraLinks: [
 				{
-					title: "Caleb - Only Tourists in Myanmar",
+					title: "Caleb Price - Only Tourists in Myanmar",
 					link: "https://www.youtube.com/shorts/du1PMeH3At8",
 				},
 				{
-					title: "Caleb - Shan State",
+					title: "Caleb Price - Shan State",
 					link: "https://www.youtube.com/shorts/ct8C4JyNJZs",
 				},
 			],
-			tags: ["Caleb Eli Price"],
+			tags: ["Caleb Eli Price", "Phillip Sgardelis"],
 		},
 	},
 	// {
