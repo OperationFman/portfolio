@@ -2648,7 +2648,9 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://www.youtube.com/shorts/8GL_pRbgnsg",
 				},
 			],
+			tags: ["Caleb Eli Price"],
 		},
+		
 	},
 	{
 		title: "Afghanistan",
@@ -2736,6 +2738,88 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				},
 			],
 			tags: ["Paris Hailwood"],
+		},
+	},
+	{
+		title: "Myanmar",
+		year: 2025,
+		hostedLink: "myanmar",
+		link: "myanmar",
+		restricted: false,
+		backupLink:
+			"https://drive.google.com/drive/folders/1jS1RladwBgOPzbq58GO8oHMkTeNdjtUY?usp=sharing",
+		extras: {
+			countries: ["myanmar"],
+			scorecard: {
+				affordability: [9],
+				food: [3],
+				hospitality: [6],
+				safety: [4],
+				accessibility: [3],
+				video: [9],
+			},
+			finalScore: 8,
+			summary: [
+				"Myanmar, a land of ancient Buddhist traditions and breathtaking landscapes, finds itself gripped by a tragic military junta that has brutally suppressed democratic aspirations and plunged the nation into turmoil.",
+				"Yet, amidst this darkness, the resilient spirit of the Burmese people shines through, their warmth and cultural richness a stark contrast to the oppressive regime.",
+				"For the intrepid traveler, Myanmar still offers glimpses of remarkable temples and vibrant cultures, though a visit comes with a heavy awareness of the ongoing struggle for freedom."
+			],
+			challenges: [
+				"Getting around is quite painful as only a few select busses will allow a small amount of foreigners aboard, getting tickets last minute is a gamble. Trains completely ban foreigners.",
+				"Double the time estimates for getting places."
+			],
+			dos: [
+				"Bring the most unbelievably crisp $100usd to exchange of you're life, even a fold or crease invalidates it here.",
+				"Visit during Thingyan, Myanmars version of Songkran."
+			],
+			donts: [
+				"Rely on local ATMs, they regularly run out of cash or give a terrible conversion rate.",
+			],
+			advice: {
+				travelLength: "2 - 3 weeks",
+				currency: "Myanmar Kyat MMK",
+				season: "November - April",
+				dailyBudget: "$20 USD",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/myanmar",
+				advice: Advisory.Level4,
+			},
+			highlights: [
+				{
+					title: "Thingyan Water Festival (3m 38s)",
+					timecode: 218,
+				},
+				{
+					title: "Kalaw Earthquake (7m 11s)",
+					timecode: 431,
+				},
+			],
+			music: [
+				{
+					title: "Wake Me Up - Avicii",
+					link: "https://music.youtube.com/watch?v=2NiyrtYegso&si=feOo5YwVkB6tHNXv",
+				},
+				{
+					title: "Hope - Tom Rosenthal",
+					link: "https://music.youtube.com/watch?v=hNMbx6bcSp0&si=OTjLJb4WFKNL3GnD",
+				},
+				{
+					title: "Old Town Road - Lil Nas X",
+					link: "https://music.youtube.com/watch?v=9YpvNgCSaCU&si=PYNKMk0-wQiY_BTg",
+				},
+			],
+			extraLinks: [
+				{
+					title: "Caleb - Only Tourists in Myanmar",
+					link: "https://www.youtube.com/shorts/du1PMeH3At8",
+				},
+				{
+					title: "Caleb - Shan State",
+					link: "https://www.youtube.com/shorts/ct8C4JyNJZs",
+				},
+			],
+			tags: ["Caleb Eli Price"],
 		},
 	},
 	// {
