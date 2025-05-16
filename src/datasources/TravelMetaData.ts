@@ -207,6 +207,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/indonesia",
 				advice: Advisory.Level2,
 			},
+			highlights: [
+				{
+					title: "White Water Rafting (1m 11s)",
+					timecode: 71,
+				}
+			],
 			music: [
 				{
 					title: "Boom Boom Boom - The Outhere Brothers",
@@ -335,6 +341,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/pacific/new-zealand",
 				advice: Advisory.Level1,
 			},
+			highlights: [
+				{
+					title: "Driving a Haagland (11m 51s)",
+					timecode: 711,
+				}
+			],
 			music: [
 				{
 					title: "If You Wanna - The Vaccines",
@@ -397,6 +409,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/japan",
 				advice: Advisory.Level1,
 			},
+			highlights: [
+				{
+					title: "On The News (15m)",
+					timecode: 900,
+				},
+				{
+					title: "Flying Home In COVID (28m 54s)",
+					timecode: 1734,
+				}
+			],
 			music: [
 				{
 					title: "Tokyo - Owl City",
@@ -554,6 +576,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/asia/south-korea-republic-korea",
 				advice: Advisory.Level1,
 			},
+			highlights: [
+				{
+					title: "Abandoned Theme Park (5m 33s)",
+					timecode: 333,
+				},
+				{
+					title: "Demilitarized Zone (7m 14s)",
+					timecode: 434,
+				}
+			],
 			music: [
 				{
 					title: "LIKEY - Twice",
@@ -674,6 +706,20 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/pacific/fiji",
 				advice: Advisory.Level1,
 			},
+			highlights: [
+				{
+					title: "DevSlam (1m 3s)",
+					timecode: 63,
+				},
+				{
+					title: "Sand Surfing (4m 30s)",
+					timecode: 270,
+				},
+				{
+					title: "Skiing (5m 12s)",
+					timecode: 312,
+				},
+			],
 			music: [
 				{
 					title: "Mona Lisa - Mxmtoon",
@@ -744,10 +790,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				advice: Advisory.Level1,
 			},
 			highlights: [
-				{
-					title: "Romantic Duck (7m 1s)",
-					timecode: 421,
-				},
 				{
 					title: "Train Street (8m 13s)",
 					timecode: 493,
@@ -834,24 +876,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/Asia",
 				advice: Advisory.Level2,
 			},
-			highlights: [
-				{
-					title: "Chinese Lantern (2m 46s)",
-					timecode: 166,
-				},
-				{
-					title: "Sun Moon Lake (6m 6s)",
-					timecode: 366,
-				},
-				{
-					title: "25th Birthday (8m 14s)",
-					timecode: 494,
-				},
-				{
-					title: "Worlds Longest Escalator (12m 37s)",
-					timecode: 757,
-				},
-			],
 			music: [
 				{
 					title: "Xiao Zao Lei (Removed from streaming)",
@@ -934,32 +958,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			},
 			highlights: [
 				{
-					title: "Organic Spice Farm (3m 10s)",
-					timecode: 190,
-				},
-				{
-					title: "Safari (3m 31s)",
-					timecode: 211,
-				},
-				{
 					title: "Kalaripayattu Martial Arts (4m 31s)",
 					timecode: 271,
 				},
 				{
 					title: "Cooking Class (5m 6s)",
 					timecode: 306,
-				},
-				{
-					title: "Tollywood Movie (6m 15s)",
-					timecode: 375,
-				},
-				{
-					title: "Monkey Chase (8m 26s)",
-					timecode: 506,
-				},
-				{
-					title: "Taj Mahal (14m 25s)",
-					timecode: 865,
 				},
 				{
 					title: "Ant Soldier (14m 50s)",
@@ -1041,16 +1045,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/middle-east/oman",
 				advice: Advisory.Level1,
 			},
-			highlights: [
-				{
-					title: "How To Turban (1m 48s)",
-					timecode: 108,
-				},
-				{
-					title: "Desert Dome (6m 24s)",
-					timecode: 384,
-				},
-			],
 			music: [
 				{
 					title: "Coastline - Hollow Coves",
@@ -1123,10 +1117,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				{
 					title: "Meet the Kurdish Democratic Party (2m 35s)",
 					timecode: 155,
-				},
-				{
-					title: "Still Call Australia Home (7m 45s)",
-					timecode: 465,
 				},
 			],
 			music: [
@@ -1292,10 +1282,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				advice: Advisory.Level2,
 			},
 			highlights: [
-				{
-					title: "Desert Hike (3m 25s)",
-					timecode: 205,
-				},
 				{
 					title: "Indoor Skydiving (12m 5s)",
 					timecode: 725,
@@ -1694,20 +1680,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			},
 			highlights: [
 				{
-					title: "Hagia Sophia (1m 09s)",
-					timecode: 69,
-				},
-				{
 					title: "Taxi Driver Brawl (4m 10s)",
 					timecode: 250,
 				},
 				{
 					title: "Gallipoli (6m 42s)",
 					timecode: 402,
-				},
-				{
-					title: "Antalya Extreme Activities (8m 55s)",
-					timecode: 535,
 				},
 				{
 					title: "Hot Air Balloons (11m 17s)",
@@ -2022,16 +2000,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					timecode: 134,
 				},
 				{
-					title: "Why Is The Dead Sea Cold? (6m 5s)",
+					title: "How The Sun Works (6m 5s)",
 					timecode: 365,
 				},
 				{
 					title: "Mount Temptation (8m 15s)",
 					timecode: 495,
-				},
-				{
-					title: "Nazareth (14m 42s)",
-					timecode: 882,
 				},
 			],
 			music: [
@@ -2107,16 +2081,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				link: "https://www.smartraveller.gov.au/destinations/Asia",
 				advice: Advisory.Level2,
 			},
-			highlights: [
-				{
-					title: "Hungover Harp (2m 52s)",
-					timecode: 172,
-				},
-				{
-					title: "N-Word (5m 55s)",
-					timecode: 355,
-				},
-			],
 			music: [
 				{
 					title: "Manila - Ray Dalton",
@@ -2185,7 +2149,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			},
 			highlights: [
 				{
-					title: "Breakdown (5m 18s)",
+					title: "Rural Breakdown (5m 18s)",
 					timecode: 318,
 				},
 				{
@@ -2285,16 +2249,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					timecode: 373,
 				},
 				{
-					title: "Tile Floor Beds (7m 39s)",
-					timecode: 459,
-				},
-				{
 					title: "Barishal University Presentation (8m 34s)",
 					timecode: 514,
-				},
-				{
-					title: "Cockroach Genocide (12m 18s)",
-					timecode: 738,
 				},
 				{
 					title: "Train Surfing (14m 26s)",
@@ -2391,20 +2347,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					timecode: 511,
 				},
 				{
-					title: "Bhutanese Nightlife (10m 15s)",
-					timecode: 615,
-				},
-				{
-					title: "Royal Enfield in the Himalayas (10m 50s)",
-					timecode: 650,
-				},
-				{
 					title: "First Tattoo (12m 53s)",
 					timecode: 773,
-				},
-				{
-					title: "Tigers Nest Monastary (16m 50s)",
-					timecode: 1010,
 				},
 			],
 			music: [
@@ -2592,10 +2536,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			},
 			highlights: [
 				{
-					title: "Rohtas Fort (5m 24s)",
-					timecode: 324,
-				},
-				{
 					title: "Car Crash (7m 13s)",
 					timecode: 433,
 				},
@@ -2709,8 +2649,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					timecode: 534,
 				},
 				{
-					title: "Buddhas of Bamyan (13m 56s)",
-					timecode: 836,
+					title: "Failing Ramadan (12m 9s)",
+					timecode: 729,
 				},
 			],
 			music: [
