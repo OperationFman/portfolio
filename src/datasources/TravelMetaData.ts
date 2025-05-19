@@ -2752,7 +2752,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 								{
 									sentence:
 										"Must see: Shwedagon Pagoda & 19th Street for Nightlife",
-									image: "yangonCity",
+									image: "yangonpagoda",
 								},
 							],
 						},
