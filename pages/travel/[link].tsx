@@ -9,7 +9,8 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import HeartBrokenIcon from "@mui/icons-material/HeartBroken";
 import FastForwardIcon from "@mui/icons-material/FastForward";
-import LaunchIcon from "@mui/icons-material/Launch";
+import ShareIcon from "@mui/icons-material/Share";
+import DownloadIcon from "@mui/icons-material/Download";
 import {
 	getTravelMetaDataIndex,
 	addToWatchedVideosStorage,
@@ -25,10 +26,16 @@ import {
 } from "../../src/datasources/TravelMetaData";
 import { PageContainer } from "../../src/global/PageContainer";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
-import { Button, LinearProgress } from "@mui/material";
-import router from "next/router";
+import {
+	Button,
+	IconButton,
+	LinearProgress,
+	Tooltip,
+	Zoom,
+} from "@mui/material";
+import router, { useRouter } from "next/router";
 import { ProgressBar } from "../../src/travel/components/ProgressBar";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -47,6 +54,7 @@ const VideoContent = ({
 	} = metaData as TravelVideoMetaData;
 
 	const playerRef = useRef<ReactPlayer | null>(null);
+	const router = useRouter();
 
 	const adviceKeyData: any = {
 		travelLength: "Trip Duration",
@@ -78,11 +86,47 @@ const VideoContent = ({
 		addToWatchedVideosStorage(metaData.link);
 	}
 
+	const handleCopyToClipboardWithTimecode = async () => {
+		if (playerRef.current) {
+			const currentTime = await playerRef.current.getCurrentTime();
+			const baseUrl = window.location.href.split("?")[0];
+			const newUrl = `${baseUrl}?timecode=${Math.floor(currentTime)}`;
+
+			try {
+				await navigator.clipboard.writeText(newUrl);
+				alert(`${newUrl} \ncopied to clipboard`);
+			} catch (err) {
+				alert("Failed to copy link to clipboard");
+			}
+		}
+	};
+
 	const skipTo = (timecode: number) => {
 		if (playerRef.current) {
+			console.log("player ready");
 			playerRef.current.seekTo(timecode, "seconds");
 		}
 	};
+
+	const handleTimecodeOnLoad = () => {
+		const timer = setTimeout(() => {
+			const timecodeParam = router.query.timecode;
+			if (
+				timecodeParam &&
+				typeof timecodeParam === "string" &&
+				!isNaN(parseInt(timecodeParam))
+			) {
+				const timeInSeconds = parseInt(timecodeParam);
+				skipTo(timeInSeconds);
+			}
+		}, 500);
+
+		return () => clearTimeout(timer);
+	};
+
+	useEffect(() => {
+		handleTimecodeOnLoad();
+	}, []);
 
 	return (
 		<>
@@ -133,29 +177,45 @@ const VideoContent = ({
 										</h5>
 										<div>
 											{extras.highlights.map((item) => (
-												<Button
-													variant='outlined'
-													color='inherit'
-													key={`Button to skip to ${item}`}
-													startIcon={<FastForwardIcon />}
-													className={styles.skipToButton}
-													onClick={() => skipTo(item.timecode)}>
-													{item.title}
-												</Button>
+												<Tooltip
+													TransitionComponent={Zoom}
+													title={`Skip to the moment when the ${item.title
+														.split("(")[0]
+														.trim()} happened`}>
+													<Button
+														variant='outlined'
+														color='inherit'
+														key={`Button to skip to ${item}`}
+														startIcon={<FastForwardIcon />}
+														className={styles.skipToButton}
+														onClick={() => skipTo(item.timecode)}>
+														{item.title}
+													</Button>
+												</Tooltip>
 											))}
 										</div>
 									</>
 								)}
 							</div>
-							<div className={styles.backupLink}>
-								<Button
-									variant='text'
-									sx={{ fontWeight: "bold" }}
-									color='inherit'
-									size='small'
-									onClick={() => window.open(backupLink, "_blank")}>
-									Downloads
-								</Button>
+							<div className={styles.share}>
+								<Tooltip
+									TransitionComponent={Zoom}
+									title='Copy link to this exact timestamp'>
+									<IconButton
+										onClick={() => handleCopyToClipboardWithTimecode()}
+										color='inherit'>
+										<ShareIcon fontSize='small' color='inherit' />
+									</IconButton>
+								</Tooltip>
+							</div>
+							<div>
+								<Tooltip TransitionComponent={Zoom} title='Download options'>
+									<IconButton
+										onClick={() => window.open(backupLink, "_blank")}
+										color='inherit'>
+										<DownloadIcon fontSize='medium' color='inherit' />
+									</IconButton>
+								</Tooltip>
 							</div>
 						</div>
 					</>
