@@ -211,7 +211,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				{
 					title: "White Water Rafting (1m 11s)",
 					timecode: 71,
-				}
+				},
 			],
 			music: [
 				{
@@ -345,7 +345,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				{
 					title: "Driving a Haagland (11m 51s)",
 					timecode: 711,
-				}
+				},
 			],
 			music: [
 				{
@@ -417,7 +417,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				{
 					title: "Flying Home In COVID (28m 54s)",
 					timecode: 1734,
-				}
+				},
 			],
 			music: [
 				{
@@ -584,7 +584,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				{
 					title: "Demilitarized Zone (7m 14s)",
 					timecode: 434,
-				}
+				},
 			],
 			music: [
 				{
@@ -2590,7 +2590,6 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 			tags: ["Caleb Eli Price"],
 		},
-		
 	},
 	{
 		title: "Afghanistan",
@@ -2702,15 +2701,15 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			summary: [
 				"Myanmar, a land of ancient Buddhist traditions and breathtaking landscapes, finds itself gripped by a tragic military junta that has brutally suppressed democratic aspirations and plunged the nation into turmoil.",
 				"Yet, amidst this darkness, the resilient spirit of the Burmese people shines through, their warmth and cultural richness a stark contrast to the oppressive regime.",
-				"For the intrepid traveler, Myanmar still offers glimpses of remarkable temples and vibrant cultures, though a visit comes with a heavy awareness of the ongoing struggle for freedom."
+				"For the intrepid traveler, Myanmar still offers glimpses of remarkable temples and vibrant cultures, though a visit comes with a heavy awareness of the ongoing struggle for freedom.",
 			],
 			challenges: [
 				"Getting around is quite painful as only a few select busses will allow a small amount of foreigners aboard, getting tickets last minute is a gamble. Trains completely ban foreigners.",
-				"Double the time estimates for getting places."
+				"Double the time estimates for getting places.",
 			],
 			dos: [
 				"Bring the most unbelievably crisp $100usd to exchange of you're life, even a fold or crease invalidates it here.",
-				"Visit during Thingyan, Myanmars version of Songkran."
+				"Visit during Thingyan, Myanmars version of Songkran.",
 			],
 			donts: [
 				"Rely on local ATMs, they regularly run out of cash or give a terrible conversion rate.",
@@ -2733,6 +2732,89 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				{
 					title: "Kalaw Earthquake (7m 11s)",
 					timecode: 431,
+				},
+			],
+			itineraries: [
+				{
+					title: "Junta Only Highlights",
+					length: "14 days",
+					description:
+						"Simple itinerary focusing on 'easy' to access poplar regions of Myanmar far from any frontlines and accessible solo",
+					mapImage: "myanmarjuntaonly",
+					steps: [
+						{
+							stepTitle: "Yangon",
+							days: "Day 1-3",
+							details: [
+								{
+									sentence: "Fly into Yangon, explore the city",
+									image: "yangonCity",
+								},
+								{
+									sentence:
+										"Must see: Shwedagon Pagoda & 19th Street for Nightlife",
+								},
+							],
+						},
+						{
+							stepTitle: "Commute Day",
+							days: "Day 4",
+							details: [
+								{
+									sentence: "Long commute to Kalaw (10+ hours)",
+								},
+								{
+									sentence:
+										"You can try to book a bus locally but they often have strict foreigner limits, at worst you can hire a local driver to drive you",
+									isInfo: true,
+								},
+								{
+									sentence:
+										"Due to checkpoints and damage from the war, double your time estimate for this route",
+									isWarning: true,
+								},
+								{
+									sentence:
+										"If you'd like to visit Naypidaw, ensure you try to arrive around 12 noon as they have special security checks and curfews in place",
+									isRecommendation: true,
+								},
+							],
+						},
+						{
+							stepTitle: "Kalaw & Inle lake",
+							days: "Day 5 - 8",
+							details: [
+								{
+									sentence: "Checkout Kalaw and surrounding areas",
+								},
+								{
+									sentence:
+										"Try a hike and stay in local villages, my recomendation for a local guide:",
+									link: "https://www.instagram.com/eversmiletrekking/?hl=en",
+								},
+							],
+						},
+						{
+							stepTitle: "Bagan",
+							days: "Day 9 - 12",
+							details: [
+								{
+									sentence: "Explore Bagan",
+									image: "bagan",
+								},
+							],
+						},
+						{
+							stepTitle: "Mandalay",
+							days: "Day 13 - 14",
+							details: [
+								{
+									sentence:
+										"Head back to Mandalay and flyout from their international airport",
+								},
+							],
+						},
+					],
 				},
 			],
 			music: [

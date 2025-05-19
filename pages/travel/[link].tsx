@@ -123,7 +123,7 @@ const VideoContent = ({
 				const timeInSeconds = parseInt(timecodeParam);
 				skipTo(timeInSeconds);
 			}
-		}, 500);
+		}, 100);
 
 		return () => clearTimeout(timer);
 	};
@@ -406,6 +406,39 @@ const VideoContent = ({
 								)}
 							</div>
 						</div>
+
+						{extras.itineraries && (
+							<div>
+								<h2>Itinerary Ideas</h2>
+								{extras.itineraries.map((itinerary, index) => (
+									<div className={styles.extrasContainer} key={itinerary.title}>
+										<div className={styles.itineraryItemImageContainer}>
+											<Image
+												src={`/travel/itineraries/${itinerary.mapImage}.png`}
+												alt={`Map of ${title} for ${itinerary.title} itinerary`}
+												width='1000'
+												height='1000'
+												layout='responsive'
+											/>
+										</div>
+
+										<div className={styles.itineraryItemContainer}>
+											<h3 className={styles.itineraryTitles}>
+												{itinerary.title}
+											</h3>
+											<h4
+												className={`${styles.itineraryTitles} ${styles.itinerarySubTitles}`}>
+												{itinerary.length}
+											</h4>
+											<p
+												className={`${styles.itineraryTitles}  ${styles.itinerarySubTitles}`}>
+												{itinerary.description}
+											</p>
+										</div>
+									</div>
+								))}
+							</div>
+						)}
 
 						{extras.extraVideos && (
 							<div className={styles.extraVideos}>

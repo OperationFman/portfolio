@@ -60,6 +60,7 @@ export type Extras = {
 		title: string;
 		timecode: number;
 	}[];
+	itineraries?: Itinerary;
 	music?: {
 		title: string;
 		link: string;
@@ -71,3 +72,22 @@ export type Extras = {
 	extraVideos?: { title: string; hostedLink: string }[];
 	tags?: string[];
 };
+
+export type Itinerary = {
+	title: string;
+	length: string;
+	description: string;
+	mapImage: string;
+	steps: {
+		stepTitle: string;
+		days: string;
+		details: {
+			sentence: string;
+			image?: string;
+			isWarning?: boolean;
+			isRecommendation?: boolean;
+			isInfo?: boolean;
+			link?: string;
+		}[];
+	}[];
+}[];

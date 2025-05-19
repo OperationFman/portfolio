@@ -152,7 +152,6 @@
 .extrasContainer {
 	display: flex;
 	flex-direction: column;
-	padding-top: 50px;
 	@include breakpoint(medium) {
 		flex-direction: row;
 	}
@@ -380,6 +379,36 @@
 
 .extraLinkItemLink {
 	color: $brightGrey;
+}
+
+.itineraryItemContainer {
+	width: 100%;
+	top: -15px;
+
+	margin-bottom: 60px;
+
+	@include breakpoint(medium) {
+		margin-bottom: 0;
+	}
+}
+
+.itineraryTitles {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.itinerarySubTitles {
+	padding-left: 15px;
+}
+
+.itineraryItemImageContainer {
+	position: relative;
+	width: 100%;
+	top: -15px;
+
+	@include breakpoint(medium) {
+		padding: 10px 6% 50px 9px;
+	}
 }
 
 .extraVideos {
