@@ -132,7 +132,7 @@ const VideoContent = ({
 				const timeInSeconds = parseInt(timecodeParam);
 				skipTo(timeInSeconds);
 			}
-		}, 100);
+		}, 500);
 
 		return () => clearTimeout(timer);
 	};
