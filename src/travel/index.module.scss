@@ -151,6 +151,8 @@
 
 .extrasContainer {
 	display: flex;
+	margin-top: 50px;
+
 	flex-direction: column;
 	@include breakpoint(medium) {
 		flex-direction: row;
@@ -383,12 +385,10 @@
 
 .itineraryItemContainer {
 	width: 100%;
-	top: -15px;
-
 	margin-bottom: 60px;
 
 	@include breakpoint(medium) {
-		margin-bottom: 0;
+		margin: -30px 0 0 0;
 	}
 }
 
@@ -404,11 +404,31 @@
 .itineraryItemImageContainer {
 	position: relative;
 	width: 100%;
-	top: -15px;
+	top: -30px;
 
 	@include breakpoint(medium) {
 		padding: 10px 6% 50px 9px;
 	}
+}
+
+.accordionTitle {
+	margin: 0;
+	width: 40%;
+}
+
+.accordionDays {
+	margin: 0 0 0 10px;
+	color: $brightGrey;
+}
+
+.accordionParagraph {
+	margin-top: -15px;
+	padding: 5px;
+}
+
+.accordionLink {
+	padding: 0 5px 5px 5px;
+	color: $brightGrey;
 }
 
 .extraVideos {

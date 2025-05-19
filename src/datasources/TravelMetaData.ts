@@ -2736,7 +2736,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 			itineraries: [
 				{
-					title: "Junta Only Highlights",
+					title: "Junta-Only Highlights",
 					length: "14 days",
 					description:
 						"Simple itinerary focusing on 'easy' to access poplar regions of Myanmar far from any frontlines and accessible solo",
@@ -2744,15 +2744,15 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					steps: [
 						{
 							stepTitle: "Yangon",
-							days: "Day 1-3",
+							days: "Day 1 - 3",
 							details: [
 								{
 									sentence: "Fly into Yangon, explore the city",
-									image: "yangonCity",
 								},
 								{
 									sentence:
 										"Must see: Shwedagon Pagoda & 19th Street for Nightlife",
+									image: "yangonCity",
 								},
 							],
 						},
@@ -2781,7 +2781,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 							],
 						},
 						{
-							stepTitle: "Kalaw & Inle lake",
+							stepTitle: "Kalaw & Inle Lake",
 							days: "Day 5 - 8",
 							details: [
 								{
