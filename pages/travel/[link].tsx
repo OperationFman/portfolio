@@ -56,6 +56,10 @@ const VideoContent = ({
 	const playerRef = useRef<ReactPlayer | null>(null);
 	const router = useRouter();
 
+	useEffect(() => {
+		handleTimecodeOnLoad();
+	}, []);
+
 	const adviceKeyData: any = {
 		travelLength: "Trip Duration",
 		currency: "Currencies Used",
@@ -124,10 +128,6 @@ const VideoContent = ({
 		return () => clearTimeout(timer);
 	};
 
-	useEffect(() => {
-		handleTimecodeOnLoad();
-	}, []);
-
 	return (
 		<>
 			<Head>
@@ -181,11 +181,11 @@ const VideoContent = ({
 													TransitionComponent={Zoom}
 													title={`Skip to the moment when the ${item.title
 														.split("(")[0]
-														.trim()} happened`}>
+														.trim()} happened`}
+													key={`Button to skip to ${item}`}>
 													<Button
 														variant='outlined'
 														color='inherit'
-														key={`Button to skip to ${item}`}
 														startIcon={<FastForwardIcon />}
 														className={styles.skipToButton}
 														onClick={() => skipTo(item.timecode)}>
