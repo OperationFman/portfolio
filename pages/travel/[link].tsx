@@ -438,92 +438,94 @@ const VideoContent = ({
 												{itinerary.title}
 											</h3>
 											<h4
-												className={`${styles.itineraryTitles} ${styles.itinerarySubTitles}`}>
+												className={styles.itineraryTitles}
+												style={{ paddingTop: "19px" }}>
 												{itinerary.length}
 											</h4>
-											<p
-												className={`${styles.itineraryTitles}  ${styles.itinerarySubTitles}`}>
+											<p className={styles.itineraryTitles}>
 												{itinerary.description}
 											</p>
-											{itinerary.steps.map((step, stepIndex) => (
-												<div key={`step item ${stepIndex}`}>
-													<Accordion>
-														<AccordionSummary
-															expandIcon={<ArrowDropDownIcon />}
-															aria-controls='panel1-content'
-															id='panel1-header'
-															style={{ margin: "10px", paddingTop: "10px" }}>
-															<h4 className={styles.accordionTitle}>
-																{step.stepTitle}
-															</h4>
-															<h4 className={styles.accordionDays}>
-																{step.days}
-															</h4>
-														</AccordionSummary>
-														<AccordionDetails>
-															{step.details.map((detail, detailIndex) => (
-																<div key={`detail item ${detailIndex}`}>
-																	<p
-																		className={styles.accordionParagraph}
-																		style={{
-																			backgroundColor: detail.isWarning
-																				? "rgba(255, 0, 0, 0.1)"
-																				: detail.isRecommendation
-																				? "rgba(255, 247, 0, 0.1)"
-																				: detail.isInfo
-																				? "rgba(0, 221, 255, 0.1)"
-																				: "transparent",
-																			marginBottom: detail.link
-																				? "-5px"
-																				: undefined,
-																		}}>
-																		{detail.isInfo && (
-																			<InfoIcon
-																				style={{
-																					marginRight: "6px",
-																				}}
-																			/>
+											<div className={styles.accordionContainer}>
+												{itinerary.steps.map((step, stepIndex) => (
+													<div key={`step item ${stepIndex}`}>
+														<Accordion>
+															<AccordionSummary
+																expandIcon={<ArrowDropDownIcon />}
+																aria-controls='panel1-content'
+																id='panel1-header'
+																style={{ margin: "10px", paddingTop: "10px" }}>
+																<h4 className={styles.accordionTitle}>
+																	{step.stepTitle}
+																</h4>
+																<h4 className={styles.accordionDays}>
+																	{step.days}
+																</h4>
+															</AccordionSummary>
+															<AccordionDetails>
+																{step.details.map((detail, detailIndex) => (
+																	<div key={`detail item ${detailIndex}`}>
+																		<p
+																			className={styles.accordionParagraph}
+																			style={{
+																				backgroundColor: detail.isWarning
+																					? "rgba(255, 0, 0, 0.1)"
+																					: detail.isRecommendation
+																					? "rgba(255, 247, 0, 0.1)"
+																					: detail.isInfo
+																					? "rgba(0, 221, 255, 0.1)"
+																					: "transparent",
+																				marginBottom: detail.link
+																					? "-5px"
+																					: undefined,
+																			}}>
+																			{detail.isInfo && (
+																				<InfoIcon
+																					style={{
+																						marginRight: "6px",
+																					}}
+																				/>
+																			)}
+
+																			{detail.isWarning && (
+																				<WarningIcon
+																					style={{ marginRight: "6px" }}
+																				/>
+																			)}
+
+																			{detail.isRecommendation && (
+																				<PsychologyAltIcon
+																					style={{ marginRight: "6px" }}
+																				/>
+																			)}
+
+																			{detail.sentence}
+																		</p>
+
+																		{detail.link && (
+																			<a
+																				className={styles.accordionLink}
+																				href={detail.link}
+																				target='_blank'>
+																				{detail.link}
+																			</a>
 																		)}
 
-																		{detail.isWarning && (
-																			<WarningIcon
-																				style={{ marginRight: "6px" }}
+																		{detail.image && (
+																			<Image
+																				src={`/travel/itineraries/${detail.image}.png`}
+																				alt={`Picture of ${detail.image}`}
+																				width='1000'
+																				height='1000'
+																				layout='responsive'
 																			/>
 																		)}
-
-																		{detail.isRecommendation && (
-																			<PsychologyAltIcon
-																				style={{ marginRight: "6px" }}
-																			/>
-																		)}
-
-																		{detail.sentence}
-																	</p>
-
-																	{detail.link && (
-																		<a
-																			className={styles.accordionLink}
-																			href={detail.link}
-																			target='_blank'>
-																			{detail.link}
-																		</a>
-																	)}
-
-																	{detail.image && (
-																		<Image
-																			src={`/travel/itineraries/${detail.image}.png`}
-																			alt={`Picture of ${detail.image}`}
-																			width='1000'
-																			height='1000'
-																			layout='responsive'
-																		/>
-																	)}
-																</div>
-															))}
-														</AccordionDetails>
-													</Accordion>
-												</div>
-											))}
+																	</div>
+																))}
+															</AccordionDetails>
+														</Accordion>
+													</div>
+												))}
+											</div>
 										</div>
 									</div>
 								))}

@@ -750,6 +750,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			"https://www.instagram.com/p/Cp23tBbPq61/?img_index=1",
 			"https://www.instagram.com/p/CqD9tCMBNH4/?img_index=1",
 			"https://www.instagram.com/p/CqJB8WLhyXZ/?img_index=1",
+			"https://www.instagram.com/p/DJhWKcdh_ex/?hl=en&img_index=1",
 		],
 		extras: {
 			countries: ["Cambodia", "Laos", "Vietnam"],
@@ -2493,6 +2494,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		year: 2025,
 		hostedLink: "pakistan",
 		link: "pakistan",
+		instagramLinks: [
+			"https://www.instagram.com/p/DGM3M_mpdbC/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DGV1iWvopgL/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DGzkwBRJ0Fh/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DG44LWuJOgv/?hl=en&img_index=1",
+		],
 		restricted: false,
 		backupLink:
 			"https://drive.google.com/drive/folders/14vEAX2n-dlTqZ59ywDNLbIte6FeClEV4?usp=sharing",
@@ -2597,6 +2604,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "afghanistan",
 		link: "afghanistan",
 		restricted: false,
+		instagramLinks: [
+			"https://www.instagram.com/p/DHBuxixB_pJ/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DHQBf6uprQO/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DHVYFMXpOR1/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DHf5eCJJYSs/?hl=en&img_index=1",
+		],
 		backupLink:
 			"https://drive.google.com/drive/folders/13u7UC_NTr1cXDKtclfhxyl-nokepTDjW?usp=sharing",
 		extras: {
@@ -2685,6 +2698,11 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "myanmar",
 		link: "myanmar",
 		restricted: false,
+		instagramLinks: [
+			"https://www.instagram.com/p/DIn7QDapHiw/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DIx6-MlpXIM/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DI2seBsJ4fU/?hl=en&img_index=1",
+		],
 		backupLink:
 			"https://drive.google.com/drive/folders/1jS1RladwBgOPzbq58GO8oHMkTeNdjtUY?usp=sharing",
 		extras: {
