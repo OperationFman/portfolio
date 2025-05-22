@@ -38,13 +38,12 @@ import {
 	IconButton,
 	LinearProgress,
 	Tooltip,
-	Typography,
 	Zoom,
 } from "@mui/material";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { ProgressBar } from "../../src/travel/components/ProgressBar";
 import { useEffect, useRef } from "react";
-import Link from "next/link";
+import { InstagramEmbed } from "react-social-media-embed/dist/components/embeds/InstagramEmbed";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -58,6 +57,7 @@ const VideoContent = ({
 		title,
 		year,
 		hostedLink: slug,
+		instagramLinks,
 		backupLink,
 		extras,
 	} = metaData as TravelVideoMetaData;
@@ -418,7 +418,9 @@ const VideoContent = ({
 
 						{extras.itineraries && (
 							<div>
-								<h2>Itineraries</h2>
+								<h2>
+									{extras.itineraries.length > 1 ? "Itineraries" : "Itinerary"}
+								</h2>
 								{extras.itineraries.map((itinerary) => (
 									<div className={styles.extrasContainer} key={itinerary.title}>
 										<div className={styles.itineraryItemImageContainer}>
@@ -594,6 +596,22 @@ const VideoContent = ({
 							)}
 						</div>
 					</>
+				)}
+
+				{instagramLinks && (
+					<div className={styles.socialContainer}>
+						<h2>Instagram</h2>
+						<div className={styles.customGrid}>
+							{instagramLinks &&
+								instagramLinks.map((link) => {
+									return (
+										<div key={link} className={styles.embeddedPost}>
+											<InstagramEmbed url={link} width={350} />
+										</div>
+									);
+								})}
+						</div>
+					</div>
 				)}
 
 				<div className={styles.upNextContainer}>

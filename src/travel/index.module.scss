@@ -360,6 +360,19 @@
 	flex-shrink: 0;
 }
 
+.customGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+	justify-items: center;
+	align-items: start;
+
+	@include breakpoint(medium) {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 30px;
+	}
+}
+
 .extraLinksWrapper {
 	padding-left: 20px;
 	margin-bottom: 20px;
@@ -469,10 +482,6 @@
 
 .loadingEmbed {
 	display: none;
-}
-
-.gridContainer {
-	justify-content: space-evenly;
 }
 
 .embeddedPost {
