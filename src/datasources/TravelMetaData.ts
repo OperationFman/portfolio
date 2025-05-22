@@ -2595,6 +2595,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://www.youtube.com/shorts/8GL_pRbgnsg",
 				},
 			],
+
 			tags: ["Caleb Eli Price"],
 		},
 	},
@@ -2689,6 +2690,204 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://www.instagram.com/reel/DHCCI8-tDIo/?hl=en",
 				},
 			],
+			itineraries: [
+				{
+					title: "Complete Afghanistan",
+					length: "3 weeks",
+					description:
+						"Complete trip that goes to all major cities and wonders, recomend utilizing internal flight as commutes are often 8-12 hours a-piece",
+					mapImage: "afghanhighlights",
+					steps: [
+						{
+							stepTitle: "Kabul",
+							days: "Day 1 - 2",
+							details: [
+								{
+									sentence:
+										"Fly into Kabul, lightly explore the city while purchasing local clothes & cash",
+								},
+								{
+									sentence:
+										"Book your Herat > Kabul (And optional Mazar-i-Sharif > Kabul and/or Herat > Kabul) internal flight(s) at a local agency",
+									isRecommendation: true,
+								},
+							],
+						},
+						{
+							stepTitle: "Bamyan",
+							days: "Day 3 - 7",
+							details: [
+								{
+									sentence: "Long commute to Bamyan (6+ hours)",
+								},
+								{
+									sentence:
+										"You should be able to get a bus ticket at the Kabul depo in advance",
+									isInfo: true,
+								},
+								{
+									sentence:
+										"Explore Bamyans Buddhas, screaming city and Band-e-Amir Lake",
+									image: "bamyanbuddhas",
+								},
+							],
+						},
+						{
+							stepTitle: "Mazar-i-Sharif",
+							days: "Day 8 - 10",
+							details: [
+								{
+									sentence: "Long commute to Mazar-i-Sharif (9+ hours)",
+								},
+								{
+									sentence: "Explore Mazar and Balkh",
+									image: "balkh",
+								},
+							],
+						},
+						{
+							stepTitle: "Quazni",
+							days: "Day 11 - 12",
+							details: [
+								{
+									sentence: "Flight or 12+ hour drive back to Kabul",
+								},
+								{
+									sentence: "Commute to and explore Quazni",
+								},
+							],
+						},
+						{
+							stepTitle: "Kandahar",
+							days: "Day 13 - 14",
+							details: [
+								{
+									sentence:
+										"Commute to and explore Kandahar, the seat of power for the Taliban",
+								},
+							],
+						},
+						{
+							stepTitle: "Herat",
+							days: "Day 14 - 16",
+							details: [
+								{
+									sentence: "Commute to and explore Herat",
+									image: "herat",
+								},
+							],
+						},
+						{
+							stepTitle: "Optional: Minaret of Jam",
+							days: "Day 17",
+							details: [
+								{
+									sentence:
+										"Very long commute to the Minaret of Jam, a famous lone menaret tower in the middle of a hidden oasis",
+								},
+								{
+									sentence:
+										"It's located far from any settlements, halfway back to Kabul",
+									image: "jam",
+								},
+							],
+						},
+						{
+							stepTitle: "Kabul",
+							days: "Day 17 - 18",
+							details: [
+								{
+									sentence:
+										"Final return to Kabul via flight or 20+ hour drive from Minaret",
+								},
+								{
+									sentence: "Spend an additional day in Kabul and fly out",
+									image: "kabul",
+								},
+							],
+						},
+					],
+				},
+				{
+					title: "Old Hippie Trail",
+					length: "7 days",
+					description:
+						"Pass through Afghanistan on an epic journey covering the must see along the old 1970's hippie trail",
+					mapImage: "afghanhippie",
+					steps: [
+						{
+							stepTitle: "Uzbekistan Border",
+							days: "Day 1",
+							details: [
+								{
+									sentence: "Cross the Uzbek border",
+								},
+								{
+									sentence:
+										"Get your Afghan visa on arrival and for cheaper than anywhere else",
+									isInfo: true,
+								},
+							],
+						},
+						{
+							stepTitle: "Mazar-i-Sharif",
+							days: "Day 2",
+							details: [
+								{
+									sentence: "Explore Mazar and Balkh",
+									image: "balkh",
+								},
+							],
+						},
+						{
+							stepTitle: "Bamyan",
+							days: "Day 3 - 4",
+							details: [
+								{ sentence: "Long commute to Bamyan (9+ hours)" },
+								{
+									sentence:
+										"Explore Bamyans Buddhas, screaming city and Band-e-Amir Lake",
+									image: "bamyanbuddhas",
+								},
+							],
+						},
+						{
+							stepTitle: "Kabul",
+							days: "Day 5",
+							details: [
+								{
+									sentence: "Explore Kabul city",
+									image: "kabul",
+								},
+							],
+						},
+						{
+							stepTitle: "Jalalabad",
+							days: "Day 6",
+							details: [
+								{
+									sentence: "Short commute to and explore Jalalabad",
+								},
+							],
+						},
+						{
+							stepTitle: "Pakistan Border",
+							days: "Day 7",
+							details: [
+								{
+									sentence:
+										"Commute via the famous Khyber Pass and cross at the Torkham Border",
+								},
+								{
+									sentence:
+										"Arrive extremely early for one of the most conjested small and dangerous border crossing of your life",
+									isWarning: true,
+								},
+							],
+						},
+					],
+				},
+			],
 			tags: ["Paris Hailwood"],
 		},
 	},
@@ -2757,7 +2956,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					title: "Junta-Only Highlights",
 					length: "14 days",
 					description:
-						"Simple itinerary focusing on 'easy' to access poplar regions of Myanmar far from any frontlines and accessible solo",
+						"Simple itinerary focusing on 'easy to access' popular regions of Myanmar far from any frontlines and accessible solo",
 					mapImage: "myanmarjuntaonly",
 					steps: [
 						{

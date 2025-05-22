@@ -172,7 +172,6 @@ const VideoContent = ({
 							controls
 							pip
 							ref={playerRef}
-							playing={true}
 							volume={0.3}
 							height='100%'
 							width='100%'
@@ -482,19 +481,26 @@ const VideoContent = ({
 																				<InfoIcon
 																					style={{
 																						marginRight: "6px",
+																						padding: "8px 0 0 0",
 																					}}
 																				/>
 																			)}
 
 																			{detail.isWarning && (
 																				<WarningIcon
-																					style={{ marginRight: "6px" }}
+																					style={{
+																						marginRight: "6px",
+																						padding: "8px 0 0 0",
+																					}}
 																				/>
 																			)}
 
 																			{detail.isRecommendation && (
 																				<PsychologyAltIcon
-																					style={{ marginRight: "6px" }}
+																					style={{
+																						marginRight: "6px",
+																						padding: "8px 0 0 0",
+																					}}
 																				/>
 																			)}
 
