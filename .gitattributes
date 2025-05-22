@@ -1,4 +1,12 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-* text eol=lf
+* text=auto eol=lf
+
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.svg text
+
 node_modules/ export-ignore
