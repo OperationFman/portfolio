@@ -43,18 +43,7 @@ import {
 import { useRouter } from "next/router";
 import { ProgressBar } from "../../src/travel/components/ProgressBar";
 import { useEffect, useRef } from "react";
-import dynamic from "next/dynamic";
-
-const DynamicReactPlayer = dynamic(() => import("react-player"), {
-	ssr: false,
-});
-const DynamicInstagramEmbed = dynamic(
-	() =>
-		import(
-			"react-social-media-embed/dist/components/embeds/InstagramEmbed"
-		).then((mod) => mod.InstagramEmbed),
-	{ ssr: false },
-);
+import { InstagramEmbed } from "react-social-media-embed/dist/components/embeds/InstagramEmbed";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -178,7 +167,7 @@ const VideoContent = ({
 
 				{hasRestrictionBypass() || !metaData.restricted ? (
 					<>
-						<DynamicReactPlayer
+						<ReactPlayer
 							url={`${publicCDNVideoUrl}${slug}.mp4`}
 							controls
 							pip
@@ -558,7 +547,7 @@ const VideoContent = ({
 											<h4 className={styles.videoCardTitle}>
 												{linkItem.title}
 											</h4>
-											<DynamicReactPlayer
+											<ReactPlayer
 												url={`${publicCDNVideoUrl}${linkItem.hostedLink}.mp4`}
 												controls
 												pip
@@ -625,7 +614,7 @@ const VideoContent = ({
 								instagramLinks.map((link) => {
 									return (
 										<div key={link} className={styles.embeddedPost}>
-											<DynamicInstagramEmbed url={link} width={350} />
+											<InstagramEmbed url={link} width={350} />
 										</div>
 									);
 								})}
