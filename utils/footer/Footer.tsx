@@ -2,7 +2,13 @@ import { Button, Container } from "@mui/material";
 import { useRouter } from "next/router";
 import styles from "./Footer.module.scss";
 
-export const Footer = ({ isHomepage = false }: { isHomepage?: boolean }) => {
+export const Footer = ({
+	isHomepage = false,
+	hideToTop = false,
+}: {
+	isHomepage?: boolean;
+	hideToTop?: boolean;
+}) => {
 	const toPageTop = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
@@ -18,14 +24,20 @@ export const Footer = ({ isHomepage = false }: { isHomepage?: boolean }) => {
 
 	return (
 		<>
-			<div className={styles.buttonContainer}>
-				<div
-					className={isHomepage ? styles.toTopButtonHome : styles.toTopButton}>
-					<Button onClick={toPageTop} variant='text' color={brightGrey}>
-						Back To Top
-					</Button>
+			{hideToTop ? (
+				<div style={{ height: "100vh" }} />
+			) : (
+				<div className={styles.buttonContainer}>
+					<div
+						className={
+							isHomepage ? styles.toTopButtonHome : styles.toTopButton
+						}>
+						<Button onClick={toPageTop} variant='text' color={brightGrey}>
+							Back To Top
+						</Button>
+					</div>
 				</div>
-			</div>
+			)}
 
 			<footer className={styles.bottomNav}>
 				<Container maxWidth={"xs"}>

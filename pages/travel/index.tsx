@@ -18,13 +18,14 @@ import {
 } from "../../src/travel/travelDataService";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
-import { Tooltip } from "@mui/material";
+import { ButtonBase, styled, Tooltip } from "@mui/material";
 import { useEffect, useState } from "react";
 import { SortBy } from "../../src/travel/types";
 import { TravelSort } from "../../src/travel/components/TravelSort";
 import { SearchBar } from "../../src/travel/components/SearchBar";
 import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
 import { isClientSide } from "../../utils/isClientSide";
+import router from "next/router";
 
 const Travel: NextPage = () => {
 	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
@@ -67,6 +68,36 @@ const Travel: NextPage = () => {
 		}
 	}, []);
 
+	const InvisibleImageButton = styled(ButtonBase)(({ theme }) => ({
+		position: "absolute",
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0,
+		backgroundColor: "transparent",
+		padding: 0,
+		border: "none",
+		"&:hover, &.Mui-focusVisible": {
+			zIndex: 1,
+			"& .MuiImage-root": {
+				transform: "scale(1.01)",
+				transition: theme.transitions.create("transform", {
+					duration: theme.transitions.duration.shortest,
+				}),
+			},
+			"& .MuiTouchRipple-root": {
+				opacity: 0.15,
+			},
+		},
+		"& .MuiTouchRipple-root": {
+			color: "rgba(255, 255, 255, 0.3)",
+		},
+	}));
+
+	const handleOpenBlankPage = () => {
+		router.push("/travel/world-map");
+	};
+
 	const description =
 		"Travel related content including completion map and travel videos, some public and some private of my experiences.";
 
@@ -91,16 +122,20 @@ const Travel: NextPage = () => {
 			</Head>
 
 			<PageContainer>
-				<Tooltip title='Places Ive Been' followCursor placement='bottom-end'>
+				<div style={{ position: "relative", width: "100%", height: "auto" }}>
 					<Image
 						src='/travel/WorldDotted.png'
 						alt='A map of the world with everywhere Ive been marked'
-						width='3840'
-						height='1878'
+						width={3840}
+						height={1878}
 						layout='responsive'
 						className={styles.worldMap}
 					/>
-				</Tooltip>
+					<InvisibleImageButton
+						focusRipple
+						onClick={handleOpenBlankPage}
+						aria-label='Open a blank page'></InvisibleImageButton>
+				</div>
 				<div className={styles.directoryContainer}>
 					<div className={styles.countriesBeenContainer}>
 						{!searchingText && (
