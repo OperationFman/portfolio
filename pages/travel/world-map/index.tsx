@@ -39,7 +39,7 @@ const WorldMapPage: NextPage = () => {
 					animation: "fadeIn 2000ms ease-in-out",
 					opacity: 1,
 				}}>
-				Where I've Been
+				Where I Have Been
 			</h1>
 
 			<div className={styles.mapReturnContainer}>
@@ -60,7 +60,7 @@ const WorldMapPage: NextPage = () => {
 				}}>
 				<Image
 					src='/travel/WorldDotted.png'
-					alt='A map of the world with everywhere Ive been marked'
+					alt='A full map of the world with everywhere I have been marked'
 					width={3840}
 					height={1878}
 					layout='responsive'
