@@ -1,6 +1,6 @@
 import { Tab, Tabs } from "@mui/material";
 import { useRouter } from "next/router";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { tabsData } from "../../datasources/NavBarMetaData";
 import styles from "./NavBar.module.scss";
 
@@ -83,8 +83,12 @@ export const Navbar = () => {
 				TabIndicatorProps={{ style: { background: tabsData[tabIndex].color } }}
 				textColor='inherit'
 				variant='standard'
-				centered
-				className={styles.container}>
+				className={styles.container}
+				sx={{
+					"& .MuiTabs-flexContainer": {
+						justifyContent: "flex-end",
+					},
+				}}>
 				{tabsData.map((item, index) => {
 					const tabStyles = ensureTabsFit(index);
 					return (
