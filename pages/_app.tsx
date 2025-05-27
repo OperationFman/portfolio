@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<GlobalTheme darkMode={darkMode}>
-				<Navbar setDarkMode={setDarkMode} />
+				<Navbar />
 				<Analytics />
 				<Component {...pageProps} />
 			</GlobalTheme>
