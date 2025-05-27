@@ -22,7 +22,7 @@ export const GlobalTheme = (props: GlobalTheme) => {
 	}, []);
 
 	return (
-		<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+		<ThemeProvider theme={darkTheme}>
 			<DarkMode.Provider value={darkMode}>
 				<CssBaseline />
 				{children}

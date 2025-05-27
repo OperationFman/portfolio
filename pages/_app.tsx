@@ -10,12 +10,6 @@ import { GlobalTheme } from "../themes/GlobalTheme";
 function MyApp({ Component, pageProps }: AppProps) {
 	const [darkMode, setDarkMode] = useState(true);
 
-	useEffect(() => {
-		if (localStorage.getItem("dark-mode")) {
-			setDarkMode(localStorage.getItem("dark-mode") === "true");
-		}
-	}, []);
-
 	if (typeof window !== "undefined") {
 		document.body.style.overflowX = "hidden";
 	}

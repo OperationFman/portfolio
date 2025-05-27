@@ -120,9 +120,9 @@ shown below.
 &nbsp;
 
 Dark mode support was also a consideration, adding an extra layer of complexity
-to the development process. However, once properly configured, it was easy to
-implement. I believe it is important to accommodate user preferences and provide
-a choice between light and dark modes.
+to the development process which was interesting to implement but after a few
+yeas of testing I found almost no users willingly switched to light mode, so it
+has been removed.
 
 ![Homepage in Light Mode](https://user-images.githubusercontent.com/42459707/217158552-4cce377e-23ca-424a-88fb-7d4ac7d005d4.png)
 
