@@ -17,48 +17,33 @@
 
 ## Overview
 
-![Homepage](https://user-images.githubusercontent.com/42459707/217387931-7e98a3aa-8a43-4c44-8137-4ef341f43f64.png)
+![Homepage](https://github.com/user-attachments/assets/63411a74-1521-4cd9-b9f8-a77124ecdfc5)
 
-This repository is the host for my professional portfolio website, providing a
-comprehensive display of my coding abilities and showcasing the functionalities
-of the website.
+This repository hosts my professional portfolio website, showcasing my coding skills and the site's features.
 
 &nbsp;
 
-![Guide Page](https://user-images.githubusercontent.com/42459707/217388236-cbb442a9-e8c8-4675-9686-6a37ea1512be.png)
+![Skills](https://github.com/user-attachments/assets/c14f1844-50b1-40ca-8816-4f8d35b56d8a)
+
+A list of tools I have familiarity with and w brief breakdown of my confidence in each
+
+![Projects](https://github.com/user-attachments/assets/8835c765-e97d-4626-87bf-ccb53b6f9ba6)
+
+I'll be continuously updating this repository with fresh content and resources, and I'll adapt the code to align with evolving industry standards.
+
+&nbsp;
+
+![Guide Page](https://github.com/user-attachments/assets/15c065d5-cb03-48c4-ac2d-38ae7c9d509e)
 
 Why did I build this site?
 
-The development of this site was motivated by two primary objectives. Firstly,
-it serves as a tool to increase marketability and differentiation in the
-competitive field of web development. Secondly, it provides a valuable learning
-opportunity, allowing for a deeper understanding of modern web development
-practices and the ability to create a project from scratch. The completion of
-this project has reinforced my proficiency in front-end programming.
+I developed this site with two main goals in mind. First, it serves as a tool to enhance my marketability and differentiate myself in the competitive field of web development. Second, it provided a valuable learning experience, deepening my understanding of modern web development practices and the process of building a project from the ground up. Completing this project has significantly strengthened my front-end programming skills.
 
 &nbsp;
 
-![Projects Page](https://user-images.githubusercontent.com/42459707/217388229-01844266-8df8-486a-83e8-424e05de4544.png)
+![Travel Page](https://github.com/user-attachments/assets/74f19bac-c6b5-4854-8486-8b7f08742f39)
 
-Going forward, this repository will be continually updated with fresh content
-and resources, and the code will be adapted to reflect the evolving industry
-standards.
-
-&nbsp;
-
-![Travel Page](https://private-user-images.githubusercontent.com/42459707/367673150-764558d9-5f59-4574-9268-728ad7498b2f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY0NzE5OTYsIm5iZiI6MTcyNjQ3MTY5NiwicGF0aCI6Ii80MjQ1OTcwNy8zNjc2NzMxNTAtNzY0NTU4ZDktNWY1OS00NTc0LTkyNjgtNzI4YWQ3NDk4YjJmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTE2VDA3MjgxNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWNiMGU4YTc5OTkwMGZhZTZjYzkwY2YxNTBkZTI0ZTBiOTEzODUwMTBmMWRlNmIzOWJjOGNiOTJlODhiNmE1NmQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.VCNSD5LCx1ES3Cko_u28azndr9Jps0Z7ATg0hwsIVXQ)
-
-An overview all the countries ive traveled. The library allows users to see the
-latest content by default organized from newest to oldest but this can be
-sorted. Additionally, users can sort by oldest first, or ranked from best to
-worst. Clicking the 'Show incomplete' button will show countries which do not
-yet have a video to show but they can see other content.
-
-Inside each video is a completed feature film from my time there and optionally
-instagram posts and media worth sharing.
-
-After watching a video, a tick is placed on the library page to indicate to the
-user which ones they've seen.
+This section provides an overview of the countries I've traveled to. Each video comes with a wide range of extra content that can be searched and sorted with
 
 &nbsp;
 
@@ -88,41 +73,19 @@ Deployment
 
 &nbsp;
 
-## Design Decisions
-
-This project was created as an opportunity to experiment and explore new
-techniques in web development. Initially, I came from a React Native background
-and wanted to expand my folio by trying out various styling tools. After
-evaluating options such as default CSS and Tailwind, I ultimately decided to use
-SASS for its ease of use and reliability.
-
-&nbsp;
-
-Performance was a primary concern as the website serves as my portfolio and is
-frequently visited by recruiters and potential employers. To ensure a smooth
-user experience, I kept the use of NPM packages to a minimum and wrote custom
-code to meet specific needs, opting for raw CSS whenever possible. The efforts
-to optimize performance are reflected in the high lighthouse score, as shown
-below.
+Performance was a key concern since this website is my portfolio and is frequently visited by recruiters and potential employers. To ensure a smooth user experience, I kept the use of NPM packages to a minimum and wrote custom code for specific needs, preferring raw CSS whenever possible. My efforts to optimize performance are reflected in the strong Lighthouse score, as shown below.
 
 ![Lighthouse Score](https://user-images.githubusercontent.com/42459707/217158718-b1019176-005a-4f20-8c03-a5fedfdf1c4a.png)
 
 &nbsp;
 
-Test-driven development was another major focus during the project's
-development. I aimed to gain a strong understanding of this development style,
-although it proved to be easier to implement with static pages. Complex APIs
-presented a greater challenge in this regard. The results of these efforts are
-shown below.
+Test-driven development (TDD) was another major focus during this project. I aimed to gain a solid understanding of this development style, though I found it easier to implement with static pages. Complex APIs presented a greater challenge in this regard. The results of these efforts are shown below.
 
 ![Yarn Test](https://user-images.githubusercontent.com/42459707/217159178-7104801d-195d-4262-b518-e8236a3b24a3.png)
 
 &nbsp;
 
-Dark mode support was also a consideration, adding an extra layer of complexity
-to the development process which was interesting to implement but after a few
-yeas of testing I found almost no users willingly switched to light mode, so it
-has been removed.
+I also considered dark mode support, which added an interesting layer of complexity to the development process. However, after a few years of testing, I noticed almost no users voluntarily switched to light mode, so I've since removed that feature.
 
 ![Homepage in Light Mode](https://user-images.githubusercontent.com/42459707/217158552-4cce377e-23ca-424a-88fb-7d4ac7d005d4.png)
 
@@ -310,11 +273,11 @@ You can reach out to me:
 
 - Email - Franklin.v.moon@gmail.com
 
+- Instagram - https://www.instagram.com/franklin.v.moon/?hl=en
+
 - LinkedIn - https://www.linkedin.com/in/franklin-moon-23572518a/
 
 - Facebook - https://www.facebook.com/frank.moon.731/
-
-- Discord - Franklin Moon#8808
 
 &nbsp;
 

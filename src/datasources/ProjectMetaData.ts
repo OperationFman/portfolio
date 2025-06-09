@@ -2,6 +2,23 @@ import { ProjectMetaData } from "../projects/types";
 
 export const projectMetaData: ProjectMetaData[] = [
 	{
+		title: "Watch 💧 Drop",
+		created: 8,
+		images: [
+			"/projects/watch-drop/desktop1.png",
+			"/projects/watch-drop/desktop2.png",
+			"/projects/watch-drop/desktop3.png",
+			"/projects/watch-drop/desktop4.png",
+			"/projects/watch-drop/desktop6.png",
+			"/projects/watch-drop/desktop7.png",
+		],
+
+		subTitle:
+			"Watch Drop is your personalized, serverless email notification service that keeps you updated on new TV show episodes the moment they're available to stream. No App, No Ads, No Account.",
+		deployedURL: "mailto:subscribe@watchdrop.com",
+		repoURL: "https://github.com/OperationFman/Watch-Drop",
+	},
+	{
 		title: "Budget 🎒 Sherpa",
 		created: 7,
 		images: [
@@ -25,6 +42,7 @@ export const projectMetaData: ProjectMetaData[] = [
 			"/projects/portfolio/desktop2.png",
 			"/projects/portfolio/desktop3.png",
 			"/projects/portfolio/desktop4.png",
+			"/projects/portfolio/desktop5.png",
 		],
 
 		subTitle:

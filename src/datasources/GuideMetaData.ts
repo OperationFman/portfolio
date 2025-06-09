@@ -2,6 +2,17 @@ import { Languages, Tags, Topic, GuideMetaData } from "../guides/types";
 
 export const guideMetaData: GuideMetaData[] = [
 	{
+		title: "Watch Drop Serverless Email Notification's ",
+		link: "watch-drop-serverless-email-notification's",
+		notionPage: "20de32d0081180b18659e19ba19b26ff",
+		created: 1749442502,
+		thumbnail: "/guides/watchdrop.png",
+		subTitle:
+			"BYO TV-show notification service with Lambda, SES, Eventbridge & Terraform IaC.",
+		topic: Topic.Infrastructure,
+		tags: [Tags.StepByStep, Tags.QuickStart],
+	},
+	{
 		title: "Github Actions Self-Hosted Runners with AWS EKS",
 		link: "github-actions-self-hosted-with-aws-eks",
 		notionPage: "15fe32d0081180899f0ee76bde4416e4",
