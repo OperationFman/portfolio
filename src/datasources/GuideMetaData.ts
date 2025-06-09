@@ -2,8 +2,8 @@ import { Languages, Tags, Topic, GuideMetaData } from "../guides/types";
 
 export const guideMetaData: GuideMetaData[] = [
 	{
-		title: "Watch Drop Serverless Email Notification's ",
-		link: "watch-drop-serverless-email-notification's",
+		title: "Watch Drop Serverless Email Notifications ",
+		link: "watch-drop-serverless-email-notifications",
 		notionPage: "20de32d0081180b18659e19ba19b26ff",
 		created: 1749442502,
 		thumbnail: "/guides/watchdrop.png",
@@ -58,7 +58,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.StepByStep, Tags.QuickStart],
 	},
 	{
-		title: "My Post-Production Process using DaVinci Resolve",
+		title: "Efficient Post-Production Process using DaVinci Resolve",
 		link: "how-I-edit-my-videos",
 		notionPage: "10de32d00811807e9725e006d6c6a830",
 		created: 1727326347,
@@ -135,7 +135,7 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "My Travel Hacks",
+		title: "Unusual Travel Hacks",
 		link: "travel-hacks",
 		notionPage: "10b40f8350c345df9bde0eeda7822a21",
 		created: 1675825612,
@@ -182,8 +182,8 @@ export const guideMetaData: GuideMetaData[] = [
 		tags: [Tags.CodeBlock],
 	},
 	{
-		title: "React-Redux Refresher",
-		link: "react-redux-refresher",
+		title: "React-Redux Reference",
+		link: "react-redux-reference",
 		notionPage: "b2b95c4552a24526ba3fec209cb1eb4a",
 		created: 1667982722,
 		thumbnail: "/guides/redux-ducks.png",
