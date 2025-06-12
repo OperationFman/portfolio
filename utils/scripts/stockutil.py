@@ -12,7 +12,7 @@ import argparse
 from pathlib import Path
 import requests #type: ignore
 
-WATERMARK_IMAGE_URL = "https://github.com/user-attachments/assets/6f59c991-bac9-416f-8779-2a33eff82e76"
+WATERMARK_IMAGE_URL = "https://raw.githubusercontent.com/OperationFman/portfolio/refs/heads/main/src/scripts/watermark.png"
 THUMBNAIL_TIMESTAMP = "00:00:02"
 THUMBNAILS_FOLDER_NAME = "thumbnails"
 WATERMARKED_FOLDER_NAME = "watermarks"
