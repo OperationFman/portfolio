@@ -1,0 +1,31 @@
+.assetCard {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	margin: 0 8px;
+
+	.MuiCardMedia-root {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.assetCardTitleOverlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.7) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	color: white;
+	padding: 8px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.assetCardTitle {
+	font-size: 1rem;
+}
