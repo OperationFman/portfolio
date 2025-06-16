@@ -1,8 +1,7 @@
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
-import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import HikingOutlinedIcon from "@mui/icons-material/HikingOutlined";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import colors from "../../themes/_colors.module.scss";
 
 const setColor = (tab: number, id: number, color: string) => {
@@ -32,12 +31,12 @@ export const tabsData: {
 	},
 	{
 		label: "GUIDES",
-		color: "#ce93d8",
-		gradient: "defaultPurpleGradient",
+		color: "#66bb6a",
+		gradient: "defaultGreenGradient",
 		route: "/guides",
 		icon: (tab: number) => (
 			<SchoolOutlinedIcon
-				className={setColor(tab, 1, colors.defaultPurple)}
+				className={setColor(tab, 1, colors.defaultGreen)}
 				style={{ height: "20px", width: "20px" }}
 			/>
 		),
@@ -55,5 +54,18 @@ export const tabsData: {
 			/>
 		),
 		order: 3,
+	},
+	{
+		label: "ASSETS",
+		color: "#ce93d8",
+		gradient: "defaultPurpleGradient",
+		route: "/assets-store",
+		icon: (tab: number) => (
+			<ShoppingCartOutlinedIcon
+				className={setColor(tab, 3, colors.defaultPurple)}
+				style={{ height: "20px", width: "20px" }}
+			/>
+		),
+		order: 4,
 	},
 ];

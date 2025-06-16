@@ -46,6 +46,20 @@ $defaultShadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 	-webkit-text-fill-color: transparent;
 }
 
+.defaultRedGradient {
+	background: linear-gradient(to bottom right, #e74c3c, #f1948a);
+	background-clip: $defaultRed;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.defaultGreenGradient {
+	background: linear-gradient(to bottom right, #66bb6a, #8dc788);
+	background-clip: $defaultGreen;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .defaultLightBlue {
 	color: $defaultLightBlue;
 }

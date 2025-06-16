@@ -53,7 +53,7 @@ const Guides: NextPage = () => {
 				<Head>
 					<title>Guides - Franklin V Moon</title>
 					<meta name='Guides' content={description} />
-					<link rel='icon' href='/favicon-purple.ico' />
+					<link rel='icon' href='/favicon-green.ico' />
 					<meta name='description' content={description} />
 					<meta
 						property='og:title'

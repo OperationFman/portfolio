@@ -23,7 +23,7 @@ export const FilterModal = (
 	disableClearAll: boolean,
 	handleClearAll: () => void,
 ) => {
-	const guidePurple = "#ce93d8";
+	const guidePurple = "#66bb6a";
 
 	return (
 		<div className={styles.container}>

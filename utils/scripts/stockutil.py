@@ -12,14 +12,15 @@ import argparse
 from pathlib import Path
 import requests #type: ignore
 
-WATERMARK_IMAGE_URL = "https://raw.githubusercontent.com/OperationFman/portfolio/refs/heads/main/src/scripts/watermark.png"
+WATERMARK_IMAGE_URL = "https://raw.githubusercontent.com/OperationFman/portfolio/refs/heads/main/utils/scripts/watermark.png"
 THUMBNAIL_TIMESTAMP = "00:00:02"
 THUMBNAILS_FOLDER_NAME = "thumbnails"
 WATERMARKED_FOLDER_NAME = "watermarks"
-
-FFMPEG_CRF = 20
+FFMPEG_CRF = 16
 FFMPEG_PRESET = "slower"
 WATERMARK_POSITION = "W-w-20:H-h-20"
+OUTPUT_VIDEO_FPS = 30
+OUTPUT_PIX_FMT = "yuv420p"
 
 ALLOWED_EXTENSIONS = ('.mp4', '.mov', '.avi', '.mkv', '.webm')
 
@@ -32,7 +33,7 @@ def create_output_dirs(input_dir: Path):
 
 def process_video(video_path: Path, thumbnails_output_dir: Path, watermarked_output_dir: Path):
     base_name = video_path.stem
-    print(f"\nProcessing: {video_path.name}")
+    print(f"Processing: {video_path.name}")
 
     thumbnail_output_path = thumbnails_output_dir / f"{base_name}.jpg"
     thumbnail_command = [
@@ -49,22 +50,40 @@ def process_video(video_path: Path, thumbnails_output_dir: Path, watermarked_out
         print(f"ERROR extracting thumbnail for {video_path.name}: {e}")
         return
 
+    square_thumbnail_output_path = thumbnails_output_dir / f"{base_name}_square.jpg"
+    square_thumbnail_command = [
+        "ffmpeg",
+        "-i", str(video_path),
+        "-ss", THUMBNAIL_TIMESTAMP,
+        "-vframes", "1",
+        "-q:v", "2",
+        "-vf", "crop=in_h:in_h:(in_w-in_h)/2",
+        str(square_thumbnail_output_path)
+    ]
+    try:
+        subprocess.run(square_thumbnail_command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    except subprocess.CalledProcessError as e:
+        print(f"ERROR extracting square thumbnail for {video_path.name}: {e}")
+
     watermarked_video_output_path = watermarked_output_dir / f"{base_name}_watermarked.mp4"
     watermark_command = [
         "ffmpeg",
         "-i", str(video_path),
         "-i", WATERMARK_IMAGE_URL,
         "-filter_complex",
-        f"[0:v][1:v]overlay={WATERMARK_POSITION}",
+        f"[0:v]format={OUTPUT_PIX_FMT}[v0];[v0][1:v]overlay={WATERMARK_POSITION}",
         "-c:v", "libx264",
         "-crf", str(FFMPEG_CRF),
         "-preset", FFMPEG_PRESET,
+        "-profile:v", "high",
+        "-level", "4.0",
+        "-r", str(OUTPUT_VIDEO_FPS),
+        "-vsync", "cfr",
         "-c:a", "copy",
         str(watermarked_video_output_path)
     ]
     try:
         subprocess.run(watermark_command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=3600)
-        print(f"Watermarked video created successfully: {watermarked_video_output_path.name}.")
     except subprocess.CalledProcessError as e:
         print(f"ERROR creating watermarked video for {video_path.name}: {e}")
         print(f"FFmpeg stderr: {e.stderr.decode()}")
