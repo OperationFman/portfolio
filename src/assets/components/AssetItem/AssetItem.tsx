@@ -10,7 +10,6 @@ export const AssetItem = ({
 }): JSX.Element => {
 	const priceDisplay = item.price === null ? "Free" : `$${item.price}`;
 
-	console.log(`/assets/${item.hostedLink}/${item.thumbnail}`);
 	return (
 		<Card key={item.title} className={styles.assetCard}>
 			<CardMedia

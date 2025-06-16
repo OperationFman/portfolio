@@ -54,7 +54,7 @@ export const GuideCard = ({
 						</div>
 					</CardContent>
 					<div className={styles.loadingContainer}>
-						{loading && <LinearProgress color='secondary' />}
+						{loading && <LinearProgress color='success' />}
 					</div>
 				</CardActionArea>
 			</Card>

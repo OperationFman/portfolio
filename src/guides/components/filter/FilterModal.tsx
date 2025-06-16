@@ -65,7 +65,7 @@ export const FilterModal = (
 			<div className={styles.clearAllContainer}>
 				<Button
 					variant='outlined'
-					color='secondary'
+					color='success'
 					size='medium'
 					onClick={() => handleClearAll()}
 					disabled={disableClearAll}>

@@ -62,7 +62,7 @@ const AssetsStore: NextPage = () => {
 						</Box>
 					</div>
 					<AssetSearchBar />
-					<h2>Stock Footage Collections</h2>
+					<h2>Stock Footage</h2>
 					<div className={styles.assetCollectionsContainer}>
 						<div className={styles.assetCollectionsGrid}>
 							{stockFootageMetaData.map((item) => (
