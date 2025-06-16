@@ -7,3 +7,21 @@
 .featuredContainer {
 	margin-bottom: 80px;
 }
+
+.assetCollectionsContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.assetCollectionsGrid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	@include breakpoint(medium) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include breakpoint(large) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}

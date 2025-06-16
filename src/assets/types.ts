@@ -3,14 +3,16 @@ export type AssetCollectionMetaData = {
 	thumbnail: string;
 	hostedLink: string;
 	assetItemMetaData: AssetItemMetaData[];
+	wallpapers: string[];
 };
 
 export type AssetItemMetaData = {
 	title: string;
+	hostedLink: string;
 	price: number | null;
 	thumbnail: string;
 	link: string;
-	created: number;
+	created?: number;
 	tags: string[];
 	location?: string;
 	new?: boolean;

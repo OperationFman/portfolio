@@ -8,7 +8,9 @@ import { stockFootageMetaData } from "../../src/datasources/AssetMetaData";
 import { Box, Card, CardMedia, Typography } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import AssetCard from "../../src/assets/components/AssetCard/AssetCard";
+import AssetItem from "../../src/assets/components/AssetItem/AssetItem";
+import AssetCollection from "../../src/assets/components/AssetCollection/AssetCollection";
+import { getFeaturedItems } from "../../src/assets/components/getFeaturedItems";
 
 const AssetsStore: NextPage = () => {
 	const description = "Assets of any digital products I'm selling";
@@ -51,21 +53,26 @@ const AssetsStore: NextPage = () => {
 				<PageContainer>
 					<div className={styles.featuredContainer}>
 						<h2>Featured</h2>
-						<p>Make these individual assets not collections</p>
 						<Box sx={{ position: "relative" }}>
 							<Carousel responsive={responsiveFeatured} partialVisible>
-								{stockFootageMetaData.map((item) => (
-									<AssetCard
-										collection={item}
-										key={`Collection of ${item.title}`}
-									/>
+								{getFeaturedItems(stockFootageMetaData).map((item, key) => (
+									<AssetItem item={item} key={`Featured item ${key + 1}`} />
 								))}
 							</Carousel>
 						</Box>
 					</div>
 					<AssetSearchBar />
-					<h2>Stock Footage</h2>
-					{/* stockFootageMetaData.map here */}
+					<h2>Stock Footage Collections</h2>
+					<div className={styles.assetCollectionsContainer}>
+						<div className={styles.assetCollectionsGrid}>
+							{stockFootageMetaData.map((item) => (
+								<AssetCollection
+									collection={item}
+									key={`Asset collection of ${item.title}`}
+								/>
+							))}
+						</div>
+					</div>
 				</PageContainer>
 			</div>
 			<Footer />
