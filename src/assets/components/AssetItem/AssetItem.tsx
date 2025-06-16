@@ -8,6 +8,9 @@ export const AssetItem = ({
 }: {
 	item: AssetItemMetaData;
 }): JSX.Element => {
+	const priceDisplay = item.price === null ? "Free" : `$${item.price}`;
+
+	console.log(`/assets/${item.hostedLink}/${item.thumbnail}`);
 	return (
 		<Card key={item.title} className={styles.assetCard}>
 			<CardMedia
@@ -19,6 +22,11 @@ export const AssetItem = ({
 			<Box className={styles.assetCardTitleOverlay}>
 				<Typography variant='h6' className={styles.assetCardTitle}>
 					{item.title}
+				</Typography>
+			</Box>
+			<Box className={styles.priceTag}>
+				<Typography variant='body2' sx={{ fontWeight: "bold" }}>
+					{priceDisplay}
 				</Typography>
 			</Box>
 		</Card>

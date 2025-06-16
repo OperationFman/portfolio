@@ -6,13 +6,15 @@ export const getFeaturedItems = (
 	const selectedAssetItems: AssetItemMetaData[] = [];
 	const selectedWallpaperItems: AssetItemMetaData[] = [];
 
-	const allAssetItems: { item: AssetItemMetaData; collectionTitle: string }[] =
-		[];
+	const allAssetItems: {
+		item: AssetItemMetaData;
+		collection: AssetCollectionMetaData;
+	}[] = [];
 	collections.forEach((collection) => {
 		collection.assetItemMetaData.forEach((item) => {
 			allAssetItems.push({
 				item: { ...item },
-				collectionTitle: collection.title,
+				collection: collection,
 			});
 		});
 	});
@@ -30,8 +32,12 @@ export const getFeaturedItems = (
 	for (let i = 0; i < 3; i++) {
 		if (allAssetItems.length === 0) break;
 		const randomIndex = Math.floor(Math.random() * allAssetItems.length);
-		const { item, collectionTitle } = allAssetItems.splice(randomIndex, 1)[0];
-		selectedAssetItems.push({ ...item, title: collectionTitle });
+		const { item, collection } = allAssetItems.splice(randomIndex, 1)[0];
+		selectedAssetItems.push({
+			...item,
+			title: collection.title,
+			hostedLink: collection.hostedLink,
+		});
 	}
 
 	for (let i = 0; i < 3; i++) {
@@ -48,5 +54,7 @@ export const getFeaturedItems = (
 		});
 	}
 
-	return [...selectedAssetItems, ...selectedWallpaperItems];
+	return [...selectedAssetItems, ...selectedWallpaperItems].sort(
+		() => Math.random() - 0.5,
+	);
 };
