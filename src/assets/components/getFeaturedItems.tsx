@@ -36,7 +36,6 @@ export const getFeaturedItems = (
 		selectedAssetItems.push({
 			...item,
 			title: collection.title,
-			hostedLink: collection.hostedLink,
 		});
 	}
 
@@ -46,9 +45,8 @@ export const getFeaturedItems = (
 		const { wallpaper, collection } = allWallpapers.splice(randomIndex, 1)[0];
 		selectedWallpaperItems.push({
 			title: collection.title,
-			hostedLink: collection.hostedLink,
 			price: null,
-			thumbnail: wallpaper,
+			thumbnail: `${collection.hostedLink}/${wallpaper}`,
 			link: collection.hostedLink,
 			tags: [],
 		});

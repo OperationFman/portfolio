@@ -3,8 +3,9 @@
 .assetCard {
 	position: relative;
 	height: 160px;
-	overflow: hidden;
 	margin: 4px 8px;
+	overflow: visible;
+	transition: linear 200ms;
 
 	.MuiCardMedia-root {
 		height: 100%;
@@ -35,11 +36,12 @@
 .priceTag {
 	position: absolute;
 	top: 8px;
-	right: 8px;
+	left: 0;
+	margin-left: -4px;
 	background-color: $defaultPurple;
 	color: black;
 	padding: 4px 30px 4px 12px;
-	clip-path: polygon(0% 0%, 100% 0%, 75% 50%, 100% 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, calc(100% - 16px) 50%, 100% 100%, 0 100%);
 	display: flex;
 	align-items: center;
 	justify-content: center;

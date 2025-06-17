@@ -5,7 +5,7 @@ import { PageContainer } from "../../src/global/PageContainer";
 import { Footer } from "../../utils/footer/Footer";
 import AssetSearchBar from "../../src/assets/components/Searchbar/Searchbar";
 import { stockFootageMetaData } from "../../src/datasources/AssetMetaData";
-import { Box, Card, CardMedia, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import AssetItem from "../../src/assets/components/AssetItem/AssetItem";
@@ -54,7 +54,12 @@ const AssetsStore: NextPage = () => {
 					<div className={styles.featuredContainer}>
 						<h2>Featured</h2>
 						<Box sx={{ position: "relative" }}>
-							<Carousel responsive={responsiveFeatured} partialVisible>
+							<Carousel
+								responsive={responsiveFeatured}
+								partialVisible
+								ssr
+								keyBoardControl
+								removeArrowOnDeviceType={["tablet", "mobile"]}>
 								{getFeaturedItems(stockFootageMetaData).map((item, key) => (
 									<AssetItem item={item} key={`Featured item ${key + 1}`} />
 								))}

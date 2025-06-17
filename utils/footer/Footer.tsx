@@ -20,6 +20,7 @@ export const Footer = ({
 		{ label: "Home", path: "/" },
 		{ label: "Guides", path: "/guides" },
 		{ label: "Travel", path: "/travel" },
+		{ label: "Assets", path: "/assets-store" },
 	];
 
 	return (

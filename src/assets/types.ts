@@ -8,7 +8,6 @@ export type AssetCollectionMetaData = {
 
 export type AssetItemMetaData = {
 	title: string;
-	hostedLink: string;
 	price: number | null;
 	thumbnail: string;
 	link: string;

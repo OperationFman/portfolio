@@ -17,7 +17,7 @@ export const forYouMetaData: ForYouMetaData[] = [
 		logo: "postproduction",
 		title: "Post Production",
 		paragraph:
-			"Producing, editing, color correcting, and rendering. Folio include VFX, animation and game engine production.",
+			"Producing, editing, color correcting, and rendering. Skills include VFX, animation and LUTs",
 	},
 ];
 

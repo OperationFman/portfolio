@@ -9,9 +9,48 @@ export const stockFootageMetaData: AssetCollectionMetaData[] = [
 		assetItemMetaData: [
 			{
 				title: "Kabul_Park_1",
-				hostedLink: "Kabul_Park_1",
 				price: 2,
-				thumbnail: "Kabul_Park_1.jpg",
+				thumbnail: "afghanistan/Kabul_Park_1.jpg",
+				link: "www.google.com",
+				created: 123,
+				tags: ["foo"],
+			},
+			{
+				title: "Kabul_Park_1",
+				price: 2,
+				thumbnail: "afghanistan/Kabul_Park_1.jpg",
+				link: "www.google.com",
+				created: 123,
+				tags: ["foo"],
+			},
+			{
+				title: "Kabul_Park_1",
+				price: 2,
+				thumbnail: "afghanistan/Kabul_Park_1.jpg",
+				link: "www.google.com",
+				created: 123,
+				tags: ["foo"],
+			},
+			{
+				title: "Kabul_Park_1",
+				price: 2,
+				thumbnail: "afghanistan/Kabul_Park_1.jpg",
+				link: "www.google.com",
+				created: 123,
+				tags: ["foo"],
+			},
+			{
+				title: "Kabul_Park_1",
+				price: 2,
+				thumbnail: "afghanistan/Kabul_Park_1.jpg",
+				link: "www.google.com",
+				created: 123,
+				tags: ["foo"],
+			},
+			{
+				title: "Kabul_Park_1",
+				price: 2,
+				thumbnail: "afghanistan/Kabul_Park_1.jpg",
 				link: "www.google.com",
 				created: 123,
 				tags: ["foo"],
@@ -25,9 +64,8 @@ export const stockFootageMetaData: AssetCollectionMetaData[] = [
 		assetItemMetaData: [
 			{
 				title: "Kabul_Park_1",
-				hostedLink: "Kabul_Park_1",
 				price: 25,
-				thumbnail: "Kabul_Park_1.jpg",
+				thumbnail: "bangladesh/Kabul_Park_1.jpg",
 				link: "www.google.com",
 				created: 123,
 				tags: ["foo"],
@@ -42,9 +80,8 @@ export const stockFootageMetaData: AssetCollectionMetaData[] = [
 		assetItemMetaData: [
 			{
 				title: "Kabul_Park_1",
-				hostedLink: "Kabul_Park_1",
 				price: 2,
-				thumbnail: "Kabul_Park_1.jpg",
+				thumbnail: "bhutan/Kabul_Park_1.jpg",
 				link: "www.google.com",
 				created: 123,
 				tags: ["foo"],
@@ -59,9 +96,8 @@ export const stockFootageMetaData: AssetCollectionMetaData[] = [
 		assetItemMetaData: [
 			{
 				title: "Kabul_Park_1",
-				hostedLink: "Kabul_Park_1",
 				price: 5,
-				thumbnail: "Kabul_Park_1.jpg",
+				thumbnail: "iran/Kabul_Park_1.jpg",
 				link: "www.google.com",
 				created: 123,
 				tags: ["foo"],
@@ -76,9 +112,8 @@ export const stockFootageMetaData: AssetCollectionMetaData[] = [
 		assetItemMetaData: [
 			{
 				title: "Kabul_Park_1",
-				hostedLink: "Kabul_Park_1",
 				price: 4,
-				thumbnail: "Kabul_Park_1.jpg",
+				thumbnail: "myanmar/Kabul_Park_1.jpg",
 				link: "www.google.com",
 				created: 123,
 				tags: ["foo"],
@@ -93,9 +128,8 @@ export const stockFootageMetaData: AssetCollectionMetaData[] = [
 		assetItemMetaData: [
 			{
 				title: "Kabul_Park_1",
-				hostedLink: "Kabul_Park_1",
 				price: 8,
-				thumbnail: "Kabul_Park_1.jpg",
+				thumbnail: "syria/Kabul_Park_1.jpg",
 				link: "www.google.com",
 				created: 123,
 				tags: ["foo"],
