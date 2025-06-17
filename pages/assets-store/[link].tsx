@@ -65,11 +65,12 @@ const AssetCollection = ({
 					<>
 						<h2 className={styles.subSection}>Free Wallpapers</h2>
 						{collectionData.wallpapers.map((wallpaper) => (
-							<div className={styles.freeWallpaper}>
+							<div
+								className={styles.freeWallpaper}
+								key={`Wallpaper: ${wallpaper}`}>
 								<Image
 									src={`/assets/${collectionData.hostedLink}/${wallpaper}`}
 									alt={`Wallpaper: ${wallpaper}`}
-									key={`Wallpaper: ${wallpaper}`}
 									width={3840}
 									height={2160}
 									layout='responsive'
