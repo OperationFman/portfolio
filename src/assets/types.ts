@@ -12,9 +12,8 @@ export type AssetItemMetaData = {
 	thumbnail: string;
 	link: string;
 	created?: number;
+	length?: number;
 	tags: string[];
 	location?: string;
-	new?: boolean;
-	updated?: boolean;
-	sale?: boolean;
+	isPack?: boolean;
 };

@@ -36,6 +36,12 @@ export const AssetItem = ({
 					component='img'
 					height='160'
 					image={`/assets/${item.thumbnail}`}
+					style={{
+						borderRadius: "5px",
+						boxShadow: item.isPack
+							? "-1px -1px 1px 1px rgb(164, 164, 164), -4px -4px 1px 1px rgb(92, 92, 92)"
+							: "none",
+					}}
 					alt={item.title}
 				/>
 				<Box className={styles.assetCardTitleOverlay}>
@@ -48,6 +54,15 @@ export const AssetItem = ({
 						{priceDisplay}
 					</Typography>
 				</Box>
+				{item.length && (
+					<Box className={styles.videoLengthTag}>
+						<Typography
+							variant='body2'
+							sx={{ fontWeight: "bold", fontSize: "70%" }}>
+							{item.length}s
+						</Typography>
+					</Box>
+				)}
 			</CardActionArea>
 
 			<a

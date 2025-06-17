@@ -38,6 +38,25 @@ def create_output_dirs(input_dir: Path):
     watermarked_dir.mkdir(parents=True, exist_ok=True)
     return normal_thumbnails_dir, squared_thumbnails_dir, watermarked_dir
 
+def get_video_duration(video_path: Path) -> int | None:
+    command = [
+        "ffprobe",
+        "-v", "error",
+        "-show_entries", "format=duration",
+        "-of", "default=noprint_wrappers=1:nokey=1",
+        str(video_path)
+    ]
+    try:
+        result = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        duration_str = result.stdout.decode().strip()
+        return int(float(duration_str))
+    except subprocess.CalledProcessError as e:
+        print(f"ERROR getting duration for {video_path.name}: {e}")
+        return None
+    except ValueError:
+        print(f"ERROR parsing duration for {video_path.name}: {duration_str}")
+        return None
+
 def process_video(video_path: Path, normal_thumbnails_output_dir: Path, squared_thumbnails_output_dir: Path, watermarked_output_dir: Path, root_folder_name_lower: str):
     base_name = video_path.stem
     print(f"Processing: {video_path.name}")
@@ -99,10 +118,13 @@ def process_video(video_path: Path, normal_thumbnails_output_dir: Path, squared_
     except Exception as e:
         print(f"An unexpected error occurred for {video_path.name}: {e}")
 
+    video_length = get_video_duration(video_path)
+
     return {
         "title": base_name,
         "price": 5,
         "thumbnail": f"{root_folder_name_lower}/{base_name}.jpg",
+        "length": video_length,
         "link": "",
         "created": int(time.time()),
         "tags": [""]

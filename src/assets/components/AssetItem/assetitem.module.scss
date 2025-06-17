@@ -6,6 +6,7 @@
 	margin: 4px 8px;
 	overflow: visible;
 	transition: linear 200ms;
+	border-radius: 10px;
 
 	.MuiCardMedia-root {
 		height: 100%;
@@ -37,18 +38,35 @@
 	position: absolute;
 	top: 8px;
 	left: 0;
-	margin-left: -4px;
+	margin-left: -2px;
+	margin-top: -9px;
 	background-color: $defaultPurple;
-	color: black;
-	padding: 4px 30px 4px 12px;
-	clip-path: polygon(0 0, 100% 0, calc(100% - 16px) 50%, 100% 100%, 0 100%);
+	color: white;
+	padding: 4px 24px 4px 12px;
+	clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 32px;
+	height: 26px;
 	box-sizing: border-box;
-	// font-size: 1rem;
-	line-height: 1;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-	border-left: 1px solid rgba(0, 0, 0, 0.55);
+	font-size: 50%;
+	line-height: 0.5;
+	border-top-left-radius: 5px;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.videoLengthTag {
+	position: absolute;
+	bottom: 12px;
+	right: 7px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 2px 6px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "monospace", monospace;
+	text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+	z-index: 2;
 }
