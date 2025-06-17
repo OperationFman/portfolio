@@ -17,7 +17,7 @@ export const AssetItem = ({
 	item: AssetItemMetaData;
 }): JSX.Element => {
 	const priceDisplay = item.price === null ? "Free" : `$${item.price}`;
-	const gumroadButtonRef = useRef(null);
+	const gumroadButtonRef = useRef<HTMLAnchorElement>(null);
 
 	const handleCardClick = () => {
 		if (gumroadButtonRef.current) {
