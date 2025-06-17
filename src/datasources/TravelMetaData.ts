@@ -2123,7 +2123,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				hospitality: [7],
 				safety: [7],
 				accessibility: [3],
-				video: [7],
+				video: [9],
 			},
 			finalScore: 6,
 			summary: [

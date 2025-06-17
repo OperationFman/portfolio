@@ -242,7 +242,7 @@ export const funniestOnly = () => {
 		grouping: TravelVideoMetaData[];
 	}[] = [];
 
-	const topHitsRange = { heading: "Funniest", range: [9, 10] };
+	const topHitsRange = { heading: "Bangers", range: [9, 10] };
 
 	const grouping: TravelVideoMetaData[] = [];
 
