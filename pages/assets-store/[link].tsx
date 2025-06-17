@@ -46,28 +46,36 @@ const AssetCollection = ({
 				</div>
 
 				<h1>{collectionData.title} Assets</h1>
-				<h2>Stock Footage</h2>
-				<div className={styles.assetCollectionsContainer}>
-					<div className={styles.assetCollectionsGrid}>
-						{collectionData.assetItemMetaData.map((item, key) => (
-							<AssetItem item={item} key={`Featured item ${key + 1}`} />
-						))}
-					</div>
-				</div>
+				{collectionData.assetItemMetaData.length > 0 && (
+					<>
+						<h2>Stock Footage</h2>
+						<div className={styles.assetCollectionsContainer}>
+							<div className={styles.assetCollectionsGrid}>
+								{collectionData.assetItemMetaData.map((item, key) => (
+									<AssetItem item={item} key={`Featured item ${key + 1}`} />
+								))}
+							</div>
+						</div>
+					</>
+				)}
 
-				<h2 className={styles.subSection}>Free Wallpapers</h2>
-				{collectionData.wallpapers.map((wallpaper) => (
-					<div className={styles.freeWallpaper}>
-						<Image
-							src={`/assets/${collectionData.hostedLink}/${wallpaper}`}
-							alt={`Wallpaper: ${wallpaper}`}
-							key={`Wallpaper: ${wallpaper}`}
-							width={3840}
-							height={2160}
-							layout='responsive'
-						/>
-					</div>
-				))}
+				{collectionData.wallpapers.length > 0 && (
+					<>
+						<h2 className={styles.subSection}>Free Wallpapers</h2>
+						{collectionData.wallpapers.map((wallpaper) => (
+							<div className={styles.freeWallpaper}>
+								<Image
+									src={`/assets/${collectionData.hostedLink}/${wallpaper}`}
+									alt={`Wallpaper: ${wallpaper}`}
+									key={`Wallpaper: ${wallpaper}`}
+									width={3840}
+									height={2160}
+									layout='responsive'
+								/>
+							</div>
+						))}
+					</>
+				)}
 			</PageContainer>
 			<Footer />
 		</>

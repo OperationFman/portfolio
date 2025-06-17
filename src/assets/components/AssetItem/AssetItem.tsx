@@ -8,6 +8,8 @@ import {
 
 import styles from "./assetitem.module.scss";
 import { AssetItemMetaData } from "../../types";
+import { useRef } from "react";
+import Script from "next/script";
 
 export const AssetItem = ({
 	item,
@@ -15,11 +17,20 @@ export const AssetItem = ({
 	item: AssetItemMetaData;
 }): JSX.Element => {
 	const priceDisplay = item.price === null ? "Free" : `$${item.price}`;
+	const gumroadButtonRef = useRef(null);
+
+	const handleCardClick = () => {
+		if (gumroadButtonRef.current) {
+			gumroadButtonRef.current.click();
+		}
+	};
 
 	return (
 		<Card key={item.title} className={styles.assetCard}>
+			<Script src='https://gumroad.com/js/gumroad.js' strategy='lazyOnload' />
+
 			<CardActionArea
-				onClick={() => console.log("Asset item clicked:", item.title)}
+				onClick={handleCardClick}
 				aria-label={`View details for ${item.title}`}>
 				<CardMedia
 					component='img'
@@ -38,6 +49,12 @@ export const AssetItem = ({
 					</Typography>
 				</Box>
 			</CardActionArea>
+
+			<a
+				ref={gumroadButtonRef}
+				className='gumroad-button'
+				href={item.link}
+				style={{ display: "none" }}></a>
 		</Card>
 	);
 };

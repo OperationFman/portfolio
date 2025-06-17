@@ -47,7 +47,7 @@ export const getFeaturedItems = (
 			title: collection.title,
 			price: null,
 			thumbnail: `${collection.hostedLink}/${wallpaper}`,
-			link: collection.hostedLink,
+			link: `assets-store/${collection.hostedLink}`,
 			tags: [],
 		});
 	}
