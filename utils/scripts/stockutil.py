@@ -142,9 +142,10 @@ def main():
     if not videos_found:
         print(f"\nNo video files found in '{input_video_dir}' with extensions: {', '.join(ALLOWED_EXTENSIONS)}")
     else:
+        asset_item_meta_data_sorted = sorted(asset_item_meta_data, key=lambda x: x['title'].lower())
         output_json_path = input_video_dir / "metadata.json"
         with open(output_json_path, 'w') as f:
-            json.dump({"assetItemMetaData": asset_item_meta_data}, f, indent=4)
+            json.dump({"assetItemMetaData": asset_item_meta_data_sorted}, f, indent=4)
         print(f"\nMetadata successfully written to {output_json_path}")
 
     print(f"\nFinished! {videos_processed} videos processed.")

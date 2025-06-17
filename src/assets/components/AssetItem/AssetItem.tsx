@@ -44,7 +44,7 @@ export const AssetItem = ({
 					</Typography>
 				</Box>
 				<Box className={styles.priceTag}>
-					<Typography variant='body2' sx={{ fontWeight: 500 }}>
+					<Typography variant='body2' sx={{ fontWeight: "bold" }}>
 						{priceDisplay}
 					</Typography>
 				</Box>
