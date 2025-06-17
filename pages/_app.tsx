@@ -7,6 +7,7 @@ import { Navbar } from "../src/global/navigation/Navbar";
 import "../themes/globals.css";
 import { GlobalTheme } from "../themes/GlobalTheme";
 
+
 function MyApp({ Component, pageProps }: AppProps) {
 	const [darkMode, setDarkMode] = useState(true);
 

@@ -23,7 +23,7 @@ export const stockFootageMetaData: AssetCollectionMetaData[] = [
 		],
 		assetItemMetaData: [
 			{
-				title: "Complete Collection (21 Clips)",
+				title: "Complete Afghanistan Collection (21 Clips)",
 				price: 39,
 				thumbnail: "afghanistan/afghanmain.jpg",
 				link: "https://franklinvmoon.gumroad.com/l/kraynl",
@@ -226,80 +226,35 @@ export const stockFootageMetaData: AssetCollectionMetaData[] = [
 		title: "Bangladesh",
 		thumbnail: "bangladeshmain.jpg",
 		hostedLink: "bangladesh",
-		assetItemMetaData: [
-			{
-				title: "Kabul_Park_1",
-				price: 25,
-				thumbnail: "bangladesh/Kabul_Park_1.jpg",
-				link: "https://franklinvmoon.gumroad.com/l/rjwcy",
-				created: 123,
-				tags: ["foo"],
-			},
-		],
-		wallpapers: ["foo.jpg", "foo.jpg"],
+		assetItemMetaData: [],
+		wallpapers: [],
 	},
 	{
 		title: "Bhutan",
 		thumbnail: "bhutanmain.jpg",
 		hostedLink: "bhutan",
-		assetItemMetaData: [
-			{
-				title: "Kabul_Park_1",
-				price: 2,
-				thumbnail: "bhutan/Kabul_Park_1.jpg",
-				link: "https://franklinvmoon.gumroad.com/l/rjwcy",
-				created: 123,
-				tags: ["foo"],
-			},
-		],
-		wallpapers: ["foo.jpg", "foo.jpg"],
+		assetItemMetaData: [],
+		wallpapers: [],
 	},
 	{
 		title: "Iran",
 		thumbnail: "iranmain.jpg",
 		hostedLink: "iran",
-		assetItemMetaData: [
-			{
-				title: "Kabul_Park_1",
-				price: 5,
-				thumbnail: "iran/Kabul_Park_1.jpg",
-				link: "https://franklinvmoon.gumroad.com/l/rjwcy",
-				created: 123,
-				tags: ["foo"],
-			},
-		],
-		wallpapers: ["foo.jpg", "foo.jpg"],
+		assetItemMetaData: [],
+		wallpapers: [],
 	},
 	{
 		title: "Myanmar",
 		thumbnail: "myanmarmain.jpg",
 		hostedLink: "myanmar",
-		assetItemMetaData: [
-			{
-				title: "Kabul_Park_1",
-				price: 4,
-				thumbnail: "myanmar/Kabul_Park_1.jpg",
-				link: "https://franklinvmoon.gumroad.com/l/rjwcy",
-				created: 123,
-				tags: ["foo"],
-			},
-		],
-		wallpapers: ["foo.jpg", "foo.jpg"],
+		assetItemMetaData: [],
+		wallpapers: [],
 	},
 	{
 		title: "Syria",
 		thumbnail: "syriamain.jpg",
 		hostedLink: "syria",
-		assetItemMetaData: [
-			{
-				title: "Kabul_Park_1",
-				price: 8,
-				thumbnail: "syria/Kabul_Park_1.jpg",
-				link: "https://franklinvmoon.gumroad.com/l/rjwcy",
-				created: 123,
-				tags: ["foo"],
-			},
-		],
+		assetItemMetaData: [],
 		wallpapers: [],
 	},
 ];

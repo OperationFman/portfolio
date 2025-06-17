@@ -45,7 +45,9 @@ const AssetCollection = ({
 					</Button>
 				</div>
 
-				<h1>{collectionData.title} Assets</h1>
+				<h1 style={{ fontWeight: "bold", textAlign: "center" }}>
+					{collectionData.title}
+				</h1>
 				{collectionData.assetItemMetaData.length > 0 && (
 					<>
 						<h2>Stock Footage</h2>

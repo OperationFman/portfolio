@@ -9,7 +9,6 @@ import {
 import styles from "./assetitem.module.scss";
 import { AssetItemMetaData } from "../../types";
 import { useRef } from "react";
-import Script from "next/script";
 
 export const AssetItem = ({
 	item,
@@ -27,8 +26,6 @@ export const AssetItem = ({
 
 	return (
 		<Card key={item.title} className={styles.assetCard}>
-			<Script src='https://gumroad.com/js/gumroad.js' strategy='lazyOnload' />
-
 			<CardActionArea
 				onClick={handleCardClick}
 				aria-label={`View details for ${item.title}`}>
@@ -39,7 +36,7 @@ export const AssetItem = ({
 					style={{
 						borderRadius: "5px",
 						boxShadow: item.isPack
-							? "-1px -1px 1px 1px rgb(164, 164, 164), -4px -4px 1px 1px rgb(92, 92, 92)"
+							? "-1px -1px 1px 1px rgb(83, 83, 83), -4px -4px 1px 1px rgb(58, 58, 58)"
 							: "none",
 					}}
 					alt={item.title}

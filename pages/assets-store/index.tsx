@@ -29,7 +29,7 @@ const AssetsStore: NextPage = () => {
 		mobile: {
 			breakpoint: { max: 600, min: 0 },
 			items: 1,
-			partialVisibilityGutter: 100,
+			partialVisibilityGutter: 150,
 		},
 	};
 
