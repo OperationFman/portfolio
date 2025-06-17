@@ -52,7 +52,7 @@ const AssetsStore: NextPage = () => {
 
 				<PageContainer>
 					<div className={styles.featuredContainer}>
-						<h2>Featured</h2>
+						<h2>Featured Today</h2>
 						<Box sx={{ position: "relative" }}>
 							<Carousel
 								responsive={responsiveFeatured}
