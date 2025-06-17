@@ -9,6 +9,7 @@ import { InferGetServerSidePropsType } from "next";
 import { ErrorContent } from "../../utils/error/ErrorContent";
 import AssetItem from "../../src/assets/components/AssetItem/AssetItem";
 import { Footer } from "../../utils/footer/Footer";
+import Image from "next/image";
 
 type ServerSideContext = {
 	params: { link: string | string[] | undefined };
@@ -54,7 +55,19 @@ const AssetCollection = ({
 					</div>
 				</div>
 
-				<h2>Free Wallpapers</h2>
+				<h2 className={styles.subSection}>Free Wallpapers</h2>
+				{collectionData.wallpapers.map((wallpaper) => (
+					<div className={styles.freeWallpaper}>
+						<Image
+							src={`/assets/${collectionData.hostedLink}/${wallpaper}`}
+							alt={`Wallpaper: ${wallpaper}`}
+							key={`Wallpaper: ${wallpaper}`}
+							width={3840}
+							height={2160}
+							layout='responsive'
+						/>
+					</div>
+				))}
 			</PageContainer>
 			<Footer />
 		</>

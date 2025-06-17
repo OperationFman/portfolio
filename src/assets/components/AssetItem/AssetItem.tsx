@@ -16,8 +16,6 @@ export const AssetItem = ({
 }): JSX.Element => {
 	const priceDisplay = item.price === null ? "Free" : `$${item.price}`;
 
-	console.log(item);
-
 	return (
 		<Card key={item.title} className={styles.assetCard}>
 			<CardActionArea

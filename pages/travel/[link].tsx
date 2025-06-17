@@ -116,7 +116,6 @@ const VideoContent = ({
 
 	const skipTo = (timecode: number) => {
 		if (playerRef.current) {
-			console.log("player ready");
 			playerRef.current.seekTo(timecode, "seconds");
 		}
 	};
