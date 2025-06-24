@@ -19,31 +19,49 @@
 
 ![Homepage](https://github.com/user-attachments/assets/63411a74-1521-4cd9-b9f8-a77124ecdfc5)
 
-This repository hosts my professional portfolio website, showcasing my coding skills and the site's features.
+This repository hosts my professional portfolio website, showcasing my coding
+skills and the site's features.
 
 &nbsp;
 
 ![Skills](https://github.com/user-attachments/assets/c14f1844-50b1-40ca-8816-4f8d35b56d8a)
 
-A list of tools I have familiarity with and w brief breakdown of my confidence in each
+A list of tools I have familiarity with and w brief breakdown of my confidence
+in each
 
 ![Projects](https://github.com/user-attachments/assets/8835c765-e97d-4626-87bf-ccb53b6f9ba6)
 
-I'll be continuously updating this repository with fresh content and resources, and I'll adapt the code to align with evolving industry standards.
+I'll be continuously updating this repository with fresh content and resources,
+and I'll adapt the code to align with evolving industry standards.
 
 &nbsp;
 
-![Guide Page](https://github.com/user-attachments/assets/15c065d5-cb03-48c4-ac2d-38ae7c9d509e)
+![Guide Page](https://github.com/user-attachments/assets/2f2858a9-8b2b-40f2-bc36-90e002b28ae9)
 
 Why did I build this site?
 
-I developed this site with two main goals in mind. First, it serves as a tool to enhance my marketability and differentiate myself in the competitive field of web development. Second, it provided a valuable learning experience, deepening my understanding of modern web development practices and the process of building a project from the ground up. Completing this project has significantly strengthened my front-end programming skills.
+I developed this site with two main goals in mind. First, it serves as a tool to
+enhance my marketability and differentiate myself in the competitive field of
+web development. Second, it provided a valuable learning experience, deepening
+my understanding of modern web development practices and the process of building
+a project from the ground up. Completing this project has significantly
+strengthened my front-end programming skills.
 
 &nbsp;
 
 ![Travel Page](https://github.com/user-attachments/assets/74f19bac-c6b5-4854-8486-8b7f08742f39)
 
-This section provides an overview of the countries I've traveled to. Each video comes with a wide range of extra content that can be searched and sorted with
+This section provides an overview of the countries I've traveled to. Each video
+comes with a wide range of extra content that can be searched and sorted with
+
+&nbsp;
+
+![Assets Page](https://github.com/user-attachments/assets/8cc4172c-f0fc-4595-8364-8df0e32310f5)
+
+To showcase and monetize specific digital content, the portfolio now features a
+direct e-commerce integration. This system utilizes Gumroad as a payment gateway
+and delivery system, allowing users to purchase digital assets directly from the
+site.
 
 &nbsp;
 
@@ -60,6 +78,7 @@ Development
 - Sass
 - Jest
 - Notion CMS
+- Gumroad Platform
 
 &nbsp;
 
@@ -73,19 +92,30 @@ Deployment
 
 &nbsp;
 
-Performance was a key concern since this website is my portfolio and is frequently visited by recruiters and potential employers. To ensure a smooth user experience, I kept the use of NPM packages to a minimum and wrote custom code for specific needs, preferring raw CSS whenever possible. My efforts to optimize performance are reflected in the strong Lighthouse score, as shown below.
+Performance was a key concern since this website is my portfolio and is
+frequently visited by recruiters and potential employers. To ensure a smooth
+user experience, I kept the use of NPM packages to a minimum and wrote custom
+code for specific needs, preferring raw CSS whenever possible. My efforts to
+optimize performance are reflected in the strong Lighthouse score, as shown
+below.
 
 ![Lighthouse Score](https://user-images.githubusercontent.com/42459707/217158718-b1019176-005a-4f20-8c03-a5fedfdf1c4a.png)
 
 &nbsp;
 
-Test-driven development (TDD) was another major focus during this project. I aimed to gain a solid understanding of this development style, though I found it easier to implement with static pages. Complex APIs presented a greater challenge in this regard. The results of these efforts are shown below.
+Test-driven development (TDD) was another major focus during this project. I
+aimed to gain a solid understanding of this development style, though I found it
+easier to implement with static pages. Complex APIs presented a greater
+challenge in this regard. The results of these efforts are shown below.
 
 ![Yarn Test](https://user-images.githubusercontent.com/42459707/217159178-7104801d-195d-4262-b518-e8236a3b24a3.png)
 
 &nbsp;
 
-I also considered dark mode support, which added an interesting layer of complexity to the development process. However, after a few years of testing, I noticed almost no users voluntarily switched to light mode, so I've since removed that feature.
+I also considered dark mode support, which added an interesting layer of
+complexity to the development process. However, after a few years of testing, I
+noticed almost no users voluntarily switched to light mode, so I've since
+removed that feature.
 
 ![Homepage in Light Mode](https://user-images.githubusercontent.com/42459707/217158552-4cce377e-23ca-424a-88fb-7d4ac7d005d4.png)
 
