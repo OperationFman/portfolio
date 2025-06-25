@@ -2,7 +2,18 @@ import { Languages, Tags, Topic, GuideMetaData } from "../guides/types";
 
 export const guideMetaData: GuideMetaData[] = [
 	{
-		title: "Watch Drop Serverless Email Notifications ",
+		title: "Automating Stock Footage Processing",
+		link: "automate-stock-footage",
+		notionPage: "21de32d00811806fbf94dc63e76a70f2",
+		created: 1750842349,
+		thumbnail: "/guides/stockfootage.jpeg",
+		subTitle:
+			"Automate generating thumbnails and watermarked versions of your Stock Footage clips with a one-word command",
+		topic: Topic.Article,
+		tags: [Tags.StepByStep],
+	},
+	{
+		title: "Build a Serverless Email Notification Service",
 		link: "watch-drop-serverless-email-notifications",
 		notionPage: "20de32d0081180b18659e19ba19b26ff",
 		created: 1749442502,
