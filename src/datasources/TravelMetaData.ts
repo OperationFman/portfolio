@@ -3061,7 +3061,73 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			tags: ["Caleb Eli Price", "Phillip Sgardelis"],
 		},
 	},
-	// {
+	
+	{
+		title: "Mongolia",
+		year: 2025,
+		hostedLink: "mongolia",
+		link: "mongolia",
+		restricted: false,
+		backupLink: "https://drive.google.com/drive/folders/1hNaxeVixcPGEcBaKT2fJZqMnaqm9lwb-?usp=sharing",
+		extras: {
+			countries: ["mongolia"],
+			scorecard: {
+				affordability: [5],
+				food: [1],
+				hospitality: [4],
+				safety: [4],
+				accessibility: [2],
+				video: [10],
+			},
+			finalScore: 4,
+			summary: [ 
+				"Mongolia is a vast, sparsely populated country known for its nomadic culture and endless steppes.", 
+				"The visited during Naadam festival, a traditional celebration featuring the three manly sports of horse racing, wrestling, and archery.", 
+				"Surviving with no modern amenities and a monotonous diet requires an incredible amount of grit and surprisingly fun suffering."],
+			challenges: [ "Roads and English do not really exist" ],
+			dos: [ "Prepare various entertainment for the many long drives, you will commute an average of 7 hours between every destination", "Try to be a part of the Naadam festival with it's perfect weather and bright outfits" ],
+			donts: [ "Buy naadam tickets in advance, they're only for the stadium and it's not exactly hard to get in without them", "Underestimate the wild climate, it'll be scorching hot in the day and freezing at night", "Be vegan" ],
+			advice: {
+				travelLength: "2 weeks",
+				currency: "Mongolian Tugrik MNT",
+				season: "June - August",
+				dailyBudget: "$100-200usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/mongolia",
+				advice: Advisory.Level1,
+			},
+			music: [
+				{
+					title: "Minii Mongol Naadam",
+					link: "https://music.youtube.com/watch?v=Ai3AgZe7Zno&si=8ozF8yIrXCbX8TFT"
+				},
+				{
+					title: "Chinggis Kahn - Khusugtun",
+					link: "https://music.youtube.com/watch?v=tcd59zMIadk&si=1qSvMi0aWWhR7Zlh",
+				},
+				{
+					title: "Lil Boo Thing - Paul Russel",
+					link: "https://music.youtube.com/watch?v=ER8z-iLK91Y&si=iNA0qgaEc08zAUpG",
+				},
+				{
+					title: "Shoot to Thrill - AC/DC",
+					link: "https://music.youtube.com/watch?v=wLoWd2KyUro&si=_MxRpnc0o_G8UaQO",
+				},
+				{
+					title: "Halo",
+					link: "https://music.youtube.com/watch?v=DOZLSho2o-M&si=8jP_Ic8szsfxfQZe",
+				},
+			],
+			extraVideos: [
+				{
+					title: "Mongolia with French Subtitles",
+					hostedLink: "frenchmongolia",
+				},
+			],
+		},
+	},
+		// {
 	// 	title: "",
 	// 	year: ,
 	// 	hostedLink: "",
