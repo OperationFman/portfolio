@@ -3082,7 +3082,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			finalScore: 4,
 			summary: [ 
 				"Mongolia is a vast, sparsely populated country known for its nomadic culture and endless steppes.", 
-				"Visiting during Naadam festival, a traditional celebration featuring the three manly sports of horse racing, wrestling, and archery.", 
+				"We visited during Naadam festival, a traditional celebration featuring the three manly sports of horse racing, wrestling, and archery.", 
 				"Surviving with no modern amenities and a fun Mongolian diet requires an incredible amount of grit but wow is this place worth it for the view."],
 			challenges: [ "Roads and English do not really exist" ],
 			dos: [ "Prepare various entertainments for the many long drives, you will spend most of your days driving", "Try to be a part of the Naadam festival with it's perfect weather and bright outfits" ],
@@ -3121,7 +3121,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			],
 			extraVideos: [
 				{
-					title: "Mongolia with French Subtitles",
+					title: "Mongolia Video with French Subtitles",
 					hostedLink: "frenchmongolia",
 				},
 			],
