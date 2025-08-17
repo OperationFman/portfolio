@@ -23,7 +23,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["China"],
 			scorecard: {
 				affordability: [9],
-				food: [3],
+				food: [2],
 				hospitality: [5],
 				safety: [8],
 				accessibility: [3],
@@ -112,7 +112,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Nepal"],
 			scorecard: {
 				affordability: [9],
-				food: [4],
+				food: [3],
 				hospitality: [7],
 				safety: [7],
 				accessibility: [7],
@@ -176,7 +176,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Indonesia"],
 			scorecard: {
 				affordability: [8],
-				food: [6],
+				food: [5],
 				hospitality: [5],
 				safety: [6],
 				accessibility: [9],
@@ -237,7 +237,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Malaysia", "Singapore"],
 			scorecard: {
 				affordability: [7, 4],
-				food: [4, 7],
+				food: [3, 6],
 				hospitality: [5, 5],
 				safety: [7, 10],
 				accessibility: [7, 10],
@@ -379,7 +379,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Japan"],
 			scorecard: {
 				affordability: [4],
-				food: [8],
+				food: [7],
 				hospitality: [4],
 				safety: [10],
 				accessibility: [10],
@@ -483,7 +483,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Thailand"],
 			scorecard: {
 				affordability: [8],
-				food: [7],
+				food: [5],
 				hospitality: [7],
 				safety: [8],
 				accessibility: [8],
@@ -546,7 +546,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["South Korea"],
 			scorecard: {
 				affordability: [6],
-				food: [5],
+				food: [4],
 				hospitality: [3],
 				safety: [9],
 				accessibility: [7],
@@ -619,7 +619,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["United Arab Emirates"],
 			scorecard: {
 				affordability: [2],
-				food: [3],
+				food: [2],
 				hospitality: [3],
 				safety: [9],
 				accessibility: [5],
@@ -676,7 +676,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Fiji"],
 			scorecard: {
 				affordability: [4],
-				food: [3],
+				food: [2],
 				hospitality: [4],
 				safety: [8],
 				accessibility: [6],
@@ -756,7 +756,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Cambodia", "Laos", "Vietnam"],
 			scorecard: {
 				affordability: [9, 10, 8],
-				food: [3, 3, 3],
+				food: [2, 3, 3],
 				hospitality: [7, 6, 5],
 				safety: [7, 8, 7],
 				accessibility: [6, 7, 8],
@@ -849,7 +849,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Taiwan", "Hong Kong", "Macau"],
 			scorecard: {
 				affordability: [7, 3, 3],
-				food: [5, 5, 5],
+				food: [4, 4, 5],
 				hospitality: [5, 5, 5],
 				safety: [9, 8, 9],
 				accessibility: [10, 9, 6],
@@ -1327,7 +1327,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Iran"],
 			scorecard: {
 				affordability: [10],
-				food: [6],
+				food: [3],
 				hospitality: [9],
 				safety: [3],
 				accessibility: [5],
@@ -1447,7 +1447,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Armenia", "Georgia", "Azerbaijan"],
 			scorecard: {
 				affordability: [8, 8, 4],
-				food: [6, 10, 3],
+				food: [5, 9, 3],
 				hospitality: [8, 6, 6],
 				safety: [7, 7, 7],
 				accessibility: [6, 6, 3],
@@ -1625,7 +1625,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					link: "https://music.youtube.com/watch?v=75r0nQu-hMs&si=sNEeLlhpJ_K0CQJ3",
 				},
 			],
-			tags: ["Phillip Sgardelis"],
+			tags: ["Phillip Sgardelis", "Claire Dubouilh Marino"],
 		},
 	},
 	{
@@ -1963,7 +1963,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Israel", "Palestine"],
 			scorecard: {
 				affordability: [5, 5],
-				food: [8, 3],
+				food: [8, 2],
 				hospitality: [3, 6],
 				safety: [7, 6],
 				accessibility: [8, 3],
@@ -2119,7 +2119,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["Timor-Leste"],
 			scorecard: {
 				affordability: [6],
-				food: [4],
+				food: [3],
 				hospitality: [7],
 				safety: [7],
 				accessibility: [3],
@@ -2507,7 +2507,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["pakistan"],
 			scorecard: {
 				affordability: [10],
-				food: [6],
+				food: [5],
 				hospitality: [10],
 				safety: [4],
 				accessibility: [4],
@@ -2617,7 +2617,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["afghanistan"],
 			scorecard: {
 				affordability: [8],
-				food: [3],
+				food: [2],
 				hospitality: [9],
 				safety: [5],
 				accessibility: [4],
@@ -2908,7 +2908,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["myanmar"],
 			scorecard: {
 				affordability: [8],
-				food: [3],
+				food: [2],
 				hospitality: [6],
 				safety: [5],
 				accessibility: [2],
@@ -3072,7 +3072,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["mongolia"],
 			scorecard: {
-				affordability: [5],
+				affordability: [4],
 				food: [1],
 				hospitality: [4],
 				safety: [4],
@@ -3125,6 +3125,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					hostedLink: "frenchmongolia",
 				},
 			],
+			tags: ["Adam Melander", "Claire Dubouilh Marino"],
 		},
 	},
 		// {
