@@ -67,6 +67,8 @@ export const VideoLibrary = ({
 									height={300}
 									width={200}
 									layout='responsive'
+									placeholder='blur'
+									blurDataURL='/travel/placeholder.png'
 								/>
 								<div className={styles.loadingContainer}>
 									{loading.state && loading.index === videoIndex && (
