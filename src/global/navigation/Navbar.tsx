@@ -91,6 +91,11 @@ export const Navbar = () => {
 				}}>
 				{tabsData.map((item, index) => {
 					const tabStyles = ensureTabsFit(index);
+
+					if (item.disabled) {
+						return;
+					}
+
 					return (
 						<Tab
 							label={

@@ -8,6 +8,8 @@ const setColor = (tab: number, id: number, color: string) => {
 	return tab === id ? color : colors.brightGrey;
 };
 
+const isAssetsStoreEnabled = false;
+
 export const tabsData: {
 	label?: string;
 	color: string;
@@ -15,6 +17,7 @@ export const tabsData: {
 	route: string;
 	icon: (tab: number) => JSX.Element;
 	order: number;
+	disabled?: boolean;
 }[] = [
 	{
 		label: "",
@@ -67,5 +70,6 @@ export const tabsData: {
 			/>
 		),
 		order: 4,
+		disabled: !isAssetsStoreEnabled,
 	},
 ];
