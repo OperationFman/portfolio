@@ -13,6 +13,10 @@ export const ProgressBar = ({
 	scores: number[];
 }) => {
 	const scoreKeyData: any = {
+		beauty: {
+			title: "Beauty",
+			tooltip: "How attractive, clean and unique the country is on average",
+		},
 		affordability: {
 			title: "Affordability",
 			tooltip:
@@ -27,7 +31,11 @@ export const ProgressBar = ({
 			tooltip:
 				"How kind and engaging the locals are and how easy it is to meet them. Low means locals often scam, manipulate or abuse, high score means they're welcoming and helpful",
 		},
-		safety: { title: "Safety", tooltip: "How safe as a solo traveler" },
+		safety: {
+			title: "Safety",
+			tooltip:
+				"How safe as a solo traveler, from crime, nature and the government",
+		},
 		accessibility: {
 			title: "Accessibility",
 			tooltip:

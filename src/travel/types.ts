@@ -34,6 +34,7 @@ export type Extras = {
 	countries?: string[];
 	deductCountryCount?: number;
 	scorecard?: {
+		beauty: number[];
 		affordability: number[];
 		food: number[];
 		hospitality: number[];

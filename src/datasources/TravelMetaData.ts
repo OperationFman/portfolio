@@ -22,6 +22,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["China"],
 			scorecard: {
+				beauty: [9],
 				affordability: [9],
 				food: [2],
 				hospitality: [5],
@@ -111,6 +112,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Nepal"],
 			scorecard: {
+				beauty: [10],
 				affordability: [9],
 				food: [3],
 				hospitality: [7],
@@ -175,6 +177,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Indonesia"],
 			scorecard: {
+				beauty: [7],
 				affordability: [8],
 				food: [5],
 				hospitality: [5],
@@ -236,6 +239,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Malaysia", "Singapore"],
 			scorecard: {
+				beauty: [3, 6],
 				affordability: [7, 4],
 				food: [3, 6],
 				hospitality: [5, 5],
@@ -308,6 +312,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["New Zealand"],
 			scorecard: {
+				beauty: [8],
 				affordability: [2],
 				food: [7],
 				hospitality: [2],
@@ -378,6 +383,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Japan"],
 			scorecard: {
+				beauty: [8],
 				affordability: [4],
 				food: [7],
 				hospitality: [4],
@@ -482,6 +488,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Thailand"],
 			scorecard: {
+				beauty: [7],
 				affordability: [8],
 				food: [5],
 				hospitality: [7],
@@ -545,6 +552,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["South Korea"],
 			scorecard: {
+				beauty: [5],
 				affordability: [6],
 				food: [4],
 				hospitality: [3],
@@ -618,6 +626,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["United Arab Emirates"],
 			scorecard: {
+				beauty: [4],
 				affordability: [2],
 				food: [2],
 				hospitality: [3],
@@ -675,6 +684,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Fiji"],
 			scorecard: {
+				beauty: [3],
 				affordability: [4],
 				food: [2],
 				hospitality: [4],
@@ -755,6 +765,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Cambodia", "Laos", "Vietnam"],
 			scorecard: {
+				beauty: [2, 4, 6],
 				affordability: [9, 10, 8],
 				food: [2, 3, 3],
 				hospitality: [7, 6, 5],
@@ -848,6 +859,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Taiwan", "Hong Kong", "Macau"],
 			scorecard: {
+				beauty: [6, 5, 2],
 				affordability: [7, 3, 3],
 				food: [4, 4, 5],
 				hospitality: [5, 5, 5],
@@ -927,6 +939,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["India"],
 			scorecard: {
+				beauty: [3],
 				affordability: [9],
 				food: [3],
 				hospitality: [6],
@@ -1016,6 +1029,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Oman"],
 			scorecard: {
+				beauty: [3],
 				affordability: [2],
 				food: [3],
 				hospitality: [2],
@@ -1081,6 +1095,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Kuwait", "Iraqi Kurdistan"],
 			scorecard: {
+				beauty: [1, 3],
 				affordability: [1, 8],
 				food: [1, 1],
 				hospitality: [4, 8],
@@ -1157,6 +1172,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Jordan"],
 			scorecard: {
+				beauty: [3],
 				affordability: [7],
 				food: [6],
 				hospitality: [8],
@@ -1246,6 +1262,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Saudi Arabia", "Bahrain"],
 			scorecard: {
+				beauty: [1, 1],
 				affordability: [1, 2],
 				food: [1, 2],
 				hospitality: [1, 4],
@@ -1326,6 +1343,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Iran"],
 			scorecard: {
+				beauty: [3],
 				affordability: [10],
 				food: [3],
 				hospitality: [9],
@@ -1446,6 +1464,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Armenia", "Georgia", "Azerbaijan"],
 			scorecard: {
+				beauty: [5, 6, 2],
 				affordability: [8, 8, 4],
 				food: [5, 9, 3],
 				hospitality: [8, 6, 6],
@@ -1559,6 +1578,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Greece"],
 			scorecard: {
+				beauty: [6],
 				affordability: [4],
 				food: [10],
 				hospitality: [6],
@@ -1650,6 +1670,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Turkey"],
 			scorecard: {
+				beauty: [4],
 				affordability: [6],
 				food: [4],
 				hospitality: [5],
@@ -1736,6 +1757,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Lebanon"],
 			scorecard: {
+				beauty: [3],
 				affordability: [8],
 				food: [9],
 				hospitality: [6],
@@ -1806,6 +1828,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Syria"],
 			scorecard: {
+				beauty: [7],
 				affordability: [10],
 				food: [10],
 				hospitality: [8],
@@ -1898,6 +1921,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Cyprus"],
 			scorecard: {
+				beauty: [4],
 				affordability: [5],
 				food: [8],
 				hospitality: [7],
@@ -1962,6 +1986,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Israel", "Palestine"],
 			scorecard: {
+				beauty: [4, 3],
 				affordability: [5, 5],
 				food: [8, 2],
 				hospitality: [3, 6],
@@ -2052,6 +2077,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Philippines", "Brunei"],
 			scorecard: {
+				beauty: [3, 3],
 				affordability: [7, 4],
 				food: [1, 2],
 				hospitality: [6, 4],
@@ -2118,6 +2144,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Timor-Leste"],
 			scorecard: {
+				beauty: [3],
 				affordability: [6],
 				food: [3],
 				hospitality: [7],
@@ -2207,6 +2234,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Bangladesh"],
 			scorecard: {
+				beauty: [1],
 				affordability: [9],
 				food: [1],
 				hospitality: [8],
@@ -2305,6 +2333,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			countries: ["East India", "Bhutan"],
 			deductCountryCount: 1,
 			scorecard: {
+				beauty: [10, 3],
 				affordability: [9, 1],
 				food: [3, 3],
 				hospitality: [6, 4],
@@ -2393,6 +2422,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["Maldives", "Sri Lanka"],
 			scorecard: {
+				beauty: [5, 3],
 				affordability: [4, 8],
 				food: [1, 4],
 				hospitality: [5, 6],
@@ -2506,6 +2536,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["pakistan"],
 			scorecard: {
+				beauty: [3],
 				affordability: [10],
 				food: [5],
 				hospitality: [10],
@@ -2616,6 +2647,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["afghanistan"],
 			scorecard: {
+				beauty: [4],
 				affordability: [8],
 				food: [2],
 				hospitality: [9],
@@ -2907,6 +2939,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["myanmar"],
 			scorecard: {
+				beauty: [4],
 				affordability: [8],
 				food: [2],
 				hospitality: [6],
@@ -3068,12 +3101,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "mongolia",
 		link: "mongolia",
 		restricted: false,
-		newestVideo: true,
 		backupLink:
 			"https://drive.google.com/drive/folders/1hNaxeVixcPGEcBaKT2fJZqMnaqm9lwb-?usp=sharing",
 		extras: {
 			countries: ["mongolia"],
 			scorecard: {
+				beauty: [8],
 				affordability: [3],
 				food: [1],
 				hospitality: [4],
