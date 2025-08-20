@@ -3061,18 +3061,20 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			tags: ["Caleb Eli Price", "Phillip Sgardelis"],
 		},
 	},
-	
+
 	{
 		title: "Mongolia",
 		year: 2025,
 		hostedLink: "mongolia",
 		link: "mongolia",
 		restricted: false,
-		backupLink: "https://drive.google.com/drive/folders/1hNaxeVixcPGEcBaKT2fJZqMnaqm9lwb-?usp=sharing",
+		newestVideo: true,
+		backupLink:
+			"https://drive.google.com/drive/folders/1hNaxeVixcPGEcBaKT2fJZqMnaqm9lwb-?usp=sharing",
 		extras: {
 			countries: ["mongolia"],
 			scorecard: {
-				affordability: [4],
+				affordability: [3],
 				food: [1],
 				hospitality: [4],
 				safety: [4],
@@ -3080,13 +3082,21 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				video: [8],
 			},
 			finalScore: 4,
-			summary: [ 
-				"Mongolia is a vast, sparsely populated country known for its nomadic culture and endless steppes.", 
-				"We visited during Naadam festival, a traditional celebration featuring the three manly sports of horse racing, wrestling, and archery.", 
-				"Surviving with no modern amenities and a fun Mongolian diet requires an incredible amount of grit but wow is this place worth it for the view."],
-			challenges: [ "Roads and English do not really exist" ],
-			dos: [ "Prepare various entertainments for the many long drives, you will spend most of your days driving", "Try to be a part of the Naadam festival with it's perfect weather and bright outfits" ],
-			donts: [ "Buy Naadam tickets in advance, they're only required for the stadium and it's not exactly hard to get in without them", "Underestimate the wild climate, it'll be scorching hot in the day and freezing at night", "Be vegan" ],
+			summary: [
+				"Mongolia is a vast, sparsely populated country known for its nomadic culture and endless steppes.",
+				"We visited during Naadam festival, a traditional celebration featuring the three manly sports of horse racing, wrestling, and archery.",
+				"Surviving with no modern amenities and a fun Mongolian diet requires an incredible amount of grit but wow is this place worth it for the view.",
+			],
+			challenges: ["Roads and English do not really exist"],
+			dos: [
+				"Prepare various entertainments for the many long drives, you will spend most of your days driving",
+				"Try to be a part of the Naadam festival with it's perfect weather and bright outfits",
+			],
+			donts: [
+				"Buy Naadam tickets in advance, they're only required for the stadium and it's not exactly hard to get in without them",
+				"Underestimate the wild climate, it'll be scorching hot in the day and freezing at night",
+				"Be vegan",
+			],
 			advice: {
 				travelLength: "2 weeks",
 				currency: "Mongolian Tugrik MNT",
@@ -3100,7 +3110,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			music: [
 				{
 					title: "Minii Mongol Naadam",
-					link: "https://music.youtube.com/watch?v=Ai3AgZe7Zno&si=8ozF8yIrXCbX8TFT"
+					link: "https://music.youtube.com/watch?v=Ai3AgZe7Zno&si=8ozF8yIrXCbX8TFT",
 				},
 				{
 					title: "Chinggis Kahn - Khusugtun",
@@ -3118,6 +3128,10 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					title: "Halo",
 					link: "https://music.youtube.com/watch?v=DOZLSho2o-M&si=8jP_Ic8szsfxfQZe",
 				},
+				{
+					title: "MW3 End Credits - Bryan Tyler",
+					link: "https://music.youtube.com/watch?v=qeZtmPQZluU&si=mnb2eOP9_0XBInHP",
+				},
 			],
 			extraVideos: [
 				{
@@ -3125,10 +3139,24 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					hostedLink: "frenchmongolia",
 				},
 			],
+			highlights: [
+				{
+					title: "Climbing a 100m Sand Dune (9m 57s)",
+					timecode: 597,
+				},
+				{
+					title: "Sandstorm (12m 41s)",
+					timecode: 761,
+				},
+				{
+					title: "Gobi Desert Breakdown (16m 43s)",
+					timecode: 1003,
+				},
+			],
 			tags: ["Adam Melander", "Claire Dubouilh Marino"],
 		},
 	},
-		// {
+	// {
 	// 	title: "",
 	// 	year: ,
 	// 	hostedLink: "",

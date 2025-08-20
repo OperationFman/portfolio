@@ -40,7 +40,7 @@ export const BioDescription = (): JSX.Element => {
 				</span>
 
 				<br />
-				<ReactTypingEffect
+				{/* <ReactTypingEffect
 					text={["Developer", "Volunteer", "Designer", "Backpacker"]}
 					cursorRenderer={(cursor: string) => (
 						<span className={`${styles.autoType} ${color.defaultDarkBlue}`}>
@@ -51,9 +51,9 @@ export const BioDescription = (): JSX.Element => {
 						return <span className={styles.autoType}>{text}</span>;
 					}}
 					typingDelay='1500ms'
-				/>
+				/> */}
 
-				<span className={styles.backupAutoType}>Developer</span>
+				{/* <span className={styles.backupAutoType}>Developer</span> */}
 
 				<main className={setDark(styles, "blurb")}>
 					Versatile full-stack developer, blending expertise in UX, frontend,

@@ -84,7 +84,7 @@ const Home: NextPage = () => {
 				<meta property='og:description' content={description} />
 				<meta
 					property='og:image'
-					content='https://user-images.githubusercontent.com/42459707/217668142-6ad58600-1713-40de-915d-caa035ea098a.png'
+					content='https://github.com/user-attachments/assets/63411a74-1521-4cd9-b9f8-a77124ecdfc5'
 				/>
 				<meta property='og:url' content='https://www.franklin-v-moon.dev/' />
 				<meta property='og:type' content='website' />
