@@ -141,7 +141,7 @@ const Travel: NextPage = () => {
 						{!searchingText && (
 							<>
 								<p className={styles.directorySubText}>
-									{travelVideoMetaData.length - 1} Videos
+									{travelVideoMetaData.length} Videos
 								</p>
 								<div className={styles.directorySubtextDivider}>|</div>
 								<p className={styles.directorySubText}>

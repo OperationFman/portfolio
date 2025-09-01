@@ -86,7 +86,7 @@ export function allCountriesList() {
 }
 
 export const countTotalCountries = () => {
-	let totalCountries = 1;
+	let totalCountries = 0;
 
 	travelVideoMetaData.forEach((video) => {
 		if (video.extras && video.extras.countries) {

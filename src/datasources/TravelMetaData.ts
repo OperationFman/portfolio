@@ -3270,6 +3270,16 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					title: "China 2 Video with French Subtitles",
 					hostedLink: "china2french",
 				},
+				{
+					title: "China 1 - My First Country",
+					hostedLink: "china",
+				},
+			],
+			extraLinks: [
+				{
+					title: "China 1 - My First Country",
+					link: "https://www.franklin-v-moon.dev/travel/china"
+				}
 			],
 			highlights: [
 				{
