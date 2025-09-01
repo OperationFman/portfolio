@@ -3218,7 +3218,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				"The whole country runs like it’s already the year 3025. Brilliantly frictionless or mildly dystopian, depending on your mood."
 			 ],
 			challenges: [ 
-				"English is very rare with middle-aged and above, digital google translate is a bit of a joke so get ready to play charades",
+				"English is very rare with middle-aged and above, google translate is a bit of a joke so get ready to play charades",
 				"The QR codes are no joke, setup the apps like WeChat or AliPay early and enjoy the sometimes streamlined but frustrating experience of doing everything through a broken app"
 			 ],
 			dos: [ "High speed trains are a delightful and fairly affordable way to travel around" ],
@@ -3271,7 +3271,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					hostedLink: "china2french",
 				},
 				{
-					title: "China 1 - My First Country",
+					title: "China 1 My First Country",
 					hostedLink: "china",
 				},
 			],
