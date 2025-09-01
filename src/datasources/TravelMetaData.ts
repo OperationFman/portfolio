@@ -3218,13 +3218,15 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				"The whole country runs like it’s already the year 3025. Brilliantly frictionless or mildly dystopian, depending on your mood."
 			 ],
 			challenges: [ 
-				"Enlgish is very rare with middle-aged and above, translations are always direct so prepare to gesture using a toilet",
-				"The QR codes are no joke, setup your apps early and prepare for a unqieu but often frustrating experience"
+				"English is very rare with middle-aged and above, digital google translate is a bit of a joke so get ready to play charades",
+				"The QR codes are no joke, setup the apps like WeChat or AliPay early and enjoy the sometimes streamlined but frustrating experience of doing everything through a broken app"
 			 ],
 			dos: [ "High speed trains are a delightful and fairly affordable way to travel around" ],
-			donts: [ "Have any non-conventional opinions", "Be careful helping anyone as they could be police testing you. Average citizens are taight to report 'non patriotic' events like it's 1984" ],
+			donts: [ 
+				"Have any non-conventional opinions", 
+				"Be careful helping anyone as they could be police testing you. Citizens will report 'non patriotic' events like it's 1984" ],
 			advice: {
-				travelLength: "3 Months",
+				travelLength: "2 - 3 Months",
 				currency: "Chinese Yuan RMB",
 				season: "April - September",
 				dailyBudget: "$25usd",
@@ -3279,7 +3281,7 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					timecode: 939,
 				},
 				{
-					title: "Chinese Rock, Paper Scissors (20m 59s)",
+					title: "Rock, Paper Scissors (20m 59s)",
 					timecode: 1259,
 				},
 			],
