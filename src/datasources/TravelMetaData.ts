@@ -22,12 +22,12 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		extras: {
 			countries: ["China"],
 			scorecard: {
-				beauty: [9],
+				beauty: [7],
 				affordability: [9],
-				food: [2],
-				hospitality: [5],
-				safety: [8],
-				accessibility: [3],
+				food: [1],
+				hospitality: [2],
+				safety: [10],
+				accessibility: [6],
 				video: [1],
 			},
 			finalScore: 4,
@@ -3103,6 +3103,10 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		restricted: false,
 		backupLink:
 			"https://drive.google.com/drive/folders/1hNaxeVixcPGEcBaKT2fJZqMnaqm9lwb-?usp=sharing",
+		instagramLinks: [
+			"https://www.instagram.com/p/DNbKfiah_sX/?hl=en&img_index=1", 
+			"https://www.instagram.com/p/DNjBVcvzM6-/?hl=en&img_index=1"
+		],
 		extras: {
 			countries: ["mongolia"],
 			scorecard: {
@@ -3189,6 +3193,99 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 			tags: ["Adam Melander", "Claire Dubouilh Marino"],
 		},
 	},
+	{
+		title: "China 2",
+		year: 2025,
+		hostedLink: "china2",
+		link: "china-2",
+		restricted: false,
+		backupLink: "https://drive.google.com/drive/folders/1go-otWd7v6xXLtbt0UFKk5_ZtEZRgjEH?usp=sharing",
+		extras: {
+			countries: ["china"],
+			scorecard: {
+				beauty: [7],
+				affordability: [9],
+				food: [1],
+				hospitality: [2],
+				safety: [10],
+				accessibility: [6],
+				video: [7],
+			},
+			finalScore: 6,
+			summary: [ 
+				"From the Great Wall snaking across wind-scoured ridges to the Terracotta Warriors staring through two millennia, China pairs grand history with serene peaks, delicious tea breaks, and smooth satisfying high speed rail.",
+				"But you’ll also find shoulder-to-shoulder crowds and “ancient” streets polished into theme parks, where the the experience is curated and even the night market feels algorithmically optimized.",
+				"The whole country runs like it’s already the year 3025. Brilliantly frictionless or mildly dystopian, depending on your mood."
+			 ],
+			challenges: [ 
+				"Enlgish is very rare with middle-aged and above, translations are always direct so prepare to gesture using a toilet",
+				"The QR codes are no joke, setup your apps early and prepare for a unqieu but often frustrating experience"
+			 ],
+			dos: [ "High speed trains are a delightful and fairly affordable way to travel around" ],
+			donts: [ "Have any non-conventional opinions", "Be careful helping anyone as they could be police testing you. Average citizens are taight to report 'non patriotic' events like it's 1984" ],
+			advice: {
+				travelLength: "3 Months",
+				currency: "Chinese Yuan RMB",
+				season: "April - September",
+				dailyBudget: "$25usd",
+			},
+			travelAdvisory: {
+				link: "https://www.smartraveller.gov.au/destinations/asia/china",
+				advice: Advisory.Level2,
+			},
+			music: [
+				{
+					title: "Kung Fu Fighting - Carl Douglas",
+					link: "https://music.youtube.com/watch?v=it3E6vtExSE&si=1A_JUz1C1DxHmhtk",
+				},
+				{
+					title: "Lemon Tree - Fools Garden",
+					link: "https://music.youtube.com/watch?v=enPg09IpUjU&si=o71kwzw_1wm-WLDb",
+				},
+				{
+					title: "Year 3000 - Jonas Brothers",
+					link: "https://music.youtube.com/watch?v=ASTzu6oKKCk&si=6qlCP3-k6gSYAtEO",
+				},
+				{
+					title: "Rex Incognito - Atharva Mohite",
+					link: "https://music.youtube.com/watch?v=58aRka616dE&si=KUBA6RLv4d-fwvRf",
+				},
+				{
+					title: "You, Me & Steve - Garfunkel and Oates",
+					link: "https://music.youtube.com/watch?v=7NcKGm3puTs&si=qO-ENaGn2rkvbhwi",
+				},
+				{
+					title: "Red Sun in the Sky - Mao Ze Dong",
+					link: "https://music.youtube.com/watch?v=xGxj2iHAtzE&si=6eh3BOSDrYDblpKK",
+				},
+				{
+					title: "黑桃A (合唱版) - 王大毛",
+					link: "https://music.youtube.com/watch?v=CPmNL9w6NL0&si=YIkC-m4f3xBrc-eX",
+				},
+			],
+			extraVideos: [
+				{
+					title: "China 2 Video with French Subtitles",
+					hostedLink: "china2french",
+				},
+			],
+			highlights: [
+				{
+					title: "Tianman Square (3m 12s)",
+					timecode: 197,
+				},
+				{
+					title: "Terracotta Warriors (15m 39s)",
+					timecode: 939,
+				},
+				{
+					title: "Chinese Rock, Paper Scissors (20m 59s)",
+					timecode: 1259,
+				},
+			],
+			tags: ["Adam Melander", "Claire Dubouilh Marino"],
+		},
+	},
 	// {
 	// 	title: "",
 	// 	year: ,
@@ -3255,6 +3352,17 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	// 				hostedLink: "",
 	// 			},
 	// 		],
+			// highlights: [
+			// 	{
+			// 		title: " (0m 0s)",
+			// 		timecode: 123,
+			// 	},
+			// 	{
+			// 		title: " (0m 0s)",
+			// 		timecode: 123,
+			// 	},
+			// ],
+			// tags: [""],
 	// 	},
 	// },
 ];
