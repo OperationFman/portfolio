@@ -26,8 +26,10 @@ import { SearchBar } from "../../src/travel/components/SearchBar";
 import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
 import { isClientSide } from "../../utils/isClientSide";
 import router from "next/router";
+import { useSEOHeader } from "../../src/global/SEOHeaderContext";
 
 const Travel: NextPage = () => {
+	const { setSEOHeader } = useSEOHeader();
 	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
 	const [sortSelection, setSortSelection] = useState(SortBy.Newest);
 	const [searchingText, setSearchingText] = useState<string>("");
@@ -42,6 +44,14 @@ const Travel: NextPage = () => {
 		[SortBy.Funniest]: funniestOnly,
 		[SortBy.Searching]: () => searchResult(searchingText),
 	};
+
+	const description =
+		"Explore Franklin Von Moon's travel journeys: Videos from dozens of countries with stories of culture, risks, and adventure.";
+
+	useEffect(() => {
+		setSEOHeader(description);
+		return () => setSEOHeader(null);
+	}, [setSEOHeader]);
 
 	useEffect(() => {
 		setSortedMetaData(sortFunctions[sortSelection]());
@@ -97,9 +107,6 @@ const Travel: NextPage = () => {
 	const handleOpenBlankPage = () => {
 		router.push("/travel/world-map");
 	};
-
-	const description =
-		"Explore Franklin Von Moon's travel journeys: videos from dozens of countries, world map of visited places, and stories of culture, risks, and adventure.";
 
 	const jsonLd = {
 		"@context": "https://schema.org",
