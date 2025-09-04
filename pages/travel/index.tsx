@@ -18,7 +18,7 @@ import {
 } from "../../src/travel/travelDataService";
 import NavigateNextRoundedIcon from "@mui/icons-material/NavigateNextRounded";
 import { VideoLibrary } from "../../src/travel/VideoLibrary";
-import { ButtonBase, styled, Tooltip } from "@mui/material";
+import { ButtonBase, styled } from "@mui/material";
 import { useEffect, useState } from "react";
 import { SortBy } from "../../src/travel/types";
 import { TravelSort } from "../../src/travel/components/TravelSort";
@@ -99,33 +99,55 @@ const Travel: NextPage = () => {
 	};
 
 	const description =
-		"Travel related content including completion map and travel videos, some public and some private of my experiences.";
+		"Explore Franklin Von Moon's travel journeys: videos from dozens of countries, world map of visited places, and stories of culture, risks, and adventure.";
+
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "CollectionPage",
+		name: "Travel Video Gallery",
+		url: "https://www.franklin-v-moon.dev/travel",
+		description: description,
+		creator: {
+			"@type": "Person",
+			name: "Franklin Von Moon",
+			url: "https://www.franklin-v-moon.dev",
+		},
+	};
 
 	return (
 		<div>
 			<Head>
-				<title>Travel - Franklin V Moon</title>
-				<meta name='Travel' content={description} />
+				<title>Travel Videos – Franklin Von Moon</title>
 				<link rel='icon' href='/favicon-yellow.ico' />
 				<meta name='description' content={description} />
-				<meta property='og:title' content='Franklin Von Moon Travel' />
+				<meta
+					property='og:title'
+					content='Travel Videos & World Map – Franklin Von Moon'
+				/>
 				<meta property='og:description' content={description} />
 				<meta
 					property='og:image'
-					content='https://private-user-images.githubusercontent.com/42459707/367673150-764558d9-5f59-4574-9268-728ad7498b2f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY0NzE5OTYsIm5iZiI6MTcyNjQ3MTY5NiwicGF0aCI6Ii80MjQ1OTcwNy8zNjc2NzMxNTAtNzY0NTU4ZDktNWY1OS00NTc0LTkyNjgtNzI4YWQ3NDk4YjJmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTE2VDA3MjgxNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWNiMGU4YTc5OTkwMGZhZTZjYzkwY2YxNTBkZTI0ZTBiOTEzODUwMTBmMWRlNmIzOWJjOGNiOTJlODhiNmE1NmQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.VCNSD5LCx1ES3Cko_u28azndr9Jps0Z7ATg0hwsIVXQ'
+					content='https://private-user-images.githubusercontent.com/42459707/367673150-764558d9-5f59-4574-9268-728ad7498b2f.png'
 				/>
 				<meta
 					property='og:url'
 					content='https://www.franklin-v-moon.dev/travel'
 				/>
 				<meta property='og:type' content='website' />
+
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				/>
 			</Head>
+
+			<h1 className={styles.behindNav}>{description}</h1>
 
 			<PageContainer>
 				<div style={{ position: "relative", width: "100%", height: "auto" }}>
 					<Image
 						src='/travel/WorldDotted.png'
-						alt='A map of the world with everywhere Ive been marked'
+						alt='A dotted world map marking all countries visited by Franklin Von Moon'
 						width={3840}
 						height={1878}
 						layout='responsive'
@@ -134,8 +156,10 @@ const Travel: NextPage = () => {
 					<InvisibleImageButton
 						focusRipple
 						onClick={handleOpenBlankPage}
-						aria-label='Open a blank page'></InvisibleImageButton>
+						aria-label='Open interactive world map'
+					/>
 				</div>
+
 				<div className={styles.directoryContainer}>
 					<div className={styles.countriesBeenContainer}>
 						{!searchingText && (
@@ -163,35 +187,29 @@ const Travel: NextPage = () => {
 					</div>
 				</div>
 
-				{sortedMetaData.map((metaData, index) => {
-					{
-						return (
-							<div
-								key={`Videos from ${metaData.heading}`}
-								className={styles.libraryContainer}
-								style={{
-									animation: `fadeIn ${index}00ms ease-in-out`,
-									opacity: 1,
-								}}>
-								<div className={styles.yearHeadingContainer}>
-									<div className={styles.yearHeading}>
-										<NavigateNextRoundedIcon
-											style={{
-												color: "yellow",
-												height: "2.5rem",
-												width: "2.5rem",
-											}}
-										/>
-										<h2 className={styles.yearHeadingText}>
-											{metaData.heading}
-										</h2>
-									</div>
-								</div>
-								<VideoLibrary videoMetaData={metaData.grouping} />
+				{sortedMetaData.map((metaData, index) => (
+					<div
+						key={`Videos from ${metaData.heading}`}
+						className={styles.libraryContainer}
+						style={{
+							animation: `fadeIn ${index}00ms ease-in-out`,
+							opacity: 1,
+						}}>
+						<div className={styles.yearHeadingContainer}>
+							<div className={styles.yearHeading}>
+								<NavigateNextRoundedIcon
+									style={{
+										color: "yellow",
+										height: "2.5rem",
+										width: "2.5rem",
+									}}
+								/>
+								<h2 className={styles.yearHeadingText}>{metaData.heading}</h2>
 							</div>
-						);
-					}
-				})}
+						</div>
+						<VideoLibrary videoMetaData={metaData.grouping} />
+					</div>
+				))}
 			</PageContainer>
 			<Footer />
 		</div>

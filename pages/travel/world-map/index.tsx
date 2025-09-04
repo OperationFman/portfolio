@@ -15,7 +15,7 @@ const WorldMapPage: NextPage = () => {
 	return (
 		<div className={styles.freeMap}>
 			<Head>
-				<title>Travel - Franklin V Moon</title>
+				<title>Travel - Franklin Von Moon</title>
 				<meta name='Travel' content={description} />
 				<link rel='icon' href='/favicon-yellow.ico' />
 				<meta name='description' content={description} />

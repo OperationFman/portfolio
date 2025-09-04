@@ -26,7 +26,7 @@ export const Contact = () => {
 						<ContactCard
 							contactMethod={"Email"}
 							value={"Franklin.v.moon@gmail.com"}
-							link={"mailto:franklin.v.moon@gmail.com"}>
+							link={`mailto:franklin.v.moon@gmail.com?body=Hey%20Franklin,%20I%20just%20discovered%20your%20email%20through%20your%20website!`}>
 							<EmailIcon color={"primary"} fontSize={"large"} />
 						</ContactCard>
 					</Grid>

@@ -13,7 +13,8 @@ import AssetCollection from "../../src/assets/components/AssetCollection/AssetCo
 import { getFeaturedItems } from "../../src/assets/components/getFeaturedItems";
 
 const AssetsStore: NextPage = () => {
-	const description = "Assets of any digital products I'm selling";
+	const description =
+		"Assets of digital products, stock footage and free wallpaper I've collected available fr purchase";
 
 	const responsiveFeatured = {
 		desktop: {
@@ -37,18 +38,41 @@ const AssetsStore: NextPage = () => {
 		<>
 			<div className={styles.pageContainer}>
 				<Head>
-					<title>Assets Store - Franklin V Moon</title>
-					<meta name='Assets' content={description} />
+					<title>Assets Store - Franklin Von Moon</title>
 					<link rel='icon' href='/favicon-purple.ico' />
 					<meta name='description' content={description} />
-					<meta property='og:title' content='Franklin Von Moon Assets Store' />
+					<meta
+						property='og:title'
+						content='Assets & Stock Footage Store – Franklin Von Moon'
+					/>
 					<meta property='og:description' content={description} />
 					<meta
 						property='og:url'
 						content='https://www.franklin-v-moon.dev/assets-store'
 					/>
 					<meta property='og:type' content='website' />
+
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{
+							__html: JSON.stringify({
+								"@context": "https://schema.org",
+								"@type": "CollectionPage",
+								name: "Assets and Stock Footage Store",
+								description:
+									"Browse curated stock footage and digital assets by Franklin Von Moon",
+								url: "https://www.franklin-v-moon.dev/assets-store",
+								creator: {
+									"@type": "Person",
+									name: "Franklin Von Moon",
+									url: "https://www.franklin-v-moon.dev",
+								},
+							}),
+						}}
+					/>
 				</Head>
+
+				<h1 className={styles.behindNav}>{description}</h1>
 
 				<PageContainer>
 					<div className={styles.featuredContainer}>
@@ -67,7 +91,7 @@ const AssetsStore: NextPage = () => {
 						</Box>
 					</div>
 					<AssetSearchBar />
-					<h2>Stock Footage</h2>
+					<h1>Stock Footage Store</h1>
 					<div className={styles.assetCollectionsContainer}>
 						<div className={styles.assetCollectionsGrid}>
 							{stockFootageMetaData.map((item) => (

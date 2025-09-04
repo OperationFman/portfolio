@@ -3104,8 +3104,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		backupLink:
 			"https://drive.google.com/drive/folders/1hNaxeVixcPGEcBaKT2fJZqMnaqm9lwb-?usp=sharing",
 		instagramLinks: [
-			"https://www.instagram.com/p/DNbKfiah_sX/?hl=en&img_index=1", 
-			"https://www.instagram.com/p/DNjBVcvzM6-/?hl=en&img_index=1"
+			"https://www.instagram.com/p/DNbKfiah_sX/?hl=en&img_index=1",
+			"https://www.instagram.com/p/DNjBVcvzM6-/?hl=en&img_index=1",
 		],
 		extras: {
 			countries: ["mongolia"],
@@ -3199,7 +3199,8 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 		hostedLink: "china2",
 		link: "china-2",
 		restricted: false,
-		backupLink: "https://drive.google.com/drive/folders/1go-otWd7v6xXLtbt0UFKk5_ZtEZRgjEH?usp=sharing",
+		backupLink:
+			"https://drive.google.com/drive/folders/1go-otWd7v6xXLtbt0UFKk5_ZtEZRgjEH?usp=sharing",
 		extras: {
 			countries: ["china"],
 			scorecard: {
@@ -3212,19 +3213,22 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 				video: [7],
 			},
 			finalScore: 6,
-			summary: [ 
+			summary: [
 				"From the Great Wall snaking across wind-scoured ridges to the Terracotta Warriors staring through two millennia, China pairs grand history with serene peaks, delicious tea breaks, and smooth satisfying high speed rail.",
 				"But you’ll also find shoulder-to-shoulder crowds and “ancient” streets polished into theme parks, where the the experience is curated and even the night market feels algorithmically optimized.",
-				"The whole country runs like it’s already the year 3025. Brilliantly frictionless or mildly dystopian, depending on your mood."
-			 ],
-			challenges: [ 
+				"The whole country runs like it’s already the year 3025. Brilliantly frictionless or mildly dystopian, depending on your mood.",
+			],
+			challenges: [
 				"English is very rare with middle-aged and above, google translate is a bit of a joke so get ready to play charades",
-				"The QR codes are no joke, setup the apps like WeChat or AliPay early and enjoy the sometimes streamlined but frustrating experience of doing everything through a broken app"
-			 ],
-			dos: [ "High speed trains are a delightful and fairly affordable way to travel around" ],
-			donts: [ 
-				"Have any non-conventional opinions", 
-				"Be careful helping anyone as they could be police testing you. Citizens will report 'non patriotic' events like it's 1984" ],
+				"The QR codes are no joke, setup the apps like WeChat or AliPay early and enjoy the sometimes streamlined but frustrating experience of doing everything through a broken app",
+			],
+			dos: [
+				"High speed trains are a delightful and fairly affordable way to travel around",
+			],
+			donts: [
+				"Have any non-conventional opinions",
+				"Be careful helping anyone as they could be police testing you. Citizens will report 'non patriotic' events like it's 1984",
+			],
 			advice: {
 				travelLength: "2 - 3 Months",
 				currency: "Chinese Yuan RMB",
@@ -3271,15 +3275,15 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 					hostedLink: "china2french",
 				},
 				{
-					title: "China 1 My First Country",
+					title: "China - My First Country",
 					hostedLink: "china",
 				},
 			],
 			extraLinks: [
 				{
-					title: "China 1 - My First Country",
-					link: "https://www.franklin-v-moon.dev/travel/china"
-				}
+					title: "China - My First Country",
+					link: "https://www.franklin-v-moon.dev/travel/china",
+				},
 			],
 			highlights: [
 				{
@@ -3364,17 +3368,17 @@ export const travelVideoMetaData: TravelVideoMetaData[] = [
 	// 				hostedLink: "",
 	// 			},
 	// 		],
-			// highlights: [
-			// 	{
-			// 		title: " (0m 0s)",
-			// 		timecode: 123,
-			// 	},
-			// 	{
-			// 		title: " (0m 0s)",
-			// 		timecode: 123,
-			// 	},
-			// ],
-			// tags: [""],
+	// highlights: [
+	// 	{
+	// 		title: " (0m 0s)",
+	// 		timecode: 123,
+	// 	},
+	// 	{
+	// 		title: " (0m 0s)",
+	// 		timecode: 123,
+	// 	},
+	// ],
+	// tags: [""],
 	// 	},
 	// },
 ];

@@ -140,7 +140,7 @@ const VideoContent = ({
 		<>
 			<Head>
 				<title>
-					{title} - {year} - Franklin V Moon
+					{title} - {year} - Franklin Von Moon
 				</title>
 				<meta name={title} content={title} />
 				<link rel='icon' href='/favicon-yellow.ico' />

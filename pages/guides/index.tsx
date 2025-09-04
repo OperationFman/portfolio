@@ -46,18 +46,32 @@ const Guides: NextPage = () => {
 
 	const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
-	const description = "Comprehensive training, guides and useful code snippets";
+	const description =
+		"Guides by Franklin Von Moon – practical notes, training references, and code snippets shared freely for learning and career growth.";
+
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "CollectionPage",
+		name: "Guides",
+		url: "https://www.franklin-v-moon.dev/guides",
+		description: description,
+		creator: {
+			"@type": "Person",
+			name: "Franklin Von Moon",
+			url: "https://www.franklin-v-moon.dev",
+		},
+	};
+
 	return (
 		<>
 			<div className={styles.pageContainer}>
 				<Head>
-					<title>Guides - Franklin V Moon</title>
-					<meta name='Guides' content={description} />
+					<title>Guides & Knowledge Sharing – Franklin Von Moon</title>
 					<link rel='icon' href='/favicon-green.ico' />
 					<meta name='description' content={description} />
 					<meta
 						property='og:title'
-						content='Franklin Von Moon Portfolio Guides'
+						content='Guides & Knowledge Sharing – Franklin Von Moon'
 					/>
 					<meta property='og:description' content={description} />
 					<meta
@@ -69,6 +83,12 @@ const Guides: NextPage = () => {
 						content='https://www.franklin-v-moon.dev/guides'
 					/>
 					<meta property='og:type' content='website' />
+
+					{/* JSON-LD Structured Data */}
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+					/>
 				</Head>
 
 				<Dialog
@@ -90,6 +110,13 @@ const Guides: NextPage = () => {
 				</Dialog>
 
 				<PageContainer>
+					<header className={styles.behindNav}>
+						<h1>
+							Guides & knowledge sharing of technical skills, workflows and
+							references from code to countries
+						</h1>
+					</header>
+
 					<div className={styles.filterContainer}>
 						<div className={styles.filters}>
 							<FilterButton setShowFilterMenu={setShowFilterMenu} />

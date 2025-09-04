@@ -37,7 +37,7 @@ const PageContent = ({
 	return (
 		<>
 			<Head>
-				<title>{title} - Franklin V Moon</title>
+				<title>{title} - Franklin Von Moon</title>
 				<meta name={subTitle} content={topic} />
 				<link rel='icon' href='/favicon-purple.ico' />
 			</Head>

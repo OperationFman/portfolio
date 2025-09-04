@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-
 import Head from "next/head";
 import { PageContainer } from "../src/global/PageContainer";
 import { HomeFooterImage } from "../src/homepage/homeFooter/HomeFooterImage";
@@ -54,7 +53,22 @@ const Home: NextPage = () => {
 	};
 
 	const description =
-		"Franklin is a full-stack software developer with a passion for user centric design, volunteering globally and advocating for social change";
+		"Franklin Von Moon – full-stack software engineer and world traveler sharing projects, skills, guides, digital assets and adventure videos from dozens of countries.";
+
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@type": "Person",
+		name: "Franklin Von Moon",
+		url: "https://www.franklin-v-moon.dev",
+		jobTitle: "Software Engineer & Traveler",
+		description: description,
+		sameAs: [
+			"https://www.instagram.com/franklin.v.moon",
+			"https://github.com/OperationFman",
+			"https://www.linkedin.com/in/franklin-moon",
+			"https://www.facebook.com/frank.moon.731/",
+		],
+	};
 
 	const SubPage = () => {
 		switch (alignment) {
@@ -76,11 +90,10 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Homepage - Franklin V Moon</title>
+				<title>Franklin Von Moon</title>
 				<link rel='icon' href='/favicon-blue.ico' />
-				<meta name='Franklin Moon' content={description} />
 				<meta name='description' content={description} />
-				<meta property='og:title' content='Franklin Moon Portfolio' />
+				<meta property='og:title' content='Franklin Von Moon' />
 				<meta property='og:description' content={description} />
 				<meta
 					property='og:image'
@@ -88,7 +101,13 @@ const Home: NextPage = () => {
 				/>
 				<meta property='og:url' content='https://www.franklin-v-moon.dev/' />
 				<meta property='og:type' content='website' />
+
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				/>
 			</Head>
+
 			<ParallaxArt />
 			<PageContainer>
 				<>

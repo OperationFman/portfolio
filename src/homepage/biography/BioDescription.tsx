@@ -1,10 +1,7 @@
 import { Duration, intervalToDuration } from "date-fns";
 import { useEffect, useState } from "react";
-// @ts-ignore
-import ReactTypingEffect from "react-typing-effect";
 import { setDark } from "../../../utils/configureCss/configureCss";
 
-import color from "../../../themes/_colors.module.scss";
 import styles from "./BioDescription.module.scss";
 
 export const BioDescription = (): JSX.Element => {
