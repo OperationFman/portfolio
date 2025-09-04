@@ -65,7 +65,7 @@ const Home: NextPage = () => {
 		sameAs: [
 			"https://www.instagram.com/franklin.v.moon",
 			"https://github.com/OperationFman",
-			"https://www.linkedin.com/in/franklin-moon",
+			"https://www.linkedin.com/in/franklin-von-moon-23572518a/",
 			"https://www.facebook.com/frank.moon.731/",
 		],
 	};
