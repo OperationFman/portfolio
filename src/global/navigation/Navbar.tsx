@@ -53,7 +53,7 @@ export const Navbar = () => {
 	};
 
 	return (
-		<nav>
+		<nav role='navigation' aria-label='Main navigation'>
 			<h1 className={styles.behindNav}>{tabsData[tabIndex].pageDescription}</h1>
 			<div className={styles.logotypeDesktopContainer}>
 				<h5 className={`${styles.logotypeText} ${styles.logotypeAlignDesktop}`}>
