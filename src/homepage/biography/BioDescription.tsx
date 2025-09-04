@@ -53,9 +53,9 @@ export const BioDescription = (): JSX.Element => {
 				{/* <span className={styles.backupAutoType}>Developer</span> */}
 
 				<main className={setDark(styles, "blurb")}>
-					Versatile full-stack developer, blending expertise in UX, frontend,
-					mobile, backend and cloud to engineer exemplary digital products
-					whilst having a positive global impact
+					Franklin Von Moon is a versatile full-stack developer, blending
+					expertise in UX, frontend, mobile, backend and cloud to engineer
+					exemplary digital products whilst having a positive global impact
 					<br />
 					<br />
 					Practicing professional for {pluralTime(
