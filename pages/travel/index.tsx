@@ -1,3 +1,4 @@
+import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
@@ -25,12 +26,8 @@ import { SearchBar } from "../../src/travel/components/SearchBar";
 import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
 import { isClientSide } from "../../utils/isClientSide";
 import router from "next/router";
-import { NextPageWithSEO } from "../../src/global/SEOHeader";
 
-const description =
-	"Explore Franklin Von Moon's travel journeys: videos from dozens of countries, world map of visited places, and stories of culture, risks, and adventure.";
-
-const Travel: NextPageWithSEO = () => {
+const Travel: NextPage = () => {
 	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
 	const [sortSelection, setSortSelection] = useState(SortBy.Newest);
 	const [searchingText, setSearchingText] = useState<string>("");
@@ -101,6 +98,9 @@ const Travel: NextPageWithSEO = () => {
 		router.push("/travel/world-map");
 	};
 
+	const description =
+		"Explore Franklin Von Moon's travel journeys: videos from dozens of countries, world map of visited places, and stories of culture, risks, and adventure.";
+
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "CollectionPage",
@@ -140,6 +140,8 @@ const Travel: NextPageWithSEO = () => {
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 				/>
 			</Head>
+
+			<h1 className={styles.behindNav}>{description}</h1>
 
 			<PageContainer>
 				<div style={{ position: "relative", width: "100%", height: "auto" }}>
@@ -213,7 +215,5 @@ const Travel: NextPageWithSEO = () => {
 		</div>
 	);
 };
-
-Travel.seoHeader = () => <h1 className={styles.behindNav}>{description}</h1>;
 
 export default Travel;
