@@ -1,6 +1,19 @@
 const stockFootageMetaData = require("./utils/sitemap-meta/AssetMetaData.json");
 const siteUrl = "https://franklin-v-moon.dev";
 
+const toISODate = (epoch) => {
+	if (!epoch) return undefined;
+	return new Date(epoch * 1000).toISOString();
+};
+
+const encodeFileName = (file) => {
+	if (!file || typeof file !== "string") return file;
+	return file
+		.split("/")
+		.map((part) => encodeURIComponent(part))
+		.join("/");
+};
+
 module.exports = {
 	siteUrl,
 	generateRobotsTxt: true,
@@ -26,7 +39,6 @@ module.exports = {
 			loc: path,
 			changefreq: config.changefreq,
 			priority,
-			lastmod: new Date().toISOString(),
 		};
 	},
 
@@ -40,10 +52,13 @@ module.exports = {
 
 			if (collection.wallpapers && collection.wallpapers.length > 0) {
 				collection.wallpapers.forEach((file) => {
-					images.push({
-						loc: `${siteUrl}/assets/${collection.hostedLink}/${file}`,
-						title: `${collection.title} wallpaper`,
-					});
+					const encoded = encodeFileName(file);
+					if (encoded) {
+						images.push({
+							loc: `${siteUrl}/assets/${collection.hostedLink}/${encoded}`,
+							title: `${collection.title} wallpaper`,
+						});
+					}
 				});
 			}
 
@@ -53,21 +68,38 @@ module.exports = {
 			) {
 				collection.assetItemMetaData.forEach((item) => {
 					if (item.thumbnail) {
-						images.push({
-							loc: `${siteUrl}/assets/${item.thumbnail}`,
-							title: item.title,
-						});
+						const encoded = encodeFileName(item.thumbnail);
+						if (encoded) {
+							images.push({
+								loc: `${siteUrl}/assets/${encoded}`,
+								title: item.title,
+							});
+						}
 					}
 				});
 			}
 
-			paths.push({
+			let lastmod;
+			if (
+				collection.assetItemMetaData &&
+				collection.assetItemMetaData.length > 0
+			) {
+				const mostRecent = Math.max(
+					...collection.assetItemMetaData.map((i) => i.created || 0),
+				);
+				if (mostRecent > 0) lastmod = toISODate(mostRecent);
+			}
+
+			const entry = {
 				loc: pageUrl,
 				changefreq: "monthly",
 				priority: 0.5,
-				lastmod: new Date().toISOString(),
 				images,
-			});
+			};
+
+			if (lastmod) entry.lastmod = lastmod;
+
+			paths.push(entry);
 		});
 
 		return paths;
