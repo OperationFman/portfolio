@@ -141,8 +141,6 @@ const Travel: NextPage = () => {
 				/>
 			</Head>
 
-			<h1 className={styles.behindNav}>{description}</h1>
-
 			<PageContainer>
 				<div style={{ position: "relative", width: "100%", height: "auto" }}>
 					<Image

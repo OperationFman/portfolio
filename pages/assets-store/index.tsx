@@ -72,8 +72,6 @@ const AssetsStore: NextPage = () => {
 					/>
 				</Head>
 
-				<h1 className={styles.behindNav}>{description}</h1>
-
 				<PageContainer>
 					<div className={styles.featuredContainer}>
 						<h2>Featured Today</h2>

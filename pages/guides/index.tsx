@@ -110,13 +110,6 @@ const Guides: NextPage = () => {
 				</Dialog>
 
 				<PageContainer>
-					<header className={styles.behindNav}>
-						<h1>
-							Guides & knowledge sharing of technical skills, workflows and
-							references from code to countries
-						</h1>
-					</header>
-
 					<div className={styles.filterContainer}>
 						<div className={styles.filters}>
 							<FilterButton setShowFilterMenu={setShowFilterMenu} />

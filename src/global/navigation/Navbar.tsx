@@ -54,6 +54,7 @@ export const Navbar = () => {
 
 	return (
 		<nav>
+			<h1 className={styles.behindNav}>{tabsData[tabIndex].pageDescription}</h1>
 			<div className={styles.logotypeDesktopContainer}>
 				<h5 className={`${styles.logotypeText} ${styles.logotypeAlignDesktop}`}>
 					Franklin

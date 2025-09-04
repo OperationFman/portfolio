@@ -18,6 +18,7 @@ export const tabsData: {
 	icon: (tab: number) => JSX.Element;
 	order: number;
 	disabled?: boolean;
+	pageDescription: string;
 }[] = [
 	{
 		label: "",
@@ -31,6 +32,8 @@ export const tabsData: {
 			/>
 		),
 		order: 1,
+		pageDescription:
+			"Franklin Von Moon – full-stack software engineer and world traveler sharing projects, skills, guides, digital assets and adventure videos from dozens of countries.",
 	},
 	{
 		label: "GUIDES",
@@ -44,6 +47,8 @@ export const tabsData: {
 			/>
 		),
 		order: 2,
+		pageDescription:
+			"Guides by Franklin Von Moon – practical notes, training references, and code snippets shared freely for learning and career growth.",
 	},
 	{
 		label: "TRAVEL",
@@ -57,6 +62,8 @@ export const tabsData: {
 			/>
 		),
 		order: 3,
+		pageDescription:
+			"Explore Franklin Von Moon's travel journeys: videos from dozens of countries, world map of visited places, and stories of culture, risks, and adventure.",
 	},
 	{
 		label: "ASSETS",
@@ -71,5 +78,7 @@ export const tabsData: {
 		),
 		order: 4,
 		disabled: !isAssetsStoreEnabled,
+		pageDescription:
+			"Assets of digital products, stock footage and free wallpaper I've collected available fr purchase",
 	},
 ];
