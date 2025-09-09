@@ -41,7 +41,7 @@
 .logotypeMobileContainer {
 	display: inline;
 	padding-left: 15px;
-	top: 24px;
+	margin-top: 24px;
 	position: absolute;
 	z-index: 3;
 	font-weight: bold;
@@ -52,7 +52,7 @@
 }
 
 .logotypeAlignDesktop {
-	margin: -3.5px;
+	margin: -5px -3.5px -3.5px -3.5px;
 }
 
 .logotypeGradientSize {
@@ -61,6 +61,7 @@
 
 .logotypeText {
 	color: $white;
+	font-weight: bold;
 }
 
 .tab:first-child {

@@ -53,74 +53,80 @@ export const Navbar = () => {
 	};
 
 	return (
-		<nav role='navigation' aria-label='Main navigation'>
+		<>
 			<h1 className={styles.behindNav}>{tabsData[tabIndex].pageDescription}</h1>
-			<div className={styles.logotypeDesktopContainer}>
-				<h5 className={`${styles.logotypeText} ${styles.logotypeAlignDesktop}`}>
-					Franklin
-				</h5>
-				<h5
-					className={`${styles.logotypeText} ${styles.logotypeAlignDesktop} ${
-						styles[tabsData[tabIndex].gradient]
-					} ${styles.logotypeGradientSize}`}>
-					V Moon
-				</h5>
-			</div>
+			<nav role='navigation' aria-label='Main navigation'>
+				<div className={styles.logotypeDesktopContainer}>
+					<span
+						className={`${styles.logotypeText} ${styles.logotypeAlignDesktop}`}>
+						Franklin
+					</span>
+					<span
+						className={`${styles.logotypeText} ${styles.logotypeAlignDesktop} ${
+							styles[tabsData[tabIndex].gradient]
+						} ${styles.logotypeGradientSize}`}>
+						V Moon
+					</span>
+				</div>
 
-			<div className={styles.logotypeMobileContainer}>
-				<span className={styles.logotypeText}>F</span>
-				<span
-					className={`${styles.logotypeText} ${
-						styles[tabsData[tabIndex].gradient]
-					}`}>
-					V
-				</span>
-				<span className={styles.logotypeText}>M</span>
-			</div>
+				<div className={styles.logotypeMobileContainer}>
+					<span className={styles.logotypeText}>F</span>
+					<span
+						className={`${styles.logotypeText} ${
+							styles[tabsData[tabIndex].gradient]
+						}`}>
+						V
+					</span>
+					<span className={styles.logotypeText}>M</span>
+				</div>
 
-			<Tabs
-				value={tabIndex}
-				scrollButtons={true}
-				TabIndicatorProps={{ style: { background: tabsData[tabIndex].color } }}
-				textColor='inherit'
-				variant='standard'
-				className={styles.container}
-				sx={{
-					"& .MuiTabs-flexContainer": {
-						justifyContent: "flex-end",
-					},
-				}}>
-				{tabsData.map((item, index) => {
-					const tabStyles = ensureTabsFit(index);
+				<Tabs
+					value={tabIndex}
+					scrollButtons={true}
+					TabIndicatorProps={{
+						style: { background: tabsData[tabIndex].color },
+					}}
+					textColor='inherit'
+					variant='standard'
+					className={styles.container}
+					sx={{
+						"& .MuiTabs-flexContainer": {
+							justifyContent: "flex-end",
+						},
+					}}>
+					{tabsData.map((item, index) => {
+						const tabStyles = ensureTabsFit(index);
 
-					if (item.disabled) {
-						return;
-					}
+						if (item.disabled) {
+							return;
+						}
 
-					return (
-						<Tab
-							label={
-								item.label || (
-									<span className={styles.visuallyHidden}>PORTFOLIO</span>
-								)
-							}
-							icon={item.icon(tabIndex)}
-							className={`${styles.tab} ${styles.hover}`}
-							style={{
-								order: item.order,
-								fontSize: isSmallScreen ? "0.7rem" : "0.9rem",
-								padding: "0.4375rem",
-								...tabStyles,
-							}}
-							key={index}
-							tabIndex={index + 1}
-							onClick={() => {
-								handleTabClick(item.route, index);
-							}}
-						/>
-					);
-				})}
-			</Tabs>
-		</nav>
+						return (
+							<Tab
+								label={
+									item.label || (
+										<span className={styles.visuallyHidden}>PORTFOLIO</span>
+									)
+								}
+								icon={item.icon(tabIndex)}
+								className={`${styles.tab} ${styles.hover}`}
+								style={{
+									order: item.order,
+									fontSize: isSmallScreen ? "0.7rem" : "0.9rem",
+									padding: "0.4375rem",
+									...tabStyles,
+								}}
+								key={index}
+								tabIndex={index + 1}
+								onClick={() => {
+									handleTabClick(item.route, index);
+								}}
+								href={item.route}
+							/>
+						);
+					})}
+				</Tabs>
+			</nav>
+		</>
 	);
 };
