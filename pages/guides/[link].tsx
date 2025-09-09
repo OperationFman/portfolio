@@ -1,5 +1,6 @@
-import { Container } from "@mui/material";
+import { Button, Container } from "@mui/material";
 import { InferGetServerSidePropsType } from "next";
+import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { NotionAPI } from "notion-client";
@@ -13,6 +14,7 @@ import styles from "../../src/guides/index.module.scss";
 import { useContext } from "react";
 import { DarkMode } from "../../themes/GlobalTheme";
 import { Footer } from "../../utils/footer/Footer";
+import router from "next/router";
 
 const Code = dynamic<any>(() =>
 	import("react-notion-x/build/third-party/code").then((m) => m.Code),
@@ -41,6 +43,18 @@ const PageContent = ({
 				<meta name={subTitle} content={topic} />
 				<link rel='icon' href='/favicon-green.ico' />
 			</Head>
+
+			<Container maxWidth={"md"}>
+				<div className={styles.returnContainer}>
+					<Button
+						variant='text'
+						color='inherit'
+						startIcon={<KeyboardBackspaceOutlinedIcon />}
+						onClick={() => router.replace("/guides")}>
+						Guides Library
+					</Button>
+				</div>
+			</Container>
 
 			<Container maxWidth={"md"} className={styles.contentPageContainer}>
 				<div className={styles.contentPage}>

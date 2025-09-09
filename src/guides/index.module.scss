@@ -1,4 +1,5 @@
 @import "../../themes/breakpoints";
+@import "../../themes/colors.module";
 
 .pageContainer {
 	min-height: 100vh;
@@ -27,6 +28,11 @@
 		margin: 0 10px;
 		width: 100%;
 	}
+}
+
+.returnContainer {
+	color: $brightGrey;
+	margin: 25px 0 10px;
 }
 
 .gridContainer {
