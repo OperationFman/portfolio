@@ -16,15 +16,10 @@ import Folio from "../src/folio/Skills";
 const Home: NextPage = () => {
 	const enum FolioKey {
 		Portfolio = "portfolio",
-		Skills = "skills",
 		Projects = "projects",
 	}
 
-	const portfolioOptions = [
-		FolioKey.Portfolio,
-		FolioKey.Skills,
-		FolioKey.Projects,
-	];
+	const portfolioOptions = [FolioKey.Portfolio, FolioKey.Projects];
 
 	const [alignment, setAlignment] = useState("portfolio");
 
@@ -74,8 +69,6 @@ const Home: NextPage = () => {
 		switch (alignment) {
 			case "portfolio":
 				return <Portfolio />;
-			case "skills":
-				return <Folio />;
 			case "projects":
 				return (
 					<div className={styles.projects}>
@@ -118,8 +111,7 @@ const Home: NextPage = () => {
 							value={alignment}
 							exclusive
 							onChange={handleChange}>
-							<ToggleButton value='portfolio'>Resume</ToggleButton>
-							<ToggleButton value='skills'>Skills</ToggleButton>
+							<ToggleButton value='portfolio'>Portfolio</ToggleButton>
 							<ToggleButton value='projects'>Projects</ToggleButton>
 						</ToggleButtonGroup>
 					</div>

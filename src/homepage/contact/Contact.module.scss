@@ -20,6 +20,11 @@
 		width: 210px;
 		height: 180px;
 	}
+
+	&:hover,
+	&:focus {
+		background-color: $mediumGrey;
+	}
 }
 
 .cardContent {

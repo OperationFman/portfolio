@@ -72,20 +72,6 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.Proficient,
 			},
 			{
-				title: "React Spring",
-				knowledge:
-					"I find React Spring valuable in my work as a developer because it allows me to create visually appealing and engaging animations that add depth and interactivity to my projects. I have found that using React Spring can help to make my applications more dynamic and engaging, which can be particularly useful in creating user interfaces that are intuitive and easy to use. Overall, I believe that React Spring is a valuable tool for any developer looking to create high-quality animations in their projects.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
-				title: "JQuery",
-				knowledge:
-					"I've Jquery on various legacy applications and understand it's valuable tool for manipulating the DOM and adding interactivity to my web applications. However, it is important to consider the drawbacks of using Jquery, it can add a significant amount of weight to a page if many Jquery plugins are used, and it is not as performant as some newer JavaScript libraries and frameworks.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
 				title: "Flask",
 				knowledge:
 					"I can confidently say that I am very familiar with it and use it regularly in my projects. I have a strong understanding of its features and capabilities, and am able to effectively apply them to build web applications. In my experience, Python Flask has proven to be a valuable tool for building web applications quickly and efficiently. Its simplicity and flexibility make it an excellent choice for a wide range of projects.",
@@ -93,23 +79,9 @@ export const languagesMetaData: ColumnData[] = [
 				description: Description.HighlyProficient,
 			},
 			{
-				title: "Django",
-				knowledge:
-					" I have a strong understanding of its capabilities and how it can be used to build powerful web applications. I have found it to be a valuable tool in my work as a developer because it provides a robust and flexible framework that makes it easy to build and maintain complex applications. In addition, the extensive library of tools and modules available for Django makes it possible to add a wide range of functionality to applications, further enhancing its value as a development platform.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
 				title: "CSS/SASS",
 				knowledge:
 					"I have used CSS in numerous projects in the past and have found it to be an invaluable tool for styling and formatting the front-end of web applications. I appreciate the flexibility and control that CSS gives me as a developer, and I am confident in my ability to use it effectively to create visually appealing and user-friendly interfaces.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
-				title: "Tailwind",
-				knowledge:
-					"I find it valuable because it is a utility-first CSS framework that allows me to rapidly build custom user interfaces with ease. Instead of having to write custom CSS for every design element, I can use the pre-defined utility classes provided by Tailwind to style my components quickly and consistently. This saves me a lot of time and effort when building and styling web applications, as I don't have to spend as much time writing custom CSS.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
@@ -134,14 +106,14 @@ export const languagesMetaData: ColumnData[] = [
 				knowledge:
 					"C sharp is a modern and object-oriented language, which means it is well-suited for building robust and scalable backend systems. This can be particularly useful as I am interested in becoming a backend and infrastructure expert.",
 				proficiency: Proficient,
-				description: Description.Proficient,
+				description: Description.Capable,
 			},
 			{
 				title: "ASP .NET Core",
 				knowledge:
 					"I'm excited to be prioritizing dotNET as my next major learning goal.",
 				proficiency: Proficient,
-				description: Description.Proficient,
+				description: Description.Capable,
 			},
 			{
 				title: "XUnit",
@@ -200,27 +172,6 @@ export const languagesMetaData: ColumnData[] = [
 				proficiency: Proficient,
 				description: Description.Proficient,
 			},
-			{
-				title: "NumPy",
-				knowledge:
-					"I have used NumPy in a variety of projects, including scientific computing and machine learning, and have come to appreciate its efficiency and versatility. Overall, I believe that my experience with NumPy has helped me to become a more effective and efficient developer, and I continue to find it valuable in my work.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
-				title: "Pandas",
-				knowledge:
-					"Pandas is a powerful library for data analysis and manipulation, and I have used it to perform a variety of tasks such as cleaning and preprocessing data, aggregating and summarizing data, and creating charts and visualizations.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
-			{
-				title: "Scrapy",
-				knowledge:
-					"I have used it in the past for tasks such as gathering information for data analysis or building a database of information from the web.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
 		],
 	},
 	{
@@ -228,21 +179,21 @@ export const languagesMetaData: ColumnData[] = [
 		knowledge:
 			"Eager to stay ahead of the curve in cloud computing, working on some of the latest design paradigms like dockerization and serverless with a focus on availability and reliability across regions and availability zones.",
 		proficiency: Capable,
-		description: Description.Capable,
+		description: Description.Proficient,
 		data: [
 			{
 				title: "Kubernetes",
 				knowledge:
 					"I'm comfortable using Kubernetes, configuring clusters using kubectl and deploying containerized applications across multiple environments for efficient scaling and resource management in various platforms including Minikube, k3ds, EKS and even EC2",
 				proficiency: Capable,
-				description: Description.Capable,
+				description: Description.Proficient,
 			},
 			{
-				title: "Docker/Containers",
+				title: "Dockerization",
 				knowledge:
 					"I understand the value it brings to projects. Docker allows for easy containerization of applications, which makes it easier to deploy and run applications in different environments. I have used Docker in a variety of projects, including deploying and scaling web applications and microservices.",
 				proficiency: Proficient,
-				description: Description.Proficient,
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Python",
@@ -256,21 +207,42 @@ export const languagesMetaData: ColumnData[] = [
 				knowledge:
 					"Its declarative configuration language makes it easy to understand and maintain infrastructure as code, which helps to improve the reliability and repeatability of my deployments. Overall, I have found Terraform to be an invaluable tool in my work as a developer and believe it can be a valuable asset for any organization.",
 				proficiency: Capable,
-				description: Description.Capable,
+				description: Description.HighlyProficient,
 			},
 			{
-				title: "Ansible",
+				title: "Backstage IDP",
 				knowledge:
-					"Similar usage as Terraform, Im comfortable provisioning new resources and know when to refactor or look out for drift.",
-				proficiency: Capable,
-				description: Description.Capable,
+					"Backstage IDP is an open-source developer portal framework that centralizes tools, services, and documentation to streamline developer workflows and improve platform discoverability. I have a strong understanding developing for Backstage and its extensibility, particularly how it can be leveraged to address challenges around developer onboarding, service cataloging, and consistent self-service workflows across distributed teams.",
+				proficiency: Proficient,
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Action Runners",
 				knowledge:
 					"I've experience setting up and maintaining action runners across different contexts including Github Actions to self hosted runners operating on AWS EKS with and without Auto-mode.",
 				proficiency: Capable,
+				description: Description.Proficient,
+			},
+			{
+				title: "Datadog",
+				knowledge:
+					"Datadog is a cloud-based monitoring and observability platform that aggregates logs, metrics, and traces from distributed systems into a unified view. I’m comfortable configuring it to ingest data from various sources and have experience building dashboards that provide actionable insights for performance and reliability.",
+				proficiency: Capable,
 				description: Description.Capable,
+			},
+			{
+				title: "Helm",
+				knowledge:
+					"Helm is a package manager for Kubernetes that simplifies deployment by packaging manifests into reusable charts, enabling consistent, version-controlled infrastructure as code. I’ve used it both to rapidly scale resources in EKS clusters and to develop custom charts that ensure reliable, repeatable application deployments.",
+				proficiency: Capable,
+				description: Description.Proficient,
+			},
+			{
+				title: "Action Runners",
+				knowledge:
+					"I've experience setting up and maintaining action runners across different contexts including Github Actions to self hosted runners operating on AWS EKS with and without Auto-mode.",
+				proficiency: Capable,
+				description: Description.Proficient,
 			},
 			{
 				title: "Bash / Shell",
@@ -322,6 +294,20 @@ export const languagesMetaData: ColumnData[] = [
 					"Along with unity I have a strong understanding of the UI Toolkit and have used UXMLto build scalable extensible user interfaces ",
 				proficiency: Proficient,
 				description: Description.Proficient,
+			},
+			{
+				title: "JQuery",
+				knowledge:
+					"I've Jquery on various legacy applications and understand it's valuable tool for manipulating the DOM and adding interactivity to my web applications. However, it is important to consider the drawbacks of using Jquery, it can add a significant amount of weight to a page if many Jquery plugins are used, and it is not as performant as some newer JavaScript libraries and frameworks.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
+				title: "JIRA",
+				knowledge:
+					"The Jira REST API provides programmatic access to issues, workflows, and projects, enabling seamless automation and integration with external systems. I’m proficient at leveraging it to connect Jira with tools like GitHub, Backstage, AWS, and Microsoft Teams, creating tightly integrated workflows that streamline development and reduce manual overhead.",
+				proficiency: Capable,
+				description: Description.Capable,
 			},
 		],
 	},
@@ -409,12 +395,12 @@ export const toolsMetaData: FolioData[] = [
 		],
 	},
 	{
-		title: "Adobe",
+		title: "Design",
 		data: [
 			{
-				title: "Photoshop",
+				title: "Photoshop / Affinity Photo ",
 				knowledge:
-					"Photoshop is a graphics editing software that allows users to manipulate and enhance images and graphics. I've used it for over a decade to correct color, remove noise and to create various imagery, much of which you can see on this site.",
+					"Photoshop and Affinity Photo are graphics editing software that allows users to manipulate and enhance images and graphics. I've used it for over a decade to correct color, remove noise and to create various imagery, much of which you can see on this site.",
 				proficiency: Proficient,
 				description: Description.Proficient,
 			},
@@ -492,11 +478,11 @@ export const toolsMetaData: FolioData[] = [
 		title: "Other",
 		data: [
 			{
-				title: "Python Anywhere",
+				title: "Google Search Console",
 				knowledge:
-					"Python Anywhere is a cloud-based platform that allows users to run and host Python applications, as well as access a web-based integrated development environment (IDE) and other tools for developing and managing Python code. I've used it to deploy my first websites ever made in addition to my travel blog.",
-				proficiency: Proficient,
-				description: Description.Proficient,
+					"Google Search Console is a web service that provides insights into how Google indexes and ranks your site, offering tools to monitor performance, identify technical issues, and optimize visibility in search results. I’m confident in leveraging it to diagnose SEO challenges, refine keyword strategies, and ensure content is consistently aligned with best practices for discoverability.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "Apple Developer",
@@ -530,16 +516,16 @@ export const cloudMetaData: FolioData[] = [
 			{
 				title: "EKS",
 				knowledge:
-					"I'm comfortable setting up and interfacing with AWS Elastic Kubernetes Service including provisioning clusters, deploying containerized applications with Kubernetes manifests, and managing deployments and scaling using kubectl.",
+					"I'm comfortable setting up and interfacing with AWS Elastic Kubernetes Service both self managed and auto-mode, including provisioning clusters, deploying containerized applications with Kubernetes manifests, and managing deployments and scaling using kubectl.",
 				proficiency: Capable,
-				description: Description.Capable,
+				description: Description.Proficient,
 			},
 			{
 				title: "EC2",
 				knowledge:
 					"My experience with EC2 covers all the essentials, from provisioning resources in diverse instance types and regions, to implementing auto-scaling for dynamic workloads, and configuring autoscaling groups for high availability.",
 				proficiency: Capable,
-				description: Description.Capable,
+				description: Description.HighlyProficient,
 			},
 			{
 				title: "ECR",
@@ -593,7 +579,7 @@ export const cloudMetaData: FolioData[] = [
 			{
 				title: "Cloud Practitioner",
 				knowledge:
-					"I have acquired the official AWS CLoud practitioner certification: https://drive.google.com/file/d/1XCCeriFjS-4azodacsdhgw0GKV3G1xY9/view?usp=sharing",
+					"I have acquired the official AWS Cloud practitioner certification: https://drive.google.com/file/d/1XCCeriFjS-4azodacsdhgw0GKV3G1xY9/view?usp=sharing",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
@@ -603,6 +589,20 @@ export const cloudMetaData: FolioData[] = [
 					"I have a decent understanding and ability to execute common IAM tasks including user creation, policy attachment, and secure resource access controls abiding by the principle of least privilege.",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
+			},
+			{
+				title: "Transcribe",
+				knowledge:
+					"I'm highly proficient with AWS Transcribe, leveraging it programmatically to convert large volumes of audio into accurate, structured text and integrating it into automated pipelines for real-time and batch transcription use cases.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "RDS",
+				knowledge:
+					"I'm proficient with AWS RDS, setting up and maintaining relational databases with various budget concerns, handling automated backups and read replicas, and tuning performance for scalability and high availability across multiple environments.",
+				proficiency: Proficient,
+				description: Description.Proficient,
 			},
 		],
 	},
@@ -635,13 +635,6 @@ export const cloudMetaData: FolioData[] = [
 				proficiency: Capable,
 				description: Description.Capable,
 			},
-			{
-				title: "Android App Distribution",
-				knowledge:
-					"Android App Distribution is a process by which Android apps are made available for users to download and install on their devices via the google play store. I've worked on projects where it was an integral part of the release process and required me to understand how it functioned, how to use the provided indicators and also how to debug.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
 		],
 	},
 	{
@@ -652,7 +645,7 @@ export const cloudMetaData: FolioData[] = [
 				knowledge:
 					"Using ArgoCD to deploy manifests to various types of kubernetes clusters. Includes configuring the platform via HELMs and managing secrets upfront. I can use various debugging tools within ArgoCD to effectively diagnose issues in a cluster.",
 				proficiency: Capable,
-				description: Description.Capable,
+				description: Description.Proficient,
 			},
 			{
 				title: "CircleCI",
@@ -702,14 +695,14 @@ export const cloudMetaData: FolioData[] = [
 
 export const convictionMetaData: ConvictionsRow[] = [
 	{
-		title: "Pair Programming",
+		title: "Responsible AI Acceleration",
 		blurb:
-			"A developer's productivity should be evaluated based on the problems they solve. Pair programming enables developers to solve problems more efficiently, share knowledge, and improve their skills.",
+			"AI tools should be leveraged as accelerators for well-structured development, enabling faster iteration and more efficient problem-solving. Code quality, maintainability and professional rigor should be enhanced with it, not sacrificed.",
 	},
 	{
 		title: "Automated Testing",
 		blurb:
-			"A reliable testing pipeline can ensure that the platform functions correctly without developer intervention, saving time and effort. Making the development process more efficient and effective.",
+			"A reliable testing pipeline can ensure that the platform functions correctly without developer intervention, saving time and effort. I'll always push for automation over manual steps.",
 	},
 	{
 		title: "Test Driven Development",
