@@ -67,6 +67,8 @@ const VideoContent = ({
 	const playerRef = useRef<ReactPlayer | null>(null);
 	const router = useRouter();
 
+	const [durationISO, setDurationISO] = useState<string>();
+
 	useEffect(() => {
 		handleTimecodeOnLoad();
 	}, []);
@@ -144,8 +146,6 @@ const VideoContent = ({
 		const sec = Math.round(s % 60);
 		return `PT${h ? `${h}H` : ""}${m ? `${m}M` : ""}${sec ? `${sec}S` : "0S"}`;
 	};
-
-	const [durationISO, setDurationISO] = useState<string>();
 
 	const jsonLd = {
 		"@context": "https://schema.org",
