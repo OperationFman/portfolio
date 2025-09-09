@@ -42,7 +42,7 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { ProgressBar } from "../../src/travel/components/ProgressBar";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { InstagramEmbed } from "react-social-media-embed/dist/components/embeds/InstagramEmbed";
 
 type ServerSideContext = {
@@ -60,6 +60,8 @@ const VideoContent = ({
 		instagramLinks,
 		backupLink,
 		extras,
+		hostedLink,
+		link,
 	} = metaData as TravelVideoMetaData;
 
 	const playerRef = useRef<ReactPlayer | null>(null);
@@ -136,6 +138,32 @@ const VideoContent = ({
 		return () => clearTimeout(timer);
 	};
 
+	const secondsToISO = (s: number) => {
+		const h = Math.floor(s / 3600);
+		const m = Math.floor((s % 3600) / 60);
+		const sec = Math.round(s % 60);
+		return `PT${h ? `${h}H` : ""}${m ? `${m}M` : ""}${sec ? `${sec}S` : "0S"}`;
+	};
+
+	const [durationISO, setDurationISO] = useState<string>();
+
+	const jsonLd = {
+		"@context": "https://schema.org",
+		"@graph": {
+			"@type": "VideoObject",
+			name: `${title} — Travel Video`,
+			description: extras?.summary?.[0] || "Travel video",
+			thumbnailUrl: [
+				`https://www.franklin-v-moon.dev/travel/posters/${hostedLink}.png`,
+			],
+			contentUrl: `${publicCDNVideoUrl}${slug}.mp4`,
+			embedUrl: `https://www.franklin-v-moon.dev/travel/${link}#player`,
+			uploadDate: new Date(Number(year), 0, 1).toISOString(),
+			...(durationISO ? { duration: durationISO } : {}),
+			publisher: { "@type": "Person", name: "Franklin Von Moon" },
+		},
+	};
+
 	return (
 		<>
 			<Head>
@@ -147,6 +175,12 @@ const VideoContent = ({
 				<meta
 					property='og:image'
 					content={`/travel/posters/${metaData.hostedLink}.png`}
+				/>
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+					}}
 				/>
 			</Head>
 
@@ -174,6 +208,8 @@ const VideoContent = ({
 							volume={0.3}
 							height='100%'
 							width='100%'
+							id='player'
+							onDuration={(s) => setDurationISO(secondsToISO(s))}
 						/>
 						<div className={styles.subVideoInteraction}>
 							<div className={styles.skipToContainer}>

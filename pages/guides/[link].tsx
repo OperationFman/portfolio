@@ -34,7 +34,19 @@ const PageContent = ({
 		return <ErrorContent />;
 	}
 
-	const { title, subTitle, topic } = metaData as GuideMetaData;
+	const { title, subTitle, topic, created, link, thumbnail } =
+		metaData as GuideMetaData;
+
+	const guideJsonLd = {
+		"@context": "https://schema.org",
+		"@type": "Article",
+		headline: title,
+		description: subTitle,
+		author: { "@type": "Person", name: "Franklin Von Moon" },
+		datePublished: new Date(created * 1000).toISOString(),
+		mainEntityOfPage: `https://www.franklin-v-moon.dev/guides/${link}`,
+		image: [`https://www.franklin-v-moon.dev${thumbnail}`],
+	};
 
 	return (
 		<>
@@ -42,6 +54,13 @@ const PageContent = ({
 				<title>{title} - Franklin Von Moon</title>
 				<meta name={subTitle} content={topic} />
 				<link rel='icon' href='/favicon-green.ico' />
+
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(guideJsonLd).replace(/</g, "\\u003c"),
+					}}
+				/>
 			</Head>
 
 			<Container maxWidth={"md"}>
