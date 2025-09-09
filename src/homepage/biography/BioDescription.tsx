@@ -55,7 +55,7 @@ export const BioDescription = (): JSX.Element => {
 				<main className={setDark(styles, "blurb")}>
 					Franklin Von Moon is a versatile full-stack developer, blending
 					expertise in UX, frontend, mobile, backend and cloud to engineer
-					exemplary digital products whilst having a positive global impact
+					digital products whilst having a positive global impact
 					<br />
 					<br />
 					Practicing professional for {pluralTime(
