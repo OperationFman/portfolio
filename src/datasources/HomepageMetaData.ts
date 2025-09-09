@@ -5,7 +5,7 @@ export const forYouMetaData: ForYouMetaData[] = [
 		logo: "code",
 		title: "Programming",
 		paragraph:
-			"I love new tech, solving problems, working in pairs and endlessly learning. See Skills for more.",
+			"I love new tech, solving problems, teaching others and taking feedback to keep improving",
 	},
 	{
 		logo: "design",
@@ -17,7 +17,7 @@ export const forYouMetaData: ForYouMetaData[] = [
 		logo: "postproduction",
 		title: "Post Production",
 		paragraph:
-			"Producing, editing, color correcting, and rendering. Skills include VFX, animation and LUTs",
+			"Producing, editing, color correcting, and storage management. Skills include VFX, animation and the odd LUTs",
 	},
 ];
 
