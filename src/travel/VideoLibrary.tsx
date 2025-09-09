@@ -15,10 +15,7 @@ export const VideoLibrary = ({
 	const [loading, setLoading] = useState({ state: false, index: -1 });
 
 	useEffect(() => {
-		const checkScreenSize = () => {
-			setIsSmallScreen(window.innerWidth < 500);
-		};
-
+		const checkScreenSize = () => setIsSmallScreen(window.innerWidth < 500);
 		checkScreenSize();
 		window.addEventListener("resize", checkScreenSize);
 		return () => window.removeEventListener("resize", checkScreenSize);
@@ -34,49 +31,65 @@ export const VideoLibrary = ({
 				justifyContent: isSmallScreen ? "space-between" : "",
 			}}>
 			{videoMetaData
-				.map((dataItem, videoIndex) => (
-					<Grid
-						item
-						key={`Video card of ${dataItem.title}`}
-						xs={isSmallScreen && 6}>
-						<div
-							style={{
-								animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
-								opacity: 1,
-							}}>
-							<CardActionArea
-								className={styles.videoCardContainer}
-								onClick={() => {
-									setLoading({ state: true, index: videoIndex });
-									router.push(`/travel/${dataItem.link}`);
+				.map((dataItem, videoIndex) => {
+					const href = `/travel/${dataItem.link}`;
+					return (
+						<Grid
+							item
+							key={`Video card of ${dataItem.title}`}
+							xs={isSmallScreen && 6}>
+							<div
+								style={{
+									animation: `fadeIn ${videoIndex + 5}00ms ease-in-out`,
+									opacity: 1,
 								}}>
-								{dataItem.newestVideo && (
-									<h5 className={styles.newestVideo}>LATEST VIDEO</h5>
-								)}
-								{dataItem.previouslyWatched && dataItem.backupLink && (
-									<div className={styles.watched}>
-										<DoneRoundedIcon
-											style={{ height: "2.5rem", width: "2.5rem" }}
-										/>
-									</div>
-								)}
-								<Image
-									src={`/travel/posters/${dataItem.hostedLink}.png`}
-									alt={`${dataItem.title} poster`}
-									className={styles.videoCardImage}
-									height={300}
-									width={200}
-									layout='responsive'
-								/>
-								<div className={styles.loadingContainer}>
-									{loading.state && loading.index === videoIndex && (
-										<LinearProgress color='inherit' />
+								<CardActionArea
+									className={styles.videoCardContainer}
+									component='a'
+									href={href}
+									onClick={(e) => {
+										e.preventDefault();
+										setLoading({ state: true, index: videoIndex });
+										router.push(href);
+									}}
+									sx={{
+										textDecoration: "none",
+										color: "inherit",
+										display: "block",
+									}}
+									aria-label={`Watch travel video: ${dataItem.title}`}>
+									{dataItem.newestVideo && (
+										<h5 className={styles.newestVideo}>LATEST VIDEO</h5>
 									)}
-								</div>
-							</CardActionArea>
-						</div>
-					</Grid>
-				))
+
+									{dataItem.previouslyWatched && dataItem.backupLink && (
+										<div className={styles.watched}>
+											<DoneRoundedIcon
+												style={{ height: "2.5rem", width: "2.5rem" }}
+											/>
+										</div>
+									)}
+
+									<Image
+										src={`/travel/posters/${dataItem.hostedLink}.png`}
+										alt={`${dataItem.title} poster`}
+										className={styles.videoCardImage}
+										height={300}
+										width={200}
+										layout='responsive'
+										priority={videoIndex < 2}
+									/>
+
+									<div className={styles.loadingContainer}>
+										{loading.state && loading.index === videoIndex && (
+											<LinearProgress color='inherit' />
+										)}
+									</div>
+								</CardActionArea>
+							</div>
+						</Grid>
+					);
+				})
 				.reverse()}
 		</Grid>
 	);

@@ -6,12 +6,11 @@ import {
 	LinearProgress,
 	Tooltip,
 } from "@mui/material";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { useState } from "react";
 import { setDark } from "../../../../utils/configureCss/configureCss";
 import { GuideMetaData } from "../../types";
 import { subTitleShortener, titleShortener } from "./textFormatter";
-
 import styles from "./GuideCard.module.scss";
 
 export const GuideCard = ({
@@ -19,41 +18,43 @@ export const GuideCard = ({
 }: {
 	cardData: GuideMetaData;
 }): JSX.Element => {
-	const router = useRouter();
-
 	const [loading, setLoading] = useState(false);
+	const href = `/guides/${cardData.link}`;
 
 	return (
-		<div
-			className={styles.container}
-			onClick={() => {
-				setLoading(true);
-				router.push(`guides/${cardData.link}`);
-			}}>
+		<div className={styles.container}>
 			<Card className={styles.card}>
-				<CardActionArea>
+				<CardActionArea
+					component={Link as any}
+					href={href}
+					onClick={() => setLoading(true)}
+					sx={{ textDecoration: "none", color: "inherit", display: "block" }}
+					aria-label={`Read guide: ${cardData.title}`}>
 					<CardMedia
 						component='img'
 						height='180'
 						alt={`${cardData.title} thumbnail`}
 						image={cardData.thumbnail}
+						decoding='async'
+						loading='lazy'
 					/>
 					<CardContent>
 						<div className={styles.cardContent}>
-							<div className={setDark(styles, "topicContainer")}>
+							<h5 className={setDark(styles, "topicContainer")}>
 								<div className={styles.topicText}>{cardData.topic}</div>
-							</div>
-							<div className={styles.title}>
-								{titleShortener(cardData.title)}
-							</div>
+							</h5>
+
+							<h6 className={styles.title}>{titleShortener(cardData.title)}</h6>
+
 							<Tooltip title={cardData.subTitle} followCursor>
-								<div className={styles.subtitle}>
+								<p className={styles.subtitle}>
 									{subTitleShortener(cardData.subTitle)}
-								</div>
+								</p>
 							</Tooltip>
 						</div>
 					</CardContent>
-					<div className={styles.loadingContainer}>
+
+					<div className={styles.loadingContainer} aria-hidden='true'>
 						{loading && <LinearProgress color='success' />}
 					</div>
 				</CardActionArea>

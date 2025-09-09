@@ -1,17 +1,23 @@
-const stockFootageMetaData = require("./utils/sitemap-meta/AssetMetaData.json");
-const siteUrl = "https://franklin-v-moon.dev";
+const travelMetaData = require("./utils/sitemap-meta/TravelMetaData.json");
+const guideMetaData = require("./utils/sitemap-meta/GuideMetaData.json");
+const siteUrl = "https://franklin-v-moon.dev"; 
 
-const toISODate = (epoch) => {
-	if (!epoch) return undefined;
-	return new Date(epoch * 1000).toISOString();
+const normalizeTravelSlug = (slug) => {
+	if (!slug) return null;
+	const cleaned = String(slug)
+		.trim()
+		.replace(/^\/+|\/+$/g, "")
+		.toLowerCase();
+	return `/travel/${cleaned}`;
 };
 
-const encodeFileName = (file) => {
-	if (!file || typeof file !== "string") return file;
-	return file
-		.split("/")
-		.map((part) => encodeURIComponent(part))
-		.join("/");
+const normalizeGuideSlug = (slug) => {
+	if (!slug) return null;
+	const cleaned = String(slug)
+		.trim()
+		.replace(/^\/+|\/+$/g, "")
+		.toLowerCase();
+	return `/guides/${cleaned}`;
 };
 
 module.exports = {
@@ -44,63 +50,34 @@ module.exports = {
 
 	additionalPaths: async () => {
 		const paths = [];
+		const seen = new Set();
 
-		stockFootageMetaData.forEach((collection) => {
-			const pageUrl = `${siteUrl}/assets-store/${collection.hostedLink}`;
+		if (Array.isArray(travelMetaData)) {
+			for (const item of travelMetaData) {
+				const loc = normalizeTravelSlug(item.link || item.hostedLink);
+				if (!loc || seen.has(loc)) continue;
+				seen.add(loc);
 
-			const images = [];
-
-			if (collection.wallpapers && collection.wallpapers.length > 0) {
-				collection.wallpapers.forEach((file) => {
-					const encoded = encodeFileName(file);
-					if (encoded) {
-						images.push({
-							loc: `${siteUrl}/assets/${collection.hostedLink}/${encoded}`,
-							title: `${collection.title} wallpaper`,
-						});
-					}
+				paths.push({
+					changefreq: "yearly",
+					priority: 0.6,
 				});
 			}
+		}
 
-			if (
-				collection.assetItemMetaData &&
-				collection.assetItemMetaData.length > 0
-			) {
-				collection.assetItemMetaData.forEach((item) => {
-					if (item.thumbnail) {
-						const encoded = encodeFileName(item.thumbnail);
-						if (encoded) {
-							images.push({
-								loc: `${siteUrl}/assets/${encoded}`,
-								title: item.title,
-							});
-						}
-					}
+		if (Array.isArray(guideMetaData)) {
+			for (const guide of guideMetaData) {
+				const loc = normalizeGuideSlug(guide.link);
+				if (!loc || seen.has(loc)) continue;
+				seen.add(loc);
+
+				paths.push({
+					loc, 
+					changefreq: "yearly",
+					priority: 0.5,
 				});
 			}
-
-			let lastmod;
-			if (
-				collection.assetItemMetaData &&
-				collection.assetItemMetaData.length > 0
-			) {
-				const mostRecent = Math.max(
-					...collection.assetItemMetaData.map((i) => i.created || 0),
-				);
-				if (mostRecent > 0) lastmod = toISODate(mostRecent);
-			}
-
-			const entry = {
-				loc: pageUrl,
-				changefreq: "monthly",
-				priority: 0.5,
-				images,
-			};
-
-			if (lastmod) entry.lastmod = lastmod;
-
-			paths.push(entry);
-		});
+		}
 
 		return paths;
 	},

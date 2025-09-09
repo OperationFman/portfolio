@@ -16,18 +16,9 @@
 	box-shadow: $defaultShadow;
 	transition: linear 400ms;
 
-	&:hover {
-		background-color: $dimmerWhite;
-	}
-
 	@include breakpoint(small) {
 		width: 210px;
 		height: 180px;
-	}
-}
-.cardContainerDark {
-	&:hover {
-		background-color: $mediumGrey;
 	}
 }
 
@@ -52,25 +43,18 @@
 	text-align: center;
 	font-weight: bold;
 	margin-top: 15px;
-	border-radius: 22px;
 	margin: 0 10px;
-
-	color: $defaultDarkBlue;
 
 	@include breakpoint(small) {
 		margin-top: 25px;
 	}
-
-	&:focus {
-		background-color: $dimmerWhite;
-	}
 }
 .contactMethodDark {
 	color: $defaultLightBlue;
+}
 
-	&:focus {
-		background-color: rgba($brightGrey, 0.2);
-	}
+.link {
+	text-decoration: none;
 }
 
 .contactSubtitle {
