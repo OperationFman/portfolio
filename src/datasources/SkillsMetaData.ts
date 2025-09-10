@@ -1,5 +1,4 @@
 import { ColumnData, Proficiency, FolioData } from "../folio/types";
-import { ConvictionsRow } from "./../folio/types";
 
 const { Learning, Capable, Proficient, HighlyProficient } = Proficiency;
 
@@ -191,7 +190,7 @@ export const languagesMetaData: ColumnData[] = [
 			{
 				title: "Dockerization",
 				knowledge:
-					"I understand the value it brings to projects. Docker allows for easy containerization of applications, which makes it easier to deploy and run applications in different environments. I have used Docker in a variety of projects, including deploying and scaling web applications and microservices.",
+					"Docker allows for easy containerization of applications, which makes it easier to deploy and run applications in different environments. I have used Docker in a variety of projects, including deploying and scaling web applications and microservices.",
 				proficiency: Proficient,
 				description: Description.HighlyProficient,
 			},
@@ -261,6 +260,20 @@ export const languagesMetaData: ColumnData[] = [
 		description: Description.Proficient,
 		data: [
 			{
+				title: "SEO",
+				knowledge:
+					"Search Engine Optimization is more than just keywords and HTML tags, its a full time role involving connecting identities, patterns and brands into a unified data piece navigable by robots. I have solid experience building, expanding and fixing SEO but also branding and exposure as they're often one and the same.",
+				proficiency: Proficient,
+				description: Description.Proficient,
+			},
+			{
+				title: "JIRA",
+				knowledge:
+					"The Jira REST API provides programmatic access to issues, workflows, and projects, enabling seamless automation and integration with external systems. I’m proficient at leveraging it to connect Jira with tools like GitHub, Backstage, AWS, and Microsoft Teams, creating tightly integrated workflows that streamline development and reduce manual overhead.",
+				proficiency: Capable,
+				description: Description.Capable,
+			},
+			{
 				title: "Git",
 				knowledge:
 					"Git allows for version control of code, which means I can track changes made to my code over time and easily revert back to previous versions if necessary. It also makes it easy to collaborate with other developers by allowing us to work on the same codebase without overwriting each other's changes. Overall, I find Git to be an invaluable tool for any developer, as it helps to streamline the development process and make it more efficient and effective.",
@@ -302,13 +315,6 @@ export const languagesMetaData: ColumnData[] = [
 				proficiency: Capable,
 				description: Description.Capable,
 			},
-			{
-				title: "JIRA",
-				knowledge:
-					"The Jira REST API provides programmatic access to issues, workflows, and projects, enabling seamless automation and integration with external systems. I’m proficient at leveraging it to connect Jira with tools like GitHub, Backstage, AWS, and Microsoft Teams, creating tightly integrated workflows that streamline development and reduce manual overhead.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
 		],
 	},
 ];
@@ -318,14 +324,21 @@ export const toolsMetaData: FolioData[] = [
 		title: "Dev",
 		data: [
 			{
-				title: "Linux Arch & Ubuntu",
+				title: "Ubuntu",
 				knowledge:
 					"Daily experience using Linux-based operating systems for both personal use (Editing, gaming, daily productivity) and professional use (Servers, testing pipelines etc).",
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
 			{
-				title: "Insomnia & Postman",
+				title: "Figma",
+				knowledge:
+					"Figma is a collaborative design tool for prototyping and designing user interfaces.  I've used it to generate various projects for analysis and also regularly use it for work when I assist Experience Designers with prototyping.",
+				proficiency: HighlyProficient,
+				description: Description.HighlyProficient,
+			},
+			{
+				title: "Postman",
 				knowledge:
 					"API platforms are tools that allows developers to test and debug APIs but many have not delved deeper into environment configuration, sharing and packaging like I have.",
 				proficiency: HighlyProficient,
@@ -338,31 +351,10 @@ export const toolsMetaData: FolioData[] = [
 				proficiency: HighlyProficient,
 				description: Description.HighlyProficient,
 			},
-			{
-				title: "Webflow",
-				knowledge:
-					"I have built, launched and handed off half a dozen custom websites using WebFlow. The no code solution allows me to very quickly bootstrap eCommerce and booking sites at rapid speed for demanding clients.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
-				title: "Rasbian",
-				knowledge:
-					"Raspbian is a free operating system based on Debian optimized for the Raspberry Pi hardware. I love using Pis for various projects around the house and in automation. I have even used it/them to build a bare metal kubernetes cluster just for fun.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
-				title: "Strapi",
-				knowledge:
-					"Strapi is an open-source headless CMS built with JavaScript/TypeScript. It lets developers build custom frontends while editors manage content through a user-friendly interface. I've used it for various platforms deployed on multiple forms of infrastructure.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
 		],
 	},
 	{
-		title: "VFX",
+		title: "Design",
 		data: [
 			{
 				title: "Davinci Resolve",
@@ -378,25 +370,6 @@ export const toolsMetaData: FolioData[] = [
 				proficiency: Capable,
 				description: Description.Capable,
 			},
-			{
-				title: "Google Earth Studio",
-				knowledge:
-					"Google Earth Studio is a tool that allows post-production professionals to create high-quality, realistic 3D animations of locations and landscapes using real-world satellite and aerial imagery. It's a technical marvel and makes it easy to get 'drone-like' shots from anywhere in the world.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
-				title: "Sony Vegas",
-				knowledge:
-					"Similar to Davinci Resolve, Sony Vegas is a video editing software used in post production for creating and editing professional-quality video and audio content. I've used it for many years and can quickly finish technical projects using it.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-		],
-	},
-	{
-		title: "Design",
-		data: [
 			{
 				title: "Photoshop / Affinity Photo ",
 				knowledge:
@@ -438,39 +411,6 @@ export const toolsMetaData: FolioData[] = [
 					"Adobe XD is a design and prototyping tool used to create user interfaces and user experiences for websites and mobile applications. I've used it to generate various projects for analysis and also regularly use it for work when I assist Experience Designers with prototyping.",
 				proficiency: Proficient,
 				description: Description.Proficient,
-			},
-		],
-	},
-	{
-		title: "Imaging",
-		data: [
-			{
-				title: "Image Magick",
-				knowledge:
-					"ImageMagick is a tool for converting, editing, and manipulating images in various formats using a command line. It's particularly powerful for mass-editing files, ideal for cleaning data for AI models.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
-				title: "Figma",
-				knowledge:
-					"Figma is a collaborative design tool for prototyping and designing user interfaces.  I've used it to generate various projects for analysis and also regularly use it for work when I assist Experience Designers with prototyping.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
-				title: "Skylum Luminar",
-				knowledge:
-					"Skylum Luminar is a photo editing software that allows users to enhance, retouch, and add creative effects to their photographs. I've worked on projects where we used this over other tools to create thumbnails and heder images for blogs and marketplace listings.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
-				title: "Gimp",
-				knowledge:
-					"GIMP (GNU Image Manipulation Program) is an open-source image editing software that allows users to create, edit, and manipulate digital images. I often use it in a work environment due to its open-source nature to quickly edit images for presentations, deployments and sharing information.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
 			},
 		],
 	},
@@ -535,13 +475,6 @@ export const cloudMetaData: FolioData[] = [
 				description: Description.Capable,
 			},
 			{
-				title: "DynamoDB",
-				knowledge:
-					"I have a solid understanding of and experience with DynoDB for solving complex data storage and retrieval challenges using it's flexible schema and pay-per-use model.",
-				proficiency: Proficient,
-				description: Description.Proficient,
-			},
-			{
 				title: "Route53",
 				knowledge:
 					"I'm confident using Route53 for domain registration, managing hosted zones, configuring record types and implementing health checks for higher availability.",
@@ -549,24 +482,10 @@ export const cloudMetaData: FolioData[] = [
 				description: Description.Proficient,
 			},
 			{
-				title: "S3",
-				knowledge:
-					"I'm confident in setting up and managing AWS S3 buckets, handling secure data upload and retrieval through CLI and various SDKs, and leveraging appropriate storage classes like Standard for frequently accessed data, Glacier for long-term archives, and Intelligent-Tiering for dynamic cost optimization.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
 				title: "Lambda",
 				knowledge:
 					"I've used lambda functions to solve a range or challenges including for small repetitive pipeline build tasks all the way to using it as an entire backend to avoid cold starts for infrequently used webapps.",
 				proficiency: Proficient,
-				description: Description.Capable,
-			},
-			{
-				title: "Billing & Cost Management",
-				knowledge:
-					"I can effectively setup price alerts and break down usage costs to determine what services are costing the most and identifying if changes could be implemented",
-				proficiency: Capable,
 				description: Description.Capable,
 			},
 			{
@@ -577,20 +496,6 @@ export const cloudMetaData: FolioData[] = [
 				description: Description.Proficient,
 			},
 			{
-				title: "Cloud Practitioner",
-				knowledge:
-					"I have acquired the official AWS Cloud practitioner certification: https://drive.google.com/file/d/1XCCeriFjS-4azodacsdhgw0GKV3G1xY9/view?usp=sharing",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
-				title: "IAM",
-				knowledge:
-					"I have a decent understanding and ability to execute common IAM tasks including user creation, policy attachment, and secure resource access controls abiding by the principle of least privilege.",
-				proficiency: HighlyProficient,
-				description: Description.HighlyProficient,
-			},
-			{
 				title: "Transcribe",
 				knowledge:
 					"I'm highly proficient with AWS Transcribe, leveraging it programmatically to convert large volumes of audio into accurate, structured text and integrating it into automated pipelines for real-time and batch transcription use cases.",
@@ -598,9 +503,9 @@ export const cloudMetaData: FolioData[] = [
 				description: Description.HighlyProficient,
 			},
 			{
-				title: "RDS",
+				title: "RDS & DynamoDB",
 				knowledge:
-					"I'm proficient with AWS RDS, setting up and maintaining relational databases with various budget concerns, handling automated backups and read replicas, and tuning performance for scalability and high availability across multiple environments.",
+					"I'm proficient with AWS RDS and DynamoDB, setting up and maintaining databases with various budget concerns, handling automated backups and read replicas, and tuning performance for scalability and high availability across multiple environments, keeping track of costs.",
 				proficiency: Proficient,
 				description: Description.Proficient,
 			},
@@ -622,18 +527,6 @@ export const cloudMetaData: FolioData[] = [
 					"Android App Distribution is a process by which Android apps are made available for users to download and install on their devices via the google play store. I've worked on projects where it was an integral part of the release process and required me to understand how it functioned, how to use the provided indicators and also how to debug.",
 				proficiency: Proficient,
 				description: Description.Proficient,
-			},
-		],
-	},
-	{
-		title: "Microsoft Azure",
-		data: [
-			{
-				title: "Azure DevOps",
-				knowledge:
-					"Comfortable understanding and utilizing its CI/CD pipelines for automating builds, testing, and deployments across specific domains particularly legacy and window exclusive workloads.",
-				proficiency: Capable,
-				description: Description.Capable,
 			},
 		],
 	},
@@ -682,46 +575,6 @@ export const cloudMetaData: FolioData[] = [
 				proficiency: Proficient,
 				description: Description.Proficient,
 			},
-			{
-				title: "Jenkins",
-				knowledge:
-					"Jenkins is an open-source automation server that helps to automate parts of the software development process, including building, testing, and deploying software. I've used it primarily for legacy applications that have shaky reliability so i'm confident in my ability to use it in concerning situations safely.",
-				proficiency: Capable,
-				description: Description.Capable,
-			},
 		],
-	},
-];
-
-export const convictionMetaData: ConvictionsRow[] = [
-	{
-		title: "Responsible AI Acceleration",
-		blurb:
-			"AI tools should be leveraged as accelerators for well-structured development, enabling faster iteration and more efficient problem-solving. Code quality, maintainability and professional rigor should be enhanced with it, not sacrificed.",
-	},
-	{
-		title: "Automated Testing",
-		blurb:
-			"A reliable testing pipeline can ensure that the platform functions correctly without developer intervention, saving time and effort. I'll always push for automation over manual steps.",
-	},
-	{
-		title: "Test Driven Development",
-		blurb:
-			"Improve the quality of code by ensuring that it is correct and complete. By writing tests before writing the code, you can identify and fix problems early in the development process, before they become more difficult and costly to fix.",
-	},
-	{
-		title: "Continuous Learning",
-		blurb:
-			"The field of software development is constantly evolving and changing. New technologies, tools, and best practices are being developed all the time, and staying up to date with these developments is essential for staying competitive and ensuring that you are able to deliver the best possible solutions.",
-	},
-	{
-		title: "Self Sustainability",
-		blurb:
-			"Helps you to maintain a healthy and balanced work-life and prevent burnout. Self-sustainability involves taking care of your physical, mental, and emotional well-being, and finding ways to support yourself and manage stress in a healthy way.",
-	},
-	{
-		title: "User Focused Development",
-		blurb:
-			"Ensures that the software you create meets the needs and expectations of the people who will be using it. User-focused development involves putting yourself in the user's shoes and considering their perspective when designing, building, and testing your software.",
 	},
 ];

@@ -26,6 +26,7 @@ import { SearchBar } from "../../src/travel/components/SearchBar";
 import { travelVideoMetaData } from "../../src/datasources/TravelMetaData";
 import { isClientSide } from "../../utils/isClientSide";
 import router from "next/router";
+import { tabsData } from "../../src/datasources/NavBarMetaData";
 
 const Travel: NextPage = () => {
 	const [sortedMetaData, setSortedMetaData] = useState(allOldestFirst());
@@ -98,15 +99,12 @@ const Travel: NextPage = () => {
 		router.push("/travel/world-map");
 	};
 
-	const description =
-		"Explore Franklin Von Moon's travel journeys: videos from dozens of countries, world map of visited places, and stories of culture, risks, and adventure.";
-
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "CollectionPage",
 		name: "Travel Video Gallery",
 		url: "https://www.franklin-v-moon.dev/travel",
-		description: description,
+		description: tabsData[2].pageDescription,
 		creator: {
 			"@type": "Person",
 			name: "Franklin Von Moon",
@@ -119,12 +117,12 @@ const Travel: NextPage = () => {
 			<Head>
 				<title>Travel Videos – Franklin Von Moon</title>
 				<link rel='icon' href='/favicon-yellow.ico' />
-				<meta name='description' content={description} />
+				<meta name='description' content={tabsData[2].pageDescription} />
 				<meta
 					property='og:title'
 					content='Travel Videos & World Map – Franklin Von Moon'
 				/>
-				<meta property='og:description' content={description} />
+				<meta property='og:description' content={tabsData[2].pageDescription} />
 				<meta
 					property='og:image'
 					content='https://private-user-images.githubusercontent.com/42459707/367673150-764558d9-5f59-4574-9268-728ad7498b2f.png'

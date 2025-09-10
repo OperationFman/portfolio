@@ -58,13 +58,15 @@ export const Navbar = () => {
 			<nav role='navigation' aria-label='Main navigation'>
 				<div className={styles.logotypeDesktopContainer}>
 					<span
-						className={`${styles.logotypeText} ${styles.logotypeAlignDesktop}`}>
+						className={`${styles.logotypeText} ${styles.logotypeAlignDesktop} ${styles.logoFirst}`}>
 						Franklin
 					</span>
 					<span
 						className={`${styles.logotypeText} ${styles.logotypeAlignDesktop} ${
-							styles[tabsData[tabIndex].gradient]
-						} ${styles.logotypeGradientSize}`}>
+							styles.logoSecond
+						} ${styles[tabsData[tabIndex].gradient]} ${
+							styles.logotypeGradientSize
+						}`}>
 						V Moon
 					</span>
 				</div>

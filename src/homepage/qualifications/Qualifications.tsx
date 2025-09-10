@@ -2,11 +2,12 @@ import { Grid } from "@mui/material";
 import { qualificationMetaData } from "../../datasources/HomepageMetaData";
 import { SubHeading } from "../SubHeading";
 import { QualificationCard } from "./QualificationCard";
+import { Gap } from "../salary/components/Gap";
 
 export const Qualifications = () => {
 	return (
 		<>
-			<SubHeading text={"Qualifications"} />
+			<SubHeading text={"Expertise"} />
 
 			<Grid container spacing={5} justifyContent='center'>
 				{qualificationMetaData.map((item, index) => {

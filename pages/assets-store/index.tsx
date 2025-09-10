@@ -11,11 +11,9 @@ import "react-multi-carousel/lib/styles.css";
 import AssetItem from "../../src/assets/components/AssetItem/AssetItem";
 import AssetCollection from "../../src/assets/components/AssetCollection/AssetCollection";
 import { getFeaturedItems } from "../../src/assets/components/getFeaturedItems";
+import { tabsData } from "../../src/datasources/NavBarMetaData";
 
 const AssetsStore: NextPage = () => {
-	const description =
-		"Assets of digital products, stock footage and free wallpaper I've collected available fr purchase";
-
 	const responsiveFeatured = {
 		desktop: {
 			breakpoint: { max: 3000, min: 1024 },
@@ -40,12 +38,15 @@ const AssetsStore: NextPage = () => {
 				<Head>
 					<title>Assets Store - Franklin Von Moon</title>
 					<link rel='icon' href='/favicon-purple.ico' />
-					<meta name='description' content={description} />
+					<meta name='description' content={tabsData[2].pageDescription} />
 					<meta
 						property='og:title'
 						content='Assets & Stock Footage Store – Franklin Von Moon'
 					/>
-					<meta property='og:description' content={description} />
+					<meta
+						property='og:description'
+						content={tabsData[2].pageDescription}
+					/>
 					<meta
 						property='og:url'
 						content='https://www.franklin-v-moon.dev/assets-store'
@@ -59,8 +60,7 @@ const AssetsStore: NextPage = () => {
 								"@context": "https://schema.org",
 								"@type": "CollectionPage",
 								name: "Assets and Stock Footage Store",
-								description:
-									"Browse curated stock footage and digital assets by Franklin Von Moon",
+								description: tabsData[2].pageDescription,
 								url: "https://www.franklin-v-moon.dev/assets-store",
 								creator: {
 									"@type": "Person",

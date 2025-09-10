@@ -5,75 +5,76 @@ export const forYouMetaData: ForYouMetaData[] = [
 		logo: "code",
 		title: "Programming",
 		paragraph:
-			"I love new tech, solving problems, teaching others and taking feedback to keep improving",
+			"I love to code. Latest or legacy, I'll build it maintainable, performant and readable via test driven development.",
 	},
 	{
-		logo: "design",
-		title: "Design",
+		logo: "devops",
+		title: "DevOps",
 		paragraph:
-			"Crafting user interfaces, wireframes, and prototypes. Researching user needs and following design principles.",
+			"I can build your app and deploy it too. From support to globally scalable IaC CI/CD tested deployment.",
 	},
 	{
 		logo: "postproduction",
-		title: "Post Production",
+		title: "Visual Effects",
 		paragraph:
-			"Producing, editing, color correcting, and storage management. Skills include VFX, animation and the odd LUTs",
+			"I want to capture snapshots of our world and enhancing them, from special moments to efficient render pipelines.",
 	},
 ];
 
 export const volunteeringMetaData = [
 	{
 		logo: "melbourne-amep",
-		title:
-			"Melbourne Adult Migrant English Program: Refugee Social Support Coach",
+		agency: "Adult English Migrant Program",
+		title: "Refugee Social Support Coach",
 		location: "Melbourne, Australia",
 		year: "2023",
 	},
 	{
 		logo: "ballarat-aboriginal-and-district-co-operative",
-		title: "B.A.D.A.C Website Developer, Photographer and Newsletter Producer",
+		agency: "Ballarat Aboriginal Co-Operative",
+		title: "Website Developer, Photographer and Newsletter Producer",
 		location: "Ballarat, Australia",
 		year: "2021",
 	},
 	{
 		logo: "creative-city-ballarat",
-		title: "Ballarat Creative City Production Manager",
+		agency: "Ballarat Creative City",
+		title: "Production Manager",
 		location: "Ballarat, Australia",
 		year: "2021",
 	},
 	{
 		logo: "federation-university-regional-schools-outreach",
-		title: "Federation University: Regional Schools Outreach Exponent",
+		agency: "Federation University",
+		title: "Regional Schools Outreach Exponent",
 		location: "Victoria, Australia",
 		year: "2018 - 2020",
 	},
 	{
-		logo: "federation-university-student-senate",
-		title: "Federation University Student Senate: Indigenous Representative",
-		location: "Ballarat, Australia",
-		year: "2019",
-	},
-	{
 		logo: "challenges-abroad",
-		title: "Challenges Abroad Project Borneo: Media Literacy Trainer",
+		agency: "Challenges Abroad",
+		title: "Media Literacy Trainer",
 		location: "East Kalimantan, Indonesia",
 		year: "2019",
 	},
 	{
 		logo: "australian-navy",
+		agency: "Australian Navy",
 		title: "Restoration of Rural Network Infrastructure Emergency Responder",
 		location: "Dhulikhel, Nepal",
 		year: "2018",
 	},
 	{
 		logo: "new-colombo-plan",
-		title: "New Colombo Plan: Post-Production Project Videographer",
+		agency: "The New Colombo Plan",
+		title: "Post-Production Project Videographer",
 		location: "Shaoguan, China",
 		year: "2017",
 	},
 	{
 		logo: "penny-arcade-expo-australia",
-		title: "PAX Aus Enforcer",
+		agency: "Penny Arcade Expo",
+		title: "Enforcer",
 		location: "Melbourne, Australia",
 		year: "2013 - 2018",
 	},
@@ -82,24 +83,34 @@ export const volunteeringMetaData = [
 export const workExperienceMetaData = [
 	{
 		logo: "thoughtworks",
-		employer: "Thoughtworks Australia",
+		employer: "Thoughtworks",
 		period: "2019 - Present",
-		location: "Melbourne, Australia & Bangkok, Thailand",
 		experiences: [
 			{
-				title: "Software Developer",
-				period: "2022 - Present",
+				location: "Bangkok, Thailand",
+				title: "Cloud DevOps Engineer",
+				subRole: "Low-Cost Airline",
+				period: "2024 - Present",
 			},
 			{
-				title: "Graduate Software Developer",
+				title: "Software Engineer",
+				subRole: "Low-Cost Airline",
+				period: "2022 - 2024",
+			},
+			{
+				title: "Graduate Developer",
+				subRole: "Employment Marketplace",
+				location: "Melbourne, Australia",
 				period: "2021 - 2022",
 			},
 			{
 				title: "Intern Software Developer",
+				subRole: "Non-Profit Platform",
 				period: "2019 - 2021",
 			},
 			{
 				title: "Intern Business Analyst",
+				subRole: "Consumer Finance",
 				period: "2019",
 			},
 		],
@@ -112,10 +123,12 @@ export const workExperienceMetaData = [
 		experiences: [
 			{
 				title: "Test Automation Engineer",
+				subRole: "Major Bank",
 				period: "2019 - 2021",
 			},
 			{
 				title: "Remote Hardware Technician",
+				subRole: "Low-Cost Airline",
 				period: "2017 - 2019",
 			},
 		],
@@ -131,6 +144,10 @@ export const workExperienceMetaData = [
 				period: "2019",
 			},
 			{
+				title: "Honours Student Senator",
+				period: "2018 - 2019",
+			},
+			{
 				title: "Academic Support Tutor",
 				period: "2018 - 2020",
 			},
@@ -139,11 +156,6 @@ export const workExperienceMetaData = [
 ];
 
 export const qualificationMetaData = [
-	{
-		logo: "degree",
-		title: "Masters of Information Systems Technology and Finance",
-		location: "Deakin University",
-	},
 	{
 		logo: "degree",
 		title: "Bachelors of Information Technology Professional Practice",
@@ -158,15 +170,5 @@ export const qualificationMetaData = [
 		logo: "certificate",
 		title: "Certificate IV of Communication Information & Design",
 		location: "The Gordon Institute ",
-	},
-	{
-		logo: "certificate",
-		title: "Certificate of Web Design Accessibility",
-		location: "Anxiety Leeds Non-Profit",
-	},
-	{
-		logo: "language",
-		title: "Certificate of Teaching English as a Second Language",
-		location: "Teflen College",
 	},
 ];

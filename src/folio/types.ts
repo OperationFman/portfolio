@@ -21,8 +21,3 @@ export type FolioData = {
 	title: string;
 	data: MetaData[];
 };
-
-export type ConvictionsRow = {
-	title: string;
-	blurb: string;
-};

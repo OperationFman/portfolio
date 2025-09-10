@@ -6,16 +6,6 @@
 	margin-bottom: 30px;
 }
 
-.columnWrapper {
-	width: 100%;
-	padding-right: 24px;
-
-	@include breakpoint(small) {
-		width: 175px;
-		padding-right: 0;
-	}
-}
-
 .title {
 	cursor: pointer;
 	margin-top: 45px;
@@ -37,7 +27,7 @@
 }
 
 .column {
-	width: 150px;
+	width: 160px;
 }
 
 .expandedColumnOnMobile {

@@ -67,6 +67,7 @@ export const Experience = () => {
 							<VolunteerListItem
 								logo={item.logo}
 								title={item.title}
+								agency={item.agency}
 								location={item.location}
 								year={item.year}
 								key={index}

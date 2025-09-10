@@ -9,11 +9,13 @@ import volunteerStyles from "./VolunteerListItem.module.scss";
 export const VolunteerListItem = ({
 	logo,
 	title,
+	agency,
 	location,
 	year,
 	index,
 }: {
 	logo: string;
+	agency: string;
 	title: string;
 	location: string;
 	year: string;
@@ -35,7 +37,9 @@ export const VolunteerListItem = ({
 					className={`${styles.logo} ${volunteerStyles.logo}`}
 				/>
 
+				<h3 className={`${volunteerStyles.agency}`}>{agency}</h3>
 				<div className={`${volunteerStyles.title}`}>{title}</div>
+
 				<div
 					className={`${styles.roleLocation} ${volunteerStyles.roleLocation} ${color.brightGrey}`}>
 					{location}

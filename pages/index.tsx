@@ -12,6 +12,7 @@ import { projectMetaData } from "../src/datasources/ProjectMetaData";
 import { ProjectItem } from "../src/projects/ProjectItem";
 import Portfolio from "../src/homepage/Portfolio";
 import Folio from "../src/folio/Skills";
+import { tabsData } from "../src/datasources/NavBarMetaData";
 
 const Home: NextPage = () => {
 	const enum FolioKey {
@@ -47,16 +48,13 @@ const Home: NextPage = () => {
 		);
 	};
 
-	const description =
-		"Franklin Von Moon – full-stack software engineer and world traveler sharing projects, skills, guides, digital assets and adventure videos from dozens of countries.";
-
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "Person",
 		name: "Franklin Von Moon",
 		url: "https://www.franklin-v-moon.dev",
 		jobTitle: "Software Engineer & Traveler",
-		description: description,
+		description: tabsData[0].pageDescription,
 		sameAs: [
 			"https://www.instagram.com/franklin.v.moon",
 			"https://github.com/OperationFman",
@@ -85,9 +83,9 @@ const Home: NextPage = () => {
 			<Head>
 				<title>Franklin Von Moon</title>
 				<link rel='icon' href='/favicon-blue.ico' />
-				<meta name='description' content={description} />
+				<meta name='description' content={tabsData[0].pageDescription} />
 				<meta property='og:title' content='Franklin Von Moon' />
-				<meta property='og:description' content={description} />
+				<meta property='og:description' content={tabsData[0].pageDescription} />
 				<meta
 					property='og:image'
 					content='https://github.com/user-attachments/assets/63411a74-1521-4cd9-b9f8-a77124ecdfc5'

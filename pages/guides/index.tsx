@@ -14,6 +14,7 @@ import { Footer } from "../../utils/footer/Footer";
 
 import styles from "../../src/guides/index.module.scss";
 import { getGuideMetaData } from "../../src/guides/guideDataService";
+import { tabsData } from "../../src/datasources/NavBarMetaData";
 
 const Transition = slideTransition("right");
 
@@ -46,15 +47,12 @@ const Guides: NextPage = () => {
 
 	const [showFilterMenu, setShowFilterMenu] = React.useState(false);
 
-	const description =
-		"Guides by Franklin Von Moon – practical notes, training references, and code snippets shared freely for learning and career growth.";
-
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@type": "CollectionPage",
 		name: "Guides",
 		url: "https://www.franklin-v-moon.dev/guides",
-		description: description,
+		description: tabsData[1].pageDescription,
 		creator: {
 			"@type": "Person",
 			name: "Franklin Von Moon",
@@ -66,14 +64,17 @@ const Guides: NextPage = () => {
 		<>
 			<div className={styles.pageContainer}>
 				<Head>
-					<title>Guides & Knowledge Sharing – Franklin Von Moon</title>
+					<title>Guides & Knowledge – Franklin Von Moon</title>
 					<link rel='icon' href='/favicon-green.ico' />
-					<meta name='description' content={description} />
+					<meta name='description' content={tabsData[1].pageDescription} />
 					<meta
 						property='og:title'
-						content='Guides & Knowledge Sharing – Franklin Von Moon'
+						content='Guides & Knowledge – Franklin Von Moon'
 					/>
-					<meta property='og:description' content={description} />
+					<meta
+						property='og:description'
+						content={tabsData[1].pageDescription}
+					/>
 					<meta
 						property='og:image'
 						content='https://user-images.githubusercontent.com/42459707/217668165-2975c163-f020-4a13-a8d9-3087d043f834.png'
@@ -84,7 +85,6 @@ const Guides: NextPage = () => {
 					/>
 					<meta property='og:type' content='website' />
 
-					{/* JSON-LD Structured Data */}
 					<script
 						type='application/ld+json'
 						dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -47,22 +47,37 @@
 	margin-bottom: 10px;
 }
 
+.employerTitle {
+	margin: 0;
+	padding: 0;
+}
+
 .location {
 	margin-top: 10px;
 
 	color: $brightGrey;
 }
 
-.periodText {
-	margin-bottom: 25px;
+.haSubLocations {
+	margin-bottom: -20px;
 }
 
 .roles {
 	margin-left: 25px;
 }
 
+.subLocation {
+	color: $brightGrey;
+
+	margin: 35px 0 0 -15px;
+}
+
 .roleTitle {
 	margin-top: 15px;
+}
+
+.subRole {
+	color: $brightGrey;
 }
 
 .rolePeriod {

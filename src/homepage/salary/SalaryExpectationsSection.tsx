@@ -44,7 +44,6 @@ export const SalaryExpectationsSection = () => {
 	const [ethical, setEthical] = useState(true);
 	const [workLifeBalance, setWorkLifeBalance] = useState(true);
 	const [internationalTravel, setInternationalTravel] = useState(false);
-	const [internationalRelocation, setInternationalRelocation] = useState(false);
 	const [countryScaleName, setCountryScaleName] = useState("Australia");
 	const [countryScaleValue, setCountryScaleValue] = useState(
 		countryScaler.Australia,
@@ -90,7 +89,6 @@ export const SalaryExpectationsSection = () => {
 		setEthical(false);
 		setWorkLifeBalance(false);
 		setInternationalTravel(false);
-		setInternationalRelocation(false);
 		setValues({
 			...values,
 			[STOCK_OPTIONS]: 0,
@@ -161,7 +159,6 @@ export const SalaryExpectationsSection = () => {
 		workLifeBalance,
 		internationalTravel,
 		values,
-		internationalRelocation,
 		countryScaleValue,
 	]);
 
@@ -272,38 +269,24 @@ export const SalaryExpectationsSection = () => {
 							}
 						/>
 						<Gap />
-						<SalarySwitch
-							text={"International Relocation"}
-							checked={internationalRelocation}
-							onChange={() => {
-								setInternationalRelocation(!internationalRelocation);
-								setCountryScaleName("Australia");
-								setCountryScaleValue(countryScaler.Australia);
-							}}
-							description={
-								"Opportunities to relocate abroad long term or permanently. Note: Some countries are discounted because they are more desirable or have difficult visa processes"
-							}
-						/>
-						{internationalRelocation && (
-							<div className={styles.internationalSliderContainer}>
-								<InputLabel htmlFor='outlined-adornment-amount'>
-									Scale by cost of living
-								</InputLabel>
-								<Slider
-									aria-label='Countries'
-									size='small'
-									defaultValue={7}
-									valueLabelDisplay='off'
-									shiftStep={1}
-									step={1}
-									marks
-									min={0}
-									max={9}
-									onChange={handleCountryChange}
-								/>
-								<h4 className={styles.countryScaleName}>{countryScaleName}</h4>
-							</div>
-						)}
+						<div className={styles.internationalSliderContainer}>
+							<InputLabel htmlFor='outlined-adornment-amount'>
+								Scale By Country
+							</InputLabel>
+							<Slider
+								aria-label='Countries'
+								size='small'
+								defaultValue={7}
+								valueLabelDisplay='off'
+								shiftStep={1}
+								step={1}
+								marks
+								min={0}
+								max={9}
+								onChange={handleCountryChange}
+							/>
+							<h4 className={styles.countryScaleName}>{countryScaleName}</h4>
+						</div>
 					</div>
 				</div>
 			</FormGroup>

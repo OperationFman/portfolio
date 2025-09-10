@@ -3,16 +3,13 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import {
 	cloudMetaData,
-	convictionMetaData,
 	toolsMetaData,
 } from "../datasources/SkillsMetaData";
 import { FolioModal } from "./modal/FolioModal";
-import { Convictions } from "./convictions/Convictions";
 import { Languages } from "./languages/Languages";
 import { FolioColumn } from "./folio-column/FolioColumn";
 import { MetaData } from "./types";
 import { slideTransition } from "../guides/components/filter/filterAnimations";
-import { Footer } from "../../utils/footer/Footer";
 
 import styles from "../../src/folio/index.module.scss";
 
@@ -51,7 +48,6 @@ export const Folio: NextPage = () => {
 					handleOpenModal={handleOpenModal}
 				/>
 			</div>
-			<Convictions title='Convictions' metaData={convictionMetaData} />
 		</div>
 	);
 };

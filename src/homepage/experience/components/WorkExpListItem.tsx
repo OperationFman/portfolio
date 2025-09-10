@@ -16,9 +16,11 @@ export const WorkExpListItem = ({
 	companyLogo: string;
 	employerName: string;
 	periodWithEmployer: string;
-	employerLocation: string;
+	employerLocation?: string;
 	employerExperiences: {
 		title: string;
+		subRole?: string;
+		location?: string;
 		period: string;
 	}[];
 	index: number;
@@ -38,16 +40,29 @@ export const WorkExpListItem = ({
 					className={styles.logo}
 				/>
 
-				<div>{employerName}</div>
-
-				<div className={styles.location}>{employerLocation}</div>
-				<div className={`${styles.periodText} ${color.brightGrey}`}>
+				<h3 className={styles.employerTitle}>{employerName}</h3>
+				{employerLocation && (
+					<div className={styles.location}>{employerLocation}</div>
+				)}
+				<div
+					className={`${!employerLocation ? styles.haSubLocations : ""} ${
+						color.brightGrey
+					}`}>
 					{periodWithEmployer}
 				</div>
+
 				{employerExperiences.map((experienceItem, index) => {
 					return (
 						<div key={index} className={styles.roles}>
+							{experienceItem.location && (
+								<div className={styles.subLocation}>
+									{experienceItem.location}
+								</div>
+							)}
 							<div className={styles.roleTitle}>{experienceItem.title}</div>
+							{experienceItem.subRole && (
+								<div className={styles.subRole}>{experienceItem.subRole}</div>
+							)}
 							<div className={`${styles.rolePeriod}  ${color.brightGrey}`}>
 								{experienceItem.period}
 							</div>

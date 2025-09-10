@@ -33,7 +33,7 @@ export const tabsData: {
 		),
 		order: 1,
 		pageDescription:
-			"Franklin Von Moon, Born 14th April 1998 in Warrnambool Australia is a full-stack software engineer and world traveler.",
+			"Franklin Von Moon is a versatile full-stack developer, blending expertise in UX, frontend, mobile, backend and cloud devops to engineer digital products whilst having a positive global impact",
 	},
 	{
 		label: "GUIDES",
@@ -48,7 +48,7 @@ export const tabsData: {
 		),
 		order: 2,
 		pageDescription:
-			"Guides by Franklin Von Moon – practical notes, training references, and code snippets shared freely for learning and career growth.",
+			"Guides and practical notes, training references, and code snippets shared freely for learning and career growth.",
 	},
 	{
 		label: "TRAVEL",
@@ -63,7 +63,7 @@ export const tabsData: {
 		),
 		order: 3,
 		pageDescription:
-			"Explore Franklin Von Moon's travel journeys: videos from dozens of countries, world map of visited places, and stories of culture, risks, and adventure.",
+			"Videos from dozens of countries, world map of visited places, and stories of culture, risks, and adventure.",
 	},
 	{
 		label: "ASSETS",
@@ -79,6 +79,6 @@ export const tabsData: {
 		order: 4,
 		disabled: !isAssetsStoreEnabled,
 		pageDescription:
-			"Assets of digital products, stock footage and free wallpaper I've collected available fr purchase",
+			"Assets of digital products, stock footage and free wallpaper I've collected available for purchase",
 	},
 ];

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { setDark } from "../../../utils/configureCss/configureCss";
 
 import styles from "./BioDescription.module.scss";
+import { tabsData } from "../../datasources/NavBarMetaData";
 
 export const BioDescription = (): JSX.Element => {
 	const timeWorked = () => {
@@ -53,9 +54,7 @@ export const BioDescription = (): JSX.Element => {
 				{/* <span className={styles.backupAutoType}>Developer</span> */}
 
 				<main className={setDark(styles, "blurb")}>
-					Franklin Von Moon is a versatile full-stack developer, blending
-					expertise in UX, frontend, mobile, backend and cloud to engineer
-					digital products whilst having a positive global impact
+					{tabsData[0].pageDescription}
 					<br />
 					<br />
 					Practicing professional for {pluralTime(

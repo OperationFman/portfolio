@@ -7,6 +7,10 @@
 	z-index: 2;
 	background-color: $darkGrey;
 	box-shadow: $defaultShadow;
+
+	position: fixed;
+	top: 0;
+	width: 100vw;
 }
 
 .behindNav {
@@ -42,17 +46,30 @@
 	display: inline;
 	padding-left: 15px;
 	margin-top: 24px;
-	position: absolute;
 	z-index: 3;
 	font-weight: bold;
 
 	@include breakpoint(medium) {
 		display: none;
 	}
+
+	position: fixed;
+	top: 0;
 }
 
 .logotypeAlignDesktop {
 	margin: -5px -3.5px -3.5px -3.5px;
+
+	position: fixed;
+	top: 0;
+}
+
+.logoFirst {
+	margin-top: 18px;
+}
+
+.logoSecond {
+	margin-top: 33px;
 }
 
 .logotypeGradientSize {

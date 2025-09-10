@@ -36,9 +36,10 @@
 	text-align: left;
 }
 
-.title {
+.agency {
 	@extend .subText;
 	margin-right: 5px;
+	margin-bottom: 5px;
 
 	@include breakpoint(small) {
 		text-align: right;
@@ -48,9 +49,21 @@
 	}
 }
 
+.title {
+	@extend .subText;
+	margin-right: 5px;
+
+	@include breakpoint(small) {
+		text-align: right;
+		margin-right: 0px;
+		line-height: normal;
+	}
+}
+
 .roleLocation {
 	@extend .subText;
 	padding-top: 10px;
+	margin-bottom: -16px;
 	color: $brightGrey;
 
 	@include breakpoint(small) {

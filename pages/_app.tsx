@@ -24,9 +24,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 				/>
 			</Head>
 			<GlobalTheme darkMode={darkMode}>
-				<Navbar />
+				<div style={{ height: "70px" }}></div>
 				<Analytics />
 				<Component {...pageProps} />
+				<Navbar />
 			</GlobalTheme>
 		</>
 	);
