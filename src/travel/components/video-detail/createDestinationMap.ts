@@ -10,6 +10,7 @@ import {
 } from "maplibre-gl";
 import worldAtlas from "world-atlas/countries-50m.json";
 import type { TravelCountry } from "../../types";
+import { parseTravelCoordinate } from "../../coordinates";
 
 type CountryProperties = { name: string };
 type DestinationProperties = { name: string };
@@ -84,20 +85,15 @@ export const createDestinationMap = (
 		};
 	});
 	const dots: Feature<Point, DotProperties>[] = dotCoordinates.flatMap((coordinate) => {
-		const values = coordinate.split(",").map((value) => Number(value.trim()));
-		if (
-			values.length !== 2 ||
-			!Number.isFinite(values[0]) ||
-			!Number.isFinite(values[1]) ||
-			Math.abs(values[0]) > 90 ||
-			Math.abs(values[1]) > 180
-		) {
-			return [];
-		}
+		const parsed = parseTravelCoordinate(coordinate);
+		if (!parsed) return [];
 		return [
 			{
 				type: "Feature",
-				geometry: { type: "Point", coordinates: [values[1], values[0]] },
+				geometry: {
+					type: "Point",
+					coordinates: [parsed.longitude, parsed.latitude],
+				},
 				properties: {},
 			},
 		];

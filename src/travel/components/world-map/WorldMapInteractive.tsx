@@ -23,6 +23,7 @@ import {
 	worldMapOnlyDots,
 } from "../../../datasources/TravelMetaData";
 import { Advisory } from "../../types";
+import { parseTravelCoordinate } from "../../coordinates";
 import { usePrefersReducedMotion } from "../../../../utils/usePrefersReducedMotion";
 import styles from "./WorldMap.module.scss";
 
@@ -50,21 +51,6 @@ const getFrostedLandTransform = (transform: ZoomTransform, rect: DOMRect) => {
 	const offsetX = (rect.width - 1200 * scale) / 2;
 	const offsetY = (rect.height - 590 * scale) / 2;
 	return `translate(${offsetX + transform.x * scale - offsetX * transform.k}px, ${offsetY + transform.y * scale - offsetY * transform.k}px) scale(${transform.k})`;
-};
-
-const parseCoordinate = (coordinate: string) => {
-	const values = coordinate.split(",").map((value) => value.trim());
-	if (values.length !== 2 || !values[0] || !values[1]) return undefined;
-	const [latitude, longitude] = values.map(Number);
-	if (
-		!Number.isFinite(latitude) ||
-		!Number.isFinite(longitude) ||
-		Math.abs(latitude) > 90 ||
-		Math.abs(longitude) > 180
-	) {
-		return undefined;
-	}
-	return { latitude, longitude };
 };
 
 const findLatestVideo = (countryId: CountryId) =>
@@ -128,7 +114,7 @@ const buildDots = (): WorldDot[] => {
 		const candidates = sourceCountries;
 
 		coordinates.forEach((coordinate, index) => {
-			const parsed = parseCoordinate(coordinate);
+			const parsed = parseTravelCoordinate(coordinate);
 			if (!parsed) return;
 			const containingCountry = candidates.find((candidate) => {
 				const countryFeature = countries.features.find(

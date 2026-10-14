@@ -1,4 +1,3 @@
-import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 import { PageContainer } from "../../src/global/PageContainer";
 import { Footer } from "../../utils/footer/Footer";
@@ -43,32 +42,37 @@ const sortFunctions = {
 	[SortBy.Funniest]: funniestOnly,
 };
 
-const Travel = ({
-	initialSortBy,
-	initialSearchingText,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const Travel = () => {
 	const router = useRouter();
-	const [searchingText, setSearchingText] = useState<string>(
-		initialSearchingText,
-	);
-
-	const initialSortSelection = initialSearchingText
-		? SortBy.Searching
-		: initialSortBy ?? SortBy.Newest;
-
-	const [sortSelection, setSortSelection] = useState(initialSortSelection);
+	const [searchingText, setSearchingText] = useState("");
+	const [sortSelection, setSortSelection] = useState(SortBy.Newest);
+	const [hasSyncedFromUrl, setHasSyncedFromUrl] = useState(false);
 	const [clickedCountryId, setClickedCountryId] = useState<number | null>(null);
 
 	const hasMounted = useHasMounted();
 
 	useEffect(() => {
+		if (!router.isReady) return;
+
+		const initialSearchingText = parseSearchTextFromQuery(router.query);
+		const initialSortBy = parseSortByFromQuery(router.query);
+		setSearchingText(initialSearchingText);
+		setSortSelection(
+			initialSearchingText ? SortBy.Searching : initialSortBy ?? SortBy.Newest,
+		);
+		setHasSyncedFromUrl(true);
+	}, [router.isReady, router.query]);
+
+	useEffect(() => {
+		if (!hasSyncedFromUrl) return;
+
 		const search = new URLSearchParams(
 			buildTravelQuery(sortSelection, searchingText),
 		).toString();
 		const url = `${router.pathname}${search ? `?${search}` : ""}`;
 
 		window.history.replaceState(window.history.state, "", url);
-	}, [router, sortSelection, searchingText]);
+	}, [hasSyncedFromUrl, router.pathname, sortSelection, searchingText]);
 
 	const sortedMetaData = useMemo(
 		() =>
@@ -251,21 +255,6 @@ const Travel = ({
 			<Footer />
 		</div>
 	);
-};
-
-export const getServerSideProps: GetServerSideProps<{
-	initialSortBy: SortBy | null;
-	initialSearchingText: string;
-}> = async (context) => {
-	const initialSortBy = parseSortByFromQuery(context.query);
-	const initialSearchingText = parseSearchTextFromQuery(context.query);
-
-	return {
-		props: {
-			initialSortBy,
-			initialSearchingText,
-		},
-	};
 };
 
 export default Travel;
