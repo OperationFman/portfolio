@@ -1,4 +1,4 @@
-// Country IDs come from world-atlas/countries-50m.json
+// Country ID is ISO Numeric
 // Geo dots can be added using https://geojson.io/
 
 import { Advisory } from "./../travel/types";
@@ -48,8 +48,16 @@ export const worldMapOnlyDots = [
 		],
 	},
 	{
+		country: { name: "France", id: 250 },
+		dots: ["-0.5902417, 44.8401222"],
+	},
+	{
 		country: { name: "Romania", id: 642 },
 		dots: ["44.467742, 26.0449515"],
+	},
+	{
+		country: { name: "Germany", id: 276 },
+		dots: ["6.9592735, 50.9379608"],
 	},
 ];
 
