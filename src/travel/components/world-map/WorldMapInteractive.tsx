@@ -210,7 +210,8 @@ const getInitialRandomDot = () => {
 	return countryDots[Math.floor(Math.random() * countryDots.length)];
 };
 
-const LandLayer = memo(({
+
+const LandLayer = memo(function LandLayer({
 	path,
 	selectedCountryFeature,
 	mapStage,
@@ -222,31 +223,33 @@ const LandLayer = memo(({
 	mapStage: number;
 	motionDuration: string;
 	videoReady: boolean;
-}) => (
-	<g className={`${styles.landLayer} ${videoReady ? styles.landVideoReady : ""}`}>
-		{countries.features.map((country, index) => (
-			<path
-				key={`${String(country.id ?? country.properties?.name ?? "country")}-${index}`}
-				d={path(country) ?? undefined}
-				className={styles.land}
-				data-country-id={country.id}
-			/>
-		))}
-		{mapStage >= 1 && (
-			<>
-				<path d={path(countryBorders) ?? undefined} className={styles.borders} />
-				<path d={path(landOutline) ?? undefined} className={styles.landOutline} />
-			</>
-		)}
-		{selectedCountryFeature && (
-			<path
-				d={path(selectedCountryFeature) ?? undefined}
-				className={styles.selectedCountry}
-				style={{ transitionDuration: motionDuration }}
-			/>
-		)}
-	</g>
-));
+}) {
+	return (
+		<g className={`${styles.landLayer} ${videoReady ? styles.landVideoReady : ""}`}>
+			{countries.features.map((country, index) => (
+				<path
+					key={`${String(country.id ?? country.properties?.name ?? "country")}-${index}`}
+					d={path(country) ?? undefined}
+					className={styles.land}
+					data-country-id={country.id}
+				/>
+			))}
+			{mapStage >= 1 && (
+				<>
+					<path d={path(countryBorders) ?? undefined} className={styles.borders} />
+					<path d={path(landOutline) ?? undefined} className={styles.landOutline} />
+				</>
+			)}
+			{selectedCountryFeature && (
+				<path
+					d={path(selectedCountryFeature) ?? undefined}
+					className={styles.selectedCountry}
+					style={{ transitionDuration: motionDuration }}
+				/>
+			)}
+		</g>
+	);
+});
 
 const WorldMap = ({
 	onDotClick,

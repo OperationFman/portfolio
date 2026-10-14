@@ -1,7 +1,7 @@
 const nextCoreWebVitals = require("eslint-config-next/core-web-vitals");
 
 module.exports = [
-	{ ignores: [".next/**", "out/**"] },
+	{ ignores: [".next/**", "out/**", "public/travel-map/maplibre-gl-*.mjs"] },
 	...nextCoreWebVitals,
 	{
 		rules: {
